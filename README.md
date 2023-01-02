@@ -8,11 +8,12 @@ This repo contains the documentation for the [AI-on-the-Edge-Device Project](htt
 1. When it got merged, the [Github Actions](https://github.com/jomjol/AI-on-the-edge-device-docs/actions) will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
 
 ## Migrating existing Wiki Pages
-The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the docs/nav.yml file, they will be listed in the **asorted pages** section.
-We should review all pages from there step by step and add them to the navigation.
+The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the [docs/nav.yml](docs/nav.yml) file, they will be listed in the **asorted pages** section of the left sidebar.
 
-Tasks to do:
- - Check links
+In the end, we should review all pages from there step by step and add them to the upper part of the navigation.
+
+### Tasks to do
+ - Check the links in the documents
  - Fetch included images and place them directly in the [docs/img](docs/img) folder
  - Rerwrite to have a clear structure
 
