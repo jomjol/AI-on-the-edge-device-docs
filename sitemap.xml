@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/</loc>
+         <lastmod>2023-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/AI-on-the-edge/</loc>
          <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
@@ -82,11 +87,6 @@
     </url>
     <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/</loc>
-         <lastmod>2023-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Home/</loc>
          <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

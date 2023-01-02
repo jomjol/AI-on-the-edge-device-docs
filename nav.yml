@@ -3,7 +3,7 @@
 
 nav:
   # List all files in the expected order
-  - Home.md
+  - index.md
 
   - Links:
     - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
