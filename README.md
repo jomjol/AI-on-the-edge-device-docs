@@ -1,2 +1,36 @@
 # AI-on-the-edge-device-docs
  
+This repo contains the documentation for the [AI-on-the-Edge-Device Project](https://github.com/jomjol/AI-on-the-edge-device).
+
+# How does it work
+1. You can edit any `*.md` document in the `docs` folder.
+1. Then create a Pull Request for it to merge it into the `main` branch.
+1. When it got merged, the Github Actions will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
+
+## Migrating existing Wiki Pages
+The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the [nav.yml](nav.yml) file, they will be listed in the **asorted pages** section.
+We should review all pages from there step by step and add them to the navigation.
+
+Tasks to do:
+ - Check links
+ - Fetch included images and place them directly in the `docs/img` folder
+ - Rerwrite to have a clear structure
+
+
+## Adding new files
+1. Add a new `*.md` document in the `docs` folder.
+1. Add the **filename** to the `nav.yml` at the position you want to have the document in the navigation in the sidebar on the left.
+
+## Local Test
+To test it locally:
+1. Clone this repo
+1. Install the required tools:
+    ```
+    pip install --upgrade pip
+    pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin
+    ```
+1. In the main folder of the repo, call `mkdocs serve` (and keep it running).
+  This will locally generate the documentation.
+  You can access it under http://127.0.0.1:8000/AI-on-the-edge-device-docs/
+
+    Any change to the files will automatically be applied.
