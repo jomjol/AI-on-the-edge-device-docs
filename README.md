@@ -3,7 +3,7 @@
 This repo contains the documentation for the [AI-on-the-Edge-Device Project](https://github.com/jomjol/AI-on-the-edge-device).
 
 # How does it work
-1. You can edit any `*.md` document in the `docs` folder.
+1. You can edit any `*.md` document in the [docs](docs) folder.
 1. Then create a Pull Request for it to merge it into the `main` branch.
 1. When it got merged, the Github Actions will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
 
@@ -13,13 +13,13 @@ We should review all pages from there step by step and add them to the navigatio
 
 Tasks to do:
  - Check links
- - Fetch included images and place them directly in the `docs/img` folder
+ - Fetch included images and place them directly in the [docs/img](docs/img) folder
  - Rerwrite to have a clear structure
 
 
 ## Adding new files
-1. Add a new `*.md` document in the `docs` folder.
-1. Add the **filename** to the `docs/nav.yml` at the position you want to have the document in the navigation in the sidebar on the left.
+1. Add a new `*.md` document in the [docs](docs) folder.
+1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the position you want to have the document in the navigation in the sidebar on the left.
 
 ## Local Test
 To test it locally:
