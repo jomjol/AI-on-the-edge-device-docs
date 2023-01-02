@@ -28,7 +28,7 @@ To test it locally:
 1. Install the required tools:
     ```
     pip install --upgrade pip
-    pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin
+    pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material
     ```
 1. In the main folder of the repo, call `mkdocs serve` (and keep it running).
   This will locally generate the documentation.
