@@ -26,7 +26,7 @@ Ensure an **exact horizontal alignment** of the number via the alignment / refer
 
 | :heavy_check_mark: Okay                         | :x: Not Okay                         |
 | ------------------------------ | ---------------------------------- |
-| [[/images/alignment_okay.jpg]] | [[/images/alignment_not_okay.jpg]] |
+| ![](img/alignment_okay.jpg) | ![](img/alignment_not_okay.jpg) |
 
 ### 3. Correct Size for ROI
 Choose the right size of the ROI:
@@ -42,9 +42,9 @@ For this model, there should be a border of 20% of the image size around the num
 
 |              | Example 1                         | Example 2                         |
 | ------------ | --------------------------------- | --------------------------------- |
-| :heavy_check_mark: **Okay**     | [[/images/bw_okay.jpg]]           | [[/images/wb_okay.jpg]]           |
-| :x: **Not** Okay | [[/images/bw_not_okay_small.jpg]] | [[/images/wb_not_okay_small.jpg]] |
-| :x: **Not** Okay | [[/images/bw_not_okay_big.jpg]]   | [[/images/wb_not_okay_big.jpg]]   |
+| :heavy_check_mark: **Okay**     | ![](img/bw_okay.jpg)           | ![](img/wb_okay.jpg)           |
+| :x: **Not** Okay | ![](img/bw_not_okay_small.jpg) | ![](img/wb_not_okay_small.jpg) |
+| :x: **Not** Okay | ![](img/bw_not_okay_big.jpg)   | ![](img/wb_not_okay_big.jpg)   |
 
 
 

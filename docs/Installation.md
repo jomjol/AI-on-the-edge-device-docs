@@ -46,8 +46,7 @@ Beside the 5V power supply, only for the first flashing a connection to the USB-
 A example for wiring can be found here:
 
 <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/wiring.png" width="600"> 
-[[/images/progammer_manual.jpg]]
-
+![](img/progammer_manual.jpg)
 
 
 It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described here: [[External-LED]]

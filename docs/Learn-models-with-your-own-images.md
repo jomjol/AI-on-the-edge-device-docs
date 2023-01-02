@@ -8,7 +8,7 @@ The neural network configuration is stored in the TensorFlow Lite format as `fil
 
 In order to incorporate new digits a training set of images is required. The training images needs to be collected in the final setup with the help of the `Digits` or `Analog` log settings (not to be confused with the `Data` or `Debug` log). Enable the logging of the images on the configuration page or in the config file `/config/config.ini`:
 
-[[/images/enable_log_image.jpg]]
+![](img/enable_log_image.jpg)
 
 Now wait, until you have an image of each digit of every type on the SD card. Ideally remove the SD card from the camera and search for two to three images of each digit (**not more! :-)**). The format can be jpg.
 

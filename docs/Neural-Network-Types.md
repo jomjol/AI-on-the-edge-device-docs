@@ -44,8 +44,8 @@ _______________________________
 
 |                                                      | Classification<br />11 classes<br />0, 1, ... 9 + "N" | Classification<br />100 classes<br />0.0, 0.1, ... 9.9 | Continuous<br />Interval<br />[0, 10[ |
 | ---------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------ | ------------------------------------- |
-| **Digits** <br />[[/images/0_arbitrary.jpg]]         | **dig-class11**_XXX.tflite                            | **dig-class100**_XXX.tflite                            | **dig-cont**_XXX.tflite               |
-| **Analog Pointers**  <br />[[/images/ana-examp.jpg]] |                                                       | **ana-class100**_XXX.tflite                            | **ana-cont**_XXX.tflite               |
+| **Digits** <br />![](img/0_arbitrary.jpg)         | **dig-class11**_XXX.tflite                            | **dig-class100**_XXX.tflite                            | **dig-cont**_XXX.tflite               |
+| **Analog Pointers**  <br />![](img/ana-examp.jpg) |                                                       | **ana-class100**_XXX.tflite                            | **ana-cont**_XXX.tflite               |
 
 XXX contains the versioning and a parameter for different sizes with the following naming:
 
@@ -81,8 +81,8 @@ There are two types of network structure, currently both are supported. The "cla
 
 |                                     |                                     |                                     |                                     |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
-| [[/images/ana-cont/examp-ana1.jpg]] | [[/images/ana-cont/examp-ana2.jpg]] | [[/images/ana-cont/examp-ana3.jpg]] | [[/images/ana-cont/examp-ana4.jpg]] |
-| [[/images/ana-cont/examp-ana5.jpg]] | [[/images/ana-cont/examp-ana6.jpg]] | [[/images/ana-cont/examp-ana7.jpg]] |                                     |
+| ![](img/ana-cont/examp-ana1.jpg) | ![](img/ana-cont/examp-ana2.jpg) | ![](img/ana-cont/examp-ana3.jpg) | ![](img/ana-cont/examp-ana4.jpg) |
+| ![](img/ana-cont/examp-ana5.jpg) | ![](img/ana-cont/examp-ana6.jpg) | ![](img/ana-cont/examp-ana7.jpg) |                                     |
 
 ##### Training data needs
 
@@ -117,8 +117,8 @@ The digit type is a classical classification network, with 11 classes representi
 
 |                            |                            |                            |                            |                            |                            |                            |
 | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
-| [[/images/dig-class11/examp-dig1.jpg]] | [[/images/dig-class11/examp-dig2.jpg]] | [[/images/dig-class11/examp-dig3.jpg]] | [[/images/dig-class11/examp-dig4.jpg]] | [[/images/dig-class11/examp-dig13.jpg]] | [[/images/dig-class11/examp-dig12.jpg]] | [[/images/dig-class11/examp-dig9.jpg]] |
-| [[/images/dig-class11/examp-dig5.jpg]] | [[/images/dig-class11/examp-dig6.jpg]] | [[/images/dig-class11/examp-dig7.jpg]] | [[/images/dig-class11/examp-dig8.jpg]] | [[/images/dig-class11/examp-dig11.jpg]] | [[/images/dig-class11/examp-dig10.jpg]] |  |
+| ![](img/dig-class11/examp-dig1.jpg) | ![](img/dig-class11/examp-dig2.jpg) | ![](img/dig-class11/examp-dig3.jpg) | ![](img/dig-class11/examp-dig4.jpg) | ![](img/dig-class11/examp-dig13.jpg) | ![](img/dig-class11/examp-dig12.jpg) | ![](img/dig-class11/examp-dig9.jpg) |
+| ![](img/dig-class11/examp-dig5.jpg) | ![](img/dig-class11/examp-dig6.jpg) | ![](img/dig-class11/examp-dig7.jpg) | ![](img/dig-class11/examp-dig8.jpg) | ![](img/dig-class11/examp-dig11.jpg) | ![](img/dig-class11/examp-dig10.jpg) |  |
 |                                        |                                        |                                        |  |  |  |  |
 
 
@@ -152,7 +152,7 @@ This type of network tries to overcome the problem, that there are intermediate 
 
 |                                    |                                                              |                                                              |      |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [[images/dig-cont/dig-cont_1.jpg]] | [[images/dig-cont/dig-cont_2a.jpg]]  [[images/dig-cont/dig-cont_2b.jpg]] | [[images/dig-cont/dig-cont_3a.jpg]]  [[images/dig-cont/dig-cont_3b.jpg]] [[images/dig-cont/dig-cont_3c.jpg]] |      |
+| [[images/dig-cont/dig-cont_1.jpg) | [[images/dig-cont/dig-cont_2a.jpg)  [[images/dig-cont/dig-cont_2b.jpg) | [[images/dig-cont/dig-cont_3a.jpg)  [[images/dig-cont/dig-cont_3b.jpg) [[images/dig-cont/dig-cont_3c.jpg) |      |
 |                                    |                                                              |                                                              |      |
 
 

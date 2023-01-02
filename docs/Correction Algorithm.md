@@ -57,11 +57,11 @@ Here the maximum change from one to the next reading can be limited. If a false 
 
 #### Flow Chart
 
-[[/images/correct_algo_1.jpg]]
+![](img/correct_algo_1.jpg)
 
-[[/images/correct_algo_2.jpg]]
+![](img/correct_algo_2.jpg)
 
-[[/images/correct_algo_3.jpg]]
+![](img/correct_algo_3.jpg)
 
 
 
@@ -71,4 +71,4 @@ Here the maximum change from one to the next reading can be limited. If a false 
 
 The check digit increase consistency algorithm is functional for the digits only. Due to the fact, that the rotation might be a little bit earlier or later compared to the zero crossing of the digit before, errors during the reading before and after a zero crossing can be wrong. Therefore a simple algorithm can be applied, checking the consistency of zero crossing and changes in the following digit. This is applied to one after the other digit, starting with the lowest priority digits.
 
-[[/images/correct_algo_zero_crossing.jpg]]
+![](img/correct_algo_zero_crossing.jpg)
