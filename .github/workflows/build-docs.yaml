@@ -24,5 +24,4 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Publish docs
         run: |
-          cd docs
-          mkdocs --config-file mkdocs.yml gh-deploy
+          mkdocs gh-deploy
