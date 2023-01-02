@@ -19,7 +19,7 @@ Tasks to do:
 
 ## Adding new files
 1. Add a new `*.md` document in the [docs](docs) folder.
-1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the position you want to have the document in the navigation in the sidebar on the left.
+1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
 ## Local Test
 To test it locally:
