@@ -5,7 +5,7 @@ This repo contains the documentation for the [AI-on-the-Edge-Device Project](htt
 # How does it work
 1. You can edit any `*.md` document in the [docs](docs) folder.
 1. Then create a Pull Request for it to merge it into the `main` branch (or edit it directly in the `main` branch if you have the required rights).
-1. When it got merged, the Github Actions will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
+1. When it got merged, the [Github Actions](https://github.com/jomjol/AI-on-the-edge-device-docs/actions) will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
 
 ## Migrating existing Wiki Pages
 The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the docs/nav.yml file, they will be listed in the **asorted pages** section.
