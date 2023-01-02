@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Learn models with your own images - AI on the Edge Device</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Learn models with your own images";
+        var mkdocs_page_input_path = "Learn-models-with-your-own-images.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AI on the Edge Device
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Home/">Welcome to the AI-on-the-edge-device!</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Links</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issues</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../AI-on-the-edge/">Welcome to the AI-on-the-edge-device wiki!</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">New</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Which model should I use?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Learn models with your own images</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">General Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Release creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AI on the Edge Device</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Asorted Pages &raquo;</li>
+      <li>Learn models with your own images</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/doc/Learn-models-with-your-own-images.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model.</p>
+<p>But before you do this, please check if your type really is not contained yet in the training data, see <a href="https://jomjol.github.io/neural-network-digital-counter-readout">digits</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">pointers</a> for an overview of images used for the training</p>
+<p>The neural network is trained on base of a set of images, that have been collected over time. If your digits are included or at least very similar to included images, the chance is very high that the neural network is working fine for you as well.</p>
+<p>The neural network configuration is stored in the TensorFlow Lite format as <code>filename.tfl</code> or <code>filename.tflite</code> in the <code>/config</code> directory. It can be updated by uploading the new file and activating it on the configuration page or in the config file <code>/config/config.ini</code>.</p>
+<p>In order to incorporate new digits a training set of images is required. The training images needs to be collected in the final setup with the help of the <code>Digits</code> or <code>Analog</code> log settings (not to be confused with the <code>Data</code> or <code>Debug</code> log). Enable the logging of the images on the configuration page or in the config file <code>/config/config.ini</code>:</p>
+<p>[[/images/enable_log_image.jpg]]</p>
+<p>Now wait, until you have an image of each digit of every type on the SD card. Ideally remove the SD card from the camera and search for two to three images of each digit (<strong>not more! :-)</strong>). The format can be jpg.</p>
+<h2 id="collecting-images-for-dig-class100dig-contana-class100">Collecting images for dig-class100/dig-cont/ana-class100</h2>
+<p><a href="https://github.com/haverland/collectmeterdigits">Collectmeterdigits</a> and <a href="https://github.com/haverland/collectmeteranalog">collectmeteranalog</a> helps you to collect the images easily. Read the project readme for detailed instructions.</p>
+<h2 id="train-the-model">Train the model</h2>
+<p>For training the model you will need a python and Jupyter installation.</p>
+<p>All current labeled images you can find under <a href="https://github.com/jomjol/neural-network-digital-counter-readout/tree/master/ziffer_sortiert_raw">ziffer_sortiert_raw</a></p>
+<h3 id="dig-class11-models-digits">dig-class11 models (digits)</h3>
+<p>Fork and checkout <a href="https://github.com/jomjol/neural-network-digital-counter-readout">neural-network-digital-counter-readout</a>.</p>
+<p>Install all requirements for running the notebooks.</p>
+<pre><code class="language-shell">pip install -r requirements.txt
+</code></pre>
+<p>Put your labeled images into <code>/ziffer_sortiert_raw</code> folder and run</p>
+<ol>
+<li><a href="https://github.com/jomjol/neural-network-digital-counter-readout/blob/master/Image_Preparation.ipynb">Image_Preparation.ipynb</a></li>
+<li><a href="https://github.com/jomjol/neural-network-digital-counter-readout/blob/master/Train_CNN_Digital-Readout-Small-v2.ipynb">Train_CNN_Digital-Readout-Small-v2.ipynb</a></li>
+</ol>
+<p>It creates a dig-class11_xxxx_s2.tflite model, you can upload to the <code>config</code> folder on your device and test it. </p>
+<h3 id="dig-class100-dig-cont-models-digits">dig-class100 / dig-cont models (digits)</h3>
+<p>Fork and checkout <a href="https://github.com/jomjol/neural-network-analog-needle-readout">neural-network-analog-needle-readout</a>.</p>
+<p>All labeled images you can find under <a href="https://github.com/haverland/Tenth-of-step-of-a-meter-digit/tree/master/images">Images</a></p>
+<p>Install all requirements for running the notebooks.</p>
+<pre><code class="language-shell">pip install -r requirements.txt
+</code></pre>
+<p>Put your labeled images into <code>images/collected/&lt;typeofdevice&gt;/&lt;your_short&gt;/</code></p>
+<p>Run <a href="https://github.com/haverland/Tenth-of-step-of-a-meter-digit/blob/master/dig-class100-s2.ipynb">dig-class100-s2.ipynb</a>. The model to upload to your device you can find under '/output'.</p>
+<h3 id="ana-class100ana-cont-models-analog-pointers">ana-class100/ana-cont models (analog pointers)</h3>
+<p>Fork and checkout <a href="https://github.com/jomjol/neural-network-analog-needle-readout">neural-network-analog-needle-readout</a>.</p>
+<p>All labeled images you can find under <a href="https://github.com/jomjol/neural-network-analog-needle-readout/tree/main/data_raw_all">data_raw_all</a></p>
+<p>Install all requirements for running the notebooks.</p>
+<pre><code class="language-shell">pip install -r requirements.txt
+</code></pre>
+<p>Put your labeled images into <code>images/collected/&lt;typeofdevice&gt;/&lt;your_short&gt;/</code></p>
+<p>After every adding of images you need to run <a href="https://github.com/jomjol/neural-network-analog-needle-readout/blob/main/Image_Preparation.ipynb">Image_Preparation.ipynb</a> before you train the models.</p>
+<p>Run <a href="https://github.com/jomjol/neural-network-analog-needle-readout/blob/main/Train_CNN_Analog-Readout_100-Small1_Dropout.ipynb">Train_CNN_Analog-Readout_100-Small1_Dropout.ipynb</a> and/or <a href="https://github.com/jomjol/neural-network-analog-needle-readout/blob/main/Train_CNN_Analog-Readout_Version-Small2.ipynb">Train_CNN_Analog-Readout_Version-Small2.ipynb</a>. The model to upload to your device you can find in the project folder.</p>
+<h2 id="share-your-images">Share your images</h2>
+<p>If the results are good you can share the images as pull-request. Please images only!</p>
+<p>If you not able to create a pull request or don't know what it is, open an <a href="https://github.com/jomjol/AI-on-the-edge-device/issues">issue</a> and put the zipped images in it.</p>
+<h3 id="images-can-be-rejected-if">Images can be rejected if</h3>
+<ul>
+<li>As same as dig-class11 collected, more than 1000 images of your device are really to much. </li>
+<li>images are not good configured (ROIs) will be rejected. It reduces the accuracy of the networks.</li>
+<li>Images with too little focus will be rejected. </li>
+<li>Images with too much blur are rejected.</li>
+</ul>
+<p>Our models are to small to recognize everything in any quality. So we use only images of medium or good quality.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Integration-Home-Assistant/" class="btn btn-neutral float-left" title="Integration into Home Assistant"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../MQTT-API/" class="btn btn-neutral float-right" title="General Information">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Integration-Home-Assistant/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../MQTT-API/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

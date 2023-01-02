@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Correction%20Algorithm/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Correction Algorithm - AI on the Edge Device</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Correction Algorithm";
+        var mkdocs_page_input_path = "Correction Algorithm.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Correction%20Algorithm/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AI on the Edge Device
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Home/">Welcome to the AI-on-the-edge-device!</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Links</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issues</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../AI-on-the-edge/">Welcome to the AI-on-the-edge-device wiki!</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">New</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Which model should I use?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Correction Algorithm</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#terms-and-definitions">Terms and definitions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prevalue">PreValue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#digits">Digits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analogs">Analogs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkdigitincreaseconsistency">CheckDigitIncreaseConsistency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#negative-rate-allowed">Negative Rate allowed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maxratevalue-maxratetype">MaxRateValue / MaxRateType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flow-chart">Flow Chart</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checkdigitincreaseconsistency-algorithm">CheckDigitIncreaseConsistency Algorithm</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn models with your own images</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">General Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Release creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AI on the Edge Device</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Asorted Pages &raquo;</li>
+      <li>Correction Algorithm</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/doc/Correction Algorithm.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="correction-algorithm">Correction Algorithm</h1>
+<p>After the digitization of the images and the composition to a number a checking and correction algorithm is applied. This is explained here.</p>
+<p>There are several reasons, that a check might be necessary:</p>
+<ol>
+<li>In case of digits there is the output of "N" (=NaN = Not-a-Number) in case the digit cannot be detected correctly. This happens for example if the image shows a digit between to states</li>
+<li>The replacement of the "N" with a previous value could be not sufficient, due to the fact, that it might have changed.</li>
+<li>There is a misreading of one one of the numbers. This can always happen in case of neural network processing.</li>
+</ol>
+<h3 id="terms-and-definitions">Terms and definitions</h3>
+<h5 id="prevalue">PreValue</h5>
+<p>The last correct read value. Either from a previous correctly identified value or manual setting by the user.</p>
+<p>This is used to replace "N"s and make a check for the absolute change.</p>
+<h5 id="digits">Digits</h5>
+<p>Value that are digitized from a digital number. There are 11 allowed values for this: </p>
+<ol>
+<li>Digits: 0, 1, 2, ... 9</li>
+<li>N = Not-a-Number - representing a not unique state between two numbers</li>
+</ol>
+<h5 id="analogs">Analogs</h5>
+<p>This are value derived from a pointer like meter. This never has the state "N".</p>
+<h5 id="checkdigitincreaseconsistency">CheckDigitIncreaseConsistency</h5>
+<p>If this is enabled an "inteligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the subdigit has gone through zero.</p>
+<p>For example: 16.6 --&gt; 16.7 --&gt; 1N.8 --&gt; <strong>17.9</strong> corrected to 16.9 --&gt; 17.0 --&gt; 17.1 </p>
+<p>As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the subdigit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9</p>
+<p>A detailed description of the algorithm can be found below (not yet ready!)</p>
+<h5 id="negative-rate-allowed">Negative Rate allowed</h5>
+<p>Most of the meters only have increasing numbers and do not count backwards. Therefore a negative rate (= negative change compared to the PreValue) is surely a false value. This can be checked an flagged as false reading</p>
+<h5 id="maxratevalue-maxratetype">MaxRateValue / MaxRateType</h5>
+<p>Here the maximum change from one to the next reading can be limited. If a false reading of the neural network results in a change larger than this, the reading is flagged as false. There a two types of comparisons possible</p>
+<p>1) <strong>AbsolutChange</strong>: Here the difference between the PreValue and the current reading is compared directly, independent how much time has passed since the last reading.
+2) <strong>RelativeRate</strong>:  in this case a change rate in the unit of change/minute is calculated, taking the time between the last and the current reading into account. Be careful, that with increasing time, the absolute allowed change increases.
+   Example: relative rate of 0.05 m³/minute --&gt; after 20 minutes a maximum change of 20 minutes * 0.05 m³/minute = 1 m³ is possible. That means that a false reading of 1 m³ cannot be detected false after about 20 minutes in this case
+   Assume, that there might me no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted. </p>
+<h4 id="flow-chart">Flow Chart</h4>
+<p>[[/images/correct_algo_1.jpg]]</p>
+<p>[[/images/correct_algo_2.jpg]]</p>
+<p>[[/images/correct_algo_3.jpg]]</p>
+<h2 id="checkdigitincreaseconsistency-algorithm">CheckDigitIncreaseConsistency Algorithm</h2>
+<p>The check digit increase consistency algorithm is functional for the digits only. Due to the fact, that the rotation might be a little bit earlier or later compared to the zero crossing of the digit before, errors during the reading before and after a zero crossing can be wrong. Therefore a simple algorithm can be applied, checking the consistency of zero crossing and changes in the following digit. This is applied to one after the other digit, starting with the lowest priority digits.</p>
+<p>[[/images/correct_algo_zero_crossing.jpg]]</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Configuration/" class="btn btn-neutral float-left" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Demo-Mode/" class="btn btn-neutral float-right" title="Demo Mode">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Demo-Mode/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

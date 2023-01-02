@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Hardware Compatibility - AI on the Edge Device</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hardware Compatibility";
+        var mkdocs_page_input_path = "Hardware-Compatibility.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Hardware-Compatibility/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AI on the Edge Device
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Home/">Welcome to the AI-on-the-edge-device!</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Links</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issues</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../AI-on-the-edge/">Welcome to the AI-on-the-edge-device wiki!</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">New</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Which model should I use?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware Compatibility</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn models with your own images</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">General Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Release creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AI on the Edge Device</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Asorted Pages &raquo;</li>
+      <li>Hardware Compatibility</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/doc/Hardware-Compatibility.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="hardware-compatibility">Hardware Compatibility</h1>
+<p>See also https://github.com/jomjol/AI-on-the-edge-device/discussions/1732</p>
+<p>General Remark: similar "looking" Board can have major differences:</p>
+<ul>
+<li>Processor</li>
+<li>Ram (Size! &amp; Type) -&gt; this Project needs at least 4MB RAM!</li>
+<li>Flashrom</li>
+<li>Camera Modules</li>
+<li>Onboard/External Antenna</li>
+<li>Quality of Components</li>
+<li>Manufacture Quality of the PCB and soldering</li>
+<li>Different Components</li>
+<li>"Clone" Components -&gt; ESPxx</li>
+<li>etc.</li>
+</ul>
+<p>This can cause different Power Consumption, Power Requirements, compatibility issues, etc.</p>
+<p>Most manufacturers and sellers buy what's cheap today on the Asian markets. In the end, it looks like it is sometimes a trial and error approach which ESP32-CAM Module works reliable.</p>
+<p>Below you find some remarks and experiences from the community:</p>
+<h1 id="esp32-core-itself">ESP32 core itself</h1>
+<table>
+<thead>
+<tr>
+<th>Chip Version</th>
+<th>Image</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32-D0WDQ6 (revision 1)</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="psram">PSRAM</h1>
+<table>
+<thead>
+<tr>
+<th>Labeling on PSRAM module</th>
+<th>Image</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPUS<br/>IPS640LS0<br/>1815XBGN</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-3SOR<br/>1040H<br/>110089G</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-3SQR<br/>12205<br/>150047G</td>
+<td></td>
+<td><strong>okay</strong><br />8MB</td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-350R<br/>1120A<br/>130027G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />PSRAM not accessible</td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-35QR<br/>11208<br/>130025G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />PSRAM not accessible</td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-3SQR<br/>13100<br/>180026G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />PSRAM not accessible</td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>6404L-3SQR<br/>11207<br/>130024G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />PSRAM not accessible</td>
+</tr>
+<tr>
+<td>AP MEMORY<br/>1604M-3SQR<br/>0280A<br/>070036G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />2MB only!</td>
+</tr>
+<tr>
+<td>ESP PSRAM64H 462021<br/>1B00286</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+<tr>
+<td>ESP PSRAM16M 302020<br/></td>
+<td></td>
+<td><strong>NOT OK</strong><br />2MB only!</td>
+</tr>
+<tr>
+<td>ESP PSRAM16H 202020<br/>050022G</td>
+<td></td>
+<td><strong>NOT OK</strong><br />2MB only!</td>
+</tr>
+</tbody>
+</table>
+<h1 id="ov2640-camera">OV2640 - Camera</h1>
+<p>The experience with the camera only is based on single modules. It is well possible, that this module had a damage overall and other modules of the same type will work. Give it a try and report to me!</p>
+<table>
+<thead>
+<tr>
+<th>Labeling on Flex-Connector</th>
+<th>Image</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TY-OV2<br/>640-V2.0</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+<tr>
+<td>DCX-OV2<br/>640-V2</td>
+<td></td>
+<td><strong>okay</strong></td>
+</tr>
+<tr>
+<td>DC-26<br/>40-V3</td>
+<td></td>
+<td><strong>okay</strong>: 3x<br/><strong>NOT OKAY:</strong> 1x</td>
+</tr>
+</tbody>
+</table>
+<h1 id="esp32-modules">ESP32 Modules</h1>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Image</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32CAM<br/>Different versions on the market! Especially the PSRAM is sometimes labeled wrong (Label: 4MB, Real: only 2 MB --&gt; will not work!)</td>
+<td></td>
+<td><strong>okay</strong><br />with &gt;=4 MB PSRAM!</td>
+</tr>
+<tr>
+<td>ESP32-S3-EYE<br />No Flash LED, pins different used (e.g. LCD diskplay)</td>
+<td></td>
+<td><strong>NOT OKAY</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="sd-cards">SD-Cards</h1>
+<p>Due to the limited free available gpios (due to all the extensions needed like: camera, sd-card, LED-flash, ...) the sd card is connected in 1-wire mode. There are some cards, that are compatible with the esp32cam module for unknown reasons.
+It is observed, that smaller cards (up to 4 GB) tend to be more stable and larger cards have more problems. But quite some exceptions in the forums (4 GB cards not working, 16 G cards working like a charm).</p>
+<h1 id="devices-known-to-work">Devices known to work</h1>
+<p>Please add links to stores of which you know they work:
+ - https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/ ? See https://github.com/jomjol/AI-on-the-edge-device/discussions/1041
+- https://www.amazon.de/-/en/gp/product/B0B51CQ13R
+- https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE (27.12.2022)
+ - ...
+ Sandisk 2GB Micro SD Class 2 <a href="https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">Sandisk 2GB</a>
+AITRIP ESP32 and CAM <a href="https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&amp;psc=1">ESP-32/CAM</a>
+- <a href="https://www.amazon.com/gp/product/B0948ZFTQZ">Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode</a> with <a href="https://www.amazon.com/gp/product/B07QYTP4VN">Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6</a></p>
+<h1 id="weak-wifi">Weak Wifi</h1>
+<p>The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Graphical-configuration/" class="btn btn-neutral float-left" title="Graphical configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Install-a-rolling-%28unstable%29-release/" class="btn btn-neutral float-right" title=":bangbang: Living on the edge :bangbang:">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Graphical-configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Install-a-rolling-%28unstable%29-release/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
