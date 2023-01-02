@@ -25,4 +25,4 @@ jobs:
       - name: Publish docs
         run: |
           cd docs
-          mkdocs gh-deploy
+          mkdocs --config-file mkdocs.yml gh-deploy
