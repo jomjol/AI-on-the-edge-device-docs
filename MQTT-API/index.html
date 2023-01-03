@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/MQTT-API/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>General Information - AI on the Edge Device</title>
+    <title>MQTT API - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "General Information";
+        var mkdocs_page_name = "MQTT API";
         var mkdocs_page_input_path = "MQTT-API.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/MQTT-API/";
       </script>
@@ -40,12 +40,96 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the AI-on-the-edge-device!</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API's</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">MQTT API</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#published-topics">Published topics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#interval">Interval</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mac">MAC</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ip">IP</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hostname">Hostname</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#uptime">Uptime</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#freemem">FreeMem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#wifirssi">WifiRSSI</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cputemp">CPUTemp</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#status_1">Status</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#result">Result</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#value">Value</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#raw">Raw</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#error">Error</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#json">JSON</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rate">Rate</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rate_per_time_unit">Rate_per_time_unit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rate_per_digitalization_round">Rate_per_digitalization_round</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#changeabsolut">Changeabsolut</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#timestamp">Timestamp</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#json_1">JSON</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber">GPIO/GPIO{PinNumber}</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subscibed-topics">Subscibed topics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#control">Control</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ctrlflow_start">Ctrl/flow_start</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Links</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+                  </li>
                   <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issues</a>
@@ -54,9 +138,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Asorted Pages</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../AI-on-the-edge/">Welcome to the AI-on-the-edge-device wiki!</a>
-                  </li>
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
@@ -79,8 +161,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
@@ -91,25 +171,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn models with your own images</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">General Information</a>
-    <ul class="current">
-    </ul>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
                   </li>
@@ -118,6 +190,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../xxx%20old%20AI-on-the-edge/">(old) Welcome to the AI-on-the-edge-device wiki!</a>
                   </li>
               </ul>
       </div>
@@ -134,8 +208,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Asorted Pages &raquo;</li>
-      <li>General Information</li>
+          <li>API's &raquo;</li>
+      <li>MQTT API</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/doc/MQTT-API.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -145,7 +219,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="general-information">General Information</h1>
+                <h1 id="mqtt-api">MQTT API</h1>
 <p>The device is capable to register to a MQTT broker to publish data and subscribe to specific topics.</p>
 <p>The MQTT service has to be enabled and configured properly in the device configuration via web interface (<code>Settings</code> -&gt; <code>Configuration</code> -&gt; section <code>MQTT</code>)</p>
 <p>The following parameters have to be defined:
@@ -155,93 +229,93 @@
 * User (optional)
 * Password (optional)
 * RetainFlag (optional)</p>
-<h1 id="published-topics">Published topics</h1>
-<h2 id="status">Status</h2>
+<h2 id="published-topics">Published topics</h2>
+<h3 id="status">Status</h3>
 <p><code>MainTopic</code>/{status topic}, e.g. <code>watermeter/status</code>
-* ### Connection</p>
+* #### Connection</p>
 <ul>
 <li>
-<h3 id="interval">Interval</h3>
+<h4 id="interval">Interval</h4>
 </li>
 <li>
-<h3 id="mac">MAC</h3>
+<h4 id="mac">MAC</h4>
 </li>
 <li>
-<h3 id="ip">IP</h3>
+<h4 id="ip">IP</h4>
 </li>
 <li>
-<h3 id="hostname">Hostname</h3>
+<h4 id="hostname">Hostname</h4>
 </li>
 <li>
-<h3 id="uptime">Uptime</h3>
+<h4 id="uptime">Uptime</h4>
 </li>
 <li>
-<h3 id="freemem">FreeMem</h3>
+<h4 id="freemem">FreeMem</h4>
 </li>
 <li>
-<h3 id="wifirssi">WifiRSSI</h3>
+<h4 id="wifirssi">WifiRSSI</h4>
 </li>
 <li>
-<h3 id="cputemp">CPUTemp</h3>
+<h4 id="cputemp">CPUTemp</h4>
 </li>
 <li>
-<h3 id="status_1">Status</h3>
+<h4 id="status_1">Status</h4>
 </li>
 </ul>
-<h2 id="result">Result</h2>
+<h3 id="result">Result</h3>
 <p><code>MainTopic</code>/{NumberName}/{result topic}, e.g. <code>watermeter/main/value</code></p>
 <ul>
 <li>
-<h3 id="value">Value</h3>
+<h4 id="value">Value</h4>
 </li>
 <li>
-<h3 id="raw">Raw</h3>
+<h4 id="raw">Raw</h4>
 </li>
 <li>
-<h3 id="error">Error</h3>
+<h4 id="error">Error</h4>
 </li>
 <li>
-<h3 id="json">JSON</h3>
+<h4 id="json">JSON</h4>
 </li>
 <li>
-<h3 id="rate">Rate</h3>
+<h4 id="rate">Rate</h4>
 </li>
 <li>
-<h3 id="rate_per_time_unit">Rate_per_time_unit</h3>
+<h4 id="rate_per_time_unit">Rate_per_time_unit</h4>
 <p>The time Unit gets set with the Homeassistant Discovery, eg. <code>h</code> or <code>m</code> (minutes)</p>
 </li>
 <li>
-<h3 id="rate_per_digitalization_round">Rate_per_digitalization_round</h3>
+<h4 id="rate_per_digitalization_round">Rate_per_digitalization_round</h4>
 <p>The <code>interval</code> defines when the next round gets triggered</p>
 </li>
 <li>
-<h3 id="changeabsolut">Changeabsolut</h3>
+<h4 id="changeabsolut">Changeabsolut</h4>
 </li>
 <li>
-<h3 id="timestamp">Timestamp</h3>
+<h4 id="timestamp">Timestamp</h4>
 </li>
 <li>
-<h3 id="json_1">JSON</h3>
+<h4 id="json_1">JSON</h4>
 <p>All relevant results in JSON syntax</p>
 </li>
 </ul>
-<h2 id="gpio">GPIO</h2>
+<h3 id="gpio">GPIO</h3>
 <p><code>MainTopic</code>/{GPIO topic}, e.g. <code>watermeter/GPIO/GPIO12</code></p>
 <ul>
 <li>
-<h3 id="gpiogpiopinnumber">GPIO/GPIO{PinNumber}</h3>
+<h4 id="gpiogpiopinnumber">GPIO/GPIO{PinNumber}</h4>
   Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; Chapter <code>GPIO</code>)</li>
 </ul>
-<h1 id="subscibed-topics">Subscibed topics</h1>
+<h2 id="subscibed-topics">Subscibed topics</h2>
 <p><code>MainTopic</code>/{subscribed topic}, e.g. <code>watermeter/ctrl/flow_start</code></p>
-<h2 id="control">Control</h2>
+<h3 id="control">Control</h3>
 <ul>
 <li>
-<h3 id="ctrlflow_start">Ctrl/flow_start</h3>
+<h4 id="ctrlflow_start">Ctrl/flow_start</h4>
 <p>Trigger a flow start by publishing to this topic (any character, length &gt; 0)</p>
 </li>
 <li>
-<h3 id="gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</h3>
+<h4 id="gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</h4>
 <p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; Chapter <code>GPIO</code>)</p>
 </li>
 </ul>
@@ -249,8 +323,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Learn-models-with-your-own-images/" class="btn btn-neutral float-left" title="Learn models with your own images"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-right" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../REST-API/" class="btn btn-neutral float-left" title="REST API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Addditional-Information/" class="btn btn-neutral float-right" title="Addditional Information">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -277,10 +351,10 @@
         </span>
     
     
-      <span><a href="../Learn-models-with-your-own-images/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../REST-API/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Addditional-Information/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

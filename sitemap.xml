@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/AI-on-the-edge/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Addditional-Information/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
@@ -157,6 +152,11 @@
     </url>
     <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Watermeter-specific-analog---digital-transition/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/xxx%20old%20AI-on-the-edge/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -3,9 +3,19 @@
 
 nav:
   # List all files in the expected order
-  - index.md
+  - Getting Started:
+    - index.md
+    - Installation.md
+    - FAQs.md
+
+  - API's:
+      - REST-API.md
+      - MQTT-API.md
+      # - Influx DB
+      # - ...
 
   - Links:
+    - Releases: https://github.com/jomjol/AI-on-the-edge-device/releases
     - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
     - Place an Issues: https://github.com/jomjol/AI-on-the-edge-device/issues
     - Join a Discussions: https://github.com/jomjol/AI-on-the-edge-device/discussions
