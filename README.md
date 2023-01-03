@@ -28,7 +28,7 @@ Each page has a link on its top-right corner `Edit on GitHub` which brings you d
 ## Local Test
 To test it locally:
 1. Clone this repo
-1. Install the required tools:
+1. Install the required tools (See also [.github/workflows/build-docs.yaml](.github/workflows/build-docs.yaml)):
     ```
     pip install --upgrade pip
     pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material
