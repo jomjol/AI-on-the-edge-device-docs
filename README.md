@@ -18,8 +18,10 @@ In the end, we should review all pages from there step by step and add them to t
  - Fetch included images and place them directly in the [docs/img](docs/img) folder
  - Rerwrite to have a clear structure
 
+## Editing a page
+Each page has a link on its top-right corner `Edit on GitHub` which brings you directly to the Github editor.
 
-## Adding new files
+## Adding new pages
 1. Add a new `*.md` document in the [docs](docs) folder.
 1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
