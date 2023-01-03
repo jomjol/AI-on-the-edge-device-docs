@@ -16,9 +16,6 @@ plugins:
 # The navigation is configured in the nav.yml file!
 
 # Emoji support
-# See https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
 markdown_extensions:
-  - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:pymdownx.emoji.to_alt
