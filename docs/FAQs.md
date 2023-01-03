@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-#### My device is reboot frequently. What can I do?
+## My device is reboot frequently. What can I do?
 
 There are several reasons for the reboot:
 
@@ -11,7 +11,7 @@ There are several reasons for the reboot:
 There is a dedicated Wiki page about this: [[Frequent Reboots]]
 
 
-#### How accurate are the detections?
+### How accurate are the detections?
 
 It is hard to give a specific accuracy number. It depends on many factors, e.g.
 
@@ -26,12 +26,12 @@ Anecdotally, the authors of this wiki have great success with the meter. While t
 See the FAQs below for more details and configuration hints.
 
 
-#### My numbers are not corrected detected. What can I do?
+## My numbers are not corrected detected. What can I do?
 
 * There is a dedicated Wiki page about the correct setting [[ROI Configuration]]
 * This page also includes the instructions for gathering new images for the training.
 
-#### How can I ensure invalid numbers are never reported?
+## How can I ensure invalid numbers are never reported?
 
 As mentioned above, the AI algorithm is not perfect. Sometimes it may read an incorrect value.
 
@@ -42,7 +42,7 @@ You can change the following settings to reduce incorrect readings (but potentia
 * Change `PostProcessing` configuration option `MaxRateType` to be time based instead of absolute. Set `MaxRateValue` to something realistic (e.g. `5` gal/min). You can often find the max flow rate your meter supports directly on the cover.
 * Reduce `AutoTimer` configuration option `Intervall` to the lowest it can be (e.g. `3` min). The more often you take readings, the less likely for data staleness to occur.
 
-#### Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)
+## Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)
 * The roll over behavior is different for the different meters. E.g.:
   * Rolling over start with different previous position (e.g. at 7, 8 or 9)
   * The neutral position (no rolling) is not perfectly at zero, but rather at something like 7.9 or 8.1, even if it should be exactly 8

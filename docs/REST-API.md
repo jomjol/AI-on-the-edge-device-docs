@@ -1,9 +1,9 @@
+# REST API
 Various information is directly accessible over specific REST calls.
 
 For an up-to-date list search the Github repository for [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
 
-# Often used APIs
-Just append them to the IP, separated with a `/`, eg. `http://192.168.1.1/json`
+To use it, just append them to the IP, separated with a `/`, eg. `http://192.168.1.1/json`
 
 ## Control
 * ### flow_start

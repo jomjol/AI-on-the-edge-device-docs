@@ -1,4 +1,6 @@
-# Welcome to the AI-on-the-edge-device!
+# Welcome
+Welcome to the AI-on-the-edge-device!
+This is the project documentation. For the source code, please head to [github.com/jomjol/AI-on-the-edge-device](https://github.com/jomjol/AI-on-the-edge-device).
 
 Artificial intelligence based systems have been established in our every days live. Just think of speech or image recognition. Most of the systems relay on either powerful processors or a direct connection to the cloud for doing the calculations up there. With the increasing power of modern processors the AI systems are coming closer to the end user - which is usually called **edge computing**.
 Here this edge computing is brought into a practical oriented example, where a AI network is implemented on a ESP32 device so: **AI on the edge**.

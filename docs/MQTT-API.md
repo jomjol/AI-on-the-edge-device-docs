@@ -1,4 +1,4 @@
-# General Information
+# MQTT API
 The device is capable to register to a MQTT broker to publish data and subscribe to specific topics.
 
 The MQTT service has to be enabled and configured properly in the device configuration via web interface (`Settings` -> `Configuration` -> section `MQTT`)
@@ -11,70 +11,70 @@ The following parameters have to be defined:
 * Password (optional)
 * RetainFlag (optional)
 
-# Published topics
+## Published topics
 
-## Status
+### Status
 `MainTopic`/{status topic}, e.g. `watermeter/status`
-* ### Connection
+* #### Connection
 
-* ### Interval
+* #### Interval
 
-* ### MAC
+* #### MAC
 
-* ### IP
+* #### IP
 
-* ### Hostname
+* #### Hostname
 
-* ### Uptime
+* #### Uptime
 
-* ### FreeMem
+* #### FreeMem
 
-* ### WifiRSSI
+* #### WifiRSSI
 
-* ### CPUTemp
+* #### CPUTemp
 
-* ### Status
+* #### Status
 
-## Result
+### Result
 `MainTopic`/{NumberName}/{result topic}, e.g. `watermeter/main/value`
 
-* ### Value
+* #### Value
 
-* ### Raw
+* #### Raw
 
-* ### Error
+* #### Error
 
-* ### JSON
+* #### JSON
 
-* ### Rate
+* #### Rate
 
-* ### Rate_per_time_unit
+* #### Rate_per_time_unit
   The time Unit gets set with the Homeassistant Discovery, eg. `h` or `m` (minutes)
 
-* ### Rate_per_digitalization_round
+* #### Rate_per_digitalization_round
   The `interval` defines when the next round gets triggered
 
-* ### Changeabsolut
+* #### Changeabsolut
 
-* ### Timestamp
+* #### Timestamp
 
-* ### JSON
+* #### JSON
   All relevant results in JSON syntax
 
-## GPIO
+### GPIO
 `MainTopic`/{GPIO topic}, e.g. `watermeter/GPIO/GPIO12`
 
-* ### GPIO/GPIO{PinNumber}
+* #### GPIO/GPIO{PinNumber}
   Depending on device configuration (`Settings` --> `Configuration` --> Chapter `GPIO`)
 
 
-# Subscibed topics
+## Subscibed topics
 `MainTopic`/{subscribed topic}, e.g. `watermeter/ctrl/flow_start`
 
-## Control
+### Control
 
-* ### Ctrl/flow_start
+* #### Ctrl/flow_start
   Trigger a flow start by publishing to this topic (any character, length > 0)
 
-* ### GPIO/GPIO{PinNumber}
+* #### GPIO/GPIO{PinNumber}
   Depending on device configuration (`Settings` --> `Configuration` --> Chapter `GPIO`)

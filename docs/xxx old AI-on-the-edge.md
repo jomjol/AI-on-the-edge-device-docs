@@ -1,4 +1,4 @@
-# Welcome to the AI-on-the-edge-device wiki!
+# (old) Welcome to the AI-on-the-edge-device wiki!
 
 Artifical inteligence based systems have been established in our every days live. Just think of speech or image recognition. Most of the systems relay on either powerfull processors or a direct connection to the cloud for doing the calculations up there. With the increasing power of modern processors the AI systems are coming closer to the end user - which is usally called **edge compution**.
 Here this edge computing is brough into a practical example, where a AI network is implemented on a ESP32 device so: **AI on the edge**.

@@ -13,6 +13,7 @@ The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-
 In the end, we should review all pages from there step by step and add them to the upper part of the navigation.
 
 ### Tasks to do
+ - Make sure there is a top level title (#) and all other chaper headers are on lower levels (##, ###)
  - Check the links in the documents
  - Fetch included images and place them directly in the [docs/img](docs/img) folder
  - Rerwrite to have a clear structure
