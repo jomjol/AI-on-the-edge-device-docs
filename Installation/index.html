@@ -78,7 +78,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#sd-card">SD-Card</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#attention">Attention</a>
+    <li class="toctree-l3"><a class="reference internal" href="#attention">‼️ Attention ‼️</a>
     </li>
         </ul>
     </li>
@@ -240,7 +240,7 @@ You can access it with the following link: https://jomjol.github.io/AI-on-the-ed
 <h4 id="2-using-the-flash-tool-from-espressif">2. Using the Flash Tool from Espressif</h4>
 <p>The flashing of the firmware can be done  with the "Flash Download Tool" from espressif, that can found <a href="https://www.espressif.com/en/support/download/other-tools">here</a> </p>
 <p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
-<p><img alt="‼" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/203c.svg" title=":bangbang:" /> <strong>Attention</strong> <img alt="‼" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/203c.svg" title=":bangbang:" />  if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
+<p>‼️ <strong>Attention</strong> ‼️  if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
 <p>But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:</p>
 <table>
 <thead>
@@ -285,7 +285,7 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 <p>The program expects a SD-Card installed with certain directory and file structure in order to work properly.
 For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page and extract the content of the contained <code>sd-card.zip</code> onto your SD-Card.</p>
 <p>This must only be done once as further updates of the SD-Card are possible with the OTA Update.</p>
-<h3 id="attention"><img alt="‼" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/203c.svg" title=":bangbang:" /> Attention <img alt="‼" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/203c.svg" title=":bangbang:" /></h3>
+<h3 id="attention">‼️ Attention ‼️</h3>
 <ul>
 <li>Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM &amp; SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.</li>
 <li>There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)</li>
