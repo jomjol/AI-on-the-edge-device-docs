@@ -6,7 +6,15 @@ nav:
   - Getting Started:
     - index.md
     - Installation.md
+    - Hardware-Compatibility.md
+    - Best-Practice.md
     - FAQs.md
+
+  - Configuration:
+    - Choosing-the-Model.md
+
+  - Advanced:
+    - Build-Instructions.md
 
   - API's:
       - REST-API.md
@@ -14,11 +22,14 @@ nav:
       # - Influx DB
       # - ...
 
+
   - Links:
     - Releases: https://github.com/jomjol/AI-on-the-edge-device/releases
     - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
     - Place an Issues: https://github.com/jomjol/AI-on-the-edge-device/issues
     - Join a Discussions: https://github.com/jomjol/AI-on-the-edge-device/discussions
+
+  #- Old Documentation:
 
   - Asorted Pages:
     # List all pages which are not covered by above list

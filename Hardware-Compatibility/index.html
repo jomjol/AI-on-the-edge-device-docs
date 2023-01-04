@@ -41,12 +41,30 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
                   </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware Compatibility</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-remark">General Remark</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the project yourself</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">API's</span></p>
@@ -68,14 +86,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Asorted Pages</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">New</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Which model should I use?</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
@@ -96,10 +108,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware Compatibility</a>
-    <ul class="current">
-    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
                   </li>
@@ -123,8 +131,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../xxx%20old%20AI-on-the-edge/">(old) Welcome to the AI-on-the-edge-device wiki!</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -140,7 +146,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Asorted Pages &raquo;</li>
+          <li>Getting Started &raquo;</li>
       <li>Hardware Compatibility</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Hardware-Compatibility.md" class="icon icon-github"> Edit on GitHub</a>
@@ -152,8 +158,8 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="hardware-compatibility">Hardware Compatibility</h1>
-<p>See also https://github.com/jomjol/AI-on-the-edge-device/discussions/1732</p>
-<p>General Remark: similar "looking" Board can have major differences:</p>
+<h3 id="general-remark">General Remark</h3>
+<p>Altrough a board looks similair, it can have major differences, eg.:</p>
 <ul>
 <li>Processor</li>
 <li>Ram (Size! &amp; Type) -&gt; this Project needs at least 4MB RAM!</li>
@@ -307,22 +313,33 @@
 <p>Due to the limited free available gpios (due to all the extensions needed like: camera, sd-card, LED-flash, ...) the sd card is connected in 1-wire mode. There are some cards, that are compatible with the esp32cam module for unknown reasons.
 It is observed, that smaller cards (up to 4 GB) tend to be more stable and larger cards have more problems. But quite some exceptions in the forums (4 GB cards not working, 16 G cards working like a charm).</p>
 <h1 id="devices-known-to-work">Devices known to work</h1>
-<p>Please add links to stores of which you know they work:
- - https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/ ? See https://github.com/jomjol/AI-on-the-edge-device/discussions/1041
-- https://www.amazon.de/-/en/gp/product/B0B51CQ13R
-- https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE (27.12.2022)
- - ...
- Sandisk 2GB Micro SD Class 2 <a href="https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">Sandisk 2GB</a>
-AITRIP ESP32 and CAM <a href="https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&amp;psc=1">ESP-32/CAM</a>
-- <a href="https://www.amazon.com/gp/product/B0948ZFTQZ">Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode</a> with <a href="https://www.amazon.com/gp/product/B07QYTP4VN">Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6</a></p>
+<h3 id="modules-old-list-not-up-to-date-anymore">Modules (Old list, not up-to-date anymore):</h3>
+<p>See <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/1732">https://github.com/jomjol/AI-on-the-edge-device/discussions/1732</a> for a more recent list.</p>
+<ul>
+<li>
+<p><a href="https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/">https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/</a> (see <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/1041">https://github.com/jomjol/AI-on-the-edge-device/discussions/1041</a>)</p>
+</li>
+<li>
+<p><a href="https://www.amazon.de/-/en/gp/product/B0B51CQ13R">https://www.amazon.de/-/en/gp/product/B0B51CQ13R</a></p>
+</li>
+<li>
+<p><a href="https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE">https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE</a> (27.12.2022)</p>
+</li>
+</ul>
+<h3 id="sd-card">SD-Card</h3>
+<ul>
+<li>Sandisk 2GB Micro SD Class 2 <a href="https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">Sandisk 2GB</a>
+AITRIP ESP32 and CAM <a href="https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&amp;psc=1">ESP-32/CAM</a></li>
+<li><a href="https://www.amazon.com/gp/product/B0948ZFTQZ">Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode</a> with <a href="https://www.amazon.com/gp/product/B07QYTP4VN">Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6</a></li>
+</ul>
 <h1 id="weak-wifi">Weak Wifi</h1>
-<p>The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/</p>
+<p>The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See <a href="https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/">https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Graphical-configuration/" class="btn btn-neutral float-left" title="Graphical configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Install-a-rolling-%28unstable%29-release/" class="btn btn-neutral float-right" title=":bangbang: Living on the edge :bangbang:">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Best-Practice/" class="btn btn-neutral float-right" title="Best Practice">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -349,10 +366,10 @@ AITRIP ESP32 and CAM <a href="https://www.amazon.co.uk/gp/product/B08X49P8P3/ref
         </span>
     
     
-      <span><a href="../Graphical-configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Install-a-rolling-%28unstable%29-release/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Best-Practice/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

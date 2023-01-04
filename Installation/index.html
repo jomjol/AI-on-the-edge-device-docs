@@ -78,7 +78,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#sd-card">SD-Card</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#attention">‼️ Attention ‼️</a>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
     </li>
         </ul>
     </li>
@@ -86,7 +86,21 @@
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the project yourself</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">API's</span></p>
@@ -111,12 +125,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">New</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Which model should I use?</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
@@ -136,8 +144,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
                   </li>
@@ -160,8 +166,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../xxx%20old%20AI-on-the-edge/">(old) Welcome to the AI-on-the-edge-device wiki!</a>
                   </li>
               </ul>
       </div>
@@ -190,57 +194,64 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="installation">Installation</h1>
-<p>The installation requires multiple steps:
-1. Get the right hardware and wire it up
-1. Flash the firmware onto the ESP32
-1. Write the data to the SD-Card
-1. Insert the SD-Card into the ESP32 board
-1. Power/restart it. </p>
+<p>The installation requires multiple steps:</p>
+<ol>
+<li>Get the right hardware and wire it up</li>
+<li>Flash the firmware onto the ESP32</li>
+<li>Write the data to the SD-Card</li>
+<li>Insert the SD-Card into the ESP32 board</li>
+<li>Power/restart it. </li>
+</ol>
 <h2 id="hardware">Hardware</h2>
 <h4 id="esp32-cam">ESP32-CAM</h4>
 <ul>
 <li>OV2640 camera module</li>
-<li>SD-Card slot </li>
-<li>4 MB PSRAM. </li>
+<li>Micro SD-Card slot </li>
+<li>4 or 8 MB PSRAM. </li>
 </ul>
-<p>It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.</p>
+<p>It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
+How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunction device. See <a href="../Hardware-Compatibility">Hardware Compatibility</a> for further advice! </p>
 <h4 id="usb-uart-interface">USB-&gt;UART interface</h4>
 <p>For first time flashing the firmware a USB -&gt; UART connector is needed. Later firmware upgrades than can be flashed via OTA.</p>
 <h4 id="power-supply">Power supply</h4>
 <p>For power supply a 5V source is needed. Most easily this can be done via an USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large elco condensator like a 2200uF between ground and VCC.</p>
-<p><strong>Attention:</strong> in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
+<p><strong>‼️ Attention:</strong> in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
 <h4 id="housing">Housing</h4>
-<p>A small 3D-printable example for a very small case can be found in Thingiverse here: https://www.thingiverse.com/thing:4571627</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/main.jpg" width="300"><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/size.png" width="300"> </p>
-<p><strong>Attention</strong>: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
-<img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/focus_adjustment.jpg" width="200"></p>
+<p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
+<p><img alt="" src="../img/main.jpg" style="width:200px" />
+<img alt="" src="../img/size.png" style="width:200px" /></p>
+<p><strong>‼️ Attention</strong>: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
+<p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px" /></p>
 <h3 id="wiring">Wiring</h3>
 <p>Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.</p>
 <p>A example for wiring can be found here:</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/wiring.png" width="600"> 
-<img alt="" src="../img/progammer_manual.jpg" /></p>
+<p><img alt="" src="../img/wiring.png" /></p>
+<p><img alt="" src="../img/progammer_manual.jpg" /></p>
 <p>It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described here: [[External-LED]]</p>
 <h2 id="firmware-flashing">Firmware flashing</h2>
 <h3 id="files">Files</h3>
-<p>Grab the firmware from the
- - <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases page</a> (Stable, tested versions), or the
- - <a href="https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling">Automatically build development branch</a> (experimental, untested versions). Please have a look on https://github.com/jomjol/AI-on-the-edge-device/wiki/Install-a-rolling-%28unstable%29-release first!</p>
-<p>You need:
-*   partitions.bin
-*   bootloader.bin
-*   firmware.bin
-*   html.zip</p>
+<p>Grab the firmware from the</p>
+<ul>
+<li><a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases page</a> (Stable, tested versions), or the</li>
+<li><a href="https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling">Automatically build development branch</a> (experimental, untested versions). Please have a look on https://github.com/jomjol/AI-on-the-edge-device/wiki/Install-a-rolling-%28unstable%29-release first!</li>
+</ul>
+<p>You need:</p>
+<ul>
+<li>partitions.bin</li>
+<li>bootloader.bin</li>
+<li>firmware.bin</li>
+</ul>
 <h3 id="flashing">Flashing</h3>
 <p>There are several options to flash the firmware. Here three are described:</p>
 <h4 id="1-web-installer">1. Web Installer</h4>
 <p>There is a Web Installer available which will work right out of the web browser Edge and Chrome.
 You can access it with the following link: https://jomjol.github.io/AI-on-the-edge-device</p>
 <p>This is the preferred way for beginners as it also allows access to the USB Log:</p>
-<p><a href="https://user-images.githubusercontent.com/1783586/200926652-293e9a1c-86ec-4b79-9cef-3e6f3c47ea4b.png"><img src=https://user-images.githubusercontent.com/1783586/200926652-293e9a1c-86ec-4b79-9cef-3e6f3c47ea4b.png height=200px></a></p>
+<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png" /></a></p>
 <h4 id="2-using-the-flash-tool-from-espressif">2. Using the Flash Tool from Espressif</h4>
 <p>The flashing of the firmware can be done  with the "Flash Download Tool" from espressif, that can found <a href="https://www.espressif.com/en/support/download/other-tools">here</a> </p>
 <p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
-<p>‼️ <strong>Attention</strong> ‼️  if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
+<p>‼️ <strong>Attention</strong>: if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
 <p>But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:</p>
 <table>
 <thead>
@@ -264,7 +275,7 @@ You can access it with the following link: https://jomjol.github.io/AI-on-the-ed
 </tr>
 </tbody>
 </table>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/Flash_Settings.png" width="400"> </p>
+<p><img alt="" src="../img/Flash_Settings.png" /></p>
 <p>Alternatively it can be directly flashed from the development environment - here PlatformIO. But this is rather for experienced users, as the whole development chain needs to be installed for compilation.</p>
 <h4 id="3-using-esptool-in-python-directly">3. Using esptool in python directly</h4>
 <p>For this you need a python environment (e.g. Anaconda in Win10). 
@@ -285,7 +296,7 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 <p>The program expects a SD-Card installed with certain directory and file structure in order to work properly.
 For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page and extract the content of the contained <code>sd-card.zip</code> onto your SD-Card.</p>
 <p>This must only be done once as further updates of the SD-Card are possible with the OTA Update.</p>
-<h3 id="attention">‼️ Attention ‼️</h3>
+<h3 id="notes">Notes</h3>
 <ul>
 <li>Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM &amp; SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.</li>
 <li>There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)</li>
@@ -308,7 +319,7 @@ For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a 
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../FAQs/" class="btn btn-neutral float-right" title="Frequently Asked Questions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Hardware-Compatibility/" class="btn btn-neutral float-right" title="Hardware Compatibility">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -338,7 +349,7 @@ For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a 
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../FAQs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Hardware-Compatibility/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
