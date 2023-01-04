@@ -1,6 +1,8 @@
 # Welcome
-Welcome to the AI-on-the-edge-device!
-This is the project documentation. For the source code, please head to [github.com/jomjol/AI-on-the-edge-device](https://github.com/jomjol/AI-on-the-edge-device).
+
+Welcome to the AI-on-the-edge-device project!
+
+This is the documentation. For the source code, please head to [github.com/jomjol/AI-on-the-edge-device](https://github.com/jomjol/AI-on-the-edge-device).
 
 Artificial intelligence based systems have been established in our every days live. Just think of speech or image recognition. Most of the systems relay on either powerful processors or a direct connection to the cloud for doing the calculations up there. With the increasing power of modern processors the AI systems are coming closer to the end user - which is usually called **edge computing**.
 Here this edge computing is brought into a practical oriented example, where a AI network is implemented on a ESP32 device so: **AI on the edge**.
@@ -16,23 +18,24 @@ Here this edge computing is brought into a practical oriented example, where a A
 
 ## Idea
 
-<img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/idea.jpg" width="600"> 
+![Idea](img/idea.jpg){: style="width:600px"}
 
 
 ### Hardware
 
-<img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/watermeter_all.jpg" width="200"><img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/main.jpg" width="200"><img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/size.png" width="200"> 
+![](img/watermeter_all.jpg){: style="width:200px"}
+![](img/main.jpg){: style="width:200px"}
+![](img/size.png){: style="width:200px"}
 
 
 
 ### Web interface
 
-<img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/watermeter.jpg" width="600"> 
+![](img/watermeter.jpg){: style="width:600px"}
 
 ### Configuration Interface
 
-<img src="https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/master/images/edit_reference.jpg" width="600"> 
-
+![](img/edit_reference.jpg){: style="width:600px"}
 
 
 **Have fun in studying the new possibilities and ideas**
@@ -51,12 +54,11 @@ This project is a evolution of the [water-meter-system-complete](https://github.
 ## Functionality
 This systems implements several functions: 
 
-* water meter readout
-* picture provider
-* file server
-* OTA functionality
-* graphical configuration manager
-* web server
+* Water/gas/electrity/... meter readout
+* Picture provider
+* File server
+* OTA Update functionality
+* Graphical configuration manager
+* Web server
 
-The details can be found here: [[Integrated Functions]]
-
+The details can be found here: [Integrated Functions](Integrated Functions)

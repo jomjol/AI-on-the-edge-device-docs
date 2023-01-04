@@ -1,6 +1,7 @@
 # Installation
 
 The installation requires multiple steps:
+
 1. Get the right hardware and wire it up
 1. Flash the firmware onto the ESP32
 1. Write the data to the SD-Card
@@ -11,10 +12,11 @@ The installation requires multiple steps:
 #### ESP32-CAM
 
 * OV2640 camera module
-*  SD-Card slot 
-* 4 MB PSRAM. 
+* Micro SD-Card slot 
+* 4 or 8 MB PSRAM. 
 
 It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
+How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunction device. See [Hardware Compatibility](../Hardware-Compatibility) for further advice! 
 
 #### USB->UART interface
 
@@ -24,18 +26,19 @@ For first time flashing the firmware a USB -> UART connector is needed. Later fi
 
 For power supply a 5V source is needed. Most easily this can be done via an USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large elco condensator like a 2200uF between ground and VCC.
 
-**Attention:** in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.
+**:bangbang: Attention:** in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.
 
 #### Housing
 
-A small 3D-printable example for a very small case can be found in Thingiverse here: https://www.thingiverse.com/thing:4571627
+A small 3D-printable example for a very small case can be found in Thingiverse here: [https://www.thingiverse.com/thing:4571627](https://www.thingiverse.com/thing:4571627)
 
-<img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/main.jpg" width="300"><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/size.png" width="300"> 
+![](img/main.jpg){: style="width:200px"}
+![](img/size.png){: style="width:200px"}
 
 
+**:bangbang: Attention**: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
 
-**Attention**: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
-<img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/focus_adjustment.jpg" width="200">
+![](img/focus_adjustment.jpg){: style="width:200px"}
 
 
 
@@ -45,7 +48,8 @@ Beside the 5V power supply, only for the first flashing a connection to the USB-
 
 A example for wiring can be found here:
 
-<img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/wiring.png" width="600"> 
+![](img/wiring.png)
+
 ![](img/progammer_manual.jpg)
 
 
@@ -57,14 +61,15 @@ It is also possible to use external LEDs for the illumination instead of the int
 ## Firmware flashing
 ### Files
 Grab the firmware from the
+
  - [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
  - [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please have a look on https://github.com/jomjol/AI-on-the-edge-device/wiki/Install-a-rolling-%28unstable%29-release first!
 
 You need:
+
 *   partitions.bin
 *   bootloader.bin
 *   firmware.bin
-*   html.zip
 
 
 ### Flashing
@@ -76,8 +81,7 @@ You can access it with the following link: https://jomjol.github.io/AI-on-the-ed
 
 This is the preferred way for beginners as it also allows access to the USB Log:
 
-[<img src=https://user-images.githubusercontent.com/1783586/200926652-293e9a1c-86ec-4b79-9cef-3e6f3c47ea4b.png height=200px>](https://user-images.githubusercontent.com/1783586/200926652-293e9a1c-86ec-4b79-9cef-3e6f3c47ea4b.png)
-
+[![](img/web-console.png)](img/web-console.png)
 
 #### 2. Using the Flash Tool from Espressif
 
@@ -85,7 +89,7 @@ The flashing of the firmware can be done  with the "Flash Download Tool" from es
 
 Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. 
 
-:bangbang: **Attention** :bangbang:  if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.
+:bangbang: **Attention**: if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.
 
 But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:
 
@@ -95,7 +99,7 @@ But your ESP32 in bootloader mode and push start, then it will identify the boar
 | partitions.bin | 0x8000  |
 | firmware.bin   | 0x10000 |
 
-<img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/Flash_Settings.png" width="400"> 
+![](img/Flash_Settings.png)
 
 Alternatively it can be directly flashed from the development environment - here PlatformIO. But this is rather for experienced users, as the whole development chain needs to be installed for compilation.
 
@@ -127,7 +131,7 @@ For the first setup take the `initial_esp32_setup_*.zip` from the [Release](http
 
 This must only be done once as further updates of the SD-Card are possible with the OTA Update.
 
-### :bangbang: Attention :bangbang: 
+### Notes
 
 - Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM & SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.
 - There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)

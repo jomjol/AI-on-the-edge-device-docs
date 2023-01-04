@@ -15,7 +15,8 @@ plugins:
 
 # The navigation is configured in the nav.yml file!
 
-# Emoji support
+
 markdown_extensions:
-  - pymdownx.emoji:
+  - attr_list # Needed to scale images
+  - pymdownx.emoji: # Emoji support
       emoji_generator: !!python/name:pymdownx.emoji.to_alt

@@ -1,4 +1,4 @@
-# Which model should I use?
+# Model Selection
 
 In the [Graphical Configuration Page](Graphical-configuration), you can choose different models depending on your needs.
 
@@ -13,7 +13,7 @@ For digits on water meters, gas-meters or power meters you can select between tw
 
 This model can recognize full digits. All intermediate states shown a "N" for not a number. But in post process it uses older values to fill up the "N" values if possible.
 
-<img width="333" alt="image" src="https://user-images.githubusercontent.com/412645/190924459-e4023630-c6d0-4a8c-ab56-59e6c0e3ffd8.png">
+![](img/dig-class11.png){: style="width:300px"}
 
 #### Main features
 
@@ -25,7 +25,8 @@ This model can recognize full digits. All intermediate states shown a "N" for no
 
 These models are used to get a continuous reading with intermediate states. To see what the models are doing, you can go to the Recognition page.
 
-<img width="323" alt="image" src="https://user-images.githubusercontent.com/412645/190924335-b8b75883-7b39-4fd6-a949-49c69834fee4.png">
+![](img/dig-class100.png){: style="width:300px"}
+
 
 #### Main features
 
@@ -44,7 +45,7 @@ The difference is in the internal processing. Take the one that gives you the be
 
 For pointers on water meters use the analog models. You can only choose between ana-class100 and ana-cont. Both do mainly the same.
 
-<img width="231" alt="image" src="https://user-images.githubusercontent.com/412645/190924487-18ed16e1-1c89-45f1-823e-305b7e78ac46.png">
+![](img/ana-class100.png){: style="width:250px"}
 
 #### Main features
 
