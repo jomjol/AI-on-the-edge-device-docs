@@ -13,10 +13,6 @@ on:
       - 'main'
 
 jobs:
-  #########################################################################################
-  ## Build the documentation using mkdocs
-  ## It will be pushed to the gh-pages branch
-  #########################################################################################
   build-documentation:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -32,10 +28,10 @@ jobs:
             ${{ runner.os }}-pip-
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
       - run: |
           pip install --upgrade pip && pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material
           git config user.name 'github-actions[bot]'
