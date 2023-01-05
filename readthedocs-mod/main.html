@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {%- block site_name %}
-<!-- Add our logo -->
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs/img/logo.png> <!-- needs to be an absolute page since the index page handles it differently :( )-->
+<img src={{ config.site_url }}/img/logo.png>
 {%- if config.theme.logo %}
     <a href="{{ nav.homepage.url|url }}">
 {%- else %}
