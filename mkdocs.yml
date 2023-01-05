@@ -13,7 +13,7 @@ plugins:
     - awesome-pages:
         filename: nav.yml
 
-# The navigation is configured in the nav.yml file!
+# The navigation is configured in the docs/nav.yml file!
 
 markdown_extensions:
   - attr_list # Needed to scale images

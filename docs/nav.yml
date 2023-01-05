@@ -15,6 +15,7 @@ nav:
 
   - Advanced:
     - Build-Instructions.md
+    - Upload-files-by-script.md
 
   - API's:
       - REST-API.md
