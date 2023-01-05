@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{%- block site_name %}
+<!-- Add our logo -->
+<img src=https://jomjol.github.io/AI-on-the-edge-device-docs/img/logo.png> <!-- needs to be an absolute page since the index page handles it differently :( )-->
+{%- if config.theme.logo %}
+    <a href="{{ nav.homepage.url|url }}">
+{%- else %}
+    <a href="{{ nav.homepage.url|url }}" class="icon icon-home"> {{ config.site_name }}
+{%- endif %}
+{%- if config.theme.logo %}
+    <img src="{{ config.theme.logo|url }}" class="logo" alt="{% trans %}Logo{% endtrans %}"/>
+{%- endif %}
+</a>
+{%- endblock %}

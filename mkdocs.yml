@@ -4,7 +4,9 @@ site_url: https://jomjol.github.io/AI-on-the-edge-device-docs/
 repo_url: https://github.com/jomjol/AI-on-the-edge-device-docs
 edit_uri: https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs
 
-theme: readthedocs
+theme: 
+  name: readthedocs
+  custom_dir: readthedocs-mod/
 
 favicon: favicon.ico
 

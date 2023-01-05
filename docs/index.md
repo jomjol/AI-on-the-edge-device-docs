@@ -28,7 +28,6 @@ Here this edge computing is brought into a practical oriented example, where a A
 ![](img/size.png){: style="width:200px"}
 
 
-
 ### Web interface
 
 ![](img/watermeter.jpg){: style="width:600px"}
@@ -49,16 +48,3 @@ The task to be demonstrated here is a automated readout of an analog water meter
 There are two types of CNN implemented, a classification network for reading the digital numbers and a single output network for digitalize the analog pointers for the sub digit readings.
 
 This project is a evolution of the [water-meter-system-complete](https://github.com/jomjol/water-meter-system-complete), which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural networks backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD-Card as data storage.
-
-
-## Functionality
-This systems implements several functions: 
-
-* Water/gas/electrity/... meter readout
-* Picture provider
-* File server
-* OTA Update functionality
-* Graphical configuration manager
-* Web server
-
-The details can be found here: [Integrated Functions](Integrated Functions)
