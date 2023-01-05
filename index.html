@@ -31,8 +31,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> AI on the Edge Device
-        </a><div role="search">
+<!-- Add our logo -->
+<img src=https://jomjol.github.io/AI-on-the-edge-device-docs/img/logo.png> <!-- needs to be an absolute page since the index page handles it differently :( )-->
+    <a href="." class="icon icon-home"> AI on the Edge Device
+</a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
@@ -55,8 +57,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#configuration-interface">Configuration Interface</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#functionality">Functionality</a>
     </li>
     </ul>
                   </li>
@@ -200,17 +200,6 @@ Here this edge computing is brought into a practical oriented example, where a A
 <p>The task to be demonstrated here is a automated readout of an analog water meter. The water consumption is to be recorded within a house automatization and the water meter is totally analog without any electronic interface. Therefore the task is solved by taking regularly an image of the water meter and digitize the reading.</p>
 <p>There are two types of CNN implemented, a classification network for reading the digital numbers and a single output network for digitalize the analog pointers for the sub digit readings.</p>
 <p>This project is a evolution of the <a href="https://github.com/jomjol/water-meter-system-complete">water-meter-system-complete</a>, which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural networks backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD-Card as data storage.</p>
-<h2 id="functionality">Functionality</h2>
-<p>This systems implements several functions: </p>
-<ul>
-<li>Water/gas/electrity/... meter readout</li>
-<li>Picture provider</li>
-<li>File server</li>
-<li>OTA Update functionality</li>
-<li>Graphical configuration manager</li>
-<li>Web server</li>
-</ul>
-<p>The details can be found here: <a href="Integrated Functions">Integrated Functions</a></p>
               
             </div>
           </div><footer>
