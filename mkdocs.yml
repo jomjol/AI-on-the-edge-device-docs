@@ -8,15 +8,12 @@ theme:
   name: readthedocs
   custom_dir: readthedocs-mod/
 
-favicon: favicon.ico
-
 plugins:
     - search
     - awesome-pages:
         filename: nav.yml
 
 # The navigation is configured in the nav.yml file!
-
 
 markdown_extensions:
   - attr_list # Needed to scale images
