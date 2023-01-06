@@ -1,23 +1,19 @@
-# Graphical configuration
+# Graphical Configuration
+
+!!! Warning
+    This page overlaps [Configuration](../Configuration). They should be merged to one page!
 
 ### **General remark:** 
 
 - to activate the changes, currently the device needs a restart after saving the changes.
-
 - partially the commands needs processing on the ESP32 device. This is not very fast - so please be patient.
 
-- too frequent http-request could result in a reboot of the ESP32 - normally this is not a problem as the server react about 30s later normally.
-
-  
 
 ## Access to the graphical user interface
 
 The graphical configuration mode can be reached via the "Edit Configuration" button in the main menue (`/index.html`):
 
 * <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s1_access.jpg" width="600" align="middle">
-
-
-
 
 
 
@@ -41,13 +37,15 @@ This is a text editor for the config.ini. Changes commited with the button on th
 
 * <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s2_edit_config.jpg" width="600" align="middle">
 
+Details see [Configuration-Parameter-Details](../Configuration-Parameter-Details).
+
 
 
 ### 2a. Create Reference Image
 
 The reference image is the basis for the coordination of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. 
 
-**Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step only with caution.
+**:bangbang: Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step only with caution.
 
 * <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s3_reference.jpg" width="400" align="middle">
 
@@ -100,15 +98,9 @@ In order to have a good recognition, the active ROI has two rectangles for align
 * The line in the middle should go through the middle of the  number (in case it is not  moving in or out)
 
 
-
-
-
 To save the result push "Save all to config.ini" (4).
 
 
-
-
-
-**Attention:** Currently you have to reboot the ESP32 to take the changes in the `config.ini` to take place.
+**:bangbang: Attention:** Currently you have to reboot the ESP32 to take the changes in the `config.ini` to take place.
 
 This steps are running on the ESP32 directly. So be patient with the results.

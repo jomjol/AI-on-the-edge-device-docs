@@ -1,5 +1,8 @@
 # Model Selection
 
+!!! Warning
+    This page overlaps [Neural Network Types](../Neural-Network-Types). They should be merged to one page!
+
 In the [Graphical Configuration Page](Graphical-configuration), you can choose different models depending on your needs.
 
 This wiki page tries to help you on which model to select.

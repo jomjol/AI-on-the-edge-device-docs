@@ -1,4 +1,4 @@
-# ROI (Region of Interest) Configuration
+# ROI (Region of Interest)
 
 General remark:
 > You are using a neural network approach which is trained to fit as many different type of meters as possible. The accuracy will never be 100%. It is normal to see a missing reading once in a while. There there are several precautions to detect this. For details see the section `PostProcessing` on the configuration page.
@@ -12,27 +12,27 @@ The most critical settings for accurate detection are:
 
 _____
 
-## 1. Correct Setup of ROI
+## Correct Setup of ROI
 Please proceed in the following order!
 
 Don't forget to save after each step!
 
-### 1. Image Sharpness
+### Image Sharpness
 Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera. 
 **Adjust the focus for the clearest possible image** See [these instructions](https://github.com/jomjol/water-meter-picture-provider/blob/master/ESP32-CAM_Lens_Modification.md) for help.
 
-### 2. Horizontal Alignment
+### Horizontal Alignment
 Ensure an **exact horizontal alignment** of the number via the alignment / reference setup:
 
 | :heavy_check_mark: Okay                         | :x: Not Okay                         |
 | ------------------------------ | ---------------------------------- |
 | ![](img/alignment_okay.jpg) | ![](img/alignment_not_okay.jpg) |
 
-### 3. Correct Size for ROI
+### Correct Size for ROI
 Choose the right size of the ROI:
 > The configuration of ROIs differs a bit on the model you choose. Below you find the differences between the different AI models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.
 
-### 4. Model Selection
+### Model Selection
 #### dig-class11 Configuration
 dig-class11 - Models recognize the **complete digit only**. Here it is not relevant if the ROI fits the Border of the digit window.
 

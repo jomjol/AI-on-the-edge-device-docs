@@ -28,11 +28,10 @@ demo/
 - The jpg files can have any name
 - The jpg files must be smaller than 30'000 bytes
 - The `files.txt` must contains a list of those files, eg:
-  ```
-  520.8983.jpg
-  520.9086.jpg
-  520.9351.jpg
-  ```
+
+        520.8983.jpg
+        520.9086.jpg
+        520.9351.jpg
 
 ## Recoding
 To record real images of a meter, you have to periodically fetch `http://<IP>/img_tmp/raw.jpg`.

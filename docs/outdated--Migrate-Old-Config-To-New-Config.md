@@ -1,6 +1,7 @@
 # Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”
 
- 
+!!! Warning
+    This page no longer is maintained!
 
 There are only some few steps necessary to migrate your old system to the new one.
 

@@ -173,7 +173,7 @@ LogfileRetentionInDays = 2
 ```
 
 This paragraph is used to switch on an extended logging. It is optional and by default only a minimum logging is enabled.
-**Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
+**:bangbang: Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
 
 
 
@@ -193,7 +193,7 @@ SetupMode = false
 ```
 
 This paragraph is used to switch on an extended logging. It is optional and by default only a minimum logging is enabled.
-**Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
+**:bangbang: Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
 
 
 

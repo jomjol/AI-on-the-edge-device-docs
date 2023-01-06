@@ -1,3 +1,9 @@
+# Configuration
+
+!!! Warning
+    This page overlaps [Graphical-Configuration](../Graphical-Configuration). They should be merged to one page!
+
+
 Most of the settings can be modified with the help of a web based [graphical user interface](Graphical-configuration). This is hosted through the web server on the ESP32.
 
 More configuration parameters can be edited by hand in the `config.ini` and corresponding files in the `/config` directory on the SD-card. 

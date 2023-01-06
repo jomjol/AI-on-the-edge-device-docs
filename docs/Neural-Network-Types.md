@@ -1,17 +1,12 @@
+# Neural Network Types
+
+!!! Warning
+    This page overlaps [Choosing the Model](../Choosing-the-Model). They should be merged to one page!
+
 This section is describing the different types of neural networks, that are used with the AI-on-the-edge approach and gives an introduction on how and where to use them. 
 
 
-
-### Content
-
-1) Overview neural network type
-2) Naming convention
-3) Overview of trained types and details
-
-_______________________________
-
-
-### 1. Overview neural network type
+## Overview neural network type
 
 There are two **types of input**:
 
@@ -28,7 +23,7 @@ There are two **types of neural networks**:
 
 No setting of the type in the firmware is necessary. The type can detect by the output structure automatically.
 
-**Attention:**
+**:bangbang: Attention:**
 
 * It is very important to choose the right network type (digits or analog pointers). 
   Technically a wrong network will work and create output, but that would be totally arbitrary
@@ -37,10 +32,8 @@ No setting of the type in the firmware is necessary. The type can detect by the 
   * For the continious and 100 classes network especially for the digits, there are only a view types of digits trained up to now
 * Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). 
 
-_______________________________
 
-
-### 2. Naming convention
+## Naming convention
 
 |                                                      | Classification<br />11 classes<br />0, 1, ... 9 + "N" | Classification<br />100 classes<br />0.0, 0.1, ... 9.9 | Continuous<br />Interval<br />[0, 10[ |
 | ---------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------ | ------------------------------------- |
@@ -66,37 +59,34 @@ Example: `dig-class11_1410_s2_q.tflite`
 
 
 
+## Overview of trained types and details
 
-_______________________________________________________
-
-### 3. Overview of trained types and details
-
-#### 3a. Analog Pointer ("ana-cont_XXX.tflite" & "ana-class100_XXX.tflite")
+### Analog Pointer ("ana-cont_XXX.tflite" & "ana-class100_XXX.tflite")
 
 This is to transfer the direction of a pointer into a continuous number between 0 and 1, whereas 0 (=1) is the upwards position (12 o'clock), 0.25 corresponds to the 3 o'clock positions and so on. This network is a envolop for all different types of pointers. Currently there are no dedicated network trainings for specific types of pointers.
 
 There are two types of network structure, currently both are supported. The "class100" is a pure classification network, that might need a bit more accuracy in the labeling. "cont" is a no classic approach with a continuous output off only 2 neurons (details see below).
 
-##### Types of counters trained:
+#### Types of counters trained:
 
 |                                     |                                     |                                     |                                     |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | ![](img/ana-cont/examp-ana1.jpg) | ![](img/ana-cont/examp-ana2.jpg) | ![](img/ana-cont/examp-ana3.jpg) | ![](img/ana-cont/examp-ana4.jpg) |
 | ![](img/ana-cont/examp-ana5.jpg) | ![](img/ana-cont/examp-ana6.jpg) | ![](img/ana-cont/examp-ana7.jpg) |                                     |
 
-##### Training data needs
+#### Training data needs
 
 * Quadratic images, minimum size: 32x32 pixel
 * Typically 100 - 200 images with a resultion of 1/100 of the full rotation (every 0.1 value or 3.6°)
 * Naming: x.y_ARBITRARY.jpg, where x.y = value 0.0 ... 9.9
 
-##### CNN Technical details:
+#### CNN Technical details:
 
-###### Input
+##### Input
 
 * 32 x 32 RGB images
 
-######   Output
+#####   Output
 
 * **ana-cont**_XXX.tflite:
   * 2 neurons with output in range [-1, 1] - representing a sinus / cosinus encoding of the angle
@@ -108,12 +98,12 @@ There are two types of network structure, currently both are supported. The "cla
 
 
 
-#### 3b. Digits with 11 classes ("dig-class11_XXX.tflite")
+### Digits with 11 classes ("dig-class11_XXX.tflite")
 
 The digit type is a classical classification network, with 11 classes representing the numbers 0, 1, ... 9 and the special class "N". It is trained for the rolling ring of gas and electric meters. As there is sometime a status between two images, the special class "N" is representing Not-A-Number for the case, that the image cannot be unique classified to one number e.g. because it is between two digits. For this type the lowest amount of training data per type is needed, resulting in a large variety of type being already part of the training set.
 
 
-##### Types of counters trained:
+#### Types of counters trained:
 
 |                            |                            |                            |                            |                            |                            |                            |
 | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
@@ -122,20 +112,20 @@ The digit type is a classical classification network, with 11 classes representi
 |                                        |                                        |                                        |  |  |  |  |
 
 
-##### Training data needs
+#### Training data needs
 
 * RGB images, with minimum size: 20x32 pixel
 * Typically 10 - 20 images (1-2 for each digit and an arbitrary number for the "N" class
 
 * Naming: x_ARBITRARY.jpg, where x = value 0 ... 9 + N
 
-##### CNN Technical details:
+#### CNN Technical details:
 
-###### Input
+##### Input
 
 * 20 x 32 RGB images
 
-###### Output
+##### Output
 
 * 11 neurons for image classification (last layer normalized to 1)
   * Neuron 0 to 9 represent the corresponding numbers "0" to "9"
@@ -143,12 +133,12 @@ The digit type is a classical classification network, with 11 classes representi
 
 
 
-#### 3c. Digits with rolling results ("dig-class100_XXX.tflite" & "dig-cont_XXX.tflite")
+### Digits with rolling results ("dig-class100_XXX.tflite" & "dig-cont_XXX.tflite")
 
 This type of network tries to overcome the problem, that there are intermediate values, when a rolling digit is between two numbers. Previous this was the "N" class. In this network type, there are also subdigit values trained, so that the intermediate state can be used as additional information for the algorithms. 
 
 
-##### Types of counters trained:
+#### Types of counters trained:
 
 |                                    |                                                              |                                                              |      |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -157,20 +147,20 @@ This type of network tries to overcome the problem, that there are intermediate 
 
 
 
-##### Training data needs
+#### Training data needs
 
 * RGB images, with minimum size: 20x32 pixel
 * Typically 100 - 200 images (1-2 for each possible position) 
 
 * Naming: x.y_ARBITRARY.jpg, where x.y = 0.0, 0.1, ... 9.9 representing the intermediate state
 
-##### CNN Technical details:
+#### CNN Technical details:
 
-###### Input
+##### Input
 
 * 20 x 32 RGB images
 
-######   Output
+#####   Output
 
 * **dig-cont**_XXX.tflite:
   * 10 neurons representing the digits 0, 1, ... 9. The intermediate values are represented by weighted normalized values of two neighboring output neurons

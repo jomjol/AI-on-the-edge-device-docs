@@ -8,6 +8,7 @@ theme:
   name: readthedocs
   custom_dir: readthedocs-mod/
 
+
 plugins:
     - search
     - awesome-pages:
@@ -19,3 +20,4 @@ markdown_extensions:
   - attr_list # Needed to scale images
   - pymdownx.emoji: # Emoji support
       emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - markdown.extensions.admonition

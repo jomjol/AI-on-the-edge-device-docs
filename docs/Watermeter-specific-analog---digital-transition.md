@@ -1,4 +1,4 @@
-# Understanding the problem
+# Analog/Digital Transition on Watermeters
 
 At first, for the most watermeters the default configuration should be work. But the digit, especially the last digit differs in some devices.
 
