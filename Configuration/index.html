@@ -210,7 +210,7 @@
 </div>
 <p>Most of the settings can be modified with the help of a web based <a href="Graphical-configuration">graphical user interface</a>. This is hosted through the web server on the ESP32.</p>
 <p>More configuration parameters can be edited by hand in the <code>config.ini</code> and corresponding files in the <code>/config</code> directory on the SD-card. </p>
-<p>If you where using the Version 1 of the watermeter you can easily transfer the configuration to the new system by following the steps in this <a href="MigrateOldConfigToNew.md">migration description</a></p>
+<p>If you where using the Version 1 of the watermeter you can easily transfer the configuration to the new system by following the steps in this <a href="../outdated--Migrate-Old-Config-To-New-Config/">migration description</a></p>
 <h2 id="processing-configini-principle">Processing / Config.ini principle</h2>
 <p>The principle is very simple and can most easily be described as a flow of processing steps. Each step has a dedicated parameter description in the <code>config.ini</code>, which is indicated by brackets <code>[name_of_step]</code>. The steps are processed in the order written in the config file. That means, that you first have to describe the image taking, then the aligning and cutting and only after that you can start to config a neural network. The last step is the post processing.</p>
 <h3 id="processing-steps-overview">Processing steps - Overview</h3>
@@ -256,7 +256,7 @@
 <p>It is recommended to do the configuration of the alignment structures and ROIs through the graphical user interface. A step by step instruction can be found here: [[Graphical Configuration]]</p>
 <h2 id="background-for-image-alignment">Background for Image Alignment</h2>
 <p>Details on the image recognition flow can be found in the other project here: https://github.com/jomjol/water-meter-system-complete/blob/master/images/Alignment_procedure_draft.pdf</p>
-<p>The <code>config.ini</code> here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see <a href="MigrateOldConfigToNew.md">here</a>.</p>
+<p>The <code>config.ini</code> here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see <a href="../outdated--Migrate-Old-Config-To-New-Config/">here</a>.</p>
 <h3 id="integration-into-home-assistant">Integration into Home Assistant</h3>
 <p>Thanks to the help of the user @deadly667 here are some hints for the integration into the home assistant: [[Integration-Home-Assistant]]</p>
               
