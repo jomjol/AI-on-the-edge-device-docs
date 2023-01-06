@@ -14,7 +14,10 @@ Here this edge computing is brought into a practical oriented example, where a A
 - camera and illumination integrated
 - Web surface to administrate and control
 - OTA-Interface to update directly through the web interface
-- API for easy integration
+- Full integration into Homeassistant
+- Support for Influx DB 1
+- MQTT
+- REST API
 
 ## Idea
 
