@@ -10,27 +10,53 @@ nav:
     - Best-Practice.md
     - FAQs.md
 
-  - Configuration:
-    - Choosing-the-Model.md
-
-  - Advanced:
-    - Build-Instructions.md
-    - Upload-files-by-script.md
-
-  - API's:
-      - REST-API.md
-      - MQTT-API.md
-      # - Influx DB
-      # - ...
-
-
-  - Links:
+  - External Links:
     - Releases: https://github.com/jomjol/AI-on-the-edge-device/releases
     - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
     - Place an Issues: https://github.com/jomjol/AI-on-the-edge-device/issues
     - Join a Discussions: https://github.com/jomjol/AI-on-the-edge-device/discussions
 
-  #- Old Documentation:
+  - Configuration:
+    - ROI-Configuration.md
+    - Graphical-Configuration.md
+    - Choosing-the-Model.md
+    - Neural-Network-Types.md
+    - ota.md
+
+  - Advanced:
+    - Integration-Home-Assistant.md
+    - External-LED.md
+    - rolling-installation.md
+    - Configuration-Parameter-Details.md
+    - Configuration.md
+    - Watermeter-specific-analog---digital-transition.md
+    - Learn-models-with-your-own-images.md
+    - Correction Algorithm.md
+    - Additional-Information.md
+
+  - Troubleshooting:
+    - Error-Codes.md
+    - Error-Debugging.md
+    - Frequent-Reboots.md
+
+  - API's:
+      - REST-API.md
+      - MQTT-API.md
+      - Influx-DB.md
+      # - ...
+
+  - Development:
+    - Build-Instructions.md
+    - Demo-Mode.md
+    - Upload-files-by-script.md
+    - Testing.md
+    - Release-creation.md
+
+
+  - Old Pages (no longer maintained):
+    - outdated--Integrated-Functions.md
+    - outdated--Gasmeter-Log-Downloader.md
+    - outdated--Migrate-Old-Config-To-New-Config.md
 
   - Asorted Pages:
     # List all pages which are not covered by above list

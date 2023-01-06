@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Watermeter-specific-analog---digital-transition/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/rolling-installation/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Analog/Digital Transition on Watermeters - AI on the Edge Device</title>
+    <title>Living on the edge - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Analog/Digital Transition on Watermeters";
-        var mkdocs_page_input_path = "Watermeter-specific-analog---digital-transition.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Watermeter-specific-analog---digital-transition/";
+        var mkdocs_page_name = "Living on the edge";
+        var mkdocs_page_input_path = "rolling-installation.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/rolling-installation/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -84,23 +84,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Living on the edge</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#you-still-want-to-try-it">You still want to try it?</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Analog/Digital Transition on Watermeters</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#normal-transition">"Normal" transition</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#early-transition">Early transition</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#inaccuracies-in-image-recognition">Inaccuracies in image recognition</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-configure-for-my-meter-type">How to configure for my meter type</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
                   </li>
@@ -167,9 +161,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Advanced &raquo;</li>
-      <li>Analog/Digital Transition on Watermeters</li>
+      <li>Living on the edge</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Watermeter-specific-analog---digital-transition.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/rolling-installation.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -177,28 +171,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="analogdigital-transition-on-watermeters">Analog/Digital Transition on Watermeters</h1>
-<p>At first, for the most watermeters the default configuration should be work. But the digit, especially the last digit differs in some devices.</p>
-<h2 id="normal-transition">"Normal" transition</h2>
-<p>In most cases, the transition of the last digit starts when the analogue pointer is &gt; 9. </p>
-<p>Often the last digit "hangs" a bit on this devices and comes not over zero. So it is not easy to see which digit is correct. In the first example 4 or still 3? (3 is correct).</p>
-<p><img width="122" alt="image" src="https://user-images.githubusercontent.com/412645/209808192-5ff67e9f-ea7c-4d82-a8e4-54b3643c7e24.png">
-<img width="122" alt="image" src="https://user-images.githubusercontent.com/412645/209808306-359cce2e-ec84-4390-82d1-6747e1ec056c.png"></p>
-<h2 id="early-transition">Early transition</h2>
-<p>Some units start the transition very early or run with the analogue pointer. In the third example, is it a 3 or a 2?</p>
-<p><img width="122" alt="image" src="https://user-images.githubusercontent.com/412645/209807685-658fb9bb-648a-4779-bc30-805eadc12083.png">
-<img width="122" alt="image" src="https://user-images.githubusercontent.com/412645/209808972-448bb6d0-7b7e-4030-abb2-9c966ceffc4a.png">
-<img width="122" alt="image" src="https://user-images.githubusercontent.com/412645/209809116-d4acc5f2-ab5c-4304-9559-598b1dfc59c2.png"></p>
-<h2 id="inaccuracies-in-image-recognition">Inaccuracies in image recognition</h2>
-<p>The models for image recognition are good, but have inaccuracies in the range +/- 0.2. In order to obtain as many correct results as possible, a treatment is carried out in the post process in the range of 9.8-0.2 for the analogue pointer, which must start differently depending on the type of counter.</p>
-<h2 id="how-to-configure-for-my-meter-type">How to configure for my meter type</h2>
-<p>If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option <code>AnalogDigitalTransitionStart</code> to a value between 6 and 8.</p>
+                <h1 id="living-on-the-edge">Living on the edge</h1>
+<p>The branch <a href="https://github.com/jomjol/AI-on-the-edge-device/tree/rolling">rolling</a> contains the latest version of the Firmware and the Web Interface. It might already contain a fix for your issue. But it is work in progress, don't expect it to work stable or be an improvement for your AI-on-the-edge-device! Also it might break the <a href="../ota">OTA Update</a> and thus require manual flashing over USB!</p>
+<h2 id="you-still-want-to-try-it">You still want to try it?</h2>
+<p>Grab the latest <code>rolling</code> build from <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/build.yaml?query=branch%3Arolling">Github Actions</a> Page and proceed as following:</p>
+<ol>
+<li>Pick the most top successful (green) build.</li>
+<li>Download the <code>AI-on-the-edge-device__update__rolling_*.zip</code></li>
+<li>Flash the zip file using the <a href="../ota">OTA Update</a> page of your device.</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Configuration/" class="btn btn-neutral float-left" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Learn-models-with-your-own-images/" class="btn btn-neutral float-right" title="Learn a model with your own images">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../External-LED/" class="btn btn-neutral float-left" title="External LED"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Configuration-Parameter-Details/" class="btn btn-neutral float-right" title="Configuration Parameter Details">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -225,10 +212,10 @@
         </span>
     
     
-      <span><a href="../Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../External-LED/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Learn-models-with-your-own-images/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Configuration-Parameter-Details/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

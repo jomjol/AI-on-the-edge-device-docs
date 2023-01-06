@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Learn models with your own images - AI on the Edge Device</title>
+    <title>Learn a model with your own images - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Learn models with your own images";
+        var mkdocs_page_name = "Learn a model with your own images";
         var mkdocs_page_input_path = "Learn-models-with-your-own-images.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/";
       </script>
@@ -54,26 +54,7 @@
                   <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the project yourself</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Links</span></p>
+              <p class="caption"><span class="caption-text">External Links</span></p>
               <ul>
                   <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
                   </li>
@@ -84,54 +65,102 @@
                   <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Learn a model with your own images</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#collecting-images-for-dig-class100dig-contana-class100">Collecting images for dig-class100/dig-cont/ana-class100</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#train-the-model">Train the model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dig-class11-models-digits">dig-class11 models (digits)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dig-class100-dig-cont-models-digits">dig-class100 / dig-cont models (digits)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ana-class100ana-cont-models-analog-pointers">ana-class100/ana-cont models (analog pointers)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#share-your-images">Share your images</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#images-can-be-rejected-if">Images can be rejected if</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
                   </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Frequent Reboots</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
+              </ul>
+              <p class="caption"><span class="caption-text">API's</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Learn models with your own images</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Release creation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
                   </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul>
               </ul>
       </div>
     </div>
@@ -147,8 +176,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Asorted Pages &raquo;</li>
-      <li>Learn models with your own images</li>
+          <li>Advanced &raquo;</li>
+      <li>Learn a model with your own images</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Learn-models-with-your-own-images.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -158,7 +187,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model.</p>
+                <h1 id="learn-a-model-with-your-own-images">Learn a model with your own images</h1>
+<p>If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model.</p>
 <p>But before you do this, please check if your type really is not contained yet in the training data, see <a href="https://jomjol.github.io/neural-network-digital-counter-readout">digits</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">pointers</a> for an overview of images used for the training</p>
 <p>The neural network is trained on base of a set of images, that have been collected over time. If your digits are included or at least very similar to included images, the chance is very high that the neural network is working fine for you as well.</p>
 <p>The neural network configuration is stored in the TensorFlow Lite format as <code>filename.tfl</code> or <code>filename.tflite</code> in the <code>/config</code> directory. It can be updated by uploading the new file and activating it on the configuration page or in the config file <code>/config/config.ini</code>.</p>
@@ -213,8 +243,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Integration-Home-Assistant/" class="btn btn-neutral float-left" title="Integration into Home Assistant"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-right" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Watermeter-specific-analog---digital-transition/" class="btn btn-neutral float-left" title="Analog/Digital Transition on Watermeters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Correction%20Algorithm/" class="btn btn-neutral float-right" title="Correction Algorithm">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -241,10 +271,10 @@
         </span>
     
     
-      <span><a href="../Integration-Home-Assistant/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Watermeter-specific-analog---digital-transition/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Correction%20Algorithm/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -54,26 +54,7 @@
                   <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the project yourself</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Links</span></p>
+              <p class="caption"><span class="caption-text">External Links</span></p>
               <ul>
                   <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
                   </li>
@@ -84,54 +65,122 @@
                   <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Addditional-Information/">Addditional Information</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Neural Network Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview-neural-network-type">Overview neural network type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#naming-convention">Naming convention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#overview-of-trained-types-and-details">Overview of trained types and details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained">Types of counters trained:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs">Training data needs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details">CNN Technical details:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#digits-with-11-classes-dig-class11_xxxtflite">Digits with 11 classes ("dig-class11_XXX.tflite")</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_1">Types of counters trained:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs_1">Training data needs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_1">CNN Technical details:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_2">Types of counters trained:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs_2">Training data needs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_2">CNN Technical details:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
                   </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Frequent Reboots</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent%20Reboots/">Frequent reboots</a>
+              </ul>
+              <p class="caption"><span class="caption-text">API's</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Gasmeter-Log-Downloader/">Gasmeter Log Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-configuration/">Graphical configuration</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Install-a-rolling-%28unstable%29-release/">:bangbang: Living on the edge :bangbang:</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integrated%20Functions/">Integrated Functions</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn models with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Neural Network Types</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../OTA---Update-Firmware-and-Web-Interface/">Over-The-Air (OTA) Update</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest) Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Release creation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Understanding the problem</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
                   </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul>
               </ul>
       </div>
     </div>
@@ -147,7 +196,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Asorted Pages &raquo;</li>
+          <li>Configuration &raquo;</li>
       <li>Neural Network Types</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Neural-Network-Types.md" class="icon icon-github"> Edit on GitHub</a>
@@ -158,13 +207,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>This section is describing the different types of neural networks, that are used with the AI-on-the-edge approach and gives an introduction on how and where to use them. </p>
-<h3 id="content">Content</h3>
-<p>1) Overview neural network type
-2) Naming convention
-3) Overview of trained types and details</p>
-<hr />
-<h3 id="1-overview-neural-network-type">1. Overview neural network type</h3>
+                <h1 id="neural-network-types">Neural Network Types</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page overlaps <a href="../Choosing-the-Model">Choosing the Model</a>. They should be merged to one page!</p>
+</div>
+<p>This section is describing the different types of neural networks, that are used with the AI-on-the-edge approach and gives an introduction on how and where to use them. </p>
+<h2 id="overview-neural-network-type">Overview neural network type</h2>
 <p>There are two <strong>types of input</strong>:</p>
 <ul>
 <li>
@@ -182,7 +231,7 @@
 <li><em>continuous output networks</em> with a continuous output in the interval [0, 10[</li>
 </ul>
 <p>No setting of the type in the firmware is necessary. The type can detect by the output structure automatically.</p>
-<p><strong>Attention:</strong></p>
+<p><strong>‼️ Attention:</strong></p>
 <ul>
 <li>It is very important to choose the right network type (digits or analog pointers). 
   Technically a wrong network will work and create output, but that would be totally arbitrary</li>
@@ -191,8 +240,7 @@
 <li>For the continious and 100 classes network especially for the digits, there are only a view types of digits trained up to now</li>
 <li>Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). </li>
 </ul>
-<hr />
-<h3 id="2-naming-convention">2. Naming convention</h3>
+<h2 id="naming-convention">Naming convention</h2>
 <table>
 <thead>
 <tr>
@@ -235,12 +283,11 @@
 <li>s2 = Size 2 (Medium)</li>
 <li>q = Quantized Version</li>
 </ul>
-<hr />
-<h3 id="3-overview-of-trained-types-and-details">3. Overview of trained types and details</h3>
-<h4 id="3a-analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">3a. Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</h4>
+<h2 id="overview-of-trained-types-and-details">Overview of trained types and details</h2>
+<h3 id="analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</h3>
 <p>This is to transfer the direction of a pointer into a continuous number between 0 and 1, whereas 0 (=1) is the upwards position (12 o'clock), 0.25 corresponds to the 3 o'clock positions and so on. This network is a envolop for all different types of pointers. Currently there are no dedicated network trainings for specific types of pointers.</p>
 <p>There are two types of network structure, currently both are supported. The "class100" is a pure classification network, that might need a bit more accuracy in the labeling. "cont" is a no classic approach with a continuous output off only 2 neurons (details see below).</p>
-<h5 id="types-of-counters-trained">Types of counters trained:</h5>
+<h4 id="types-of-counters-trained">Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -265,18 +312,18 @@
 </tr>
 </tbody>
 </table>
-<h5 id="training-data-needs">Training data needs</h5>
+<h4 id="training-data-needs">Training data needs</h4>
 <ul>
 <li>Quadratic images, minimum size: 32x32 pixel</li>
 <li>Typically 100 - 200 images with a resultion of 1/100 of the full rotation (every 0.1 value or 3.6°)</li>
 <li>Naming: x.y_ARBITRARY.jpg, where x.y = value 0.0 ... 9.9</li>
 </ul>
-<h5 id="cnn-technical-details">CNN Technical details:</h5>
-<h6 id="input">Input</h6>
+<h4 id="cnn-technical-details">CNN Technical details:</h4>
+<h5 id="input">Input</h5>
 <ul>
 <li>32 x 32 RGB images</li>
 </ul>
-<h6 id="output">Output</h6>
+<h5 id="output">Output</h5>
 <ul>
 <li><strong>ana-cont</strong>_XXX.tflite:</li>
 <li>2 neurons with output in range [-1, 1] - representing a sinus / cosinus encoding of the angle</li>
@@ -288,9 +335,9 @@
 </li>
 <li>100 neurons representing the classes from 0.0, 0.1, ... 9.8, 9.9</li>
 </ul>
-<h4 id="3b-digits-with-11-classes-dig-class11_xxxtflite">3b. Digits with 11 classes ("dig-class11_XXX.tflite")</h4>
+<h3 id="digits-with-11-classes-dig-class11_xxxtflite">Digits with 11 classes ("dig-class11_XXX.tflite")</h3>
 <p>The digit type is a classical classification network, with 11 classes representing the numbers 0, 1, ... 9 and the special class "N". It is trained for the rolling ring of gas and electric meters. As there is sometime a status between two images, the special class "N" is representing Not-A-Number for the case, that the image cannot be unique classified to one number e.g. because it is between two digits. For this type the lowest amount of training data per type is needed, resulting in a large variety of type being already part of the training set.</p>
-<h5 id="types-of-counters-trained_1">Types of counters trained:</h5>
+<h4 id="types-of-counters-trained_1">Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -333,7 +380,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="training-data-needs_1">Training data needs</h5>
+<h4 id="training-data-needs_1">Training data needs</h4>
 <ul>
 <li>RGB images, with minimum size: 20x32 pixel</li>
 <li>
@@ -343,20 +390,20 @@
 <p>Naming: x_ARBITRARY.jpg, where x = value 0 ... 9 + N</p>
 </li>
 </ul>
-<h5 id="cnn-technical-details_1">CNN Technical details:</h5>
-<h6 id="input_1">Input</h6>
+<h4 id="cnn-technical-details_1">CNN Technical details:</h4>
+<h5 id="input_1">Input</h5>
 <ul>
 <li>20 x 32 RGB images</li>
 </ul>
-<h6 id="output_1">Output</h6>
+<h5 id="output_1">Output</h5>
 <ul>
 <li>11 neurons for image classification (last layer normalized to 1)</li>
 <li>Neuron 0 to 9 represent the corresponding numbers "0" to "9"</li>
 <li>Neron 10 represent the "Not-A-Number" class, telling, that the image is not uniquely classified</li>
 </ul>
-<h4 id="3c-digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">3c. Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</h4>
+<h3 id="digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</h3>
 <p>This type of network tries to overcome the problem, that there are intermediate values, when a rolling digit is between two numbers. Previous this was the "N" class. In this network type, there are also subdigit values trained, so that the intermediate state can be used as additional information for the algorithms. </p>
-<h5 id="types-of-counters-trained_2">Types of counters trained:</h5>
+<h4 id="types-of-counters-trained_2">Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -381,7 +428,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="training-data-needs_2">Training data needs</h5>
+<h4 id="training-data-needs_2">Training data needs</h4>
 <ul>
 <li>RGB images, with minimum size: 20x32 pixel</li>
 <li>
@@ -391,12 +438,12 @@
 <p>Naming: x.y_ARBITRARY.jpg, where x.y = 0.0, 0.1, ... 9.9 representing the intermediate state</p>
 </li>
 </ul>
-<h5 id="cnn-technical-details_2">CNN Technical details:</h5>
-<h6 id="input_2">Input</h6>
+<h4 id="cnn-technical-details_2">CNN Technical details:</h4>
+<h5 id="input_2">Input</h5>
 <ul>
 <li>20 x 32 RGB images</li>
 </ul>
-<h6 id="output_2">Output</h6>
+<h5 id="output_2">Output</h5>
 <ul>
 <li><strong>dig-cont</strong>_XXX.tflite:</li>
 <li>10 neurons representing the digits 0, 1, ... 9. The intermediate values are represented by weighted normalized values of two neighboring output neurons</li>
@@ -412,8 +459,8 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-left" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../OTA---Update-Firmware-and-Web-Interface/" class="btn btn-neutral float-right" title="Over-The-Air (OTA) Update">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Choosing-the-Model/" class="btn btn-neutral float-left" title="Model Selection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ota/" class="btn btn-neutral float-right" title="Over-The-Air (OTA) Update">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -440,10 +487,10 @@
         </span>
     
     
-      <span><a href="../Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Choosing-the-Model/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../OTA---Update-Firmware-and-Web-Interface/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../ota/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
