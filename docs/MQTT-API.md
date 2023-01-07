@@ -73,7 +73,7 @@ The following parameters have to be defined:
 
 ### Control
 
-* #### Ctrl/flow_start
+* #### ctrl/flow_start
   Trigger a flow start by publishing to this topic (any character, length > 0)
 
 * #### GPIO/GPIO{PinNumber}
