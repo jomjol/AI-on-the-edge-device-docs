@@ -28,18 +28,30 @@ Below you find some remarks and experiences from the community:
 
 # PSRAM
 
+There seems to be a lot of "fake" chips, or maybe wrongly configured ESP32 Boards.
+
+
+For AP MEMORY, all "real" APS**64**04\*3SQR Chips should work. 
+
+For ESP PSRAM, all "real" PSRAM**64**\* should work
+
+64Mbit density = 8Mbyte PSRAM
+
+This Table is just a snapshot of chips which worked
+
 | Labeling on PSRAM module                       | Image | Status                    |
 | ---------------------------------------------- | ----- | ------------------------- |
 | IPUS / IPS640LS0 / 1815XBGN                |       |:heavy_check_mark:              |
-| AP MEMORY / 6404L-3SOR / 1040H / 110089G |       | :heavy_check_mark:                  |
-| AP MEMORY / 6404L-3SQR / 12205 / 150047G |       | :heavy_check_mark: 8MB              |
-| AP MEMORY / 6404L-350R / 1120A / 130027G |       | :x: PSRAM not accessible|
-| AP MEMORY / 6404L-35QR / 11208 / 130025G |       | :x: PSRAM not accessible|
-| AP MEMORY / 6404L-3SQR / 13100 / 180026G|       | :x: PSRAM not accessible|
-| AP MEMORY / 6404L-3SQR / 11207 / 130024G|       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-3SOR / 1040H / 110089G |       | :heavy_check_mark:                  |
+| AP MEMORY / **64**04L-3SQR / 12205 / 150047G |       | :heavy_check_mark: 8MB              |
+| AP MEMORY / **64**04L-3SQR / 12208 / 150047G |       | :heavy_check_mark: 8MB              |
+| AP MEMORY / **64**04L-350R / 1120A / 130027G |       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-35QR / 11208 / 130025G |       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-3SQR / 13100 / 180026G|       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-3SQR / 11207 / 130024G|       | :x: PSRAM not accessible|
 | AP MEMORY / 1604M-3SQR / 0280A / 070036G|       | :x: 2MB only!  |
-| ESP PSRAM64H 462021 / 1B00286                |       | :heavy_check_mark:                  |
-| ESP PSRAM64H 412021 /1A0039G                |       | :heavy_check_mark:   (8MB)                |
+| ESP PSRAM**64**H 462021 / 1B00286                |       | :heavy_check_mark:                  |
+| ESP PSRAM**64**H 412021 /1A0039G                |       | :heavy_check_mark:   (8MB)                |
 | ESP PSRAM16M 302020                        |       | :x: 2MB only! |
 | ESP PSRAM16H 202020 / 050022G                |       | :x: 2MB only! |
 
