@@ -8,7 +8,7 @@ There are several reasons for the reboot:
 * Wrong configuration, missing configuration files
 * Unstable hardware - see [[Hardware Compatibility]]
 
-There is a dedicated Wiki page about this: [[Frequent Reboots]]
+There is a dedicated Wiki page about this: [Frequent Reboots](https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/).
 
 
 ### How accurate are the detections?
@@ -28,7 +28,7 @@ See the FAQs below for more details and configuration hints.
 
 ## My numbers are not corrected detected. What can I do?
 
-* There is a dedicated Wiki page about the correct setting [[ROI Configuration]]
+* There is a dedicated Wiki page about the correct setting [ROI Configuration](https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/).
 * This page also includes the instructions for gathering new images for the training.
 
 ## How can I ensure invalid numbers are never reported?
