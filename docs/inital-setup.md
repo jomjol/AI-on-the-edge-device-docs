@@ -2,7 +2,6 @@
 
 After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:
 
-<img width="500px" src="img/setup_initial_welcome.png">
 ![](img/setup_initial_welcome.png){: style="width:500px"}
 
 In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).
@@ -11,7 +10,7 @@ In the top you can navigate through 5 steps, that guide you through the necessar
 
 The reference image is the basis for the coordinate system of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. 
 
-<img width="500px" src="img/initial_setup_1_reference_image.jpg">
+![](img/initial_setup_1_reference_image.jpg){: style="width:500px"}
 
 At first the current image is shown. To define a new reference image push the button "Create new Reference" (2) and afterwards "Take Image" (2). It might take some seconds for processing, then your actual camera image should be shown.
 
@@ -37,7 +36,7 @@ If everything is done, you can save the result with "Update Reference Image" (4)
 
 The alignment references are used to realign every taken image to the reference coordinates. Therefore two alignment structures are identified and the image is shifted and rotated according to their position with the target to be in exactly the same position as the reference image. The alignment structures needs to be unique and have a good contrast. You can switch between this two marks with (1).
 
-<img width="500px" src="img/initial_setup_2_alignment_marks.jpg">
+![](img/initial_setup_2_alignment_marks.jpg){: style="width:500px"}
 
 With the control in (3) position and size of the selected reference image. You can define the ROI in the image also directly via drag and drop with the mouse. To choose the currently marked image part you need to push "Update Reference" (2). 
 
@@ -55,7 +54,7 @@ Here the regions of interest for the digital and analog pointers are defined. As
 
 First of all, if you don't have that kind of numbers on you meter, you can disable it with the check box at the top (1).
 
-<img width="500px" src="img/initial_setup_3_rois.jpg">
+![](img/initial_setup_3_rois.jpg){: style="width:500px"}
 
 In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). 
 
@@ -75,7 +74,7 @@ For analog meters the ROI setting is rather straight forward as the meter is usu
 
 Here is an example with the details for the ROI "ana1": 
 
-<img width="400px" src="img/initial_setup_3_analog_example.jpg">
+![](img/initial_setup_3_analog_example.jpg){: style="width:500px"}
 
 
 ### Detail for ROI configuration - Digital Meters
@@ -98,9 +97,10 @@ For a first run you can choose the following general settings:
 
 | |Example 1|Example 2|
 |---|---|---|
-| :heavy_check_mark: **Okay** | <img width="80px" src="img/bw_okay.jpg"> <img width="80px" src="img/cont_img_ok.png">   | <img width="80px" src="img/wb_okay.jpg">         |
-| :x: **Not** Okay            | <img width="80px" src="img/bw_not_okay_small.jpg">  | <img width="80px" src="img/wb_not_okay_small.jpg">  |
-| :x: **Not** Okay            | <img width="80px" src="img/bw_not_okay_big.jpg"> | <img width="80px" src="img/wb_not_okay_big.jpg"> |
+| :heavy_check_mark: **Okay** |   ![](img/cont_img_ok.png){: style="width:80px"}  |   ![](img/wb_okay.jpg){: style="width:80px"}     |
+| :x: **Not** Okay            | ![](img/bw_not_okay_small.jpg){: style="width:80px"} |  ![](img/wb_not_okay_small.jpg){: style="width:80px"} |
+| :x: **Not** Okay            | ![](img/bw_not_okay_big.jpg){: style="width:80px"}|  ![](img/wb_not_okay_big.jpg){: style="width:80px"}|
+
 
 
 
@@ -108,9 +108,7 @@ For a first run you can choose the following general settings:
 
 In the next steps you can configure the behavior and external interfaces in detail:
 
-<img width="800px" src="img/initial_setup_5_configuration.jpg">
-
-
+![](img/initial_setup_5_configuration.jpg){: style="width:500px"}
 
 The configuration is divided into different sub topics:
 
@@ -143,7 +141,7 @@ With the normal parameters you should be able to make the needed settings for mo
 
 After setting up everything, there is a last step to be done:
 
-<img width="500px" src="img/initial_setup_6_finish_reboot.jpg">
+![](img/initial_setup_6_finish_reboot.jpg){: style="width:500px"}
 
 With (1) you leave the setup modus and reboot to normal operation mode.
 
@@ -153,9 +151,7 @@ With (1) you leave the setup modus and reboot to normal operation mode.
 
 You can access all the settings also during the normal working mode via the "Settings" menue:
 
-<img width="500px" src="img/initial_setup_7_access_normal_mode.jpg">
-
-
+![](img/initial_setup_7_access_normal_mode.jpg){: style="width:500px"}
 
 (1) Access to configuration parameters
 
