@@ -13,7 +13,7 @@
 
 The graphical configuration mode can be reached via the "Edit Configuration" button in the main menue (`/index.html`):
 
-* <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s1_access.jpg" width="600" align="middle">
+* <img src="img/config_s1_access.jpg" width="600" align="middle">
 
 
 
