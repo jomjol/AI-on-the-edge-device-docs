@@ -19,7 +19,6 @@ nav:
 
   - Configuration:
     - ROI-Configuration.md
-    - Graphical-Configuration.md
     - Choosing-the-Model.md
     - Neural-Network-Types.md
     - ota.md
