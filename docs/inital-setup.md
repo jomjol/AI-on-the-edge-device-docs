@@ -3,6 +3,7 @@
 After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:
 
 <img width="500px" src="img/setup_initial_welcome.png">
+![](img/setup_initial_welcome.png){: style="width:500px"}
 
 In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).
 
