@@ -29,7 +29,7 @@ No setting of the type in the firmware is necessary. The type can detect by the 
   Technically a wrong network will work and create output, but that would be totally arbitrary
 *  Not all type of pointers are trained in all networks.
   * For the 11 classes digits network there many different types of digits trained. The reason is, that you 1) only need 20-30 training images and 2) the data collection is ongoing much longer
-  * For the continious and 100 classes network especially for the digits, there are only a view types of digits trained up to now
+  * For the continious and 100 classes network especially for the digits, there are only a few types of digits trained up to now
 * Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). 
 
 
