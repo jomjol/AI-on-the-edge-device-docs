@@ -6,6 +6,7 @@ nav:
   - Getting Started:
     - index.md
     - Installation.md
+    - inital-setup.md
     - Hardware-Compatibility.md
     - Best-Practice.md
     - FAQs.md
