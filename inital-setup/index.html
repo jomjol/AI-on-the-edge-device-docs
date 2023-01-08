@@ -201,12 +201,11 @@
               
                 <h1 id="initial-setup">Initial Setup</h1>
 <p>After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:</p>
-<p><img width="500px" src="img/setup_initial_welcome.png">
-<img alt="" src="../img/setup_initial_welcome.png" style="width:500px" /></p>
+<p><img alt="" src="../img/setup_initial_welcome.png" style="width:500px" /></p>
 <p>In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).</p>
 <h2 id="1-reference-image">1. Reference Image</h2>
 <p>The reference image is the basis for the coordinate system of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. </p>
-<p><img width="500px" src="img/initial_setup_1_reference_image.jpg"></p>
+<p><img alt="" src="../img/initial_setup_1_reference_image.jpg" style="width:500px" /></p>
 <p>At first the current image is shown. To define a new reference image push the button "Create new Reference" (2) and afterwards "Take Image" (2). It might take some seconds for processing, then your actual camera image should be shown.</p>
 <p><strong>Attention:</strong> This is the first time, where you have access to the camera image. It might not be sharp yet. This is the first thing to do according to the following instruction (<strong>TBD</strong>).</p>
 <h4 id="correct-horizontal-alignment">Correct Horizontal Alignment</h4>
@@ -229,7 +228,7 @@
 <p>If everything is done, you can save the result with "Update Reference Image" (4). Please do not reboot at this stage, but go to the next section.</p>
 <h2 id="2-alignment-references">2. Alignment References</h2>
 <p>The alignment references are used to realign every taken image to the reference coordinates. Therefore two alignment structures are identified and the image is shifted and rotated according to their position with the target to be in exactly the same position as the reference image. The alignment structures needs to be unique and have a good contrast. You can switch between this two marks with (1).</p>
-<p><img width="500px" src="img/initial_setup_2_alignment_marks.jpg"></p>
+<p><img alt="" src="../img/initial_setup_2_alignment_marks.jpg" style="width:500px" /></p>
 <p>With the control in (3) position and size of the selected reference image. You can define the ROI in the image also directly via drag and drop with the mouse. To choose the currently marked image part you need to push "Update Reference" (2). </p>
 <p>In some cases it might be useful to use a reference with a higher contrast. This can be achieved by pushing "Enhance Contrast" (3). The result will be calculated on the ESP32 - so be a bit patient, before you see it active.</p>
 <p>To save the push finally "Save to config.ini" (4). Do not reboot at this stage, but proceed with the "next" button.</p>
@@ -237,7 +236,7 @@
 <p>Here the regions of interest for the digital and analog pointers are defined. As both are done identically, here as an example the digital images are shown.</p>
 <h3 id="general-usage">General usage</h3>
 <p>First of all, if you don't have that kind of numbers on you meter, you can disable it with the check box at the top (1).</p>
-<p><img width="500px" src="img/initial_setup_3_rois.jpg"></p>
+<p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px" /></p>
 <p>In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). </p>
 <p><strong>Attention:</strong> The order of the ROIs defines, how the indiviual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".</p>
 <p>As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. </p>
@@ -246,7 +245,7 @@
 <h3 id="detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</h3>
 <p>For analog meters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center. The circle should exactly fit to the outer size of the meter and the cross should be in the middle.</p>
 <p>Here is an example with the details for the ROI "ana1": </p>
-<p><img width="400px" src="img/initial_setup_3_analog_example.jpg"></p>
+<p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px" /></p>
 <h3 id="detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</h3>
 <p>For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.</p>
 <ol>
@@ -274,24 +273,24 @@
 <tbody>
 <tr>
 <td>✔️ <strong>Okay</strong></td>
-<td><img width="80px" src="img/bw_okay.jpg"> <img width="80px" src="img/cont_img_ok.png"></td>
-<td><img width="80px" src="img/wb_okay.jpg"></td>
+<td><img alt="" src="../img/cont_img_ok.png" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_okay.jpg" style="width:80px" /></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img width="80px" src="img/bw_not_okay_small.jpg"></td>
-<td><img width="80px" src="img/wb_not_okay_small.jpg"></td>
+<td><img alt="" src="../img/bw_not_okay_small.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_not_okay_small.jpg" style="width:80px" /></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img width="80px" src="img/bw_not_okay_big.jpg"></td>
-<td><img width="80px" src="img/wb_not_okay_big.jpg"></td>
+<td><img alt="" src="../img/bw_not_okay_big.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_not_okay_big.jpg" style="width:80px" /></td>
 </tr>
 </tbody>
 </table>
 <h2 id="5-general-settings">5. General Settings</h2>
 <p>In the next steps you can configure the behavior and external interfaces in detail:</p>
-<p><img width="800px" src="img/initial_setup_5_configuration.jpg"></p>
+<p><img alt="" src="../img/initial_setup_5_configuration.jpg" style="width:500px" /></p>
 <p>The configuration is divided into different sub topics:</p>
 <ul>
 <li>TakeImage</li>
@@ -314,11 +313,11 @@ The setting itself is done in the next column (2) and a brief explanation you ca
 <p>With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert modus available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifiying them you should be really sure, what they are about.</p>
 <h2 id="finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</h2>
 <p>After setting up everything, there is a last step to be done:</p>
-<p><img width="500px" src="img/initial_setup_6_finish_reboot.jpg"></p>
+<p><img alt="" src="../img/initial_setup_6_finish_reboot.jpg" style="width:500px" /></p>
 <p>With (1) you leave the setup modus and reboot to normal operation mode.</p>
 <h2 id="access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</h2>
 <p>You can access all the settings also during the normal working mode via the "Settings" menue:</p>
-<p><img width="500px" src="img/initial_setup_7_access_normal_mode.jpg"></p>
+<p><img alt="" src="../img/initial_setup_7_access_normal_mode.jpg" style="width:500px" /></p>
 <p>(1) Access to configuration parameters</p>
 <p>(2) Update of reference image</p>
 <p>(3) Update of alignment marks</p>
