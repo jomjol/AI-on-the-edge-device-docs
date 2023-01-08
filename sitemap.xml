@@ -141,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/inital-setup/</loc>
+         <lastmod>2023-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/ota/</loc>
          <lastmod>2023-01-08</lastmod>
          <changefreq>daily</changefreq>

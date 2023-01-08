@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/inital-setup/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Initial Setup - AI on the Edge Device</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Initial Setup";
+        var mkdocs_page_input_path = "inital-setup.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/inital-setup/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
+    <a href=".." class="icon icon-home"> AI on the Edge Device
+</a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">External Links</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issues</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Frequent Reboots</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API's</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Initial Setup</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-reference-image">1. Reference Image</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#correct-horizontal-alignment">Correct Horizontal Alignment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-alignment-references">2. Alignment References</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#34-define-the-rois-for-the-number-detection">3./4. Define the ROIs for the number detection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#general-usage">General usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-general-settings">5. General Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#expert-modus">Expert Modus</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AI on the Edge Device</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Asorted Pages &raquo;</li>
+      <li>Initial Setup</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/inital-setup.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="initial-setup">Initial Setup</h1>
+<p>After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:</p>
+<p><img width="500px" src="img/setup_initial_welcome.png"></p>
+<p>In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).</p>
+<h2 id="1-reference-image">1. Reference Image</h2>
+<p>The reference image is the basis for the coordinate system of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. </p>
+<p><img width="500px" src="img/initial_setup_1_reference_image.jpg"></p>
+<p>At first the current image is shown. To define a new reference image push the button "Create new Reference" (2) and afterwards "Take Image" (2). It might take some seconds for processing, then your actual camera image should be shown.</p>
+<p><strong>Attention:</strong> This is the first time, where you have access to the camera image. It might not be sharp yet. This is the first thing to do according to the following instruction (<strong>TBD</strong>).</p>
+<h4 id="correct-horizontal-alignment">Correct Horizontal Alignment</h4>
+<p>Ensure an <strong>exact horizontal alignment</strong> of the number via the alignment / reference setup:</p>
+<table>
+<thead>
+<tr>
+<th>✔️ Okay</th>
+<th>❌ Not Okay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/alignment_okay.jpg" /></td>
+<td><img alt="" src="../img/alignment_not_okay.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>‼️ Attention:</strong> Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step later only with caution.</p>
+<p>If everything is done, you can save the result with "Update Reference Image" (4). Please do not reboot at this stage, but go to the next section.</p>
+<h2 id="2-alignment-references">2. Alignment References</h2>
+<p>The alignment references are used to realign every taken image to the reference coordinates. Therefore two alignment structures are identified and the image is shifted and rotated according to their position with the target to be in exactly the same position as the reference image. The alignment structures needs to be unique and have a good contrast. You can switch between this two marks with (1).</p>
+<p><img width="500px" src="img/initial_setup_2_alignment_marks.jpg"></p>
+<p>With the control in (3) position and size of the selected reference image. You can define the ROI in the image also directly via drag and drop with the mouse. To choose the currently marked image part you need to push "Update Reference" (2). </p>
+<p>In some cases it might be useful to use a reference with a higher contrast. This can be achieved by pushing "Enhance Contrast" (3). The result will be calculated on the ESP32 - so be a bit patient, before you see it active.</p>
+<p>To save the push finally "Save to config.ini" (4). Do not reboot at this stage, but proceed with the "next" button.</p>
+<h2 id="34-define-the-rois-for-the-number-detection">3./4. Define the ROIs for the number detection</h2>
+<p>Here the regions of interest for the digital and analog pointers are defined. As both are done identically, here as an example the digital images are shown.</p>
+<h3 id="general-usage">General usage</h3>
+<p>First of all, if you don't have that kind of numbers on you meter, you can disable it with the check box at the top (1).</p>
+<p><img width="500px" src="img/initial_setup_3_rois.jpg"></p>
+<p>In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). </p>
+<p><strong>Attention:</strong> The order of the ROIs defines, how the indiviual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".</p>
+<p>As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. </p>
+<p>In most cases the digits are ordered in a aequidistant order and have the same size, you can synchronize them with the control in (4).</p>
+<p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
+<h3 id="detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</h3>
+<p>For analog meters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center. The circle should exactly fit to the outer size of the meter and the cross should be in the middle.</p>
+<p>Here is an example with the details for the ROI "ana1": </p>
+<p><img width="400px" src="img/initial_setup_3_analog_example.jpg"></p>
+<h3 id="detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</h3>
+<p>For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.</p>
+<ol>
+<li>Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: <code>dig-class11-....tfl</code>
+   <strong>Advantage:</strong> broad variety of types included in the training
+   <strong>Disadvantage:</strong> partially rotated numbers cannot be detected</li>
+<li>Model with subdigit resulition (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: <code>dig-cont-....tfl</code> or <code>dig-class100-....tfl</code>
+   <strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible
+   <strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data</li>
+</ol>
+<p>Details and the corresponding "perfect" setting is explained here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/">Details ROI Configuration</a></p>
+<p>For a first run you can choose the following general settings: </p>
+<ul>
+<li>There is an inner and an outer frame for the ROIs. </li>
+<li>Make the inner frame exactly the size of the number.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Example 1</th>
+<th>Example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✔️ <strong>Okay</strong></td>
+<td><img width="80px" src="img/bw_okay.jpg"> <img width="80px" src="img/cont_img_ok.png"></td>
+<td><img width="80px" src="img/wb_okay.jpg"></td>
+</tr>
+<tr>
+<td>❌ <strong>Not</strong> Okay</td>
+<td><img width="80px" src="img/bw_not_okay_small.jpg"></td>
+<td><img width="80px" src="img/wb_not_okay_small.jpg"></td>
+</tr>
+<tr>
+<td>❌ <strong>Not</strong> Okay</td>
+<td><img width="80px" src="img/bw_not_okay_big.jpg"></td>
+<td><img width="80px" src="img/wb_not_okay_big.jpg"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-general-settings">5. General Settings</h2>
+<p>In the next steps you can configure the behavior and external interfaces in detail:</p>
+<p><img width="800px" src="img/initial_setup_5_configuration.jpg"></p>
+<p>The configuration is divided into different sub topics:</p>
+<ul>
+<li>TakeImage</li>
+<li>Digits</li>
+<li>Analog</li>
+<li>PostProcessing</li>
+<li>MQTT</li>
+<li>InfluxDB</li>
+<li>GPIOSettings</li>
+<li>Autotimer</li>
+<li>DataLogging</li>
+<li>Debug</li>
+<li>System</li>
+</ul>
+<p>The details are explained in other parts of the manual (see links (<strong>TBD</strong>))</p>
+<p>Some of the sections as well as parameters are mandatory. They can be en/disabled in the first column (1). 
+The setting itself is done in the next column (2) and a brief explanation you can find in the last column (3).</p>
+<p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
+<h4 id="expert-modus">Expert Modus</h4>
+<p>With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert modus available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifiying them you should be really sure, what they are about.</p>
+<h2 id="finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</h2>
+<p>After setting up everything, there is a last step to be done:</p>
+<p><img width="500px" src="img/initial_setup_6_finish_reboot.jpg"></p>
+<p>With (1) you leave the setup modus and reboot to normal operation mode.</p>
+<h2 id="access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</h2>
+<p>You can access all the settings also during the normal working mode via the "Settings" menue:</p>
+<p><img width="500px" src="img/initial_setup_7_access_normal_mode.jpg"></p>
+<p>(1) Access to configuration parameters</p>
+<p>(2) Update of reference image</p>
+<p>(3) Update of alignment marks</p>
+<p>(4)/(5) Update of the ROI setting</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../outdated--Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-left" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../outdated--Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
