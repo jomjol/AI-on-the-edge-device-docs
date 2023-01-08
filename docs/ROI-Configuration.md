@@ -18,8 +18,17 @@ Please proceed in the following order!
 Don't forget to save after each step!
 
 ### Image Sharpness
-Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera. 
-**Adjust the focus for the clearest possible image** See [these instructions](https://github.com/jomjol/water-meter-picture-provider/blob/master/ESP32-CAM_Lens_Modification.md) for help.
+Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera. **Adjust the focus for the clearest possible image!**
+
+In order to use it for reading a meter, the focal-length  of the OV2640 camera has to be manipulated, as by default it only results in sharp image for distance bigger than ~40cm, causing the image of the water meter to be too small for automated readout processing.
+
+**ATTENTION:** this modification will void any warranty, as the sealing of the lens objective is broken!
+
+**ATTENTION:** This modification will render  the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.
+
+![](img/focus_adjustment.jpg)
+
+Remove the fixing glue of the OV2640 lens with a sharp knife. After this you can screw the lens in and out. Rotating it by about a quarter of a turn counterclockwise results in a focus plane of about  10cm. You need to figure out your best setting with a little bit of  trial and error for your specific environment.
 
 ### Horizontal Alignment
 Ensure an **exact horizontal alignment** of the number via the alignment / reference setup:
@@ -70,5 +79,4 @@ Here an example:
 | ------------ | --------------------------------- | 
 | :heavy_check_mark: **Okay**     | <img width="125" alt="dig-class100_OK" src="https://user-images.githubusercontent.com/412645/199028380-7623776e-59b9-4356-ab55-3852253609df.png">          | 
 | :x: **Not** Okay | <img width="125" alt="dig-class100_NOK" src="https://user-images.githubusercontent.com/412645/199028469-3a69ed31-e5c9-4038-a8dc-6d44a42437ed.png"> | 
-
 
