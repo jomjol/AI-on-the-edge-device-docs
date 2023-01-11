@@ -74,7 +74,7 @@ You can use the following demo images if you want:
 It covers a meter range from `530.00688` to `531.85882`.
 
 ### All images (843 images)
-![grafik](https://user-images.githubusercontent.com/1783586/211907881-7d582273-6b4e-4c22-948b-05f0a0200807.png)
+![grafik](https://user-images.githubusercontent.com/1783586/211907881-7d582273-6b4e-4c22-948b-05f0a0200807.png){:style="width:200px"}
 
 
 [Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395553/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
@@ -82,11 +82,15 @@ It covers a meter range from `530.00688` to `531.85882`.
 Animation of it (186 MB!)
 
 
-### Selection of xx images
+### Selection of 84 images
 
 
+[Demo_Images_Watermeter_530.00688-532.08243_84_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395770/Demo_Images_Watermeter_530.00688-532.08243_84_images.zip)
 
-### Selection of xx images
 
+### Selection of 42 images
+
+
+[Demo_Images_Watermeter_530.00688-532.08243_42_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395771/Demo_Images_Watermeter_530.00688-532.08243_42_images.zip)
 
 
