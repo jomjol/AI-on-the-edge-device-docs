@@ -2,18 +2,11 @@ For Demo and Testing Purpose, the device can use pre-recorded images.
 
 You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD-Card.
 
-One image per round gets used, starting with the first image for the first round.
+For each round one image gets used, starting with the first image for the first round.
 
 For the reference image and the alignment also the first image gets used.
 
 Once the last image got reached, it starts again with the first one.
-
-## Example Demo
-You can use the following demo or create your own one.
-Just install it using the OTA Update functionality.
-
- - [demo.zip](https://github.com/jomjol/AI-on-the-edge-device/files/10320454/demo.zip) (this is just a zip of [this](https://github.com/jomjol/AI-on-the-edge-device/tree/master/code) folder in the repo)
-
 
 ## SD-Card Structure
 ```
@@ -67,5 +60,22 @@ while [[ true ]]; do
 done
 ```
 
+## Installation
+Just install the zip file using the OTA Update functionality.
+
 ## How does it work
 The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam Framebuffer gets taken (`esp_camera_fb_get()`), it replaces the framebuffer with the image from the SD-Card.
+
+
+## Example Data of a Watermeter
+You can use the following demo images if you want:
+![530 00688](https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg){:style="width:200px"}
+
+It covers a meter range from `530.00688` to `531.85882`.
+
+### All images (843 images)
+
+[Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395553/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
+
+
+ - [demo.zip](https://github.com/jomjol/AI-on-the-edge-device/files/10320454/demo.zip) (this is just a zip of [this](https://github.com/jomjol/AI-on-the-edge-device/tree/master/code) folder in the repo)
