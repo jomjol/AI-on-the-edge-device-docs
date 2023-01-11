@@ -76,9 +76,8 @@ It covers a meter range from `530.00688` to `531.85882`.
 ### All images (843 images)
 ![grafik](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png){:style="width:200px"}
 
+[Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395941/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
 
-
-[Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395553/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
 
 Animation of it (186 MB!)
 
