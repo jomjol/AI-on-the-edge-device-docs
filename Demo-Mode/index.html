@@ -173,15 +173,9 @@
               
                 <p>For Demo and Testing Purpose, the device can use pre-recorded images.</p>
 <p>You need to enable it in the configuration (<code>TakeImage &gt; Demo</code>) and also provide the needed files on the SD-Card.</p>
-<p>One image per round gets used, starting with the first image for the first round.</p>
+<p>For each round one image gets used, starting with the first image for the first round.</p>
 <p>For the reference image and the alignment also the first image gets used.</p>
 <p>Once the last image got reached, it starts again with the first one.</p>
-<h2 id="example-demo">Example Demo</h2>
-<p>You can use the following demo or create your own one.
-Just install it using the OTA Update functionality.</p>
-<ul>
-<li><a href="https://github.com/jomjol/AI-on-the-edge-device/files/10320454/demo.zip">demo.zip</a> (this is just a zip of <a href="https://github.com/jomjol/AI-on-the-edge-device/tree/master/code">this</a> folder in the repo)</li>
-</ul>
 <h2 id="sd-card-structure">SD-Card Structure</h2>
 <pre><code>demo/
 ├── 520.8983.jpg
@@ -230,8 +224,19 @@ while [[ true ]]; do
     sleep 60
 done
 </code></pre>
+<h2 id="installation">Installation</h2>
+<p>Just install the zip file using the OTA Update functionality.</p>
 <h2 id="how-does-it-work">How does it work</h2>
 <p>The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam Framebuffer gets taken (<code>esp_camera_fb_get()</code>), it replaces the framebuffer with the image from the SD-Card.</p>
+<h2 id="example-data-of-a-watermeter">Example Data of a Watermeter</h2>
+<p>You can use the following demo images if you want:
+<img alt="530 00688" src="https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg" style="width:200px" /></p>
+<p>It covers a meter range from <code>530.00688</code> to <code>531.85882</code>.</p>
+<h3 id="all-images-843-images">All images (843 images)</h3>
+<p><a href="https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395553/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip">Demo_Images_Watermeter_530.00688-532.08243_843_images.zip</a></p>
+<ul>
+<li><a href="https://github.com/jomjol/AI-on-the-edge-device/files/10320454/demo.zip">demo.zip</a> (this is just a zip of <a href="https://github.com/jomjol/AI-on-the-edge-device/tree/master/code">this</a> folder in the repo)</li>
+</ul>
               
             </div>
           </div><footer>
