@@ -1,10 +1,16 @@
+# Configuration
+
+!!! Warning
+    This page overlaps [Graphical-Configuration](../Graphical-Configuration). They should be merged to one page!
+
+
 Most of the settings can be modified with the help of a web based [graphical user interface](Graphical-configuration). This is hosted through the web server on the ESP32.
 
 More configuration parameters can be edited by hand in the `config.ini` and corresponding files in the `/config` directory on the SD-card. 
 
 
 
-If you where using the Version 1 of the watermeter you can easily transfer the configuration to the new system by following the steps in this [migration description](MigrateOldConfigToNew.md)
+If you where using the Version 1 of the watermeter you can easily transfer the configuration to the new system by following the steps in this [migration description](outdated--Migrate-Old-Config-To-New-Config.md)
 
 
 
@@ -64,7 +70,7 @@ It is recommended to do the configuration of the alignment structures and ROIs t
 
 Details on the image recognition flow can be found in the other project here: https://github.com/jomjol/water-meter-system-complete/blob/master/images/Alignment_procedure_draft.pdf
 
-The ```config.ini``` here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see [here](MigrateOldConfigToNew.md).
+The ```config.ini``` here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see [here](outdated--Migrate-Old-Config-To-New-Config.md).
 
 
 

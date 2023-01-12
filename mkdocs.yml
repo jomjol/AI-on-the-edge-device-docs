@@ -2,23 +2,22 @@ site_name: AI on the Edge Device
 
 site_url: https://jomjol.github.io/AI-on-the-edge-device-docs/
 repo_url: https://github.com/jomjol/AI-on-the-edge-device-docs
-edit_uri: https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/doc
+edit_uri: https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs
 
-theme: readthedocs
+theme: 
+  name: readthedocs
+  custom_dir: readthedocs-mod/
 
-favicon: favicon.ico
 
 plugins:
     - search
     - awesome-pages:
         filename: nav.yml
 
-# The navigation is configured in the nav.yml file!
+# The navigation is configured in the docs/nav.yml file!
 
-# Emoji support
-# See https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
 markdown_extensions:
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list # Needed to scale images
+  - pymdownx.emoji: # Emoji support
+      emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - markdown.extensions.admonition

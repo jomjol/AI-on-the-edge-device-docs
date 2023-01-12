@@ -1,3 +1,4 @@
+# Learn a model with your own images
 If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model.
 
 But before you do this, please check if your type really is not contained yet in the training data, see [digits](https://jomjol.github.io/neural-network-digital-counter-readout) resp. [pointers](https://jomjol.github.io/neural-network-analog-needle-readout/) for an overview of images used for the training

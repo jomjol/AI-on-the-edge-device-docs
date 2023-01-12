@@ -1,5 +1,6 @@
 # Integration into Home Assistant
 There are 3 ways to get the data into your Home Assistant:
+
 1. Using MQTT (Automatically Setup Entities using Homeassistant MQTT Discovery)
 1. Using MQTT (Manually Setup Entities)
 2. Using REST calls
@@ -11,6 +12,7 @@ The first one is the easier way if you already have MQTT in use.
 :bangbang: This feature will be available with the next release!
 
 Starting with Version `>12.0.1`, AI-on-the-edge-devices support Homeassistant Discovery.
+
  1. Check [here](https://www.home-assistant.io/docs/mqtt/discovery/) to learn more about it and how to enable it in Homeassistant.
  1. You also have to enable it in the MQTT settings of your device:
   
@@ -127,10 +129,13 @@ Note that you also can add it using the UI.
 Creating Statistics Graphs (eg. usage per day) is easy using the [Energy Dashboard](https://www.home-assistant.io/home-energy-management/):
 ![grafik](https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png)
 
-Note that there seems to be a bug in the graph, see https://github.com/home-assistant/frontend/issues/13995!
+Note that there seems to be a bug in the graph, see [https://github.com/home-assistant/frontend/issues/13995](https://github.com/home-assistant/frontend/issues/13995)!
 
 
 ### InfluxDb Graphs
+
+See also [Influx-DB](../Influx-DB).
+
 If you have setup InfluxDB already, it is also possible to fetch statistics from there, eg. daily usage:
 ```
 from(bucket: "HomeAssistant")

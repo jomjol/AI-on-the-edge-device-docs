@@ -8,7 +8,8 @@ Most likely they are caused by a hardware issue!
 
 ## `0x00000001` PSRAM bad
 Your device most likely has no PSRAM at all or it is too small (needs to have at least 4 MBytes)!
-See https://github.com/jomjol/AI-on-the-edge-device/wiki/Hardware-Compatibility
+See [Hardware Compatibility](../Hardware-Compatibility).
+
 Usually the log shows something like this:
 ```
 psram: PSRAM ID read error: 0xffffffff
@@ -21,7 +22,7 @@ The firmware failed to allocate enough memory. This most likely is a consequenti
 ## `0x00000004` Cam bad
 The attached camera can not be initialized.
 This usually is because on of the following reasons:
- - The camera is not supported, see https://github.com/jomjol/AI-on-the-edge-device/wiki/Hardware-Compatibility
+ - The camera is not supported, see [Hardware Compatibility](../Hardware-Compatibility)
  - The camera is not attached properly -> Try to remove and attach it again. Make sure you move the black part enough into the socket!
  - The camera or the camera cable is damaged
 

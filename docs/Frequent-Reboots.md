@@ -1,4 +1,4 @@
-# Frequent reboots
+# Frequent Reboots
 
 
 
@@ -41,6 +41,7 @@ If your system is sometimes running smoothly over several runs and sometimes reb
 
 You can check this in the standard log file on the SD card:
 
+
 ```
 2021-12-26T06:34:09: task_autodoFlow - round done
 2021-12-26T06:34:09: CPU Temperature: 56.1
@@ -79,7 +80,8 @@ Easy to detect: fast blinking red LED directly after startup, no reaction of the
 
 Error message of no detectable SC card in the log file. **Normal looking** log for a 16GB SD card is like this:
 
-```09:38:25.037 -> [0;32mI (4789) main: Using SDMMC peripheral[0m
+```
+09:38:25.037 -> [0;32mI (4789) main: Using SDMMC peripheral[0m
 09:38:25.037 -> [0;32mI (4789) main: Using SDMMC peripheral[0m
 09:38:25.138 -> Name: SC16G
 09:38:25.138 -> Type: SDHC/SDXC
@@ -101,6 +103,7 @@ In order to work, there are 4 MB of PSRAM necessary. Normaly the ESP32CAM is equ
 Sometimes, there is hardware, where only 2 MB of PSRAM is present - **even if you have bought a 8 MB module**
 
 You can identify the amount of PSRAM in the serial log file:
+
 
 ```
 09:38:21.224 -> [0;32mI (881) psram: This chip is ESP32-D0WD[0m

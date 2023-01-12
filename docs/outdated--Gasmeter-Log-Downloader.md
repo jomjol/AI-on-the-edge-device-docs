@@ -1,4 +1,7 @@
-## **Gasmeter Log-Downloader**
+# Gasmeter Log-Downloader
+
+!!! Warning
+    This page no longer is maintained!
 
 This small tool downloads the logfiles from your ESP32 and stores the last value of the day in an *.csv file.
 

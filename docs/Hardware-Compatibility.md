@@ -1,8 +1,7 @@
 # Hardware Compatibility
 
-See also https://github.com/jomjol/AI-on-the-edge-device/discussions/1732
-
-General Remark: similar "looking" Board can have major differences:
+### General Remark
+Altrough a board looks similair, it can have major differences, eg.:
 
 - Processor
 - Ram (Size! & Type) -> this Project needs at least 4MB RAM!
@@ -25,23 +24,36 @@ Below you find some remarks and experiences from the community:
 
 | Chip Version              | Image | Status   |
 | ------------------------- | ----- | -------- |
-| ESP32-D0WDQ6 (revision 1) |       | **okay** |
+| ESP32-D0WDQ6 (revision 1) |       | :heavy_check_mark: |
 
 # PSRAM
 
+There seems to be a lot of "fake" chips, or maybe wrongly configured ESP32 Boards.
+
+
+For AP MEMORY, all "real" APS**64**04\*3SQR Chips should work. 
+
+For ESP PSRAM, all "real" PSRAM**64**\* should work
+
+64Mbit density = 8Mbyte PSRAM
+
+This Table is just a snapshot of chips which worked
+
 | Labeling on PSRAM module                       | Image | Status                    |
 | ---------------------------------------------- | ----- | ------------------------- |
-| IPUS<br/>IPS640LS0<br/>1815XBGN                |       | **okay**                  |
-| AP MEMORY<br/>6404L-3SOR<br/>1040H<br/>110089G |       | **okay**                  |
-| AP MEMORY<br/>6404L-3SQR<br/>12205<br/>150047G |       | **okay**<br />8MB              |
-| AP MEMORY<br/>6404L-350R<br/>1120A<br/>130027G |       | **NOT OK**<br />PSRAM not accessible|
-| AP MEMORY<br/>6404L-35QR<br/>11208<br/>130025G |       | **NOT OK**<br />PSRAM not accessible|
-| AP MEMORY<br/>6404L-3SQR<br/>13100<br/>180026G|       | **NOT OK**<br />PSRAM not accessible|
-| AP MEMORY<br/>6404L-3SQR<br/>11207<br/>130024G|       | **NOT OK**<br />PSRAM not accessible|
-| AP MEMORY<br/>1604M-3SQR<br/>0280A<br/>070036G|       | **NOT OK**<br />2MB only!  |
-| ESP PSRAM64H 462021<br/>1B00286                |       | **okay**                  |
-| ESP PSRAM16M 302020<br/>                       |       | **NOT OK**<br />2MB only! |
-| ESP PSRAM16H 202020<br/>050022G                |       | **NOT OK**<br />2MB only! |
+| IPUS / IPS640LS0 / 1815XBGN                |       |:heavy_check_mark:              |
+| AP MEMORY / **64**04L-3SOR / 1040H / 110089G |       | :heavy_check_mark:                  |
+| AP MEMORY / **64**04L-3SQR / 12205 / 150047G |       | :heavy_check_mark: 8MB              |
+| AP MEMORY / **64**04L-3SQR / 12208 / 150047G |       | :heavy_check_mark: 8MB              |
+| AP MEMORY / **64**04L-350R / 1120A / 130027G |       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-35QR / 11208 / 130025G |       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-3SQR / 13100 / 180026G|       | :x: PSRAM not accessible|
+| AP MEMORY / **64**04L-3SQR / 11207 / 130024G|       | :x: PSRAM not accessible|
+| AP MEMORY / 1604M-3SQR / 0280A / 070036G|       | :x: 2MB only!  |
+| ESP PSRAM**64**H 462021 / 1B00286                |       | :heavy_check_mark:                  |
+| ESP PSRAM**64**H 412021 /1A0039G                |       | :heavy_check_mark:   (8MB)                |
+| ESP PSRAM16M 302020                        |       | :x: 2MB only! |
+| ESP PSRAM16H 202020 / 050022G                |       | :x: 2MB only! |
 
 # OV2640 - Camera
 
@@ -49,9 +61,9 @@ The experience with the camera only is based on single modules. It is well possi
 
 | Labeling on Flex-Connector | Image | Status                            |
 | -------------------------- | ----- | --------------------------------- |
-| TY-OV2<br/>640-V2.0        |       | **okay**                          |
-| DCX-OV2<br/>640-V2         |       | **okay**                          |
-| DC-26<br/>40-V3            |       | **okay**: 3x<br/>**NOT OKAY:** 1x |
+| TY-OV2 / 640-V2.0        |       | :heavy_check_mark:                          |
+| DCX-OV2 / 640-V2         |       | :heavy_check_mark:                          |
+| DC-26 / 40-V3            |       | :heavy_check_mark: 3x<br> :x: 1x |
 
 
 
@@ -59,7 +71,7 @@ The experience with the camera only is based on single modules. It is well possi
 
 | Module                                                       | Image | Status                         |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| ESP32CAM<br/>Different versions on the market! Especially the PSRAM is sometimes labeled wrong (Label: 4MB, Real: only 2 MB --> will not work!) |       | **okay**<br />with >=4 MB PSRAM! |
+| ESP32CAM / Different versions on the market!<br>Especially the PSRAM is sometimes labeled wrong<br>(Label: 4MB, Real: only 2 MB --> will not work!) |       | :heavy_check_mark:<br />with >=4 MB PSRAM! |
 | ESP32-S3-EYE<br />No Flash LED, pins different used (e.g. LCD diskplay) |       | **NOT OKAY**                   |
 
 
@@ -72,14 +84,22 @@ It is observed, that smaller cards (up to 4 GB) tend to be more stable and large
 
 # Devices known to work
 
-Please add links to stores of which you know they work:
- - https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/ ? See https://github.com/jomjol/AI-on-the-edge-device/discussions/1041
-- https://www.amazon.de/-/en/gp/product/B0B51CQ13R
-- https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE (27.12.2022)
- - ...
- Sandisk 2GB Micro SD Class 2 [Sandisk 2GB](https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
+
+### Modules (Old list, not up-to-date anymore):
+
+See [https://github.com/jomjol/AI-on-the-edge-device/discussions/1732](https://github.com/jomjol/AI-on-the-edge-device/discussions/1732) for a more recent list.
+
+ - [https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/](https://arduino-projekte.info/produkt/esp32-cam-v2-integriertem-ch340-mit-ov2640-kamera-modul/) (see [https://github.com/jomjol/AI-on-the-edge-device/discussions/1041](https://github.com/jomjol/AI-on-the-edge-device/discussions/1041))
+
+- [https://www.amazon.de/-/en/gp/product/B0B51CQ13R](https://www.amazon.de/-/en/gp/product/B0B51CQ13R)
+
+- [https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE](https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE) (27.12.2022)
+
+### SD-Card
+ 
+- Sandisk 2GB Micro SD Class 2 [Sandisk 2GB](https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 AITRIP ESP32 and CAM [ESP-32/CAM](https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 - [Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode](https://www.amazon.com/gp/product/B0948ZFTQZ) with [Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6](https://www.amazon.com/gp/product/B07QYTP4VN)
 
 # Weak Wifi
-The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/
+The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See [https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/](https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/)
