@@ -1,7 +1,16 @@
 # Learn a model with your own images
-If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model.
 
-But before you do this, please check if your type really is not contained yet in the training data, see [digits](https://jomjol.github.io/neural-network-digital-counter-readout) resp. [pointers](https://jomjol.github.io/neural-network-analog-needle-readout/) for an overview of images used for the training
+If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model. Of course, this also applies if you have a model that is already known, but the neural models do not produce good results.
+
+But before you do this, you please check if your type really is not contained yet in the training data, see [digits](https://jomjol.github.io/neural-network-digital-counter-readout) resp. [pointers](https://jomjol.github.io/neural-network-analog-needle-readout/) for an overview of images used for the training. But we also like to take pictures of already known devices.
+
+## Before you start
+
+Poor recognition is often caused by blurred images, low contrast or incorrect setting of the ROIs. Therefore, check these possibilities first, as additional training will bring little improvement here.
+
+You must not train the models by yourself (see section [Share your images](#share-your-images)). In most cases we will integrate you images in the training dataset of the models. Only if we fear a degradation of the models or you need a different behaviour, we will not include the data in the standard models.
+
+## Collecting images
 
 The neural network is trained on base of a set of images, that have been collected over time. If your digits are included or at least very similar to included images, the chance is very high that the neural network is working fine for you as well.
 
@@ -11,7 +20,7 @@ In order to incorporate new digits a training set of images is required. The tra
 
 ![](img/enable_log_image.jpg)
 
-Now wait, until you have an image of each digit of every type on the SD card. Ideally remove the SD card from the camera and search for two to three images of each digit (**not more! :-)**). The format can be jpg.
+Now wait, until you have an image of each digit of every type on the SD card. Ideally remove the SD card from the camera and search for two to three images of each digit (**not more! :-)**). The format can be jpg. But don't panic, the collector programmes will sort out duplicate images for you.
 
 
 ## Collecting images for dig-class100/dig-cont/ana-class100
