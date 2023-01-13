@@ -1,3 +1,4 @@
+# Demo Mode
 For Demo and Testing Purpose, the device can use pre-recorded images.
 
 You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD-Card.
