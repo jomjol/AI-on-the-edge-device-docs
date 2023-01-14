@@ -13,5 +13,4 @@
     * the artifacts are downloadable from release 
     * The documented changes were applied to the release
 5. Merge master back in `rolling`
-1. In `rolling` create a folder `rolling/docs/releases/download/<VERSION>` and add the `firmware.bin` from one of the release artifacts.
-1. Update `rolling/docs/manifest.json` with the new version (update the `version` and the last `path` fields)
+6. Check that the [Web Installer]() shows the right version
