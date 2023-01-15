@@ -10,15 +10,21 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
   Trigger a flow start (if not running)
 
 * ### gpio
+  Control a GPIO output
   - The `gpio` entrypoint also support parameters:
     - `/GPIO?GPIO={PinNumber}&Status=high`
     - `/GPIO?GPIO={PinNumber}&Status=low`
   - Example: `/GPIO?GPIO=12&Status=high`
 
+  Read a GPIO input
+  - The `gpio` entrypoint also support parameters:
+    - `/GPIO?GPIO={PinNumber}`
+  - Example: `/GPIO?GPIO=12`
+
 * ### ota
 
 * ### ota_page.html
-  Opens the Over-The-Air update page
+  Opens the Over-The-Air update html page
 
 * ### reboot
   Trigger a reboot of the device
@@ -26,7 +32,7 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
 ## Results
 * ### json
   Show result in JSON syntax
-  - -> Example: 
+  - Example: 
   `{
   "main":
     {
@@ -40,7 +46,8 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
   }`
 
 * ### value
-  The `value` entrypoint also support parameters:
+  Show single result values
+  - The `value` entrypoint also support parameters:
    - `http://<IP>/value?all=true&type=value`
    - `http://<IP>/value?all=true&type=raw`
    - `http://<IP>/value?all=true&type=error`
@@ -70,6 +77,7 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
 
 * ### sysinfo
   Show system infos in JSON syntax
+  - Example: `[ { "firmware" : "xxx", "buildtime" : "2023-01-15 21:27", "gitbranch" : "xxx", "gittag" : "", "gitrevision" : "a5e533f+", "html" : "Development-Branch: xxx (Commit: a5e533f+)", "cputemp" : "67.777779", "hostname" : "xxx", "IPv4" : "192.168.xxx.xxx", "freeHeapMem" : "2789466" } ]`
 
 * ### starttime
   Show starttime
@@ -81,16 +89,21 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
 
 ## Camera
 * ### lighton
+  Switch the camera flashlight on 
 
 * ### lightoff
+  Switch the camera flashlight off
 
 * ### capture
+  Capture a new image (without flashlight)
 
 * ### capture_with_flashlight
+  Capture a new image with flashlight
 
 * ### save
-  The `save` entrypoint also support parameters:
-   - `http://<IP>/save?filename=test.jpg&delay=3`
+  Save a new image to SD card
+  - The `save` entrypoint also support parameters:
+   - `http://<IP>/save?filename=test.jpg&delay=1`
 
 ## Logs
 * ### log 
@@ -100,7 +113,9 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
   Full log of today
 
 * ### log.html
+  Opens the log html page
 
 ## Diagnostics
 * ### heap
-  print all relevant memory (heap) information
+  print relevant memory (heap) information
+  - Example: `Heap: 3003978 Min Free: 1413058 larg. Block: 2949120 SPI Heap: 2957579 NOT_SPI Heap: 46399 Internal Heap: 46399 Internal Min Heap free: 10523`
