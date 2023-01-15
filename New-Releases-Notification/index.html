@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/External-LED/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/New-Releases-Notification/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>External LED - AI on the Edge Device</title>
+    <title>Notification about new Releases - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "External LED";
-        var mkdocs_page_input_path = "External-LED.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/External-LED/";
+        var mkdocs_page_name = "Notification about new Releases";
+        var mkdocs_page_input_path = "New-Releases-Notification.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/New-Releases-Notification/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -82,13 +82,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">External LED</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-hardware-installation-of-the-led-stripe">1. Hardware installation of the LED stripe</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-software-configuration">2. Software configuration</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
                   </li>
@@ -104,7 +98,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Notification about new Releases</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#github-notifications">Github Notifications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#codereleaseio">CodeRelease.io</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Troubleshooting</span></p>
@@ -167,9 +167,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Advanced &raquo;</li>
-      <li>External LED</li>
+      <li>Notification about new Releases</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/External-LED.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/New-Releases-Notification.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -177,48 +177,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="external-led">External LED</h2>
-<p>The internal flash LED is very close to the camera axis. This results in reflection, especially in case of flat glass surfaces such as for power meters.
-To circumvent this problem, it is now possible to control external LEDs, which than can be places somewhere else in the setup. As not simples LEDs are used, but RGB leds with a digital interface like WS2812 not only the position, but also the color and intensity of the illumination can now be adjusted. The following image shows a direct comparision of the "old" internal flash LED and two off axis LEDs.</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/intern_vs_external.jpg" width="700"></p>
-<p>There is also a new <a href="https://www.thingiverse.com/thing:5028229">meter adapter</a> available. This has two features: designed for <strong>small clearings</strong> in front of the meter and prepared for <strong>WS2812 LEDs</strong>.</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/Power_Meter_Mounted.jpg" width="500"></p>
-<h4 id="1-hardware-installation-of-the-led-stripe">1. Hardware installation of the LED stripe</h4>
-<p>The control line of the LED stripe is connected with a 470 Ohm resistor to the GPIO12. 
-For power supply stabilization a capacitor between 5V and ground is recommended. Here a 470µF polymer capacitor is used. As a power supply a 5V from the ESP32 is used like in the following wiring.</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/install_external_led.jpg" width="500"> </p>
-<h4 id="2-software-configuration">2. Software configuration</h4>
-<p>The handling of the WS2812 LED controller needs some other libraries, therefore it is controlled within a dedicated section called <code>GPIO Settings</code>. The external LED stripe is connected to GPIO12. After activating the "GPIO Settings" section, the internal flash is per default disabled. In order to activate the external LED, you need to activate <code>GPIO 12 state</code> and select <code>"extern flash light ws281x ..."</code>. </p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/external_GPIO_settings.jpg" width="700"> </p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LED-Type</td>
-<td>There are several types of controller implemented: WS2812(B), WS2813, SK6812</td>
-</tr>
-<tr>
-<td>Numbers of LED</td>
-<td>Number of LEDs on the LED stripe</td>
-</tr>
-<tr>
-<td>LED Color</td>
-<td>The color and intensity can be controlled directly by a red/green/blue value, each within the range from 0 (off) to 255 (full)</td>
-</tr>
-</tbody>
-</table>
-<p>Enabling the GPIO settings automatically disables the flash LED. Therefore you can enable it here manually by checking GPIO4 and choose <code>"build-in led flash light"</code>. It is not recommended to use both illumination parallel. </p>
+                <h1 id="notification-about-new-releases">Notification about new Releases</h1>
+<p>Do you want to get notified about a new release?
+There are several ways for it:</p>
+<h2 id="github-notifications">Github Notifications</h2>
+<p>You will need a Github Account for this!</p>
+<ol>
+<li>Log into your Github account on <a href="https://github.com">Github</a>.</li>
+<li>Go to <a href="https://github.com/jomjol/AI-on-the-edge-device">AI-on-the-edge-device</a>.</li>
+<li>On the top right side, click onto <code>Watch</code> and select <code>Custom</code>:
+    <img alt="" src="../img/release-notification.png" />  </li>
+<li>Select <code>Releases</code>.</li>
+</ol>
+<p>You will get an email when a new release gets created.</p>
+<p>See also <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions">Github Documentation</a>.</p>
+<h2 id="codereleaseio">CodeRelease.io</h2>
+<p>Alternatively or if you do not want to create a Github account, <a href="https://coderelease.io">CodeRelease.io</a> can be an alternative.</p>
+<p>You also have to subscribe with an emailaddress but no account is required.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Integration-Home-Assistant/" class="btn btn-neutral float-left" title="Integration into Home Assistant"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../rolling-installation/" class="btn btn-neutral float-right" title="Living on the edge">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Additional-Information/" class="btn btn-neutral float-left" title="Additional Information"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Error-Codes/" class="btn btn-neutral float-right" title="Error Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -245,10 +226,10 @@ For power supply stabilization a capacitor between 5V and ground is recommended.
         </span>
     
     
-      <span><a href="../Integration-Home-Assistant/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Additional-Information/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../rolling-installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Error-Codes/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

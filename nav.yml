@@ -33,11 +33,13 @@ nav:
     - Learn-models-with-your-own-images.md
     - Correction Algorithm.md
     - Additional-Information.md
+    - New-Releases-Notification.md
 
   - Troubleshooting:
     - Error-Codes.md
     - Error-Debugging.md
     - Frequent-Reboots.md
+    - Demo-Mode.md
 
   - API's:
       - REST-API.md
@@ -47,7 +49,6 @@ nav:
 
   - Development:
     - Build-Instructions.md
-    - Demo-Mode.md
     - Upload-files-by-script.md
     - Testing.md
     - Release-creation.md
