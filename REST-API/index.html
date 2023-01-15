@@ -136,6 +136,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#value">value</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#img_tmprawjpg">img_tmp/raw.jpg</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#img_tmproijpg">img_tmp/roi.jpg</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#img_tmpalg_roijpg">img_tmp/alg_roi.jpg</a>
     </li>
         </ul>
@@ -177,6 +181,12 @@
     <li class="toctree-l3"><a class="reference internal" href="#logfileact">logfileact</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#loghtml">log.html</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#heap">heap</a>
     </li>
         </ul>
     </li>
@@ -245,33 +255,60 @@
 <ul>
 <li>
 <h3 id="flow_start">flow_start</h3>
+<p>Trigger a flow start (if not running)</p>
 </li>
 <li>
 <h3 id="gpio">gpio</h3>
-<p>The <code>gpio</code> entrypoint also support parameters:</p>
+<p>Control a GPIO output</p>
 </li>
-<li>
-<p><code>/GPIO?GPIO=12&amp;Status=high</code></p>
+<li>The <code>gpio</code> entrypoint also support parameters:<ul>
+<li><code>/GPIO?GPIO={PinNumber}&amp;Status=high</code></li>
+<li><code>/GPIO?GPIO={PinNumber}&amp;Status=low</code></li>
+</ul>
 </li>
+<li>Example: <code>/GPIO?GPIO=12&amp;Status=high</code></li>
+</ul>
+<p>Read a GPIO input
+  - The <code>gpio</code> entrypoint also support parameters:
+    - <code>/GPIO?GPIO={PinNumber}</code>
+  - Example: <code>/GPIO?GPIO=12</code></p>
+<ul>
 <li>
 <h3 id="ota">ota</h3>
 </li>
 <li>
 <h3 id="ota_pagehtml">ota_page.html</h3>
+<p>Opens the Over-The-Air update html page</p>
 </li>
 <li>
 <h3 id="reboot">reboot</h3>
+<p>Trigger a reboot of the device</p>
 </li>
 </ul>
 <h2 id="results">Results</h2>
 <ul>
 <li>
 <h3 id="json">json</h3>
+  Show result in JSON syntax</li>
+<li>
+<p>Example: 
+  <code>{
+  "main":
+    {
+      "value": "521.17108",
+      "raw": "521.17108",
+      "pre": "521.17108",
+      "error": "no error",
+      "rate": "0.023780",
+      "timestamp": "2023-01-13T16:00:42+0100"
+    }
+  }</code></p>
 </li>
 <li>
 <h3 id="value">value</h3>
-<p>The <code>value</code> entrypoint also support parameters:</p>
+<p>Show single result values</p>
 </li>
+<li>The <code>value</code> entrypoint also support parameters:</li>
 <li><code>http://&lt;IP&gt;/value?all=true&amp;type=value</code></li>
 <li><code>http://&lt;IP&gt;/value?all=true&amp;type=raw</code></li>
 <li><code>http://&lt;IP&gt;/value?all=true&amp;type=error</code></li>
@@ -279,56 +316,90 @@
 <p><code>http://&lt;IP&gt;/value?all=true&amp;type=prevalue</code></p>
 </li>
 <li>
+<h3 id="img_tmprawjpg">img_tmp/raw.jpg</h3>
+<p>Capture and show a new raw image</p>
+</li>
+<li>
+<h3 id="img_tmproijpg">img_tmp/roi.jpg</h3>
+<p>Show last aligned image</p>
+</li>
+<li>
 <h3 id="img_tmpalg_roijpg">img_tmp/alg_roi.jpg</h3>
-<p>Last captured picture</p>
+<p>Show last aligned image incuding ROI overlay</p>
 </li>
 </ul>
 <h2 id="status">Status</h2>
 <ul>
 <li>
 <h3 id="statusflow">statusflow</h3>
+  Show the actual step of the flow incl. timestamp</li>
+<li>
+<p>Example: <code>Take Image (15:56:34)</code></p>
 </li>
 <li>
 <h3 id="rssi">rssi</h3>
+<p>Show the WIFI signal strength</p>
+</li>
+<li>
+<p>Example: <code>-51dBm</code></p>
 </li>
 <li>
 <h3 id="cpu_temperature">cpu_temperature</h3>
+<p>Show the CPU temperature</p>
+</li>
+<li>
+<p>Example: <code>38.5 °C</code></p>
 </li>
 <li>
 <h3 id="sysinfo">sysinfo</h3>
+<p>Show system infos in JSON syntax</p>
+</li>
+<li>
+<p>Example: <code>[ { "firmware" : "xxx", "buildtime" : "2023-01-15 21:27", "gitbranch" : "xxx", "gittag" : "", "gitrevision" : "a5e533f+", "html" : "Development-Branch: xxx (Commit: a5e533f+)", "cputemp" : "67.777779", "hostname" : "xxx", "IPv4" : "192.168.xxx.xxx", "freeHeapMem" : "2789466" } ]</code></p>
 </li>
 <li>
 <h3 id="starttime">starttime</h3>
+<p>Show starttime</p>
+</li>
+<li>
+<p>Example: <code>20230113-154634</code></p>
 </li>
 <li>
 <h3 id="uptime">uptime</h3>
+<p>Show uptime</p>
 </li>
+<li>Example: <code>0d 00h 15m 50s</code></li>
 </ul>
 <h2 id="camera">Camera</h2>
 <ul>
 <li>
 <h3 id="lighton">lighton</h3>
+<p>Switch the camera flashlight on </p>
 </li>
 <li>
 <h3 id="lightoff">lightoff</h3>
+<p>Switch the camera flashlight off</p>
 </li>
 <li>
 <h3 id="capture">capture</h3>
+<p>Capture a new image (without flashlight)</p>
 </li>
 <li>
 <h3 id="capture_with_flashlight">capture_with_flashlight</h3>
+<p>Capture a new image with flashlight</p>
 </li>
 <li>
 <h3 id="save">save</h3>
-<p>The <code>save</code> entrypoint also support parameters:</p>
+<p>Save a new image to SD card</p>
 </li>
-<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=3</code></li>
+<li>The <code>save</code> entrypoint also support parameters:</li>
+<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1</code></li>
 </ul>
 <h2 id="logs">Logs</h2>
 <ul>
 <li>
 <h3 id="log">log</h3>
-<p>Last part of todays log</p>
+<p>Last part of todays log (last 80 kBytes))</p>
 </li>
 <li>
 <h3 id="logfileact">logfileact</h3>
@@ -336,7 +407,15 @@
 </li>
 <li>
 <h3 id="loghtml">log.html</h3>
+<p>Opens the log html page</p>
 </li>
+</ul>
+<h2 id="diagnostics">Diagnostics</h2>
+<ul>
+<li>
+<h3 id="heap">heap</h3>
+  print relevant memory (heap) information</li>
+<li>Example: <code>Heap: 3003978 Min Free: 1413058 larg. Block: 2949120 SPI Heap: 2957579 NOT_SPI Heap: 46399 Internal Heap: 46399 Internal Min Heap free: 10523</code></li>
 </ul>
               
             </div>
