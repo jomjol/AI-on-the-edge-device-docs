@@ -54,7 +54,7 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
    - `http://<IP>/value?all=true&type=prevalue`
 
 * ### img_tmp/raw.jpg
-  Caputre and show a new raw image
+  Capture and show a new raw image
 
 * ### img_tmp/roi.jpg
   Show last aligned image
@@ -107,7 +107,7 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
 
 ## Logs
 * ### log 
-  Last part of todays log
+  Last part of todays log (last 80 kBytes))
 
 * ### logfileact 
   Full log of today
