@@ -38,6 +38,7 @@ nav:
     - Error-Codes.md
     - Error-Debugging.md
     - Frequent-Reboots.md
+    - Demo-Mode.md
 
   - API's:
       - REST-API.md
@@ -47,7 +48,6 @@ nav:
 
   - Development:
     - Build-Instructions.md
-    - Demo-Mode.md
     - Upload-files-by-script.md
     - Testing.md
     - Release-creation.md
