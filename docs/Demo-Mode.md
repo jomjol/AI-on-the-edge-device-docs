@@ -27,7 +27,7 @@ demo/
         520.9086.jpg
         520.9351.jpg
 
-## Recoding
+## Recording
 To record real images of a meter, you have to periodically fetch `http://<IP>/img_tmp/raw.jpg`.
 
 To automate this, you can use the following shell script (Linux only):
