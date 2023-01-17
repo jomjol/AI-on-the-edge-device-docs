@@ -8,6 +8,11 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
 ## Control
 * ### flow_start
   Trigger a flow start (if not running)
+  
+* ### Set Pre Value
+  Set the Previous Value
+  
+  `/setPreValue?value=1234&numbers=main` where `1234` is the new value and `main` the name of the number to be adjusted.
 
 * ### gpio
   Control a GPIO output
