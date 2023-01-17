@@ -120,6 +120,8 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-pre-value">Set Pre Value</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#gpio">gpio</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
@@ -258,9 +260,15 @@
 <p>Trigger a flow start (if not running)</p>
 </li>
 <li>
-<h3 id="gpio">gpio</h3>
-<p>Control a GPIO output</p>
+<h3 id="set-pre-value">Set Pre Value</h3>
+<p>Set the Previous Value</p>
 </li>
+</ul>
+<p><code>/setPreValue?value=1234&amp;numbers=main</code> where <code>1234</code> is the new value and <code>main</code> the name of the number to be adjusted.</p>
+<ul>
+<li>
+<h3 id="gpio">gpio</h3>
+  Control a GPIO output</li>
 <li>The <code>gpio</code> entrypoint also support parameters:<ul>
 <li><code>/GPIO?GPIO={PinNumber}&amp;Status=high</code></li>
 <li><code>/GPIO?GPIO={PinNumber}&amp;Status=low</code></li>
