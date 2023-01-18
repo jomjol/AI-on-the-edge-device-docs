@@ -75,6 +75,10 @@ You can use the following demo images if you want:
 
 It covers a meter range from `530.00688` to `531.85882`.
 
+### Animation
+[Animation of the watermeter (77 MB!)](img/demo-watermeter-animated.png)
+
+
 ### All images (843 images)
 [![grafik](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png)
 
