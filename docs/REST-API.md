@@ -1,9 +1,9 @@
 # REST API
 Various information is directly accessible over specific REST calls.
 
-For an up-to-date list search the Github repository for [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
-
 To use it, just append them to the IP, separated with a `/`, eg. `http://192.168.1.1/json`
+
+Note: For more detailed information to the REST handler, have a look to the code in the repository: [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
 
 ## Control
 * ### flow_start
@@ -14,17 +14,17 @@ To use it, just append them to the IP, separated with a `/`, eg. `http://192.168
   
   `/setPreValue?value=1234&numbers=main` where `1234` is the new value and `main` the name of the number to be adjusted.
 
-* ### gpio
-  Control a GPIO output
-  - The `gpio` entrypoint also support parameters:
-    - `/GPIO?GPIO={PinNumber}&Status=high`
-    - `/GPIO?GPIO={PinNumber}&Status=low`
-  - Example: `/GPIO?GPIO=12&Status=high`
+* ### GPIO
+  - Control a GPIO output
+    - The `GPIO` entrypoint also support parameters:
+      - `/GPIO?GPIO={PinNumber}&Status=high`
+      - `/GPIO?GPIO={PinNumber}&Status=low`
+    - Example: `/GPIO?GPIO=12&Status=high`
 
-  Read a GPIO input
-  - The `gpio` entrypoint also support parameters:
-    - `/GPIO?GPIO={PinNumber}`
-  - Example: `/GPIO?GPIO=12`
+  - Read a GPIO input 
+    - The `GPIO` entrypoint also support parameters:
+      - `/GPIO?GPIO={PinNumber}`
+    - Example: `/GPIO?GPIO=12`
 
 * ### ota
 
