@@ -122,7 +122,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#set-pre-value">Set Pre Value</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gpio">gpio</a>
+    <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
     </li>
@@ -251,8 +251,8 @@
               
                 <h1 id="rest-api">REST API</h1>
 <p>Various information is directly accessible over specific REST calls.</p>
-<p>For an up-to-date list search the Github repository for <a href="https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri">registered handlers</a></p>
 <p>To use it, just append them to the IP, separated with a <code>/</code>, eg. <code>http://192.168.1.1/json</code></p>
+<p>Note: For more detailed information to the REST handler, have a look to the code in the repository: <a href="https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri">registered handlers</a></p>
 <h2 id="control">Control</h2>
 <ul>
 <li>
@@ -267,20 +267,25 @@
 <p><code>/setPreValue?value=1234&amp;numbers=main</code> where <code>1234</code> is the new value and <code>main</code> the name of the number to be adjusted.</p>
 <ul>
 <li>
-<h3 id="gpio">gpio</h3>
-  Control a GPIO output</li>
-<li>The <code>gpio</code> entrypoint also support parameters:<ul>
+<h3 id="gpio">GPIO</h3>
+</li>
+<li>
+<p>Control a GPIO output</p>
+<ul>
+<li>The <code>GPIO</code> entrypoint also support parameters:</li>
 <li><code>/GPIO?GPIO={PinNumber}&amp;Status=high</code></li>
 <li><code>/GPIO?GPIO={PinNumber}&amp;Status=low</code></li>
-</ul>
-</li>
 <li>Example: <code>/GPIO?GPIO=12&amp;Status=high</code></li>
 </ul>
-<p>Read a GPIO input
-  - The <code>gpio</code> entrypoint also support parameters:
-    - <code>/GPIO?GPIO={PinNumber}</code>
-  - Example: <code>/GPIO?GPIO=12</code></p>
+</li>
+<li>
+<p>Read a GPIO input </p>
 <ul>
+<li>The <code>GPIO</code> entrypoint also support parameters:</li>
+<li><code>/GPIO?GPIO={PinNumber}</code></li>
+<li>Example: <code>/GPIO?GPIO=12</code></li>
+</ul>
+</li>
 <li>
 <h3 id="ota">ota</h3>
 </li>
