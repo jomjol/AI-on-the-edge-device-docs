@@ -78,7 +78,7 @@ Note: For more detailed information to the REST handler, have a look to the code
 
 * ### cpu_temperature
   Show the CPU temperature
-  - Example: `38.5 °C`
+  - Example: `38.5°C`
 
 * ### sysinfo
   Show system infos in JSON syntax
@@ -123,4 +123,4 @@ Note: For more detailed information to the REST handler, have a look to the code
 ## Diagnostics
 * ### heap
   print relevant memory (heap) information
-  - Example: `Heap: 3003978 Min Free: 1413058 larg. Block: 2949120 SPI Heap: 2957579 NOT_SPI Heap: 46399 Internal Heap: 46399 Internal Min Heap free: 10523`
+  - Example: `Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427`
