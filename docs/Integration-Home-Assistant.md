@@ -153,7 +153,7 @@ from(bucket: "HomeAssistant")
 ## Using REST
 When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.
 
-See [REST API](https://github.com/jomjol/AI-on-the-edge-device/wiki/REST-API) for a list of available URLs.
+See [REST API](../REST-API) for a list of available URLs.
 
 The most practical one is the `json` entrypoint which provides the most relevant data JSON formated:
 `http://<IP>/json`

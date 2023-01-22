@@ -3,10 +3,10 @@
 !!! Warning
     This page overlaps [Neural Network Types](../Neural-Network-Types). They should be merged to one page!
 
-In the [Graphical Configuration Page](Graphical-configuration), you can choose different models depending on your needs.
+In the [Graphical Configuration Page](../Graphical-configuration), you can choose different models depending on your needs.
 
-This wiki page tries to help you on which model to select.
-For more technical/deeper explanations have a look on [Neural-Network-Types](https://github.com/jomjol/AI-on-the-edge-device/wiki/Neural-Network-Types).
+This page tries to help you on which model to select.
+For more technical/deeper explanations have a look on [Neural-Network-Types](../Neural-Network-Types).
 
 ## Digit Models
 

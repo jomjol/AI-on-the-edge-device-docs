@@ -8,7 +8,7 @@ There are several reasons for the reboot:
 * Wrong configuration, missing configuration files
 * Unstable hardware - see [[Hardware Compatibility]]
 
-There is a dedicated Wiki page about this: [Frequent Reboots](https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/).
+There is a dedicated page about this: [Frequent Reboots](../Frequent-Reboots/).
 
 
 ### How accurate are the detections?
@@ -21,14 +21,14 @@ It is hard to give a specific accuracy number. It depends on many factors, e.g.
 * Are you trying to read digits, an analog dial, or both?
 * etc.
 
-Anecdotally, the authors of this wiki have great success with the meter. While the AI algorithm itself is not perfect and sometimes returns `NaN` or incorrect values, other post-processing / prevalue / sanity checks help ensure such invalid values are filtered out. With the correct settings, one author has been running this device for 1 month without any incorrect values reported. 
+Anecdotally, the authors of this page have great success with the meter. While the AI algorithm itself is not perfect and sometimes returns `NaN` or incorrect values, other post-processing / prevalue / sanity checks help ensure such invalid values are filtered out. With the correct settings, one author has been running this device for 1 month without any incorrect values reported. 
 
 See the FAQs below for more details and configuration hints.
 
 
 ## My numbers are not corrected detected. What can I do?
 
-* There is a dedicated Wiki page about the correct setting [ROI Configuration](https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/).
+* There is a dedicated page about the correct setting [ROI Configuration](../ROI-Configuration/).
 * This page also includes the instructions for gathering new images for the training.
 
 ## How can I ensure invalid numbers are never reported?

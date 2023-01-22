@@ -8,7 +8,7 @@ The most critical settings for accurate detection are:
 1. Correct setting of the **R**egions **O**f **I**nterest (ROIs) for detection of the image.
    > This must be done manually for each meter!
 2. Number type is part of the training set.
-   > Have a look on the [Digital Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See: [Learn models with your own images](https://github.com/jomjol/AI-on-the-edge-device/wiki/Learn-models-with-your-own-images) on how to create new input.
+   > Have a look on the [Digital Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See: [Learn models with your own images](../Learn-models-with-your-own-images) on how to create new input.
 
 _____
 
@@ -47,7 +47,7 @@ dig-class11 - Models recognize the **complete digit only**. Here it is not relev
 
 For this model, there should be a border of 20% of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: 
 
-<img width="300px" src=https://github.com/jomjol/AI-on-the-edge-device/wiki/images/ROI_drawing.jpg>
+<img width="300px" src=../img/ROI_drawing.jpg>
 
 |              | Example 1                         | Example 2                         |
 | ------------ | --------------------------------- | --------------------------------- |
@@ -57,7 +57,7 @@ For this model, there should be a border of 20% of the image size around the num
 
 
 
-If you have perfect alignment you and are not getting satisfying results, most probably your numbers are not part of the training data yet. Read on [Learn models with your own images](https://github.com/jomjol/AI-on-the-edge-device/wiki/Learn-models-with-your-own-images) how to add your meter's type of numbers to the training set.
+If you have perfect alignment you and are not getting satisfying results, most probably your numbers are not part of the training data yet. Read on [Learn models with your own images](../Learn-models-with-your-own-images) how to add your meter's type of numbers to the training set.
 
 
 #### dig-class100 / dig-cont Configuration
