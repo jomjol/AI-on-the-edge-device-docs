@@ -85,7 +85,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#wlan">WLAN</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#update">Update</a>
+    <li class="toctree-l2"><a class="reference internal" href="#update-ota-over-the-air">Update (OTA / Over-The-Air)</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#update-from-version-greater-than-1200">Update from version greater than 12.0.0</a>
     </li>
@@ -319,9 +319,17 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 <p>With some Python installations this may not work and you’ll receive an error, try <code>python -m pip install esptool</code> or <code>pip3 install esptool</code></p>
 <p>Further recommendations can be found on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html">espressif webpage</a></p>
 <h2 id="sd-card">SD-Card</h2>
-<p>The program expects a SD-Card installed with certain directory and file structure in order to work properly.
-For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page and extract the content of the contained <code>sd-card.zip</code> onto your SD-Card.</p>
-<p>This must only be done once as further updates of the SD-Card are possible with the OTA Update.</p>
+<p>The software expects a SD-Card prepared with certain directory and file structure in order to work properly.
+For the first setup take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page, open the zip and extract the whole content of the in the setup file included <code>sd-card.zip</code> onto your SD-Card direclty to the root folder.</p>
+<p>SD-Card root should look like this:
+- config
+- demo
+- firmware
+- html
+- img_tmp
+- log
+- wlan.ini</p>
+<p>This initial setup needs to be done only once as further updates of the software are possible with an Over-The-Air update mechanismn.</p>
 <h3 id="notes">Notes</h3>
 <ul>
 <li>Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM &amp; SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.</li>
@@ -340,10 +348,10 @@ For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a 
 <li><strong>3 x</strong> slow blinking (1 second on/off): WLAN connection established</li>
 </ul>
 <p>It is normal that at first one or two times a pending connection is indicated.</p>
-<h2 id="update">Update</h2>
+<h2 id="update-ota-over-the-air">Update (OTA / Over-The-Air)</h2>
 <h3 id="update-from-version-greater-than-1200">Update from version greater than 12.0.0</h3>
 <p>You can use the over the air update mechanism, which uploads the update via a ZIP files.</p>
-<p>The update file is located on the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">release page</a>. Please choose the zip file with the following naming: <code>update_VERSION.zip</code></p>
+<p>The update file is located on the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">release page</a>. Please choose the zip file with the following naming: <code>AI-on-the-edge-device__update__*.zip</code></p>
 <p>Go to the menu <code>System --&gt; OTA Update</code> and follow the instructions there. After a final automatic reboot you should have the new version running.</p>
 <h3 id="update-from-version-older-than-1200">Update from version older than 12.0.0</h3>
 <p>If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the <code>config.ini</code>, that are taken care of in this version.</p>
