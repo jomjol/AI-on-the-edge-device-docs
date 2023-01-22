@@ -203,7 +203,7 @@
 </blockquote>
 </li>
 <li>Number type is part of the training set.<blockquote>
-<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See: <a href="https://github.com/jomjol/AI-on-the-edge-device/wiki/Learn-models-with-your-own-images">Learn models with your own images</a> on how to create new input.</p>
+<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See: <a href="../Learn-models-with-your-own-images">Learn models with your own images</a> on how to create new input.</p>
 </blockquote>
 </li>
 </ol>
@@ -243,7 +243,7 @@
 <h4 id="dig-class11-configuration">dig-class11 Configuration</h4>
 <p>dig-class11 - Models recognize the <strong>complete digit only</strong>. Here it is not relevant if the ROI fits the Border of the digit window.</p>
 <p>For this model, there should be a border of 20% of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: </p>
-<p><img width="300px" src=https://github.com/jomjol/AI-on-the-edge-device/wiki/images/ROI_drawing.jpg></p>
+<p><img width="300px" src=../img/ROI_drawing.jpg></p>
 <table>
 <thead>
 <tr>
@@ -270,7 +270,7 @@
 </tr>
 </tbody>
 </table>
-<p>If you have perfect alignment you and are not getting satisfying results, most probably your numbers are not part of the training data yet. Read on <a href="https://github.com/jomjol/AI-on-the-edge-device/wiki/Learn-models-with-your-own-images">Learn models with your own images</a> how to add your meter's type of numbers to the training set.</p>
+<p>If you have perfect alignment you and are not getting satisfying results, most probably your numbers are not part of the training data yet. Read on <a href="../Learn-models-with-your-own-images">Learn models with your own images</a> how to add your meter's type of numbers to the training set.</p>
 <h4 id="dig-class100-dig-cont-configuration">dig-class100 / dig-cont Configuration</h4>
 <p>These models recognize the tenths (fractions) between the numbers. This model requires a different ROI setup; the height must be set differently and more accurately.</p>
 <p>First, the width can be set as for dig-class11, i.e. 20% margin left and right.</p>
