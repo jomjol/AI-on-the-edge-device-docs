@@ -130,6 +130,7 @@ The software expects a SD-Card prepared with certain directory and file structur
 For the first setup take the `AI-on-the-edge-device__manual-setup__*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page, open the zip and extract the whole content of the in the setup file included `sd-card.zip` onto your SD-Card direclty to the root folder.
 
 SD-Card root should look like this:
+
 - config
 - demo
 - firmware
