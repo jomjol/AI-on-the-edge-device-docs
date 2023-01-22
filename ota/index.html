@@ -47,7 +47,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../inital-setup/">Initial Setup</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
                   </li>
@@ -77,11 +77,7 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Over-The-Air (OTA) Update</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general-remark">General remark:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#access-to-the-update-page">Access to the update page:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#update">Update</a>
+    <li class="toctree-l2"><a class="reference internal" href="#update-procedure">Update Procedure</a>
     </li>
     </ul>
                   </li>
@@ -92,7 +88,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the edge</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
                   </li>
@@ -180,39 +176,19 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="over-the-air-ota-update">Over-The-Air (OTA) Update</h1>
-<p>You can do an OTA (over-the-air) update via the graphical user interface.
+<p>You can do an OTA (over-the-air) update via the Web Interface.
 Grab the firmware from the</p>
 <ul>
 <li><a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases page</a> (Stable, tested versions), or the</li>
-<li><a href="https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling">Automatically build development branch</a> (experimental, untested versions). Please have a look on <a href="https://github.com/jomjol/AI-on-the-edge-device/wiki/Install-a-rolling-%28unstable%29-release"></a> first!</li>
+<li><a href="https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling">Automatically build development branch</a> (experimental, untested versions). Please inform yourself on <a href="../rolling-installation">Living on the Edge</a> first!</li>
 </ul>
-<p>You need:
-* firmware.bin
-* html.zip</p>
-<h3 id="general-remark"><strong>General remark:</strong></h3>
-<ul>
-<li>It is always recommended to upload both files, as they are coupled to each other</li>
-<li>If you make a major update, it might be needed to modify the <code>config.ini</code> as it's syntax or context has changed</li>
-<li>It is recommended to make a <strong>backup</strong> of the <code>/config</code>  directory, minimum of the <code>config.ini</code>.</li>
-</ul>
-<h3 id="access-to-the-update-page">Access to the update page:</h3>
-<p>The graphical OTA update can be accessed in the menue "System":</p>
-<ul>
-<li><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/ota-update-menue.jpg" width="600" align="middle"></li>
-</ul>
-<h3 id="update">Update</h3>
-<ul>
-<li><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/ota-update-details.jpg" width="600" align="middle"></li>
-</ul>
-<p>Just follow the steps 1 to 5 to perform the update:</p>
+<h2 id="update-procedure">Update Procedure</h2>
 <ol>
-<li>Select (a) and upload (b) the file <code>firmware.bin</code></li>
-<li>Flash the firmware</li>
-<li>Select (a) and upload (b) the file <code>html.zip</code></li>
-<li>Update the html-files</li>
-<li>Reboot</li>
+<li>Create a backup of your configuration. Either use the Backup/Restore function of your device for this (menu <code>System &gt; Backup/Restore</code>) or back the files manually up using the File Server (menu <code>File Server</code>, folder <code>config</code>). It is recommended to at least save the config file <code>config.ini</code>!</li>
+<li>Head to the menu <code>System &gt; OTA Update</code> and follow the instructions there.</li>
 </ol>
-<p><strong>After the reboot with a major change it is recommended to check the configuration settings and save them again</strong></p>
+<p>If you do an update between major versions, it might be needed to modify the config file <code>config.ini</code> as it's syntax or context has changed.
+To do so, go to the menu <code>Settings &gt; Configuration</code> (after the update completed and the device restarted) and check if it warns you about an unset parameter.</p>
               
             </div>
           </div><footer>
