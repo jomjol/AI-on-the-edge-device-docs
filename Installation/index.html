@@ -321,14 +321,16 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 <h2 id="sd-card">SD-Card</h2>
 <p>The software expects a SD-Card prepared with certain directory and file structure in order to work properly.
 For the first setup take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page, open the zip and extract the whole content of the in the setup file included <code>sd-card.zip</code> onto your SD-Card direclty to the root folder.</p>
-<p>SD-Card root should look like this:
-- config
-- demo
-- firmware
-- html
-- img_tmp
-- log
-- wlan.ini</p>
+<p>SD-Card root should look like this:</p>
+<ul>
+<li>config</li>
+<li>demo</li>
+<li>firmware</li>
+<li>html</li>
+<li>img_tmp</li>
+<li>log</li>
+<li>wlan.ini</li>
+</ul>
 <p>This initial setup needs to be done only once as further updates of the software are possible with an Over-The-Air update mechanismn.</p>
 <h3 id="notes">Notes</h3>
 <ul>
