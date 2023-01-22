@@ -85,6 +85,14 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#wlan">WLAN</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update">Update</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#update-from-version-greater-than-1200">Update from version greater than 12.0.0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-from-version-older-than-1200">Update from version older than 12.0.0</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../inital-setup/">Initial Setup</a>
@@ -332,6 +340,44 @@ For the first setup take the <code>initial_esp32_setup_*.zip</code> from the <a 
 <li><strong>3 x</strong> slow blinking (1 second on/off): WLAN connection established</li>
 </ul>
 <p>It is normal that at first one or two times a pending connection is indicated.</p>
+<h2 id="update">Update</h2>
+<h3 id="update-from-version-greater-than-1200">Update from version greater than 12.0.0</h3>
+<p>You can use the over the air update mechanism, which uploads the update via a ZIP files.</p>
+<p>The update file is located on the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">release page</a>. Please choose the zip file with the following naming: <code>update_VERSION.zip</code></p>
+<p>Go to the menu <code>System --&gt; OTA Update</code> and follow the instructions there. After a final automatic reboot you should have the new version running.</p>
+<h3 id="update-from-version-older-than-1200">Update from version older than 12.0.0</h3>
+<p>If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the <code>config.ini</code>, that are taken care of in this version.</p>
+<p>‼️ <strong>Make sure to read the instructions below carfully!</strong></p>
+<ol>
+<li>
+<p>Backup your configuration (use the <code>System -&gt; Backup/Restore</code> page)!</p>
+</li>
+<li>
+<p>Upload and update the <code>update-*.zip</code> file from the release  <strong><code>12.0.1</code></strong>  <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v12.0.1">see here</a> .</p>
+</li>
+<li>
+<p>Let it restart and check on the <code>System -&gt; Info</code> page that the Firmware as well as the Web UI got updated. If only one got updated, redo the update. If it fails several times, you also can update the Firmware and the Web UI separately.</p>
+</li>
+<li>
+<p>Safe way: </p>
+<ol>
+<li>Update first the <code>firmware.bin</code> (extract it from one of the provided zip files) and do the Reboot</li>
+<li>Update with the full zip file (<code>update-*.zip</code>, ignore the version warning after the reboot)</li>
+</ol>
+</li>
+<li>
+<p>Please go to <code>Settings -&gt; Configuration</code> and address the changed parameters:</p>
+<ul>
+<li>DataLogging (storing the values for data graph)</li>
+<li>Debug (extended by different debug reporting levels)</li>
+</ul>
+</li>
+<li>
+<p>Make sure it starts to do the digitalization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.</p>
+</li>
+</ol>
+<p>‼️ <strong>If the system is working now without any issues, please open the configuration editor once and save the <code>config.ini</code>. This will update the file to the newest content</strong>‼️</p>
+<p>Now you can safely update to the newest version.</p>
               
             </div>
           </div><footer>
