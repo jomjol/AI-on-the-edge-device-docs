@@ -126,10 +126,19 @@ With some Python installations this may not work and you’ll receive an error, 
 Further recommendations can be found on the [espressif webpage](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html)
 
 ## SD-Card
-The program expects a SD-Card installed with certain directory and file structure in order to work properly.
-For the first setup take the `initial_esp32_setup_*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page and extract the content of the contained `sd-card.zip` onto your SD-Card.
+The software expects a SD-Card prepared with certain directory and file structure in order to work properly.
+For the first setup take the `AI-on-the-edge-device__manual-setup__*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page, open the zip and extract the whole content of the in the setup file included `sd-card.zip` onto your SD-Card direclty to the root folder.
 
-This must only be done once as further updates of the SD-Card are possible with the OTA Update.
+SD-Card root should look like this:
+- config
+- demo
+- firmware
+- html
+- img_tmp
+- log
+- wlan.ini
+
+This initial setup needs to be done only once as further updates of the software are possible with an Over-The-Air update mechanismn.
 
 ### Notes
 
@@ -140,6 +149,7 @@ This must only be done once as further updates of the SD-Card are possible with 
 
 **The ESP32 indicates problems with the SD card during startup with a fast not ending blinking.**
 **In this case, please try another SD card.** 
+
 
 ## WLAN
 
@@ -155,14 +165,13 @@ WLAN-Status indication:
 It is normal that at first one or two times a pending connection is indicated.
 
 
-
-## Update 
+## Update (OTA / Over-The-Air)
 
 ### Update from version greater than 12.0.0
 
 You can use the over the air update mechanism, which uploads the update via a ZIP files.
 
-The update file is located on the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). Please choose the zip file with the following naming: `update_VERSION.zip`
+The update file is located on the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). Please choose the zip file with the following naming: `AI-on-the-edge-device__update__*.zip`
 
 Go to the menu `System --> OTA Update` and follow the instructions there. After a final automatic reboot you should have the new version running.
 
@@ -193,3 +202,4 @@ If you update from an version older than 12.0.1, you should firstly update to ve
 :bangbang: **If the system is working now without any issues, please open the configuration editor once and save the `config.ini`. This will update the file to the newest content**:bangbang:
 
 Now you can safely update to the newest version.
+
