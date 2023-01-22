@@ -1,42 +1,13 @@
 # Over-The-Air (OTA) Update
-
-You can do an OTA (over-the-air) update via the graphical user interface.
+You can do an OTA (over-the-air) update via the Web Interface.
 Grab the firmware from the
 
  *  [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
- *  [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please have a look on [](https://github.com/jomjol/AI-on-the-edge-device/wiki/Install-a-rolling-%28unstable%29-release) first!
+ *  [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please inform yourself on [Living on the Edge](../rolling-installation) first!
 
-You need:
-* firmware.bin
-* html.zip
+## Update Procedure
+1. Create a backup of your configuration. Either use the Backup/Restore function of your device for this (menu `System > Backup/Restore`) or back the files manually up using the File Server (menu `File Server`, folder `config`). It is recommended to at least save the config file `config.ini`!
+1. Head to the menu `System > OTA Update` and follow the instructions there.
 
-### **General remark:** 
-
-- It is always recommended to upload both files, as they are coupled to each other
-- If you make a major update, it might be needed to modify the `config.ini` as it's syntax or context has changed
-- It is recommended to make a **backup** of the `/config`  directory, minimum of the `config.ini`.
-
-
-
-### Access to the update page:
-
-The graphical OTA update can be accessed in the menue "System":
-
-* <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/ota-update-menue.jpg" width="600" align="middle">
-
-
-### Update
-
-* <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/ota-update-details.jpg" width="600" align="middle">
-
-Just follow the steps 1 to 5 to perform the update:
-
-1. Select (a) and upload (b) the file `firmware.bin`
-2. Flash the firmware
-3. Select (a) and upload (b) the file `html.zip`
-4. Update the html-files
-5. Reboot
-
-
-
-**After the reboot with a major change it is recommended to check the configuration settings and save them again**
+If you do an update between major versions, it might be needed to modify the config file `config.ini` as it's syntax or context has changed.
+To do so, go to the menu `Settings > Configuration` (after the update completed and the device restarted) and check if it warns you about an unset parameter.
