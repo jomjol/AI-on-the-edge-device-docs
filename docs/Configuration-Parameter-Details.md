@@ -157,12 +157,26 @@ Intervall = 4.85
 
 This paragraph is used to automatically trigger the periodic automated readout.
 
-
-
 | Parameter | Meaning                                         | Options/Examples                                             |
 | --------- | ----------------------------------------------- | ------------------------------------------------------------ |
 | AutoStart | Automatically trigger the readout after startup |                                                              |
 | Intervall | Readout interval in minutes                     | Values smaller than 2 minutes do not make sense, as this is the time for one detection |
+
+
+### [DataLogging]
+```
+[DataLogging]
+DataLogActive = true
+DataLogRetentionInDays = 3
+```
+
+This paragraph is used to control the logging of the result data to a spectific folder of SD-Card -> \log\data\...
+
+| Parameter              | Meaning                                                  | Options/Examples                                   |
+| ---------------------- | -------------------------------------------------------- | -------------------------------------------------- |
+| DataLogActive          | Activate data logging to SD-Card                         |                                                    |
+| DataLogRetentionInDays | Number of days, for which the log files should be stored | 0 = keep forever                                   |
+
 
 ### [Debug]
 
@@ -175,12 +189,11 @@ LogfileRetentionInDays = 2
 This paragraph is used to switch on an extended logging. It is optional and by default only a minimum logging is enabled.
 **:bangbang: Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
 
+| Parameter              | Meaning                                                  | Options/Examples                                   |
+| ---------------------- | -------------------------------------------------------- | -------------------------------------------------- |
+| Logfile                | Turn on (true) or off (false) the extended logging       | parameter and section optional                     |
+| LogfileRetentionInDays | Number of days, for which the log files should be stored | 0 = keep forever                                   |
 
-
-| Parameter              | Meaning                                                  | Options/Examples               |
-| ---------------------- | -------------------------------------------------------- | ------------------------------ |
-| Logfile                | Turn on (true) or off (false) the extended logging       | parameter and section optional |
-| LogfileRetentionInDays | Number of days, for which the log files should be stored | 0 = keep forever               |
 
 ### [System]
 
@@ -195,15 +208,12 @@ SetupMode = false
 This paragraph is used to switch on an extended logging. It is optional and by default only a minimum logging is enabled.
 **:bangbang: Attention:** in case of extended logging the size of the log file (`/log.txt`, `/alignment.txt`) might increase rapidly, therefore manually deletion from time to time is recommended
 
-
-
 | Parameter  | Meaning                                                      | Options/Examples                                             |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | TimeZone   | TimeZone of the system can be specified                      | Central european, with summertime adjustement: `CET-1CEST,M3.5.0,M10.5.0/3` |
 | TimeServer | An dedicated time server can be specified.                   | default = `pool.ntp.org`                                     |
 | Hostname   | Additionally to the `wlan.ini` the hostname can be specified. It will be transferred to the `wlan.ini` and initiate a reboot |                                                              |
-| SetupMode  | If enabled, the server starts in an initial setup mode. This is automatically disabled at the end of the setup |                                                              |
-
+| SetupMode  | If enabled, the server starts in an initial setup mode. This is automatically disabled at the end of the setup |                                               
 
 ### [Ende]
 
