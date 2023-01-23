@@ -170,7 +170,7 @@ DataLogActive = true
 DataLogRetentionInDays = 3
 ```
 
-This paragraph is used to control the logging of the result data to a spectific folder of SD-Card -> \log\data\...
+This paragraph is used to control the logging of the result data to a spectific folder of SD-Card -> \log\data\data_YYYY-MM-DD.csv
 
 | Parameter              | Meaning                                                  | Options/Examples                                   |
 | ---------------------- | -------------------------------------------------------- | -------------------------------------------------- |
