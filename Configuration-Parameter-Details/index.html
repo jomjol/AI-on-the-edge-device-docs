@@ -102,6 +102,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#autotimer">[AutoTimer]</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#datalogging">[DataLogging]</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#debug">[Debug]</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#system">[System]</a>
@@ -505,6 +507,33 @@ Intervall = 4.85
 <td>Intervall</td>
 <td>Readout interval in minutes</td>
 <td>Values smaller than 2 minutes do not make sense, as this is the time for one detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datalogging">[DataLogging]</h3>
+<pre><code>[DataLogging]
+DataLogActive = true
+DataLogRetentionInDays = 3
+</code></pre>
+<p>This paragraph is used to control the logging of the result data to a spectific folder of SD-Card -&gt; \log\data...</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Options/Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DataLogActive</td>
+<td>Activate data logging to SD-Card</td>
+<td></td>
+</tr>
+<tr>
+<td>DataLogRetentionInDays</td>
+<td>Number of days, for which the log files should be stored</td>
+<td>0 = keep forever</td>
 </tr>
 </tbody>
 </table>
