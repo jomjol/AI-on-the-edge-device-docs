@@ -77,7 +77,7 @@ There are several options to flash the firmware. Here three are described:
 
 #### 1. Web Installer
 There is a Web Installer available which will work right out of the web browser Edge and Chrome.
-You can access it with the following link: https://jomjol.github.io/AI-on-the-edge-device
+You can access it with the following link: [Web Installer](https://jomjol.github.io/AI-on-the-edge-device)
 
 This is the preferred way for beginners as it also allows access to the USB Log:
 
