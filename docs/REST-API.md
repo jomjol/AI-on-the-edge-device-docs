@@ -73,16 +73,16 @@ Note: For more detailed information to the REST handler, have a look to the code
   - Example: `Take Image (15:56:34)`
 
 * ### rssi
-  Show the WIFI signal strength
-  - Example: `-51dBm`
+  Show the WIFI signal strength (Unit: dBm)
+  - Example: `-51`
 
 * ### cpu_temperature
-  Show the CPU temperature
-  - Example: `38.5°C`
+  Show the CPU temperature (Unit: °C)
+  - Example: `38`
 
 * ### sysinfo
   Show system infos in JSON syntax
-  - Example: `[ { "firmware" : "xxx", "buildtime" : "2023-01-15 21:27", "gitbranch" : "xxx", "gittag" : "", "gitrevision" : "a5e533f+", "html" : "Development-Branch: xxx (Commit: a5e533f+)", "cputemp" : "67.777779", "hostname" : "xxx", "IPv4" : "192.168.xxx.xxx", "freeHeapMem" : "2789466" } ]`
+  - Example: [{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]
 
 * ### starttime
   Show starttime
