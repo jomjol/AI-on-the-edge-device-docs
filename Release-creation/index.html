@@ -184,19 +184,19 @@
 <ol>
 <li>Merge<code>rolling</code> into <code>master</code> branch</li>
 <li>Best to wait for the GitHub action to run successfully </li>
-<li>On <code>master</code> branch tag the version like <code>v11.3.1</code> and don't forget to push it:
-     <code>git checkout master
-     git pull
-     git tag v14.0.0
-     git push --tags</code></li>
-<li>Wait for the GitHub-Action of release creation. After all is done:<ul>
-<li>the release should be created</li>
-<li>the artifacts are downloadable from release </li>
-<li>The documented changes were applied to the release</li>
-</ul>
+<li>
+<p>On <code>master</code> branch tag the version like <code>v11.3.1</code> and don't forget to push it:</p>
+<p><code>git checkout master
+ git pull
+ git tag v14.0.0
+ git push --tags</code>
+5. Wait for the GitHub-Action of release creation. After all is done:
+* the release should be created
+* the artifacts are downloadable from release 
+* The documented changes were applied to the release
+6. Merge master back in <code>rolling</code>
+7. Check that the <a href="">Web Installer</a> shows the right version</p>
 </li>
-<li>Merge master back in <code>rolling</code></li>
-<li>Check that the <a href="">Web Installer</a> shows the right version</li>
 </ol>
               
             </div>
