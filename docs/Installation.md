@@ -182,7 +182,7 @@ Go to the menu `System --> OTA Update` and follow the instructions there. After 
 
 If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the `config.ini`, that are taken care of in this version.
 
-:bangbang: **Make sure to read the instructions below carfully!**
+:bangbang: **Make sure to read the instructions below carefully!**
 
 1.  Backup your configuration (use the `System -> Backup/Restore` page)!
 
