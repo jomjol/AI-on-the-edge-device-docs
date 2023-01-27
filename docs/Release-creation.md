@@ -7,10 +7,16 @@
 ## Release creation steps
 1. Merge`rolling` into `master` branch
 2. Best to wait for the GitHub action to run successfully 
-3. On `master` branch tag the version like `v11.3.1` and don't forget to push it.
-4. Wait for the GitHub-Action of release creation. After all is done:
+3. On `master` branch tag the version like `v11.3.1` and don't forget to push it:
+     ```
+     git checkout master
+     git pull
+     git tag v14.0.0
+     git push --tags
+     ```
+5. Wait for the GitHub-Action of release creation. After all is done:
     * the release should be created
     * the artifacts are downloadable from release 
     * The documented changes were applied to the release
-5. Merge master back in `rolling`
-6. Check that the [Web Installer]() shows the right version
+6. Merge master back in `rolling`
+7. Check that the [Web Installer]() shows the right version
