@@ -206,9 +206,7 @@ Now you can safely update to the newest version.
 
 ## Update via WebInstaller
 
-### Update from version greater than 12.0.0
-
-If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. It is triggered a missing `wlan.ini` or a missing`/config/config.ini`.
+If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. This is triggered by a missing `wlan.ini` or a missing `/config/config.ini`.
 
 ##### Using internal access point for sd-card setup
 
@@ -216,7 +214,8 @@ Before starting the flash process, download the necessary file. It is a zip file
 
 ###### Flash the firmware with the WebInstaller
 
-Instructions see above.
+Follow the instructions on the [WebInstaller Page](https://jomjol.github.io/AI-on-the-edge-device/index.html).
+:bangbang: This will only work with Chrome or Edge browsers.
 
 ###### Connect to Device
 
@@ -237,16 +236,6 @@ You connect to the server with the fixed ip: http://192.168.4.1
 Use the `select file` and `upload` button to start the upload.
 
 A warning will show up if you have choosen a possible wrong file (without default configuration).
-
-###### Upload initial configuration to sd-card
-
-![](img/setup-config.png)
-
-Use the `select file` and `upload` button to start the upload.
-            A warning will show up if you have choosen a possible wrong file (without default configuration).
-
-Be patient - the upload takes up to around 60s without response during this time!
-            After succesfull uploading, the page will be reloaded for the next step.
 
 ###### Store WLAN acces information
 
