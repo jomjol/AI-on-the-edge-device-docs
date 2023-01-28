@@ -95,9 +95,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#update-via-webinstaller">Update via WebInstaller</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#update-from-version-greater-than-1200_1">Update from version greater than 12.0.0</a>
+    <li class="toctree-l3"><a class="reference internal" href="#using-internal-access-point-for-sd-card-setup">Using internal access point for sd-card setup</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#using-internal-access-point-for-sd-card-setup">Using internal access point for sd-card setup</a>
+    <li class="toctree-l4"><a class="reference internal" href="#flash-the-firmware-with-the-webinstaller">Flash the firmware with the WebInstaller</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#connect-to-device">Connect to Device</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#upload-initial-configuration-to-sd-card">Upload initial configuration to sd-card</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#store-wlan-acces-information">Store WLAN acces information</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reboot">Reboot</a>
     </li>
         </ul>
     </li>
@@ -399,12 +407,12 @@ For the first setup take the <code>AI-on-the-edge-device__manual-setup__*.zip</c
 <p>‼️ <strong>If the system is working now without any issues, please open the configuration editor once and save the <code>config.ini</code>. This will update the file to the newest content</strong>‼️</p>
 <p>Now you can safely update to the newest version.</p>
 <h2 id="update-via-webinstaller">Update via WebInstaller</h2>
-<h3 id="update-from-version-greater-than-1200_1">Update from version greater than 12.0.0</h3>
-<p>If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. It is triggered a missing <code>wlan.ini</code> or a missing<code>/config/config.ini</code>.</p>
+<p>If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. This is triggered by a missing <code>wlan.ini</code> or a missing <code>/config/config.ini</code>.</p>
 <h5 id="using-internal-access-point-for-sd-card-setup">Using internal access point for sd-card setup</h5>
 <p>Before starting the flash process, download the necessary file. It is a zip file, containing the initial default configuration.         You can identify it by the naming. It is named  <code>AI-on-the-edge-device__remote-setup__*.zip</code>. Store this file locally as you will need it later, when you are connected to the internal access point (no internet connection).       </p>
 <h6 id="flash-the-firmware-with-the-webinstaller">Flash the firmware with the WebInstaller</h6>
-<p>Instructions see above.</p>
+<p>Follow the instructions on the <a href="https://jomjol.github.io/AI-on-the-edge-device/index.html">WebInstaller Page</a>.
+‼️ This will only work with Chrome or Edge browsers.</p>
 <h6 id="connect-to-device">Connect to Device</h6>
 <p>During the first booting, the device detects that the wifi credentials as well as the configuration informations are missing.</p>
 <p>Therefore a simple wifi access point is initiated and a simple internal web server is startet, so the device can be setup.</p>
@@ -415,12 +423,6 @@ For the first setup take the <code>AI-on-the-edge-device__manual-setup__*.zip</c
 <p><img alt="" src="../img/setup-config.png" /></p>
 <p>Use the <code>select file</code> and <code>upload</code> button to start the upload.</p>
 <p>A warning will show up if you have choosen a possible wrong file (without default configuration).</p>
-<h6 id="upload-initial-configuration-to-sd-card_1">Upload initial configuration to sd-card</h6>
-<p><img alt="" src="../img/setup-config.png" /></p>
-<p>Use the <code>select file</code> and <code>upload</code> button to start the upload.
-            A warning will show up if you have choosen a possible wrong file (without default configuration).</p>
-<p>Be patient - the upload takes up to around 60s without response during this time!
-            After succesfull uploading, the page will be reloaded for the next step.</p>
 <h6 id="store-wlan-acces-information">Store WLAN acces information</h6>
 <p><img alt="" src="../img/setup-wlan.png" /></p>
 <p>Here you can set your wifi credentials. Only basic  settings can done here. If you need advanced features (fixed ip, ...),  please use the manual setup.</p>
