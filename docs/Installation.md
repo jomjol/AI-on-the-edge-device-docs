@@ -204,3 +204,67 @@ If you update from an version older than 12.0.1, you should firstly update to ve
 
 Now you can safely update to the newest version.
 
+## Update via WebInstaller
+
+### Update from version greater than 12.0.0
+
+If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. It is triggered a missing `wlan.ini` or a missing`/config/config.ini`.
+
+##### Using internal access point for sd-card setup
+
+Before starting the flash process, download the necessary file. It is a zip file, containing the initial default configuration.         You can identify it by the naming. It is named  `AI-on-the-edge-device__remote-setup__*.zip`. Store this file locally as you will need it later, when you are connected to the internal access point (no internet connection).       
+
+###### Flash the firmware with the WebInstaller
+
+Instructions see above.
+
+###### Connect to Device
+
+During the first booting, the device detects that the wifi credentials as well as the configuration informations are missing.
+
+Therefore a simple wifi access point is initiated and a simple internal web server is startet, so the device can be setup.
+
+The naming of the wifi is "AI-on-the-edge" and you can access it without any password.
+
+![](img/access-point.png)
+
+You connect to the server with the fixed ip: http://192.168.4.1
+
+###### Upload initial configuration to sd-card
+
+![](img/setup-config.png)
+
+Use the `select file` and `upload` button to start the upload.
+
+A warning will show up if you have choosen a possible wrong file (without default configuration).
+
+###### Upload initial configuration to sd-card
+
+![](img/setup-config.png)
+
+Use the `select file` and `upload` button to start the upload.
+            A warning will show up if you have choosen a possible wrong file (without default configuration).
+
+Be patient - the upload takes up to around 60s without response during this time!
+            After succesfull uploading, the page will be reloaded for the next step.
+
+###### Store WLAN acces information
+
+![](img/setup-wlan.png)
+
+Here you can set your wifi credentials. Only basic  settings can done here. If you need advanced features (fixed ip, ...),  please use the manual setup.
+
+Attention:
+
+- Carefully check your wifi settings. To change them later on, you need to take you the sd-card and to it manually in `wlan.ini`
+- The informations are transfered without encryption.
+
+Finish the step by pushing `Write wlan.ini`
+
+###### Reboot
+
+![](img/setup-reboot.png)
+
+The final step is the reboot.
+
+It will take up to 3 minutes. Afterwards you can find  your device in the local network. Check you router for the IP. You can  find it also in the USB Console output.
