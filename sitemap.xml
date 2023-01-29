@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/collect-new-images/</loc>
+         <lastmod>2023-01-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/initial-setup/</loc>
          <lastmod>2023-01-29</lastmod>
          <changefreq>daily</changefreq>
