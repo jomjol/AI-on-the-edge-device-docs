@@ -47,7 +47,7 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-hardware">1. Hardware</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#esp32-cam">ESP32-CAM</a>
     </li>
@@ -61,55 +61,33 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#firmware-flashing">Firmware flashing</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-firmware">2. Firmware</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#files">Files</a>
+    <li class="toctree-l3"><a class="reference internal" href="#web-installer">Web Installer</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#flashing">Flashing</a>
+    <li class="toctree-l3"><a class="reference internal" href="#manual-flashing">Manual Flashing</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-web-installer">1. Web Installer</a>
+    <li class="toctree-l4"><a class="reference internal" href="#files">Files</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-using-the-flash-tool-from-espressif">2. Using the Flash Tool from Espressif</a>
+    <li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-flash-tool-from-espressif-gui">Flashing using the Flash Tool from Espressif (GUI)</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-using-esptool-in-python-directly">3. Using esptool in python directly</a>
+    <li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-python-based-esptool-console">Flashing using the Python based esptool (Console)</a>
     </li>
         </ul>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sd-card">SD-Card</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sd-card">3. SD-Card</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
     </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#manual-setup-with-a-sd-card-reader-on-a-pc">Manual Setup with a SD-Card-Reader on a PC</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#wlan">WLAN</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#update-ota-over-the-air">Update (OTA / Over-The-Air)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#update-from-version-greater-than-1200">Update from version greater than 12.0.0</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#update-from-version-older-than-1200">Update from version older than 12.0.0</a>
+    <li class="toctree-l3"><a class="reference internal" href="#remote-setup-using-the-built-in-access-point">Remote Setup using the built-in Access Point</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#update-via-webinstaller">Update via WebInstaller</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#using-internal-access-point-for-sd-card-setup">Using internal access point for sd-card setup</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#flash-the-firmware-with-the-webinstaller">Flash the firmware with the WebInstaller</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#connect-to-device">Connect to Device</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#upload-initial-configuration-to-sd-card">Upload initial configuration to sd-card</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#store-wlan-acces-information">Store WLAN acces information</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#reboot">Reboot</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#4-initial-startup">4. Initial Startup</a>
     </li>
     </ul>
                   </li>
@@ -245,11 +223,11 @@
 <li>Get the right hardware and wire it up</li>
 <li>Flash the firmware onto the ESP32</li>
 <li>Write the data to the SD-Card</li>
-<li>Insert the SD-Card into the ESP32 board</li>
-<li>Power/restart it. </li>
+<li>Start it. </li>
 </ol>
-<h2 id="hardware">Hardware</h2>
-<h4 id="esp32-cam">ESP32-CAM</h4>
+<p>For point 2 and 3 we provide multiple ways to do it. Pick the one that looks the easiest for you!</p>
+<h2 id="1-hardware">1. Hardware</h2>
+<h3 id="esp32-cam">ESP32-CAM</h3>
 <ul>
 <li>OV2640 camera module</li>
 <li>Micro SD-Card slot </li>
@@ -257,12 +235,12 @@
 </ul>
 <p>It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
 How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunction device. See <a href="../Hardware-Compatibility">Hardware Compatibility</a> for further advice! </p>
-<h4 id="usb-uart-interface">USB-&gt;UART interface</h4>
+<h3 id="usb-uart-interface">USB-&gt;UART interface</h3>
 <p>For first time flashing the firmware a USB -&gt; UART connector is needed. Later firmware upgrades than can be flashed via OTA.</p>
-<h4 id="power-supply">Power supply</h4>
+<h3 id="power-supply">Power supply</h3>
 <p>For power supply a 5V source is needed. Most easily this can be done via an USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large elco condensator like a 2200uF between ground and VCC.</p>
 <p><strong>‼️ Attention:</strong> in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
-<h4 id="housing">Housing</h4>
+<h3 id="housing">Housing</h3>
 <p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
 <p><img alt="" src="../img/main.jpg" style="width:200px" />
 <img alt="" src="../img/size.png" style="width:200px" /></p>
@@ -274,8 +252,14 @@ How ever since the hardware is cheap and coming from China, you unluckily could 
 <p><img alt="" src="../img/wiring.png" /></p>
 <p><img alt="" src="../img/progammer_manual.jpg" /></p>
 <p>It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described here: [[External-LED]]</p>
-<h2 id="firmware-flashing">Firmware flashing</h2>
-<h3 id="files">Files</h3>
+<h2 id="2-firmware">2. Firmware</h2>
+<h3 id="web-installer">Web Installer</h3>
+<p>There is a Web Installer available which will work right out of the web browser Edge and Chrome.
+You can access it with the following link: <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a></p>
+<p><strong>This is the preferred way for beginners</strong> as it also allows access to the USB Log:</p>
+<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png" /></a></p>
+<h3 id="manual-flashing">Manual Flashing</h3>
+<h4 id="files">Files</h4>
 <p>Grab the firmware from the</p>
 <ul>
 <li><a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases page</a> (Stable, tested versions), or the</li>
@@ -287,15 +271,8 @@ How ever since the hardware is cheap and coming from China, you unluckily could 
 <li>bootloader.bin</li>
 <li>firmware.bin</li>
 </ul>
-<h3 id="flashing">Flashing</h3>
-<p>There are several options to flash the firmware. Here three are described:</p>
-<h4 id="1-web-installer">1. Web Installer</h4>
-<p>There is a Web Installer available which will work right out of the web browser Edge and Chrome.
-You can access it with the following link: <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a></p>
-<p>This is the preferred way for beginners as it also allows access to the USB Log:</p>
-<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png" /></a></p>
-<h4 id="2-using-the-flash-tool-from-espressif">2. Using the Flash Tool from Espressif</h4>
-<p>The flashing of the firmware can be done  with the "Flash Download Tool" from espressif, that can found <a href="https://www.espressif.com/en/support/download/other-tools">here</a> </p>
+<h4 id="flashing-using-the-flash-tool-from-espressif-gui">Flashing using the Flash Tool from Espressif (GUI)</h4>
+<p>Get the <a href="https://www.espressif.com/en/support/download/other-tools">Flash Download Tool</a> from Espressif.</p>
 <p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
 <p>‼️ <strong>Attention</strong>: if you reflashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
 <p>But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:</p>
@@ -322,8 +299,7 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 </tbody>
 </table>
 <p><img alt="" src="../img/Flash_Settings.png" /></p>
-<p>Alternatively it can be directly flashed from the development environment - here PlatformIO. But this is rather for experienced users, as the whole development chain needs to be installed for compilation.</p>
-<h4 id="3-using-esptool-in-python-directly">3. Using esptool in python directly</h4>
+<h4 id="flashing-using-the-python-based-esptool-console">Flashing using the Python based esptool (Console)</h4>
 <p>For this you need a python environment (e.g. Anaconda in Win10). 
 Here you need to install the esptool:</p>
 <pre><code>pip install esptool
@@ -338,106 +314,79 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 </ul>
 <p>With some Python installations this may not work and you’ll receive an error, try <code>python -m pip install esptool</code> or <code>pip3 install esptool</code></p>
 <p>Further recommendations can be found on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html">espressif webpage</a></p>
-<h2 id="sd-card">SD-Card</h2>
+<h2 id="3-sd-card">3. SD-Card</h2>
 <p>The software expects a SD-Card prepared with certain directory and file structure in order to work properly.
-For the first setup take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page, open the zip and extract the whole content of the in the setup file included <code>sd-card.zip</code> onto your SD-Card direclty to the root folder.</p>
-<p>SD-Card root should look like this:</p>
-<ul>
-<li>config</li>
-<li>demo</li>
-<li>firmware</li>
-<li>html</li>
-<li>img_tmp</li>
-<li>log</li>
-<li>wlan.ini</li>
-</ul>
-<p>This initial setup needs to be done only once as further updates of the software are possible with an Over-The-Air update mechanismn.</p>
-<h3 id="notes">Notes</h3>
+SD-Card most top directory should look like this:</p>
+<p><img alt="" src="../sd-card-content.png" />  </p>
+<p>This initial setup needs only to be done <strong>once</strong> as further updates (Firmware as well as SD-Card content) are possible with the <a href="../ota/">Over-The-Air Update</a> mechanism.</p>
+<h4 id="notes">Notes</h4>
 <ul>
 <li>Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM &amp; SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.</li>
 <li>There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)</li>
 <li>Following setting are necessary for formating the SD-card: <strong>SINGLE PARTITION, MBR, FAT32 - 32K.  NOT exFAT</strong></li>
 <li>Some ESP32 devices share their SD-card and/or camera GPIOs with the pins for TX and RX. If you see errors like “Failed to connect” then your chip is probably not entering the bootloader properly. Remove the respective modules temporarily to free the GPIOs for flashing. You may find more information about troubleshooting on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp8266/troubleshooting.html">homepage of Espressif</a>.</li>
 </ul>
-<p><strong>The ESP32 indicates problems with the SD card during startup with a fast not ending blinking.</strong>
+<p><strong>The ESP32 indicates problems with the SD card during startup with a fast, endless blinking.</strong>
 <strong>In this case, please try another SD card.</strong> </p>
-<h2 id="wlan">WLAN</h2>
-<p>The access to the WLAN is configured in the "wlan.ini" directly on the root directory of the sd-card. Just write the corresponding SSID and password before the startup of the ESP32. This file is hidden from external access (e.g. via Filemanager) to protect the password.</p>
-<p>After power on the connection status is indicated by 3x blinking of the red on board LED.</p>
+<h3 id="manual-setup-with-a-sd-card-reader-on-a-pc">Manual Setup with a SD-Card-Reader on a PC</h3>
+<ol>
+<li>Take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
+<li>Open it and extract the <code>sd-card.zip</code>.</li>
+<li>Open it and extract all files onto onto your SD-Card.</li>
+<li>On the SD-Card, open the <code>wlan.ini</code> file and configure it as needed:<ul>
+<li>Set the corresponding SSID and password</li>
+<li>The other parameters are optional</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note:</strong> The device provides a File Server which can be used to show, edit or delete the files on the SD-Card. For security reasons, the <code>wlan.ini</code> file is excluded from this and is hidden from external access to protect the password.</p>
+<p>After this, you can insert the SD-Card into the ESP32 board and start it.</p>
+<h3 id="remote-setup-using-the-built-in-access-point">Remote Setup using the built-in Access Point</h3>
+<p>On startup of the ESP32, it checks if the <code>wlan.ini</code> or the <code>config/config.ini</code> are available on the SD-Card.
+If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi Access Point which can be used to add the missing <code>wlan.ini</code> or the <code>config/config.ini</code> file.</p>
+<ol>
+<li>Take the <code>AI-on-the-edge-device__remote-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
+<li>
+<p>Connect to Access Point of the device. The SSID is "AI-on-the-Edge" and you can access it without any password:</p>
+<p><img alt="" src="../img/access-point.png" /></p>
+<p>The device has the following fixed IP: <a href="http://192.168.4.1">http://192.168.4.1</a>.</p>
+</li>
+<li>
+<p>Upload initial configuration to sd-card</p>
+<p><img alt="" src="../img/setup-config.png" /></p>
+<p>Use the <code>select file</code> and <code>upload</code> button to start the upload.
+A warning will show up if you have choosen a possible wrong file (without default configuration).</p>
+</li>
+<li>
+<p>Store WLAN acces information.</p>
+<p>After the upload, a new page will be shown:</p>
+<p><img alt="" src="../img/setup-wlan.png" /></p>
+<p>Enter your SSID and password.</p>
+<p><strong>Note:</strong> Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.</p>
+<p><strong>‼️ Attention:</strong></p>
+<ul>
+<li>Carefully check your wifi settings. To change them later on, you need to take out the sd-card and edit the <code>wlan.ini</code> manually (or delete it and start again).</li>
+<li>The informations are transfered without encryption!</li>
+</ul>
+<p>Finish the step by pushing <code>Write wlan.ini</code></p>
+</li>
+<li>
+<p>Reboot</p>
+<p>The final step is the reboot:</p>
+<p><img alt="" src="../img/setup-reboot.png" /></p>
+<p><strong>‼️ Warning:</strong>
+It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.</p>
+</li>
+</ol>
+<h2 id="4-initial-startup">4. Initial Startup</h2>
+<p>After the firmware is flashed and the SD-Card is setup properly, you can start it.
+After power on the connection status is indicated by 3x blinking of the red on board LED.</p>
 <p>WLAN-Status indication:</p>
 <ul>
 <li><strong>5 x</strong> fast blinking (&lt; 1 second): connection still pending</li>
 <li><strong>3 x</strong> slow blinking (1 second on/off): WLAN connection established</li>
 </ul>
-<p>It is normal that at first one or two times a pending connection is indicated.</p>
-<h2 id="update-ota-over-the-air">Update (OTA / Over-The-Air)</h2>
-<h3 id="update-from-version-greater-than-1200">Update from version greater than 12.0.0</h3>
-<p>You can use the over the air update mechanism, which uploads the update via a ZIP files.</p>
-<p>The update file is located on the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">release page</a>. Please choose the zip file with the following naming: <code>AI-on-the-edge-device__update__*.zip</code></p>
-<p>Go to the menu <code>System --&gt; OTA Update</code> and follow the instructions there. After a final automatic reboot you should have the new version running.</p>
-<h3 id="update-from-version-older-than-1200">Update from version older than 12.0.0</h3>
-<p>If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the <code>config.ini</code>, that are taken care of in this version.</p>
-<p>‼️ <strong>Make sure to read the instructions below carefully!</strong></p>
-<ol>
-<li>
-<p>Backup your configuration (use the <code>System -&gt; Backup/Restore</code> page)!</p>
-</li>
-<li>
-<p>Upload and update the <code>update-*.zip</code> file from the release  <strong><code>12.0.1</code></strong>  <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v12.0.1">see here</a> .</p>
-</li>
-<li>
-<p>Let it restart and check on the <code>System -&gt; Info</code> page that the Firmware as well as the Web UI got updated. If only one got updated, redo the update. If it fails several times, you also can update the Firmware and the Web UI separately.</p>
-</li>
-<li>
-<p>Safe way: </p>
-<ol>
-<li>Update first the <code>firmware.bin</code> (extract it from one of the provided zip files) and do the Reboot</li>
-<li>Update with the full zip file (<code>update-*.zip</code>, ignore the version warning after the reboot)</li>
-</ol>
-</li>
-<li>
-<p>Please go to <code>Settings -&gt; Configuration</code> and address the changed parameters:</p>
-<ul>
-<li>DataLogging (storing the values for data graph)</li>
-<li>Debug (extended by different debug reporting levels)</li>
-</ul>
-</li>
-<li>
-<p>Make sure it starts to do the digitalization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.</p>
-</li>
-</ol>
-<p>‼️ <strong>If the system is working now without any issues, please open the configuration editor once and save the <code>config.ini</code>. This will update the file to the newest content</strong>‼️</p>
-<p>Now you can safely update to the newest version.</p>
-<h2 id="update-via-webinstaller">Update via WebInstaller</h2>
-<p>If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. This is triggered by a missing <code>wlan.ini</code> or a missing <code>/config/config.ini</code>.</p>
-<h5 id="using-internal-access-point-for-sd-card-setup">Using internal access point for sd-card setup</h5>
-<p>Before starting the flash process, download the necessary file. It is a zip file, containing the initial default configuration.         You can identify it by the naming. It is named  <code>AI-on-the-edge-device__remote-setup__*.zip</code>. Store this file locally as you will need it later, when you are connected to the internal access point (no internet connection).       </p>
-<h6 id="flash-the-firmware-with-the-webinstaller">Flash the firmware with the WebInstaller</h6>
-<p>Follow the instructions on the <a href="https://jomjol.github.io/AI-on-the-edge-device/index.html">WebInstaller Page</a>.
-‼️ This will only work with Chrome or Edge browsers.</p>
-<h6 id="connect-to-device">Connect to Device</h6>
-<p>During the first booting, the device detects that the wifi credentials as well as the configuration informations are missing.</p>
-<p>Therefore a simple wifi access point is initiated and a simple internal web server is startet, so the device can be setup.</p>
-<p>The naming of the wifi is "AI-on-the-edge" and you can access it without any password.</p>
-<p><img alt="" src="../img/access-point.png" /></p>
-<p>You connect to the server with the fixed ip: http://192.168.4.1</p>
-<h6 id="upload-initial-configuration-to-sd-card">Upload initial configuration to sd-card</h6>
-<p><img alt="" src="../img/setup-config.png" /></p>
-<p>Use the <code>select file</code> and <code>upload</code> button to start the upload.</p>
-<p>A warning will show up if you have choosen a possible wrong file (without default configuration).</p>
-<h6 id="store-wlan-acces-information">Store WLAN acces information</h6>
-<p><img alt="" src="../img/setup-wlan.png" /></p>
-<p>Here you can set your wifi credentials. Only basic  settings can done here. If you need advanced features (fixed ip, ...),  please use the manual setup.</p>
-<p>Attention:</p>
-<ul>
-<li>Carefully check your wifi settings. To change them later on, you need to take you the sd-card and to it manually in <code>wlan.ini</code></li>
-<li>The informations are transfered without encryption.</li>
-</ul>
-<p>Finish the step by pushing <code>Write wlan.ini</code></p>
-<h6 id="reboot">Reboot</h6>
-<p><img alt="" src="../img/setup-reboot.png" /></p>
-<p>The final step is the reboot.</p>
-<p>It will take up to 3 minutes. Afterwards you can find  your device in the local network. Check you router for the IP. You can  find it also in the USB Console output.</p>
+<p><strong>Note:</strong> It is normal that at first one or two times a pending connection is indicated.</p>
               
             </div>
           </div><footer>
