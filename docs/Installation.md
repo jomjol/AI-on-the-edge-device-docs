@@ -1,16 +1,15 @@
 # Installation
-
 The installation requires multiple steps:
 
 1. Get the right hardware and wire it up
 1. Flash the firmware onto the ESP32
 1. Write the data to the SD-Card
-1. Insert the SD-Card into the ESP32 board
-1. Power/restart it. 
+1. Start it. 
 
-## Hardware
-#### ESP32-CAM
+For point 2 and 3 we provide multiple ways to do it. Pick the one that looks the easiest for you!
 
+## 1. Hardware
+### ESP32-CAM
 * OV2640 camera module
 * Micro SD-Card slot 
 * 4 or 8 MB PSRAM. 
@@ -18,32 +17,25 @@ The installation requires multiple steps:
 It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
 How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunction device. See [Hardware Compatibility](../Hardware-Compatibility) for further advice! 
 
-#### USB->UART interface
-
+### USB->UART interface
 For first time flashing the firmware a USB -> UART connector is needed. Later firmware upgrades than can be flashed via OTA.
 
-#### Power supply
-
+### Power supply
 For power supply a 5V source is needed. Most easily this can be done via an USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large elco condensator like a 2200uF between ground and VCC.
 
 **:bangbang: Attention:** in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.
 
-#### Housing
-
+### Housing
 A small 3D-printable example for a very small case can be found in Thingiverse here: [https://www.thingiverse.com/thing:4571627](https://www.thingiverse.com/thing:4571627)
 
 ![](img/main.jpg){: style="width:200px"}
 ![](img/size.png){: style="width:200px"}
 
-
 **:bangbang: Attention**: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
 
 ![](img/focus_adjustment.jpg){: style="width:200px"}
 
-
-
 ### Wiring
-
 Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.
 
 A example for wiring can be found here:
@@ -52,14 +44,20 @@ A example for wiring can be found here:
 
 ![](img/progammer_manual.jpg)
 
-
 It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described here: [[External-LED]]
 
+## 2. Firmware
+### Web Installer
+There is a Web Installer available which will work right out of the web browser Edge and Chrome.
+You can access it with the following link: [Web Installer](https://jomjol.github.io/AI-on-the-edge-device)
+
+**This is the preferred way for beginners** as it also allows access to the USB Log:
+
+[![](img/web-console.png)](img/web-console.png)
 
 
-
-## Firmware flashing
-### Files
+### Manual Flashing
+#### Files
 Grab the firmware from the
 
  - [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
@@ -72,20 +70,8 @@ You need:
 *   firmware.bin
 
 
-### Flashing
-There are several options to flash the firmware. Here three are described:
-
-#### 1. Web Installer
-There is a Web Installer available which will work right out of the web browser Edge and Chrome.
-You can access it with the following link: [Web Installer](https://jomjol.github.io/AI-on-the-edge-device)
-
-This is the preferred way for beginners as it also allows access to the USB Log:
-
-[![](img/web-console.png)](img/web-console.png)
-
-#### 2. Using the Flash Tool from Espressif
-
-The flashing of the firmware can be done  with the "Flash Download Tool" from espressif, that can found [here](https://www.espressif.com/en/support/download/other-tools) 
+#### Flashing using the Flash Tool from Espressif (GUI)
+Get the [Flash Download Tool](https://www.espressif.com/en/support/download/other-tools) from Espressif.
 
 Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. 
 
@@ -101,11 +87,8 @@ But your ESP32 in bootloader mode and push start, then it will identify the boar
 
 ![](img/Flash_Settings.png)
 
-Alternatively it can be directly flashed from the development environment - here PlatformIO. But this is rather for experienced users, as the whole development chain needs to be installed for compilation.
 
-
-#### 3. Using esptool in python directly
-
+#### Flashing using the Python based esptool (Console)
 For this you need a python environment (e.g. Anaconda in Win10). 
 Here you need to install the esptool:
 
@@ -125,37 +108,84 @@ With some Python installations this may not work and you’ll receive an error, 
 
 Further recommendations can be found on the [espressif webpage](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html)
 
-## SD-Card
+## 3. SD-Card
 The software expects a SD-Card prepared with certain directory and file structure in order to work properly.
-For the first setup take the `AI-on-the-edge-device__manual-setup__*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page, open the zip and extract the whole content of the in the setup file included `sd-card.zip` onto your SD-Card direclty to the root folder.
+SD-Card most top directory should look like this:
 
-SD-Card root should look like this:
+![](sd-card-content.png)  
 
-- config
-- demo
-- firmware
-- html
-- img_tmp
-- log
-- wlan.ini
+This initial setup needs only to be done **once** as further updates (Firmware as well as SD-Card content) are possible with the [Over-The-Air Update](ota.md) mechanism.
 
-This initial setup needs to be done only once as further updates of the software are possible with an Over-The-Air update mechanismn.
-
-### Notes
-
+#### Notes
 - Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM & SD-Card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.
 - There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)
 - Following setting are necessary for formating the SD-card: **SINGLE PARTITION, MBR, FAT32 - 32K.  NOT exFAT**
 - Some ESP32 devices share their SD-card and/or camera GPIOs with the pins for TX and RX. If you see errors like “Failed to connect” then your chip is probably not entering the bootloader properly. Remove the respective modules temporarily to free the GPIOs for flashing. You may find more information about troubleshooting on the [homepage of Espressif](https://docs.espressif.com/projects/esptool/en/latest/esp8266/troubleshooting.html).
 
-**The ESP32 indicates problems with the SD card during startup with a fast not ending blinking.**
+**The ESP32 indicates problems with the SD card during startup with a fast, endless blinking.**
 **In this case, please try another SD card.** 
 
+### Manual Setup with a SD-Card-Reader on a PC
+1. Take the `AI-on-the-edge-device__manual-setup__*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page.
+1. Open it and extract the `sd-card.zip`.
+1. Open it and extract all files onto onto your SD-Card.
+1. On the SD-Card, open the `wlan.ini` file and configure it as needed:
+    - Set the corresponding SSID and password
+    - The other parameters are optional
 
-## WLAN
+  **Note:** The device provides a File Server which can be used to show, edit or delete the files on the SD-Card. For security reasons, the `wlan.ini` file is excluded from this and is hidden from external access to protect the password.
 
-The access to the WLAN is configured in the "wlan.ini" directly on the root directory of the sd-card. Just write the corresponding SSID and password before the startup of the ESP32. This file is hidden from external access (e.g. via Filemanager) to protect the password.
+After this, you can insert the SD-Card into the ESP32 board and start it.
 
+### Remote Setup using the built-in Access Point
+On startup of the ESP32, it checks if the `wlan.ini` or the `config/config.ini` are available on the SD-Card.
+If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi Access Point which can be used to add the missing `wlan.ini` or the `config/config.ini` file.
+
+1. Take the `AI-on-the-edge-device__remote-setup__*.zip` from the [Release](https://github.com/jomjol/AI-on-the-edge-device/releases) page.
+1. Connect to Access Point of the device. The SSID is "AI-on-the-Edge" and you can access it without any password:
+
+    ![](img/access-point.png)
+
+    The device has the following fixed IP: [http://192.168.4.1](http://192.168.4.1).
+
+1. Upload initial configuration to sd-card
+
+    ![](img/setup-config.png)
+
+    Use the `select file` and `upload` button to start the upload.
+    A warning will show up if you have choosen a possible wrong file (without default configuration).
+
+1. Store WLAN acces information.
+
+    After the upload, a new page will be shown:
+
+    ![](img/setup-wlan.png)
+
+    Enter your SSID and password.
+
+    **Note:** Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.
+
+    **:bangbang: Attention:**
+
+    - Carefully check your wifi settings. To change them later on, you need to take out the sd-card and edit the `wlan.ini` manually (or delete it and start again).
+    - The informations are transfered without encryption!
+
+    Finish the step by pushing `Write wlan.ini`
+
+1. Reboot
+
+    The final step is the reboot:
+
+    ![](img/setup-reboot.png)
+
+
+    **:bangbang: Warning:**
+    It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.
+
+
+
+## 4. Initial Startup
+After the firmware is flashed and the SD-Card is setup properly, you can start it.
 After power on the connection status is indicated by 3x blinking of the red on board LED.
 
 WLAN-Status indication:
@@ -163,97 +193,4 @@ WLAN-Status indication:
 * **5 x** fast blinking (< 1 second): connection still pending
 * **3 x** slow blinking (1 second on/off): WLAN connection established
 
-It is normal that at first one or two times a pending connection is indicated.
-
-
-## Update (OTA / Over-The-Air)
-
-### Update from version greater than 12.0.0
-
-You can use the over the air update mechanism, which uploads the update via a ZIP files.
-
-The update file is located on the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). Please choose the zip file with the following naming: `AI-on-the-edge-device__update__*.zip`
-
-Go to the menu `System --> OTA Update` and follow the instructions there. After a final automatic reboot you should have the new version running.
-
-
-
-### Update from version older than 12.0.0
-
-If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the `config.ini`, that are taken care of in this version.
-
-:bangbang: **Make sure to read the instructions below carefully!**
-
-1.  Backup your configuration (use the `System -> Backup/Restore` page)!
-
-2.  Upload and update the `update-*.zip` file from the release  **`12.0.1`**  [see here](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v12.0.1) .
-
-4.  Let it restart and check on the `System -> Info` page that the Firmware as well as the Web UI got updated. If only one got updated, redo the update. If it fails several times, you also can update the Firmware and the Web UI separately.
-
-5.  Safe way: 
-    1.  Update first the `firmware.bin` (extract it from one of the provided zip files) and do the Reboot
-    2.  Update with the full zip file (`update-*.zip`, ignore the version warning after the reboot)
-
-6.  Please go to `Settings -> Configuration` and address the changed parameters:
-    -   DataLogging (storing the values for data graph)
-    -   Debug (extended by different debug reporting levels)
-
-7.  Make sure it starts to do the digitalization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.
-
-:bangbang: **If the system is working now without any issues, please open the configuration editor once and save the `config.ini`. This will update the file to the newest content**:bangbang:
-
-Now you can safely update to the newest version.
-
-## Update via WebInstaller
-
-If you use the WebInstaller and insert an empty SD-card, the firmware will automatically open a primitive access point to make the initial setup. This is triggered by a missing `wlan.ini` or a missing `/config/config.ini`.
-
-##### Using internal access point for sd-card setup
-
-Before starting the flash process, download the necessary file. It is a zip file, containing the initial default configuration.         You can identify it by the naming. It is named  `AI-on-the-edge-device__remote-setup__*.zip`. Store this file locally as you will need it later, when you are connected to the internal access point (no internet connection).       
-
-###### Flash the firmware with the WebInstaller
-
-Follow the instructions on the [WebInstaller Page](https://jomjol.github.io/AI-on-the-edge-device/index.html).
-:bangbang: This will only work with Chrome or Edge browsers.
-
-###### Connect to Device
-
-During the first booting, the device detects that the wifi credentials as well as the configuration informations are missing.
-
-Therefore a simple wifi access point is initiated and a simple internal web server is startet, so the device can be setup.
-
-The naming of the wifi is "AI-on-the-edge" and you can access it without any password.
-
-![](img/access-point.png)
-
-You connect to the server with the fixed ip: http://192.168.4.1
-
-###### Upload initial configuration to sd-card
-
-![](img/setup-config.png)
-
-Use the `select file` and `upload` button to start the upload.
-
-A warning will show up if you have choosen a possible wrong file (without default configuration).
-
-###### Store WLAN acces information
-
-![](img/setup-wlan.png)
-
-Here you can set your wifi credentials. Only basic  settings can done here. If you need advanced features (fixed ip, ...),  please use the manual setup.
-
-Attention:
-
-- Carefully check your wifi settings. To change them later on, you need to take you the sd-card and to it manually in `wlan.ini`
-- The informations are transfered without encryption.
-
-Finish the step by pushing `Write wlan.ini`
-
-###### Reboot
-
-![](img/setup-reboot.png)
-
-The final step is the reboot.
-
-It will take up to 3 minutes. Afterwards you can find  your device in the local network. Check you router for the IP. You can  find it also in the USB Console output.
+**Note:** It is normal that at first one or two times a pending connection is indicated.
