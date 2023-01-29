@@ -4,7 +4,7 @@ The installation requires multiple steps:
 1. Get the right hardware and wire it up
 1. Flash the firmware onto the ESP32
 1. Write the data to the SD-Card
-1. Start it. 
+1. Start it
 
 For point 2 and 3 we provide multiple ways to do it. Pick the one that looks the easiest for you!
 
