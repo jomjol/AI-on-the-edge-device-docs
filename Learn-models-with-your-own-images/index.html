@@ -100,7 +100,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#collecting-images-for-dig-class100dig-contana-class100">Collecting images for dig-class100/dig-cont/ana-class100</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#train-the-model">Train the model</a>
+    <li class="toctree-l2"><a class="reference internal" href="#train-the-model-by-yourself-optional">Train the model by yourself (optional)</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#dig-class11-models-digits">dig-class11 models (digits)</a>
     </li>
@@ -196,21 +196,24 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="learn-a-model-with-your-own-images">Learn a model with your own images</h1>
-<p>If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and train the model. Of course, this also applies if you have a model that is already known, but the neural models do not produce good results.</p>
-<p>But before you do this, you please check if your type really is not contained yet in the training data, see <a href="https://jomjol.github.io/neural-network-digital-counter-readout">digits</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">pointers</a> for an overview of images used for the training. But we also like to take pictures of already known devices.</p>
+<p>If your device has new, different digits and the existing models don't recognize them well, you can collect your own images and so we can train the model better. This helps you and also others as the models get more accurate. this also applies if you have a model that is already known, but the neural models do not produce good results.</p>
+<p>For experienced users, the training can also done by yourself (see below). </p>
+<p>Before you go ahead, please check if your digits/pointers are not yet contained in the training data. A visual overview is available at <a href="https://jomjol.github.io/neural-network-digital-counter-readout">digits</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">pointers</a>.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>Poor recognition is often caused by blurred images, low contrast or incorrect setting of the ROIs. Therefore, check these possibilities first, as additional training will bring little improvement here.</p>
-<p>You must not train the models by yourself (see section <a href="#share-your-images">Share your images</a>). In most cases we will integrate you images in the training dataset of the models. Only if we fear a degradation of the models or you need a different behaviour, we will not include the data in the standard models.</p>
+<p>You do not need train the models by yourself if you don't want (see section <a href="#share-your-images">Share your images</a>). In most cases we will integrate your images in the training dataset of the models. Only if we fear a degradation of the models or you need a different behaviour, we might not include the data in the standard models (see at bottom of page for reasons).</p>
 <h2 id="collecting-images">Collecting images</h2>
-<p>The neural network is trained on base of a set of images, that have been collected over time. If your digits are included or at least very similar to included images, the chance is very high that the neural network is working fine for you as well.</p>
-<p>The neural network configuration is stored in the TensorFlow Lite format as <code>filename.tfl</code> or <code>filename.tflite</code> in the <code>/config</code> directory. It can be updated by uploading the new file and activating it on the configuration page or in the config file <code>/config/config.ini</code>.</p>
+<p>The neural network is trained based on a set of images that have already been collected over time. If your digits are included or at least very similar to included images, the chance is very high that the neural network is working fine for you as well.</p>
+<p>The neural network configuration is stored in the TensorFlow Lite format as <code>*.tfl</code> or <code>*.tflite</code> in the <code>/config</code> directory on the SD-Card. A model can be updated (or a new one added) by uploading the new file and activating it on the configuration page or in the config file <code>/config/config.ini</code>.</p>
 <p>In order to incorporate new digits a training set of images is required. The training images needs to be collected in the final setup with the help of the <code>Digits</code> or <code>Analog</code> log settings (not to be confused with the <code>Data</code> or <code>Debug</code> log). Enable the logging of the images on the configuration page or in the config file <code>/config/config.ini</code>:</p>
 <p><img alt="" src="../img/enable_log_image.jpg" /></p>
-<p>Now wait, until you have an image of each digit of every type on the SD card. Ideally remove the SD card from the camera and search for two to three images of each digit (<strong>not more! :-)</strong>). The format can be jpg. But don't panic, the collector programmes will sort out duplicate images for you.</p>
+<p>Now be patient! You have to wait until it has collected an image of each digit of every type. They wil lbe placed on the SD-Card inthe folder <code>/log/digit/</code> resp. <code>/log/anaolog/</code>. The fastest way to get the images to your PC is to remove the SD-card from the ESP32 module and insert it into the card reader of yur PC.
+Then search for two..three images of each digit (<strong>not more! :-)</strong>). We provide programs which will sort out duplicate images for you, see below.</p>
 <h2 id="collecting-images-for-dig-class100dig-contana-class100">Collecting images for dig-class100/dig-cont/ana-class100</h2>
-<p><a href="https://github.com/haverland/collectmeterdigits">Collectmeterdigits</a> and <a href="https://github.com/haverland/collectmeteranalog">collectmeteranalog</a> helps you to collect the images easily. Read the project readme for detailed instructions.</p>
-<h2 id="train-the-model">Train the model</h2>
-<p>For training the model you will need a python and Jupyter installation.</p>
+<p>For digits, <a href="https://github.com/haverland/collectmeterdigits">Collectmeterdigits</a> resp for pointers <a href="https://github.com/haverland/collectmeteranalog">collectmeteranalog</a> can be sused to collect the images easily. Read the project readme for detailed instructions.</p>
+<h2 id="train-the-model-by-yourself-optional">Train the model by yourself (optional)</h2>
+<p>For training the model you will need a python and Jupyter installation.
+<strong>This is optional and only suggested if you want to get into it deeper yourself!</strong></p>
 <p>All current labeled images you can find under <a href="https://github.com/jomjol/neural-network-digital-counter-readout/tree/master/ziffer_sortiert_raw">ziffer_sortiert_raw</a></p>
 <h3 id="dig-class11-models-digits">dig-class11 models (digits)</h3>
 <p>Fork and checkout <a href="https://github.com/jomjol/neural-network-digital-counter-readout">neural-network-digital-counter-readout</a>.</p>
