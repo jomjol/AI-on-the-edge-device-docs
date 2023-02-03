@@ -104,7 +104,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  <li class="toctree-l1"><a class="reference internal" href="Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="collect-new-images/">Collect images to improve the models</a>
                   </li>
@@ -152,12 +152,12 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="Graphical-Configuration/">Graphical Configuration</a>
                   </li>
@@ -190,17 +190,17 @@
                 <h1 id="welcome">Welcome</h1>
 <p>Welcome to the AI-on-the-edge-device project!</p>
 <p>This is the documentation. For the source code, please head to <a href="https://github.com/jomjol/AI-on-the-edge-device">github.com/jomjol/AI-on-the-edge-device</a>.</p>
-<p>Artificial intelligence based systems have been established in our every days live. Just think of speech or image recognition. Most of the systems relay on either powerful processors or a direct connection to the cloud for doing the calculations up there. With the increasing power of modern processors the AI systems are coming closer to the end user - which is usually called <strong>edge computing</strong>.
-Here this edge computing is brought into a practical oriented example, where a AI network is implemented on a ESP32 device so: <strong>AI on the edge</strong>.</p>
+<p>Artificial intelligence based systems have been established in our everyday lives. Just think of speech or image recognition. Most of the systems rely on either powerful processors or a direct connection to the cloud for doing the calculations up there. With the increasing power of modern processors the AI systems are coming closer to the end user - which is usually called <strong>edge computing</strong>.
+Here this edge computing is brought into a practice-oriented example, where a AI network is implemented on a ESP32 device so: <strong>AI on the edge</strong>.</p>
 <h2 id="key-features">Key features</h2>
 <ul>
 <li>Tensorflow Lite (TFlite) integration - including easy to use wrapper</li>
-<li>Inline Image processing (feature detection, alignment, ROI extraction)</li>
+<li>Inline image processing (feature detection, alignment, ROI extraction)</li>
 <li><strong>Small</strong> and <strong>cheap</strong> device (3x4.5x2 cm³, &lt; 10 EUR)</li>
-<li>camera and illumination integrated</li>
+<li>Camera and illumination integrated</li>
 <li>Web surface to administrate and control</li>
 <li>OTA-Interface to update directly through the web interface</li>
-<li>Full integration into Homeassistant</li>
+<li>Full integration into Home Assistant</li>
 <li>Support for Influx DB 1</li>
 <li>MQTT</li>
 <li>REST API</li>
@@ -217,10 +217,10 @@ Here this edge computing is brought into a practical oriented example, where a A
 <p><img alt="" src="img/edit_reference.jpg" style="width:600px" /></p>
 <p><strong>Have fun in studying the new possibilities and ideas</strong></p>
 <p>This is about image recognition and digitalization, done totally on a cheap ESP32 board using artificial intelligence in form of convolutional neural networks (CNN). Everything, from image capture (OV2640), image preprocessing (auto alignment, ROI identification) all the way down to the image recognition (CNN structure) and result plausibility is done on a cheap 10 EUR device.</p>
-<p>This all is integrated in an easy to do setup and use environment, taking care for all the background processing and handling, including regular job scheduler. The user interface is an integrated web server, that can be easily adjusted an offers the data as an API in different options.</p>
-<p>The task to be demonstrated here is a automated readout of an analog water meter. The water consumption is to be recorded within a house automatization and the water meter is totally analog without any electronic interface. Therefore the task is solved by taking regularly an image of the water meter and digitize the reading.</p>
+<p>This all is integrated in an easy to do setup and use environment, taking care for all the background processing and handling, including regular job scheduler. The user interface is an integrated web server, that can be easily adjusted and offers the data as an API in different options.</p>
+<p>The task to be demonstrated here is an automated readout of an analog water meter. The water consumption is to be recorded within a house automatization and the water meter is totally analog without any electronic interface. Therefore, the task is solved by regularly taking an image of the water meter and digitizing the reading.</p>
 <p>There are two types of CNN implemented, a classification network for reading the digital numbers and a single output network for digitalize the analog pointers for the sub digit readings.</p>
-<p>This project is a evolution of the <a href="https://github.com/jomjol/water-meter-system-complete">water-meter-system-complete</a>, which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural networks backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD-Card as data storage.</p>
+<p>This project is an evolution of the <a href="https://github.com/jomjol/water-meter-system-complete">water-meter-system-complete</a>, which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural network's backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD card as data storage.</p>
               
             </div>
           </div><footer>

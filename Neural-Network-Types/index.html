@@ -130,7 +130,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
                   </li>
@@ -178,12 +178,12 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
                   </li>
@@ -243,7 +243,7 @@
   Technically a wrong network will work and create output, but that would be totally arbitrary</li>
 <li>Not all type of pointers are trained in all networks.</li>
 <li>For the 11 classes digits network there many different types of digits trained. The reason is, that you 1) only need 20-30 training images and 2) the data collection is ongoing much longer</li>
-<li>For the continious and 100 classes network especially for the digits, there are only a few types of digits trained up to now</li>
+<li>For the continuous and 100 classes network especially for the digits, there are only a few types of digits trained up to now</li>
 <li>Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). </li>
 </ul>
 <h2 id="naming-convention">Naming convention</h2>
@@ -291,7 +291,7 @@
 </ul>
 <h2 id="overview-of-trained-types-and-details">Overview of trained types and details</h2>
 <h3 id="analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</h3>
-<p>This is to transfer the direction of a pointer into a continuous number between 0 and 1, whereas 0 (=1) is the upwards position (12 o'clock), 0.25 corresponds to the 3 o'clock positions and so on. This network is a envolop for all different types of pointers. Currently there are no dedicated network trainings for specific types of pointers.</p>
+<p>This is to transfer the direction of a pointer into a continuous number between 0 and 1, whereas 0 (=1) is the upwards position (12 o'clock), 0.25 corresponds to the 3 o'clock positions and so on. This network is a envelop for all different types of pointers. Currently there are no dedicated network trainings for specific types of pointers.</p>
 <p>There are two types of network structure, currently both are supported. The "class100" is a pure classification network, that might need a bit more accuracy in the labeling. "cont" is a no classic approach with a continuous output off only 2 neurons (details see below).</p>
 <h4 id="types-of-counters-trained">Types of counters trained:</h4>
 <table>
@@ -321,7 +321,7 @@
 <h4 id="training-data-needs">Training data needs</h4>
 <ul>
 <li>Quadratic images, minimum size: 32x32 pixel</li>
-<li>Typically 100 - 200 images with a resultion of 1/100 of the full rotation (every 0.1 value or 3.6°)</li>
+<li>Typically 100 - 200 images with a resolution of 1/100 of the full rotation (every 0.1 value or 3.6°)</li>
 <li>Naming: x.y_ARBITRARY.jpg, where x.y = value 0.0 ... 9.9</li>
 </ul>
 <h4 id="cnn-technical-details">CNN Technical details:</h4>
@@ -332,9 +332,9 @@
 <h5 id="output">Output</h5>
 <ul>
 <li><strong>ana-cont</strong>_XXX.tflite:</li>
-<li>2 neurons with output in range [-1, 1] - representing a sinus / cosinus encoding of the angle</li>
+<li>2 neurons with output in range [-1, 1] - representing a sinus / cosine encoding of the angle</li>
 <li>
-<p>needs to be converted to angle with arctan-hyperbolicus function</p>
+<p>needs to be converted to angle with arctan-hyperbolic function</p>
 </li>
 <li>
 <p><strong>ana-class100</strong>_XXX.tflite</p>
@@ -405,10 +405,10 @@
 <ul>
 <li>11 neurons for image classification (last layer normalized to 1)</li>
 <li>Neuron 0 to 9 represent the corresponding numbers "0" to "9"</li>
-<li>Neron 10 represent the "Not-A-Number" class, telling, that the image is not uniquely classified</li>
+<li>Neuron 10 represents the "Not-A-Number" class, telling, that the image is not uniquely classified</li>
 </ul>
 <h3 id="digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</h3>
-<p>This type of network tries to overcome the problem, that there are intermediate values, when a rolling digit is between two numbers. Previous this was the "N" class. In this network type, there are also subdigit values trained, so that the intermediate state can be used as additional information for the algorithms. </p>
+<p>This type of network tries to overcome the problem, that there are intermediate values, when a rolling digit is between two numbers. Previous this was the "N" class. In this network type, there are also sub-digit values trained, so that the intermediate state can be used as additional information for the algorithms. </p>
 <h4 id="types-of-counters-trained_2">Types of counters trained:</h4>
 <table>
 <thead>
@@ -454,7 +454,7 @@
 <li><strong>dig-cont</strong>_XXX.tflite:</li>
 <li>10 neurons representing the digits 0, 1, ... 9. The intermediate values are represented by weighted normalized values of two neighboring output neurons</li>
 <li>
-<p>needs to be converted to angle with arctan-hyperbolicus function</p>
+<p>needs to be converted to angle with arctan-hyperbolic function</p>
 </li>
 <li>
 <p><strong>dig-class100</strong>_XXX.tflite</p>

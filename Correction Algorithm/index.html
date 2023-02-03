@@ -90,7 +90,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
                   </li>
@@ -160,12 +160,12 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
                   </li>
@@ -216,9 +216,9 @@
 <h5 id="analogs">Analogs</h5>
 <p>This are value derived from a pointer like meter. This never has the state "N".</p>
 <h5 id="checkdigitincreaseconsistency">CheckDigitIncreaseConsistency</h5>
-<p>If this is enabled an "inteligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the subdigit has gone through zero.</p>
+<p>If this is enabled an "intelligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the sub-digit has gone through zero.</p>
 <p>For example: 16.6 --&gt; 16.7 --&gt; 1N.8 --&gt; <strong>17.9</strong> corrected to 16.9 --&gt; 17.0 --&gt; 17.1 </p>
-<p>As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the subdigit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9</p>
+<p>As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the sub-digit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9</p>
 <p>A detailed description of the algorithm can be found below (not yet ready!)</p>
 <h5 id="negative-rate-allowed">Negative Rate allowed</h5>
 <p>Most of the meters only have increasing numbers and do not count backwards. Therefore a negative rate (= negative change compared to the PreValue) is surely a false value. This can be checked an flagged as false reading</p>

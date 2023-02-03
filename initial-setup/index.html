@@ -69,7 +69,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#5-general-settings">5. General Settings</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#expert-modus">Expert Modus</a>
+    <li class="toctree-l3"><a class="reference internal" href="#expert-mode">Expert Mode</a>
     </li>
         </ul>
     </li>
@@ -120,7 +120,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
                   </li>
@@ -168,12 +168,12 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
                   </li>
@@ -204,7 +204,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="initial-setup">Initial Setup</h1>
-<p>After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:</p>
+<p>After setting up the device (firmware, SD card, WLAN) the device will connect to the wifi access point and start in an initial setup configuration:</p>
 <p><img alt="" src="../img/setup_initial_welcome.png" style="width:500px" /></p>
 <p>In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).</p>
 <h2 id="1-reference-image">1. Reference Image</h2>
@@ -228,7 +228,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>‼️ Attention:</strong> Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step later only with caution.</p>
+<p><strong>‼️ Attention:</strong> Updating the reference image, also means, that all alignment images and ROIs needs to be taught again. Therefore do this step later only with caution.</p>
 <p>If everything is done, you can save the result with "Update Reference Image" (4). Please do not reboot at this stage, but go to the next section.</p>
 <h2 id="2-alignment-references">2. Alignment References</h2>
 <p>The alignment references are used to realign every taken image to the reference coordinates. Therefore two alignment structures are identified and the image is shifted and rotated according to their position with the target to be in exactly the same position as the reference image. The alignment structures needs to be unique and have a good contrast. You can switch between this two marks with (1).</p>
@@ -242,9 +242,9 @@
 <p>First of all, if you don't have that kind of numbers on you meter, you can disable it with the check box at the top (1).</p>
 <p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px" /></p>
 <p>In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). </p>
-<p><strong>Attention:</strong> The order of the ROIs defines, how the indiviual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".</p>
+<p><strong>Attention:</strong> The order of the ROIs defines, how the individual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".</p>
 <p>As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. </p>
-<p>In most cases the digits are ordered in a aequidistant order and have the same size, you can synchronize them with the control in (4).</p>
+<p>In most cases the digits are ordered in a equidistantly and have the same size, you can synchronize them with the control in (4).</p>
 <p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
 <h3 id="detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</h3>
 <p>For analog meters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center. The circle should exactly fit to the outer size of the meter and the cross should be in the middle.</p>
@@ -253,13 +253,13 @@
 <h3 id="detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</h3>
 <p>For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.</p>
 <ol>
-<li>Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: <code>dig-class11-....tfl</code>
-   <strong>Advantage:</strong> broad variety of types included in the training
-   <strong>Disadvantage:</strong> partially rotated numbers cannot be detected</li>
-<li>Model with subdigit resulition (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: <code>dig-cont-....tfl</code> or <code>dig-class100-....tfl</code>
-   <strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible
-   <strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data</li>
+<li>Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: <code>dig-class11-....tfl</code></li>
 </ol>
+<p><strong>Advantage:</strong> broad variety of types included in the training</p>
+<p><strong>Disadvantage:</strong> partially rotated numbers cannot be detected
+2. Model with sub-digit resolution (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: <code>dig-cont-....tfl</code> or <code>dig-class100-....tfl</code></p>
+<p><strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible</p>
+<p><strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data</p>
 <p>Details and the corresponding "perfect" setting is explained here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/">Details ROI Configuration</a></p>
 <p>For a first run you can choose the following general settings: </p>
 <ul>
@@ -303,7 +303,7 @@
 <li>PostProcessing</li>
 <li>MQTT</li>
 <li>InfluxDB</li>
-<li>GPIOSettings</li>
+<li>GPIO Settings</li>
 <li>Autotimer</li>
 <li>DataLogging</li>
 <li>Debug</li>
@@ -313,14 +313,14 @@
 <p>Some of the sections as well as parameters are mandatory. They can be en/disabled in the first column (1). 
 The setting itself is done in the next column (2) and a brief explanation you can find in the last column (3).</p>
 <p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
-<h4 id="expert-modus">Expert Modus</h4>
-<p>With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert modus available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifiying them you should be really sure, what they are about.</p>
+<h4 id="expert-mode">Expert Mode</h4>
+<p>With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert mode available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifying them you should be really sure, what they are about.</p>
 <h2 id="finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</h2>
 <p>After setting up everything, there is a last step to be done:</p>
 <p><img alt="" src="../img/initial_setup_6_finish_reboot.jpg" style="width:500px" /></p>
-<p>With (1) you leave the setup modus and reboot to normal operation mode.</p>
+<p>With (1) you leave the setup mode and reboot to normal operation mode.</p>
 <h2 id="access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</h2>
-<p>You can access all the settings also during the normal working mode via the "Settings" menue:</p>
+<p>You can access all the settings also during the normal working mode via the "Settings" menu:</p>
 <p><img alt="" src="../img/initial_setup_7_access_normal_mode.jpg" style="width:500px" /></p>
 <p>(1) Access to configuration parameters</p>
 <p>(2) Update of reference image</p>

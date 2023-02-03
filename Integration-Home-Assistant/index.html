@@ -82,7 +82,7 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Integration into Home Assistant</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#using-mqtt-automatically-setup-entities-using-homeassistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Homeassistant MQTT Discovery)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#using-mqtt-manually-setup-entities">Using MQTT (Manually Setup Entities)</a>
     </li>
@@ -110,7 +110,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Watermeters</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
                   </li>
@@ -158,12 +158,12 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gasmeter Log-Downloader</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Asorted Pages</span></p>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
                   </li>
@@ -196,14 +196,14 @@
                 <h1 id="integration-into-home-assistant">Integration into Home Assistant</h1>
 <p>There are 3 ways to get the data into your Home Assistant:</p>
 <ol>
-<li>Using MQTT (Automatically Setup Entities using Homeassistant MQTT Discovery)</li>
+<li>Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</li>
 <li>Using MQTT (Manually Setup Entities)</li>
 <li>Using REST calls</li>
 </ol>
 <p>The first one is the easier way if you already have MQTT in use.</p>
-<h2 id="using-mqtt-automatically-setup-entities-using-homeassistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Homeassistant MQTT Discovery)</h2>
+<h2 id="using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</h2>
 <p>‼️ This feature will be available with the next release!</p>
-<p>Starting with Version <code>&gt;12.0.1</code>, AI-on-the-edge-devices support Homeassistant Discovery.</p>
+<p>Starting with Version <code>&gt;12.0.1</code>, AI-on-the-edge-devices support Home Assistant Discovery.</p>
 <ol>
 <li>Check <a href="https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery">here</a> to learn more about it and how to enable it in Homeassistant.</li>
 <li>
@@ -212,7 +212,7 @@
 <p>Make sure to select the right Meter Type to get the right units!</p>
 </li>
 </ol>
-<p>On the next start of the device, it will send discovery topics and Homeassistant should pick them up and show them under <code>Settings &gt; Integrations &gt; MQTT</code>:</p>
+<p>On the next start of the device, it will send discovery topics and Home Assistant should pick them up and show them under <code>Settings &gt; Integrations &gt; MQTT</code>:</p>
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352538-ddcc3484-39ef-44f4-a853-53286807d30b.png" /> 
 <img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352565-9b0ade28-cb43-47b4-821f-7909cad41a73.png" />
 <img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352619-217df627-4b87-4fa0-86a2-f5347c452fdb.png" /></p>
@@ -226,7 +226,7 @@
       unique_id: watermeter_value
       unit_of_measurement: 'm³'
       state_class: total_increasing
-      device_class: water # Needs Homeassistant 2022.11!
+      device_class: water # Needs Home Assistant 2022.11!
       icon: 'mdi:water-pump'
       availability_topic: wasserzaehler/connection
       payload_available: connected
@@ -237,7 +237,7 @@
       unique_id: watermeter_rate
       unit_of_measurement: 'm³/min'
       state_class: measurement
-      device_class: water # Needs Homeassistant 2022.11!
+      device_class: water # Needs Home Assistant 2022.11!
       icon: 'mdi:water-pump'
       availability_topic: wasserzaehler/connection
       payload_available: connected
@@ -303,12 +303,12 @@ it is a helper and can be used to reset the total increasing values once a day</
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472069-4135736e-e63a-4afb-8009-5b97aa5c9ac5.png" /></p>
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472091-1484aac4-ddc2-48ba-896c-28370963fc2d.png" /></p>
 <h3 id="statistics-graph">Statistics Graph</h3>
-<p>Creating Statistics Graphs (eg. usage per day) is easy using the <a href="https://www.home-assistant.io/home-energy-management/">Energy Dashboard</a>:
+<p>Creating Statistics Graphs (e.g. usage per day) is easy using the <a href="https://www.home-assistant.io/home-energy-management/">Energy Dashboard</a>:
 <img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png" /></p>
 <p>Note that there seems to be a bug in the graph, see <a href="https://github.com/home-assistant/frontend/issues/13995">https://github.com/home-assistant/frontend/issues/13995</a>!</p>
 <h3 id="influxdb-graphs">InfluxDb Graphs</h3>
 <p>See also <a href="../Influx-DB">Influx-DB</a>.</p>
-<p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, eg. daily usage:</p>
+<p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:</p>
 <pre><code>from(bucket: &quot;HomeAssistant&quot;)
 |&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |&gt; filter(fn: (r) =&gt; r[&quot;entity_id&quot;] == &quot;wasserverbrauch_tag&quot;)
@@ -321,7 +321,7 @@ it is a helper and can be used to reset the total increasing values once a day</
 <h2 id="using-rest">Using REST</h2>
 <p>When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.</p>
 <p>See <a href="../REST-API">REST API</a> for a list of available URLs.</p>
-<p>The most practical one is the <code>json</code> entrypoint which provides the most relevant data JSON formated:
+<p>The most practical one is the <code>json</code> entrypoint which provides the most relevant data JSON formatted:
 <code>http://&lt;IP&gt;/json</code>
 This would return:</p>
 <pre><code class="language-JSON">{
