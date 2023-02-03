@@ -1,7 +1,7 @@
 ## External LED
 
 The internal flash LED is very close to the camera axis. This results in reflection, especially in case of flat glass surfaces such as for power meters.
-To circumvent this problem, it is now possible to control external LEDs, which than can be places somewhere else in the setup. As not simples LEDs are used, but RGB leds with a digital interface like WS2812 not only the position, but also the color and intensity of the illumination can now be adjusted. The following image shows a direct comparision of the "old" internal flash LED and two off axis LEDs.
+To circumvent this problem, it is now possible to control external LEDs, which than can be places somewhere else in the setup. As not simples LEDs are used, but RGB LEDs with a digital interface like WS2812 not only the position, but also the color and intensity of the illumination can now be adjusted. The following image shows a direct comparison of the "old" internal flash LED and two off axis LEDs.
 
 <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/intern_vs_external.jpg" width="700">
 

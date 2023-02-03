@@ -8,15 +8,15 @@ This repo contains the documentation for the [AI-on-the-Edge-Device Project](htt
 1. When it got merged, the [Github Actions](https://github.com/jomjol/AI-on-the-edge-device-docs/actions) will re-generate the documentation and place it in the `gh-pages` branch. This branch automatically gets populated to the public [Documentation Site](https://jomjol.github.io/AI-on-the-edge-device-docs)
 
 ## Migrating existing Wiki Pages
-The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the [docs/nav.yml](docs/nav.yml) file, they will be listed in the **asorted pages** section of the left sidebar.
+The files from the [AI-on-the-Edge-Device Wiki](https://github.com/jomjol/AI-on-the-edge-device/wiki) got exported and added to this repo. Unless the files are listed in the [docs/nav.yml](docs/nav.yml) file, they will be listed in the **assorted pages** section of the left sidebar.
 
 In the end, we should review all pages from there step by step and add them to the upper part of the navigation.
 
 ### Tasks to do
- - Make sure there is a top level title (#) and all other chaper headers are on lower levels (##, ###)
+ - Make sure there is a top level title (#) and all other chapter headers are on lower levels (##, ###)
  - Check the links in the documents
  - Fetch included images and place them directly in the [docs/img](docs/img) folder
- - Rerwrite to have a clear structure
+ - Rewrite to have a clear structure
 
 ## Editing a page
 Each page has a link on its top-right corner `Edit on GitHub` which brings you directly to the Github editor.

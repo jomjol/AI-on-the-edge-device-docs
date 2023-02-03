@@ -1,7 +1,7 @@
 # Hardware Compatibility
 
 ### General Remark
-Altrough a board looks similair, it can have major differences, eg.:
+Although a board looks similar, it can have major differences, e.g.:
 
 - Processor
 - Ram (Size! & Type) -> this Project needs at least 4MB RAM!
@@ -16,7 +16,7 @@ Altrough a board looks similair, it can have major differences, eg.:
 
 This can cause different Power Consumption, Power Requirements, compatibility issues, etc.
 
-Most manufacturers and sellers buy what's cheap today on the Asian markets. In the end, it looks like it is sometimes a trial and error approach which ESP32-CAM Module works reliable.
+Most manufacturers and sellers buy what's cheap today on the Asian markets. In the end, it looks like it is sometimes a trial and error approach which ESP32-CAM Module works reliably.
 
 Below you find some remarks and experiences from the community:
 
@@ -31,9 +31,9 @@ Below you find some remarks and experiences from the community:
 There seems to be a lot of "fake" chips, or maybe wrongly configured ESP32 Boards.
 
 
-For AP MEMORY, all "real" APS**64**04\*3SQR Chips should work. 
+For AP MEMORY, all "real" APS**64**04\*3SQR chips should work.
 
-For ESP PSRAM, all "real" PSRAM**64**\* should work
+For ESP PSRAM, all "real" PSRAM**64**\* should work.
 
 64Mbit density = 8Mbyte PSRAM
 
@@ -72,14 +72,14 @@ The experience with the camera only is based on single modules. It is well possi
 | Module                                                       | Image | Status                         |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
 | ESP32CAM / Different versions on the market!<br>Especially the PSRAM is sometimes labeled wrong<br>(Label: 4MB, Real: only 2 MB --> will not work!) |       | :heavy_check_mark:<br />with >=4 MB PSRAM! |
-| ESP32-S3-EYE<br />No Flash LED, pins different used (e.g. LCD diskplay) |       | **NOT OKAY**                   |
+| ESP32-S3-EYE<br />No Flash LED, pins different used (e.g. LCD display) |       | **NOT OKAY**                   |
 
 
 
-# SD-Cards
+# SD Cards
 
-Due to the limited free available gpios (due to all the extensions needed like: camera, sd-card, LED-flash, ...) the sd card is connected in 1-wire mode. There are some cards, that are compatible with the esp32cam module for unknown reasons.
-It is observed, that smaller cards (up to 4 GB) tend to be more stable and larger cards have more problems. But quite some exceptions in the forums (4 GB cards not working, 16 G cards working like a charm).
+Due to the limited free available GPIOs (due to all the extensions needed like: camera, SD card, LED-flash, ...) the SD card is connected in 1-wire mode. There are some cards, that are compatible with the esp32cam module for unknown reasons.
+It is observed, that smaller cards (up to 4 GB) tend to be more stable and larger cards have more problems. But quite some exceptions in the forums (4 GB cards not working, 16 GB cards working like a charm).
 
 
 # Devices known to work
@@ -95,7 +95,7 @@ See [https://github.com/jomjol/AI-on-the-edge-device/discussions/1732](https://g
 
 - [https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE](https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE) (27.12.2022)
 
-### SD-Card
+### SD Card
  
 - Sandisk 2GB Micro SD Class 2 [Sandisk 2GB](https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 AITRIP ESP32 and CAM [ESP-32/CAM](https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)

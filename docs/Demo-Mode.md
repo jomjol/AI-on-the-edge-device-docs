@@ -1,7 +1,7 @@
 # Demo Mode
 For Demo and Testing Purpose, the device can use pre-recorded images.
 
-You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD-Card.
+You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD card.
 
 For each round one image gets used, starting with the first image for the first round.
 
@@ -9,7 +9,7 @@ For the reference image and the alignment also the first image gets used.
 
 Once the last image got reached, it starts again with the first one.
 
-## SD-Card Structure
+## SD Card Structure
 ```
 demo/
 ├── 520.8983.jpg
@@ -65,10 +65,10 @@ done
 Just install the zip file using the OTA Update functionality.
 
 ## How does it work
-The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam Framebuffer gets taken (`esp_camera_fb_get()`), it replaces the framebuffer with the image from the SD-Card.
+The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam framebuffer gets taken (`esp_camera_fb_get()`), it replaces the framebuffer with the image from the SD card.
 
 
-## Example Data of a Watermeter
+## Example Data of a Water Meter
 You can use the following demo images if you want:
 
 ![530 00688](https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg){:style="width:200px"}
@@ -98,5 +98,3 @@ Animation of it (186 MB!)
 [![grafik](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png)
 
 [Demo_Images_Watermeter_530.00688-532.08243_42_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395893/Demo_Images_Watermeter_530.00688-532.08243_42_images.zip)
-
-

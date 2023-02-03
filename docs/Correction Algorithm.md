@@ -32,11 +32,11 @@ This are value derived from a pointer like meter. This never has the state "N".
 
 ##### CheckDigitIncreaseConsistency
 
-If this is enabled an "inteligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the subdigit has gone through zero.
+If this is enabled an "intelligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the sub-digit has gone through zero.
 
 For example: 16.6 --> 16.7 --> 1N.8 --> **17.9** corrected to 16.9 --> 17.0 --> 17.1 
 
-As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the subdigit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9
+As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the sub-digit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9
 
 A detailed description of the algorithm can be found below (not yet ready!)
 

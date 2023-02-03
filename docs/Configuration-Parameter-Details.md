@@ -49,7 +49,7 @@ FlipImageSize = false
 | InitialMirror            | Option for initially mirroring the image on the original x-axis |                                       |
 | InitialRotate            | Initial rotation of image before alignment in degree (1...359) |                                       |
 | FlipImageSize            | Changes the aspect ratio after the image rotation to avoid cropping of the rotated imaged |                                       |
-| /config/refx.jpg 98, 257 | Link to reference image and corresponding target coordinates | file link is relative to sd-card root |
+| /config/refx.jpg 98, 257 | Link to reference image and corresponding target coordinates | file link is relative to SD card root |
 | SearchFieldX/Y           | Search field size in X/Y for finding the reference images [pixel] |                                       |
 
 Here two reference images are needed. Therefore rotation and shifting can be compensated. As the alignment is one of the most computing time using part, the search field needs to be limited. The calculation time goes quadratic with the search field size.
@@ -123,7 +123,7 @@ Here the post processing and consistency check for the readout can be adjusted
 | numberX.MaxRateValue          | Maximum chance rate from one to the next readout.<br />This can be specified for each number individual. |                                                              |
 | ErrorMessage                  | Show error messages                                          |                                                              |
 | numberX.DecimalShift          | Shifting of the decimal separator from the default position between digital and analog.<br />This can be specified for each number individual. | DecimalShift = 2: 123.456 --> 12345.6<br />DecimalShift = -1: 123.456 --> 12.3456<br/> |
-| CheckDigitIncreaseConsistency | This parameter controls, if the digits are checked for a consistent change in comparison to the previous value. This only makes sense, if the last digit is changing very slowly and every single digit is visible (e.g. 4.7 --> 4.8 --> 4.9 --> 5.0 --> 5.1). If single digits are skipped, for example because the digits changes to fast, this should be disabled (e.g. 4.7 --> 5.0 --> 5.1). |                                                              |
+| CheckDigitIncreaseConsistency | This parameter controls, if the digits are checked for a consistent change in comparison to the previous value. This only makes sense, if the last digit is changing very slowly and every single digit is visible (e.g. 4.7 --> 4.8 --> 4.9 --> 5.0 --> 5.1). If single digits are skipped, for example because the digits changes too quickly, this should be disabled (e.g. 4.7 --> 5.0 --> 5.1). |                                                              |
 
 ### [MQTT]
 
@@ -170,11 +170,11 @@ DataLogActive = true
 DataLogRetentionInDays = 3
 ```
 
-This paragraph is used to control the logging of the result data to a spectific folder of SD-Card -> \log\data\data_YYYY-MM-DD.csv
+This paragraph is used to control the logging of the result data to a specific folder of SD card -> \log\data\data_YYYY-MM-DD.csv
 
 | Parameter              | Meaning                                                  | Options/Examples                                   |
 | ---------------------- | -------------------------------------------------------- | -------------------------------------------------- |
-| DataLogActive          | Activate data logging to SD-Card                         |                                                    |
+| DataLogActive          | Activate data logging to SD card                         |                                                    |
 | DataLogRetentionInDays | Number of days, for which the log files should be stored | 0 = keep forever                                   |
 
 
@@ -210,7 +210,7 @@ This paragraph is used to switch on an extended logging. It is optional and by d
 
 | Parameter  | Meaning                                                      | Options/Examples                                             |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| TimeZone   | TimeZone of the system can be specified                      | Central european, with summertime adjustement: `CET-1CEST,M3.5.0,M10.5.0/3` |
+| TimeZone   | TimeZone of the system can be specified                      | Central european, with summertime adjustment: `CET-1CEST,M3.5.0,M10.5.0/3` |
 | TimeServer | An dedicated time server can be specified.                   | default = `pool.ntp.org`                                     |
 | Hostname   | Additionally to the `wlan.ini` the hostname can be specified. It will be transferred to the `wlan.ini` and initiate a reboot |                                                              |
 | SetupMode  | If enabled, the server starts in an initial setup mode. This is automatically disabled at the end of the setup |                                               

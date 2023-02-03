@@ -49,7 +49,7 @@ The following parameters have to be defined:
 * #### Rate
 
 * #### Rate_per_time_unit
-  The time Unit gets set with the Homeassistant Discovery, eg. `h` or `m` (minutes)
+  The time Unit gets set with the Home Assistant Discovery, e.g. `h` or `m` (minutes)
 
 * #### Rate_per_digitalization_round
   The `interval` defines when the next round gets triggered

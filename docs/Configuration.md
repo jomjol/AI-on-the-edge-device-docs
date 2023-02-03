@@ -10,7 +10,7 @@ More configuration parameters can be edited by hand in the `config.ini` and corr
 
 
 
-If you where using the Version 1 of the watermeter you can easily transfer the configuration to the new system by following the steps in this [migration description](outdated--Migrate-Old-Config-To-New-Config.md)
+If you where using the Version 1 of the water meter you can easily transfer the configuration to the new system by following the steps in this [migration description](outdated--Migrate-Old-Config-To-New-Config.md)
 
 
 
@@ -77,4 +77,3 @@ The ```config.ini``` here has the same functionality and options, but a slightly
 ### Integration into Home Assistant
 
 Thanks to the help of the user @deadly667 here are some hints for the integration into the home assistant: [[Integration-Home-Assistant]]
-

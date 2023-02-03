@@ -7,7 +7,7 @@ There are only some few steps necessary to migrate your old system to the new on
 
 Please follow the following steps:
 
-#### 1. Follow the installation guide to flash the ESP32CAM and prepare a SD-Card with the content of the master
+#### 1. Follow the installation guide to flash the ESP32CAM and prepare a SD Card with the content of the master
 
 #### 2. Save the following files from the old Docker system on your PC:
 

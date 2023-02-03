@@ -99,7 +99,7 @@ This is the most annoying error. The SD card is detected, but the files cannot b
 
 ##### PSRAM too low
 
-In order to work, there are 4 MB of PSRAM necessary. Normaly the ESP32CAM is equiped with 8 MB, whereof only 4 MB can be used effectively. 
+In order to work, there are 4 MB of PSRAM necessary. Normally the ESP32CAM is equipped with 8 MB, whereof only 4 MB can be used effectively. 
 Sometimes, there is hardware, where only 2 MB of PSRAM is present - **even if you have bought a 8 MB module**
 
 You can identify the amount of PSRAM in the serial log file:
@@ -131,4 +131,3 @@ There are several files needed during on run cycle. If one of this is missing, t
 * `/config/XXXXX.tflite` (1 time for analog and 1 time for digital)
 
   where XXXXX is the file name, that is written in the `config.ini`
-
