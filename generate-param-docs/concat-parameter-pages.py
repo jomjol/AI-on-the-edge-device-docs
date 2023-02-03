@@ -25,9 +25,6 @@ def appendParameterFile(folder, file):
 
 
 
-
-
-
 # Create templated overview markdown file
 if os.path.exists(parameterOverviewFile):
     os.remove(parameterOverviewFile)
@@ -43,7 +40,7 @@ for folder in folders:
 
     # Add section
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
-        overviewFileHandle.write("\n## %s\n\n" % folder)
+        overviewFileHandle.write("\n## [%s]\n\n" % folder)
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
     for file in files:

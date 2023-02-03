@@ -1,5 +1,6 @@
-# `main.MaxRateType`
+# Parameter `main.MaxRateType`
 Default Value: `AbsoluteChange`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

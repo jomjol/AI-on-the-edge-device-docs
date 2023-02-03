@@ -1,5 +1,6 @@
-# `AutoAdjustSummertime`
+# Parameter `AutoAdjustSummertime`
 Default Value: `false`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

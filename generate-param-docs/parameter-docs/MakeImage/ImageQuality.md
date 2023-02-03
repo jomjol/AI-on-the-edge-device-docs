@@ -1,5 +1,6 @@
-# `ImageQuality`
+# Parameter `ImageQuality`
 Default Value: `12`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

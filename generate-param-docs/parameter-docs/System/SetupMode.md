@@ -1,5 +1,6 @@
-# `SetupMode`
+# Parameter `SetupMode`
 Default Value: `true`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

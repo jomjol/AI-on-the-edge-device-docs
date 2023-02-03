@@ -1,5 +1,6 @@
-# `LogImageLocation`
+# Parameter `LogImageLocation`
 Default Value: `/log/digit`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

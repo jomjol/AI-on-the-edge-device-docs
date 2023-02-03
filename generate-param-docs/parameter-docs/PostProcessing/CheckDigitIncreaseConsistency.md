@@ -1,5 +1,6 @@
-# `CheckDigitIncreaseConsistency`
+# Parameter `CheckDigitIncreaseConsistency`
 Default Value: `false`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+

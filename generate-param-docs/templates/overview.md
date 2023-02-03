@@ -1,9 +1,7 @@
 # Parameters
-This page lists all available Configuration Parameters.
-
-Click on them to get detailed information about them.
+This page lists all available [Configuration](../Configuration) Parameters.
  
-```
-Note: This is an auto-generated page!
-```
+!!! Note
+    This is an auto-generated page! See the [README](https://github.com/jomjol/AI-on-the-edge-device-docs/blob/main/README.md) for details!
+
 ---

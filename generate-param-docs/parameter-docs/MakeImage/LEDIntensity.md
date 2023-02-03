@@ -1,5 +1,6 @@
-# `LEDIntensity`
+# Parameter `LEDIntensity`
 Default Value: `50`
 
 ## Description
-## Example
+Please fill me with an explanation and useful links
+
