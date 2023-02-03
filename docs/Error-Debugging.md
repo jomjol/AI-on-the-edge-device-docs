@@ -39,11 +39,11 @@ Analyze the debugging output of the serial interface
 
 <img src="https://user-images.githubusercontent.com/108122193/188264361-0f5038ce-d827-4096-93fb-5907d3b072b4.png" width=30% height=30%>
 
-This typically happens if you have suboptimal "Alignement Marks". A very simple and working solution is to put put higly contrasted stickers on your meter and put "Alignement Marks" on it (see picture below)
+This typically happens if you have suboptimal "Alignment Marks". A very simple and working solution is to put put higly contrasted stickers on your meter and put "Alignment Marks" on it (see picture below)
 
 <img src="https://user-images.githubusercontent.com/108122193/188264752-c0f2a2be-0c22-40de-afaf-fd55b2eb4182.png" width=30% height=30%>
 
-If after those adjustement you still have some issues, you can try to adjust your aligmenet settings in expert mode:
+If after those adjustment you still have some issues, you can try to adjust your alignment settings in expert mode:
 <img src="https://user-images.githubusercontent.com/108122193/188382213-68c4a015-6582-4911-81bc-cdce8ef60ed2.png" width=75% height=75%>
 
 

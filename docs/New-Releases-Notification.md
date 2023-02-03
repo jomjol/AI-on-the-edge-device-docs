@@ -20,4 +20,4 @@ See also [Github Documentation](https://docs.github.com/en/account-and-profile/m
 
 Alternatively or if you do not want to create a Github account, [CodeRelease.io](https://coderelease.io) can be an alternative.
 
-You also have to subscribe with an emailaddress but no account is required.
+You also have to subscribe with an email address but no account is required.

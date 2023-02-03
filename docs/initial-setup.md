@@ -1,6 +1,6 @@
 # Initial Setup
 
-After setting up the device (firmware, sd-card, wlan) the device will connect to the wifi access point and start in an initial setup configuration:
+After setting up the device (firmware, SD card, WLAN) the device will connect to the wifi access point and start in an initial setup configuration:
 
 ![](img/setup_initial_welcome.png){: style="width:500px"}
 
@@ -26,7 +26,7 @@ Ensure an **exact horizontal alignment** of the number via the alignment / refer
 | --------------------------- | ------------------------------- |
 | ![](img/alignment_okay.jpg) | ![](img/alignment_not_okay.jpg) |
 
-**:bangbang: Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step later only with caution.
+**:bangbang: Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be taught again. Therefore do this step later only with caution.
 
 If everything is done, you can save the result with "Update Reference Image" (4). Please do not reboot at this stage, but go to the next section.
 
@@ -58,11 +58,11 @@ First of all, if you don't have that kind of numbers on you meter, you can disab
 
 In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). 
 
-**Attention:** The order of the ROIs defines, how the indiviual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".
+**Attention:** The order of the ROIs defines, how the individual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".
 
 As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. 
 
-In most cases the digits are ordered in a aequidistant order and have the same size, you can synchronize them with the control in (4).
+In most cases the digits are ordered in a equidistantly and have the same size, you can synchronize them with the control in (4).
 
 Don' t forget to save the settings with "Save" and do not reboot at this stage.
 
@@ -82,10 +82,14 @@ Here is an example with the details for the ROI "ana1":
 For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.
 
 1. Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: `dig-class11-....tfl`
+
    **Advantage:** broad variety of types included in the training
+
    **Disadvantage:** partially rotated numbers cannot be detected
-2. Model with subdigit resulition (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: `dig-cont-....tfl` or `dig-class100-....tfl`
+2. Model with sub-digit resolution (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: `dig-cont-....tfl` or `dig-class100-....tfl`
+
    **Advantage:** partial numbers can be detected and a better post processing is possible
+
    **Disadvantage:** only limited types of meter types are trained due to the high effort for the training data
 
 Details and the corresponding "perfect" setting is explained here: [Details ROI Configuration](https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/)
@@ -118,7 +122,7 @@ The configuration is divided into different sub topics:
 * PostProcessing
 * MQTT
 * InfluxDB
-* GPIOSettings
+* GPIO Settings
 * Autotimer
 * DataLogging
 * Debug
@@ -131,9 +135,9 @@ The setting itself is done in the next column (2) and a brief explanation you ca
 
 Don' t forget to save the settings with "Save" and do not reboot at this stage.
 
-#### Expert Modus
+#### Expert Mode
 
-With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert modus available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifiying them you should be really sure, what they are about.
+With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert mode available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifying them you should be really sure, what they are about.
 
 
 
@@ -143,13 +147,13 @@ After setting up everything, there is a last step to be done:
 
 ![](img/initial_setup_6_finish_reboot.jpg){: style="width:500px"}
 
-With (1) you leave the setup modus and reboot to normal operation mode.
+With (1) you leave the setup mode and reboot to normal operation mode.
 
 
 
 ## Access to setup in normal operation mode
 
-You can access all the settings also during the normal working mode via the "Settings" menue:
+You can access all the settings also during the normal working mode via the "Settings" menu:
 
 ![](img/initial_setup_7_access_normal_mode.jpg){: style="width:500px"}
 

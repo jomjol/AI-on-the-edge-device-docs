@@ -1,7 +1,7 @@
 # REST API
 Various information is directly accessible over specific REST calls.
 
-To use it, just append them to the IP, separated with a `/`, eg. `http://192.168.1.1/json`
+To use it, just append them to the IP, separated with a `/`, e.g. `http://192.168.1.1/json`
 
 Note: For more detailed information to the REST handler, have a look to the code in the repository: [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
 
@@ -65,7 +65,7 @@ Note: For more detailed information to the REST handler, have a look to the code
   Show last aligned image
 
 * ### img_tmp/alg_roi.jpg
-  Show last aligned image incuding ROI overlay
+  Show last aligned image including ROI overlay
 
 ## Status
 * ### statusflow
@@ -82,7 +82,7 @@ Note: For more detailed information to the REST handler, have a look to the code
 
 * ### sysinfo
   Show system infos in JSON syntax
-  - Example: [{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]
+  - Example: `[{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]`
 
 * ### starttime
   Show starttime

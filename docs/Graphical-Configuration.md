@@ -11,7 +11,7 @@
 
 ## Access to the graphical user interface
 
-The graphical configuration mode can be reached via the "Edit Configuration" button in the main menue (`/index.html`):
+The graphical configuration mode can be reached via the "Edit Configuration" button in the main menu (`/index.html`):
 
 * <img src="img/config_s1_access.jpg" width="600" align="middle">
 
@@ -27,13 +27,13 @@ The graphical configuration mode can be reached via the "Edit Configuration" but
    b. Define alignment structures
 3. Definition of ROIs for digits and analog pointers
 4. Test the settings
-5. Back to main menue ("index.html")
+5. Back to main menu ("index.html")
 
 
 
 ### 1. Edit Config.ini
 
-This is a text editor for the config.ini. Changes commited with the button on the lower left.
+This is a text editor for the config.ini. Changes committed with the button on the lower left.
 
 * <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s2_edit_config.jpg" width="600" align="middle">
 
@@ -45,15 +45,15 @@ Details see [Configuration-Parameter-Details](../Configuration-Parameter-Details
 
 The reference image is the basis for the coordination of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. 
 
-**:bangbang: Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be teached again. Therefore do this step only with caution.
+**:bangbang: Attention:** Updating the reference image, also means, that all alignment images and ROIs needs to be taught again. Therefore do this step only with caution.
 
 * <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s3_reference.jpg" width="400" align="middle">
 
 At first the current image is shown and no adjustment is possible. To reload the actual image push the button "Show actual Reference" (1).  To define a new reference image push the button "Create new Reference" (2).
-Then the last taken raw image from the camera is loaded. If you want to update this, you can push the button "Make new raw image (raw.jpg)". If you need to mirror your image (e.g. mirror before camera) you can do this by selecting "mirror image". After loading the mirroring (in case checked) and the prerotation angle from the `config.ini` are applied. Then use the rough and fine adjustment to get the image straight aligned (3).
+Then the last taken raw image from the camera is loaded. If you want to update this, you can push the button "Make new raw image (raw.jpg)". If you need to mirror your image (e.g. mirror before camera) you can do this by selecting "mirror image". After loading the mirroring (in case checked) and the pre-rotation angle from the `config.ini` are applied. Then use the rough and fine adjustment to get the image straight aligned (3).
 If everything is done, you can save the result with "Update Reference Image" (4).
 
-If you have problems with reflections, you can turn the camera in a positions, where the reflection is at a position, where no important information is. To reduce the intensity of the reflection you can also a peace of felt ("Filz") as diffusior at the LED. 
+If you have problems with reflections, you can turn the camera in a positions, where the reflection is at a position, where no important information is. To reduce the intensity of the reflection you can also a peace of felt ("Filz") as diffusor at the LED. 
 
 
 
@@ -94,7 +94,7 @@ In order to have a good recognition, the active ROI has two rectangles for align
 <img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s5_ROIs_details.jpg" align="middle">
 
 * The outer rectangle is the final size of the ROI
-* More important is the inner smaller rectangle. This should tightly fit around the number itself in x- and in y-dimension. Maybe you need to unlock the aspect ratio to change x- and y-size independendly
+* More important is the inner smaller rectangle. This should tightly fit around the number itself in x- and in y-dimension. Maybe you need to unlock the aspect ratio to change x- and y-size independently
 * The line in the middle should go through the middle of the  number (in case it is not  moving in or out)
 
 

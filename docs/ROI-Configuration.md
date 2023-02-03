@@ -24,7 +24,7 @@ In order to use it for reading a meter, the focal-length  of the OV2640 camera h
 
 **ATTENTION:** this modification will void any warranty, as the sealing of the lens objective is broken!
 
-**ATTENTION:** This modification will render  the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.
+**ATTENTION:** This modification will render the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.
 
 ![](img/focus_adjustment.jpg)
 
@@ -79,4 +79,3 @@ Here an example:
 | ------------ | --------------------------------- | 
 | :heavy_check_mark: **Okay**     | <img width="125" alt="dig-class100_OK" src="https://user-images.githubusercontent.com/412645/199028380-7623776e-59b9-4356-ab55-3852253609df.png">          | 
 | :x: **Not** Okay | <img width="125" alt="dig-class100_NOK" src="https://user-images.githubusercontent.com/412645/199028469-3a69ed31-e5c9-4038-a8dc-6d44a42437ed.png"> | 
-

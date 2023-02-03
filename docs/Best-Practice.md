@@ -3,14 +3,14 @@
 This page shows some best practices:
 
 ## Camera Placement 
-* Move the Camera as close as possible(~4cm), this will help get rid of reflections.
+* Move the Camera as close as possible (~4cm), this will help get rid of reflections.
   -> focus can be adjusted by turning the outer black ring of the camera.
-* If the LED reflections are too strong, put tape over the LED to defuse the light
+* If the LED reflections are too strong, put tape over the LED to diffuse the light
 * Change the ImageSize to QVGA under "Expert mode" configuration when close enough, this will be faster and is often good enough for digital recognition.
 
 ## Reflections 
 
-  * Try to get ride of the reflections by rotating the camera, so that the reflections are at positions, where no number is.
+  * Try to get rid of the reflections by rotating the camera, so that the reflections are at positions, where no number is.
   * By using the external LED option, you can place WS2812 LEDs freely away from the main axis.
   * Users report, that a handy cover foil could also help
 

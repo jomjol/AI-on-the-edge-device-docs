@@ -34,11 +34,11 @@ Now you can use Visual Studio Code or a standard console to upload the test code
 <img width="467" alt="image" src="https://user-images.githubusercontent.com/412645/209813917-ea7fca50-2553-4acf-a8af-ecdac84a01ea.png">
 
 
-Alternativ you can run it in console/terminal with `platformio test --environment esp32cam`.
+Alternatively you can run it in console/terminal with `platformio test --environment esp32cam`.
 
 In my environment the serial terminal not opens. I have to do it for myself. You will see much logging. If any test fails it logs it out. Else it logs all test passed in the end.
 
 
 ## Troubleshooting
 
-If you test very much cases in one function, the device runs in stackoverflow and an endless boot. Reduce the count of test cases or split the test function in multiple functions.
+If you test very much cases in one function, the device runs in Stack Overflow and an endless boot. Reduce the count of test cases or split the test function in multiple functions.
