@@ -25,6 +25,13 @@ Each page has a link on its top-right corner `Edit on GitHub` which brings you d
 1. Add a new `*.md` document in the [docs](docs) folder.
 1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
+## Parameter Docs Generator
+The script `generate-param-docs/generate-param-doc-pages.py` should be run whenever the [configfile](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/sd-card/config/config.ini) in the main project repo changed.
+It then checks if there is a markdown file  for each of the contained parameters. if not, it generates a templated page.
+
+The script `generate-param-docs/concat-parameter-pages.py` should be run whenever one of the parameter documentation pages changed.
+It then concatenates all parameter pages into a single `Parameters.md` which can be added to the documentation.
+
 ## Local Test
 To test it locally:
 1. Clone this repo
