@@ -11,6 +11,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'auto-gen-parameter-doc'
 
 jobs:
   build-documentation:
@@ -39,4 +40,11 @@ jobs:
           
       - name: Store docs in gh-pages branch
         run: |
+          # Update Parameter Documentation
+          cd generate-param-docs
+          python generate-param-doc-pages.py
+          python concat-parameter-pages.py
+          cd ..
+        
+          # Deploy it
           mkdocs gh-deploy
