@@ -9,9 +9,8 @@ name: Build Documentation
 
 on: 
   push:
-    branches:
-      - 'main'
-      - 'auto-gen-parameter-doc'
+#    branches:
+#      - 'main'
 
 jobs:
   build-documentation:
