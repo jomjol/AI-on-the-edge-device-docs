@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Parameters - AI on the Edge Device</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Parameters";
+        var mkdocs_page_input_path = "Parameters.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Parameters/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
+    <a href=".." class="icon icon-home"> AI on the Edge Device
+</a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">External Links</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Place an Issue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Parameters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#alignment">Alignment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#alignmentalgo">AlignmentAlgo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flipimagesize">FlipImageSize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_1">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialmirror">InitialMirror</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_2">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initialrotate">InitialRotate</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_3">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#searchfieldx">SearchFieldX</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_4">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_4">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#searchfieldy">SearchFieldY</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_5">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_5">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#analog">Analog</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#cnngoodthreshold">CNNGoodThreshold</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_6">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_6">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#extendedresolution">ExtendedResolution</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_7">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_7">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logimagelocation">LogImageLocation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_8">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_8">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logfileretentionindays">LogfileRetentionInDays</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_9">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_9">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#model">Model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_10">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_10">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#autotimer">AutoTimer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#autostart">AutoStart</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_11">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_11">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#intervall">Intervall</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_12">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_12">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#datalogging">DataLogging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#datalogactive">DataLogActive</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_13">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_13">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#datalogretentionindays">DataLogRetentionInDays</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_14">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_14">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debug">Debug</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#logfile">Logfile</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_15">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_15">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logfileretentionindays_1">LogfileRetentionInDays</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_16">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_16">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#digits">Digits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#cnngoodthreshold_1">CNNGoodThreshold</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_17">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_17">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logimagelocation_1">LogImageLocation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_18">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_18">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logfileretentionindays_2">LogfileRetentionInDays</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_19">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_19">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#model_1">Model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_20">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_20">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gpio">GPIO</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#io0">IO0</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_21">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_21">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#io1">IO1</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_22">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_22">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#io12">IO12</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_23">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_23">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#io13">IO13</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_24">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_24">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#io3">IO3</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_25">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_25">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#io4">IO4</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_26">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_26">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ledcolor">LEDColor</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_27">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_27">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lednumbers">LEDNumbers</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_28">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_28">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ledtype">LEDType</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_29">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_29">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maintopicmqtt">MainTopicMQTT</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_30">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_30">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#influxdb">InfluxDB</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#database">Database</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_31">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_31">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#measurement">Measurement</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_32">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_32">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uri">Uri</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_33">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_33">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#password">password</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_34">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_34">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#user">user</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_35">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_35">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mqtt">MQTT</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#clientid">ClientID</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_36">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_36">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#homeassistantdiscovery">HomeassistantDiscovery</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_37">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_37">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maintopic">MainTopic</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_38">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_38">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metertype">MeterType</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_39">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_39">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setretainflag">SetRetainFlag</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_40">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_40">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uri_1">Uri</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_41">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_41">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#password_1">password</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_42">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_42">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#user_1">user</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_43">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_43">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#makeimage">MakeImage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#brightness">Brightness</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_44">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_44">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contrast">Contrast</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_45">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_45">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#demo">Demo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_46">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_46">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fixedexposure">FixedExposure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_47">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_47">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#imagequality">ImageQuality</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_48">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_48">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#imagesize">ImageSize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_49">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_49">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ledintensity">LEDIntensity</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_50">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_50">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logimagelocation_2">LogImageLocation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_51">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_51">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logfileretentionindays_3">LogfileRetentionInDays</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_52">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_52">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#saturation">Saturation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_53">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_53">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waitbeforetakingpicture">WaitBeforeTakingPicture</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_54">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_54">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#postprocessing">PostProcessing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#allownegativerates">AllowNegativeRates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_55">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_55">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkdigitincreaseconsistency">CheckDigitIncreaseConsistency</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_56">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_56">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#errormessage">ErrorMessage</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_57">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_57">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prevalueagestartup">PreValueAgeStartup</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_58">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_58">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prevalueuse">PreValueUse</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_59">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_59">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mainanalogdigitaltransitionstart">main.AnalogDigitalTransitionStart</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_60">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_60">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maindecimalshift">main.DecimalShift</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_61">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_61">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mainextendedresolution">main.ExtendedResolution</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_62">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_62">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mainignoreleadingnan">main.IgnoreLeadingNaN</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_63">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_63">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mainmaxratetype">main.MaxRateType</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_64">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_64">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mainmaxratevalue">main.MaxRateValue</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_65">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_65">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#system">System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#autoadjustsummertime">AutoAdjustSummertime</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_66">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_66">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hostname">Hostname</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_67">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_67">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setupmode">SetupMode</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_68">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_68">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#timeserver">TimeServer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_69">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_69">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#timezone">TimeZone</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_70">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example_70">Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Frequent Reboots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo Mode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API's</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Graphical-Configuration/">Graphical Configuration</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AI on the Edge Device</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Configuration &raquo;</li>
+      <li>Parameters</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Parameters.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="parameters">Parameters</h1>
+<p>This page lists all available Configuration Parameters.</p>
+<p>Click on them to get detailed information about them.</p>
+<pre><code>Note: This is an auto-generated page!
+</code></pre>
+<hr />
+<h2 id="alignment">Alignment</h2>
+<h3 id="alignmentalgo"><code>AlignmentAlgo</code></h3>
+<p>Default Value: <code>Default</code></p>
+<h4 id="description">Description</h4>
+<h4 id="example">Example</h4>
+<hr />
+<h3 id="flipimagesize"><code>FlipImageSize</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_1">Description</h4>
+<h4 id="example_1">Example</h4>
+<hr />
+<h3 id="initialmirror"><code>InitialMirror</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_2">Description</h4>
+<h4 id="example_2">Example</h4>
+<hr />
+<h3 id="initialrotate"><code>InitialRotate</code></h3>
+<p>Default Value: <code>179</code></p>
+<h4 id="description_3">Description</h4>
+<h4 id="example_3">Example</h4>
+<hr />
+<h3 id="searchfieldx"><code>SearchFieldX</code></h3>
+<p>Default Value: <code>20</code></p>
+<h4 id="description_4">Description</h4>
+<h4 id="example_4">Example</h4>
+<hr />
+<h3 id="searchfieldy"><code>SearchFieldY</code></h3>
+<p>Default Value: <code>20</code></p>
+<h4 id="description_5">Description</h4>
+<h4 id="example_5">Example</h4>
+<hr />
+<h2 id="analog">Analog</h2>
+<h3 id="cnngoodthreshold"><code>CNNGoodThreshold</code></h3>
+<p>Default Value: <code>0.5</code></p>
+<h4 id="description_6">Description</h4>
+<h4 id="example_6">Example</h4>
+<hr />
+<h3 id="extendedresolution"><code>ExtendedResolution</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_7">Description</h4>
+<h4 id="example_7">Example</h4>
+<hr />
+<h3 id="logimagelocation"><code>LogImageLocation</code></h3>
+<p>Default Value: <code>/log/analog</code></p>
+<h4 id="description_8">Description</h4>
+<h4 id="example_8">Example</h4>
+<hr />
+<h3 id="logfileretentionindays"><code>LogfileRetentionInDays</code></h3>
+<p>Default Value: <code>3</code></p>
+<h4 id="description_9">Description</h4>
+<h4 id="example_9">Example</h4>
+<hr />
+<h3 id="model"><code>Model</code></h3>
+<p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code></p>
+<h4 id="description_10">Description</h4>
+<h4 id="example_10">Example</h4>
+<hr />
+<h2 id="autotimer">AutoTimer</h2>
+<h3 id="autostart"><code>AutoStart</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_11">Description</h4>
+<h4 id="example_11">Example</h4>
+<hr />
+<h3 id="intervall"><code>Intervall</code></h3>
+<p>Default Value: <code>5</code></p>
+<h4 id="description_12">Description</h4>
+<h4 id="example_12">Example</h4>
+<hr />
+<h2 id="datalogging">DataLogging</h2>
+<h3 id="datalogactive"><code>DataLogActive</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_13">Description</h4>
+<h4 id="example_13">Example</h4>
+<hr />
+<h3 id="datalogretentionindays"><code>DataLogRetentionInDays</code></h3>
+<p>Default Value: <code>3</code></p>
+<h4 id="description_14">Description</h4>
+<h4 id="example_14">Example</h4>
+<hr />
+<h2 id="debug">Debug</h2>
+<h3 id="logfile"><code>Logfile</code></h3>
+<p>Default Value: <code>1</code></p>
+<h4 id="description_15">Description</h4>
+<h4 id="example_15">Example</h4>
+<hr />
+<h3 id="logfileretentionindays_1"><code>LogfileRetentionInDays</code></h3>
+<p>Default Value: <code>3</code></p>
+<h4 id="description_16">Description</h4>
+<h4 id="example_16">Example</h4>
+<hr />
+<h2 id="digits">Digits</h2>
+<h3 id="cnngoodthreshold_1"><code>CNNGoodThreshold</code></h3>
+<p>Default Value: <code>0.5</code></p>
+<h4 id="description_17">Description</h4>
+<h4 id="example_17">Example</h4>
+<hr />
+<h3 id="logimagelocation_1"><code>LogImageLocation</code></h3>
+<p>Default Value: <code>/log/digit</code></p>
+<h4 id="description_18">Description</h4>
+<h4 id="example_18">Example</h4>
+<hr />
+<h3 id="logfileretentionindays_2"><code>LogfileRetentionInDays</code></h3>
+<p>Default Value: <code>3</code></p>
+<h4 id="description_19">Description</h4>
+<h4 id="example_19">Example</h4>
+<hr />
+<h3 id="model_1"><code>Model</code></h3>
+<p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code></p>
+<h4 id="description_20">Description</h4>
+<h4 id="example_20">Example</h4>
+<hr />
+<h2 id="gpio">GPIO</h2>
+<h3 id="io0"><code>IO0</code></h3>
+<p>Default Value: <code>input disabled 10 false false</code></p>
+<h4 id="description_21">Description</h4>
+<h4 id="example_21">Example</h4>
+<hr />
+<h3 id="io1"><code>IO1</code></h3>
+<p>Default Value: <code>input disabled 10 false false</code></p>
+<h4 id="description_22">Description</h4>
+<h4 id="example_22">Example</h4>
+<hr />
+<h3 id="io12"><code>IO12</code></h3>
+<p>Default Value: <code>input-pullup disabled 10 false false</code></p>
+<h4 id="description_23">Description</h4>
+<h4 id="example_23">Example</h4>
+<hr />
+<h3 id="io13"><code>IO13</code></h3>
+<p>Default Value: <code>input-pullup disabled 10 false false</code></p>
+<h4 id="description_24">Description</h4>
+<h4 id="example_24">Example</h4>
+<hr />
+<h3 id="io3"><code>IO3</code></h3>
+<p>Default Value: <code>input disabled 10 false false</code></p>
+<h4 id="description_25">Description</h4>
+<h4 id="example_25">Example</h4>
+<hr />
+<h3 id="io4"><code>IO4</code></h3>
+<p>Default Value: <code>built-in-led disabled 10 false false</code></p>
+<h4 id="description_26">Description</h4>
+<h4 id="example_26">Example</h4>
+<hr />
+<h3 id="ledcolor"><code>LEDColor</code></h3>
+<p>Default Value: <code>150 150 150</code></p>
+<h4 id="description_27">Description</h4>
+<h4 id="example_27">Example</h4>
+<hr />
+<h3 id="lednumbers"><code>LEDNumbers</code></h3>
+<p>Default Value: <code>2</code></p>
+<h4 id="description_28">Description</h4>
+<h4 id="example_28">Example</h4>
+<hr />
+<h3 id="ledtype"><code>LEDType</code></h3>
+<p>Default Value: <code>WS2812</code></p>
+<h4 id="description_29">Description</h4>
+<h4 id="example_29">Example</h4>
+<hr />
+<h3 id="maintopicmqtt"><code>MainTopicMQTT</code></h3>
+<p>Default Value: <code>wasserzaehler/GPIO</code></p>
+<h4 id="description_30">Description</h4>
+<h4 id="example_30">Example</h4>
+<hr />
+<h2 id="influxdb">InfluxDB</h2>
+<h3 id="database"><code>Database</code></h3>
+<p>Default Value: ``</p>
+<h4 id="description_31">Description</h4>
+<h4 id="example_31">Example</h4>
+<hr />
+<h3 id="measurement"><code>Measurement</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<h4 id="description_32">Description</h4>
+<h4 id="example_32">Example</h4>
+<hr />
+<h3 id="uri"><code>Uri</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<h4 id="description_33">Description</h4>
+<h4 id="example_33">Example</h4>
+<hr />
+<h3 id="password"><code>password</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<h4 id="description_34">Description</h4>
+<h4 id="example_34">Example</h4>
+<hr />
+<h3 id="user"><code>user</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<h4 id="description_35">Description</h4>
+<h4 id="example_35">Example</h4>
+<hr />
+<h2 id="mqtt">MQTT</h2>
+<h3 id="clientid"><code>ClientID</code></h3>
+<p>Default Value: <code>watermeter</code></p>
+<h4 id="description_36">Description</h4>
+<h4 id="example_36">Example</h4>
+<hr />
+<h3 id="homeassistantdiscovery"><code>HomeassistantDiscovery</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_37">Description</h4>
+<h4 id="example_37">Example</h4>
+<hr />
+<h3 id="maintopic"><code>MainTopic</code></h3>
+<p>Default Value: <code>watermeter</code></p>
+<h4 id="description_38">Description</h4>
+<h4 id="example_38">Example</h4>
+<hr />
+<h3 id="metertype"><code>MeterType</code></h3>
+<p>Default Value: <code>other</code></p>
+<h4 id="description_39">Description</h4>
+<h4 id="example_39">Example</h4>
+<hr />
+<h3 id="setretainflag"><code>SetRetainFlag</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_40">Description</h4>
+<h4 id="example_40">Example</h4>
+<hr />
+<h3 id="uri_1"><code>Uri</code></h3>
+<p>Default Value: <code>mqtt://IP-ADRESS:1883</code></p>
+<h4 id="description_41">Description</h4>
+<h4 id="example_41">Example</h4>
+<hr />
+<h3 id="password_1"><code>password</code></h3>
+<p>Default Value: <code>PASSWORD</code></p>
+<h4 id="description_42">Description</h4>
+<h4 id="example_42">Example</h4>
+<hr />
+<h3 id="user_1"><code>user</code></h3>
+<p>Default Value: <code>USERNAME</code></p>
+<h4 id="description_43">Description</h4>
+<h4 id="example_43">Example</h4>
+<hr />
+<h2 id="makeimage">MakeImage</h2>
+<h3 id="brightness"><code>Brightness</code></h3>
+<p>Default Value: <code>0</code></p>
+<h4 id="description_44">Description</h4>
+<h4 id="example_44">Example</h4>
+<hr />
+<h3 id="contrast"><code>Contrast</code></h3>
+<p>Default Value: <code>0</code></p>
+<h4 id="description_45">Description</h4>
+<h4 id="example_45">Example</h4>
+<hr />
+<h3 id="demo"><code>Demo</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_46">Description</h4>
+<h4 id="example_46">Example</h4>
+<hr />
+<h3 id="fixedexposure"><code>FixedExposure</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_47">Description</h4>
+<h4 id="example_47">Example</h4>
+<hr />
+<h3 id="imagequality"><code>ImageQuality</code></h3>
+<p>Default Value: <code>12</code></p>
+<h4 id="description_48">Description</h4>
+<h4 id="example_48">Example</h4>
+<hr />
+<h3 id="imagesize"><code>ImageSize</code></h3>
+<p>Default Value: <code>VGA</code></p>
+<h4 id="description_49">Description</h4>
+<h4 id="example_49">Example</h4>
+<hr />
+<h3 id="ledintensity"><code>LEDIntensity</code></h3>
+<p>Default Value: <code>50</code></p>
+<h4 id="description_50">Description</h4>
+<h4 id="example_50">Example</h4>
+<hr />
+<h3 id="logimagelocation_2"><code>LogImageLocation</code></h3>
+<p>Default Value: <code>/log/source</code></p>
+<h4 id="description_51">Description</h4>
+<h4 id="example_51">Example</h4>
+<hr />
+<h3 id="logfileretentionindays_3"><code>LogfileRetentionInDays</code></h3>
+<p>Default Value: <code>15</code></p>
+<h4 id="description_52">Description</h4>
+<h4 id="example_52">Example</h4>
+<hr />
+<h3 id="saturation"><code>Saturation</code></h3>
+<p>Default Value: <code>0</code></p>
+<h4 id="description_53">Description</h4>
+<h4 id="example_53">Example</h4>
+<hr />
+<h3 id="waitbeforetakingpicture"><code>WaitBeforeTakingPicture</code></h3>
+<p>Default Value: <code>5</code></p>
+<h4 id="description_54">Description</h4>
+<h4 id="example_54">Example</h4>
+<hr />
+<h2 id="postprocessing">PostProcessing</h2>
+<h3 id="allownegativerates"><code>AllowNegativeRates</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_55">Description</h4>
+<h4 id="example_55">Example</h4>
+<hr />
+<h3 id="checkdigitincreaseconsistency"><code>CheckDigitIncreaseConsistency</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_56">Description</h4>
+<h4 id="example_56">Example</h4>
+<hr />
+<h3 id="errormessage"><code>ErrorMessage</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_57">Description</h4>
+<h4 id="example_57">Example</h4>
+<hr />
+<h3 id="prevalueagestartup"><code>PreValueAgeStartup</code></h3>
+<p>Default Value: <code>720</code></p>
+<h4 id="description_58">Description</h4>
+<h4 id="example_58">Example</h4>
+<hr />
+<h3 id="prevalueuse"><code>PreValueUse</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_59">Description</h4>
+<h4 id="example_59">Example</h4>
+<hr />
+<h3 id="mainanalogdigitaltransitionstart"><code>main.AnalogDigitalTransitionStart</code></h3>
+<p>Default Value: <code>9.2</code></p>
+<h4 id="description_60">Description</h4>
+<h4 id="example_60">Example</h4>
+<hr />
+<h3 id="maindecimalshift"><code>main.DecimalShift</code></h3>
+<p>Default Value: <code>0</code></p>
+<h4 id="description_61">Description</h4>
+<h4 id="example_61">Example</h4>
+<hr />
+<h3 id="mainextendedresolution"><code>main.ExtendedResolution</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_62">Description</h4>
+<h4 id="example_62">Example</h4>
+<hr />
+<h3 id="mainignoreleadingnan"><code>main.IgnoreLeadingNaN</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_63">Description</h4>
+<h4 id="example_63">Example</h4>
+<hr />
+<h3 id="mainmaxratetype"><code>main.MaxRateType</code></h3>
+<p>Default Value: <code>AbsoluteChange</code></p>
+<h4 id="description_64">Description</h4>
+<h4 id="example_64">Example</h4>
+<hr />
+<h3 id="mainmaxratevalue"><code>main.MaxRateValue</code></h3>
+<p>Default Value: <code>0.05</code></p>
+<h4 id="description_65">Description</h4>
+<h4 id="example_65">Example</h4>
+<hr />
+<h2 id="system">System</h2>
+<h3 id="autoadjustsummertime"><code>AutoAdjustSummertime</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_66">Description</h4>
+<h4 id="example_66">Example</h4>
+<hr />
+<h3 id="hostname"><code>Hostname</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<h4 id="description_67">Description</h4>
+<h4 id="example_67">Example</h4>
+<hr />
+<h3 id="setupmode"><code>SetupMode</code></h3>
+<p>Default Value: <code>true</code></p>
+<h4 id="description_68">Description</h4>
+<h4 id="example_68">Example</h4>
+<hr />
+<h3 id="timeserver"><code>TimeServer</code></h3>
+<p>Default Value: <code>pool.ntp.org</code></p>
+<h4 id="description_69">Description</h4>
+<h4 id="example_69">Example</h4>
+<hr />
+<h3 id="timezone"><code>TimeZone</code></h3>
+<p>Default Value: <code>CET-1CEST,M3.5.0,M10.5.0/3</code></p>
+<h4 id="description_70">Description</h4>
+<h4 id="example_70">Example</h4>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ota/" class="btn btn-neutral float-left" title="Over-The-Air (OTA) Update"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Integration-Home-Assistant/" class="btn btn-neutral float-right" title="Integration into Home Assistant">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ota/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Integration-Home-Assistant/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

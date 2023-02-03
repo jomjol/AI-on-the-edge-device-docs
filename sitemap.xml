@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/</loc>
+         <lastmod>2023-02-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/</loc>
          <lastmod>2023-02-03</lastmod>
          <changefreq>daily</changefreq>

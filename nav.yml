@@ -22,6 +22,7 @@ nav:
     - Choosing-the-Model.md
     - Neural-Network-Types.md
     - ota.md
+    - Parameters.md
 
   - Advanced:
     - Integration-Home-Assistant.md
