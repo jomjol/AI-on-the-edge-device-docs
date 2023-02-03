@@ -13,7 +13,7 @@ The first one is the easier way if you already have MQTT in use.
 
 Starting with Version `>12.0.1`, AI-on-the-edge-devices support Homeassistant Discovery.
 
- 1. Check [here](https://www.home-assistant.io/docs/mqtt/discovery/) to learn more about it and how to enable it in Homeassistant.
+ 1. Check [here](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) to learn more about it and how to enable it in Homeassistant.
  1. You also have to enable it in the MQTT settings of your device:
   
     ![grafik](https://user-images.githubusercontent.com/1783586/199350781-e2a59eeb-b5bb-407b-9c0d-2aafab50daab.png)
