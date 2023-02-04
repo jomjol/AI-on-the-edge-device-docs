@@ -2,7 +2,7 @@
 Default Value: `50`
 
 !!! Warning
-    This is an expert parameter!
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 
 

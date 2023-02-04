@@ -2,10 +2,8 @@
 Default Value: `true`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
-
+Do not show error message in return value.
+In an error case, the last valid number will be used for the various transmission protocols (MQTT, InfluxDB, REST, ...).

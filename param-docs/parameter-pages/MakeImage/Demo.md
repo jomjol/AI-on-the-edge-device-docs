@@ -1,10 +1,7 @@
 # Parameter `Demo`
-Default Value: `true`
-
-
-
-
+Default Value: `false`
 
 ## Description
-Please fill me with an explanation and useful links
-
+Enable to use demo images instead of the real camera images.
+Make sure to have a `/demo` folder on your SD-Card and it contains the expected files!
+Check [here](../Demo-Mode) for details. 

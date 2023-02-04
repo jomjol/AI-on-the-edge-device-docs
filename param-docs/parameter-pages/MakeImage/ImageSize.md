@@ -2,10 +2,11 @@
 Default Value: `VGA`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
+Size of the camera picture.
+Available options:
 
+- `VGA` (640 x 480 pixel)
+- `QVGA` (320 x 240 pixel)

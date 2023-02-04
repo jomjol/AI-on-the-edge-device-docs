@@ -2,10 +2,7 @@
 Default Value: `720`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
-
+Time in minutes, how long a previous read value is valid after reboot.

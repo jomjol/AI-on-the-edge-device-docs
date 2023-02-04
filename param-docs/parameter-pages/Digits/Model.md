@@ -1,10 +1,5 @@
 # Parameter `Model`
 Default Value: `/config/dig-cont_0600_s3.tflite`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Path to CNN model file for image recognition. See [here](../Choosing-the-Model) for details. 

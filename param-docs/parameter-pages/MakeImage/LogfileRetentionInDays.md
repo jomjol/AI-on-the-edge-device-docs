@@ -1,10 +1,5 @@
 # Parameter `LogfileRetentionInDays`
 Default Value: `15`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Number of days to keep the raw images (`0` = forever)

@@ -2,9 +2,6 @@
 Default Value: `/log/analog`
 
 
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Location to store separated analog images on the SD-Card for logging.
 

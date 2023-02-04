@@ -2,10 +2,7 @@
 Default Value: `5`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
-
+Waiting time between switching illumination on and taking the picture (in seconds)-

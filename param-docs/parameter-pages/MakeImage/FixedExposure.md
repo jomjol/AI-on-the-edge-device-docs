@@ -2,10 +2,9 @@
 Default Value: `false`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
+Fixes the illumination setting of camera at the startup and uses this later -->
+individual round is faster.
 

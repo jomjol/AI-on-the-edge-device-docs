@@ -1,10 +1,6 @@
 # Parameter `PreValueUse`
 Default Value: `true`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Use the previous value (value from previous round) for consistency checks.
+This also work through a reboot of the device!

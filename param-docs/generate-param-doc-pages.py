@@ -83,7 +83,7 @@ for section in config:
                         content = content.replace("$DEFAULT", value)
 
                         if parameter in expertParameters:
-                            content = content.replace("$EXPERT_PARAMETER", "!!! Warning\n    This is an expert parameter!") # Note: Needs a 4 whitespace Intent!
+                            content = content.replace("$EXPERT_PARAMETER", "!!! Warning\n    This is an **Expert Parameter**! Only change it if you understand what it does!") # Note: Needs a 4 whitespace Intent!
                         else:
                             content = content.replace("$EXPERT_PARAMETER", "")
 

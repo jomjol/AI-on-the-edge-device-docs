@@ -1,10 +1,6 @@
 # Parameter `LogfileRetentionInDays`
 Default Value: `3`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Days to keep the separated digit images (`0` = forever).
 

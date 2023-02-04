@@ -1,10 +1,6 @@
 # Parameter `LogImageLocation`
 Default Value: `/log/digit`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Location to store separated digit images on the SD-Card for logging.
 

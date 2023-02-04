@@ -2,10 +2,11 @@
 Default Value: `Default`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
+Algorithm used for the alignment step.
 
+- `Default`: Use only red color channel
+- `HighAccuracy`: Use all 3 color Channels (3x slower)
+- `Fast`: First time use `HighAccuracy`, then only check if the image is shifted

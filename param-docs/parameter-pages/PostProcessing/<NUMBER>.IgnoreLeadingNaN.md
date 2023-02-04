@@ -1,10 +1,7 @@
 # Parameter `<NUMBER>.IgnoreLeadingNaN`
 Default Value: `true`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Leading `N`'s will be deleted before further processing.
 
+This is only relevant for models which use `N`!

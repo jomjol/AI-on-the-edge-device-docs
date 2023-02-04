@@ -1,10 +1,7 @@
 # Parameter `<NUMBER>.DecimalShift`
 Default Value: `0`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Shift the decimal separator (positiv or negativ).
+Eg. to move from 'm³' to 'liter' (1 m³ equals 1000 liters), you need to set it to +3.
 

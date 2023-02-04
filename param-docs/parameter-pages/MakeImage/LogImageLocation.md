@@ -1,10 +1,5 @@
 # Parameter `LogImageLocation`
 Default Value: `/log/source`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Location on the SD-Card to store the raw images for logging.

@@ -2,10 +2,9 @@
 Default Value: `false`
 
 !!! Warning
-    This is an expert parameter!
-
-
+    This is an **Expert Parameter**! Only change it if you understand what it does!
 
 ## Description
-Please fill me with an explanation and useful links
+An additional consistency check.
+It especially improves the zero crossing check between digits.
 
