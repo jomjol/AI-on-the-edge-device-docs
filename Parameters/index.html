@@ -487,33 +487,39 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-allownegativerates">Parameter AllowNegativeRates</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbersallownegativerates">Parameter &lt;NUMBERS&gt;.AllowNegativeRates</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#description_61">Description</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-checkdigitincreaseconsistency">Parameter CheckDigitIncreaseConsistency</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-allownegativerates">Parameter AllowNegativeRates</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#description_62">Description</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-errormessage">Parameter ErrorMessage</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-checkdigitincreaseconsistency">Parameter CheckDigitIncreaseConsistency</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#description_63">Description</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueagestartup">Parameter PreValueAgeStartup</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-errormessage">Parameter ErrorMessage</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#description_64">Description</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueuse">Parameter PreValueUse</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueagestartup">Parameter PreValueAgeStartup</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#description_65">Description</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueuse">Parameter PreValueUse</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description_66">Description</a>
     </li>
         </ul>
     </li>
@@ -523,31 +529,31 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-autoadjustsummertime">Parameter AutoAdjustSummertime</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#description_66">Description</a>
+    <li class="toctree-l4"><a class="reference internal" href="#description_67">Description</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-hostname">Parameter Hostname</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#description_67">Description</a>
+    <li class="toctree-l4"><a class="reference internal" href="#description_68">Description</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-setupmode">Parameter SetupMode</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#description_68">Description</a>
+    <li class="toctree-l4"><a class="reference internal" href="#description_69">Description</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-timeserver">Parameter TimeServer</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#description_69">Description</a>
+    <li class="toctree-l4"><a class="reference internal" href="#description_70">Description</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-timezone">Parameter TimeZone</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#description_70">Description</a>
+    <li class="toctree-l4"><a class="reference internal" href="#description_71">Description</a>
     </li>
         </ul>
     </li>
@@ -653,6 +659,8 @@
               
                 <h1 id="parameters">Parameters</h1>
 <p>This page lists all available <a href="../Configuration">Configuration</a> Parameters.</p>
+<p>If a parameter or section has a tick box on its left side, you can disable it.
+In such case the functionality gets disabled respectively the default values will be used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is an auto-generated page! See the <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/blob/main/README.md">README</a> for details!</p>
@@ -663,10 +671,15 @@
 <p>Default Value: <code>Default</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Algorithm used for the alignment step.</p>
+<ul>
+<li><code>Default</code>: Use only red color channel</li>
+<li><code>HighAccuracy</code>: Use all 3 color Channels (3x slower)</li>
+<li><code>Fast</code>: First time use <code>HighAccuracy</code>, then only check if the image is shifted</li>
+</ul>
 <hr />
 <h3 id="parameter-flipimagesize">Parameter <code>FlipImageSize</code></h3>
 <p>Default Value: <code>false</code></p>
@@ -699,29 +712,33 @@
 <p>Default Value: <code>20</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_4">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p><code>x</code> size (width) in which the reference is searched.</p>
 <hr />
 <h3 id="parameter-searchfieldy">Parameter <code>SearchFieldY</code></h3>
 <p>Default Value: <code>20</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_5">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p><code>y</code> size (height) in which the reference is searched.</p>
 <hr />
 <h2 id="analog">[Analog]</h2>
 <h3 id="parameter-cnngoodthreshold">Parameter <code>CNNGoodThreshold</code></h3>
 <p>Default Value: <code>0.5</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_6">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>EXPERIMENTAL - NOT WORKING FOR ALL CNNs!</p>
+</div>
 <hr />
 <h3 id="parameter-extendedresolution">Parameter <code>ExtendedResolution</code></h3>
 <p>Default Value: <code>true</code></p>
@@ -731,24 +748,24 @@
 <h3 id="parameter-logimagelocation">Parameter <code>LogImageLocation</code></h3>
 <p>Default Value: <code>/log/analog</code></p>
 <h4 id="description_8">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Location to store separated analog images on the SD-Card for logging.</p>
 <hr />
 <h3 id="parameter-logfileretentionindays">Parameter <code>LogfileRetentionInDays</code></h3>
 <p>Default Value: <code>3</code></p>
 <h4 id="description_9">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Days to keep the separated analog images (<code>0</code> = forever).</p>
 <hr />
 <h3 id="parameter-model">Parameter <code>Model</code></h3>
 <p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code></p>
 <h4 id="description_10">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr />
 <h2 id="autotimer">[AutoTimer]</h2>
 <h3 id="parameter-autostart">Parameter <code>AutoStart</code></h3>
 <p>Default Value: <code>true</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_11">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -785,32 +802,36 @@
 <p>Default Value: <code>0.5</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_17">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>EXPERIMENTAL - NOT WORKING FOR ALL CNNs!</p>
+</div>
 <hr />
 <h3 id="parameter-logimagelocation_1">Parameter <code>LogImageLocation</code></h3>
 <p>Default Value: <code>/log/digit</code></p>
 <h4 id="description_18">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Location to store separated digit images on the SD-Card for logging.</p>
 <hr />
 <h3 id="parameter-logfileretentionindays_2">Parameter <code>LogfileRetentionInDays</code></h3>
 <p>Default Value: <code>3</code></p>
 <h4 id="description_19">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Days to keep the separated digit images (<code>0</code> = forever).</p>
 <hr />
 <h3 id="parameter-model_1">Parameter <code>Model</code></h3>
 <p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code></p>
 <h4 id="description_20">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr />
 <h2 id="gpio">[GPIO]</h2>
 <h3 id="parameter-io0">Parameter <code>IO0</code></h3>
 <p>Default Value: <code>input disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_21">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -819,7 +840,7 @@
 <p>Default Value: <code>input disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_22">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -828,7 +849,7 @@
 <p>Default Value: <code>input-pullup disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_23">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -837,7 +858,7 @@
 <p>Default Value: <code>input-pullup disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_24">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -846,7 +867,7 @@
 <p>Default Value: <code>input disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_25">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -855,7 +876,7 @@
 <p>Default Value: <code>built-in-led disabled 10 false false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_26">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -956,57 +977,73 @@
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_44">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Image Brightness (<code>-2</code> .. <code>2</code>) </p>
 <hr />
 <h3 id="parameter-contrast">Parameter <code>Contrast</code></h3>
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_45">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Image Contrast (<code>-2</code> .. <code>2</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Camera driver is not fully supporting this setting yet (no impact on image) </p>
+</div>
 <hr />
 <h3 id="parameter-demo">Parameter <code>Demo</code></h3>
-<p>Default Value: <code>true</code></p>
+<p>Default Value: <code>false</code></p>
 <h4 id="description_46">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Enable to use demo images instead of the real camera images.
+Make sure to have a <code>/demo</code> folder on your SD-Card and it contains the expected files!
+Check <a href="../Demo-Mode">here</a> for details. </p>
 <hr />
 <h3 id="parameter-fixedexposure">Parameter <code>FixedExposure</code></h3>
 <p>Default Value: <code>false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_47">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Fixes the illumination setting of camera at the startup and uses this later --&gt;
+individual round is faster.</p>
 <hr />
 <h3 id="parameter-imagequality">Parameter <code>ImageQuality</code></h3>
 <p>Default Value: <code>12</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_48">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Quality index for pictures. <code>0</code> (high) .. <code>63</code> (low)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values below <code>12</code> can result in reboots as the image gets larger and might no longer fit in the available RAM!</p>
+</div>
 <hr />
 <h3 id="parameter-imagesize">Parameter <code>ImageSize</code></h3>
 <p>Default Value: <code>VGA</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_49">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Size of the camera picture.
+Available options:</p>
+<ul>
+<li><code>VGA</code> (640 x 480 pixel)</li>
+<li><code>QVGA</code> (320 x 240 pixel)</li>
+</ul>
 <hr />
 <h3 id="parameter-ledintensity">Parameter <code>LEDIntensity</code></h3>
 <p>Default Value: <code>50</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_50">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
@@ -1014,98 +1051,121 @@
 <h3 id="parameter-logimagelocation_2">Parameter <code>LogImageLocation</code></h3>
 <p>Default Value: <code>/log/source</code></p>
 <h4 id="description_51">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Location on the SD-Card to store the raw images for logging.</p>
 <hr />
 <h3 id="parameter-logfileretentionindays_3">Parameter <code>LogfileRetentionInDays</code></h3>
 <p>Default Value: <code>15</code></p>
 <h4 id="description_52">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
 <hr />
 <h3 id="parameter-saturation">Parameter <code>Saturation</code></h3>
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_53">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Image Saturation (<code>-2</code> .. <code>2</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Camera driver is not fully supporting this setting yet (no impact on image)!</p>
+</div>
 <hr />
 <h3 id="parameter-waitbeforetakingpicture">Parameter <code>WaitBeforeTakingPicture</code></h3>
 <p>Default Value: <code>5</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <h4 id="description_54">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Waiting time between switching illumination on and taking the picture (in seconds)-</p>
 <hr />
 <h2 id="postprocessing">[PostProcessing]</h2>
 <h3 id="parameter-numberanalogdigitaltransitionstart">Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
 <p>Default Value: <code>9.2</code></p>
 <h4 id="description_55">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
+Look for the start of changing of the first digit and note the analog pointer value behind.
+Set it here. Only used on combination of digits and analog pointers.
+See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
 <hr />
 <h3 id="parameter-numberdecimalshift">Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
 <p>Default Value: <code>0</code></p>
 <h4 id="description_56">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Shift the decimal separator (positiv or negativ).
+Eg. to move from 'm³' to 'liter' (1 m³ equals 1000 liters), you need to set it to +3.</p>
 <hr />
 <h3 id="parameter-numberextendedresolution">Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
 <p>Default Value: <code>false</code></p>
 <h4 id="description_57">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Use the decimal place of the last analog counter for increased accuracy.</p>
 <hr />
 <h3 id="parameter-numberignoreleadingnan">Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
 <p>Default Value: <code>true</code></p>
 <h4 id="description_58">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Leading <code>N</code>'s will be deleted before further processing.</p>
+<p>This is only relevant for models which use <code>N</code>!</p>
 <hr />
 <h3 id="parameter-numbermaxratetype">Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
 <p>Default Value: <code>AbsoluteChange</code></p>
 <h4 id="description_59">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
+as rate normalized to the interval (<code>RateChange</code> = change/minute).</p>
 <hr />
 <h3 id="parameter-numbermaxratevalue">Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
 <p>Default Value: <code>0.05</code></p>
 <h4 id="description_60">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<p>Maximum change of a reading.</p>
+<p>Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
+<hr />
+<h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
+<p>Default Value: <code>false</code></p>
+<h4 id="description_61">Description</h4>
+<p>Allow a meter to count backwards (decreasing values).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
+</div>
 <hr />
 <h3 id="parameter-allownegativerates">Parameter <code>AllowNegativeRates</code></h3>
 <p>Default Value: <code>false</code></p>
-<h4 id="description_61">Description</h4>
+<h4 id="description_62">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
 <h3 id="parameter-checkdigitincreaseconsistency">Parameter <code>CheckDigitIncreaseConsistency</code></h3>
 <p>Default Value: <code>false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<h4 id="description_62">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<h4 id="description_63">Description</h4>
+<p>An additional consistency check.
+It especially improves the zero crossing check between digits.</p>
 <hr />
 <h3 id="parameter-errormessage">Parameter <code>ErrorMessage</code></h3>
 <p>Default Value: <code>true</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<h4 id="description_63">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<h4 id="description_64">Description</h4>
+<p>Do not show error message in return value.
+In an error case, the last valid number will be used for the various transmission protocols (MQTT, InfluxDB, REST, ...).</p>
 <hr />
 <h3 id="parameter-prevalueagestartup">Parameter <code>PreValueAgeStartup</code></h3>
 <p>Default Value: <code>720</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<h4 id="description_64">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<h4 id="description_65">Description</h4>
+<p>Time in minutes, how long a previous read value is valid after reboot.</p>
 <hr />
 <h3 id="parameter-prevalueuse">Parameter <code>PreValueUse</code></h3>
 <p>Default Value: <code>true</code></p>
-<h4 id="description_65">Description</h4>
-<p>Please fill me with an explanation and useful links</p>
+<h4 id="description_66">Description</h4>
+<p>Use the previous value (value from previous round) for consistency checks.
+This also work through a reboot of the device!</p>
 <hr />
 <h2 id="system">[System]</h2>
 <h3 id="parameter-autoadjustsummertime">Parameter <code>AutoAdjustSummertime</code></h3>
@@ -1114,16 +1174,16 @@
 <p class="admonition-title">Note</p>
 <p>This parameter is not accessible through the Web Interface Configuration Page!</p>
 </div>
-<h4 id="description_66">Description</h4>
+<h4 id="description_67">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
 <h3 id="parameter-hostname">Parameter <code>Hostname</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert parameter!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<h4 id="description_67">Description</h4>
+<h4 id="description_68">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
 <h3 id="parameter-setupmode">Parameter <code>SetupMode</code></h3>
@@ -1132,17 +1192,17 @@
 <p class="admonition-title">Note</p>
 <p>This parameter is not accessible through the Web Interface Configuration Page!</p>
 </div>
-<h4 id="description_68">Description</h4>
+<h4 id="description_69">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
 <h3 id="parameter-timeserver">Parameter <code>TimeServer</code></h3>
 <p>Default Value: <code>pool.ntp.org</code></p>
-<h4 id="description_69">Description</h4>
+<h4 id="description_70">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
 <h3 id="parameter-timezone">Parameter <code>TimeZone</code></h3>
 <p>Default Value: <code>CET-1CEST,M3.5.0,M10.5.0/3</code></p>
-<h4 id="description_70">Description</h4>
+<h4 id="description_71">Description</h4>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
               
