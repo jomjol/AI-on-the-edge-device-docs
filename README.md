@@ -25,12 +25,20 @@ Each page has a link on its top-right corner `Edit on GitHub` which brings you d
 1. Add a new `*.md` document in the [docs](docs) folder.
 1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
-## Parameter Docs Generator
-The script `generate-param-docs/generate-param-doc-pages.py` should be run whenever the [configfile](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/sd-card/config/config.ini) in the main project repo changed.
-It then checks if there is a markdown file  for each of the contained parameters. if not, it generates a templated page.
+## Parameter Documentation
+Each parameter which is listed in the [configfile](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/sd-card/config/config.ini) in the main project repo 
+has its own description page in the folder `param-docs/parameter-pages` (grouped by the config sections).
+Those pages can be edited as needed.
 
-The script `generate-param-docs/concat-parameter-pages.py` should be run whenever one of the parameter documentation pages changed.
-It then concatenates all parameter pages into a single `Parameters.md` which can be added to the documentation.
+The script `param-docs/concat-parameter-pages.py` should be run whenever one of the pages changed.
+It then concatenates all pages into the single `../docs/Parameters.md` which gets be added to the `mkdocs` documentation.
+
+### Template Generator
+The script `param-docs/generate-param-doc-pages.py` should be run whenever a new parameter gets added to the config file.
+It then checks if there is already page for each of the parameters.
+ - If no page exists yet, a templated page gets generated.
+ - Existing pages do not get modified.
+
 
 ## Local Test
 To test it locally:

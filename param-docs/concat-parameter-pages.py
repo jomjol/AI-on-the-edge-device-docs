@@ -8,12 +8,12 @@ import shutil
 import glob
 
 
-parameterDocsFolder = "parameter-docs"
+parameterDocsFolder = "parameter-pages"
 parameterOverviewFile = "../docs/Parameters.md"
 parameterOverviewTemplateFile = "./templates/overview.md"
 
 def appendParameterFile(folder, file):
-    print(folder, file)
+    #print(folder, file)
 
     with open(file, 'r') as parameterFileHandle:
         parameterDoc = parameterFileHandle.read()

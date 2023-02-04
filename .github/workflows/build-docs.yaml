@@ -40,7 +40,7 @@ jobs:
       - name: Store docs in gh-pages branch
         run: |
           # Update Parameter Documentation
-          cd generate-param-docs
+          cd param-docs
           python generate-param-doc-pages.py
           python concat-parameter-pages.py
           cd ..
