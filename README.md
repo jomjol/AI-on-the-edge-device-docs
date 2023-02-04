@@ -39,6 +39,20 @@ It then checks if there is already page for each of the parameters.
  - If no page exists yet, a templated page gets generated.
  - Existing pages do not get modified.
 
+If the parameter is listed in `expert-params.txt`, an **Expert warning** will be shown.
+
+If the parameter is listed in `hidden-in-ui.txt`, a **Note**  will be shown.
+
+## Formating
+### Boxes
+Boxes can be shown using the **admonition** extension.
+```
+!!! Note
+    I am a note
+```
+Make sure to have 4-whitespace Intents!
+Possible types: `attention, caution, danger, error, hint, important, note, tip, and warning`
+See https://python-markdown.github.io/extensions/admonition/
 
 ## Local Test
 To test it locally:
