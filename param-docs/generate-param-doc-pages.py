@@ -13,6 +13,9 @@ configFileUrl = "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/
 
 parameterDocsFolder = "parameter-pages"
 parameterTemplateFile = "./templates/parameter.md"
+expertParameterListFile = "./expert-params.txt"
+hiddenInUiParameterListFile = "./hidden-in-ui.txt"
+
 
 # Fetch default config file from URL
 print("Fetching %r..." % configFileUrl)
@@ -27,6 +30,14 @@ for l in range(len(lines)):
         lines[l] = lines[l][1:] # Remove comment
 
 content = "".join(lines)
+
+# Fetch list of expert parameters
+with open(expertParameterListFile) as f:
+    expertParameters = f.read().splitlines()
+
+# Fetch list of parameters not available through the UI
+with open(hiddenInUiParameterListFile) as f:
+    hiddenInUiParameters = f.read().splitlines()
 
 
 config = configparser.ConfigParser(allow_no_value=True)
@@ -56,6 +67,9 @@ for section in config:
                 value = config[section][parameter]
                 #print("  %s = %s" % (parameter, value))
 
+                if "main." in parameter:
+                    parameter = parameter.replace("main.", "<NUMBER>.")
+
                 """
                 For each config line, create a markdown file
                 """
@@ -67,5 +81,15 @@ for section in config:
                         content = parameterTemplate
                         content = content.replace("$NAME", parameter)
                         content = content.replace("$DEFAULT", value)
+
+                        if parameter in expertParameters:
+                            content = content.replace("$EXPERT_PARAMETER", "!!! Warning\n    This is an expert parameter!") # Note: Needs a 4 whitespace Intent!
+                        else:
+                            content = content.replace("$EXPERT_PARAMETER", "")
+
+                        if parameter in hiddenInUiParameters:
+                            content = content.replace("$HIDDEN_IN_UI", "!!! Note\n    This parameter is not accessible through the Web Interface Configuration Page!") # Note: Needs a 4 whitespace Intent!
+                        else:
+                            content = content.replace("$HIDDEN_IN_UI", "")
 
                         paramFileHandle.write(content)
