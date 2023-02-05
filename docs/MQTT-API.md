@@ -15,6 +15,7 @@ The following parameters have to be defined:
 
 ### Status
 `MainTopic`/{status topic}, e.g. `watermeter/status`
+
 * #### Connection
 
 * #### Interval

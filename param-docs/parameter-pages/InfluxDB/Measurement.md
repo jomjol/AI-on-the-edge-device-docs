@@ -1,10 +1,5 @@
 # Parameter `Measurement`
 Default Value: `undefined`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Name of the Measurement to use to publish the value.

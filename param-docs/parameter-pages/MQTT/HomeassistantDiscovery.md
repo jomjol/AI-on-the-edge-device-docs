@@ -1,10 +1,7 @@
 # Parameter `HomeassistantDiscovery`
 Default Value: `true`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Enable or disable the Homeassistant Discovery.
 
+See [here](../Integration-Home-Assistant) for details about the discovery.

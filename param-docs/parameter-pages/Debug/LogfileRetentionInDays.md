@@ -1,10 +1,5 @@
 # Parameter `LogfileRetentionInDays`
 Default Value: `3`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
-
+Number of days to keep the log files (`0` = forever).

@@ -1,10 +1,9 @@
 # Parameter `user`
 Default Value: `undefined`
 
-
-
-
-
 ## Description
-Please fill me with an explanation and useful links
+Username for the InfluxDB v1 authentication.
+
+!!! Note
+    Currently only InfluxDB v1 is supported!
 

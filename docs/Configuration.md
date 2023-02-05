@@ -72,8 +72,3 @@ Details on the image recognition flow can be found in the other project here: ht
 
 The ```config.ini``` here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see [here](outdated--Migrate-Old-Config-To-New-Config.md).
 
-
-
-### Integration into Home Assistant
-
-Thanks to the help of the user @deadly667 here are some hints for the integration into the home assistant: [[Integration-Home-Assistant]]

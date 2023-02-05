@@ -21,6 +21,7 @@ IO4
 IO12
 IO13
 AutoStart
-AutoStart
 Hostname
 RSSIThreashold
+TimeServer
+FlipImageSize
