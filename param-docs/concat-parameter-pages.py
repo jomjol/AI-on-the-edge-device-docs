@@ -21,8 +21,7 @@ def appendParameterFile(folder, file):
 
     # Add parameter doc to overview page
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
-        overviewFileHandle.write(parameterDoc + "\n---\n\n")
-
+        overviewFileHandle.write(parameterDoc + "\n\n---\n\n")
 
 
 # Create templated overview markdown file

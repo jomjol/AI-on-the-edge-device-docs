@@ -5,5 +5,4 @@ $EXPERT_PARAMETER
 
 $HIDDEN_IN_UI
 
-Please fill me with an explanation and useful links
-
+Please fill me with an explanation and useful links.
