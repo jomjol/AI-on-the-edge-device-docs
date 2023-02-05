@@ -21,7 +21,9 @@ def appendParameterFile(folder, file):
 
     # Add parameter doc to overview page
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
-        overviewFileHandle.write(parameterDoc + "\n\n---\n\n")
+        #overviewFileHandle.write(parameterDoc + "\n\n---\n\n")
+        overviewFileHandle.write(parameterDoc)
+        overviewFileHandle.write("\n\n<hr style=\"border:2px solid\">\n\n")
 
 
 # Create templated overview markdown file
@@ -64,6 +66,7 @@ for folder in folders:
 
     # Add section
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
+        #overviewFileHandle.write("\n\n<hr style=\"border:5px solid\">\n\n")
         overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
