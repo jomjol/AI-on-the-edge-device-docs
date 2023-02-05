@@ -13,3 +13,5 @@ In such case the functionality gets disabled respectively the default values wil
 
 ## List of all Parameters
 $TOC
+
+<hr style="border:2px solid">

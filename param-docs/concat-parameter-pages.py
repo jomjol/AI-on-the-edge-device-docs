@@ -12,9 +12,7 @@ parameterDocsFolder = "parameter-pages"
 parameterOverviewFile = "../docs/Parameters.md"
 parameterOverviewTemplateFile = "./templates/overview.md"
 
-def appendParameterFile(folder, file):
-    #print(folder, file)
-
+def appendParameterFile(section, file, parameterName):
     with open(file, 'r') as parameterFileHandle:
         parameterDoc = parameterFileHandle.read()
         parameterDoc = parameterDoc.replace("# ", "### ") # Move all headings 2 level down
@@ -22,6 +20,7 @@ def appendParameterFile(folder, file):
     # Add parameter doc to overview page
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
         #overviewFileHandle.write(parameterDoc + "\n\n---\n\n")
+        overviewFileHandle.write("<a id=%s-%s></a>\n" % (section, parameterName))
         overviewFileHandle.write(parameterDoc)
         overviewFileHandle.write("\n\n<hr style=\"border:2px solid\">\n\n")
 
@@ -44,9 +43,10 @@ for folder in folders:
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
     for file in files:
-        parameter = ".".join(file.split("/")[-1].split(".")[:-1])
-        anchor = parameter.replace("<", "").replace(">", "").replace(".", "").lower()
-        toc += " - [`%s`](#parameter-%s)\n" % (parameter, anchor)
+        section = folder
+        parameter = file.split("/")[-1].replace(".md", "")
+        parameter = parameter.replace("<", "").replace(">", "")
+        toc += " - [`%s`](#%s-%s)\n" % (parameter, section, parameter)
 
     with open(parameterOverviewTemplateFile, 'r') as overviewFileHandle:
         overviewFileContent = overviewFileHandle.read()
@@ -72,4 +72,6 @@ for folder in folders:
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
     for file in files:
 #        print("  %s" % file)
-        appendParameterFile(folder, file)
+        parameter = file.split("/")[-1].replace(".md", "")
+        parameter = parameter.replace("<", "").replace(">", "")
+        appendParameterFile(folder, file, parameter)
