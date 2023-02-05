@@ -1,7 +1,6 @@
 # Parameter `<NUMBERS>.AllowNegativeRates`
 Default Value: `false`
 
-## Description
 Allow a meter to count backwards (decreasing values).
 
 !!! Note

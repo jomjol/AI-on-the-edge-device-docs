@@ -1,7 +1,6 @@
 # Parameter `password`
 Default Value: `undefined`
 
-## Description
 Password for the InfluxDB v1 authentication.
 
 !!! Note

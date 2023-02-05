@@ -1,7 +1,6 @@
 # Parameter `Logfile`
 Default Value: `1` (`ERROR`)
 
-## Description
 Define the log level for the logging to the SD-Card.
 
 Available options:

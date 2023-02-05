@@ -4,7 +4,6 @@ Default Value: `built-in-led disabled 10 false false`
 !!! Warning
     This is an **Expert Parameter**! Only change it if you understand what it does!
 
-## Description
 This parameter can be used to configure the GPIO `IO4` pin.
 
 !!! Warning

@@ -1,7 +1,6 @@
 # Parameter `MeterType`
 Default Value: `other`
 
-## Description
 Select the Meter Type so the sensors have the right units in Homeassistant.
 
 !!! Note

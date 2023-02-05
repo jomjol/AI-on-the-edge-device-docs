@@ -4,7 +4,6 @@ Default Value: `true`
 !!! Warning
     This is an **Expert Parameter**! Only change it if you understand what it does!
 
-## Description
 Automatically start the Flow (Digitization Rounds) immediately after power up.
 
 !!! Note

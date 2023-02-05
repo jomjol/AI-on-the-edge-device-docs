@@ -1,7 +1,6 @@
 # Parameter `DataLogActive`
 Default Value: `true`
 
-## Description
 Activate data logging to SD-Card.
 
 !!! Warning

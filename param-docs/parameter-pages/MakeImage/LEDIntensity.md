@@ -5,5 +5,4 @@ Default Value: `50`
     This is an **Expert Parameter**! Only change it if you understand what it does!
     This parameter can also be set on the Reference Image configuration.
 
-## Description
 Set the Flash LED Intensity.

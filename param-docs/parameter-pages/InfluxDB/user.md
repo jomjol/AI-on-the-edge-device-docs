@@ -1,7 +1,6 @@
 # Parameter `user`
 Default Value: `undefined`
 
-## Description
 Username for the InfluxDB v1 authentication.
 
 !!! Note
