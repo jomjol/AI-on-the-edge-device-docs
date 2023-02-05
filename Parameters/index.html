@@ -582,7 +582,7 @@ For backwards compatibility, this did not get changed.</p>
 <p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>EXPERIMENTAL - NOT WORKING FOR ALL CNNs!</p>
+<p>This is only supported for the <code>ana-class100</code> models!</p>
 </div>
 <hr style="border:2px solid">
 
@@ -696,7 +696,7 @@ A SD-Card has limited write cycles. Since the device does not support <a href="h
 <p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>EXPERIMENTAL - NOT WORKING FOR ALL CNNs!</p>
+<p>This is only supported for the <code>dig-class100</code> models!</p>
 </div>
 <hr style="border:2px solid">
 
@@ -971,7 +971,7 @@ The single value will be published with the following key: <code>MAINTOPIC/NUMBE
 <p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For 'Watermeter' you need to have Homeassistant 2022.11 or newer!</p>
+<p>For <code>Watermeter</code> you need to have Homeassistant 2022.11 or newer!</p>
 </div>
 <p>Please also make sure that the selected Meter Type matches the dimension of the value provided by the meter!
 Eg. if your meter provides <code>m³</code>, you need to also set it to <code>m³</code>.
