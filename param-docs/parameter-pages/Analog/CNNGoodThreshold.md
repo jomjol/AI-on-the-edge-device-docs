@@ -7,4 +7,4 @@ Default Value: `0.5`
 Threshold above which the classification should be to accept the value (only meaningful for digits).
 
 !!! Warning
-    EXPERIMENTAL - NOT WORKING FOR ALL CNNs!
+    This is only supported for the `ana-class100` models!
