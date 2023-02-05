@@ -79,7 +79,9 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Parameters</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#alignment">[Alignment]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-all-parameters">List of all Parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-alignment">Section Alignment</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-alignmentalgo">Parameter AlignmentAlgo</a>
     </li>
@@ -95,7 +97,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#analog">[Analog]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-analog">Section Analog</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold">Parameter CNNGoodThreshold</a>
     </li>
@@ -109,7 +111,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#autotimer">[AutoTimer]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-autotimer">Section AutoTimer</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-autostart">Parameter AutoStart</a>
     </li>
@@ -117,7 +119,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#datalogging">[DataLogging]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-datalogging">Section DataLogging</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-datalogactive">Parameter DataLogActive</a>
     </li>
@@ -125,7 +127,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#debug">[Debug]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-debug">Section Debug</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-logfile">Parameter Logfile</a>
     </li>
@@ -133,7 +135,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#digits">[Digits]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-digits">Section Digits</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold_1">Parameter CNNGoodThreshold</a>
     </li>
@@ -145,7 +147,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#gpio">[GPIO]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-gpio">Section GPIO</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-io0">Parameter IO0</a>
     </li>
@@ -169,7 +171,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#influxdb">[InfluxDB]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-influxdb">Section InfluxDB</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-database">Parameter Database</a>
     </li>
@@ -183,7 +185,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mqtt">[MQTT]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-mqtt">Section MQTT</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-clientid">Parameter ClientID</a>
     </li>
@@ -203,7 +205,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#makeimage">[MakeImage]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-makeimage">Section MakeImage</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-brightness">Parameter Brightness</a>
     </li>
@@ -229,8 +231,10 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#postprocessing">[PostProcessing]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-postprocessing">Section PostProcessing</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberallownegativerates">Parameter &lt;NUMBER&gt;.AllowNegativeRates</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-numberanalogdigitaltransitionstart">Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-numberdecimalshift">Parameter &lt;NUMBER&gt;.DecimalShift</a>
@@ -257,7 +261,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#system">[System]</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-system">Section System</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-autoadjustsummertime">Parameter AutoAdjustSummertime</a>
     </li>
@@ -384,8 +388,119 @@ In such case the functionality gets disabled respectively the default values wil
 <p>Due to a typo, one of the sections is called <code>MakeImage</code> instead of <code>TakeImage</code>!
 For backwards compatibility, this did not get changed.</p>
 </div>
+<h2 id="list-of-all-parameters">List of all Parameters</h2>
+<p><a href="#alignment">Alignment</a></p>
+<ul>
+<li><a href="#parameter-alignmentalgo"><code>AlignmentAlgo</code></a></li>
+<li><a href="#parameter-flipimagesize"><code>FlipImageSize</code></a></li>
+<li><a href="#parameter-initialmirror"><code>InitialMirror</code></a></li>
+<li><a href="#parameter-initialrotate"><code>InitialRotate</code></a></li>
+<li><a href="#parameter-searchfieldx"><code>SearchFieldX</code></a></li>
+<li><a href="#parameter-searchfieldy"><code>SearchFieldY</code></a></li>
+</ul>
+<p><a href="#analog">Analog</a></p>
+<ul>
+<li><a href="#parameter-cnngoodthreshold"><code>CNNGoodThreshold</code></a></li>
+<li><a href="#parameter-extendedresolution"><code>ExtendedResolution</code></a></li>
+<li><a href="#parameter-logimagelocation"><code>LogImageLocation</code></a></li>
+<li><a href="#parameter-logfileretentionindays"><code>LogfileRetentionInDays</code></a></li>
+<li><a href="#parameter-model"><code>Model</code></a></li>
+</ul>
+<p><a href="#autotimer">AutoTimer</a></p>
+<ul>
+<li><a href="#parameter-autostart"><code>AutoStart</code></a></li>
+<li><a href="#parameter-intervall"><code>Intervall</code></a></li>
+</ul>
+<p><a href="#datalogging">DataLogging</a></p>
+<ul>
+<li><a href="#parameter-datalogactive"><code>DataLogActive</code></a></li>
+<li><a href="#parameter-datalogretentionindays"><code>DataLogRetentionInDays</code></a></li>
+</ul>
+<p><a href="#debug">Debug</a></p>
+<ul>
+<li><a href="#parameter-logfile"><code>Logfile</code></a></li>
+<li><a href="#parameter-logfileretentionindays"><code>LogfileRetentionInDays</code></a></li>
+</ul>
+<p><a href="#digits">Digits</a></p>
+<ul>
+<li><a href="#parameter-cnngoodthreshold"><code>CNNGoodThreshold</code></a></li>
+<li><a href="#parameter-logimagelocation"><code>LogImageLocation</code></a></li>
+<li><a href="#parameter-logfileretentionindays"><code>LogfileRetentionInDays</code></a></li>
+<li><a href="#parameter-model"><code>Model</code></a></li>
+</ul>
+<p><a href="#gpio">GPIO</a></p>
+<ul>
+<li><a href="#parameter-io0"><code>IO0</code></a></li>
+<li><a href="#parameter-io1"><code>IO1</code></a></li>
+<li><a href="#parameter-io12"><code>IO12</code></a></li>
+<li><a href="#parameter-io13"><code>IO13</code></a></li>
+<li><a href="#parameter-io3"><code>IO3</code></a></li>
+<li><a href="#parameter-io4"><code>IO4</code></a></li>
+<li><a href="#parameter-ledcolor"><code>LEDColor</code></a></li>
+<li><a href="#parameter-lednumbers"><code>LEDNumbers</code></a></li>
+<li><a href="#parameter-ledtype"><code>LEDType</code></a></li>
+<li><a href="#parameter-maintopicmqtt"><code>MainTopicMQTT</code></a></li>
+</ul>
+<p><a href="#influxdb">InfluxDB</a></p>
+<ul>
+<li><a href="#parameter-database"><code>Database</code></a></li>
+<li><a href="#parameter-measurement"><code>Measurement</code></a></li>
+<li><a href="#parameter-uri"><code>Uri</code></a></li>
+<li><a href="#parameter-password"><code>password</code></a></li>
+<li><a href="#parameter-user"><code>user</code></a></li>
+</ul>
+<p><a href="#mqtt">MQTT</a></p>
+<ul>
+<li><a href="#parameter-clientid"><code>ClientID</code></a></li>
+<li><a href="#parameter-homeassistantdiscovery"><code>HomeassistantDiscovery</code></a></li>
+<li><a href="#parameter-maintopic"><code>MainTopic</code></a></li>
+<li><a href="#parameter-metertype"><code>MeterType</code></a></li>
+<li><a href="#parameter-setretainflag"><code>SetRetainFlag</code></a></li>
+<li><a href="#parameter-uri"><code>Uri</code></a></li>
+<li><a href="#parameter-password"><code>password</code></a></li>
+<li><a href="#parameter-user"><code>user</code></a></li>
+</ul>
+<p><a href="#makeimage">MakeImage</a></p>
+<ul>
+<li><a href="#parameter-brightness"><code>Brightness</code></a></li>
+<li><a href="#parameter-contrast"><code>Contrast</code></a></li>
+<li><a href="#parameter-demo"><code>Demo</code></a></li>
+<li><a href="#parameter-fixedexposure"><code>FixedExposure</code></a></li>
+<li><a href="#parameter-imagequality"><code>ImageQuality</code></a></li>
+<li><a href="#parameter-imagesize"><code>ImageSize</code></a></li>
+<li><a href="#parameter-ledintensity"><code>LEDIntensity</code></a></li>
+<li><a href="#parameter-logimagelocation"><code>LogImageLocation</code></a></li>
+<li><a href="#parameter-logfileretentionindays"><code>LogfileRetentionInDays</code></a></li>
+<li><a href="#parameter-saturation"><code>Saturation</code></a></li>
+<li><a href="#parameter-waitbeforetakingpicture"><code>WaitBeforeTakingPicture</code></a></li>
+</ul>
+<p><a href="#postprocessing">PostProcessing</a></p>
+<ul>
+<li><a href="#parameter-numberallownegativerates"><code>&lt;NUMBER&gt;.AllowNegativeRates</code></a></li>
+<li><a href="#parameter-numberanalogdigitaltransitionstart"><code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></a></li>
+<li><a href="#parameter-numberdecimalshift"><code>&lt;NUMBER&gt;.DecimalShift</code></a></li>
+<li><a href="#parameter-numberextendedresolution"><code>&lt;NUMBER&gt;.ExtendedResolution</code></a></li>
+<li><a href="#parameter-numberignoreleadingnan"><code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></a></li>
+<li><a href="#parameter-numbermaxratetype"><code>&lt;NUMBER&gt;.MaxRateType</code></a></li>
+<li><a href="#parameter-numbermaxratevalue"><code>&lt;NUMBER&gt;.MaxRateValue</code></a></li>
+<li><a href="#parameter-numbersallownegativerates"><code>&lt;NUMBERS&gt;.AllowNegativeRates</code></a></li>
+<li><a href="#parameter-allownegativerates"><code>AllowNegativeRates</code></a></li>
+<li><a href="#parameter-checkdigitincreaseconsistency"><code>CheckDigitIncreaseConsistency</code></a></li>
+<li><a href="#parameter-errormessage"><code>ErrorMessage</code></a></li>
+<li><a href="#parameter-prevalueagestartup"><code>PreValueAgeStartup</code></a></li>
+<li><a href="#parameter-prevalueuse"><code>PreValueUse</code></a></li>
+</ul>
+<p><a href="#system">System</a></p>
+<ul>
+<li><a href="#parameter-autoadjustsummertime"><code>AutoAdjustSummertime</code></a></li>
+<li><a href="#parameter-hostname"><code>Hostname</code></a></li>
+<li><a href="#parameter-rssithreashold"><code>RSSIThreashold</code></a></li>
+<li><a href="#parameter-setupmode"><code>SetupMode</code></a></li>
+<li><a href="#parameter-timeserver"><code>TimeServer</code></a></li>
+<li><a href="#parameter-timezone"><code>TimeZone</code></a></li>
+</ul>
 <hr />
-<h2 id="alignment">[Alignment]</h2>
+<h2 id="section-alignment">Section <code>Alignment</code></h2>
 <h3 id="parameter-alignmentalgo">Parameter <code>AlignmentAlgo</code></h3>
 <p>Default Value: <code>Default</code></p>
 <div class="admonition warning">
@@ -444,7 +559,7 @@ For backwards compatibility, this did not get changed.</p>
 </div>
 <p><code>y</code> size (height) in which the reference is searched.</p>
 <hr />
-<h2 id="analog">[Analog]</h2>
+<h2 id="section-analog">Section <code>Analog</code></h2>
 <h3 id="parameter-cnngoodthreshold">Parameter <code>CNNGoodThreshold</code></h3>
 <p>Default Value: <code>0.5</code></p>
 <div class="admonition warning">
@@ -477,7 +592,7 @@ For backwards compatibility, this did not get changed.</p>
 <p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code></p>
 <p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr />
-<h2 id="autotimer">[AutoTimer]</h2>
+<h2 id="section-autotimer">Section <code>AutoTimer</code></h2>
 <h3 id="parameter-autostart">Parameter <code>AutoStart</code></h3>
 <p>Default Value: <code>true</code></p>
 <div class="admonition warning">
@@ -496,7 +611,7 @@ The only reason to set it to <code>false</code> is debugging or if you want to t
 <p>Interval in minutes in which the Flow (Digitization Round) is run.
 If a rund takes longer than this interval, the next round gets postponed until the current round completes.</p>
 <hr />
-<h2 id="datalogging">[DataLogging]</h2>
+<h2 id="section-datalogging">Section <code>DataLogging</code></h2>
 <h3 id="parameter-datalogactive">Parameter <code>DataLogActive</code></h3>
 <p>Default Value: <code>true</code></p>
 <p>Activate data logging to SD-Card.</p>
@@ -509,7 +624,7 @@ If a rund takes longer than this interval, the next round gets postponed until t
 <p>Default Value: <code>3</code></p>
 <p>Number of days to keep the data files (<code>0</code> = forever).</p>
 <hr />
-<h2 id="debug">[Debug]</h2>
+<h2 id="section-debug">Section <code>Debug</code></h2>
 <h3 id="parameter-logfile">Parameter <code>Logfile</code></h3>
 <p>Default Value: <code>1</code> (<code>ERROR</code>)</p>
 <p>Define the log level for the logging to the SD-Card.</p>
@@ -531,7 +646,7 @@ A SD-Card has limited write cycles. Since the device does not support <a href="h
 <p>Default Value: <code>3</code></p>
 <p>Number of days to keep the log files (<code>0</code> = forever).</p>
 <hr />
-<h2 id="digits">[Digits]</h2>
+<h2 id="section-digits">Section <code>Digits</code></h2>
 <h3 id="parameter-cnngoodthreshold_1">Parameter <code>CNNGoodThreshold</code></h3>
 <p>Default Value: <code>0.5</code></p>
 <div class="admonition warning">
@@ -560,7 +675,7 @@ A SD-Card has limited write cycles. Since the device does not support <a href="h
 <p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code></p>
 <p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr />
-<h2 id="gpio">[GPIO]</h2>
+<h2 id="section-gpio">Section <code>GPIO</code></h2>
 <h3 id="parameter-io0">Parameter <code>IO0</code></h3>
 <p>Default Value: <code>input disabled 10 false false</code></p>
 <div class="admonition warning">
@@ -711,9 +826,9 @@ By default, it is used for build-in flash light (onboard LED).</p>
 </div>
 <p>Please fill me with an explanation and useful links</p>
 <hr />
-<h2 id="influxdb">[InfluxDB]</h2>
+<h2 id="section-influxdb">Section <code>InfluxDB</code></h2>
 <h3 id="parameter-database">Parameter <code>Database</code></h3>
-<p>Default Value: ``</p>
+<p>Default Value: <code>''</code></p>
 <p>Name of the Database into which to publish the values.</p>
 <hr />
 <h3 id="parameter-measurement">Parameter <code>Measurement</code></h3>
@@ -744,7 +859,7 @@ By default, it is used for build-in flash light (onboard LED).</p>
 <p>Currently only InfluxDB v1 is supported!</p>
 </div>
 <hr />
-<h2 id="mqtt">[MQTT]</h2>
+<h2 id="section-mqtt">Section <code>MQTT</code></h2>
 <h3 id="parameter-clientid">Parameter <code>ClientID</code></h3>
 <p>Default Value: <code>watermeter</code></p>
 <p>ClientID to connect to the MQTT broker.</p>
@@ -794,7 +909,7 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 <p>Default Value: <code>USERNAME</code></p>
 <p>Username for MQTT authentication.</p>
 <hr />
-<h2 id="makeimage">[MakeImage]</h2>
+<h2 id="section-makeimage">Section <code>MakeImage</code></h2>
 <h3 id="parameter-brightness">Parameter <code>Brightness</code></h3>
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
@@ -899,7 +1014,11 @@ This parameter can also be set on the Reference Image configuration.</p>
 </div>
 <p>Waiting time between switching illumination on and taking the picture (in seconds)-</p>
 <hr />
-<h2 id="postprocessing">[PostProcessing]</h2>
+<h2 id="section-postprocessing">Section <code>PostProcessing</code></h2>
+<h3 id="parameter-numberallownegativerates">Parameter <code>&lt;NUMBER&gt;.AllowNegativeRates</code></h3>
+<p>Default Value: <code>false</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr />
 <h3 id="parameter-numberanalogdigitaltransitionstart">Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
 <p>Default Value: <code>9.2</code></p>
 <p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
@@ -975,7 +1094,7 @@ In an error case, the last valid number will be used for the various transmissio
 <p>Use the previous value (value from previous round) for consistency checks.
 This also work through a reboot of the device!</p>
 <hr />
-<h2 id="system">[System]</h2>
+<h2 id="section-system">Section <code>System</code></h2>
 <h3 id="parameter-autoadjustsummertime">Parameter <code>AutoAdjustSummertime</code></h3>
 <p>Default Value: <code>false</code></p>
 <div class="admonition note">
@@ -994,7 +1113,7 @@ This also work through a reboot of the device!</p>
 It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
 <hr />
 <h3 id="parameter-rssithreashold">Parameter <code>RSSIThreashold</code></h3>
-<p>Default Value: ``</p>
+<p>Default Value: <code>''</code></p>
 <p>WLAN Mesh Parameter: Threshold for the RSSI value to check for start switching access point in a mesh system.
 Possible values: <code>-100</code> .. <code>0</code>, <code>0</code> = disabled.
 It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
