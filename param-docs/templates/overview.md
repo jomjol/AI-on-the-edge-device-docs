@@ -11,4 +11,7 @@ In such case the functionality gets disabled respectively the default values wil
     Due to a typo, one of the sections is called `MakeImage` instead of `TakeImage`!
     For backwards compatibility, this did not get changed.
 
+## List of all Parameters
+$TOC
+
 ---

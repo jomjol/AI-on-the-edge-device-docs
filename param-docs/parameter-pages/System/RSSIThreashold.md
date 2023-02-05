@@ -1,5 +1,5 @@
 # Parameter `RSSIThreashold`
-Default Value: ``
+Default Value: `''`
 
 WLAN Mesh Parameter: Threshold for the RSSI value to check for start switching access point in a mesh system.
 Possible values: `-100` .. `0`, `0` = disabled.

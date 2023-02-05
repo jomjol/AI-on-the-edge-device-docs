@@ -27,19 +27,44 @@ def appendParameterFile(folder, file):
 # Create templated overview markdown file
 if os.path.exists(parameterOverviewFile):
     os.remove(parameterOverviewFile)
-shutil.copy(parameterOverviewTemplateFile, parameterOverviewFile)
+#shutil.copy(parameterOverviewTemplateFile, parameterOverviewFile)
+
+folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
+
+"""
+Create Table of Content
+"""
+toc = ""
+for folder in folders:
+    folder = folder.split("/")[-1]
+
+    toc += "\n\n[%s](#%s)\n\n" % (folder, folder.lower())
+
+    files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
+    for file in files:
+        parameter = ".".join(file.split("/")[-1].split(".")[:-1])
+        anchor = parameter.replace("<", "").replace(">", "").replace(".", "").lower()
+        toc += " - [`%s`](#parameter-%s)\n" % (parameter, anchor)
+
+    with open(parameterOverviewTemplateFile, 'r') as overviewFileHandle:
+        overviewFileContent = overviewFileHandle.read()
+
+    overviewFileContent = overviewFileContent.replace("$TOC", toc)
+
+    with open(parameterOverviewFile, 'w') as overviewFileHandle:
+        overviewFileHandle.write(overviewFileContent)
+
 
 """
 Append all parameter pages in a sorted manner
 """
-folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
 for folder in folders:
     folder = folder.split("/")[-1]
 #    print(folder)
 
     # Add section
     with open(parameterOverviewFile, 'a') as overviewFileHandle:
-        overviewFileHandle.write("\n## [%s]\n\n" % folder)
+        overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
     for file in files:
