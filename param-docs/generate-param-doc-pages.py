@@ -1,6 +1,6 @@
 """
 For each parameter which can be found in the config file,
-create a markdown file with a templated content it does not exist yet.
+create a markdown file with a templated content if it does not exist yet.
 The files are grouped in sub folders representing the config sections.
 """
 
