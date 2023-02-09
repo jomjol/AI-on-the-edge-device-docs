@@ -30,7 +30,7 @@ Each parameter which is listed in the [configfile](https://github.com/jomjol/AI-
 has its own description page in the folder `param-docs/parameter-pages` (grouped by the config sections).
 Those pages can be edited as needed.
 
-The script `concat-parameter-pages.py` in`param-docs` should be run whenever one of the pages changed.
+The script `concat-parameter-pages.py` in `param-docs` should be run whenever one of the pages changed.
 It then concatenates all pages into the single `../docs/Parameters.md` which gets be added to the `mkdocs` documentation.
 
 ### Template Generator
