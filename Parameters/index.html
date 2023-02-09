@@ -239,7 +239,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-errormessage">Parameter ErrorMessage</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberallownegativerates">Parameter &lt;NUMBER&gt;.AllowNegativeRates</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbersallownegativerates">Parameter &lt;NUMBERS&gt;.AllowNegativeRates</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-numberanalogdigitaltransitionstart">Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart</a>
     </li>
@@ -252,8 +252,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#parameter-numbermaxratetype">Parameter &lt;NUMBER&gt;.MaxRateType</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-numbermaxratevalue">Parameter &lt;NUMBER&gt;.MaxRateValue</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbersallownegativerates">Parameter &lt;NUMBERS&gt;.AllowNegativeRates</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueagestartup">Parameter PreValueAgeStartup</a>
     </li>
@@ -486,7 +484,6 @@ For backwards compatibility, this did not get changed.</p>
 <li><a href="#PostProcessing-NUMBER.IgnoreLeadingNaN"><code>NUMBER.IgnoreLeadingNaN</code></a></li>
 <li><a href="#PostProcessing-NUMBER.MaxRateType"><code>NUMBER.MaxRateType</code></a></li>
 <li><a href="#PostProcessing-NUMBER.MaxRateValue"><code>NUMBER.MaxRateValue</code></a></li>
-<li><a href="#PostProcessing-NUMBERS.AllowNegativeRates"><code>NUMBERS.AllowNegativeRates</code></a></li>
 <li><a href="#PostProcessing-PreValueAgeStartup"><code>PreValueAgeStartup</code></a></li>
 <li><a href="#PostProcessing-PreValueUse"><code>PreValueUse</code></a></li>
 </ul>
@@ -1160,9 +1157,13 @@ In an error case, the last valid number will be used for the various transmissio
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.AllowNegativeRates></a></p>
-<h3 id="parameter-numberallownegativerates">Parameter <code>&lt;NUMBER&gt;.AllowNegativeRates</code></h3>
+<h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
 <p>Default Value: <code>false</code></p>
-<p>Please fill me with an explanation and useful links.</p>
+<p>Allow a meter to count backwards (decreasing values).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
+</div>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.AnalogDigitalTransitionStart></a></p>
@@ -1207,16 +1208,6 @@ as rate normalized to the interval (<code>RateChange</code> = change/minute).</p
 <p>Default Value: <code>0.05</code></p>
 <p>Maximum change of a reading.</p>
 <p>Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBERS.AllowNegativeRates></a></p>
-<h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Allow a meter to count backwards (decreasing values).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
-</div>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-PreValueAgeStartup></a></p>
