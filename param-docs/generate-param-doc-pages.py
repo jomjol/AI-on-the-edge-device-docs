@@ -68,7 +68,7 @@ for section in config:
                 #print("  %s = %s" % (parameter, value))
 
                 if "main." in parameter:
-                    parameter = parameter.replace("main.", "<NUMBER>.")
+                    parameter = parameter.replace("main.", "NUMBER.")
 
                 """
                 For each config line, create a markdown file
