@@ -36,15 +36,14 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           
-      - name: Store docs in gh-pages branch
+      - name: Generate Parameter Page
         run: |
-          # Update Parameter Documentation
           cd param-docs
           rm -rf parameter-pages/*
           python generate-param-doc-pages.py
           tree parameter-pages
           python concat-parameter-pages.py
-          cd ..
+          cat docs/Parameters.md
         
-          # Deploy it
-          mkdocs gh-deploy
+      - name: Store Cocumentation in the gh-pages branch so it gets pushed to the website
+        run: mkdocs gh-deploy
