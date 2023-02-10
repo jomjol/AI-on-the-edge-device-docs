@@ -9,7 +9,4 @@ Default Value: `false`
 
 This parameter can be used to rotate the viewport together with the alignment rotation:
 
-![a](../img/flipImageSize.png)  
-![b](../../img/flipImageSize.png)  
-![c](../../../img/flipImageSize.png)  
-
+![](../img/flipImageSize.png) 
