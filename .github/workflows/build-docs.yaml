@@ -42,6 +42,7 @@ jobs:
           cd param-docs
           rm -rf parameter-pages/*
           python generate-param-doc-pages.py
+          tree parameter-pages
           python concat-parameter-pages.py
           cd ..
         
