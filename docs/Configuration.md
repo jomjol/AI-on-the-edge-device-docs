@@ -22,7 +22,7 @@ The principle is very simple and can most easily be described as a flow of proce
 
 In the following you get a short overview over the available steps. This order is also the suggested order for the processing flow. Single steps can be left out, if not needed (e.g. omit the analog part, if only digits are present)
 
-#### 1. ``[MakeImage]``
+#### 1. ``[TakeImage]``
 
 * This steps parametrises the taking of the image by the ESP32-CAM. Size, quality and storage for logging and debugging can be set.
 

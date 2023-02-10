@@ -8,7 +8,7 @@ In such case the functionality gets disabled respectively the default values wil
     This is an auto-generated page! See the [README](https://github.com/jomjol/AI-on-the-edge-device-docs/blob/main/README.md) for details!
 
 !!! Note
-    Due to a typo, one of the sections is called `MakeImage` instead of `TakeImage`!
+    Due to a typo, one of the sections is called `TakeImage` instead of `TakeImage`!
     For backwards compatibility, this did not get changed.
 
 ## List of all Parameters

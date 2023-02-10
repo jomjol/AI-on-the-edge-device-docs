@@ -1,9 +1,9 @@
 # Configuration Parameter Details
 
-### [MakeImage]
+### [TakeImage]
 
 ```
-[MakeImage]
+[TakeImage]
 LogImageLocation = /log/source
 WaitBeforeTakingPicture = 5
 LogfileRetentionInDays = 15
@@ -152,7 +152,7 @@ Here the post processing and consistency check for the readout can be adjusted
 ```
 [AutoTimer]
 AutoStart= true
-Intervall = 4.85
+Interval = 4.85
 ```
 
 This paragraph is used to automatically trigger the periodic automated readout.
@@ -160,7 +160,7 @@ This paragraph is used to automatically trigger the periodic automated readout.
 | Parameter | Meaning                                         | Options/Examples                                             |
 | --------- | ----------------------------------------------- | ------------------------------------------------------------ |
 | AutoStart | Automatically trigger the readout after startup |                                                              |
-| Intervall | Readout interval in minutes                     | Values smaller than 2 minutes do not make sense, as this is the time for one detection |
+| Interval | Readout interval in minutes                     | Values smaller than 2 minutes do not make sense, as this is the time for one detection |
 
 
 ### [DataLogging]
