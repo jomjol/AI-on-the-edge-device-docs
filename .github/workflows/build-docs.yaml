@@ -9,8 +9,8 @@ name: Build Documentation
 
 on: 
   push:
-#    branches:
-#      - 'main'
+    branches:
+    - 'main'
 
 jobs:
   build-documentation:
