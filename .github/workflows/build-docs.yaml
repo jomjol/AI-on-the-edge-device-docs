@@ -40,6 +40,7 @@ jobs:
         run: |
           # Update Parameter Documentation
           cd param-docs
+          rm -rf parameter-pages/*
           python generate-param-doc-pages.py
           python concat-parameter-pages.py
           cd ..
