@@ -34,7 +34,7 @@ The script `concat-parameter-pages.py` in `param-docs` should be run whenever on
 It then concatenates all pages into the single `../docs/Parameters.md` which gets be added to the `mkdocs` documentation.
 
 ### Template Generator
-The script `param-docs/generate-param-doc-pages.py` should be run whenever a new parameter gets added to the config file.
+The script `generate-param-doc-pages.py` should be run whenever a new parameter gets added to the config file.
 It then checks if there is already page for each of the parameters.
  - If no page exists yet, a templated page gets generated.
  - Existing pages do not get modified.
