@@ -39,11 +39,9 @@ jobs:
       - name: Generate Parameter Page
         run: |
           cd param-docs
-          rm -rf parameter-pages/*
           python generate-param-doc-pages.py
           tree parameter-pages
           python concat-parameter-pages.py
-          cat ../docs/Parameters.md
         
       - name: Store Cocumentation in the gh-pages branch so it gets pushed to the website
         run: mkdocs gh-deploy
