@@ -61,7 +61,7 @@ Note: For more detailed information to the REST handler, have a look to the code
 * ### img_tmp/raw.jpg
   Capture and show a new raw image
 
-* ### img_tmp/roi.jpg
+* ### img_tmp/alg.jpg
   Show last aligned image
 
 * ### img_tmp/alg_roi.jpg
