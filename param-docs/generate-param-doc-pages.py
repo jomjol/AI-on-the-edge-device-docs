@@ -9,7 +9,9 @@ import configparser
 import urllib.request
 
 
-configFileUrl = "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/rolling/sd-card/config/config.ini"
+# TODO undo after merging https://github.com/jomjol/AI-on-the-edge-device/pull/2023
+#configFileUrl = "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/rolling/sd-card/config/config.ini"
+configFileUrl = "https://raw.githubusercontent.com/jomjol/AI-on-the-edge-device/migrate-parameters2-to-v14.1-branch/sd-card/config/config.ini"
 
 parameterDocsFolder = "parameter-pages"
 parameterTemplateFile = "./templates/parameter.md"
