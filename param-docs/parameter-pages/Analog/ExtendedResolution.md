@@ -1,5 +1,5 @@
 # Parameter `ExtendedResolution`
-Default Value: `true`
 
 !!! WARNING
-    This parameter got replaced by [`NUMBER.ExtendedResolution`](../Parameters/#PostProcessing-NUMBER.ExtendedResolution)!
+    This parameter is unused!
+    Use [`NUMBER.ExtendedResolution`](../Parameters/#PostProcessing-NUMBER.ExtendedResolution) instead!

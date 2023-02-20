@@ -1,4 +1,4 @@
-# Parameter `DataLogRetentionInDays`
+# Parameter `DataFilesRetention`
 Default Value: `3`
 
 
