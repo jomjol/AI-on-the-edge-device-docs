@@ -284,8 +284,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration-Parameter-Details/">Configuration Parameter Details</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
@@ -532,6 +530,7 @@ Available options:
 <p><a id=Alignment-InitialRotate></a></p>
 <h3 id="parameter-initialrotate">Parameter <code>InitialRotate</code></h3>
 <p>Default Value: <code>179</code></p>
+<p>Unit: Degrees</p>
 <p>Initial rotation of image before alignment in degree (1...359)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -548,6 +547,12 @@ Available options:
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>X-size (width) in which the reference is searched.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the alignment is one of the steps using a lot of computation time, 
+ the search field should be as small as possible.
+ The calculation time goes quadratic with the search field size.</p>
+</div>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-SearchFieldY></a></p>
@@ -559,6 +564,12 @@ Available options:
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Y-size (height) in which the reference is searched.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the alignment is one of the steps using a lot of computation time, 
+ the search field should be as small as possible.
+ The calculation time goes quadratic with the search field size.</p>
+</div>
 <hr style="border:2px solid">
 
 <h2 id="section-analog">Section <code>Analog</code></h2>
@@ -587,7 +598,7 @@ Use <a href="../Parameters/#PostProcessing-NUMBER.ExtendedResolution"><code>NUMB
 
 <p><a id=Analog-Model></a></p>
 <h3 id="parameter-model">Parameter <code>Model</code></h3>
-<p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code>
+<p>Default Value: <code>/config/ana-cont_*.tflite</code> (See <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/master/sd-card/config/config.ini">/config/config.ini</a>)
 Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr style="border:2px solid">
 
@@ -626,8 +637,9 @@ The only reason to set it to <code>false</code> is debugging or if you want to t
 
 <p><a id=AutoTimer-Interval></a></p>
 <h3 id="parameter-interval">Parameter <code>Interval</code></h3>
-<p>Default Value: <code>5</code>
-Interval in minutes in which the Flow (Digitization Round) is run.
+<p>Default Value: <code>5</code></p>
+<p>Unit: Minutes</p>
+<p>Interval in which the Flow (Digitization Round) is run.
 If a round takes longer than this interval, the next round gets postponed until the current round completes.</p>
 <hr style="border:2px solid">
 
@@ -635,13 +647,15 @@ If a round takes longer than this interval, the next round gets postponed until 
 <p><a id=DataLogging-DataFilesRetention></a></p>
 <h3 id="parameter-datafilesretention">Parameter <code>DataFilesRetention</code></h3>
 <p>Default Value: <code>3</code></p>
+<p>Unit: Days</p>
 <p>Number of days to keep the data files (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <p><a id=DataLogging-DataLogActive></a></p>
 <h3 id="parameter-datalogactive">Parameter <code>DataLogActive</code></h3>
 <p>Default Value: <code>true</code>
-Activate data logging to SD-Card.</p>
+Activate data logging to the SD-Card.</p>
+<p>The files will be stored in <code>/log/data/data_YYYY-MM-DD.csv</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
@@ -668,8 +682,9 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 
 <p><a id=Debug-LogfilesRetention></a></p>
 <h3 id="parameter-logfilesretention">Parameter <code>LogfilesRetention</code></h3>
-<p>Default Value: <code>3</code>
-Number of days to keep the log files (<code>0</code> = forever).</p>
+<p>Default Value: <code>3</code></p>
+<p>Unit: Days</p>
+<p>Number of days to keep the log files (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <h2 id="section-digits">Section <code>Digits</code></h2>
@@ -689,8 +704,8 @@ Number of days to keep the log files (<code>0</code> = forever).</p>
 
 <p><a id=Digits-Model></a></p>
 <h3 id="parameter-model_1">Parameter <code>Model</code></h3>
-<p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code>
-Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
+<p>Default Value: <code>/config/dig-cont_*.tflite</code> (See <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/master/sd-card/config/config.ini">/config/config.ini</a>)</p>
+<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr style="border:2px solid">
 
 <p><a id=Digits-ROIImagesLocation></a></p>
@@ -1092,7 +1107,7 @@ This also works through a reboot of the device!</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Hostname for the device.
-It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
+It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at the next startup.</p>
 <hr style="border:2px solid">
 
 <p><a id=System-RSSIThreshold></a></p>
@@ -1175,8 +1190,7 @@ Check <a href="../Demo-Mode">here</a> for details. </p>
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Fixes the illumination setting of camera at the startup and uses this later --&gt;
-individual round is faster.</p>
+<p>Fixes the illumination setting of camera at the startup and uses this later -&gt; Individual round is faster.</p>
 <hr style="border:2px solid">
 
 <p><a id=TakeImage-ImageQuality></a></p>
@@ -1229,8 +1243,9 @@ Location on the SD-Card to store the raw images for logging.</p>
 
 <p><a id=TakeImage-RawImagesRetention></a></p>
 <h3 id="parameter-rawimagesretention">Parameter <code>RawImagesRetention</code></h3>
-<p>Default Value: <code>15</code>
-Number of days to keep the raw images (<code>0</code> = forever)</p>
+<p>Default Value: <code>15</code></p>
+<p>Unit: Days</p>
+<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
 <hr style="border:2px solid">
 
 <p><a id=TakeImage-Saturation></a></p>
@@ -1251,11 +1266,12 @@ This parameter can also be set on the Reference Image configuration.</p>
 <p><a id=TakeImage-WaitBeforeTakingPicture></a></p>
 <h3 id="parameter-waitbeforetakingpicture">Parameter <code>WaitBeforeTakingPicture</code></h3>
 <p>Default Value: <code>5</code></p>
+<p>Unit: seconds</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Waiting time between switching illumination on and taking the picture (in seconds)-</p>
+<p>Waiting time between switching illumination on and taking the picture.</p>
 <hr style="border:2px solid">
               
             </div>
