@@ -1,4 +1,5 @@
 # Parameter `ExtendedResolution`
-!!! WARNING
+
+!!! Warning
     This parameter is unused!
     Use [`NUMBER.ExtendedResolution`](../Parameters/#PostProcessing-NUMBER.ExtendedResolution) instead!
