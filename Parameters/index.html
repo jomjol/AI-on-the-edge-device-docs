@@ -372,8 +372,8 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="parameters">Parameters</h1>
-<p>This page lists all available <a href="../Configuration">Configuration</a> Parameters.</p>
-<p>If a parameter or section has a tick box on its left side, you can disable it.
+<p>This page lists all available <a href="../Configuration">Configuration</a> Parameters.
+If a parameter or section has a tick box on its left side, you can disable it.
 In such case the functionality gets disabled respectively the default values will be used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -497,13 +497,11 @@ In such case the functionality gets disabled respectively the default values wil
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Algorithm used for the alignment step.</p>
-<p>Available options:</p>
-<ul>
-<li><code>Default</code>: Use only red color channel</li>
-<li><code>HighAccuracy</code>: Use all 3 color Channels (3x slower)</li>
-<li><code>Fast</code>: First time use <code>HighAccuracy</code>, then only check if the image is shifted</li>
-</ul>
+<p>Algorithm used for the alignment step.
+Available options:
+- <code>Default</code>: Use only red color channel
+- <code>HighAccuracy</code>: Use all 3 color Channels (3x slower)
+- <code>Fast</code>: First time use <code>HighAccuracy</code>, then only check if the image is shifted</p>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-FlipImageSize></a></p>
@@ -517,28 +515,28 @@ In such case the functionality gets disabled respectively the default values wil
 <p class="admonition-title">Note</p>
 <p>This parameter is not accessible through the Web Interface Configuration Page!</p>
 </div>
-<p>This parameter can be used to rotate the viewport together with the alignment rotation:</p>
-<p><img alt="" src="../img/flipImageSize.png" /> </p>
+<p>This parameter can be used to rotate the viewport together with the alignment rotation:
+<img alt="" src="../img/flipImageSize.png" /> </p>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-InitialMirror></a></p>
 <h3 id="parameter-initialmirror">Parameter <code>InitialMirror</code></h3>
 <p>Default Value: <code>false</code></p>
+<p>Option for initially mirroring the image on the original x-axis.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This parameter is not accessible through the Web Interface Configuration Page!</p>
+<p>This parameter is accessible on the Reference Image Page but not on the Config page!</p>
 </div>
-<p>Please fill me with an explanation and useful links</p>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-InitialRotate></a></p>
 <h3 id="parameter-initialrotate">Parameter <code>InitialRotate</code></h3>
 <p>Default Value: <code>179</code></p>
+<p>Initial rotation of image before alignment in degree (1...359)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This parameter is not accessible through the Web Interface Configuration Page!</p>
+<p>This parameter is accessible on the Reference Image Page but not on the Config page!</p>
 </div>
-<p>Please fill me with an explanation and useful links</p>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-SearchFieldX></a></p>
@@ -548,7 +546,7 @@ In such case the functionality gets disabled respectively the default values wil
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p><code>x</code> size (width) in which the reference is searched.</p>
+<p>X-size (width) in which the reference is searched.</p>
 <hr style="border:2px solid">
 
 <p><a id=Alignment-SearchFieldY></a></p>
@@ -558,7 +556,7 @@ In such case the functionality gets disabled respectively the default values wil
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p><code>y</code> size (height) in which the reference is searched.</p>
+<p>Y-size (height) in which the reference is searched.</p>
 <hr style="border:2px solid">
 
 <h2 id="section-analog">Section <code>Analog</code></h2>
@@ -587,8 +585,8 @@ Use <a href="../Parameters/#PostProcessing-NUMBER.ExtendedResolution"><code>NUMB
 
 <p><a id=Analog-Model></a></p>
 <h3 id="parameter-model">Parameter <code>Model</code></h3>
-<p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code></p>
-<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
+<p>Default Value: <code>/config/ana-cont_11.3.1_s2.tflite</code>
+Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr style="border:2px solid">
 
 <p><a id=Analog-ROIImagesLocation></a></p>
@@ -603,8 +601,8 @@ Use <a href="../Parameters/#PostProcessing-NUMBER.ExtendedResolution"><code>NUMB
 
 <p><a id=Analog-ROIImagesRetention></a></p>
 <h3 id="parameter-roiimagesretention">Parameter <code>ROIImagesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Days to keep the separated analog images (<code>0</code> = forever).</p>
+<p>Default Value: <code>3</code>
+Days to keep the separated analog images (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <h2 id="section-autotimer">Section <code>AutoTimer</code></h2>
@@ -625,8 +623,8 @@ The only reason to set it to <code>false</code> is debugging or if you want to t
 
 <p><a id=AutoTimer-Interval></a></p>
 <h3 id="parameter-interval">Parameter <code>Interval</code></h3>
-<p>Default Value: <code>5</code></p>
-<p>Interval in minutes in which the Flow (Digitization Round) is run.
+<p>Default Value: <code>5</code>
+Interval in minutes in which the Flow (Digitization Round) is run.
 If a round takes longer than this interval, the next round gets postponed until the current round completes.</p>
 <hr style="border:2px solid">
 
@@ -639,8 +637,8 @@ If a round takes longer than this interval, the next round gets postponed until 
 
 <p><a id=DataLogging-DataLogActive></a></p>
 <h3 id="parameter-datalogactive">Parameter <code>DataLogActive</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Activate data logging to SD-Card.</p>
+<p>Default Value: <code>true</code>
+Activate data logging to SD-Card.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
@@ -650,16 +648,15 @@ If a round takes longer than this interval, the next round gets postponed until 
 <h2 id="section-debug">Section <code>Debug</code></h2>
 <p><a id=Debug-LogLevel></a></p>
 <h3 id="parameter-loglevel">Parameter <code>LogLevel</code></h3>
-<p>Default Value: <code>1</code> (<code>ERROR</code>)</p>
-<p>Define the log level for the logging to the SD-Card.</p>
-<p>Available options:</p>
-<ul>
-<li><code>1</code>: <code>ERROR</code></li>
-<li><code>2</code>: <code>WARNING</code></li>
-<li><code>3</code>: <code>INFO</code></li>
-<li><code>4</code>: <code>DEBUG</code></li>
-</ul>
-<p>As higher the level, as more log messages get written to the SD-Card.</p>
+<p>Default Value: <code>1</code> (<code>ERROR</code>)
+Define the log level for the logging to the SD-Card.
+Available options:
+- <code>1</code>: <code>ERROR</code>
+- <code>2</code>: <code>WARNING</code>
+- <code>3</code>: <code>INFO</code>
+- <code>4</code>: <code>DEBUG</code>
+As higher the level, as more log messages get written to the SD-Card.
+- </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><code>DEBUG</code> or <code>INFO</code> might damage the SD-Card if enabled long term due to excessive writes to the SD-Card!
@@ -669,8 +666,8 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 
 <p><a id=Debug-LogfilesRetention></a></p>
 <h3 id="parameter-logfilesretention">Parameter <code>LogfilesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Number of days to keep the log files (<code>0</code> = forever).</p>
+<p>Default Value: <code>3</code>
+Number of days to keep the log files (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <h2 id="section-digits">Section <code>Digits</code></h2>
@@ -690,14 +687,14 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 
 <p><a id=Digits-Model></a></p>
 <h3 id="parameter-model_1">Parameter <code>Model</code></h3>
-<p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code></p>
-<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
+<p>Default Value: <code>/config/dig-cont_0600_s3.tflite</code>
+Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr style="border:2px solid">
 
 <p><a id=Digits-ROIImagesLocation></a></p>
 <h3 id="parameter-roiimageslocation_1">Parameter <code>ROIImagesLocation</code></h3>
-<p>Default Value: <code>/log/digit</code></p>
-<p>Location to store separated digit images on the SD-Card for logging.</p>
+<p>Default Value: <code>/log/digit</code>
+Location to store separated digit images on the SD-Card for logging.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
@@ -706,8 +703,8 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 
 <p><a id=Digits-ROIImagesRetention></a></p>
 <h3 id="parameter-roiimagesretention_1">Parameter <code>ROIImagesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Days to keep the separated digit images (<code>0</code> = forever).</p>
+<p>Default Value: <code>3</code>
+Days to keep the separated digit images (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <h2 id="section-gpio">Section <code>GPIO</code></h2>
@@ -725,15 +722,13 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 It must be disabled when the camera is used.
 Additionally, it is used to activate Bootloader mode and must therefore be HIGH after a reset!</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 0 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 0 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 0 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 0 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 0 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 0 name</code>: MQTT topic name (empty = <code>GPIO0</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 0 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 0 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 0 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 0 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 0 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 0 name</code>: MQTT topic name (empty = <code>GPIO0</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-IO1></a></p>
@@ -748,15 +743,13 @@ Additionally, it is used to activate Bootloader mode and must therefore be HIGH 
 <p class="admonition-title">Warning</p>
 <p>This pin is by default used for the serial communication as TX pin (USB logging)!</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 1 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 1 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 1 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 1 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 1 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 1 name</code>: MQTT topic name (empty = <code>GPIO1</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 1 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 1 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 1 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 1 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 1 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 1 name</code>: MQTT topic name (empty = <code>GPIO1</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-IO12></a></p>
@@ -771,15 +764,13 @@ Additionally, it is used to activate Bootloader mode and must therefore be HIGH 
 <p class="admonition-title">Note</p>
 <p>This pin is usable without known restrictions!</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 12 state</code>: One of <code>external-flash-ws281x</code>, <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 12 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 12 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 12 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 12 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 12 name</code>: MQTT topic name (empty = <code>GPIO12</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 12 state</code>: One of <code>external-flash-ws281x</code>, <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 12 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 12 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 12 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 12 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 12 name</code>: MQTT topic name (empty = <code>GPIO12</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-IO13></a></p>
@@ -794,15 +785,13 @@ Additionally, it is used to activate Bootloader mode and must therefore be HIGH 
 <p class="admonition-title">Note</p>
 <p>This pin is usable without known restrictions!</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 13 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 13 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 13 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 13 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 13 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 13 name</code>: MQTT topic name (empty = <code>GPIO13</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 13 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 13 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 13 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 13 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 13 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 13 name</code>: MQTT topic name (empty = <code>GPIO13</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-IO3></a></p>
@@ -817,15 +806,13 @@ Additionally, it is used to activate Bootloader mode and must therefore be HIGH 
 <p class="admonition-title">Warning</p>
 <p>This pin is by default used for the serial communication as RX pin (USB logging)!</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 3 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 3 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 3 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 3 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 3 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 3 name</code>: MQTT topic name (empty = <code>GPIO3</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 3 state</code>: One of <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 3 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 3 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 3 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 3 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 3 name</code>: MQTT topic name (empty = <code>GPIO3</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-IO4></a></p>
@@ -841,34 +828,32 @@ Additionally, it is used to activate Bootloader mode and must therefore be HIGH 
 <p>This pin is only usable with restrictions!
 By default, it is used for build-in flash light (onboard LED).</p>
 </div>
-<p>Parameters:</p>
-<ul>
-<li><code>GPIO 4 state</code>: One of <code>built-in-led</code>, <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.</li>
-<li><code>GPIO 4 use interrupt</code>: Enable interrupt trigger</li>
-<li><code>GPIO 4 PWM duty resolution</code>: LEDC PWM duty resolution in bit</li>
-<li><code>GPIO 4 enable MQTT</code>: Enable MQTT publishing/subscribing</li>
-<li><code>GPIO 4 enable HTTP</code>: Enable HTTP write/read</li>
-<li><code>GPIO 4 name</code>: MQTT topic name (empty = <code>GPIO4</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</li>
-</ul>
+<p>Parameters:
+- <code>GPIO 4 state</code>: One of <code>built-in-led</code>, <code>input</code>, <code>input pullup</code>, <code>input pulldown</code> or <code>output</code>.
+- <code>GPIO 4 use interrupt</code>: Enable interrupt trigger
+- <code>GPIO 4 PWM duty resolution</code>: LEDC PWM duty resolution in bit
+- <code>GPIO 4 enable MQTT</code>: Enable MQTT publishing/subscribing
+- <code>GPIO 4 enable HTTP</code>: Enable HTTP write/read
+- <code>GPIO 4 name</code>: MQTT topic name (empty = <code>GPIO4</code>). Allowed characters: <code>a-z, A-Z, 0-9, _, -</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-LEDColor></a></p>
 <h3 id="parameter-ledcolor">Parameter <code>LEDColor</code></h3>
-<p>Default Value: <code>150 150 150</code></p>
-<p>Color of the attached LEDs to GPIO12 in (R)ed, (G)reen (B)lue from <code>0</code> (full off) .. <code>255</code> (full on). 
+<p>Default Value: <code>150 150 150</code>
+Color of the attached LEDs to GPIO12 in (R)ed, (G)reen (B)lue from <code>0</code> (full off) .. <code>255</code> (full on). 
 (See <code>IO12</code> parameter).</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-LEDNumbers></a></p>
 <h3 id="parameter-lednumbers">Parameter <code>LEDNumbers</code></h3>
-<p>Default Value: <code>2</code></p>
-<p>Number of LEDs on the external LED-stripe attached to GPIO12 (See <code>IO12</code> parameter).</p>
+<p>Default Value: <code>2</code>
+Number of LEDs on the external LED-stripe attached to GPIO12 (See <code>IO12</code> parameter).</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-LEDType></a></p>
 <h3 id="parameter-ledtype">Parameter <code>LEDType</code></h3>
-<p>Default Value: <code>WS2812</code></p>
-<p>Type of the <code>WS2812x</code> which is connected to GPIO12 (See <code>IO12</code> parameter).</p>
+<p>Default Value: <code>WS2812</code>
+Type of the <code>WS2812x</code> which is connected to GPIO12 (See <code>IO12</code> parameter).</p>
 <hr style="border:2px solid">
 
 <p><a id=GPIO-MainTopicMQTT></a></p>
@@ -884,20 +869,20 @@ By default, it is used for build-in flash light (onboard LED).</p>
 <h2 id="section-influxdb">Section <code>InfluxDB</code></h2>
 <p><a id=InfluxDB-Database></a></p>
 <h3 id="parameter-database">Parameter <code>Database</code></h3>
-<p>Default Value: <code>''</code></p>
-<p>Name of the Database into which to publish the values.</p>
+<p>Default Value: <code>''</code>
+Name of the Database into which to publish the values.</p>
 <hr style="border:2px solid">
 
 <p><a id=InfluxDB-Measurement></a></p>
 <h3 id="parameter-measurement">Parameter <code>Measurement</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Name of the Measurement to use to publish the value.</p>
+<p>Default Value: <code>undefined</code>
+Name of the Measurement to use to publish the value.</p>
 <hr style="border:2px solid">
 
 <p><a id=InfluxDB-Uri></a></p>
 <h3 id="parameter-uri">Parameter <code>Uri</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>URI of the HTTP interface to InfluxDB v1, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
+<p>Default Value: <code>undefined</code>
+URI of the HTTP interface to InfluxDB v1, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently only InfluxDB v1 is supported!</p>
@@ -906,8 +891,8 @@ By default, it is used for build-in flash light (onboard LED).</p>
 
 <p><a id=InfluxDB-password></a></p>
 <h3 id="parameter-password">Parameter <code>password</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Password for the InfluxDB v1 authentication.</p>
+<p>Default Value: <code>undefined</code>
+Password for the InfluxDB v1 authentication.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently only InfluxDB v1 is supported!</p>
@@ -916,8 +901,8 @@ By default, it is used for build-in flash light (onboard LED).</p>
 
 <p><a id=InfluxDB-user></a></p>
 <h3 id="parameter-user">Parameter <code>user</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Username for the InfluxDB v1 authentication.</p>
+<p>Default Value: <code>undefined</code>
+Username for the InfluxDB v1 authentication.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently only InfluxDB v1 is supported!</p>
@@ -927,36 +912,34 @@ By default, it is used for build-in flash light (onboard LED).</p>
 <h2 id="section-mqtt">Section <code>MQTT</code></h2>
 <p><a id=MQTT-ClientID></a></p>
 <h3 id="parameter-clientid">Parameter <code>ClientID</code></h3>
-<p>Default Value: <code>watermeter</code></p>
-<p>ClientID to connect to the MQTT broker.</p>
-<p>If disabled, the <code>hostname</code> will be used.</p>
+<p>Default Value: <code>watermeter</code>
+ClientID to connect to the MQTT broker.
+If disabled, the <code>hostname</code> will be used.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-HomeassistantDiscovery></a></p>
 <h3 id="parameter-homeassistantdiscovery">Parameter <code>HomeassistantDiscovery</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Enable or disable the Homeassistant Discovery.</p>
-<p>See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
+<p>Default Value: <code>true</code>
+Enable or disable the Homeassistant Discovery.
+See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-MainTopic></a></p>
 <h3 id="parameter-maintopic">Parameter <code>MainTopic</code></h3>
-<p>Default Value: <code>watermeter</code></p>
-<p>MQTT main topic, under which the counters are published.
-The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code> where:</p>
-<ul>
-<li><code>NUMBER</code> is the name of the value (a meter might have more than one value). 
-  The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).</li>
-<li><code>RESULT_TOPIC</code> can be one of <code>value</code>, <code>rate</code>, <code>timestamp</code>, <code>error</code>, ....</li>
-</ul>
-<p>The general connection status can be found in <code>MAINTOPIC/CONNECTION</code>. </p>
-<p>See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topics.</p>
+<p>Default Value: <code>watermeter</code>
+MQTT main topic, under which the counters are published.
+The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code> where:
+- <code>NUMBER</code> is the name of the value (a meter might have more than one value). 
+  The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).
+- <code>RESULT_TOPIC</code> can be one of <code>value</code>, <code>rate</code>, <code>timestamp</code>, <code>error</code>, ....
+The general connection status can be found in <code>MAINTOPIC/CONNECTION</code>. 
+See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topics.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-MeterType></a></p>
 <h3 id="parameter-metertype">Parameter <code>MeterType</code></h3>
-<p>Default Value: <code>other</code></p>
-<p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
+<p>Default Value: <code>other</code>
+Select the Meter Type so the sensors have the right units in Homeassistant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For <code>Watermeter</code> you need to have Homeassistant 2022.11 or newer!</p>
@@ -968,26 +951,26 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 
 <p><a id=MQTT-RetainMessages></a></p>
 <h3 id="parameter-retainmessages">Parameter <code>RetainMessages</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
+<p>Default Value: <code>true</code>
+Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-Uri></a></p>
 <h3 id="parameter-uri_1">Parameter <code>Uri</code></h3>
-<p>Default Value: <code>mqtt://IP-ADRESS:1883</code></p>
-<p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
+<p>Default Value: <code>mqtt://IP-ADRESS:1883</code>
+URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-password></a></p>
 <h3 id="parameter-password_1">Parameter <code>password</code></h3>
-<p>Default Value: <code>PASSWORD</code></p>
-<p>Password for MQTT authentication.</p>
+<p>Default Value: <code>PASSWORD</code>
+Password for MQTT authentication.</p>
 <hr style="border:2px solid">
 
 <p><a id=MQTT-user></a></p>
 <h3 id="parameter-user_1">Parameter <code>user</code></h3>
-<p>Default Value: <code>USERNAME</code></p>
-<p>Username for MQTT authentication.</p>
+<p>Default Value: <code>USERNAME</code>
+Username for MQTT authentication.</p>
 <hr style="border:2px solid">
 
 <h2 id="section-postprocessing">Section <code>PostProcessing</code></h2>
@@ -1024,8 +1007,8 @@ In an error case, the last valid number will be used for the various transmissio
 
 <p><a id=PostProcessing-NUMBER.AllowNegativeRates></a></p>
 <h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Allow a meter to count backwards (decreasing values).</p>
+<p>Default Value: <code>false</code>
+Allow a meter to count backwards (decreasing values).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
@@ -1034,8 +1017,8 @@ In an error case, the last valid number will be used for the various transmissio
 
 <p><a id=PostProcessing-NUMBER.AnalogDigitalTransitionStart></a></p>
 <h3 id="parameter-numberanalogdigitaltransitionstart">Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
-<p>Default Value: <code>9.2</code></p>
-<p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
+<p>Default Value: <code>9.2</code>
+This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
 Look for the start of changing of the first digit and note the analog pointer value behind.
 Set it here. Only used on combination of digits and analog pointers.
 See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
@@ -1043,15 +1026,15 @@ See <a href="../Watermeter-specific-analog---digital-transition">here</a> for de
 
 <p><a id=PostProcessing-NUMBER.DecimalShift></a></p>
 <h3 id="parameter-numberdecimalshift">Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
-<p>Default Value: <code>0</code></p>
-<p>Shift the decimal separator (positiv or negativ).
+<p>Default Value: <code>0</code>
+Shift the decimal separator (positiv or negativ).
 Eg. to move from 'm³' to 'liter' (1 m³ equals 1000 liters), you need to set it to +3.</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.ExtendedResolution></a></p>
 <h3 id="parameter-numberextendedresolution">Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Use the decimal place of the last analog counter for increased accuracy.</p>
+<p>Default Value: <code>false</code>
+Use the decimal place of the last analog counter for increased accuracy.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter is only supported on the <code>*-class*</code> and <code>*-const</code> models! See <a href="../Choosing-the-Model">Choosing-the-Model</a> for details.</p>
@@ -1060,24 +1043,24 @@ Eg. to move from 'm³' to 'liter' (1 m³ equals 1000 liters), you need to set it
 
 <p><a id=PostProcessing-NUMBER.IgnoreLeadingNaN></a></p>
 <h3 id="parameter-numberignoreleadingnan">Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Leading <code>N</code>'s will be deleted before further processing.</p>
-<p>This is only relevant for models which use <code>N</code>!</p>
-<p>See <a href="../Choosing-the-Model">here</a> for details.</p>
+<p>Default Value: <code>true</code>
+Leading <code>N</code>'s will be deleted before further processing.
+This is only relevant for models which use <code>N</code>!
+See <a href="../Choosing-the-Model">here</a> for details.</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.MaxRateType></a></p>
 <h3 id="parameter-numbermaxratetype">Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
-<p>Default Value: <code>AbsoluteChange</code></p>
-<p>Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
+<p>Default Value: <code>AbsoluteChange</code>
+Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
 as rate normalized to the interval (<code>RateChange</code> = change/minute).</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.MaxRateValue></a></p>
 <h3 id="parameter-numbermaxratevalue">Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
-<p>Default Value: <code>0.05</code></p>
-<p>Maximum change of a reading.</p>
-<p>Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
+<p>Default Value: <code>0.05</code>
+Maximum change of a reading.
+Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-PreValueAgeStartup></a></p>
@@ -1092,8 +1075,8 @@ as rate normalized to the interval (<code>RateChange</code> = change/minute).</p
 
 <p><a id=PostProcessing-PreValueUse></a></p>
 <h3 id="parameter-prevalueuse">Parameter <code>PreValueUse</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Use the previous value (value from previous round) for consistency checks.
+<p>Default Value: <code>true</code>
+Use the previous value (value from previous round) for consistency checks.
 This also works through a reboot of the device!</p>
 <hr style="border:2px solid">
 
@@ -1111,8 +1094,8 @@ It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at ne
 
 <p><a id=System-RSSIThreshold></a></p>
 <h3 id="parameter-rssithreshold">Parameter <code>RSSIThreshold</code></h3>
-<p>Default Value: <code>''</code></p>
-<p>WLAN Mesh Parameter: Threshold for the RSSI value to check for start switching access point in a mesh system.
+<p>Default Value: <code>''</code>
+WLAN Mesh Parameter: Threshold for the RSSI value to check for start switching access point in a mesh system.
 Possible values: <code>-100</code> .. <code>0</code>, <code>0</code> = disabled.
 It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
 <hr style="border:2px solid">
@@ -1142,8 +1125,8 @@ In such case the time always starts at <code>01.01.1970</code> after each power 
 
 <p><a id=System-TimeZone></a></p>
 <h3 id="parameter-timezone">Parameter <code>TimeZone</code></h3>
-<p>Default Value: <code>CET-1CEST,M3.5.0,M10.5.0/3</code></p>
-<p>Time zone in POSIX syntax (Europe/Berlin = <code>CET-1CEST,M3.5.0,M10.5.0/3</code> - incl. daylight saving)
+<p>Default Value: <code>CET-1CEST,M3.5.0,M10.5.0/3</code>
+Time zone in POSIX syntax (Europe/Berlin = <code>CET-1CEST,M3.5.0,M10.5.0/3</code> - incl. daylight saving)
 Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find the settings for your region.</p>
 <hr style="border:2px solid">
 
@@ -1176,8 +1159,8 @@ This parameter can also be set on the Reference Image configuration.</p>
 
 <p><a id=TakeImage-Demo></a></p>
 <h3 id="parameter-demo">Parameter <code>Demo</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Enable to use demo images instead of the real camera images.
+<p>Default Value: <code>false</code>
+Enable to use demo images instead of the real camera images.
 Make sure to have a <code>/demo</code> folder on your SD-Card and it contains the expected files!
 Check <a href="../Demo-Mode">here</a> for details. </p>
 <hr style="border:2px solid">
@@ -1215,11 +1198,9 @@ individual round is faster.</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Size of the camera picture.
-Available options:</p>
-<ul>
-<li><code>VGA</code> (640 x 480 pixel)</li>
-<li><code>QVGA</code> (320 x 240 pixel)</li>
-</ul>
+Available options:
+- <code>VGA</code> (640 x 480 pixel)
+- <code>QVGA</code> (320 x 240 pixel)</p>
 <hr style="border:2px solid">
 
 <p><a id=TakeImage-LEDIntensity></a></p>
@@ -1235,8 +1216,8 @@ This parameter can also be set on the Reference Image configuration.</p>
 
 <p><a id=TakeImage-RawImagesLocation></a></p>
 <h3 id="parameter-rawimageslocation">Parameter <code>RawImagesLocation</code></h3>
-<p>Default Value: <code>/log/source</code></p>
-<p>Location on the SD-Card to store the raw images for logging.</p>
+<p>Default Value: <code>/log/source</code>
+Location on the SD-Card to store the raw images for logging.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
@@ -1245,8 +1226,8 @@ This parameter can also be set on the Reference Image configuration.</p>
 
 <p><a id=TakeImage-RawImagesRetention></a></p>
 <h3 id="parameter-rawimagesretention">Parameter <code>RawImagesRetention</code></h3>
-<p>Default Value: <code>15</code></p>
-<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
+<p>Default Value: <code>15</code>
+Number of days to keep the raw images (<code>0</code> = forever)</p>
 <hr style="border:2px solid">
 
 <p><a id=TakeImage-Saturation></a></p>
