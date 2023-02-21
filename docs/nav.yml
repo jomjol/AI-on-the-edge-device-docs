@@ -23,7 +23,6 @@ nav:
     - ROI-Configuration.md
     - Configuration.md
     - Choosing-the-Model.md
-    - Neural-Network-Types.md
     - ota.md
 
   - Advanced:
@@ -35,6 +34,7 @@ nav:
     - collect-new-images.md
     - Learn-models-with-your-own-images.md
     - Correction Algorithm.md
+    - Neural-Network-Types.md
     - Additional-Information.md
     - New-Releases-Notification.md
 

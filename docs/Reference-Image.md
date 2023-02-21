@@ -55,3 +55,11 @@ If everything is done, you can save the result with `"Update Reference Image" (4
 
 As next you should update the [Alignment References](Alignment.md).
 
+## Dealing with Reflections
+Reflections can be caused by the flash LED and make it hard to provide a reliable detection.
+There are various ways to deal with them:
+
+- Attach a diffusor in front of the LED, eg. a filt (Filz) or parchment paper. Also white paper can do the job.
+- Rotate the ESP-CAM so the LED is on another place.
+- Reduce the LED intensity.
+- Use external LED stripes, eg `WS2812x`.
