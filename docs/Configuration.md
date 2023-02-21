@@ -1,74 +1,63 @@
-# Configuration
+# Graphical Configuration
+Most of the settings can be modified on the Settings page:
 
-!!! Warning
-    This page overlaps [Graphical-Configuration](../Graphical-Configuration). They should be merged to one page!
+<img src="../img/config_s1_access.jpg" width="600" align="middle">
 
+It can be reached via the menu `Settings > Configuration`.
 
-Most of the settings can be modified with the help of a web based [graphical user interface](Graphical-configuration). This is hosted through the web server on the ESP32.
+!!! Note
+    - To activate the changes, the device needs to be restarted after saving the changes.
+    - Most of the commands need processing on the ESP32 device. This is not very fast - so please be patient.
 
-More configuration parameters can be edited by hand in the `config.ini` and corresponding files in the `/config` directory on the SD-card. 
+All parameters are documented on the [Parameters](../Parameters) page and as tooltips on the config page.
 
+## Expert Parameters
+Some parameters are treated as **Expert Parameters** and are hidden by default.
+Tick the checkbox in the top left corner to enable them:
 
+![](../img/expert-parameters.png)  
 
-If you where using the Version 1 of the water meter you can easily transfer the configuration to the new system by following the steps in this [migration description](outdated--Migrate-Old-Config-To-New-Config.md)
+The **Expert Parameters** then will be shown with a red background:
+![](../img/expert-parameters2.png)  
 
+## Manual Editing of the Config File
+Even more configuration parameters can be edited manually in the `config.ini`:
 
+![](../img/manual-config-editing.png)  
 
-## Processing / Config.ini principle
+To edit the `config.ini` file directly, click on the `Edit Config.ini directly` button.
+
+## Background Information
+
+!!! Note
+    You do not need to understand this!
+    But you might be interested in it.
 
 The principle is very simple and can most easily be described as a flow of processing steps. Each step has a dedicated parameter description in the ``config.ini``, which is indicated by brackets ```[name_of_step]```. The steps are processed in the order written in the config file. That means, that you first have to describe the image taking, then the aligning and cutting and only after that you can start to config a neural network. The last step is the post processing.
 
 ###  Processing steps - Overview
-
 In the following you get a short overview over the available steps. This order is also the suggested order for the processing flow. Single steps can be left out, if not needed (e.g. omit the analog part, if only digits are present)
 
-#### 1. ``[MakeImage]``
-
-* This steps parametrises the taking of the image by the ESP32-CAM. Size, quality and storage for logging and debugging can be set.
+#### 1. ``[TakeImage]``
+This steps parametrises the taking of the image by the ESP32-CAM. Size, quality and storage for logging and debugging can be set.
 
 #### 2. ``[Alignment]``
-* Image preprocessing, including image alignment with reference images
+Image preprocessing, including image alignment with reference images
 
 #### 3. ``[Digits]``
-
-* Neural network evaluation of an image for digits. The neural network is defined by a tflite formatted file and the output is a number between 0 .. 9 or NaN (if image is not unique enough)
+Neural network evaluation of an image for digits. The neural network is defined by a tflite formatted file and the output is a number between 0 .. 9 or NaN (if image is not unique enough)
 
 #### 4. ``[Analog]``
-- Neural network evaluation of analog counter. The neural network is defined by a tflite formatted file and the output is a number between 0.0 .. 9.9, representing the position of the pointer.
-
+Neural network evaluation of analog counter. The neural network is defined by a tflite formatted file and the output is a number between 0.0 .. 9.9, representing the position of the pointer.
 
 #### 5. ``[PostProcessing]``
-- Summarized the individually converted pictures to the overall result. It also implements some error corrections and consistency checks to filter wrong reading.
+Summarized the individually converted pictures to the overall result. It also implements some error corrections and consistency checks to filter wrong reading.
 
 #### 6. ``[MQTT]``
-
-  - Transfer of the readings to a MQTT server.
-
+Transfer of the readings to a MQTT server.
 
 #### 7. ``[AutoTimer]``
-- Configuration of the automated flow start at the start up of the ESP32. 
+Configuration of the automated flow start at the start up of the ESP32. 
 
 #### 8. ``[Debug]``
-- Configuration for debugging details
-
-#### 9. ``[Ende]``
-- No meaning, just an additional indication, that the configuration is finished.
-
-  
-
-**A detailed parameter description can be found here: [[Configuration Parameter Details]].**
-
-
-
-## Graphical configuration interface
-
-It is recommended to do the configuration of the alignment structures and ROIs through the graphical user interface. A step by step instruction can be found here: [[Graphical Configuration]]
-
-
-
-## Background for Image Alignment
-
-Details on the image recognition flow can be found in the other project here: https://github.com/jomjol/water-meter-system-complete/blob/master/images/Alignment_procedure_draft.pdf
-
-The ```config.ini``` here has the same functionality and options, but a slightly different syntax due to a own written ini-parser is used. Migration see [here](outdated--Migrate-Old-Config-To-New-Config.md).
-
+Configuration for debugging details
