@@ -49,15 +49,9 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Initial Setup</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#5-general-settings">5. General Settings</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#expert-mode">Expert Mode</a>
+    <li class="toctree-l2"><a class="reference internal" href="#finish-the-setup-and-change-to-the-normal-operation-mode">Finish the Setup and change to the Normal Operation mode</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</a>
+    <li class="toctree-l2"><a class="reference internal" href="#access-to-the-setup-pages-in-the-normal-operation-mode">Access to the Setup Pages in the Normal Operation mode</a>
     </li>
     </ul>
                   </li>
@@ -85,7 +79,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
@@ -188,50 +182,31 @@
                 <h1 id="initial-setup">Initial Setup</h1>
 <p>After setting up the device (firmware, SD card, WLAN) the device will connect to the wifi access point and start in an initial setup configuration:</p>
 <p><img alt="" src="../img/setup_initial_welcome.png" style="width:500px" /></p>
-<p>In the top you can navigate through 5 steps, that guide you through the necessary setup:</p>
+<p>With the buttons on the top you can navigate through 5 steps which guide you through the necessary setup:</p>
 <ol>
-<li><a href="../Reference-Image/">Reference Image</a></li>
-<li><a href="../Alignment/">Alignment</a></li>
-<li><a href="../ROI-Configuration/">Digital ROIs</a></li>
-<li><a href="../ROI-Configuration/">Analog ROIs</a> (Only required in case your meter has analoge pointers)</li>
-<li><a href="../Configuration/">General Settings</a></li>
+<li>Create the <a href="../Reference-Image/">Reference Image</a>. It is the base for the position referencing and the identification of the digits and counters.</li>
+<li>Define two unique <a href="../Alignment/">References</a>. It is used to align the individual camera images and identify the absolut positions.</li>
+<li>Define the <a href="../ROI-Configuration/">Digital ROIs</a> to be recognized. (Only required in case your meter has analoge pointers).</li>
+<li>Define the <a href="../ROI-Configuration/">Analog ROIs</a> to be identified</li></li>
+<li><a href="../Configuration/">General Settings</a>. Most settings can be used with default value at the beginning.</li>
 </ol>
 <p>All settings can be accessed also later in the normal operation mode.</p>
-<p>TODO rework</p>
-<h2 id="5-general-settings">5. General Settings</h2>
-<p>In the next steps you can configure the behavior and external interfaces in detail:</p>
-<p><img alt="" src="../img/initial_setup_5_configuration.jpg" style="width:500px" /></p>
-<p>The configuration is divided into different sub topics:</p>
-<ul>
-<li>TakeImage</li>
-<li>Digits</li>
-<li>Analog</li>
-<li>PostProcessing</li>
-<li>MQTT</li>
-<li>InfluxDB</li>
-<li>GPIO Settings</li>
-<li>Autotimer</li>
-<li>DataLogging</li>
-<li>Debug</li>
-<li>System</li>
-</ul>
-<p>The details are explained in other parts of the manual (see links (<strong>TBD</strong>))</p>
-<p>Some of the sections as well as parameters are mandatory. They can be en/disabled in the first column (1). 
-The setting itself is done in the next column (2) and a brief explanation you can find in the last column (3).</p>
-<p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
-<h4 id="expert-mode">Expert Mode</h4>
-<p>With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert mode available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifying them you should be really sure, what they are about.</p>
-<h2 id="finish-setup-and-change-to-normal-operation">Finish Setup and change to normal operation</h2>
-<p>After setting up everything, there is a last step to be done:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don' t forget to save each step with "Save" and do not reboot at this stage.</p>
+</div>
+<h2 id="finish-the-setup-and-change-to-the-normal-operation-mode">Finish the Setup and change to the Normal Operation mode</h2>
+<p>With the last step <code>(1)</code> you leave the <strong>Setup Mode</strong> and reboot to the <strong>Normal Operation mode</strong>.</p>
 <p><img alt="" src="../img/initial_setup_6_finish_reboot.jpg" style="width:500px" /></p>
-<p>With (1) you leave the setup mode and reboot to normal operation mode.</p>
-<h2 id="access-to-setup-in-normal-operation-mode">Access to setup in normal operation mode</h2>
-<p>You can access all the settings also during the normal working mode via the "Settings" menu:</p>
+<h2 id="access-to-the-setup-pages-in-the-normal-operation-mode">Access to the Setup Pages in the Normal Operation mode</h2>
+<p>You always can access all the settings during the normal operation mode via the <code>Settings</code> menu:</p>
 <p><img alt="" src="../img/initial_setup_7_access_normal_mode.jpg" style="width:500px" /></p>
-<p>(1) Access to configuration parameters</p>
-<p>(2) Update of reference image</p>
-<p>(3) Update of alignment marks</p>
-<p>(4)/(5) Update of the ROI setting</p>
+<ul>
+<li><code>(1)</code> Access to the <a href="../Configuration/">General Settings</a>.</li>
+<li><code>(2)</code> Update of the <a href="../Reference-Image/">Reference Image</a>.</li>
+<li><code>(3)</code> Update of the <a href="../Alignment/">Alignment Marks</a>.</li>
+<li><code>(4)/(5)</code> Update of the <a href="../ROI-Configuration/">ROIs</a>.</li>
+</ul>
               
             </div>
           </div><footer>
