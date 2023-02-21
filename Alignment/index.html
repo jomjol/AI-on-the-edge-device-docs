@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/outdated--Migrate-Old-Config-To-New-Config/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Alignment/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Migration from water-meter „old“ to water-meter “AI-on-the-edge-device” - AI on the Edge Device</title>
+    <title>Alignment References - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Migration from water-meter \u201eold\u201c to water-meter \u201cAI-on-the-edge-device\u201d";
-        var mkdocs_page_input_path = "outdated--Migrate-Old-Config-To-New-Config.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/outdated--Migrate-Old-Config-To-New-Config/";
+        var mkdocs_page_name = "Alignment References";
+        var mkdocs_page_input_path = "Alignment.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Alignment/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -68,8 +68,20 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Alignment References</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#precondition">Precondition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#define-two-reference-images">Define two Reference Images</a>
+    </li>
+    </ul>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -77,18 +89,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
@@ -135,56 +145,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-follow-the-installation-guide-to-flash-the-esp32cam-and-prepare-a-sd-card-with-the-content-of-the-master">1. Follow the installation guide to flash the ESP32CAM and prepare a SD Card with the content of the master</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-save-the-following-files-from-the-old-docker-system-on-your-pc">2. Save the following files from the old Docker system on your PC:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-copy-reference-points-1-3-onto-the-new-water-meter-system-directory-config">3. Copy Reference Points 1-3 onto the new water-meter system (Directory /config)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-open-new-configini-file">4. Open new config.ini File:</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#old">Old:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#new">New:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-insert-the-old-digit-values-into-the-new-configini-file-eg">5. Insert the old Digit Values into the new Config.ini File, e.g.:</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#old_1">Old:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#new_1">New:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-make-sure-that-you-have-the-same-quality-and-size-settings-as-in-your-old-configini">6. Make sure that you have the same quality and size settings as in your old Config.ini</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#old_2">Old:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#new_2">New:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-repeat-the-same-for-the-analog-section">7. Repeat the same for the analog section</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-insert-your-ssid-and-password-into-the-new-wlanini-file">8. Insert your SSID and Password into the new wlan.ini File</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#9-compare-and-edit-consistencycheck-section-with-new-postprocessing-section">9. Compare and edit [ConsistencyCheck] Section with new [PostProcessing] Section</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#10-save-new-configini-file-in-the-new-system">10.  Save new config.ini File in the new System.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#11-restart-the-system">11. Restart the system.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#12-after-the-first-start-set-manually-the-prevalue-in-the-new-system">12. After the first start set manually the PreValue in the new system</a>
-    </li>
-    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
@@ -206,10 +168,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Old Pages (no longer maintained) &raquo;</li>
-      <li>Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</li>
+          <li>Configuration &raquo;</li>
+      <li>Alignment References</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/outdated--Migrate-Old-Config-To-New-Config.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Alignment.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -217,110 +179,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="migration-from-water-meter-old-to-water-meter-ai-on-the-edge-device">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page no longer is maintained!</p>
+                <h1 id="alignment-references">Alignment References</h1>
+<p>The alignment references are used in every round to re-align the taken image to the reference coordinates. 
+Two alignment structures must be defined and the taken image then in each round is shifted and rotated according to their position
+with the target to be in exactly the same position as the reference image.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The alignment structures needs to be unique and have a good contrast. 
+It is advised to have them as far apart as possible.</p>
 </div>
-<p>There are only some few steps necessary to migrate your old system to the new one.</p>
-<p>Please follow the following steps:</p>
-<h4 id="1-follow-the-installation-guide-to-flash-the-esp32cam-and-prepare-a-sd-card-with-the-content-of-the-master">1. Follow the installation guide to flash the ESP32CAM and prepare a SD Card with the content of the master</h4>
-<h4 id="2-save-the-following-files-from-the-old-docker-system-on-your-pc">2. Save the following files from the old Docker system on your PC:</h4>
-<ul>
-<li>Reference Points 1-3 (only 2 needed)</li>
-<li><code>Config.ini</code></li>
-</ul>
-<h4 id="3-copy-reference-points-1-3-onto-the-new-water-meter-system-directory-config">3. Copy Reference Points 1-3 onto the new water-meter system (Directory <code>/config</code>)</h4>
-<p><strong>Please note only two Reference Points are supported in the new system.</strong></p>
-<h4 id="4-open-new-configini-file">4. Open new <code>config.ini</code> File:</h4>
-<p>Insert from the old <code>Config.ini</code> file <code>[alignment]</code> and <code>[alignment.ref0]</code> and <code>[alignment.ref1]</code> section the two Ref x and y position and the <code>initial_rotation_angle= 123</code>into the new <code>Config.ini</code> File, e.g.:</p>
-<h6 id="old">Old:</h6>
-<pre><code>[alignment.ref0]
-image=./config/RB01_65x65.jpg
-pos_x=28
-pos_y=63
-
-[alignment.ref1]
-image=./config/RB02_50x35.jpg
-pos_x=497
-pos_y=127
-
-[alignment]
-initial_rotation_angle=180
-</code></pre>
-<h6 id="new">New:</h6>
-<pre><code>[Alignment]
-InitalRotate=180
-/config/RB01_65x65.jpg 28, 63
-/config/RB02_50x35.jpg 497, 127
-SearchFieldX = 20
-SearchFieldY = 20
-</code></pre>
-<h4 id="5-insert-the-old-digit-values-into-the-new-configini-file-eg">5. Insert the old Digit Values into the new <code>Config.ini</code> File, e.g.:</h4>
-<h6 id="old_1">Old:</h6>
-<pre><code>[Digital_Digit.ziffer1]
-pos_x=265
-pos_y=117
-dx=28
-dy=51
-
-[Digital_Digit.ziffer2]
-pos_x=310
-pos_y=117
-dx=28
-dy=51
-
-[Digital_Digit.ziffer3]
-pos_x=354
-pos_y=117
-dx=28
-dy=51
-
-[Digital_Digit.ziffer4]
-pos_x=399
-pos_y=117
-dx=28
-dy=51
-
-[Digital_Digit.ziffer5]
-pos_x=445
-pos_y=115
-dx=28
-dy=51
-</code></pre>
-<h6 id="new_1">New:</h6>
-<pre><code>[Digits]
-Model=/config/dig0630s3.tflite
-;LogImageLocation = /log/digit
-ModelInputSize 20, 32
-digit1, 265, 117, 28, 51
-digit2, 310, 117, 28, 51
-digit3, 354, 117, 28, 51
-digit4, 399, 117, 28, 51
-digit5, 445, 115, 28, 51
-</code></pre>
-<h4 id="6-make-sure-that-you-have-the-same-quality-and-size-settings-as-in-your-old-configini">6. Make sure that you have the same quality and size settings as in your old <code>Config.ini</code></h4>
-<p>In the old configuration this was coded in the html-string for the image source:</p>
-<h6 id="old_2">Old:</h6>
-<pre><code>URLImageSource=http://IP-ADRESS/capture_with_flashlight?quality=5&amp;size=VGA
-</code></pre>
-<p>Default was Quality=5 and VGA.</p>
-<h6 id="new_2">New:</h6>
-<pre><code>ImageQuality = 5
-ImageSize = VGA
-</code></pre>
-<h4 id="7-repeat-the-same-for-the-analog-section">7. Repeat the same for the analog section</h4>
-<h4 id="8-insert-your-ssid-and-password-into-the-new-wlanini-file">8. Insert your SSID and Password into the new wlan.ini File</h4>
-<h4 id="9-compare-and-edit-consistencycheck-section-with-new-postprocessing-section">9. Compare and edit [ConsistencyCheck] Section with new [PostProcessing] Section</h4>
-<h4 id="10-save-new-configini-file-in-the-new-system">10.  Save new config.ini File in the new System.</h4>
-<h4 id="11-restart-the-system">11. Restart the system.</h4>
-<h4 id="12-after-the-first-start-set-manually-the-prevalue-in-the-new-system">12. After the first start set manually the PreValue in the new system</h4>
+<h2 id="precondition">Precondition</h2>
+<p>Please make sure to have setup your camera properly and taken a good <a href="../Reference-Image">Reference Image</a>.</p>
+<h2 id="define-two-reference-images">Define two Reference Images</h2>
+<p><img alt="" src="../img/initial_setup_2_alignment_marks.jpg" style="width:500px" /></p>
+<p>You can switch between this two marks with <code>(1)</code>.</p>
+<p>Then define the reference area in the image by either directly drag and drop with the mouse or use the input boxes below.
+To apply the currently marked image part you need to push <code>"Update Reference" (2)</code>. </p>
+<p>In some cases it might be useful to use a reference with a higher contrast. This can be achieved by pushing <code>Enhance Contrast" (3)</code>.
+The result will be calculated on the ESP32 - so be a bit patient, before you see it active.</p>
+<p>To save push <code>"Save to config.ini" (4)</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A reboot is not required at this point of time.</p>
+</div>
+<p>As next you should define the <a href="../ROI-Configuration/">Digit and Analog ROIs</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../outdated--Gasmeter-Log-Downloader/" class="btn btn-neutral float-left" title="Gas Meter Log Downloader"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Graphical-Configuration/" class="btn btn-neutral float-right" title="Graphical Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Reference-Image/" class="btn btn-neutral float-left" title="Reference Image"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ROI-Configuration/" class="btn btn-neutral float-right" title="ROI (Region of Interest)">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -347,10 +235,10 @@ ImageSize = VGA
         </span>
     
     
-      <span><a href="../outdated--Gasmeter-Log-Downloader/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Reference-Image/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Graphical-Configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../ROI-Configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

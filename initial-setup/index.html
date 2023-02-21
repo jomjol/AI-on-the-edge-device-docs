@@ -49,24 +49,6 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Initial Setup</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-reference-image">1. Reference Image</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#correct-horizontal-alignment">Correct Horizontal Alignment</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-alignment-references">2. Alignment References</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#34-define-the-rois-for-the-number-detection">3./4. Define the ROIs for the number detection</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#general-usage">General usage</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#5-general-settings">5. General Settings</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#expert-mode">Expert Mode</a>
@@ -99,7 +81,13 @@
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -107,18 +95,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
@@ -168,10 +154,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
@@ -206,92 +188,16 @@
                 <h1 id="initial-setup">Initial Setup</h1>
 <p>After setting up the device (firmware, SD card, WLAN) the device will connect to the wifi access point and start in an initial setup configuration:</p>
 <p><img alt="" src="../img/setup_initial_welcome.png" style="width:500px" /></p>
-<p>In the top you can navigate through 5 steps, that guide you through the necessary setup. All settings can be accessed also later in the normal operation mode (see below).</p>
-<h2 id="1-reference-image">1. Reference Image</h2>
-<p>The reference image is the basis for the coordinate system of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. </p>
-<p><img alt="" src="../img/initial_setup_1_reference_image.jpg" style="width:500px" /></p>
-<p>At first the current image is shown. To define a new reference image push the button "Create new Reference" (2) and afterwards "Take Image" (2). It might take some seconds for processing, then your actual camera image should be shown.</p>
-<p><strong>Attention:</strong> This is the first time, where you have access to the camera image. It might not be sharp yet. This is the first thing to do according to the following instruction (<strong>TBD</strong>).</p>
-<h4 id="correct-horizontal-alignment">Correct Horizontal Alignment</h4>
-<p>Ensure an <strong>exact horizontal alignment</strong> of the number via the alignment / reference setup:</p>
-<table>
-<thead>
-<tr>
-<th>✔️ Okay</th>
-<th>❌ Not Okay</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="" src="../img/alignment_okay.jpg" /></td>
-<td><img alt="" src="../img/alignment_not_okay.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<p><strong>‼️ Attention:</strong> Updating the reference image, also means, that all alignment images and ROIs needs to be taught again. Therefore do this step later only with caution.</p>
-<p>If everything is done, you can save the result with "Update Reference Image" (4). Please do not reboot at this stage, but go to the next section.</p>
-<h2 id="2-alignment-references">2. Alignment References</h2>
-<p>The alignment references are used to realign every taken image to the reference coordinates. Therefore two alignment structures are identified and the image is shifted and rotated according to their position with the target to be in exactly the same position as the reference image. The alignment structures needs to be unique and have a good contrast. You can switch between this two marks with (1).</p>
-<p><img alt="" src="../img/initial_setup_2_alignment_marks.jpg" style="width:500px" /></p>
-<p>With the control in (3) position and size of the selected reference image. You can define the ROI in the image also directly via drag and drop with the mouse. To choose the currently marked image part you need to push "Update Reference" (2). </p>
-<p>In some cases it might be useful to use a reference with a higher contrast. This can be achieved by pushing "Enhance Contrast" (3). The result will be calculated on the ESP32 - so be a bit patient, before you see it active.</p>
-<p>To save the push finally "Save to config.ini" (4). Do not reboot at this stage, but proceed with the "next" button.</p>
-<h2 id="34-define-the-rois-for-the-number-detection">3./4. Define the ROIs for the number detection</h2>
-<p>Here the regions of interest for the digital and analog pointers are defined. As both are done identically, here as an example the digital images are shown.</p>
-<h3 id="general-usage">General usage</h3>
-<p>First of all, if you don't have that kind of numbers on you meter, you can disable it with the check box at the top (1).</p>
-<p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px" /></p>
-<p>In contrast to the reference images, here there are more ROIs possible. You can switch between them with the drop down box (2). If you need additional ROIs or delete them you can do this with the control at (2). </p>
-<p><strong>Attention:</strong> The order of the ROIs defines, how the individual digits are combined to the total number. The first ROI is the digit with the highest order, then the second and so on. You can control the order in the selector tab and change it with the buttons "move Next" or "move Previous".</p>
-<p>As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. </p>
-<p>In most cases the digits are ordered in a equidistantly and have the same size, you can synchronize them with the control in (4).</p>
-<p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
-<h3 id="detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</h3>
-<p>For analog meters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center. The circle should exactly fit to the outer size of the meter and the cross should be in the middle.</p>
-<p>Here is an example with the details for the ROI "ana1": </p>
-<p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px" /></p>
-<h3 id="detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</h3>
-<p>For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.</p>
+<p>In the top you can navigate through 5 steps, that guide you through the necessary setup:</p>
 <ol>
-<li>Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: <code>dig-class11-....tfl</code></li>
+<li><a href="../Reference-Image/">Reference Image</a></li>
+<li><a href="../Alignment/">Alignment</a></li>
+<li><a href="../ROI-Configuration/">Digital ROIs</a></li>
+<li><a href="../ROI-Configuration/">Analog ROIs</a> (Only required in case your meter has analoge pointers)</li>
+<li><a href="../Configuration/">General Settings</a></li>
 </ol>
-<p><strong>Advantage:</strong> broad variety of types included in the training</p>
-<p><strong>Disadvantage:</strong> partially rotated numbers cannot be detected
-2. Model with sub-digit resolution (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: <code>dig-cont-....tfl</code> or <code>dig-class100-....tfl</code></p>
-<p><strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible</p>
-<p><strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data</p>
-<p>Details and the corresponding "perfect" setting is explained here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/">Details ROI Configuration</a></p>
-<p>For a first run you can choose the following general settings: </p>
-<ul>
-<li>There is an inner and an outer frame for the ROIs. </li>
-<li>Make the inner frame exactly the size of the number.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Example 1</th>
-<th>Example 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>✔️ <strong>Okay</strong></td>
-<td><img alt="" src="../img/cont_img_ok.png" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_okay.jpg" style="width:80px" /></td>
-</tr>
-<tr>
-<td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_small.jpg" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_not_okay_small.jpg" style="width:80px" /></td>
-</tr>
-<tr>
-<td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_big.jpg" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_not_okay_big.jpg" style="width:80px" /></td>
-</tr>
-</tbody>
-</table>
+<p>All settings can be accessed also later in the normal operation mode.</p>
+<p>TODO rework</p>
 <h2 id="5-general-settings">5. General Settings</h2>
 <p>In the next steps you can configure the behavior and external interfaces in detail:</p>
 <p><img alt="" src="../img/initial_setup_5_configuration.jpg" style="width:500px" /></p>

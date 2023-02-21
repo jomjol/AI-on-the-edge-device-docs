@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/outdated--Gasmeter-Log-Downloader/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Reference-Image/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Gas Meter Log Downloader - AI on the Edge Device</title>
+    <title>Reference Image - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Gas Meter Log Downloader";
-        var mkdocs_page_input_path = "outdated--Gasmeter-Log-Downloader.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/outdated--Gasmeter-Log-Downloader/";
+        var mkdocs_page_name = "Reference Image";
+        var mkdocs_page_input_path = "Reference-Image.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Reference-Image/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -68,8 +68,20 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Reference Image</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#focus">Focus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#correct-horizontal-alignment">Correct Horizontal Alignment</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -77,18 +89,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
@@ -135,14 +145,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Gas Meter Log Downloader</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
@@ -164,10 +168,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Old Pages (no longer maintained) &raquo;</li>
-      <li>Gas Meter Log Downloader</li>
+          <li>Configuration &raquo;</li>
+      <li>Reference Image</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/outdated--Gasmeter-Log-Downloader.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Reference-Image.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -175,30 +179,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="gas-meter-log-downloader">Gas Meter Log Downloader</h1>
+                <h1 id="reference-image">Reference Image</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Reference Image is the basis for the coordinate system of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. </p>
+</div>
+<p>At first an example image is shown.
+To define a new reference image push the button <code>"Create new Reference" (2)</code> and afterwards <code>"Take Image" (2)</code>. It might take some seconds for processing, then your actual camera image should be shown.
+Then play with the provided parameters to get a good result.</p>
+<p><img alt="" src="../img/initial_setup_1_reference_image.jpg" style="width:500px" /></p>
+<h2 id="focus">Focus</h2>
+<p>This is the first time, where you have access to the camera image. It most likely is out of focus and not sharp!
+Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Try to adjust the focus for the clearest possible image!</p>
+</div>
+<p>In order to use it for reading a meter, the focal-length  of the OV2640 camera has to be manipulated.
+By default it only results in sharp image for distance bigger than around <code>~40cm</code> which is not ideal for our purpose.</p>
+<p>Therefore you need to remove the fixing glue of the OV2640 lens with a sharp knife. After this you can rotate the lens in and out. Rotating it by about a quarter of a turn counterclockwise results in a focus plane shift of about 10cm. You need to figure out your best setting with a little bit of  trial and error for your specific environment.</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Be <strong>very</strong> carefully when rotating the lens. Best is to held the camera itself with one hand or a plier and rotate the lens with the other hand.
+Make sure <strong>not</strong> to rotate the whole camera as this can damage the ribbon cable!</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This page no longer is maintained!</p>
+<p>This modification will void any warranty, as the sealing of the lens objective is broken!</p>
 </div>
-<p>This small tool downloads the log files from your ESP32 and stores the last value of the day in an *.csv file.</p>
-<p>To use this tool you need to <strong>activate the debug log files</strong> in your configuration (Configuration / Debug / Logfile). I go with 30 days of retention in days.</p>
-<p>It downloads only the past log files (yesterday and older).</p>
-<p>You can define the max. number of log files to download (beginning from newest [yesterday]).</p>
-<p>I wrote this tool to get a chart of the daily gas consumption to optimize my gas powered heating.</p>
-<p><strong>Variables to define by yourself:</strong></p>
-<ul>
-<li><strong>URL to Log file-Path on Device:</strong> "http://ESP32-IP-Address/fileserver/log/message/"</li>
-<li><strong>Download Log files to:</strong> enter a valid directory, e.g. "D:\Gaszaehler\Auswertung\Log-Downloads\"</li>
-<li><strong>Output CSV-File:</strong> enter a valid directory, e.g. "D:\Gaszaehler\Auswertung\DailyValues.csv"</li>
-<li><strong>Download Log files from past # days:</strong> enter the max. number of log files you want to download (&lt;= your log files retention value in your device configuration)</li>
-</ul>
-<p>Feel free to optimize and modify it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This modification will render the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.</p>
+</div>
+<p><img alt="" src="../img/focus_adjustment.jpg" /></p>
+<h2 id="correct-horizontal-alignment">Correct Horizontal Alignment</h2>
+<p>Ensure an <strong>exact horizontal alignment</strong> of the number:</p>
+<table>
+<thead>
+<tr>
+<th>✔️ Okay</th>
+<th>❌ Not Okay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/alignment_okay.jpg" /></td>
+<td><img alt="" src="../img/alignment_not_okay.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Updating the reference image also means that all alignment images and ROIs needs to be configured again.
+Therefore do this step later only with caution.</p>
+</div>
+<p>If everything is done, you can save the result with <code>"Update Reference Image" (4)</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A reboot is not required at this point of time.</p>
+</div>
+<p>As next you should update the <a href="../Alignment/">Alignment References</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../outdated--Integrated-Functions/" class="btn btn-neutral float-left" title="Integrated Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../outdated--Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-right" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../FAQs/" class="btn btn-neutral float-left" title="Frequently Asked Questions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Alignment/" class="btn btn-neutral float-right" title="Alignment References">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -225,10 +271,10 @@
         </span>
     
     
-      <span><a href="../outdated--Integrated-Functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../FAQs/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../outdated--Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Alignment/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

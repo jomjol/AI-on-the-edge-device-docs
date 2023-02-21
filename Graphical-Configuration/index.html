@@ -69,7 +69,13 @@
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROI (Region of Interest)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -77,18 +83,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
@@ -138,19 +142,11 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Graphical Configuration</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general-remark">General remark:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#access-to-the-graphical-user-interface">Access to the graphical user interface</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#overview-function">Overview function</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#1-edit-configini">1. Edit Config.ini</a>
@@ -192,20 +188,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="graphical-configuration">Graphical Configuration</h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page overlaps <a href="../Configuration">Configuration</a>. They should be merged to one page!</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This page is outdated!</p>
 </div>
-<h3 id="general-remark"><strong>General remark:</strong></h3>
-<ul>
-<li>to activate the changes, currently the device needs a restart after saving the changes.</li>
-<li>partially the commands needs processing on the ESP32 device. This is not very fast - so please be patient.</li>
-</ul>
-<h2 id="access-to-the-graphical-user-interface">Access to the graphical user interface</h2>
-<p>The graphical configuration mode can be reached via the "Edit Configuration" button in the main menu (<code>/index.html</code>):</p>
-<ul>
-<li><img src="img/config_s1_access.jpg" width="600" align="middle"></li>
-</ul>
 <h2 id="overview-function">Overview function</h2>
 <ul>
 <li>
@@ -226,7 +212,7 @@
 <ul>
 <li><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/config_s2_edit_config.jpg" width="600" align="middle"></li>
 </ul>
-<p>Details see <a href="../Configuration-Parameter-Details">Configuration-Parameter-Details</a>.</p>
+<p>Details see <a href="../Parameters">Parameters</a>.</p>
 <h3 id="2a-create-reference-image">2a. Create Reference Image</h3>
 <p>The reference image is the basis for the coordination of the ROIs. Therefore it is very important, to have a well aligned image, that is not rotated. </p>
 <p><strong>‼️ Attention:</strong> Updating the reference image, also means, that all alignment images and ROIs needs to be taught again. Therefore do this step only with caution.</p>
@@ -262,14 +248,13 @@ The order of the ROIs correspond to the position of the digit / analog pointer i
 <li>More important is the inner smaller rectangle. This should tightly fit around the number itself in x- and in y-dimension. Maybe you need to unlock the aspect ratio to change x- and y-size independently</li>
 <li>The line in the middle should go through the middle of the  number (in case it is not  moving in or out)</li>
 </ul>
-<p>To save the result push "Save all to config.ini" (4).</p>
-<p><strong>‼️ Attention:</strong> Currently you have to reboot the ESP32 to take the changes in the <code>config.ini</code> to take place.</p>
-<p>This steps are running on the ESP32 directly. So be patient with the results.</p>
+<p>To save the result push <code>"Save all to config.ini" (4)</code>.</p>
+<p>A reboot is required to apply the changed configuration!</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../outdated--Migrate-Old-Config-To-New-Config/" class="btn btn-neutral float-left" title="Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../outdated--Integrated-Functions/" class="btn btn-neutral float-left" title="Integrated Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -296,7 +281,7 @@ The order of the ROIs correspond to the position of the digit / analog pointer i
         </span>
     
     
-      <span><a href="../outdated--Migrate-Old-Config-To-New-Config/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../outdated--Integrated-Functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>

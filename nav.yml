@@ -18,17 +18,19 @@ nav:
     - Join a Discussion: https://github.com/jomjol/AI-on-the-edge-device/discussions
 
   - Configuration:
+    - Reference-Image.md
+    - Alignment.md
     - ROI-Configuration.md
+    - Configuration.md
     - Choosing-the-Model.md
     - Neural-Network-Types.md
     - ota.md
-    - Parameters.md
 
   - Advanced:
+    - Parameters.md
     - Integration-Home-Assistant.md
     - External-LED.md
     - rolling-installation.md
-    - Configuration.md
     - Watermeter-specific-analog---digital-transition.md
     - collect-new-images.md
     - Learn-models-with-your-own-images.md
@@ -57,8 +59,6 @@ nav:
 
   - Old Pages (no longer maintained):
     - outdated--Integrated-Functions.md
-    - outdated--Gasmeter-Log-Downloader.md
-    - outdated--Migrate-Old-Config-To-New-Config.md
 
   - Assorted Pages:
     # List all pages which are not covered by above list

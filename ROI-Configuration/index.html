@@ -69,27 +69,39 @@
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
               <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">ROI (Region of Interest)</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#correct-setup-of-roi">Correct Setup of ROI</a>
+    <li class="toctree-l2"><a class="reference internal" href="#precondition">Precondition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#define-the-rois">Define the ROIs</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#image-sharpness">Image Sharpness</a>
+    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#horizontal-alignment">Horizontal Alignment</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#correct-size-for-roi">Correct Size for ROI</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#model-selection">Model Selection</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#dig-class11-configuration">dig-class11 Configuration</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#dig-class100-dig-cont-configuration">dig-class100 / dig-cont Configuration</a>
+    <li class="toctree-l3"><a class="reference internal" href="#detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#correct-size-for-roi">Correct Size for ROI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#digit-model-selection">Digit Model Selection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dig-class11-configuration">dig-class11 Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dig-class100-dig-cont-configuration">dig-class100 / dig-cont Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analog-model-selection">Analog Model Selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#saving">Saving</a>
     </li>
         </ul>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -97,18 +109,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
                   </li>
@@ -158,10 +168,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Gasmeter-Log-Downloader/">Gas Meter Log Downloader</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Migrate-Old-Config-To-New-Config/">Migration from water-meter „old“ to water-meter “AI-on-the-edge-device”</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
               <ul>
@@ -194,57 +200,99 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="roi-region-of-interest">ROI (Region of Interest)</h1>
-<p>General remark:</p>
-<blockquote>
-<p>You are using a neural network approach which is trained to fit as many different type of meters as possible. The accuracy will never be 100%. It is normal to see a missing reading once in a while. There there are several precautions to detect this. For details see the section <code>PostProcessing</code> on the configuration page.</p>
-</blockquote>
-<p>The most critical settings for accurate detection are:</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>You are using a neural network approach which is trained to fit as many different type of meters as possible.
+The accuracy will never be 100%. It is normal to see a missing reading once in a while. 
+There are several precautions to detect this. For details see the section <code>PostProcessing</code> on the configuration page.</p>
+</div>
+<p>The most critical components for an accurate detection are:</p>
 <ol>
-<li>Correct setting of the <strong>R</strong>egions <strong>O</strong>f <strong>I</strong>nterest (ROIs) for detection of the image.<blockquote>
-<p>This must be done manually for each meter!</p>
-</blockquote>
+<li>
+<p>Correct setting of the <strong>R</strong>egions <strong>O</strong>f <strong>I</strong>nterest (ROIs) for detection of the image.</p>
+<p><strong>This must be done manually for each device/installation!</strong></p>
 </li>
-<li>Number type is part of the training set.<blockquote>
-<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See: <a href="../Learn-models-with-your-own-images">Learn models with your own images</a> on how to create new input.</p>
-</blockquote>
+<li>
+<p>Well trained Models.</p>
+<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
 </li>
 </ol>
-<hr />
-<h2 id="correct-setup-of-roi">Correct Setup of ROI</h2>
-<p>Please proceed in the following order!</p>
-<p>Don't forget to save after each step!</p>
-<h3 id="image-sharpness">Image Sharpness</h3>
-<p>Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera. <strong>Adjust the focus for the clearest possible image!</strong></p>
-<p>In order to use it for reading a meter, the focal-length  of the OV2640 camera has to be manipulated, as by default it only results in sharp image for distance bigger than ~40cm, causing the image of the water meter to be too small for automated readout processing.</p>
-<p><strong>ATTENTION:</strong> this modification will void any warranty, as the sealing of the lens objective is broken!</p>
-<p><strong>ATTENTION:</strong> This modification will render the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.</p>
-<p><img alt="" src="../img/focus_adjustment.jpg" /></p>
-<p>Remove the fixing glue of the OV2640 lens with a sharp knife. After this you can screw the lens in and out. Rotating it by about a quarter of a turn counterclockwise results in a focus plane of about  10cm. You need to figure out your best setting with a little bit of  trial and error for your specific environment.</p>
-<h3 id="horizontal-alignment">Horizontal Alignment</h3>
-<p>Ensure an <strong>exact horizontal alignment</strong> of the number via the alignment / reference setup:</p>
+<h2 id="precondition">Precondition</h2>
+<p>Please make sure to have:</p>
+<ol>
+<li>Setup your camera properly and taken a good <a href="../Reference-Image">Reference Image</a>.</li>
+<li>Selected good <a href="../Alignment">Alignment References</a>.</li>
+</ol>
+<h2 id="define-the-rois">Define the ROIs</h2>
+<p>For each digit or analog pointer, a ROI must be defined.</p>
+<p>You can even have multiple independent <strong>Numbers</strong> (eg. electerical meters mostly have 2 numbers for the high and low tariff). </p>
+<p>Depending if you have only one of those types, you can <code>enable/disable (1)</code> it on the top left corner: </p>
+<p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px" /></p>
+<p>You can switch between the ROIs with the <code>Drop down box (2)</code>. If you need additional ROIs or delete them you can do this with the <code>control at (2)</code>. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The order of the ROIs defines how the individual digits are combined to the total number. The first ROI is the digit with the highest order (left side), then the second and so on. You can control the order in the selector tab and change it with the buttons <code>"move Next"</code> or <code>"move Previous"</code>.</p>
+</div>
+<p>TODO rework</p>
+<p>As for the reference images you can change position, size and name of the ROI in the text fields or define them via drag and drop through the mouse button. </p>
+<p>In most cases the digits are ordered in a equidistantly and have the same size, you can synchronize them with the <code>control in (4)</code>.</p>
+<p>Don' t forget to save the settings with "Save" and do not reboot at this stage.</p>
+<h3 id="detail-for-roi-configuration-analog-meters">Detail for ROI configuration - Analog Meters</h3>
+<p>For analog meters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center. The circle should exactly fit to the outer size of the meter and the cross should be in the middle.</p>
+<p>Here is an example with the details for the ROI "ana1": </p>
+<p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px" /></p>
+<h3 id="detail-for-roi-configuration-digital-meters">Detail for ROI configuration - Digital Meters</h3>
+<p>For the digital meters it is a little bit more complicated, as there are different options of digital models, that you can choose.</p>
+<ol>
+<li>Digital meter, that only recognized full digits (0, 1, 2, 3, ... 9) - Naming: <code>dig-class11-....tfl</code></li>
+</ol>
+<p><strong>Advantage:</strong> broad variety of types included in the training</p>
+<p><strong>Disadvantage:</strong> partially rotated numbers cannot be detected
+2. Model with sub-digit resolution (0.0, 0.1, 0.2, .... 9.8, 9.9) - Naming: <code>dig-cont-....tfl</code> or <code>dig-class100-....tfl</code></p>
+<p><strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible</p>
+<p><strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data</p>
+<p>Details and the corresponding "perfect" setting is explained here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/">Details ROI Configuration</a></p>
+<p>For a first run you can choose the following general settings: </p>
+<ul>
+<li>There is an inner and an outer frame for the ROIs. </li>
+<li>Make the inner frame exactly the size of the number.</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>✔️ Okay</th>
-<th>❌ Not Okay</th>
+<th></th>
+<th>Example 1</th>
+<th>Example 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../img/alignment_okay.jpg" /></td>
-<td><img alt="" src="../img/alignment_not_okay.jpg" /></td>
+<td>✔️ <strong>Okay</strong></td>
+<td><img alt="" src="../img/cont_img_ok.png" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_okay.jpg" style="width:80px" /></td>
+</tr>
+<tr>
+<td>❌ <strong>Not</strong> Okay</td>
+<td><img alt="" src="../img/bw_not_okay_small.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_not_okay_small.jpg" style="width:80px" /></td>
+</tr>
+<tr>
+<td>❌ <strong>Not</strong> Okay</td>
+<td><img alt="" src="../img/bw_not_okay_big.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/wb_not_okay_big.jpg" style="width:80px" /></td>
 </tr>
 </tbody>
 </table>
-<h3 id="correct-size-for-roi">Correct Size for ROI</h3>
-<p>Choose the right size of the ROI:</p>
-<blockquote>
-<p>The configuration of ROIs differs a bit on the model you choose. Below you find the differences between the different AI models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.</p>
-</blockquote>
-<h3 id="model-selection">Model Selection</h3>
-<h4 id="dig-class11-configuration">dig-class11 Configuration</h4>
-<p>dig-class11 - Models recognize the <strong>complete digit only</strong>. Here it is not relevant if the ROI fits the Border of the digit window.</p>
-<p>For this model, there should be a border of 20% of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: </p>
+<h2 id="correct-size-for-roi">Correct Size for ROI</h2>
+<p>Choose the right size of the ROI.
+The configuration of ROIs differs a bit on the selected model. </p>
+<p>If you are in the initial setup, the model will be selectable in the next step. By default it is a <code>dig-cont</code> resp. <code>ana-cont</code> model.</p>
+<p>In <a href="../Choosing-the-Model">Model Selection</a> you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.</p>
+<p>Here we only show the different configuration of the ROIs.</p>
+<h2 id="digit-model-selection">Digit Model Selection</h2>
+<h3 id="dig-class11-configuration">dig-class11 Configuration</h3>
+<p><code>dig-class11</code> - Models recognize the <strong>complete digit only</strong>. Here it is not relevant if the ROI fits the Border of the digit window.</p>
+<p>For this model, there should be a border of <code>20%</code> of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: </p>
 <p><img width="300px" src=../img/ROI_drawing.jpg></p>
 <table>
 <thead>
@@ -272,10 +320,10 @@
 </tr>
 </tbody>
 </table>
-<p>If you have perfect alignment you and are not getting satisfying results, most probably your numbers are not part of the training data yet. Read on <a href="../Learn-models-with-your-own-images">Learn models with your own images</a> how to add your meter's type of numbers to the training set.</p>
-<h4 id="dig-class100-dig-cont-configuration">dig-class100 / dig-cont Configuration</h4>
+<p>If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
+<h3 id="dig-class100-dig-cont-configuration">dig-class100 / dig-cont Configuration</h3>
 <p>These models recognize the tenths (fractions) between the numbers. This model requires a different ROI setup; the height must be set differently and more accurately.</p>
-<p>First, the width can be set as for dig-class11, i.e. 20% margin left and right.</p>
+<p>First, the width can be set as for <code>dig-class11</code>, i.e. <code>20%</code> margin left and right.</p>
 <p><img width="455" alt="ROI-setup" src="https://user-images.githubusercontent.com/412645/199028748-c48ef5bb-a8d4-4c77-9faf-763e6cf77351.png"></p>
 <p>The height of the outer rectangle should be set to the upper and lower edge of the number window. To achieve this setting, you need to unlock the aspect ratio:</p>
 <p><img width="168" alt="unlockAspectRatio" src="https://user-images.githubusercontent.com/412645/199028590-21708ff3-15a3-4415-89b1-c2affcfce003.png"></p>
@@ -298,12 +346,17 @@
 </tr>
 </tbody>
 </table>
+<h3 id="analog-model-selection">Analog Model Selection</h3>
+<p>Proceed the same way as with the Digit Model Selection.</p>
+<h3 id="saving">Saving</h3>
+<p>To save push <code>"Save</code>.</p>
+<p>A reboot is required to apply the changed configuration!</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../FAQs/" class="btn btn-neutral float-left" title="Frequently Asked Questions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Choosing-the-Model/" class="btn btn-neutral float-right" title="Model Selection">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Alignment/" class="btn btn-neutral float-left" title="Alignment References"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Configuration/" class="btn btn-neutral float-right" title="Graphical Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -330,10 +383,10 @@
         </span>
     
     
-      <span><a href="../FAQs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Choosing-the-Model/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
