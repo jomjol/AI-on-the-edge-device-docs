@@ -7,10 +7,10 @@ After setting up the device (firmware, SD card, WLAN) the device will connect to
 With the buttons on the top you can navigate through 5 steps which guide you through the necessary setup:
 
 1. Create the [Reference Image](Reference-Image.md). It is the base for the position referencing and the identification of the digits and counters.
-1. Define two unique [References](Alignment.md). It is used to align the individual camera images and identify the absolut positions.
-1. Define the [Digital ROIs](ROI-Configuration.md) to be recognized. (Only required in case your meter has analoge pointers).
-1. Define the [Analog ROIs](ROI-Configuration.md) to be identified</li>
-1. [General Settings](Configuration.md). Most settings can be used with default value at the beginning.
+1. Define two unique [Reference Marks](Alignment.md). They is used to align the individual camera images and identify the absolut positions.
+1. Define [ROIs](ROI-Configuration.md) for the Digits. They will be used to digitize the digit part of your meter. If your meter has no digits, this step can be skipped.
+1. Define [ROIs](ROI-Configuration.md) for the Analog Counters. (Only required in case your meter has analoge counters)</li>
+1. [General Settings](Configuration.md). Further configuration of your device.
 
 All settings can be accessed also later in the normal operation mode.
 
