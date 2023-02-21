@@ -4,82 +4,31 @@ After setting up the device (firmware, SD card, WLAN) the device will connect to
 
 ![](img/setup_initial_welcome.png){: style="width:500px"}
 
-In the top you can navigate through 5 steps, that guide you through the necessary setup:
+With the buttons on the top you can navigate through 5 steps which guide you through the necessary setup:
 
-1. [Reference Image](Reference-Image.md)
-1. [Alignment](Alignment.md)
-1. [Digital ROIs](ROI-Configuration.md)
-1. [Analog ROIs](ROI-Configuration.md) (Only required in case your meter has analoge pointers)
-1. [General Settings](Configuration.md)
+1. Create the [Reference Image](Reference-Image.md). It is the base for the position referencing and the identification of the digits and counters.
+1. Define two unique [References](Alignment.md). It is used to align the individual camera images and identify the absolut positions.
+1. Define the [Digital ROIs](ROI-Configuration.md) to be recognized. (Only required in case your meter has analoge pointers).
+1. Define the [Analog ROIs](ROI-Configuration.md) to be identified</li>
+1. [General Settings](Configuration.md). Most settings can be used with default value at the beginning.
 
 All settings can be accessed also later in the normal operation mode.
 
+!!! Note
+    Don' t forget to save each step with "Save" and do not reboot at this stage.
 
-
-
-
-
-
-
-
-
-
-TODO rework
-
-
-## 5. General Settings
-
-In the next steps you can configure the behavior and external interfaces in detail:
-
-![](img/initial_setup_5_configuration.jpg){: style="width:500px"}
-
-The configuration is divided into different sub topics:
-
-* TakeImage
-* Digits
-* Analog
-* PostProcessing
-* MQTT
-* InfluxDB
-* GPIO Settings
-* Autotimer
-* DataLogging
-* Debug
-* System
-
-The details are explained in other parts of the manual (see links (**TBD**))
-
-Some of the sections as well as parameters are mandatory. They can be en/disabled in the first column (1). 
-The setting itself is done in the next column (2) and a brief explanation you can find in the last column (3).
-
-Don' t forget to save the settings with "Save" and do not reboot at this stage.
-
-#### Expert Mode
-
-With the normal parameters you should be able to make the needed settings for most of the system. Sometimes there is some fine tunning needed. For this there is an expert mode available. This can be enabled with the check box at the top (4). After this you see much more parameters. But before modifying them you should be really sure, what they are about.
-
-
-
-## Finish Setup and change to normal operation
-
-After setting up everything, there is a last step to be done:
+## Finish the Setup and change to the Normal Operation mode
+With the last step `(1)` you leave the **Setup Mode** and reboot to the **Normal Operation mode**.
 
 ![](img/initial_setup_6_finish_reboot.jpg){: style="width:500px"}
 
-With (1) you leave the setup mode and reboot to normal operation mode.
 
-
-
-## Access to setup in normal operation mode
-
-You can access all the settings also during the normal working mode via the "Settings" menu:
+## Access to the Setup Pages in the Normal Operation mode
+You always can access all the settings during the normal operation mode via the `Settings` menu:
 
 ![](img/initial_setup_7_access_normal_mode.jpg){: style="width:500px"}
 
-(1) Access to configuration parameters
-
-(2) Update of reference image
-
-(3) Update of alignment marks
-
-(4)/(5) Update of the ROI setting
+- `(1)` Access to the [General Settings](Configuration.md).
+- `(2)` Update of the [Reference Image](Reference-Image.md).
+- `(3)` Update of the [Alignment Marks](Alignment.md).
+- `(4)/(5)` Update of the [ROIs](ROI-Configuration.md).
