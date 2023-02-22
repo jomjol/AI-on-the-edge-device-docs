@@ -12,6 +12,7 @@ This parameter can be used to configure the GPIO `IO0` pin.
     Additionally, it is used to activate Bootloader mode and must therefore be HIGH after a reset!
 
 Parameters:
+
 - `GPIO 0 state`: One of `input`, `input pullup`, `input pulldown` or `output`.
 - `GPIO 0 use interrupt`: Enable interrupt trigger
 - `GPIO 0 PWM duty resolution`: LEDC PWM duty resolution in bit

@@ -175,6 +175,7 @@ This would return:
 To do such a REST call, you need to create a REST sensor:
 ```yaml
 sensor:
+
 - platform: rest
   name: "Gasmeter JSON" 
   resource: http://<IP>/json

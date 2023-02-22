@@ -6,5 +6,6 @@ Default Value: `VGA`
 
 Size of the camera picture.
 Available options:
+
 - `VGA` (640 x 480 pixel)
 - `QVGA` (320 x 240 pixel)

@@ -11,6 +11,7 @@ This parameter can be used to configure the GPIO `IO4` pin.
     By default, it is used for build-in flash light (onboard LED).
 
 Parameters:
+
 - `GPIO 4 state`: One of `built-in-led`, `input`, `input pullup`, `input pulldown` or `output`.
 - `GPIO 4 use interrupt`: Enable interrupt trigger
 - `GPIO 4 PWM duty resolution`: LEDC PWM duty resolution in bit
