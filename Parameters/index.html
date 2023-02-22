@@ -193,8 +193,8 @@
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Algorithm used for the alignment step.
-Available options:</p>
+<p>Algorithm used for the alignment step.</p>
+<p>Available options:</p>
 <ul>
 <li><code>Default</code>: Use only red color channel</li>
 <li><code>HighAccuracy</code>: Use all 3 color Channels (3x slower)</li>
@@ -366,15 +366,15 @@ Activate data logging to the SD-Card.</p>
 <p><a id=Debug-LogLevel></a></p>
 <h3 id="parameter-loglevel">Parameter <code>LogLevel</code></h3>
 <p>Default Value: <code>1</code> (<code>ERROR</code>)
-Define the log level for the logging to the SD-Card.
-Available options:</p>
+Define the log level for the logging to the SD-Card.</p>
+<p>Available options:</p>
 <ul>
 <li><code>1</code>: <code>ERROR</code></li>
 <li><code>2</code>: <code>WARNING</code></li>
 <li><code>3</code>: <code>INFO</code></li>
-<li><code>4</code>: <code>DEBUG</code>
-As higher the level, as more log messages get written to the SD-Card.</li>
+<li><code>4</code>: <code>DEBUG</code></li>
 </ul>
+<p>As higher the level, as more log messages get written to the SD-Card.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><code>DEBUG</code> or <code>INFO</code> might damage the SD-Card if enabled long term due to excessive writes to the SD-Card!
@@ -641,6 +641,43 @@ Username for the InfluxDB v1 authentication.</p>
 </div>
 <hr style="border:2px solid">
 
+<h2 id="section-influxdbv2">Section <code>InfluxDBv2</code></h2>
+<p><a id=InfluxDBv2-Database></a></p>
+<h3 id="parameter-database_1">Parameter <code>Database</code></h3>
+<p>Default Value: ``</p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Measurement></a></p>
+<h3 id="parameter-measurement_1">Parameter <code>Measurement</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-NUMBER.fieldname></a></p>
+<h3 id="parameter-numberfieldname">Parameter <code>NUMBER.fieldname</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Org></a></p>
+<h3 id="parameter-org">Parameter <code>Org</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Uri></a></p>
+<h3 id="parameter-uri_1">Parameter <code>Uri</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-token></a></p>
+<h3 id="parameter-token">Parameter <code>token</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Please fill me with an explanation and useful links.</p>
+<hr style="border:2px solid">
+
 <h2 id="section-mqtt">Section <code>MQTT</code></h2>
 <p><a id=MQTT-ClientID></a></p>
 <h3 id="parameter-clientid">Parameter <code>ClientID</code></h3>
@@ -659,8 +696,8 @@ See <a href="../Integration-Home-Assistant">here</a> for details about the disco
 <p><a id=MQTT-MainTopic></a></p>
 <h3 id="parameter-maintopic">Parameter <code>MainTopic</code></h3>
 <p>Default Value: <code>watermeter</code>
-MQTT main topic, under which the counters are published.
-The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code> where:</p>
+MQTT main topic, under which the counters are published.</p>
+<p>The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code> where:</p>
 <ul>
 <li><code>NUMBER</code> is the name of the value (a meter might have more than one value). 
   The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).</li>
@@ -690,7 +727,7 @@ Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-
 <hr style="border:2px solid">
 
 <p><a id=MQTT-Uri></a></p>
-<h3 id="parameter-uri_1">Parameter <code>Uri</code></h3>
+<h3 id="parameter-uri_2">Parameter <code>Uri</code></h3>
 <p>Default Value: <code>mqtt://IP-ADRESS:1883</code>
 URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
 <hr style="border:2px solid">
@@ -930,8 +967,8 @@ Check <a href="../Demo-Mode">here</a> for details. </p>
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Size of the camera picture.
-Available options:</p>
+<p>Size of the camera picture.</p>
+<p>Available options:</p>
 <ul>
 <li><code>VGA</code> (640 x 480 pixel)</li>
 <li><code>QVGA</code> (320 x 240 pixel)</li>
