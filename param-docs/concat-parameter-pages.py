@@ -9,7 +9,8 @@ import glob
 
 
 parameterDocsFolder = "parameter-pages"
-parameterOverviewFile = "../docs/Parameters.md"
+docsMainFolder = "../docs"
+parameterOverviewFile = "Parameters.md"
 parameterOverviewTemplateFile = "./templates/overview.md"
 
 def appendParameterFile(section, file, parameterName):
@@ -18,15 +19,15 @@ def appendParameterFile(section, file, parameterName):
         parameterDoc = parameterDoc.replace("# ", "### ") # Move all headings 2 level down
 
     # Add parameter doc to overview page
-    with open(parameterOverviewFile, 'a') as overviewFileHandle:
+    with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
         overviewFileHandle.write("<a id=%s-%s></a>\n" % (section, parameterName)) # Create a html anchor so we can link to it with "section-parameter"
         overviewFileHandle.write(parameterDoc)
         overviewFileHandle.write("\n\n<hr style=\"border:2px solid\">\n\n")
 
 
 # Create templated overview markdown file
-if os.path.exists(parameterOverviewFile):
-    os.remove(parameterOverviewFile)
+if os.path.exists(docsMainFolder + "/" + parameterOverviewFile):
+    os.remove(docsMainFolder + "/" + parameterOverviewFile)
 #shutil.copy(parameterOverviewTemplateFile, parameterOverviewFile)
 
 folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
@@ -37,6 +38,9 @@ Create Overview Page (parameters.md)
 toc = ""
 for folder in folders:
     folder = folder.split("/")[-1]
+
+    if folder == "img": # Skip the images folder
+        continue
 
     with open(parameterOverviewTemplateFile, 'r') as overviewFileHandle:
         overviewFileContent = overviewFileHandle.read()
@@ -53,7 +57,7 @@ for folder in folders:
     #
     # overviewFileContent = overviewFileContent.replace("$TOC", toc)
 
-    with open(parameterOverviewFile, 'w') as overviewFileHandle:
+    with open(docsMainFolder + "/" + parameterOverviewFile, 'w') as overviewFileHandle:
         overviewFileHandle.write(overviewFileContent)
 
 
@@ -65,12 +69,22 @@ for folder in folders:
 #    print(folder)
 
     # Add section
-    with open(parameterOverviewFile, 'a') as overviewFileHandle:
+    with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
         overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
     for file in files:
-#        print("  %s" % file)
+        if not ".md" in file: # Skip non-markdown files
+            continue
+
+        # print("  %s" % file)
         parameter = file.split("/")[-1].replace(".md", "")
         parameter = parameter.replace("<", "").replace(">", "")
         appendParameterFile(folder, file, parameter)
+
+
+"""
+Copy images to main folder
+"""
+os.system("cp " + parameterDocsFolder + "/img/* " + docsMainFolder + "/img/")
+
