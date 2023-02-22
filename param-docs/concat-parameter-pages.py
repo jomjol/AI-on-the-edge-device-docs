@@ -7,6 +7,8 @@ import os
 import shutil
 import glob
 
+sectionsLogicallyOrdered = ["TakeImage", "Alignment", "Digits", "Analog", "PostProcessing",
+                           "MQTT", "InfluxDB", "InfluxDBv2", "GPIO", "AutoTimer", "DataLogging", "Debug", "System"]
 
 parameterDocsFolder = "parameter-pages"
 docsMainFolder = "../docs"
@@ -30,29 +32,37 @@ if os.path.exists(docsMainFolder + "/" + parameterOverviewFile):
     os.remove(docsMainFolder + "/" + parameterOverviewFile)
 #shutil.copy(parameterOverviewTemplateFile, parameterOverviewFile)
 
-folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
-# todo instead of alphabetic use logical order
+foldersRaw = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
+
+
+
+folders = []
+for folder in foldersRaw:
+    folder = folder.split("/")[-1]
+
+    if folder == "img": # Skip the images folder
+        continue
+
+    if not folder in sectionsLogicallyOrdered:
+        print("Warning: The section %r seems to be new, appending it to the end of the logically ordered folder list!" % folder)
+        print("         Please update `sectionsLogicallyOrdered`!")
+        sectionsLogicallyOrdered.append(folder)
+
 
 
 """
 Create Overview Page (parameters.md)
 """
 toc = ""
-for folder in folders:
-    folder = folder.split("/")[-1]
-
-    if folder == "img": # Skip the images folder
-        continue
-
+for section in sectionsLogicallyOrdered:
     with open(parameterOverviewTemplateFile, 'r') as overviewFileHandle:
         overviewFileContent = overviewFileHandle.read()
 
     # # Create TOC
-    # toc += "\n\n[%s](#%s)\n\n" % (folder, folder.lower())
+    # toc += "\n\n[%s](#%s)\n\n" % (section, section.lower())
     #
-    # files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
+    # files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + section + '/*')))
     # for file in files:
-    #     section = folder
     #     parameter = file.split("/")[-1].replace(".md", "")
     #     parameter = parameter.replace("<", "").replace(">", "")
     #     toc += " - [`%s`](#%s-%s)\n" % (parameter, section, parameter)
@@ -66,18 +76,13 @@ for folder in folders:
 """
 Append all parameter pages in a sorted manner
 """
-for folder in folders:
-    folder = folder.split("/")[-1]
-#    print(folder)
-
-    if folder == "img": # Skip the images folder
-        continue
-
+print("Appending all parameter pages to the single page %r..." % (docsMainFolder + "/" + parameterOverviewFile))
+for section in sectionsLogicallyOrdered:
     # Add section
     with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
-        overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
+        overviewFileHandle.write("\n## Section `%s`\n\n" % section)
 
-    files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
+    files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + section + '/*')))
     for file in files:
         if not ".md" in file: # Skip non-markdown files
             continue
@@ -85,7 +90,7 @@ for folder in folders:
         # print("  %s" % file)
         parameter = file.split("/")[-1].replace(".md", "")
         parameter = parameter.replace("<", "").replace(">", "")
-        appendParameterFile(folder, file, parameter)
+        appendParameterFile(section, file, parameter)
 
 
 """
