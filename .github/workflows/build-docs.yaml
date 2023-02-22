@@ -39,9 +39,9 @@ jobs:
       - name: Generate Parameter Page
         run: |
           cd param-docs
-          python generate-param-doc-pages.py
+          python generate-template-param-doc-pages.py # Creates a templated page for each parameter which does not yet have a page
           tree parameter-pages
           python concat-parameter-pages.py
         
-      - name: Store Cocumentation in the gh-pages branch so it gets pushed to the website
+      - name: Store Documentation in the gh-pages branch so it gets pushed to the website
         run: mkdocs gh-deploy

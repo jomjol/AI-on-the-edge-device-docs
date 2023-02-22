@@ -72,7 +72,7 @@ for folder in folders:
 
     if folder == "img": # Skip the images folder
         continue
-        
+
     # Add section
     with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
         overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
