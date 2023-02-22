@@ -801,7 +801,8 @@ Type of the <code>WS2812x</code> which is connected to GPIO12 (See <code>IO12</c
 <p class="admonition-title">Note</p>
 <p>This parameter is not accessible through the Web Interface Configuration Page!</p>
 </div>
-<p>Please fill me with an explanation and useful links</p>
+<p>The GPIO Interface is prepared to report it's status and status changes as a MQTT topic. With this parameter you configure the MQTT main topic, under which the status is published.
+As this parameter is still experimental it can only be set manually in the <code>config.ini</code> itself and has not been tested in detail so far.</p>
 <hr style="border:2px solid">
 
 <h2 id="section-influxdb">Section <code>InfluxDB</code></h2>
