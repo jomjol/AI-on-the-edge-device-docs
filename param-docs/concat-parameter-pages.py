@@ -31,6 +31,8 @@ if os.path.exists(docsMainFolder + "/" + parameterOverviewFile):
 #shutil.copy(parameterOverviewTemplateFile, parameterOverviewFile)
 
 folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
+# todo instead of alphabetic use logical order
+
 
 """
 Create Overview Page (parameters.md)
@@ -68,6 +70,9 @@ for folder in folders:
     folder = folder.split("/")[-1]
 #    print(folder)
 
+    if folder == "img": # Skip the images folder
+        continue
+        
     # Add section
     with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
         overviewFileHandle.write("\n## Section `%s`\n\n" % folder)
