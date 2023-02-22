@@ -86,17 +86,215 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Parameters</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-alignmentalgo">Parameter AlignmentAlgo</a>
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-all-parameters">List of all Parameters</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-flipimagesize">Parameter FlipImageSize</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-alignment">Section Alignment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-alignmentalgo">Parameter AlignmentAlgo</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-initialmirror">Parameter InitialMirror</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-flipimagesize">Parameter FlipImageSize</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-initialrotate">Parameter InitialRotate</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-initialmirror">Parameter InitialMirror</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-searchfieldx">Parameter SearchFieldX</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-initialrotate">Parameter InitialRotate</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameter-searchfieldy">Parameter SearchFieldY</a>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-searchfieldx">Parameter SearchFieldX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-searchfieldy">Parameter SearchFieldY</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-analog">Section Analog</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold">Parameter CNNGoodThreshold</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-extendedresolution">Parameter ExtendedResolution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-model">Parameter Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimageslocation">Parameter ROIImagesLocation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimagesretention">Parameter ROIImagesRetention</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-autotimer">Section AutoTimer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-autostart">Parameter AutoStart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-interval">Parameter Interval</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-datalogging">Section DataLogging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-datafilesretention">Parameter DataFilesRetention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-datalogactive">Parameter DataLogActive</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-debug">Section Debug</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-loglevel">Parameter LogLevel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-logfilesretention">Parameter LogfilesRetention</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-digits">Section Digits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold_1">Parameter CNNGoodThreshold</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-model_1">Parameter Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimageslocation_1">Parameter ROIImagesLocation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimagesretention_1">Parameter ROIImagesRetention</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-gpio">Section GPIO</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io0">Parameter IO0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io1">Parameter IO1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io12">Parameter IO12</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io13">Parameter IO13</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io3">Parameter IO3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io4">Parameter IO4</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledcolor">Parameter LEDColor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-lednumbers">Parameter LEDNumbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledtype">Parameter LEDType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopicmqtt">Parameter MainTopicMQTT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-influxdb">Section InfluxDB</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-database">Parameter Database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement">Parameter Measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri">Parameter Uri</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-password">Parameter password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-user">Parameter user</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-influxdbv2">Section InfluxDBv2</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-database_1">Parameter Database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement_1">Parameter Measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberfieldname">Parameter NUMBER.fieldname</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-org">Parameter Org</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_1">Parameter Uri</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-token">Parameter token</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-mqtt">Section MQTT</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-clientid">Parameter ClientID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-homeassistantdiscovery">Parameter HomeassistantDiscovery</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopic">Parameter MainTopic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-metertype">Parameter MeterType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-retainmessages">Parameter RetainMessages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_2">Parameter Uri</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-password_1">Parameter password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-user_1">Parameter user</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-postprocessing">Section PostProcessing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-allownegativerates">Parameter AllowNegativeRates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-checkdigitincreaseconsistency">Parameter CheckDigitIncreaseConsistency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-errormessage">Parameter ErrorMessage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbersallownegativerates">Parameter &lt;NUMBERS&gt;.AllowNegativeRates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberanalogdigitaltransitionstart">Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberdecimalshift">Parameter &lt;NUMBER&gt;.DecimalShift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberextendedresolution">Parameter &lt;NUMBER&gt;.ExtendedResolution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberignoreleadingnan">Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbermaxratetype">Parameter &lt;NUMBER&gt;.MaxRateType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numbermaxratevalue">Parameter &lt;NUMBER&gt;.MaxRateValue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueagestartup">Parameter PreValueAgeStartup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-prevalueuse">Parameter PreValueUse</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-system">Section System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-hostname">Parameter Hostname</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-rssithreshold">Parameter RSSIThreshold</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-setupmode">Parameter SetupMode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-timeserver">Parameter TimeServer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-timezone">Parameter TimeZone</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-takeimage">Section TakeImage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-brightness">Parameter Brightness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-contrast">Parameter Contrast</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-demo">Parameter Demo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-fixedexposure">Parameter FixedExposure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagequality">Parameter ImageQuality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagesize">Parameter ImageSize</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledintensity">Parameter LEDIntensity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimageslocation">Parameter RawImagesLocation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimagesretention">Parameter RawImagesRetention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-saturation">Parameter Saturation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-waitbeforetakingpicture">Parameter WaitBeforeTakingPicture</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -185,7 +383,134 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="section-alignment">Section <code>Alignment</code></h2>
+                <h1 id="parameters">Parameters</h1>
+<p>This page lists all available <a href="../Configuration">Configuration</a> Parameters.
+If a parameter or section has a tick box on its left side, you can disable it.
+In such case the functionality gets disabled respectively the default values will be used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an auto-generated page! See the <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/blob/main/README.md">README</a> for details!</p>
+</div>
+<h2 id="list-of-all-parameters">List of all Parameters</h2>
+<p><a href="#alignment">Alignment</a></p>
+<ul>
+<li><a href="#Alignment-AlignmentAlgo"><code>AlignmentAlgo</code></a></li>
+<li><a href="#Alignment-FlipImageSize"><code>FlipImageSize</code></a></li>
+<li><a href="#Alignment-InitialMirror"><code>InitialMirror</code></a></li>
+<li><a href="#Alignment-InitialRotate"><code>InitialRotate</code></a></li>
+<li><a href="#Alignment-SearchFieldX"><code>SearchFieldX</code></a></li>
+<li><a href="#Alignment-SearchFieldY"><code>SearchFieldY</code></a></li>
+</ul>
+<p><a href="#analog">Analog</a></p>
+<ul>
+<li><a href="#Analog-CNNGoodThreshold"><code>CNNGoodThreshold</code></a></li>
+<li><a href="#Analog-ExtendedResolution"><code>ExtendedResolution</code></a></li>
+<li><a href="#Analog-Model"><code>Model</code></a></li>
+<li><a href="#Analog-ROIImagesLocation"><code>ROIImagesLocation</code></a></li>
+<li><a href="#Analog-ROIImagesRetention"><code>ROIImagesRetention</code></a></li>
+</ul>
+<p><a href="#autotimer">AutoTimer</a></p>
+<ul>
+<li><a href="#AutoTimer-AutoStart"><code>AutoStart</code></a></li>
+<li><a href="#AutoTimer-Interval"><code>Interval</code></a></li>
+</ul>
+<p><a href="#datalogging">DataLogging</a></p>
+<ul>
+<li><a href="#DataLogging-DataFilesRetention"><code>DataFilesRetention</code></a></li>
+<li><a href="#DataLogging-DataLogActive"><code>DataLogActive</code></a></li>
+</ul>
+<p><a href="#debug">Debug</a></p>
+<ul>
+<li><a href="#Debug-LogLevel"><code>LogLevel</code></a></li>
+<li><a href="#Debug-LogfilesRetention"><code>LogfilesRetention</code></a></li>
+</ul>
+<p><a href="#digits">Digits</a></p>
+<ul>
+<li><a href="#Digits-CNNGoodThreshold"><code>CNNGoodThreshold</code></a></li>
+<li><a href="#Digits-Model"><code>Model</code></a></li>
+<li><a href="#Digits-ROIImagesLocation"><code>ROIImagesLocation</code></a></li>
+<li><a href="#Digits-ROIImagesRetention"><code>ROIImagesRetention</code></a></li>
+</ul>
+<p><a href="#gpio">GPIO</a></p>
+<ul>
+<li><a href="#GPIO-IO0"><code>IO0</code></a></li>
+<li><a href="#GPIO-IO1"><code>IO1</code></a></li>
+<li><a href="#GPIO-IO12"><code>IO12</code></a></li>
+<li><a href="#GPIO-IO13"><code>IO13</code></a></li>
+<li><a href="#GPIO-IO3"><code>IO3</code></a></li>
+<li><a href="#GPIO-IO4"><code>IO4</code></a></li>
+<li><a href="#GPIO-LEDColor"><code>LEDColor</code></a></li>
+<li><a href="#GPIO-LEDNumbers"><code>LEDNumbers</code></a></li>
+<li><a href="#GPIO-LEDType"><code>LEDType</code></a></li>
+<li><a href="#GPIO-MainTopicMQTT"><code>MainTopicMQTT</code></a></li>
+</ul>
+<p><a href="#influxdb">InfluxDB</a></p>
+<ul>
+<li><a href="#InfluxDB-Database"><code>Database</code></a></li>
+<li><a href="#InfluxDB-Measurement"><code>Measurement</code></a></li>
+<li><a href="#InfluxDB-Uri"><code>Uri</code></a></li>
+<li><a href="#InfluxDB-password"><code>password</code></a></li>
+<li><a href="#InfluxDB-user"><code>user</code></a></li>
+</ul>
+<p><a href="#influxdbv2">InfluxDBv2</a></p>
+<ul>
+<li><a href="#InfluxDBv2-Database"><code>Database</code></a></li>
+<li><a href="#InfluxDBv2-Measurement"><code>Measurement</code></a></li>
+<li><a href="#InfluxDBv2-NUMBER.fieldname"><code>NUMBER.fieldname</code></a></li>
+<li><a href="#InfluxDBv2-Org"><code>Org</code></a></li>
+<li><a href="#InfluxDBv2-Uri"><code>Uri</code></a></li>
+<li><a href="#InfluxDBv2-token"><code>token</code></a></li>
+</ul>
+<p><a href="#mqtt">MQTT</a></p>
+<ul>
+<li><a href="#MQTT-ClientID"><code>ClientID</code></a></li>
+<li><a href="#MQTT-HomeassistantDiscovery"><code>HomeassistantDiscovery</code></a></li>
+<li><a href="#MQTT-MainTopic"><code>MainTopic</code></a></li>
+<li><a href="#MQTT-MeterType"><code>MeterType</code></a></li>
+<li><a href="#MQTT-RetainMessages"><code>RetainMessages</code></a></li>
+<li><a href="#MQTT-Uri"><code>Uri</code></a></li>
+<li><a href="#MQTT-password"><code>password</code></a></li>
+<li><a href="#MQTT-user"><code>user</code></a></li>
+</ul>
+<p><a href="#postprocessing">PostProcessing</a></p>
+<ul>
+<li><a href="#PostProcessing-AllowNegativeRates"><code>AllowNegativeRates</code></a></li>
+<li><a href="#PostProcessing-CheckDigitIncreaseConsistency"><code>CheckDigitIncreaseConsistency</code></a></li>
+<li><a href="#PostProcessing-ErrorMessage"><code>ErrorMessage</code></a></li>
+<li><a href="#PostProcessing-NUMBER.AllowNegativeRates"><code>NUMBER.AllowNegativeRates</code></a></li>
+<li><a href="#PostProcessing-NUMBER.AnalogDigitalTransitionStart"><code>NUMBER.AnalogDigitalTransitionStart</code></a></li>
+<li><a href="#PostProcessing-NUMBER.DecimalShift"><code>NUMBER.DecimalShift</code></a></li>
+<li><a href="#PostProcessing-NUMBER.ExtendedResolution"><code>NUMBER.ExtendedResolution</code></a></li>
+<li><a href="#PostProcessing-NUMBER.IgnoreLeadingNaN"><code>NUMBER.IgnoreLeadingNaN</code></a></li>
+<li><a href="#PostProcessing-NUMBER.MaxRateType"><code>NUMBER.MaxRateType</code></a></li>
+<li><a href="#PostProcessing-NUMBER.MaxRateValue"><code>NUMBER.MaxRateValue</code></a></li>
+<li><a href="#PostProcessing-PreValueAgeStartup"><code>PreValueAgeStartup</code></a></li>
+<li><a href="#PostProcessing-PreValueUse"><code>PreValueUse</code></a></li>
+</ul>
+<p><a href="#system">System</a></p>
+<ul>
+<li><a href="#System-Hostname"><code>Hostname</code></a></li>
+<li><a href="#System-RSSIThreshold"><code>RSSIThreshold</code></a></li>
+<li><a href="#System-SetupMode"><code>SetupMode</code></a></li>
+<li><a href="#System-TimeServer"><code>TimeServer</code></a></li>
+<li><a href="#System-TimeZone"><code>TimeZone</code></a></li>
+</ul>
+<p><a href="#takeimage">TakeImage</a></p>
+<ul>
+<li><a href="#TakeImage-Brightness"><code>Brightness</code></a></li>
+<li><a href="#TakeImage-Contrast"><code>Contrast</code></a></li>
+<li><a href="#TakeImage-Demo"><code>Demo</code></a></li>
+<li><a href="#TakeImage-FixedExposure"><code>FixedExposure</code></a></li>
+<li><a href="#TakeImage-ImageQuality"><code>ImageQuality</code></a></li>
+<li><a href="#TakeImage-ImageSize"><code>ImageSize</code></a></li>
+<li><a href="#TakeImage-LEDIntensity"><code>LEDIntensity</code></a></li>
+<li><a href="#TakeImage-RawImagesLocation"><code>RawImagesLocation</code></a></li>
+<li><a href="#TakeImage-RawImagesRetention"><code>RawImagesRetention</code></a></li>
+<li><a href="#TakeImage-Saturation"><code>Saturation</code></a></li>
+<li><a href="#TakeImage-WaitBeforeTakingPicture"><code>WaitBeforeTakingPicture</code></a></li>
+</ul>
+<hr style="border:2px solid">
+<h2 id="section-alignment">Section <code>Alignment</code></h2>
 <p><a id=Alignment-AlignmentAlgo></a></p>
 <h3 id="parameter-alignmentalgo">Parameter <code>AlignmentAlgo</code></h3>
 <p>Default Value: <code>Default</code></p>
