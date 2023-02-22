@@ -5,6 +5,7 @@ Default Value: `Default`
     This is an **Expert Parameter**! Only change it if you understand what it does!
 
 Algorithm used for the alignment step.
+
 Available options:
 
 - `Default`: Use only red color channel

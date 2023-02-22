@@ -1,6 +1,7 @@
 # Parameter `MainTopic`
 Default Value: `watermeter`
 MQTT main topic, under which the counters are published.
+
 The single value will be published with the following key: `MAINTOPIC/NUMBER/RESULT_TOPIC` where:
 
 - `NUMBER` is the name of the value (a meter might have more than one value). 

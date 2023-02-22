@@ -1,12 +1,14 @@
 # Parameter `LogLevel`
 Default Value: `1` (`ERROR`)
 Define the log level for the logging to the SD-Card.
+
 Available options:
 
 - `1`: `ERROR`
 - `2`: `WARNING`
 - `3`: `INFO`
 - `4`: `DEBUG`
+
 As higher the level, as more log messages get written to the SD-Card.
 
 !!! Warning
