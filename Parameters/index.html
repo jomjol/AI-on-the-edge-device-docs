@@ -86,6 +86,32 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Parameters</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#section-takeimage">Section TakeImage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-brightness">Parameter Brightness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-contrast">Parameter Contrast</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-demo">Parameter Demo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-fixedexposure">Parameter FixedExposure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagequality">Parameter ImageQuality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagesize">Parameter ImageSize</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledintensity">Parameter LEDIntensity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimageslocation">Parameter RawImagesLocation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimagesretention">Parameter RawImagesRetention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-saturation">Parameter Saturation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-waitbeforetakingpicture">Parameter WaitBeforeTakingPicture</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#section-alignment">Section Alignment</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-alignmentalgo">Parameter AlignmentAlgo</a>
@@ -102,11 +128,9 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-analog">Section Analog</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-digits">Section Digits</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold">Parameter CNNGoodThreshold</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-extendedresolution">Parameter ExtendedResolution</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-model">Parameter Model</a>
     </li>
@@ -116,113 +140,17 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-autotimer">Section AutoTimer</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-autostart">Parameter AutoStart</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-interval">Parameter Interval</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-datalogging">Section DataLogging</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-datafilesretention">Parameter DataFilesRetention</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-datalogactive">Parameter DataLogActive</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-debug">Section Debug</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-loglevel">Parameter LogLevel</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-logfilesretention">Parameter LogfilesRetention</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-digits">Section Digits</a>
+    <li class="toctree-l2"><a class="reference internal" href="#section-analog">Section Analog</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-cnngoodthreshold_1">Parameter CNNGoodThreshold</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-extendedresolution">Parameter ExtendedResolution</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-model_1">Parameter Model</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimageslocation_1">Parameter ROIImagesLocation</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-roiimagesretention_1">Parameter ROIImagesRetention</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-gpio">Section GPIO</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io0">Parameter IO0</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io1">Parameter IO1</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io12">Parameter IO12</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io13">Parameter IO13</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io3">Parameter IO3</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-io4">Parameter IO4</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledcolor">Parameter LEDColor</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-lednumbers">Parameter LEDNumbers</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledtype">Parameter LEDType</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopicmqtt">Parameter MainTopicMQTT</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-influxdb">Section InfluxDB</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-database">Parameter Database</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement">Parameter Measurement</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri">Parameter Uri</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-password">Parameter password</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-user">Parameter user</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-influxdbv2">Section InfluxDBv2</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-database_1">Parameter Database</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement_1">Parameter Measurement</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberfieldname">Parameter &lt;NUMBER&gt;.fieldname</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-org">Parameter Org</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-token">Parameter Token</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_1">Parameter Uri</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-mqtt">Section MQTT</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-clientid">Parameter ClientID</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-homeassistantdiscovery">Parameter HomeassistantDiscovery</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopic">Parameter MainTopic</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-metertype">Parameter MeterType</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-retainmessages">Parameter RetainMessages</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_2">Parameter Uri</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-password_1">Parameter password</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-user_1">Parameter user</a>
     </li>
         </ul>
     </li>
@@ -254,6 +182,104 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-mqtt">Section MQTT</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-clientid">Parameter ClientID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-homeassistantdiscovery">Parameter HomeassistantDiscovery</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopic">Parameter MainTopic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-metertype">Parameter MeterType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-retainmessages">Parameter RetainMessages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri">Parameter Uri</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-password">Parameter password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-user">Parameter user</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-influxdb">Section InfluxDB</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-database">Parameter Database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement">Parameter Measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_1">Parameter Uri</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-password_1">Parameter password</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-user_1">Parameter user</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-influxdbv2">Section InfluxDBv2</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-database_1">Parameter Database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-measurement_1">Parameter Measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-numberfieldname">Parameter &lt;NUMBER&gt;.fieldname</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-org">Parameter Org</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-token">Parameter Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-uri_2">Parameter Uri</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-gpio">Section GPIO</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io0">Parameter IO0</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io1">Parameter IO1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io12">Parameter IO12</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io13">Parameter IO13</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io3">Parameter IO3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-io4">Parameter IO4</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledcolor">Parameter LEDColor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-lednumbers">Parameter LEDNumbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledtype">Parameter LEDType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-maintopicmqtt">Parameter MainTopicMQTT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-autotimer">Section AutoTimer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-autostart">Parameter AutoStart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-interval">Parameter Interval</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-datalogging">Section DataLogging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-datafilesretention">Parameter DataFilesRetention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-datalogactive">Parameter DataLogActive</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-debug">Section Debug</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-loglevel">Parameter LogLevel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-logfilesretention">Parameter LogfilesRetention</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#section-system">Section System</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-hostname">Parameter Hostname</a>
@@ -265,32 +291,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#parameter-timeserver">Parameter TimeServer</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-timezone">Parameter TimeZone</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-takeimage">Section TakeImage</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-brightness">Parameter Brightness</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-contrast">Parameter Contrast</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-demo">Parameter Demo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-fixedexposure">Parameter FixedExposure</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagequality">Parameter ImageQuality</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-imagesize">Parameter ImageSize</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-ledintensity">Parameter LEDIntensity</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimageslocation">Parameter RawImagesLocation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-rawimagesretention">Parameter RawImagesRetention</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-saturation">Parameter Saturation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#parameter-waitbeforetakingpicture">Parameter WaitBeforeTakingPicture</a>
     </li>
         </ul>
     </li>
@@ -390,6 +390,134 @@ In such case the functionality gets disabled respectively the default values wil
 <p>This is an auto-generated page! See the <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/blob/main/README.md">README</a> for details!</p>
 </div>
 <hr style="border:2px solid">
+<h2 id="section-takeimage">Section <code>TakeImage</code></h2>
+<p><a id=TakeImage-Brightness></a></p>
+<h3 id="parameter-brightness">Parameter <code>Brightness</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
+This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Image Brightness (<code>-2</code> .. <code>2</code>) </p>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-Contrast></a></p>
+<h3 id="parameter-contrast">Parameter <code>Contrast</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
+This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Image Contrast (<code>-2</code> .. <code>2</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Camera driver is not fully supporting this setting yet (no impact on image) </p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-Demo></a></p>
+<h3 id="parameter-demo">Parameter <code>Demo</code></h3>
+<p>Default Value: <code>false</code>
+Enable to use demo images instead of the real camera images.
+Make sure to have a <code>/demo</code> folder on your SD-Card and it contains the expected files!
+Check <a href="../Demo-Mode">here</a> for details. </p>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-FixedExposure></a></p>
+<h3 id="parameter-fixedexposure">Parameter <code>FixedExposure</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Fixes the illumination setting of camera at the startup and uses this later -&gt; Individual round is faster.</p>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-ImageQuality></a></p>
+<h3 id="parameter-imagequality">Parameter <code>ImageQuality</code></h3>
+<p>Default Value: <code>12</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Quality index for pictures. <code>0</code> (high) .. <code>63</code> (low)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values below <code>12</code> can result in reboots as the image gets larger and might no longer fit in the available RAM!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-ImageSize></a></p>
+<h3 id="parameter-imagesize">Parameter <code>ImageSize</code></h3>
+<p>Default Value: <code>VGA</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Size of the camera picture.</p>
+<p>Available options:</p>
+<ul>
+<li><code>VGA</code> (640 x 480 pixel)</li>
+<li><code>QVGA</code> (320 x 240 pixel)</li>
+</ul>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-LEDIntensity></a></p>
+<h3 id="parameter-ledintensity">Parameter <code>LEDIntensity</code></h3>
+<p>Default Value: <code>50</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
+This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Set the Flash LED Intensity.</p>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-RawImagesLocation></a></p>
+<h3 id="parameter-rawimageslocation">Parameter <code>RawImagesLocation</code></h3>
+<p>Default Value: <code>/log/source</code></p>
+<p>Location on the SD-Card to store the raw images.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-RawImagesRetention></a></p>
+<h3 id="parameter-rawimagesretention">Parameter <code>RawImagesRetention</code></h3>
+<p>Default Value: <code>15</code></p>
+<p>Unit: Days</p>
+<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-Saturation></a></p>
+<h3 id="parameter-saturation">Parameter <code>Saturation</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
+This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Image Saturation (<code>-2</code> .. <code>2</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Camera driver is not fully supporting this setting yet (no impact on image)!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=TakeImage-WaitBeforeTakingPicture></a></p>
+<h3 id="parameter-waitbeforetakingpicture">Parameter <code>WaitBeforeTakingPicture</code></h3>
+<p>Default Value: <code>5</code></p>
+<p>Unit: seconds</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Waiting time between switching illumination on and taking the picture.</p>
+<hr style="border:2px solid">
+
 <h2 id="section-alignment">Section <code>Alignment</code></h2>
 <p><a id=Alignment-AlignmentAlgo></a></p>
 <h3 id="parameter-alignmentalgo">Parameter <code>AlignmentAlgo</code></h3>
@@ -477,9 +605,47 @@ In such case the functionality gets disabled respectively the default values wil
 </div>
 <hr style="border:2px solid">
 
+<h2 id="section-digits">Section <code>Digits</code></h2>
+<p><a id=Digits-CNNGoodThreshold></a></p>
+<h3 id="parameter-cnngoodthreshold">Parameter <code>CNNGoodThreshold</code></h3>
+<p>Default Value: <code>0.5</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is only supported for the <code>dig-class100</code> models!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=Digits-Model></a></p>
+<h3 id="parameter-model">Parameter <code>Model</code></h3>
+<p>Default Value: <code>/config/dig-cont_*.tflite</code> (See <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/master/sd-card/config/config.ini">/config/config.ini</a>)</p>
+<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
+<hr style="border:2px solid">
+
+<p><a id=Digits-ROIImagesLocation></a></p>
+<h3 id="parameter-roiimageslocation">Parameter <code>ROIImagesLocation</code></h3>
+<p>Default Value: <code>/log/digit</code></p>
+<p>Location to store separated digit images on the SD-Card.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=Digits-ROIImagesRetention></a></p>
+<h3 id="parameter-roiimagesretention">Parameter <code>ROIImagesRetention</code></h3>
+<p>Default Value: <code>3</code></p>
+<p>Unit: Days</p>
+<p>Days to keep the separated digit images (<code>0</code> = forever).</p>
+<hr style="border:2px solid">
+
 <h2 id="section-analog">Section <code>Analog</code></h2>
 <p><a id=Analog-CNNGoodThreshold></a></p>
-<h3 id="parameter-cnngoodthreshold">Parameter <code>CNNGoodThreshold</code></h3>
+<h3 id="parameter-cnngoodthreshold_1">Parameter <code>CNNGoodThreshold</code></h3>
 <p>Default Value: <code>0.5</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -502,13 +668,13 @@ Use <a href="../Parameters/#PostProcessing-NUMBER.ExtendedResolution"><code>NUMB
 <hr style="border:2px solid">
 
 <p><a id=Analog-Model></a></p>
-<h3 id="parameter-model">Parameter <code>Model</code></h3>
+<h3 id="parameter-model_1">Parameter <code>Model</code></h3>
 <p>Default Value: <code>/config/ana-cont_*.tflite</code> (See <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/master/sd-card/config/config.ini">/config/config.ini</a>)</p>
 <p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
 <hr style="border:2px solid">
 
 <p><a id=Analog-ROIImagesLocation></a></p>
-<h3 id="parameter-roiimageslocation">Parameter <code>ROIImagesLocation</code></h3>
+<h3 id="parameter-roiimageslocation_1">Parameter <code>ROIImagesLocation</code></h3>
 <p>Default Value: <code>/log/analog</code></p>
 <p>Location to store separated analog images on the SD-Card.</p>
 <div class="admonition warning">
@@ -518,119 +684,272 @@ Use <a href="../Parameters/#PostProcessing-NUMBER.ExtendedResolution"><code>NUMB
 <hr style="border:2px solid">
 
 <p><a id=Analog-ROIImagesRetention></a></p>
-<h3 id="parameter-roiimagesretention">Parameter <code>ROIImagesRetention</code></h3>
+<h3 id="parameter-roiimagesretention_1">Parameter <code>ROIImagesRetention</code></h3>
 <p>Default Value: <code>3</code></p>
 <p>Unit: Days</p>
 <p>Days to keep the separated analog images (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
-<h2 id="section-autotimer">Section <code>AutoTimer</code></h2>
-<p><a id=AutoTimer-AutoStart></a></p>
-<h3 id="parameter-autostart">Parameter <code>AutoStart</code></h3>
+<h2 id="section-postprocessing">Section <code>PostProcessing</code></h2>
+<p><a id=PostProcessing-AllowNegativeRates></a></p>
+<h3 id="parameter-allownegativerates">Parameter <code>AllowNegativeRates</code></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This parameter is unused!
+Use <a href="../Parameters/#PostProcessing-NUMBER.AllowNegativeRates"><code>NUMBER.AllowNegativeRates</code></a> instead!</p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=PostProcessing-CheckDigitIncreaseConsistency></a></p>
+<h3 id="parameter-checkdigitincreaseconsistency">Parameter <code>CheckDigitIncreaseConsistency</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>An additional consistency check.
+It especially improves the zero crossing check between digits.</p>
+<hr style="border:2px solid">
+
+<p><a id=PostProcessing-ErrorMessage></a></p>
+<h3 id="parameter-errormessage">Parameter <code>ErrorMessage</code></h3>
 <p>Default Value: <code>true</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Automatically start the Flow (Digitization Rounds) immediately after power up.</p>
+<p>Do not show error message in return value.
+In an error case, the last valid number will be used for the various transmission protocols (MQTT, InfluxDB, REST, ...).</p>
+<hr style="border:2px solid">
+
+<p><a id=PostProcessing-NUMBER.AllowNegativeRates></a></p>
+<h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
+<p>Default Value: <code>false</code></p>
+<p>Allow a meter to count backwards (decreasing values).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Typically this is set to <code>true</code>.
-The main reasons to set it to <code>false</code> is when you want to trigger it manually using the
-<a href="../REST-API">REST API</a> or <a href="../MQTT-API">MQTT-API</a> or for debugging.</p>
+<p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
 </div>
 <hr style="border:2px solid">
 
-<p><a id=AutoTimer-Interval></a></p>
-<h3 id="parameter-interval">Parameter <code>Interval</code></h3>
-<p>Default Value: <code>5</code></p>
-<p>Unit: Minutes</p>
-<p>Interval in which the Flow (Digitization Round) is run.
-If a round takes longer than this interval, the next round gets postponed until the current round completes.</p>
+<p><a id=PostProcessing-NUMBER.AnalogDigitalTransitionStart></a></p>
+<h3 id="parameter-numberanalogdigitaltransitionstart">Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
+<p>Default Value: <code>9.2</code></p>
+<p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
+Look for the start of changing of the first digit and note the analog pointer value behind.
+Set it here. Only used on combination of digits and analog pointers.
+See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
 <hr style="border:2px solid">
 
-<h2 id="section-datalogging">Section <code>DataLogging</code></h2>
-<p><a id=DataLogging-DataFilesRetention></a></p>
-<h3 id="parameter-datafilesretention">Parameter <code>DataFilesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Unit: Days</p>
-<p>Number of days to keep the data files (<code>0</code> = forever).</p>
+<p><a id=PostProcessing-NUMBER.DecimalShift></a></p>
+<h3 id="parameter-numberdecimalshift">Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
+<p>Default Value: <code>0</code></p>
+<p>Shift the decimal separator (positiv or negativ).
+Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equals <code>1000 liters</code>), you need to set it to <code>+3</code>.</p>
 <hr style="border:2px solid">
 
-<p><a id=DataLogging-DataLogActive></a></p>
-<h3 id="parameter-datalogactive">Parameter <code>DataLogActive</code></h3>
-<p>Default Value: <code>true</code>
-Activate data logging to the SD-Card.</p>
-<p>The files will be stored in <code>/log/data/data_YYYY-MM-DD.csv</code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
+<p><a id=PostProcessing-NUMBER.ExtendedResolution></a></p>
+<h3 id="parameter-numberextendedresolution">Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
+<p>Default Value: <code>false</code></p>
+<p>Use the decimal place of the last analog counter for increased accuracy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter is only supported on the <code>*-class*</code> and <code>*-const</code> models! See <a href="../Choosing-the-Model">Choosing-the-Model</a> for details.</p>
 </div>
 <hr style="border:2px solid">
 
-<h2 id="section-debug">Section <code>Debug</code></h2>
-<p><a id=Debug-LogLevel></a></p>
-<h3 id="parameter-loglevel">Parameter <code>LogLevel</code></h3>
-<p>Default Value: <code>1</code> (<code>ERROR</code>)
-Define the log level for the logging to the SD-Card.</p>
-<p>Available options:</p>
-<ul>
-<li><code>1</code>: <code>ERROR</code></li>
-<li><code>2</code>: <code>WARNING</code></li>
-<li><code>3</code>: <code>INFO</code></li>
-<li><code>4</code>: <code>DEBUG</code></li>
-</ul>
-<p>As higher the level, as more log messages get written to the SD-Card.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code>DEBUG</code> or <code>INFO</code> might damage the SD-Card if enabled long term due to excessive writes to the SD-Card!
-A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
-</div>
+<p><a id=PostProcessing-NUMBER.IgnoreLeadingNaN></a></p>
+<h3 id="parameter-numberignoreleadingnan">Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
+<p>Default Value: <code>true</code></p>
+<p>Leading <code>N</code>'s will be deleted before further processing.
+This is only relevant for models which use <code>N</code>!
+See <a href="../Choosing-the-Model">here</a> for details.</p>
 <hr style="border:2px solid">
 
-<p><a id=Debug-LogfilesRetention></a></p>
-<h3 id="parameter-logfilesretention">Parameter <code>LogfilesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Unit: Days</p>
-<p>Number of days to keep the log files (<code>0</code> = forever).</p>
+<p><a id=PostProcessing-NUMBER.MaxRateType></a></p>
+<h3 id="parameter-numbermaxratetype">Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
+<p>Default Value: <code>AbsoluteChange</code></p>
+<p>Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
+as rate normalized to the interval (<code>RateChange</code> = change/minute).</p>
 <hr style="border:2px solid">
 
-<h2 id="section-digits">Section <code>Digits</code></h2>
-<p><a id=Digits-CNNGoodThreshold></a></p>
-<h3 id="parameter-cnngoodthreshold_1">Parameter <code>CNNGoodThreshold</code></h3>
-<p>Default Value: <code>0.5</code></p>
+<p><a id=PostProcessing-NUMBER.MaxRateValue></a></p>
+<h3 id="parameter-numbermaxratevalue">Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
+<p>Default Value: <code>0.05</code></p>
+<p>Maximum change of a reading.
+Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
+<hr style="border:2px solid">
+
+<p><a id=PostProcessing-PreValueAgeStartup></a></p>
+<h3 id="parameter-prevalueagestartup">Parameter <code>PreValueAgeStartup</code></h3>
+<p>Default Value: <code>720</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Threshold above which the classification should be to accept the value (only meaningful for digits).</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is only supported for the <code>dig-class100</code> models!</p>
+<p>Time in minutes, how long a previous read value is valid after reboot.</p>
+<hr style="border:2px solid">
+
+<p><a id=PostProcessing-PreValueUse></a></p>
+<h3 id="parameter-prevalueuse">Parameter <code>PreValueUse</code></h3>
+<p>Default Value: <code>true</code></p>
+<p>Use the previous value (value from previous round) for consistency checks.
+This also works through a reboot of the device!</p>
+<hr style="border:2px solid">
+
+<h2 id="section-mqtt">Section <code>MQTT</code></h2>
+<p><a id=MQTT-ClientID></a></p>
+<h3 id="parameter-clientid">Parameter <code>ClientID</code></h3>
+<p>Default Value: <code>watermeter</code></p>
+<p>Client ID used to connect to the MQTT broker.
+If disabled, the <code>hostname</code> will be used.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-HomeassistantDiscovery></a></p>
+<h3 id="parameter-homeassistantdiscovery">Parameter <code>HomeassistantDiscovery</code></h3>
+<p>Default Value: <code>true</code></p>
+<p>Enable or disable the Homeassistant Discovery.
+See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-MainTopic></a></p>
+<h3 id="parameter-maintopic">Parameter <code>MainTopic</code></h3>
+<p>Default Value: <code>watermeter</code></p>
+<p>MQTT main topic, under which the counters are published.</p>
+<p>The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code></p>
+<p>With:</p>
+<ul>
+<li><code>NUMBER</code>: The name of the value (a meter might have more than one value). 
+  The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).</li>
+<li><code>RESULT_TOPIC</code>: Automatically filled with the right name, eg. <code>value</code>, <code>rate</code>, <code>timestamp</code>, <code>error</code>, ....</li>
+</ul>
+<p>The general connection status can be found in <code>MAINTOPIC/CONNECTION</code>. 
+See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topics.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-MeterType></a></p>
+<h3 id="parameter-metertype">Parameter <code>MeterType</code></h3>
+<p>Default Value: <code>other</code></p>
+<p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <code>Watermeter</code> you need to have Homeassistant 2022.11 or newer!</p>
+</div>
+<p>Please also make sure that the selected Meter Type matches the dimension of the value provided by the meter!
+Eg. if your meter provides <code>m³</code>, you need to also set it to <code>m³</code>.
+Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</code> so the value is converted to <code>liters</code>!</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-RetainMessages></a></p>
+<h3 id="parameter-retainmessages">Parameter <code>RetainMessages</code></h3>
+<p>Default Value: <code>true</code></p>
+<p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-Uri></a></p>
+<h3 id="parameter-uri">Parameter <code>Uri</code></h3>
+<p>Default Value: <code>mqtt://IP-ADRESS:1883</code></p>
+<p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-password></a></p>
+<h3 id="parameter-password">Parameter <code>password</code></h3>
+<p>Default Value: <code>PASSWORD</code></p>
+<p>Password for MQTT authentication.</p>
+<hr style="border:2px solid">
+
+<p><a id=MQTT-user></a></p>
+<h3 id="parameter-user">Parameter <code>user</code></h3>
+<p>Default Value: <code>USERNAME</code></p>
+<p>Username for MQTT authentication.</p>
+<hr style="border:2px solid">
+
+<h2 id="section-influxdb">Section <code>InfluxDB</code></h2>
+<p><a id=InfluxDB-Database></a></p>
+<h3 id="parameter-database">Parameter <code>Database</code></h3>
+<p>Default Value: <code>''</code></p>
+<p>Name of the InfluxDB v1 Database into which to publish the values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
 </div>
 <hr style="border:2px solid">
 
-<p><a id=Digits-Model></a></p>
-<h3 id="parameter-model_1">Parameter <code>Model</code></h3>
-<p>Default Value: <code>/config/dig-cont_*.tflite</code> (See <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/master/sd-card/config/config.ini">/config/config.ini</a>)</p>
-<p>Path to CNN model file for image recognition. See <a href="../Choosing-the-Model">here</a> for details. </p>
-<hr style="border:2px solid">
-
-<p><a id=Digits-ROIImagesLocation></a></p>
-<h3 id="parameter-roiimageslocation_1">Parameter <code>ROIImagesLocation</code></h3>
-<p>Default Value: <code>/log/digit</code></p>
-<p>Location to store separated digit images on the SD-Card.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
+<p><a id=InfluxDB-Measurement></a></p>
+<h3 id="parameter-measurement">Parameter <code>Measurement</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Name of the InfluxDB v1 Measurement to use to publish the value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
 </div>
 <hr style="border:2px solid">
 
-<p><a id=Digits-ROIImagesRetention></a></p>
-<h3 id="parameter-roiimagesretention_1">Parameter <code>ROIImagesRetention</code></h3>
-<p>Default Value: <code>3</code></p>
-<p>Unit: Days</p>
-<p>Days to keep the separated digit images (<code>0</code> = forever).</p>
+<p><a id=InfluxDB-Uri></a></p>
+<h3 id="parameter-uri_1">Parameter <code>Uri</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>URI of the HTTP interface to InfluxDB v1, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDB-password></a></p>
+<h3 id="parameter-password_1">Parameter <code>password</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Password for the InfluxDB v1 authentication.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
+</div>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDB-user></a></p>
+<h3 id="parameter-user_1">Parameter <code>user</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Username for the InfluxDB v1 authentication.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
+</div>
+<hr style="border:2px solid">
+
+<h2 id="section-influxdbv2">Section <code>InfluxDBv2</code></h2>
+<p><a id=InfluxDBv2-Database></a></p>
+<h3 id="parameter-database_1">Parameter <code>Database</code></h3>
+<p>Default Value: <code>''</code></p>
+<p>Name of the InfluxDB v2 Database into which to publish the values.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Measurement></a></p>
+<h3 id="parameter-measurement_1">Parameter <code>Measurement</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Name of the InfluxDB v2 Measurement to use to publish the value.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-NUMBER.Fieldname></a></p>
+<h3 id="parameter-numberfieldname">Parameter <code>&lt;NUMBER&gt;.fieldname</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Fieldname for InfluxDB v2 to use for saving.</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Org></a></p>
+<h3 id="parameter-org">Parameter <code>Org</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Organisation (Org) for InfluxDB v2 authentication</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Token></a></p>
+<h3 id="parameter-token">Parameter <code>Token</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>Token for InfluxDB v2 authentication</p>
+<hr style="border:2px solid">
+
+<p><a id=InfluxDBv2-Uri></a></p>
+<h3 id="parameter-uri_2">Parameter <code>Uri</code></h3>
+<p>Default Value: <code>undefined</code></p>
+<p>URI of the HTTP interface to InfluxDB v2, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
 <hr style="border:2px solid">
 
 <h2 id="section-gpio">Section <code>GPIO</code></h2>
@@ -805,266 +1124,75 @@ Type of the <code>WS2812x</code> which is connected to GPIO12 (See <code>IO12</c
 As this parameter is still experimental it can only be set manually in the <code>config.ini</code> itself and has not been tested in detail so far.</p>
 <hr style="border:2px solid">
 
-<h2 id="section-influxdb">Section <code>InfluxDB</code></h2>
-<p><a id=InfluxDB-Database></a></p>
-<h3 id="parameter-database">Parameter <code>Database</code></h3>
-<p>Default Value: <code>''</code></p>
-<p>Name of the InfluxDB v1 Database into which to publish the values.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDB-Measurement></a></p>
-<h3 id="parameter-measurement">Parameter <code>Measurement</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Name of the InfluxDB v1 Measurement to use to publish the value.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDB-Uri></a></p>
-<h3 id="parameter-uri">Parameter <code>Uri</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>URI of the HTTP interface to InfluxDB v1, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDB-password></a></p>
-<h3 id="parameter-password">Parameter <code>password</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Password for the InfluxDB v1 authentication.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDB-user></a></p>
-<h3 id="parameter-user">Parameter <code>user</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Username for the InfluxDB v1 authentication.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See section <code>InfluxDBv2</code> for InfluxDB v2 support! </p>
-</div>
-<hr style="border:2px solid">
-
-<h2 id="section-influxdbv2">Section <code>InfluxDBv2</code></h2>
-<p><a id=InfluxDBv2-Database></a></p>
-<h3 id="parameter-database_1">Parameter <code>Database</code></h3>
-<p>Default Value: <code>''</code></p>
-<p>Name of the InfluxDB v2 Database into which to publish the values.</p>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDBv2-Measurement></a></p>
-<h3 id="parameter-measurement_1">Parameter <code>Measurement</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Name of the InfluxDB v2 Measurement to use to publish the value.</p>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDBv2-NUMBER.Fieldname></a></p>
-<h3 id="parameter-numberfieldname">Parameter <code>&lt;NUMBER&gt;.fieldname</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Fieldname for InfluxDB v2 to use for saving.</p>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDBv2-Org></a></p>
-<h3 id="parameter-org">Parameter <code>Org</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Organisation (Org) for InfluxDB v2 authentication</p>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDBv2-Token></a></p>
-<h3 id="parameter-token">Parameter <code>Token</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>Token for InfluxDB v2 authentication</p>
-<hr style="border:2px solid">
-
-<p><a id=InfluxDBv2-Uri></a></p>
-<h3 id="parameter-uri_1">Parameter <code>Uri</code></h3>
-<p>Default Value: <code>undefined</code></p>
-<p>URI of the HTTP interface to InfluxDB v2, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
-<hr style="border:2px solid">
-
-<h2 id="section-mqtt">Section <code>MQTT</code></h2>
-<p><a id=MQTT-ClientID></a></p>
-<h3 id="parameter-clientid">Parameter <code>ClientID</code></h3>
-<p>Default Value: <code>watermeter</code></p>
-<p>Client ID used to connect to the MQTT broker.
-If disabled, the <code>hostname</code> will be used.</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-HomeassistantDiscovery></a></p>
-<h3 id="parameter-homeassistantdiscovery">Parameter <code>HomeassistantDiscovery</code></h3>
+<h2 id="section-autotimer">Section <code>AutoTimer</code></h2>
+<p><a id=AutoTimer-AutoStart></a></p>
+<h3 id="parameter-autostart">Parameter <code>AutoStart</code></h3>
 <p>Default Value: <code>true</code></p>
-<p>Enable or disable the Homeassistant Discovery.
-See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Automatically start the Flow (Digitization Rounds) immediately after power up.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typically this is set to <code>true</code>.
+The main reasons to set it to <code>false</code> is when you want to trigger it manually using the
+<a href="../REST-API">REST API</a> or <a href="../MQTT-API">MQTT-API</a> or for debugging.</p>
+</div>
 <hr style="border:2px solid">
 
-<p><a id=MQTT-MainTopic></a></p>
-<h3 id="parameter-maintopic">Parameter <code>MainTopic</code></h3>
-<p>Default Value: <code>watermeter</code></p>
-<p>MQTT main topic, under which the counters are published.</p>
-<p>The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code></p>
-<p>With:</p>
+<p><a id=AutoTimer-Interval></a></p>
+<h3 id="parameter-interval">Parameter <code>Interval</code></h3>
+<p>Default Value: <code>5</code></p>
+<p>Unit: Minutes</p>
+<p>Interval in which the Flow (Digitization Round) is run.
+If a round takes longer than this interval, the next round gets postponed until the current round completes.</p>
+<hr style="border:2px solid">
+
+<h2 id="section-datalogging">Section <code>DataLogging</code></h2>
+<p><a id=DataLogging-DataFilesRetention></a></p>
+<h3 id="parameter-datafilesretention">Parameter <code>DataFilesRetention</code></h3>
+<p>Default Value: <code>3</code></p>
+<p>Unit: Days</p>
+<p>Number of days to keep the data files (<code>0</code> = forever).</p>
+<hr style="border:2px solid">
+
+<p><a id=DataLogging-DataLogActive></a></p>
+<h3 id="parameter-datalogactive">Parameter <code>DataLogActive</code></h3>
+<p>Default Value: <code>true</code>
+Activate data logging to the SD-Card.</p>
+<p>The files will be stored in <code>/log/data/data_YYYY-MM-DD.csv</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
+</div>
+<hr style="border:2px solid">
+
+<h2 id="section-debug">Section <code>Debug</code></h2>
+<p><a id=Debug-LogLevel></a></p>
+<h3 id="parameter-loglevel">Parameter <code>LogLevel</code></h3>
+<p>Default Value: <code>1</code> (<code>ERROR</code>)
+Define the log level for the logging to the SD-Card.</p>
+<p>Available options:</p>
 <ul>
-<li><code>NUMBER</code>: The name of the value (a meter might have more than one value). 
-  The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).</li>
-<li><code>RESULT_TOPIC</code>: Automatically filled with the right name, eg. <code>value</code>, <code>rate</code>, <code>timestamp</code>, <code>error</code>, ....</li>
+<li><code>1</code>: <code>ERROR</code></li>
+<li><code>2</code>: <code>WARNING</code></li>
+<li><code>3</code>: <code>INFO</code></li>
+<li><code>4</code>: <code>DEBUG</code></li>
 </ul>
-<p>The general connection status can be found in <code>MAINTOPIC/CONNECTION</code>. 
-See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topics.</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-MeterType></a></p>
-<h3 id="parameter-metertype">Parameter <code>MeterType</code></h3>
-<p>Default Value: <code>other</code></p>
-<p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For <code>Watermeter</code> you need to have Homeassistant 2022.11 or newer!</p>
-</div>
-<p>Please also make sure that the selected Meter Type matches the dimension of the value provided by the meter!
-Eg. if your meter provides <code>m³</code>, you need to also set it to <code>m³</code>.
-Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</code> so the value is converted to <code>liters</code>!</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-RetainMessages></a></p>
-<h3 id="parameter-retainmessages">Parameter <code>RetainMessages</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-Uri></a></p>
-<h3 id="parameter-uri_2">Parameter <code>Uri</code></h3>
-<p>Default Value: <code>mqtt://IP-ADRESS:1883</code></p>
-<p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-password></a></p>
-<h3 id="parameter-password_1">Parameter <code>password</code></h3>
-<p>Default Value: <code>PASSWORD</code></p>
-<p>Password for MQTT authentication.</p>
-<hr style="border:2px solid">
-
-<p><a id=MQTT-user></a></p>
-<h3 id="parameter-user_1">Parameter <code>user</code></h3>
-<p>Default Value: <code>USERNAME</code></p>
-<p>Username for MQTT authentication.</p>
-<hr style="border:2px solid">
-
-<h2 id="section-postprocessing">Section <code>PostProcessing</code></h2>
-<p><a id=PostProcessing-AllowNegativeRates></a></p>
-<h3 id="parameter-allownegativerates">Parameter <code>AllowNegativeRates</code></h3>
+<p>As higher the level, as more log messages get written to the SD-Card.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This parameter is unused!
-Use <a href="../Parameters/#PostProcessing-NUMBER.AllowNegativeRates"><code>NUMBER.AllowNegativeRates</code></a> instead!</p>
+<p><code>DEBUG</code> or <code>INFO</code> might damage the SD-Card if enabled long term due to excessive writes to the SD-Card!
+A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
 </div>
 <hr style="border:2px solid">
 
-<p><a id=PostProcessing-CheckDigitIncreaseConsistency></a></p>
-<h3 id="parameter-checkdigitincreaseconsistency">Parameter <code>CheckDigitIncreaseConsistency</code></h3>
-<p>Default Value: <code>false</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>An additional consistency check.
-It especially improves the zero crossing check between digits.</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-ErrorMessage></a></p>
-<h3 id="parameter-errormessage">Parameter <code>ErrorMessage</code></h3>
-<p>Default Value: <code>true</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Do not show error message in return value.
-In an error case, the last valid number will be used for the various transmission protocols (MQTT, InfluxDB, REST, ...).</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.AllowNegativeRates></a></p>
-<h3 id="parameter-numbersallownegativerates">Parameter <code>&lt;NUMBERS&gt;.AllowNegativeRates</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Allow a meter to count backwards (decreasing values).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.AnalogDigitalTransitionStart></a></p>
-<h3 id="parameter-numberanalogdigitaltransitionstart">Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
-<p>Default Value: <code>9.2</code></p>
-<p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
-Look for the start of changing of the first digit and note the analog pointer value behind.
-Set it here. Only used on combination of digits and analog pointers.
-See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.DecimalShift></a></p>
-<h3 id="parameter-numberdecimalshift">Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
-<p>Default Value: <code>0</code></p>
-<p>Shift the decimal separator (positiv or negativ).
-Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equals <code>1000 liters</code>), you need to set it to <code>+3</code>.</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.ExtendedResolution></a></p>
-<h3 id="parameter-numberextendedresolution">Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Use the decimal place of the last analog counter for increased accuracy.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter is only supported on the <code>*-class*</code> and <code>*-const</code> models! See <a href="../Choosing-the-Model">Choosing-the-Model</a> for details.</p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.IgnoreLeadingNaN></a></p>
-<h3 id="parameter-numberignoreleadingnan">Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Leading <code>N</code>'s will be deleted before further processing.
-This is only relevant for models which use <code>N</code>!
-See <a href="../Choosing-the-Model">here</a> for details.</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.MaxRateType></a></p>
-<h3 id="parameter-numbermaxratetype">Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
-<p>Default Value: <code>AbsoluteChange</code></p>
-<p>Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
-as rate normalized to the interval (<code>RateChange</code> = change/minute).</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-NUMBER.MaxRateValue></a></p>
-<h3 id="parameter-numbermaxratevalue">Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
-<p>Default Value: <code>0.05</code></p>
-<p>Maximum change of a reading.
-Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-PreValueAgeStartup></a></p>
-<h3 id="parameter-prevalueagestartup">Parameter <code>PreValueAgeStartup</code></h3>
-<p>Default Value: <code>720</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Time in minutes, how long a previous read value is valid after reboot.</p>
-<hr style="border:2px solid">
-
-<p><a id=PostProcessing-PreValueUse></a></p>
-<h3 id="parameter-prevalueuse">Parameter <code>PreValueUse</code></h3>
-<p>Default Value: <code>true</code></p>
-<p>Use the previous value (value from previous round) for consistency checks.
-This also works through a reboot of the device!</p>
+<p><a id=Debug-LogfilesRetention></a></p>
+<h3 id="parameter-logfilesretention">Parameter <code>LogfilesRetention</code></h3>
+<p>Default Value: <code>3</code></p>
+<p>Unit: Days</p>
+<p>Number of days to keep the log files (<code>0</code> = forever).</p>
 <hr style="border:2px solid">
 
 <h2 id="section-system">Section <code>System</code></h2>
@@ -1115,134 +1243,6 @@ In such case the time always starts at <code>01.01.1970</code> after each power 
 <p>Default Value: <code>CET-1CEST,M3.5.0,M10.5.0/3</code></p>
 <p>Time zone in POSIX syntax (Europe/Berlin = <code>CET-1CEST,M3.5.0,M10.5.0/3</code> - incl. daylight saving)
 Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find the settings for your region.</p>
-<hr style="border:2px solid">
-
-<h2 id="section-takeimage">Section <code>TakeImage</code></h2>
-<p><a id=TakeImage-Brightness></a></p>
-<h3 id="parameter-brightness">Parameter <code>Brightness</code></h3>
-<p>Default Value: <code>0</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
-This parameter can also be set on the Reference Image configuration.</p>
-</div>
-<p>Image Brightness (<code>-2</code> .. <code>2</code>) </p>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-Contrast></a></p>
-<h3 id="parameter-contrast">Parameter <code>Contrast</code></h3>
-<p>Default Value: <code>0</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
-This parameter can also be set on the Reference Image configuration.</p>
-</div>
-<p>Image Contrast (<code>-2</code> .. <code>2</code>)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Camera driver is not fully supporting this setting yet (no impact on image) </p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-Demo></a></p>
-<h3 id="parameter-demo">Parameter <code>Demo</code></h3>
-<p>Default Value: <code>false</code>
-Enable to use demo images instead of the real camera images.
-Make sure to have a <code>/demo</code> folder on your SD-Card and it contains the expected files!
-Check <a href="../Demo-Mode">here</a> for details. </p>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-FixedExposure></a></p>
-<h3 id="parameter-fixedexposure">Parameter <code>FixedExposure</code></h3>
-<p>Default Value: <code>false</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Fixes the illumination setting of camera at the startup and uses this later -&gt; Individual round is faster.</p>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-ImageQuality></a></p>
-<h3 id="parameter-imagequality">Parameter <code>ImageQuality</code></h3>
-<p>Default Value: <code>12</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Quality index for pictures. <code>0</code> (high) .. <code>63</code> (low)</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Values below <code>12</code> can result in reboots as the image gets larger and might no longer fit in the available RAM!</p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-ImageSize></a></p>
-<h3 id="parameter-imagesize">Parameter <code>ImageSize</code></h3>
-<p>Default Value: <code>VGA</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Size of the camera picture.</p>
-<p>Available options:</p>
-<ul>
-<li><code>VGA</code> (640 x 480 pixel)</li>
-<li><code>QVGA</code> (320 x 240 pixel)</li>
-</ul>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-LEDIntensity></a></p>
-<h3 id="parameter-ledintensity">Parameter <code>LEDIntensity</code></h3>
-<p>Default Value: <code>50</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
-This parameter can also be set on the Reference Image configuration.</p>
-</div>
-<p>Set the Flash LED Intensity.</p>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-RawImagesLocation></a></p>
-<h3 id="parameter-rawimageslocation">Parameter <code>RawImagesLocation</code></h3>
-<p>Default Value: <code>/log/source</code></p>
-<p>Location on the SD-Card to store the raw images.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-RawImagesRetention></a></p>
-<h3 id="parameter-rawimagesretention">Parameter <code>RawImagesRetention</code></h3>
-<p>Default Value: <code>15</code></p>
-<p>Unit: Days</p>
-<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-Saturation></a></p>
-<h3 id="parameter-saturation">Parameter <code>Saturation</code></h3>
-<p>Default Value: <code>0</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
-This parameter can also be set on the Reference Image configuration.</p>
-</div>
-<p>Image Saturation (<code>-2</code> .. <code>2</code>)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Camera driver is not fully supporting this setting yet (no impact on image)!</p>
-</div>
-<hr style="border:2px solid">
-
-<p><a id=TakeImage-WaitBeforeTakingPicture></a></p>
-<h3 id="parameter-waitbeforetakingpicture">Parameter <code>WaitBeforeTakingPicture</code></h3>
-<p>Default Value: <code>5</code></p>
-<p>Unit: seconds</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Waiting time between switching illumination on and taking the picture.</p>
 <hr style="border:2px solid">
               
             </div>
