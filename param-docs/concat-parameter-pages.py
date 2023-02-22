@@ -32,25 +32,26 @@ if os.path.exists(parameterOverviewFile):
 folders = sorted( filter( os.path.isdir, glob.glob(parameterDocsFolder + '/*') ) )
 
 """
-Create Table of Content
+Create Overview Page (parameters.md)
 """
 toc = ""
 for folder in folders:
     folder = folder.split("/")[-1]
 
-    toc += "\n\n[%s](#%s)\n\n" % (folder, folder.lower())
-
-    files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
-    for file in files:
-        section = folder
-        parameter = file.split("/")[-1].replace(".md", "")
-        parameter = parameter.replace("<", "").replace(">", "")
-        toc += " - [`%s`](#%s-%s)\n" % (parameter, section, parameter)
-
     with open(parameterOverviewTemplateFile, 'r') as overviewFileHandle:
         overviewFileContent = overviewFileHandle.read()
 
-    overviewFileContent = overviewFileContent.replace("$TOC", toc)
+    # # Create TOC
+    # toc += "\n\n[%s](#%s)\n\n" % (folder, folder.lower())
+    #
+    # files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + folder + '/*')))
+    # for file in files:
+    #     section = folder
+    #     parameter = file.split("/")[-1].replace(".md", "")
+    #     parameter = parameter.replace("<", "").replace(">", "")
+    #     toc += " - [`%s`](#%s-%s)\n" % (parameter, section, parameter)
+    #
+    # overviewFileContent = overviewFileContent.replace("$TOC", toc)
 
     with open(parameterOverviewFile, 'w') as overviewFileHandle:
         overviewFileHandle.write(overviewFileContent)
