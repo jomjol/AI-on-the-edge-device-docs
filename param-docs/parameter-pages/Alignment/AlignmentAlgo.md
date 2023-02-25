@@ -9,5 +9,6 @@ Algorithm used for the alignment step.
 Available options:
 
 - `Default`: Use only red color channel
-- `HighAccuracy`: Use all 3 color Channels (3x slower)
+- `HighAccuracy`: Use all 3 color channels (3x slower)
 - `Fast`: First time use `HighAccuracy`, then only check if the image is shifted
+- `Off`: Disable alignment algorithm
