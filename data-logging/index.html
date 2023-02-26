@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/data-logging/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>REST API - AI on the Edge Device</title>
+    <title>Data Logging - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "REST API";
-        var mkdocs_page_input_path = "REST-API.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/REST-API/";
+        var mkdocs_page_name = "Data Logging";
+        var mkdocs_page_input_path = "data-logging.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/data-logging/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -83,14 +83,18 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Logging</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-format">Data Format</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
                   </li>
@@ -121,86 +125,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">API's</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">REST API</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#control">Control</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#set-pre-value">Set Pre Value</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ota_pagehtml">ota_page.html</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#reboot">reboot</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#results">Results</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#json">json</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#value">value</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmprawjpg">img_tmp/raw.jpg</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmpalgjpg">img_tmp/alg.jpg</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmpalg_roijpg">img_tmp/alg_roi.jpg</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#status">Status</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#statusflow">statusflow</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rssi">rssi</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#cpu_temperature">cpu_temperature</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sysinfo">sysinfo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#starttime">starttime</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#uptime">uptime</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#lighton">lighton</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#lightoff">lightoff</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#capture">capture</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#capture_with_flashlight">capture_with_flashlight</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#save">save</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#logs">Logs</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#log">log</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#logfileact">logfileact</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#loghtml">log.html</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#heap">heap</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
                   </li>
@@ -240,10 +166,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>API's &raquo;</li>
-      <li>REST API</li>
+          <li>Advanced &raquo;</li>
+      <li>Data Logging</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/REST-API.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/data-logging.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -251,193 +177,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="rest-api">REST API</h1>
-<p>Various information is directly accessible over specific REST calls.</p>
-<p>To use it, just append them to the IP, separated with a <code>/</code>, e.g. <code>http://192.168.1.1/json</code></p>
-<p>Note: For more detailed information to the REST handler, have a look to the code in the repository: <a href="https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri">registered handlers</a></p>
-<h2 id="control">Control</h2>
-<ul>
-<li>
-<h3 id="flow_start">flow_start</h3>
-<p>Trigger a flow start (if not running)</p>
-</li>
-<li>
-<h3 id="set-pre-value">Set Pre Value</h3>
-<p>Set the Previous Value</p>
-</li>
-</ul>
-<p><code>/setPreValue?value=1234&amp;numbers=main</code> where <code>1234</code> is the new value and <code>main</code> the name of the number to be adjusted.</p>
-<ul>
-<li>
-<h3 id="gpio">GPIO</h3>
-</li>
-<li>
-<p>Control a GPIO output</p>
-<ul>
-<li>The <code>GPIO</code> entrypoint also support parameters:</li>
-<li><code>/GPIO?GPIO={PinNumber}&amp;Status=high</code></li>
-<li><code>/GPIO?GPIO={PinNumber}&amp;Status=low</code></li>
-<li>Example: <code>/GPIO?GPIO=12&amp;Status=high</code></li>
-</ul>
-</li>
-<li>
-<p>Read a GPIO input </p>
-<ul>
-<li>The <code>GPIO</code> entrypoint also support parameters:</li>
-<li><code>/GPIO?GPIO={PinNumber}</code></li>
-<li>Example: <code>/GPIO?GPIO=12</code></li>
-</ul>
-</li>
-<li>
-<h3 id="ota">ota</h3>
-</li>
-<li>
-<h3 id="ota_pagehtml">ota_page.html</h3>
-<p>Opens the Over-The-Air update html page</p>
-</li>
-<li>
-<h3 id="reboot">reboot</h3>
-<p>Trigger a reboot of the device</p>
-</li>
-</ul>
-<h2 id="results">Results</h2>
-<ul>
-<li>
-<h3 id="json">json</h3>
-  Show result in JSON syntax</li>
-<li>
-<p>Example: 
-  <code>{
-  "main":
-    {
-      "value": "521.17108",
-      "raw": "521.17108",
-      "pre": "521.17108",
-      "error": "no error",
-      "rate": "0.023780",
-      "timestamp": "2023-01-13T16:00:42+0100"
-    }
-  }</code></p>
-</li>
-<li>
-<h3 id="value">value</h3>
-<p>Show single result values</p>
-</li>
-<li>The <code>value</code> entrypoint also support parameters:</li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=value</code></li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=raw</code></li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=error</code></li>
-<li>
-<p><code>http://&lt;IP&gt;/value?all=true&amp;type=prevalue</code></p>
-</li>
-<li>
-<h3 id="img_tmprawjpg">img_tmp/raw.jpg</h3>
-<p>Capture and show a new raw image</p>
-</li>
-<li>
-<h3 id="img_tmpalgjpg">img_tmp/alg.jpg</h3>
-<p>Show last aligned image</p>
-</li>
-<li>
-<h3 id="img_tmpalg_roijpg">img_tmp/alg_roi.jpg</h3>
-<p>Show last aligned image including ROI overlay</p>
-</li>
-</ul>
-<h2 id="status">Status</h2>
-<ul>
-<li>
-<h3 id="statusflow">statusflow</h3>
-  Show the actual step of the flow incl. timestamp</li>
-<li>
-<p>Example: <code>Take Image (15:56:34)</code></p>
-</li>
-<li>
-<h3 id="rssi">rssi</h3>
-<p>Show the WIFI signal strength (Unit: dBm)</p>
-</li>
-<li>
-<p>Example: <code>-51</code></p>
-</li>
-<li>
-<h3 id="cpu_temperature">cpu_temperature</h3>
-<p>Show the CPU temperature (Unit: °C)</p>
-</li>
-<li>
-<p>Example: <code>38</code></p>
-</li>
-<li>
-<h3 id="sysinfo">sysinfo</h3>
-<p>Show system infos in JSON syntax</p>
-</li>
-<li>
-<p>Example: <code>[{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]</code></p>
-</li>
-<li>
-<h3 id="starttime">starttime</h3>
-<p>Show starttime</p>
-</li>
-<li>
-<p>Example: <code>20230113-154634</code></p>
-</li>
-<li>
-<h3 id="uptime">uptime</h3>
-<p>Show uptime</p>
-</li>
-<li>Example: <code>0d 00h 15m 50s</code></li>
-</ul>
-<h2 id="camera">Camera</h2>
-<ul>
-<li>
-<h3 id="lighton">lighton</h3>
-<p>Switch the camera flashlight on </p>
-</li>
-<li>
-<h3 id="lightoff">lightoff</h3>
-<p>Switch the camera flashlight off</p>
-</li>
-<li>
-<h3 id="capture">capture</h3>
-<p>Capture a new image (without flashlight)</p>
-</li>
-<li>
-<h3 id="capture_with_flashlight">capture_with_flashlight</h3>
-<p>Capture a new image with flashlight</p>
-</li>
-<li>
-<h3 id="save">save</h3>
-<p>Save a new image to SD card</p>
-</li>
-<li>The <code>save</code> entrypoint also support parameters:</li>
-<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1</code></li>
-</ul>
-<h2 id="logs">Logs</h2>
-<ul>
-<li>
-<h3 id="log">log</h3>
-<p>Last part of todays log (last 80 kBytes))</p>
-</li>
-<li>
-<h3 id="logfileact">logfileact</h3>
-<p>Full log of today</p>
-</li>
-<li>
-<h3 id="loghtml">log.html</h3>
-<p>Opens the log html page</p>
-</li>
-</ul>
-<h2 id="diagnostics">Diagnostics</h2>
-<ul>
-<li>
-<h3 id="heap">heap</h3>
-  print relevant memory (heap) information</li>
-<li>Example: <code>Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427</code></li>
-</ul>
+                <h1 id="data-logging">Data Logging</h1>
+<p>When Data Logging is enabled (See parameter <a href="../Parameters/#parameter-datalogactive"><code>DataLogActive</code></a>),
+the results of every round gets written to the SD-Card.</p>
+<p>The data files are stored in <code>/log/data</code> on the SD-Card.</p>
+<h2 id="data-format">Data Format</h2>
+<p>The data is stored as CSV with the following columns:
+<code>time</code>, <code>name-of-number</code>, <code>raw-value</code>, <code>return-value</code>, <code>pre-value</code>, <code>change-rate</code>, <code>change-absolute</code>, <code>error-text</code>, <code>cnn-digital</code>, <code>cnn-analog</code></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Demo-Mode/" class="btn btn-neutral float-left" title="Demo Mode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../MQTT-API/" class="btn btn-neutral float-right" title="MQTT API">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../External-LED/" class="btn btn-neutral float-left" title="External LED"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../rolling-installation/" class="btn btn-neutral float-right" title="Living on the Edge">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -464,10 +216,10 @@
         </span>
     
     
-      <span><a href="../Demo-Mode/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../External-LED/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../MQTT-API/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../rolling-installation/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
