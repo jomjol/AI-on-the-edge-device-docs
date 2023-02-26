@@ -29,6 +29,7 @@ nav:
     - Parameters.md
     - Integration-Home-Assistant.md
     - External-LED.md
+    - data-logging.md
     - rolling-installation.md
     - Watermeter-specific-analog---digital-transition.md
     - collect-new-images.md
