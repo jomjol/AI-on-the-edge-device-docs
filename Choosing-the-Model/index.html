@@ -109,6 +109,12 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
@@ -247,6 +253,28 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 <p>Look <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">here</a> for a list of pointer images used for the training</p>
 <h4 id="ana-class100-vs-ana-cont">ana-class100 vs. ana-cont</h4>
 <p>The difference is in the internal processing. Take the one that gives you the best results. Both models learn from the same data.</p>
+<h2 id="different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</h2>
+<p>The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller.
+Usually the models are distrusted therefore in both versions. They can be distinguished by a "-q" at the end of the logfile.</p>
+<h4 id="example">Example:</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Normal</td>
+<td><code>dig-cont_0610_s3.tflite</code></td>
+</tr>
+<tr>
+<td align="left">Quantized</td>
+<td><code>dig-cont_0610_s3-q.tflite</code></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
