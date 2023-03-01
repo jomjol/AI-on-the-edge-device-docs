@@ -59,3 +59,17 @@ Look [here](https://jomjol.github.io/neural-network-analog-needle-readout/) for 
 
 #### ana-class100 vs. ana-cont
 The difference is in the internal processing. Take the one that gives you the best results. Both models learn from the same data.
+
+
+
+## Different types of models (normal vs. quantized)
+
+The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller.
+Usually the models are distrusted therefore in both versions. They can be distinguished by a "-q" at the end of the logfile.
+
+#### Example:
+
+| Type      | Name                        |
+| :-------- | --------------------------- |
+| Normal    | `dig-cont_0610_s3.tflite`   |
+| Quantized | `dig-cont_0610_s3-q.tflite` |
