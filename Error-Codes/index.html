@@ -119,6 +119,10 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
@@ -201,6 +205,34 @@ This usually is because on of the following reasons:
  - The camera is not supported, see <a href="../Hardware-Compatibility">Hardware Compatibility</a>
  - The camera is not attached properly -&gt; Try to remove and attach it again. Make sure you move the black part enough into the socket!
  - The camera or the camera cable is damaged</p>
+<h2 id="0x00000008-sd-card-basic-check-failed"><code>0x00000008</code> SD card basic check failed</h2>
+<p>One or more basic SD card checks failed.</p>
+<p>The following checks are performed during boot sequence:
+- Write a file (sdcard/sdcheck.txt) to SD card with some generic text
+- Read the written file back
+- CRC check
+- Delete the file</p>
+<p>Detailed error indication (write, rerad or delete error) can be derived from blinking code of red board status LED. Please have a look to !!!TODO!!!</p>
+<p>Recommendation: Reformat SD card and check again or try another SD card</p>
+<h2 id="0x00000010-sd-folder-or-file-presence-check-failed"><code>0x00000010</code> SD folder or file presence check failed</h2>
+<p>Oned or more mandatory folders and/or files are missing on SD card.
+To have early indication that SD card is potentially ready for operation, some folder and files, which are mandatory are presence checked. This is not a 100% check and a successful test does not mean everthing is OK.</p>
+<p>The following folders / files get checked during boot sequence:
+- /sdcard/config
+- /sdcard/html
+- /sdcard/demo --&gt; created automatically in firmware
+- /sdcard/firmware --&gt; created automatically in firmware
+- /sdcard/img_tmp --&gt; created automatically in firmware
+- /sdcard/log --&gt; created automatically in firmware
+- /sdcard/wlan.ini
+- /sdcard/config/config.ini
+- /sdcard/html/index.html
+- /sdcard/html/ota_page.html
+- /sdcard/html/log.html
+- /sdcard/html/common.js
+- /sdcard/html/gethost.js
+- /sdcard/html/version.txt</p>
+<p>Recommendation: Check logs and / or redo a Over-The-Air Update (OTA Update) to ensure proper SD card structure</p>
 <h1 id="non-critical-errors">Non-Critical Errors</h1>
 <p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
 <h2 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h2>
