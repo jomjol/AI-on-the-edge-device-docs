@@ -22,6 +22,7 @@ The firmware failed to allocate enough memory. This most likely is a consequenti
 ## `0x00000004` Cam bad
 The attached camera can not be initialized.
 This usually is because on of the following reasons:
+
  * The camera is not supported, see [Hardware Compatibility](../Hardware-Compatibility)
  * The camera is not attached properly -> Try to remove and attach it again. Make sure you move the black part enough into the socket!
  * The camera or the camera cable is damaged
@@ -30,6 +31,7 @@ This usually is because on of the following reasons:
 One or more basic SD card checks failed.
 
 The following checks are performed during boot sequence:
+
  * Write a file (sdcard/sdcheck.txt) to SD card with some generic text
  * Read the written file back
  * CRC verification
@@ -44,6 +46,7 @@ Oned or more mandatory folders and/or files are missing on SD card.
 To have early indication that SD card is potentially ready for operation, some folder and files, which are mandatory are presence checked. This is not a 100% check and a successful test does not mean everthing is OK.
 
 The following folders / files get checked during boot sequence:
+
  * /sdcard/config
  * /sdcard/html
  * /sdcard/demo --> created automatically in firmware
