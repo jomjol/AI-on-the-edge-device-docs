@@ -10,6 +10,8 @@ FixedExposure
 SearchFieldX
 SearchFieldY
 AlignmentAlgo
+InitialMirror
+FlipImageSize
 CNNGoodThreshold
 PreValueAgeStartup
 ErrorMessage
@@ -24,4 +26,3 @@ AutoStart
 Hostname
 RSSIThreashold
 TimeServer
-FlipImageSize
