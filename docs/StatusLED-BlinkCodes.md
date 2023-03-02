@@ -25,6 +25,3 @@ Those Errors can be caused by an error during initialization. It is possible tha
 The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.
-
-## `0x00000200` NTP failed
-The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.
