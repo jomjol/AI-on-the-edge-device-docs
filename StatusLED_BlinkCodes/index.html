@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Configuration/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED_BlinkCodes/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Graphical Configuration - AI on the Edge Device</title>
+    <title>StatusLED BlinkCodes - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Graphical Configuration";
-        var mkdocs_page_input_path = "Configuration.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Configuration/";
+        var mkdocs_page_name = "StatusLED BlinkCodes";
+        var mkdocs_page_input_path = "StatusLED_BlinkCodes.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/StatusLED_BlinkCodes/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -68,44 +68,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Graphical Configuration</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#expert-parameters">Expert Parameters</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#manual-editing-of-the-config-file">Manual Editing of the Config File</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#background-information">Background Information</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#processing-steps-overview">Processing steps - Overview</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-takeimage">1. [TakeImage]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-alignment">2. [Alignment]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-digits">3. [Digits]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#4-analog">4. [Analog]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#5-postprocessing">5. [PostProcessing]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#6-mqtt">6. [MQTT]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#7-autotimer">7. [AutoTimer]</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#8-debug">8. [Debug]</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
                   </li>
@@ -176,8 +146,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED_BlinkCodes/">StatusLED BlinkCodes</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">StatusLED BlinkCodes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -194,10 +168,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Configuration &raquo;</li>
-      <li>Graphical Configuration</li>
+          <li>Assorted Pages &raquo;</li>
+      <li>StatusLED BlinkCodes</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Configuration.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/StatusLED_BlinkCodes.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -205,59 +179,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="graphical-configuration">Graphical Configuration</h1>
-<p>Most of the settings can be modified on the Settings page:</p>
-<p><img src="../img/config_s1_access.jpg" width="600" align="middle"></p>
-<p>It can be reached via the menu <code>Settings &gt; Configuration</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>To activate the changes, the device needs to be restarted after saving the changes.</li>
-<li>Most of the commands need processing on the ESP32 device. This is not very fast - so please be patient.</li>
-</ul>
-</div>
-<p>All parameters are documented on the <a href="../Parameters">Parameters</a> page and as tooltips on the config page.</p>
-<h2 id="expert-parameters">Expert Parameters</h2>
-<p>Some parameters are treated as <strong>Expert Parameters</strong> and are hidden by default.
-Tick the checkbox in the top left corner to enable them:</p>
-<p><img alt="" src="../img/expert-parameters.png" />  </p>
-<p>The <strong>Expert Parameters</strong> then will be shown with a red background:
-<img alt="" src="../img/expert-parameters2.png" />  </p>
-<h2 id="manual-editing-of-the-config-file">Manual Editing of the Config File</h2>
-<p>Even more configuration parameters can be edited manually in the <code>config.ini</code>:</p>
-<p><img alt="" src="../img/manual-config-editing.png" />  </p>
-<p>To edit the <code>config.ini</code> file directly, click on the <code>Edit Config.ini directly</code> button.</p>
-<h2 id="background-information">Background Information</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You do not need to understand this!
-But you might be interested in it.</p>
-</div>
-<p>The principle is very simple and can most easily be described as a flow of processing steps. Each step has a dedicated parameter description in the <code>config.ini</code>, which is indicated by brackets <code>[name_of_step]</code>. The steps are processed in the order written in the config file. That means, that you first have to describe the image taking, then the aligning and cutting and only after that you can start to config a neural network. The last step is the post processing.</p>
-<h3 id="processing-steps-overview">Processing steps - Overview</h3>
-<p>In the following you get a short overview over the available steps. This order is also the suggested order for the processing flow. Single steps can be left out, if not needed (e.g. omit the analog part, if only digits are present)</p>
-<h4 id="1-takeimage">1. <code>[TakeImage]</code></h4>
-<p>This steps parametrises the taking of the image by the ESP32-CAM. Size, quality and storage for logging and debugging can be set.</p>
-<h4 id="2-alignment">2. <code>[Alignment]</code></h4>
-<p>Image preprocessing, including image alignment with reference images</p>
-<h4 id="3-digits">3. <code>[Digits]</code></h4>
-<p>Neural network evaluation of an image for digits. The neural network is defined by a tflite formatted file and the output is a number between 0 .. 9 or NaN (if image is not unique enough)</p>
-<h4 id="4-analog">4. <code>[Analog]</code></h4>
-<p>Neural network evaluation of analog counter. The neural network is defined by a tflite formatted file and the output is a number between 0.0 .. 9.9, representing the position of the pointer.</p>
-<h4 id="5-postprocessing">5. <code>[PostProcessing]</code></h4>
-<p>Summarized the individually converted pictures to the overall result. It also implements some error corrections and consistency checks to filter wrong reading.</p>
-<h4 id="6-mqtt">6. <code>[MQTT]</code></h4>
-<p>Transfer of the readings to a MQTT server.</p>
-<h4 id="7-autotimer">7. <code>[AutoTimer]</code></h4>
-<p>Configuration of the automated flow start at the start up of the ESP32. </p>
-<h4 id="8-debug">8. <code>[Debug]</code></h4>
-<p>Configuration for debugging details</p>
+                <p>This page lists possible blink codes of the red LED located on the ESP32-CAM board, their meaning and possible solutions.</p>
+<p>The effective error codes can be found <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/statusled.h">here</a>.</p>
+<p>TODO!!!</p>
+<h1 id="error">Error</h1>
+<p>Those errors make the normal operation of the device impossible.
+Most likely they are caused by a hardware issue!</p>
+<h2 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h2>
+<p>Your device most likely has no PSRAM at all or it is too small (needs to have at least 4 MBytes)!
+See <a href="../Hardware-Compatibility">Hardware Compatibility</a>.</p>
+<p>Usually the log shows something like this:</p>
+<pre><code>psram: PSRAM ID read error: 0xffffffff
+cpu_start: Failed to init external RAM!
+</code></pre>
+<h1 id="status">Status</h1>
+<p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
+<h2 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h2>
+<p>The firmware was unable to initialize the Camera Framebuffer.
+The firmware will continue to work, but other consequential error might arise.
+A reboot of the device might help.</p>
+<h2 id="0x00000200-ntp-failed"><code>0x00000200</code> NTP failed</h2>
+<p>The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../ROI-Configuration/" class="btn btn-neutral float-left" title="ROIs (Regions of Interest)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Choosing-the-Model/" class="btn btn-neutral float-right" title="Model Selection">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../outdated--Integrated-Functions/" class="btn btn-neutral float-left" title="Integrated Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -284,10 +231,8 @@ But you might be interested in it.</p>
         </span>
     
     
-      <span><a href="../ROI-Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../outdated--Integrated-Functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../Choosing-the-Model/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
