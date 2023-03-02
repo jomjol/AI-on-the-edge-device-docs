@@ -149,8 +149,6 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">StatusLED BlinkCodes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
-    </li>
     </ul>
                   </li>
               </ul>
@@ -181,7 +179,189 @@
               
                 <p>This page lists possible blink codes of the red LED located on the ESP32-CAM board, their meaning and possible solutions.</p>
 <p>The effective error codes can be found <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/statusled.h">here</a>.</p>
-<p>TODO!!!</p>
+<h1 id="general-design-approach">General design approach:</h1>
+<ul>
+<li>250ms blink code to identify source</li>
+<li>500ms defined LED off</li>
+<li>250ms blink code to identify error / status code</li>
+<li>1,5s LED off to signal repetition</li>
+<li>e.g. 3x blinks | 500ms LED off | 2x blinks --&gt; error: SD card not found</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>source</strong></th>
+<th>source blink count</th>
+<th>error / status</th>
+<th>status blink count</th>
+<th>repeat infinite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLASHLIGHT</td>
+<td>N/A</td>
+<td>LED on when flashlight is on (lowest prio)</td>
+<td>solid, no blinking</td>
+<td></td>
+</tr>
+<tr>
+<td>WLAN_CONN</td>
+<td>1</td>
+<td>Disconnected (No Access Point)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>WLAN_CONN</td>
+<td>1</td>
+<td>Disconnected (Authentication failure)</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>WLAN_CONN</td>
+<td>1</td>
+<td>Disconnected (Timeout)</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>WLAN_CONN</td>
+<td>1</td>
+<td>Disconnected (Error code, misc error)</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>WLAN_INIT</td>
+<td>2</td>
+<td>WLAN.ini empty or not readable</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>WLAN_INIT</td>
+<td>2</td>
+<td>SSID or password empty</td>
+<td>2</td>
+<td>X</td>
+</tr>
+<tr>
+<td>WLAN_INIT</td>
+<td>2</td>
+<td>WIFI init error (details console)</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_INIT</td>
+<td>3</td>
+<td>SD card filesystem mount failed</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_INIT</td>
+<td>3</td>
+<td>SD card not found (0x107)</td>
+<td>2</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_INIT</td>
+<td>3</td>
+<td>SD card init failed (details console)</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_CHECK</td>
+<td>4</td>
+<td>Basic check: file creation/write error</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_CHECK</td>
+<td>4</td>
+<td>Basic check: file read/CRC error</td>
+<td>2</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_CHECK</td>
+<td>4</td>
+<td>Basic check: file delete error</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>SDCARD_CHECK</td>
+<td>4</td>
+<td>Basic check: folder/file presence</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>CAM_INIT</td>
+<td>5</td>
+<td>Camera init failed (details console)</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>CAM_INIT</td>
+<td>5</td>
+<td>Camera framebuffer check failed</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>PSRAM_INIT</td>
+<td>6</td>
+<td>PSRAM init failed: Not found/defective</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>PSRAM_INIT</td>
+<td>6</td>
+<td>External PSRAM &lt; 4MB</td>
+<td>2</td>
+<td>X</td>
+</tr>
+<tr>
+<td>PSRAM_INIT</td>
+<td>6</td>
+<td>Total heap &lt; 4MB</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>TIME_CHECK</td>
+<td>7</td>
+<td>Missing time sync (check every round)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>OTA_OR_AP</td>
+<td>8</td>
+<td>OTA process ongoing</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>OTA_OR_AP</td>
+<td>8</td>
+<td>Soft AP started</td>
+<td>2</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>From here --&gt;TODO!!!</p>
 <h1 id="error">Error</h1>
 <p>Those errors make the normal operation of the device impossible.
 Most likely they are caused by a hardware issue!</p>
