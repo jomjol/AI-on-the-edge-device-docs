@@ -42,7 +42,7 @@ Detailed error indication (write, rerad or delete error) can be derived from bli
 Recommendation: Reformat SD card and check again or try another SD card
 
 ## `0x00000010` SD folder or file presence check failed
-Oned or more mandatory folders and/or files are missing on SD card.
+One or more mandatory folders and/or files are missing on SD card.
 To have early indication that SD card is potentially ready for operation, some folder and files, which are mandatory are presence checked. This is not a 100% check and a successful test does not mean everthing is OK.
 
 The following folders / files get checked during boot sequence:
