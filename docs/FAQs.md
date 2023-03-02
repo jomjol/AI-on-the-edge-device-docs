@@ -1,8 +1,8 @@
 # Frequently Asked Questions
 
-## My device is reboot frequently. What can I do?
+## My device reboots frequently. What can I do?
 
-There are several reasons for the reboot:
+There are several reasons for frequent reboots:
 
 * Frequent HTML requests
 * Wrong configuration, missing configuration files
@@ -26,7 +26,7 @@ Anecdotally, the authors of this page have great success with the meter. While t
 See the FAQs below for more details and configuration hints.
 
 
-## My numbers are not corrected detected. What can I do?
+## My numbers are not correctly detected. What can I do?
 
 * There is a dedicated page about the correct setting [ROI Configuration](../ROI-Configuration/).
 * This page also includes the instructions for gathering new images for the training.
