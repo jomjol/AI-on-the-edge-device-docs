@@ -1,6 +1,4 @@
 InitialRotate
-InitialMirror
-FlipImageSize
 MainTopicMQTT
 AutoAdjustSummertime
 SetupMode
