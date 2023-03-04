@@ -282,6 +282,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#section-system">Section System</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-cpufrequency">Parameter CPUFrequency</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-hostname">Parameter Hostname</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#parameter-rssithreshold">Parameter RSSIThreshold</a>
@@ -1206,6 +1208,22 @@ A SD-Card has limited write cycles. Since the device does not do <a href="https:
 <hr style="border:2px solid">
 
 <h2 id="section-system">Section <code>System</code></h2>
+<p><a id=System-CPUFrequency></a></p>
+<h3 id="parameter-cpufrequency">Parameter <code>CPUFrequency</code></h3>
+<p>Default Value: <code>160</code></p>
+<p>Set the CPU Frequency.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Setting it to 240 will lead to a faster device, but it will also require a stronger power supply!
+Depending on the quality of your ESP32-CAM, it might run unstable!</p>
+</div>
+<p>Possible values: </p>
+<ul>
+<li>160</li>
+<li>240 </li>
+</ul>
+<hr style="border:2px solid">
+
 <p><a id=System-Hostname></a></p>
 <h3 id="parameter-hostname">Parameter <code>Hostname</code></h3>
 <p>Default Value: <code>undefined</code></p>
