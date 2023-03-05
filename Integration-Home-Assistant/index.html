@@ -368,6 +368,17 @@ template:
      icon: mdi:gauge
 
 </code></pre>
+<p>The 2nd way is to use the html api call from value.html : </p>
+<p><code>sensor:
+- platform: rest
+  resource: http://&lt;IP&gt;/value.html
+  name: cold_water 
+  unique_id: cold_water_from_rest
+  unit_of_measurement: "L"
+  device_class: water
+  state_class: total_increasing
+  icon: mdi:gauge
+  scan_interval : 120</code></p>
 <p>See also https://community.home-assistant.io/t/rest-sensor-nested-json/243420/9</p>
 <h4 id="photo">Photo</h4>
 <p>REST can also be used to show the photo of the last round:</p>
