@@ -203,6 +203,22 @@ template:
      icon: mdi:gauge
 
 ```
+
+The 2nd way is to use the html api call from value.html : 
+
+```
+sensor:
+- platform: rest
+  resource: http://<IP>/value.html
+  name: cold_water 
+  unique_id: cold_water_from_rest
+  unit_of_measurement: "L"
+  device_class: water
+  state_class: total_increasing
+  icon: mdi:gauge
+  scan_interval : 120
+ ```
+ 
 See also https://community.home-assistant.io/t/rest-sensor-nested-json/243420/9
 
 
