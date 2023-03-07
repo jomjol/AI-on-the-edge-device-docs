@@ -115,6 +115,18 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">StatusLED BlinkCodes</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#error">Error</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#status">Status</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000100-cam-framebuffer-bad">0x00000100 Cam Framebuffer bad</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Error Debugging</a>
@@ -362,19 +374,19 @@
 </tbody>
 </table>
 <p>From here --&gt;TODO!!!</p>
-<h1 id="error">Error</h1>
+<h2 id="error">Error</h2>
 <p>Those errors make the normal operation of the device impossible.
 Most likely they are caused by a hardware issue!</p>
-<h2 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h2>
+<h3 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h3>
 <p>Your device most likely has no PSRAM at all or it is too small (needs to have at least 4 MBytes)!
 See <a href="../Hardware-Compatibility">Hardware Compatibility</a>.</p>
 <p>Usually the log shows something like this:</p>
 <pre><code>psram: PSRAM ID read error: 0xffffffff
 cpu_start: Failed to init external RAM!
 </code></pre>
-<h1 id="status">Status</h1>
+<h2 id="status">Status</h2>
 <p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
-<h2 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h2>
+<h3 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h3>
 <p>The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.</p>
