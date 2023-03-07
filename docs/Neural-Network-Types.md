@@ -76,7 +76,7 @@ There are two types of network structure, currently both are supported. The "cla
 
 #### Training data needs
 
-* Quadratic images, minimum size: 32x32 pixel
+* Quadratic s, minimum size: 32x32 pixel
 * Typically 100 - 200 images with a resolution of 1/100 of the full rotation (every 0.1 value or 3.6°)
 * Naming: x.y_ARBITRARY.jpg, where x.y = value 0.0 ... 9.9
 
@@ -142,7 +142,7 @@ This type of network tries to overcome the problem, that there are intermediate 
 
 |                                    |                                                              |                                                              |      |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [[images/dig-cont/dig-cont_1.jpg) | [[images/dig-cont/dig-cont_2a.jpg)  [[images/dig-cont/dig-cont_2b.jpg) | [[images/dig-cont/dig-cont_3a.jpg)  [[images/dig-cont/dig-cont_3b.jpg) [[images/dig-cont/dig-cont_3c.jpg) |      |
+| [[img/dig-cont/dig-cont_1.jpg) | [[img/dig-cont/dig-cont_2a.jpg)  [[img/dig-cont/dig-cont_2b.jpg) | [[img/dig-cont/dig-cont_3a.jpg)  [[img/dig-cont/dig-cont_3b.jpg) [[img/dig-cont/dig-cont_3c.jpg) |      |
 |                                    |                                                              |                                                              |      |
 
 
