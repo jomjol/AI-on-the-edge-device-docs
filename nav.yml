@@ -41,6 +41,7 @@ nav:
 
   - Troubleshooting:
     - Error-Codes.md
+    - StatusLED-BlinkCodes.md 
     - Error-Debugging.md
     - Frequent-Reboots.md
     - Demo-Mode.md
