@@ -45,6 +45,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 
 !!! NOTE
     Only warning indication, blink code repetition: 2x
+    General: [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 ### `WLAN disconnected (No Access Point)`
 WLAN connection is interrupted due to no access point in range.
@@ -56,7 +57,7 @@ WLAN connection is interrupted due to an authentication failure. If error repeat
 WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.
 
 ### `WLAN Disconnected (Further reasons)`
-WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --> `TODO - LINK TO PAGE`
+WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 
 
