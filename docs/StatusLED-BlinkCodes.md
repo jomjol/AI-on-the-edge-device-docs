@@ -35,7 +35,7 @@ The effective error codes can be found [here](https://github.com/jomjol/AI-on-th
 | TIME_CHECK    | 7                 | Missing time sync (check every round) | 1                |
 | OTA_OR_AP     | 8                 | OTA process ongoing                   | 1                | X
 | OTA_OR_AP     | 8                 | Soft AP started (for remote config)   | 2                | X
-| FLASHLIGHT    | N/A               | LED on when flashlight is on          | solid, no blinking
+| FLASHLIGHT    | N/A               | LED on when flashlight is on          | solid, <br> no blinking
 
 
 
