@@ -366,7 +366,8 @@
 <h2 id="source-wlan_conn-wlan-disconnected">Source WLAN_CONN: WLAN disconnected</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only warning indication, blink code repetition: 2x</p>
+<p>Only warning indication, blink code repetition: 2x
+General: <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code">WLAN disconnect reason code description</a></p>
 </div>
 <h3 id="wlan-disconnected-no-access-point"><code>WLAN disconnected (No Access Point)</code></h3>
 <p>WLAN connection is interrupted due to no access point in range.</p>
@@ -375,7 +376,7 @@
 <h3 id="wlan-disconnected-timeout"><code>WLAN Disconnected (Timeout)</code></h3>
 <p>WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.</p>
 <h3 id="wlan-disconnected-further-reasons"><code>WLAN Disconnected (Further reasons)</code></h3>
-<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --&gt; <code>TODO - LINK TO PAGE</code></p>
+<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --&gt; <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code">WLAN disconnect reason code description</a></p>
 <h2 id="source-wlan_init-wlan-initialization">Source WLAN_INIT: WLAN initialization</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
