@@ -41,7 +41,8 @@ nav:
 
   - Troubleshooting:
     - Error-Codes.md
-    - StatusLED-BlinkCodes.md 
+    - StatusLED-BlinkCodes.md
+    - WLAN-disconnect-reasons.md
     - Error-Debugging.md
     - Frequent-Reboots.md
     - Demo-Mode.md
