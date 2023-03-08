@@ -178,7 +178,7 @@ If system is configured to be synced with a NTP server the sync status is checke
 An OTA is performed right now. Please wait until OTA is completed. System is rebooting automatically. If system is not coming up, please check serial console output.
 
 ### `Soft AP started (for remote config)`
-The built-in access point functionality is started to perform initial remote remote setup. Further description: [Installtion --> Section Remote Setup using the built-in Access Point](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/)
+The built-in access point functionality is started to perform initial remote remote setup. Further description: [Installtion --> `Section Remote Setup using the built-in Access Point`](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/)
 
 
 
