@@ -29,7 +29,7 @@ The effective error codes can be found [here](https://github.com/jomjol/AI-on-th
 | SDCARD_CHECK  | 4                 | Basic check: folder/file presence     | 4                | X
 | CAM_INIT      | 5                 | Camera init failed (details console)  | 1                | X
 | CAM_INIT      | 5                 | Camera framebuffer check failed       | 2                | 
-| PSRAM_INIT    | 6                 | PSRAM init failed: Not found/defective| 1                | X
+| PSRAM_INIT    | 6                 | SPI RAM init failed: Not found/defective| 1                | X
 | PSRAM_INIT    | 6                 | External SPI RAM < 4MB                | 2                | X
 | PSRAM_INIT    | 6                 | Total heap < 4MB                      | 3                | X
 | TIME_CHECK    | 7                 | Missing time sync (check every round) | 1                |
@@ -143,7 +143,7 @@ The framebuffer of the camera was not readable. The firmware will trying to cont
 !!! NOTE
     A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.
     
-### `PSRAM init failed: Not found/defective`   
+### `SPI RAM init failed: Not found/defective`   
 External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.
 
 ### `External SPI RAM < 4MB`
