@@ -378,7 +378,7 @@
 <h3 id="wlan-disconnected-timeout"><code>WLAN Disconnected (Timeout)</code></h3>
 <p>WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.</p>
 <h3 id="wlan-disconnected-further-reasons"><code>WLAN Disconnected (Further reasons)</code></h3>
-<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --&gt; <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code">WLAN disconnect reason code description</a></p>
+<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons --&gt; <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code">WLAN disconnect reason code description</a></p>
 <h2 id="source-wlan_init-wlan-initialization">Source WLAN_INIT: WLAN initialization</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -402,43 +402,37 @@
 <h3 id="sd-card-init-failed-details-console"><code>SD card init failed (details console)</code></h3>
 <p>A general SD card initialization error occured. Please check serial console output.</p>
 <h2 id="source-sdcard_check-sd-card-basic-check">Source SDCARD_CHECK: SD card basic check</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>All critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.</p>
 <h3 id="file-creation-write-error"><code>File creation / write error</code></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Critical error, regular boot not possible</p>
-</div>
-<p>A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check for further errors or try another card.</p>
+<p>A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check logs with log viewer in reduced web interface, serial console output or try another card.</p>
+<p>Recommendation: Format or try another card</p>
 <h3 id="file-read-crc-verfication-error"><code>File read / CRC verfication error</code></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Critical error, regular boot not possible</p>
-</div>
-<p>A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check for further errors or try another card.</p>
+<p>A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.</p>
+<p>Recommendation: Format or try another card</p>
 <h3 id="file-delete-error"><code>File delete error</code></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Critical error, regular boot not possible</p>
-</div>
-<p>A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check for further errors or try another card.</p>
+<p>A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.</p>
+<p>Recommendation: Format or try another card</p>
 <h3 id="folder-file-presence-failed"><code>Folder / File presence failed</code></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
-<p>A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with logfile viewer in reduced web interface or serial console output.</p>
+<p>A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with log viewer in reduced web interface or serial console output for further error indication.</p>
+<p>Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip</p>
 <h2 id="source-cam_init-camera-initialization">Source CAM_INIT: Camera initialization</h2>
 <h3 id="camera-init-failed-details-console"><code>Camera init failed (details console)</code></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
+<p>Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.</p>
 </div>
-<p>A general camera initialization error occured. Please check logs with logfile viewer in reduced web interface or serial console output.</p>
+<p>A general camera initialization error occured. Please check logs with log viewer in reduced web interface or serial console output for further error indication.</p>
+<p>Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.</p>
 <h3 id="camera-framebuffer-check-failed"><code>Camera framebuffer check failed</code></h3>
 <p>The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.</p>
+<p>Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.</p>
 <h2 id="source-psram_init-external-ram-spi-ram-initialization">Source PSRAM_INIT: External RAM (SPI RAM) initialization</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
+<p>A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.</p>
 </div>
 <h3 id="spi-ram-init-failed-not-founddefective"><code>SPI RAM init failed: Not found/defective</code></h3>
 <p>External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.</p>
