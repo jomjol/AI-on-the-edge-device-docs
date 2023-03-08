@@ -321,7 +321,7 @@
 <tr>
 <td>PSRAM_INIT</td>
 <td>6</td>
-<td>External PSRAM &lt; 4MB</td>
+<td>External SPI RAM &lt; 4MB</td>
 <td>2</td>
 <td>X</td>
 </tr>
@@ -349,14 +349,14 @@
 <tr>
 <td>OTA_OR_AP</td>
 <td>8</td>
-<td>Soft AP started</td>
+<td>Soft AP started (for remote config)</td>
 <td>2</td>
 <td>X</td>
 </tr>
 <tr>
 <td>FLASHLIGHT</td>
 <td>N/A</td>
-<td>LED on when flashlight is on (lowest prio)</td>
+<td>LED on when flashlight is on</td>
 <td>solid, no blinking</td>
 <td></td>
 </tr>
@@ -366,65 +366,103 @@
 <h2 id="source-wlan_conn-wlan-disconnected">Source WLAN_CONN: WLAN disconnected</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only warning indication, not blocking futher processing</p>
+<p>Only warning indication, blink code repetition: 2x</p>
 </div>
 <h3 id="wlan-disconnected-no-access-point"><code>WLAN disconnected (No Access Point)</code></h3>
-<p>WLAN connection is interrupted due to no AP in range.</p>
+<p>WLAN connection is interrupted due to no access point in range.</p>
 <h3 id="wlan-disconnected-authentication-failure"><code>WLAN Disconnected (Authentication failure)</code></h3>
-<p>WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config (username, password)</p>
+<p>WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config in WLAN.INI (username, password)</p>
 <h3 id="wlan-disconnected-timeout"><code>WLAN Disconnected (Timeout)</code></h3>
-<p>WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably AP is not available anymore or connection is not reliable.</p>
+<p>WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.</p>
 <h3 id="wlan-disconnected-further-reasons"><code>WLAN Disconnected (Further reasons)</code></h3>
-<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in waring message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons.</p>
+<p>WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --&gt; <code>TODO - LINK TO PAGE</code></p>
 <h2 id="source-wlan_init-wlan-initialization">Source WLAN_INIT: WLAN initialization</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Critical error, normal boot not possible.</p>
+<p>All critical errors, regular boot not possible</p>
 </div>
 <h3 id="wlanini-empty-or-not-readable"><code>WLAN.ini empty or not readable</code></h3>
 <p>The WLAN.INI file is present but content is either not readable or no content present. Please check for further errors in terms of SD card readability or content of WLAN.INI which is located in /sdcard (most top folder od SD card) </p>
 <h3 id="ssid-or-password-empty"><code>SSID or password empty</code></h3>
-<p>The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters and try again.</p>
+<p>The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters in WLAN.INI and try again.</p>
 <h3 id="wifi-init-error-details-console"><code>WIFI init error (details console)</code></h3>
 <p>A general WIFI initialization error occured. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) </p>
 <h2 id="source-sdcard_init-sd-card-initialization">Source SDCARD_INIT: SD card initialization</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Critical error, normal boot not possible.</p>
+<p>All critical errors, regular boot not possible</p>
 </div>
 <h3 id="sd-card-filesystem-mount-failed"><code>SD card filesystem mount failed</code></h3>
-<p>Failed to mount FAT filesystem on SD card. Check SD card filesystem (only FAT supported) or try another card.</p>
+<p>Failed to mount FAT filesystem on SD card. Check SD card filesystem (only FAT supported) or try another card. Possible further infos: Please check serial console output.</p>
 <h3 id="sd-card-not-found-error-code-0x107"><code>SD card not found (Error code 0x107)</code></h3>
-<p>SD card init failed. Check if SD card is properly inserted into SD card slot or try another card.</p>
+<p>SD card init failed. Check if SD card is properly inserted into SD card slot or try another card. Possible further infos: Please check serial console output.</p>
 <h3 id="sd-card-init-failed-details-console"><code>SD card init failed (details console)</code></h3>
-<p>A general SD card initialization error occured. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) </p>
+<p>A general SD card initialization error occured. Please check serial console output.</p>
 <h2 id="source-sdcard_check-sd-card-basic-check">Source SDCARD_CHECK: SD card basic check</h2>
+<h3 id="file-creation-write-error"><code>File creation / write error</code></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Critical error, normal boot not possible. </p>
+<p>Critical error, regular boot not possible</p>
 </div>
-<h3 id="file-creation-write-error"><code>File creation / write error</code></h3>
 <p>A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check for further errors or try another card.</p>
 <h3 id="file-read-crc-verfication-error"><code>File read / CRC verfication error</code></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Critical error, regular boot not possible</p>
+</div>
 <p>A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check for further errors or try another card.</p>
 <h3 id="file-delete-error"><code>File delete error</code></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Critical error, regular boot not possible</p>
+</div>
 <p>A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check for further errors or try another card.</p>
 <h3 id="folder-file-presence-failed"><code>Folder / File presence failed</code></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
-<p>Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
-<p>A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with logfile viewer in redurced web interface or serial console output.</p>
+<p>Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
+<p>A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with logfile viewer in reduced web interface or serial console output.</p>
 <h2 id="source-cam_init-camera-initialization">Source CAM_INIT: Camera initialization</h2>
 <h3 id="camera-init-failed-details-console"><code>Camera init failed (details console)</code></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
 </div>
-<p>A general camera initialization error occured. Please check logs with logfile viewer in redurced web interface or serial console output.</p>
+<p>A general camera initialization error occured. Please check logs with logfile viewer in reduced web interface or serial console output.</p>
 <h3 id="camera-framebuffer-check-failed"><code>Camera framebuffer check failed</code></h3>
-<p>The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing</p>
-<p>TODO --&gt; from HERE</p>
+<p>The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.</p>
+<h2 id="source-psram_init-external-ram-spi-ram-initialization">Source PSRAM_INIT: External RAM (SPI RAM) initialization</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.</p>
+</div>
+<h3 id="psram-init-failed-not-founddefective"><code>PSRAM init failed: Not found/defective</code></h3>
+<p>External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.</p>
+<h3 id="external-spi-ram-4mb"><code>External SPI RAM &lt; 4MB</code></h3>
+<p>External RAM (SPI RAM) initialization successful, but external RAM size is too small. A size of &gt;= 4MB is necessary to run this firmware. </p>
+<h3 id="total-heap-4mb"><code>Total heap &lt; 4MB</code></h3>
+<p>Total available system memory (heap) is too small. A size of &gt;= 4MB is necessary to run this firmware. </p>
+<h2 id="source-time_check-external-ram-spi-ram-initialization">Source TIME_CHECK: External RAM (SPI RAM) initialization</h2>
+<h3 id="missing-time-sync-check-every-round"><code>Missing time sync (check every round)</code></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only warning indication, blink code repetition: 2x</p>
+</div>
+<p>If system is configured to be synced with a NTP server the sync status is checked after every round (in state: "Flow finished". An warming message is also printed to log). If the time is not synced after serveral rounds, please check for proper configuration.</p>
+<h1 id="status">STATUS</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All only status indication</p>
+</div>
+<h2 id="source-ota_or_ap-ota-update-access-point-mode">Source OTA_OR_AP: OTA Update / Access point mode</h2>
+<h3 id="ota-process-ongoing"><code>OTA process ongoing</code></h3>
+<p>An OTA is performed right now. Please wait until OTA is completed. System is rebooting automatically. If system is not coming up, please check serial console output.</p>
+<h3 id="soft-ap-started-for-remote-config"><code>Soft AP started (for remote config)</code></h3>
+<p>The built-in access point functionality is started to perform initial remote remote setup. Further description: https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/ --&gt; Section <code>Remote Setup using the built-in Access Point</code></p>
+<h2 id="source-flashlight-flashlight">Source FLASHLIGHT: Flashlight</h2>
+<h3 id="led-on-when-flashlight-is-on"><code>LED on when flashlight is on</code></h3>
+<p>The LED is solid on as long the flashlight is on. This feature has lower priority than the other LED codes. Whenever another code occurs this feature will be overrided.</p>
               
             </div>
           </div><footer>
