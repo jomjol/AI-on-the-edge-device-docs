@@ -8,7 +8,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
   * 500ms defined LED off
   * 250ms blink code to identify error / status code
   * 1,5s defined LED off to signal repetition
-  * Repetition blink code infinite for critical errors or 2x for status / warning indication
+  * Repetition blink code: infinite for critical errors and status indication or 2x for warning indication
   * e.g. 3x blinks | 500ms LED off | 2x blinks --> error: SD card not found
 
 | **source**    | source <br> blink count| error / warning / status         | status <br> blink count| repeat <br> infinite |
@@ -45,7 +45,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 
 !!! NOTE
     Only warning indication, blink code repetition: 2x
-    General: [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
+    --> General info: [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 ### `WLAN disconnected (No Access Point)`
 WLAN connection is interrupted due to no access point in range.
