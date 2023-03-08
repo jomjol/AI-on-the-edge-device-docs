@@ -7,8 +7,8 @@ The error code source definition can be found [here](https://github.com/jomjol/A
   * 250ms blink code to identify source
   * 500ms defined LED off
   * 250ms blink code to identify error / status code
-  * 1,5s LED off to signal repetition
-  * Either repeat infinite for critical errors or repeat the status / warning blink code 2x
+  * 1,5s defined LED off to signal repetition
+  * Repetition blink code infinite for critical errors or 2x for status / warning indication
   * e.g. 3x blinks | 500ms LED off | 2x blinks --> error: SD card not found
 
 | **source**    | source <br> blink count| error / warning / status         | status <br> blink count| repeat <br> infinite |
