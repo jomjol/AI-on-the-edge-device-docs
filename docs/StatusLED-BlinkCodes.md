@@ -57,7 +57,7 @@ WLAN connection is interrupted due to an authentication failure. If error repeat
 WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.
 
 ### `WLAN Disconnected (Further reasons)`
-WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons. --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
+WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 
 
@@ -95,34 +95,28 @@ A general SD card initialization error occured. Please check serial console outp
 
 ## Source SDCARD_CHECK: SD card basic check
 
-### `File creation / write error`
-
 !!! NOTE
-    Critical error, regular boot not possible
-    
-A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check for further errors or try another card.
+   All critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
+
+### `File creation / write error`    
+A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check logs with log viewer in reduced web interface, serial console output or try another card.
+
+Recommendation: Format or try another card
 
 ### `File read / CRC verfication error`
+A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
-!!! NOTE
-    Critical error, regular boot not possible
-    
-A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check for further errors or try another card.
+Recommendation: Format or try another card
 
 ### `File delete error`
+A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
-!!! NOTE
-    Critical error, regular boot not possible
-
-A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check for further errors or try another card.
-
+Recommendation: Format or try another card
 
 ### `Folder / File presence failed`
+A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
-!!! NOTE
-   Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.
-
-A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with logfile viewer in reduced web interface or serial console output.
+Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip
 
 
 
@@ -130,19 +124,23 @@ A basic check of SD card is performed at boot. One or more menadatory folder / f
 ### `Camera init failed (details console)`
 
 !!! NOTE
-    Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.
+    Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
     
-A general camera initialization error occured. Please check logs with logfile viewer in reduced web interface or serial console output.
+A general camera initialization error occured. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
+
+Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.
 
 ### `Camera framebuffer check failed`
 The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.
+
+Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.
 
 
 
 ## Source PSRAM_INIT: External RAM (SPI RAM) initialization
 
 !!! NOTE
-    A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possiblities or redo firmware update.
+    A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
     
 ### `SPI RAM init failed: Not found/defective`   
 External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.
@@ -165,12 +163,10 @@ If system is configured to be synced with a NTP server the sync status is checke
 
 
 
-
 # STATUS
 
 !!! NOTE
     All only status indication
-
 
 ## Source OTA_OR_AP: OTA Update / Access point mode
 
