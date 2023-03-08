@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/WLAN-disconnect-reason/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Error Codes - AI on the Edge Device</title>
+    <title>WLAN disconnect reasons - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Error Codes";
-        var mkdocs_page_input_path = "Error-Codes.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/Error-Codes/";
+        var mkdocs_page_name = "WLAN disconnect reasons";
+        var mkdocs_page_input_path = "WLAN-disconnect-reason.md";
+        var mkdocs_page_url = "/AI-on-the-edge-device-docs/WLAN-disconnect-reason/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -110,20 +110,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Error Codes</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000002-heap-too-small">0x00000002 Heap too small</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Error Codes</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">StatusLED BlinkCodes</a>
                   </li>
@@ -160,8 +148,10 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">WLAN disconnect reasons</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
       </div>
@@ -178,10 +168,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Troubleshooting &raquo;</li>
-      <li>Error Codes</li>
+          <li>Assorted Pages &raquo;</li>
+      <li>WLAN disconnect reasons</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Error-Codes.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/WLAN-disconnect-reason.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -189,74 +179,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>This page lists the possible error codes, their meaning and possible solutions.</p>
-<p>The effective error codes can be found <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h">here</a>.</p>
-<h1 id="critical-errors">Critical Errors</h1>
-<p>Those Errors make the normal operation of the device impossible.
-Most likely they are caused by a hardware issue!</p>
-<h2 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h2>
-<p>Your device most likely has no PSRAM at all or it is too small (needs to have at least 4 MBytes)!
-See <a href="../Hardware-Compatibility">Hardware Compatibility</a>.</p>
-<p>Usually the log shows something like this:</p>
-<pre><code>psram: PSRAM ID read error: 0xffffffff
-cpu_start: Failed to init external RAM!
-</code></pre>
-<h2 id="0x00000002-heap-too-small"><code>0x00000002</code> Heap too small</h2>
-<p>The firmware failed to allocate enough memory. This most likely is a consequential error of a bad PSRAM!</p>
-<h2 id="0x00000004-cam-bad"><code>0x00000004</code> Cam bad</h2>
-<p>The attached camera can not be initialized.
-This usually is because on of the following reasons:</p>
-<ul>
-<li>The camera is not supported, see <a href="../Hardware-Compatibility">Hardware Compatibility</a></li>
-<li>The camera is not attached properly -&gt; Try to remove and attach it again. Make sure you move the black part enough into the socket!</li>
-<li>The camera or the camera cable is damaged</li>
-</ul>
-<h2 id="0x00000008-sd-card-basic-check-failed"><code>0x00000008</code> SD card basic check failed</h2>
-<p>One or more basic SD card checks failed.</p>
-<p>The following checks are performed during boot sequence:</p>
-<ul>
-<li>Write a file (sdcard/sdcheck.txt) to SD card with some generic text</li>
-<li>Read the written file back</li>
-<li>CRC verification</li>
-<li>Delete the file</li>
-</ul>
-<p>Detailed error indication (write, rerad or delete error) can be derived from blinking code of red board status LED. Please have a look to !!!TODO!!!</p>
-<p>Recommendation: Reformat SD card and check again or try another SD card</p>
-<h2 id="0x00000010-sd-folder-or-file-presence-check-failed"><code>0x00000010</code> SD folder or file presence check failed</h2>
-<p>One or more mandatory folders and/or files are missing on SD card.
-To have early indication that SD card is potentially ready for operation, some folder and files, which are mandatory are presence checked. This is not a 100% check and a successful test does not mean everthing is OK.</p>
-<p>The following folders / files get checked during boot sequence:</p>
-<ul>
-<li>/sdcard/config</li>
-<li>/sdcard/html</li>
-<li>/sdcard/demo --&gt; created automatically in firmware</li>
-<li>/sdcard/firmware --&gt; created automatically in firmware</li>
-<li>/sdcard/img_tmp --&gt; created automatically in firmware</li>
-<li>/sdcard/log --&gt; created automatically in firmware</li>
-<li>/sdcard/wlan.ini</li>
-<li>/sdcard/config/config.ini</li>
-<li>/sdcard/html/index.html</li>
-<li>/sdcard/html/ota_page.html</li>
-<li>/sdcard/html/log.html</li>
-<li>/sdcard/html/common.js</li>
-<li>/sdcard/html/gethost.js</li>
-<li>/sdcard/html/version.txt</li>
-</ul>
-<p>Recommendation: Check logs and / or redo a Over-The-Air Update (OTA Update) to ensure proper SD card structure</p>
-<h1 id="non-critical-errors">Non-Critical Errors</h1>
-<p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
-<h2 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h2>
-<p>The firmware was unable to initialize the Camera Framebuffer.
-The firmware will continue to work, but other consequential error might arise.
-A reboot of the device might help.</p>
-<h2 id="0x00000200-ntp-failed"><code>0x00000200</code> NTP failed</h2>
-<p>The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.</p>
+                <h1 id="wlan-disconnect-reasons">WLAN disconnect reasons</h1>
+<p>In the logfile the WLAN disconnect reason is printed. Further information and additional description for the respective reason codes can be found here: <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code">WLAN disconnect reason code description</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../New-Releases-Notification/" class="btn btn-neutral float-left" title="Notification about new Releases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../StatusLED-BlinkCodes/" class="btn btn-neutral float-right" title="StatusLED BlinkCodes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../outdated--Integrated-Functions/" class="btn btn-neutral float-left" title="Integrated Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -283,10 +212,8 @@ A reboot of the device might help.</p>
         </span>
     
     
-      <span><a href="../New-Releases-Notification/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../outdated--Integrated-Functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../StatusLED-BlinkCodes/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
