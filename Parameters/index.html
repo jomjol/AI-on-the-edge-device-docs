@@ -1241,13 +1241,17 @@ It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at th
 <h3 id="parameter-rssithreshold">Parameter <code>RSSIThreshold</code></h3>
 <p>Default Value: <code>0</code></p>
 <p>Possible values: <code>-100</code> .. <code>0</code> (<code>0</code> = disabled).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
 <p>WIFI AP switching functionality:</p>
 <p>This parameter activates a client triggered AP switching functionality (simplified roaming).
 If (actual RSSI  + 5dBm) lower than RSSIThreshold, all WIFI channels will be scanned for configured SSID and then trying to connect to access point with better RSSI. The scan is only get initiated at the end of each round.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
+</div>
 <hr style="border:2px solid">
 
 <p><a id=System-SetupMode></a></p>
