@@ -1239,9 +1239,14 @@ It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at th
 
 <p><a id=System-RSSIThreshold></a></p>
 <h3 id="parameter-rssithreshold">Parameter <code>RSSIThreshold</code></h3>
-<p>Default Value: <code>''</code></p>
-<p>WLAN Mesh Parameter: Threshold for the RSSI value to check for start switching access point in a mesh system.</p>
+<p>Default Value: <code>0</code></p>
 <p>Possible values: <code>-100</code> .. <code>0</code> (<code>0</code> = disabled).</p>
+<p>WIFI AP switching functionality:</p>
+<p>This parameter activates a client triggered AP switching functionality (simplified roaming).
+If (actual RSSI  + 5dBm) lower than RSSIThreshold, all WIFI channels will be scanned for configured SSID and then trying to connect to access point with better RSSI. The scan is only get initiated at the end of each round.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
 <p>It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
 <hr style="border:2px solid">
 
