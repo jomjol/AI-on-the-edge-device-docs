@@ -53,25 +53,7 @@ Neural network evaluation of analog counter. The neural network is defined by a 
 #### 5. ``[PostProcessing]``
 Summarized the individually converted pictures to the overall result. It also implements some error corrections and consistency checks to filter wrong reading.
 
-##### ``AllowNegativeRates``
-
-The ``AllowNegativeRates`` property ensures that the result does not become negative in the event of incorrect readings. This can happen, for example, if the alignment of the image did not work properly. But also the neural networks sometimes flip between two states for similar images.
-
-If ``AllowNegativeRates = true``, the result is discarded if it is smaller than the pre-value of the last readout and the output shows an error "Negative rate.."
-
-If the ``ExtendedResolution`` setting is true, there is an exception where the value does not become smaller, but no error is output. This only applies if the value +/- 0.2 of the last digit is inaccurate.
-
-###### ``DecimalShift``
-
-###### ``AnalogDigitalTransitionStart``
-
-###### ``MaxRateValue`` and ``MaxRateType``
-
-###### ``ExtendedResolution``
-
-###### ``IgnoreLeadingNaN``
-
-
+For more details look at [Correction Algorithm](Correction%20Algorithm.md)).
 
 #### 6. ``[MQTT]``
 Transfer of the readings to a MQTT server.
