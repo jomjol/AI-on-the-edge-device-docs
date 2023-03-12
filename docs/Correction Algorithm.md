@@ -74,8 +74,7 @@ When using dig-class11 models, the setting is ignored.
 
 ###### ``IgnoreLeadingNaN``
 
-
-
+The parameter is only be used, if a dig-class11 model is selected. ``ÌgnoreLeadingNaN`` removes in the CheckDigitIncreaseConsistency process the leading `N` values.
 
 #### Flow Chart
 
