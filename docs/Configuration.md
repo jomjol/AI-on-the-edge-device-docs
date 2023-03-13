@@ -53,6 +53,8 @@ Neural network evaluation of analog counter. The neural network is defined by a 
 #### 5. ``[PostProcessing]``
 Summarized the individually converted pictures to the overall result. It also implements some error corrections and consistency checks to filter wrong reading.
 
+For more details look at [Correction Algorithm](Correction%20Algorithm.md)).
+
 #### 6. ``[MQTT]``
 Transfer of the readings to a MQTT server.
 
