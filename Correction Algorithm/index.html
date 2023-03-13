@@ -112,9 +112,19 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#checkdigitincreaseconsistency">CheckDigitIncreaseConsistency</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#negative-rate-allowed">Negative Rate allowed</a>
+    <li class="toctree-l3"><a class="reference internal" href="#allownegativerates">AllowNegativeRates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#decimalshift">DecimalShift</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#maxratevalue-maxratetype">MaxRateValue / MaxRateType</a>
+    <li class="toctree-l4"><a class="reference internal" href="#analogdigitaltransitionstart">AnalogDigitalTransitionStart</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#maxratevalue-and-maxratetype">MaxRateValue and MaxRateType</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#extendedresolution">ExtendedResolution</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ignoreleadingnan">IgnoreLeadingNaN</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#flow-chart">Flow Chart</a>
     </li>
@@ -209,8 +219,7 @@
 </ol>
 <h3 id="terms-and-definitions">Terms and definitions</h3>
 <h5 id="prevalue">PreValue</h5>
-<p>The last correct read value. Either from a previous correctly identified value or manual setting by the user.</p>
-<p>This is used to replace "N"s and make a check for the absolute change.</p>
+<p>The last correct read value. PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
 <h5 id="digits">Digits</h5>
 <p>Value that are digitized from a digital number. There are 11 allowed values for this: </p>
 <ol>
@@ -224,14 +233,27 @@
 <p>For example: 16.6 --&gt; 16.7 --&gt; 1N.8 --&gt; <strong>17.9</strong> corrected to 16.9 --&gt; 17.0 --&gt; 17.1 </p>
 <p>As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the sub-digit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9</p>
 <p>A detailed description of the algorithm can be found below (not yet ready!)</p>
-<h5 id="negative-rate-allowed">Negative Rate allowed</h5>
+<h5 id="allownegativerates"><code>AllowNegativeRates</code></h5>
 <p>Most of the meters only have increasing numbers and do not count backwards. Therefore a negative rate (= negative change compared to the PreValue) is surely a false value. This can be checked an flagged as false reading</p>
-<h5 id="maxratevalue-maxratetype">MaxRateValue / MaxRateType</h5>
+<p>The <code>AllowNegativeRates</code> property ensures that the result does not become negative in the event of incorrect readings. This can happen, for example, if the alignment of the image did not work properly. But also the neural networks sometimes flip between two states for similar images.</p>
+<p>If <code>AllowNegativeRates = true</code>, the result is discarded if it is smaller than the pre-value of the last readout and the output shows an error "Negative rate.."</p>
+<p>If the <code>ExtendedResolution</code> setting is true, there is an exception where the value does not become smaller, but no error is output. This only applies if the value +/- 0.2 of the last digit is inaccurate.</p>
+<h6 id="decimalshift"><code>DecimalShift</code></h6>
+<p>The <code>DecimalShift</code> setting puts the decimal point in the right place. It acts like a shift. Negative values shift the decimal point to the left. Positive values move the decimal point to the right, filling with zero.</p>
+<h6 id="analogdigitaltransitionstart"><code>AnalogDigitalTransitionStart</code></h6>
+<p>For detailed description see <a href="../Watermeter-specific-analog---digital-transition/">Analog-digital-transition</a>.</p>
+<h6 id="maxratevalue-and-maxratetype"><code>MaxRateValue</code> and <code>MaxRateType</code></h6>
 <p>Here the maximum change from one to the next reading can be limited. If a false reading of the neural network results in a change larger than this, the reading is flagged as false. There a two types of comparisons possible</p>
 <p>1) <strong>AbsolutChange</strong>: Here the difference between the PreValue and the current reading is compared directly, independent how much time has passed since the last reading.
 2) <strong>RelativeRate</strong>:  in this case a change rate in the unit of change/minute is calculated, taking the time between the last and the current reading into account. Be careful, that with increasing time, the absolute allowed change increases.
    Example: relative rate of 0.05 m³/minute --&gt; after 20 minutes a maximum change of 20 minutes * 0.05 m³/minute = 1 m³ is possible. That means that a false reading of 1 m³ cannot be detected false after about 20 minutes in this case
    Assume, that there might me no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted. </p>
+<h6 id="extendedresolution"><code>ExtendedResolution</code></h6>
+<p>Newer models such as dig-cont and dig-class100 have a high resolution of the values and can thus represent another digit by using the value of the last digit or pointer (ex. 7.8 in the last digit). </p>
+<p>If the value is set to true, the result of the last digit is used completely. </p>
+<p>When using dig-class11 models, the setting is ignored.</p>
+<h6 id="ignoreleadingnan"><code>IgnoreLeadingNaN</code></h6>
+<p>The parameter is only be used, if a dig-class11 model is selected. <code>ÌgnoreLeadingNaN</code> removes in the CheckDigitIncreaseConsistency process the leading <code>N</code> values.</p>
 <h4 id="flow-chart">Flow Chart</h4>
 <p><img alt="" src="../img/correct_algo_1.jpg" /></p>
 <p><img alt="" src="../img/correct_algo_2.jpg" /></p>

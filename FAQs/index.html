@@ -67,6 +67,10 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#even-after-i-have-setup-everything-perfect-there-is-a-false-reading-especially-around-the-zero-crossing-roll-over-to-next-number">Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pre-value">Pre-Value</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rate-too-high-read">"Rate too high - Read: ..."</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -247,6 +251,18 @@
 <li>To handle this, a parametrized setting would be needed. This is rather complicated to implement as subtle changes make a relevant difference. Currently this is not implemented. 
   So please be a bit patient with your meter :-)</li>
 </ul>
+<h2 id="pre-value">Pre-Value</h2>
+<p>PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
+<p>If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. </p>
+<p>If the device runs in errors, the pre-value will not be updated, as long as the <code>preValueAgeStartup</code> time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.</p>
+<h2 id="rate-too-high-read">"Rate too high - Read: ..."</h2>
+<p>In configuration you can set the <code>MaxRateValue</code> and <code>MaxRateType</code>. The settings suppress improbably high values that can come from false readings. To do this, the value must be set correctly depending on your meter.</p>
+<p>Before doing this, you should be clear about the type of rating you want to use.</p>
+<p>"Absolute change" is the interval between two readings - no matter how often the readings happen. </p>
+<p>"RateCange" is the change per minute. This is calculated from the time difference between the last and the current reading. </p>
+<p>If there is an interval of 5 minutes between readings and a MaxRateValue of 1, an error "Rate too high - Read: ..." if </p>
+<p>Absolute change: the difference is &gt; 1</p>
+<p>RateChange: the difference is &gt; 1 / 5</p>
               
             </div>
           </div><footer>

@@ -226,12 +226,13 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 <h2 id="digit-models">Digit Models</h2>
 <p>For digits on water meters, gas-meters or power meters you can select between two main types of models.</p>
 <h3 id="dig-class11">dig-class11</h3>
-<p>This model can recognize full digits. All intermediate states shown a "N" for not a number. But in post process it uses older values to fill up the "N" values if possible.</p>
+<p>This model can recognize full digits. It was the first model version. All intermediate states shown a "N" for not a number. But in post process it uses older values to fill up the "N" values if possible.</p>
 <p><img alt="" src="../img/dig-class11.png" style="width:300px" /></p>
+<p>It's possibly a good fallback, if <code>dig-cont/dig-class100</code> results are not good.</p>
 <h4 id="main-features">Main features</h4>
 <ul>
 <li>well suited for LCD digits</li>
-<li>with the ExtendedResolution option is not supported. (Only in conjunction with ana-class100 / ana-cont)</li>
+<li>the ExtendedResolution option is not supported. (Only in conjunction with ana-class100 / ana-cont)</li>
 </ul>
 <h3 id="dig-class100-dig-cont">dig-class100 / dig-cont</h3>
 <p>These models are used to get a continuous reading with intermediate states. To see what the models are doing, you can go to the Recognition page.</p>
@@ -242,9 +243,12 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 <li>Advantage over dig-class11 that results continue to be calculated in the transition between digits.</li>
 <li>With the ExtendedResolution option, higher accuracy is possible by adding another digit.</li>
 </ul>
-<p>Look <a href="https://jomjol.github.io/neural-network-digital-counter-readout">here</a> for a list of digit images used for the training </p>
+<p>Look <a href="https://jomjol.github.io/neural-network-digital-counter-readout">here</a> for a list of digit images used for the training.</p>
 <h4 id="dig-class100-vs-dig-cont">dig-class100 vs. dig-cont</h4>
-<p>The difference is in the internal processing. Take the one that gives you the best results.</p>
+<p>The difference is in the internal processing. </p>
+<p>The dig-class100 is a standard classification model. Each tenth step is an output. </p>
+<p>dig-cont uses two outputs and arctangent to get the result. You see very complicated. </p>
+<p>Try both models on your device and take the one that gives you the best results.</p>
 <h2 id="analog-pointer-models">Analog pointer models</h2>
 <h3 id="ana-class100-ana-cont">ana-class100 / ana-cont</h3>
 <p>For pointers on water meters use the analog models. You can only choose between ana-class100 and ana-cont. Both do mainly the same.</p>
@@ -256,9 +260,10 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 </ul>
 <p>Look <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">here</a> for a list of pointer images used for the training</p>
 <h4 id="ana-class100-vs-ana-cont">ana-class100 vs. ana-cont</h4>
-<p>The difference is in the internal processing. Take the one that gives you the best results. Both models learn from the same data.</p>
+<p>The difference is in the internal processing.</p>
+<p>Take the one that gives you the best results. Both models learn from the same data.</p>
 <h2 id="different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</h2>
-<p>The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller.
+<p>The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller and runs faster on the edgeAI-device.
 Usually the models are distrusted therefore in both versions. They can be distinguished by a "-q" at the end of the logfile.</p>
 <h4 id="example">Example:</h4>
 <table>
