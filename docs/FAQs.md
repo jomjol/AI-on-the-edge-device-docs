@@ -44,6 +44,7 @@ You can change the following settings to reduce incorrect readings (but potentia
 * Reduce `AutoTimer` configuration option `Interval` to the lowest it can be (e.g. `3` min). The more often you take readings, the less likely for data staleness to occur.
 
 ## Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)
+
 * The roll over behavior is different for the different meters. E.g.:
   * Rolling over start with different previous position (e.g. at 7, 8 or 9)
   * The neutral position (no rolling) is not perfectly at zero, but rather at something like 7.9 or 8.1, even if it should be exactly 8
@@ -57,3 +58,28 @@ You can change the following settings to reduce incorrect readings (but potentia
   Usually after some time and movement of the counters a bit further, the reading is getting back to a stable reading.
 * To handle this, a parametrized setting would be needed. This is rather complicated to implement as subtle changes make a relevant difference. Currently this is not implemented. 
   So please be a bit patient with your meter :-)
+
+## Pre-Value
+
+PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
+
+If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. 
+
+If the device runs in errors, the pre-value will not be updated, as long as the ``preValueAgeStartup`` time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.
+
+## "Rate too high - Read: ..."
+
+In configuration you can set the ``MaxRateValue`` and ``MaxRateType``. The settings suppress improbably high values that can come from false readings. To do this, the value must be set correctly depending on your meter.
+
+Before doing this, you should be clear about the type of rating you want to use.
+
+"Absolute change" is the interval between two readings - no matter how often the readings happen. 
+
+"RateCange" is the change per minute. This is calculated from the time difference between the last and the current reading. 
+
+If there is an interval of 5 minutes between readings and a MaxRateValue of 1, an error "Rate too high - Read: ..." if 
+
+Absolute change: the difference is > 1
+
+RateChange: the difference is > 1 / 5
+
