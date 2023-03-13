@@ -18,7 +18,7 @@ This model can recognize full digits. It was the first model version. All interm
 
 ![](img/dig-class11.png){: style="width:300px"}
 
-It's may a good fallback, if dig-cont/dig-class100 results are not good.
+It's possibly a good fallback, if `dig-cont/dig-class100` results are not good.
 
 #### Main features
 
