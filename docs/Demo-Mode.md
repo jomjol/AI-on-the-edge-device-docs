@@ -79,15 +79,6 @@ It covers a meter range from `530.00688` to `531.85882`.
 [Animation of the watermeter (77 MB!)](img/demo-watermeter-animated.png)
 
 
-### All images (843 images)
-[![grafik](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png)
-
-[Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395941/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
-
-
-Animation of it (186 MB!)
-
-
 ### Selection of 84 images
 [![grafik](https://user-images.githubusercontent.com/1783586/211915870-aa5c1342-c61c-4e1f-afe0-10e222f1499d.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915870-aa5c1342-c61c-4e1f-afe0-10e222f1499d.png)
 
@@ -98,3 +89,9 @@ Animation of it (186 MB!)
 [![grafik](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png)
 
 [Demo_Images_Watermeter_530.00688-532.08243_42_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395893/Demo_Images_Watermeter_530.00688-532.08243_42_images.zip)
+
+
+### All images (843 images)
+[![grafik](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png)
+
+[Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395941/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)
