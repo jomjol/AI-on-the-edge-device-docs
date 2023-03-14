@@ -71,7 +71,7 @@ The Demo Mode tries to interfere as less as possible with the normal behavior. W
 ## Example Data of a Water Meter
 You can use the following demo images if you want:
 
-![530 00688](https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg){:style="width:200px"}
+![530 00688](https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg){:style="width:400px"}
 
 It covers a meter range from `530.00688` to `531.85882`.
 
