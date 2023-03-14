@@ -73,7 +73,8 @@ If the value is set to true, the result of the last digit is used completely.
 When using dig-class11 models, the setting is ignored.
 
 Due to inaccuracies of the neural networks, it sometimes happens that the results jump back and forth between two decimal places. Therefore, when using `ÀllowNegatives``= false, no error is output if the value is only off by 0.2. Nevertheless, the value then remains at the higher determined value.
-
+ 
+ 
 ###### ``IgnoreLeadingNaN``
 
 The parameter is only be used, if a dig-class11 model is selected. ``ÌgnoreLeadingNaN`` removes in the CheckDigitIncreaseConsistency process the leading `N` values.
