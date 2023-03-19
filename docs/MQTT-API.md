@@ -69,10 +69,10 @@ The following parameters have to be defined:
 `MainTopic`/{GPIO topic}, e.g. `watermeter/GPIO/GPIO12`
 
 * #### GPIO/GPIO{PinNumber}
-  Depending on device configuration (`Settings` --> `Configuration` --> Chapter `GPIO`)
+  Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
 
 
-## Subscibed topics
+## Subscribed topics
 `MainTopic`/{subscribed topic}, e.g. `watermeter/ctrl/flow_start`
 
 ### Control
@@ -81,4 +81,4 @@ The following parameters have to be defined:
   Trigger a flow start by publishing to this topic (any character, length > 0)
 
 * #### GPIO/GPIO{PinNumber}
-  Depending on device configuration (`Settings` --> `Configuration` --> Chapter `GPIO`)
+  Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
