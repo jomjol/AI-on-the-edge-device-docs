@@ -1,6 +1,9 @@
 # MQTT API
 The device is capable to register to a MQTT broker to publish data and subscribe to specific topics.
 
+!!! Note
+    Only MQTT v3.1.1 is supported.
+
 The MQTT service has to be enabled and configured properly in the device configuration via web interface (`Settings` -> `Configuration` -> section `MQTT`)
 
 The following parameters have to be defined:
