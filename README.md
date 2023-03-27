@@ -1,4 +1,6 @@
-# User Documentation for the AI on the Edge Device Project
+# Documentation for the AI on the Edge Device Project
+
+Go to https://jomjol.github.io/AI-on-the-edge-device-docs to use it.
  
 This repo contains the documentation for the [AI-on-the-Edge-Device Project](https://github.com/jomjol/AI-on-the-edge-device).
 
