@@ -1,4 +1,4 @@
-# Frequent Reboots
+# Basic hardare / configuration issues
 
 
 If the device is behaving eratically or not running as expected you can use the following tools trying to identify the root cause:
