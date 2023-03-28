@@ -121,29 +121,43 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Frequent Reboots</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#random-reboots">Random reboots</a>
+    <li class="toctree-l2"><a class="reference internal" href="#sporadic-random-reboots">Sporadic random reboots</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#system-instabilities">System instabilities</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#overload-during-html-access">Overload during HTML access</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unstable-system">Unstable system</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bad-or-insufficient-power-supply">Bad or insufficient power supply</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#permanent-reboots">Permanent reboots</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#sd-card-problems">SD card problems</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#no-sd-card">No SD card</a>
+        </ul>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sd-card-not-supported-at-all">SD card not supported at all</a>
+    <li class="toctree-l2"><a class="reference internal" href="#repeating-boot-loops">Repeating boot loops</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sd-card-related-issues">SD card related issues</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sd-card-wrong-filesystem-only-fat32-is-supported">SD card: Wrong filesystem (only FAT32 is supported)</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sd-card-recognized-but-not-supported">SD card recognized but not supported</a>
+    <li class="toctree-l4"><a class="reference internal" href="#sd-card-not-detected-not-supported">SD card not detected / not supported</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sd-card-detected-but-files-are-not-readable-writeable">SD card detected but files are not readable / writeable</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#psram-too-low">PSRAM too low</a>
+    <li class="toctree-l3"><a class="reference internal" href="#ram-related-issues">RAM related issues</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#too-less-external-ram-psram">Too less external RAM (PSRAM)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#configuration-missing">Configuration missing</a>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration-related-issues">Configuration related issues</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#folders-and-files-missing">Folders and files missing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -206,29 +220,28 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="frequent-reboots">Frequent Reboots</h1>
-<p>There are several types of reboots. To get a deeper insight turn on the logging:</p>
+<p>If the device is behaving eratically or not running as expected you can use the following tools trying to identify the root cause:</p>
 <ol>
-<li>Internal logging (<code>config.ini</code>)</li>
-<li>Serial log of the UART interface (same as for flashing the firmware)</li>
+<li>Internal logging (<code>config.ini</code>)
+   --&gt; Set to DEBUG log level</li>
+<li>Reduced web interface (only error indication visualization, <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a>)</li>
+<li>Red board LED: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Serial log of the UART interface (USB access needed, only local, same as for flashing the firmware)</li>
 </ol>
-<p>There are two principle types of reboots</p>
+<p>There are in principle two reboots types:</p>
 <ol>
-<li>Random reboots (always different timing and situation)</li>
-<li>Permanent Reboots always at the same time</li>
+<li>Sporadic random reboots (always different timing and situation)</li>
+<li>Repeating boot loops (reoccuring, always stop working after same precondition)</li>
 </ol>
 <hr />
-<h3 id="random-reboots">Random reboots</h3>
-<p>Random reboots have two reasons: overload during HTML access and unstable system</p>
-<p>In general: there are several mechanisms in the firmware (like saving previous values), to have a "smooth" reboot without too many notable disturbance.</p>
-<h5 id="overload-during-html-access">Overload during HTML access</h5>
-<p>If you frequently access the web server over HTML requests, the firmware tends to reboot. This especially happens during the first run and when the ESP32 is busy with the digitization flow. </p>
-<p>The reason for this are running out of memory during a flow, minor memory leakage in combination with missing error handling.</p>
-<p>There is noting you can do about this kind of reboot, beside two thing:</p>
-<ol>
-<li>Support the firmware development with improved and tested part of code</li>
-<li>Be patient :-)</li>
-</ol>
-<h5 id="unstable-system">Unstable system</h5>
+<h3 id="sporadic-random-reboots">Sporadic random reboots</h3>
+<p>Sporadic random reboots could have the following reasons:
+- In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
+  --&gt; Trying the figure out what's the root cause to fix the issue
+- Bad power supply
+  --&gt; The power supply need to stable to ensure proper operation of the device. If it's not stable the device tents to sporadic reboots (brownout detection)</p>
+<p>In general: There are several mechanisms in the firmware (like saving previous values), to have a "smooth" reboot without too many notable disturbance.</p>
+<h5 id="system-instabilities">System instabilities</h5>
 <p>If your system is sometimes running smoothly over several runs and sometimes reboots obviously randomly, you have an partially unstable device. </p>
 <p>You can check this in the standard log file on the SD card:</p>
 <pre><code>2021-12-26T06:34:09: task_autodoFlow - round done
@@ -237,62 +250,103 @@
 </code></pre>
 <p>Here you see, that the round #23 is starting, so obviously there were no reboots in the last 22 rounds. There is hardware (ESP32CAM), where only 2-3 stable rounds are possible and others, where way more than 100 rounds without any reboots is possible.
 There is noting you can do about it, beside testing different hardware.</p>
+<h4 id="overload-during-html-access">Overload during HTML access</h4>
+<p>If you frequently access the web server over HTML requests, the firmware tends to reboot. This especially happens during the first run and when the ESP32 is busy with the digitization flow. </p>
+<p>The reason for this are running out of memory during a flow, minor memory leakage in combination with missing error handling.</p>
+<p>There is noting you can do about this kind of reboot, beside two thing:</p>
+<ol>
+<li>Support the firmware development with improved and tested part of code</li>
+<li>Be patient :-)</li>
+</ol>
+<h5 id="bad-or-insufficient-power-supply">Bad or insufficient power supply</h5>
+<p>A good and stabilized power supply is essential to have error free operation. The device is quite picky in terms of proper power supply. Especially the wifi module have some load spikes which the power supply needs to cover. If the power is not stable enough, the brwonout mechanism is protecting against strange behaviour and force a reboot whenever the voltage drops below a specific level. You can see this in random reboots which indication is logfile: --&gt; Reset reason: Brownout</p>
 <hr />
-<h3 id="permanent-reboots">Permanent reboots</h3>
-<p>Permanent reboots at the same situation during the flow has a systematic problem either in the hardware or the configuration. It usually happens during the first run as there all needed parts of the firmware have been loaded for the first time.</p>
-<p>To find the reason mostly the serial log of the UART interface from the startup until the reboots is very helpful. It can be stored using the USB / UART interface - the same as for flashing the firmware - and logging the serial output of the ESP32.</p>
-<p>Possible problems:</p>
+<h3 id="repeating-boot-loops">Repeating boot loops</h3>
+<p>Repeating boot loops at the same situation during the flow has a systematic problem either in the hardware or the configuration. It usually happens during initialization state or processing the first round as there all needed parts of the firmware have been loaded for the first time.</p>
+<p>To identify the root cause the logfiles, the reduced web interface, the red board LED or the serial log of the UART interface (no remote access, USB access needed) is helpful. </p>
+<p>Possible issues:</p>
 <ul>
-<li>
-<p>SD card</p>
-</li>
-<li>
-<p>PSRAM too low</p>
-</li>
-<li>Configuration missing</li>
+<li>SD card related issues</li>
+<li>RAM related issues</li>
+<li>Configuration related issues</li>
 </ul>
-<h5 id="sd-card-problems">SD card problems</h5>
-<p>The ESP32CAM is a little bit "picky" with the supported SD cards. Due to the limited availability of GPIOs the SD card can only be accessed via 1-wire mode. Therefore not all SD cards are supported. Several error cases can happen:</p>
-<h6 id="no-sd-card">No SD card</h6>
-<p>Easy to detect: fast blinking red LED directly after startup, no reaction of the web server etc. at all</p>
-<h6 id="sd-card-not-supported-at-all">SD card not supported at all</h6>
-<p>Error message of no detectable SC card in the log file. <strong>Normal looking</strong> log for a 16GB SD card is like this:</p>
-<pre><code>09:38:25.037 -&gt; [0;32mI (4789) main: Using SDMMC peripheral[0m
-09:38:25.037 -&gt; [0;32mI (4789) main: Using SDMMC peripheral[0m
-09:38:25.138 -&gt; Name: SC16G
-09:38:25.138 -&gt; Type: SDHC/SDXC
-09:38:25.138 -&gt; Speed: 20 MHz
-09:38:25.138 -&gt; Size: 15193MB
-</code></pre>
-<p>Otherwise there is some error message.</p>
-<h6 id="sd-card-recognized-but-not-supported">SD card recognized but not supported</h6>
-<p>This is the most annoying error. The SD card is detected, but the files cannot be read. Most probably this results in a problem with the WLAN connection, as the first file needed is the <code>wlan.ini</code> in the root directory.</p>
-<h5 id="psram-too-low">PSRAM too low</h5>
-<p>In order to work, there are 4 MB of PSRAM necessary. Normally the ESP32CAM is equipped with 8 MB, whereof only 4 MB can be used effectively. 
-Sometimes, there is hardware, where only 2 MB of PSRAM is present - <strong>even if you have bought a 8 MB module</strong></p>
-<p>You can identify the amount of PSRAM in the serial log file:</p>
-<pre><code>09:38:21.224 -&gt; [0;32mI (881) psram: This chip is ESP32-D0WD[0m
-09:38:21.224 -&gt; [0;32mI (885) spiram: Found 64MBit SPI RAM device[0m
-09:38:21.224 -&gt; [0;32mI (890) spiram: SPI RAM mode: flash 40m sram 40m[0m
-09:38:21.224 -&gt; [0;32mI (895) spiram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
-</code></pre>
-<p>Here you see 64MBit (= 8MByte) - which is okay. False reading would be: 16MBit</p>
-<p>The error in the SD log file is typically related with the taking of the image (tbd) as the first time, the system is running out of memory is usually, when it tries to transfer an image from the camera to the PSRAM.</p>
-<p>There is nothing to do, than to buy a new ESP32CAM with <strong>really</strong> 64MBit of PSRAM.</p>
-<h5 id="configuration-missing">Configuration missing</h5>
-<p>There are several files needed during on run cycle. If one of this is missing, the firmware is missing information and tends to reboot due to missing error management:</p>
+<h5 id="sd-card-related-issues">SD card related issues</h5>
+<p>The ESP32CAM is a little bit "picky" with the supported SD cards. Due to the limited availability of GPIOs the SD card can only be accessed via 1-wire mode. Therefore not all SD cards are supported. The following error cases can occur:</p>
+<h6 id="sd-card-wrong-filesystem-only-fat32-is-supported">SD card: Wrong filesystem (only FAT32 is supported)</h6>
+<p>If this SD card error is detected only the following indications are available. No web interface will be accessible.</p>
 <ul>
-<li>
-<p><code>/wlan.ini</code></p>
-</li>
-<li>
-<p><code>/config/config.ini</code></p>
-</li>
-<li>
-<p><code>/config/XXXXX.tflite</code> (1 time for analog and 1 time for digital)</p>
-</li>
+<li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Error messages on serial log (UART interface)</li>
 </ul>
-<p>where XXXXX is the file name, that is written in the <code>config.ini</code></p>
+<h6 id="sd-card-not-detected-not-supported">SD card not detected / not supported</h6>
+<p>If this SD card error is detected the following indication are available. No web interface will be accessible.</p>
+<ul>
+<li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Error messages on serial log (UART interface)</li>
+</ul>
+<h6 id="sd-card-detected-but-files-are-not-readable-writeable">SD card detected but files are not readable / writeable</h6>
+<p>The SD card is detected, but the files cannot be read or written. A basic SD card check for SD reading / writing is performed on every boot. This not 100% guarantee that SD card is working but it's at least a indication.</p>
+<p>If this SD card error is detected the following indications are available:</p>
+<ul>
+<li>The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a></li>
+<li>Error messages in logfile</li>
+<li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Error messages on serial log (UART interface)</li>
+</ul>
+<h5 id="ram-related-issues">RAM related issues</h5>
+<p>In order to run the firmware, 4 MB of external RAM (PSRAM) are mandatory. Usually, the ESP32CAM is equipped with 8MB (64Mbit) PSRAM chip, whereof only 4MB can be used effectively (direct addressable).
+Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is present - <strong>even if you have bought a device where a 8MB PSRAM was promoted</strong>. These modules are not suiable for this firmware because the external RAM is needed to handle the CNN files and camera images. There is nothing to do, than to buy a new ESP32CAM with <strong>really</strong> 64MBit of PSRAM. </p>
+<h6 id="too-less-external-ram-psram">Too less external RAM (PSRAM)</h6>
+<p>During the boot process the available RAM is going to be checked.</p>
+<p>If there is too less RAM (PSRAM or total HEAP &lt; 4MB) detected, the follwoing indications are available:</p>
+<ul>
+<li>The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a></li>
+<li>Error messages in logfile</li>
+<li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Error messages on serial log (UART interface)</li>
+</ul>
+<h5 id="configuration-related-issues">Configuration related issues</h5>
+<h6 id="folders-and-files-missing">Folders and files missing</h6>
+<p>Most of the relevant folders and files are checked during boot. The complete list can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a></p>
+<p>If a relevant folder or file is missing the following indications are available:</p>
+<ul>
+<li>The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a></li>
+<li>Error messages in logfile</li>
+<li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
+<li>Error messages on serial log (UART interface)</li>
+</ul>
+<h6 id="cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</h6>
+<p>Additionally for operation CNN model files on SD card are mandatory. </p>
+<ul>
+<li><code>/config/XXXXX.tflite</code> (one CNN model file for analog counter and for for digit numbers each, where XXXXX is the file name, that is written in the <code>config.ini</code>)</li>
+</ul>
+<p>If the files which are configured in <code>config.ini</code> are not present or corrupt, the process is going to be interrupted (or at worst case a device crash occurs). Please check logs files to have an indicator for the root cause.</p>
+<p>This a logfile extract (DEBUB log level) where digit CNN model file is not present. The system is initializing the system and trying to load the model files:</p>
+<pre><code>[0d00h05m11s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::LoadModel
+[0d00h05m11s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard
+[0d00h05m11s] 2023-03-27T12:25:14 [PSRAM] Failed to allocate 0 bytes in PSRAM for 'TFLITE-&gt;modelfile'!
+[0d00h05m11s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: Can't allocate enough memory: 0
+[0d00h05m12s] 2023-03-27T12:25:14 [HEAP] CTfLiteClass::ReadFileToModel Heap Total: 2266214 | SPI Free: 2205939 | SPI Large Block: 2162688 | SPI Min Free: 2205423 | Int Free: 60275 | Int Large Block: 55296 | Int Min Free: 46451
+[0d00h05m12s] 2023-03-27T12:25:14 [CNN] Can't load tflite model -&gt; Init aborted!
+[0d00h05m12s] 2023-03-27T12:25:14 [HEAP] getNetworkParameter-LoadModel Heap Total: 2266214 | SPI Free: 2205939 | SPI Large Block: 2162688 | SPI Min Free: 2205423 | Int Free: 60275 | Int Large Block: 55296 | Int Min Free: 46451
+[0d00h05m12s] 2023-03-27T12:25:14 [PSRAM] Freeing memory in PSRAM used for 'TFLITE-&gt;modelfile'...
+[0d00h05m12s] 2023-03-27T12:25:14 [PSRAM] Freeing memory in PSRAM used for 'TFLITE-&gt;tensor_arena'...
+[0d00h05m12s] 2023-03-27T12:25:14 [PSRAM] Allocated 819200 bytes in PSRAM for 'TFLITE-&gt;tensor_arena'
+[0d00h05m12s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::LoadModel
+[0d00h05m12s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard/config/ana-cont_1105_s2_q.tflite
+[0d00h05m12s] 2023-03-27T12:25:15 [PSRAM] Allocated 53328 bytes in PSRAM for 'TFLITE-&gt;modelfile'
+[0d00h05m12s] 2023-03-27T12:25:15 [TFLITE] CTfLiteClass::MakeAllocate
+[0d00h05m12s] 2023-03-27T12:25:15 [PSRAM] Freeing memory in PSRAM used for 'TFLITE-&gt;modelfile'...
+[0d00h05m12s] 2023-03-27T12:25:15 [PSRAM] Freeing memory in PSRAM used for 'TFLITE-&gt;tensor_arena'...
+</code></pre>
+<ul>
+<li>Bad config example:</li>
+<li><code>[0d00h05m11s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard</code>
+    --&gt; model file missing: check configuration or file presence </li>
+<li>Good config example:</li>
+<li><code>[0d00h05m12s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard/config/ana-cont_1105_s2_q.tflite</code>
+    --&gt; model file found: config OK</li>
+</ul>
               
             </div>
           </div><footer>
