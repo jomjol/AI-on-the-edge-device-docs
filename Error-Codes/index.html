@@ -113,6 +113,28 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Reduced webinterface (error codes)</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#critical-errors">Critical Errors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000002-heap-too-small">0x00000002 Heap too small</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#non-critical-errors">Non-Critical Errors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000100-cam-framebuffer-bad">0x00000100 Cam Framebuffer bad</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#0x00000200-ntp-failed">0x00000200 NTP failed</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
@@ -179,23 +201,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="reduced-webinterface-only-for-error-indication-and-tracing">Reduced webinterface (only for error indication and tracing)</h1>
+                <h1 id="reduced-webinterface-error-indication-and-tracing">Reduced webinterface (error indication and tracing)</h1>
 <p>Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.</p>
 <p>The error code(s) get printed with specific error codes. This page lists the possible error codes, their meaning and possible solutions.</p>
 <p>Note: Here the error codes are defined in source code: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h">error codes</a>.</p>
-<h1 id="critical-errors">Critical Errors</h1>
+<h2 id="critical-errors">Critical Errors</h2>
 <p>Those Errors make the normal operation of the device impossible.
 Most likely they are caused by a hardware issue!</p>
-<h2 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h2>
+<h3 id="0x00000001-psram-bad"><code>0x00000001</code> PSRAM bad</h3>
 <p>Your device most likely has no PSRAM at all or it is too small (needs to have at least 4 MBytes)!
 See <a href="../Hardware-Compatibility">Hardware Compatibility</a>.</p>
 <p>Usually the log shows something like this:</p>
 <pre><code>psram: PSRAM ID read error: 0xffffffff
 cpu_start: Failed to init external RAM!
 </code></pre>
-<h2 id="0x00000002-heap-too-small"><code>0x00000002</code> Heap too small</h2>
+<h3 id="0x00000002-heap-too-small"><code>0x00000002</code> Heap too small</h3>
 <p>The firmware failed to allocate enough memory. This most likely is a consequential error of a bad PSRAM!</p>
-<h2 id="0x00000004-cam-bad"><code>0x00000004</code> Cam bad</h2>
+<h3 id="0x00000004-cam-bad"><code>0x00000004</code> Cam bad</h3>
 <p>The attached camera can not be initialized.
 This usually is because on of the following reasons:</p>
 <ul>
@@ -203,7 +225,7 @@ This usually is because on of the following reasons:</p>
 <li>The camera is not attached properly -&gt; Try to remove and attach it again. Make sure you move the black part enough into the socket!</li>
 <li>The camera or the camera cable is damaged</li>
 </ul>
-<h2 id="0x00000008-sd-card-basic-check-failed"><code>0x00000008</code> SD card basic check failed</h2>
+<h3 id="0x00000008-sd-card-basic-check-failed"><code>0x00000008</code> SD card basic check failed</h3>
 <p>One or more basic SD card checks failed.</p>
 <p>The following checks are performed during boot sequence:</p>
 <ul>
@@ -214,7 +236,7 @@ This usually is because on of the following reasons:</p>
 </ul>
 <p>Detailed error indication (write, rerad or delete error) can be derived from blinking code of red board status LED. Please refer to <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">StatusLED-BlinkCodes</a></p>
 <p>Recommendation: Reformat SD card and check again or try another SD card</p>
-<h2 id="0x00000010-sd-folder-or-file-presence-check-failed"><code>0x00000010</code> SD folder or file presence check failed</h2>
+<h3 id="0x00000010-sd-folder-or-file-presence-check-failed"><code>0x00000010</code> SD folder or file presence check failed</h3>
 <p>One or more mandatory folders and/or files are missing on SD card.
 To have early indication that SD card is potentially ready for operation, some folder and files, which are mandatory are presence checked. This is not a 100% check and a successful test does not mean everthing is OK.</p>
 <p>The following folders / files get checked during boot sequence:</p>
@@ -235,13 +257,13 @@ To have early indication that SD card is potentially ready for operation, some f
 <li>/sdcard/html/version.txt</li>
 </ul>
 <p>Recommendation: Check logs and / or redo a Over-The-Air Update (OTA Update) to ensure proper SD card structure</p>
-<h1 id="non-critical-errors">Non-Critical Errors</h1>
+<h2 id="non-critical-errors">Non-Critical Errors</h2>
 <p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
-<h2 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h2>
+<h3 id="0x00000100-cam-framebuffer-bad"><code>0x00000100</code> Cam Framebuffer bad</h3>
 <p>The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.</p>
-<h2 id="0x00000200-ntp-failed"><code>0x00000200</code> NTP failed</h2>
+<h3 id="0x00000200-ntp-failed"><code>0x00000200</code> NTP failed</h3>
 <p>The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.</p>
               
             </div>
