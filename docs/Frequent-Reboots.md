@@ -21,6 +21,7 @@ ______
 ### Sporadic random reboots
 
 Sporadic random reboots could have the following reasons:
+
 * In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
   --> Trying the figure out what's the root cause to fix the issue
 * Bad power supply
