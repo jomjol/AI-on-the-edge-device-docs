@@ -1,39 +1,12 @@
 # Error Debugging
 
-## Rebooting
-
-##### General Remark 
-
-1. Due to the rather complex code with a lot of external libraries and the limited availability of memory a reboot of the device from time to time is "normal". Background are memory leakages and therefore running out of free memory. 
-
-2. The hardware of the ESP32CAM has a varying quality. I have one and the same hardware with a reboot range from every 5 detection runs to up to 250 detection runs. 
-
-##### Getting deeper inside
-
-Have a look into the log file (``/log/message/...``). 
-
-* If the log file is very short you need to enable a enhanced logging in the ``config.ini`` (Debug --> ``logfile = true``) . 
-
-
-
-Analyze the debugging output of the serial interface
-
-* Connect a serial to USB interface (like for flashing) and make a logging of the serial communication
-* There are a lot more intermediate information and the lines before the reboot tell you, where the firmware fails
-
-
-
-**If you make an issue about this, please post these two information additionally** 
-
-**Don't forget to remove your WLAN password in the serial log**
-
-
-
 ## Often observed problems
 
 ### Hardware failure
   * Camera not working --> check the interface, test another module
   * Low cost module with only 2MB of PSRAM instead of 4MB --> image taking will fail first. This will never work due to too low memory
+
+More information in terms of hardware, component and basic configuration issues can be found here: [Reboot reasons](https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/)
 
 ### ROI misaligned
 
