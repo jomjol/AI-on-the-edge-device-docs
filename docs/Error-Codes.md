@@ -1,6 +1,10 @@
-This page lists the possible error codes, their meaning and possible solutions.
+# Reduced webinterface (only for error indication and tracing, no regular processing)
 
-The effective error codes can be found [here](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h).
+Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.
+
+The error code(s) get printed with specific error codes. This page lists the possible error codes, their meaning and possible solutions.
+
+Note: Here the error codes are defined in source code: [error codes](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h).
 
 # Critical Errors
 Those Errors make the normal operation of the device impossible.
