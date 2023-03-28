@@ -119,17 +119,13 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Often observed issues</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#often-observed-problems">Often observed problems</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#hardware-failure">Hardware failure</a>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-failure">Hardware failure</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#roi-misaligned">ROI misaligned</a>
+    <li class="toctree-l2"><a class="reference internal" href="#roi-misaligned">ROI misaligned</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#my-analog-meter-are-recognized-as-digital-counter-or-vice-versa">My Analog Meter are recognized as Digital Counter or vice versa</a>
+    <li class="toctree-l2"><a class="reference internal" href="#my-analog-meter-are-recognized-as-digital-counter-or-vice-versa">My Analog Meter are recognized as Digital Counter or vice versa</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#recognition-is-working-well-but-number-arent-sorted-correctly">Recognition is working well, but number aren't sorted correctly</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#recognition-is-working-well-but-number-arent-sorted-correctly">Recognition is working well, but number aren't sorted correctly</a>
     </li>
     </ul>
                   </li>
@@ -191,27 +187,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="error-debugging">Error Debugging</h1>
-<h2 id="often-observed-problems">Often observed problems</h2>
-<h3 id="hardware-failure">Hardware failure</h3>
+                <h1 id="often-observed-issues">Often observed issues</h1>
+<h2 id="hardware-failure">Hardware failure</h2>
 <ul>
 <li>Camera not working --&gt; check the interface, test another module</li>
 <li>Low cost module with only 2MB of PSRAM instead of 4MB --&gt; image taking will fail first. This will never work due to too low memory</li>
 </ul>
 <p>More information in terms of hardware, component and basic configuration issues can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/">Reboot reasons</a></p>
-<h3 id="roi-misaligned">ROI misaligned</h3>
+<h2 id="roi-misaligned">ROI misaligned</h2>
 <p><img src="https://user-images.githubusercontent.com/108122193/188264361-0f5038ce-d827-4096-93fb-5907d3b072b4.png" width=30% height=30%></p>
 <p>This typically happens if you have suboptimal "Alignment Marks". A very simple and working solution is to put put higly contrasted stickers on your meter and put "Alignment Marks" on it (see picture below)</p>
 <p><img src="https://user-images.githubusercontent.com/108122193/188264752-c0f2a2be-0c22-40de-afaf-fd55b2eb4182.png" width=30% height=30%></p>
 <p>If after those adjustment you still have some issues, you can try to adjust your alignment settings in expert mode:
 <img src="https://user-images.githubusercontent.com/108122193/188382213-68c4a015-6582-4911-81bc-cdce8ef60ed2.png" width=75% height=75%></p>
-<h3 id="my-analog-meter-are-recognized-as-digital-counter-or-vice-versa">My Analog Meter are recognized as Digital Counter or vice versa</h3>
+<h2 id="my-analog-meter-are-recognized-as-digital-counter-or-vice-versa">My Analog Meter are recognized as Digital Counter or vice versa</h2>
 <p><img src="https://user-images.githubusercontent.com/108122193/188265470-001a392f-d1f4-46a3-b1e8-f29ec41c8621.png" width=40% height=40%></p>
 <ol>
 <li>First, check that your ROI are correctly defined (yey!)</li>
 <li>Second, verify that the name of your ROI analog and digital ROIs are different </li>
 </ol>
-<h3 id="recognition-is-working-well-but-number-arent-sorted-correctly">Recognition is working well, but number aren't sorted correctly</h3>
+<h2 id="recognition-is-working-well-but-number-arent-sorted-correctly">Recognition is working well, but number aren't sorted correctly</h2>
 <p>You have to sort your ROI correctly (Bigger to smaller). Select your ROI and click either "move next" or "move previous". Repeat until your ROI are correctly sorted</p>
 <p><img src="https://user-images.githubusercontent.com/108122193/188264916-03befff1-4e61-4370-bd5a-9168a88c57f2.png" width=50% height=50%></p>
               
