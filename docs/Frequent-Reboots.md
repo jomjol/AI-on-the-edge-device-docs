@@ -1,4 +1,4 @@
-# Basic hardare / configuration issues
+# Basic hardware / configuration issues
 
 
 If the device is behaving eratically or not running as expected you can use the following tools trying to identify the root cause:
