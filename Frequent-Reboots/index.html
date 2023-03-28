@@ -318,9 +318,9 @@ Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is 
 <li>Error messages on serial log (UART interface)</li>
 </ul>
 <h6 id="cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</h6>
-<p>Additionally for operation CNN model files on SD card are mandatory. </p>
+<p>Additionally for operation CNN model files on SD card are mandatory, one CNN model file for analog counter and for for digit numbers each.</p>
 <ul>
-<li><code>/config/XXXXX.tflite</code> (one CNN model file for analog counter and for for digit numbers each, where XXXXX is the file name, that is written in the <code>config.ini</code>)</li>
+<li><code>/config/XXXXX.tflite</code> (XXXXX is the file name, that is written in the <code>config.ini</code>)</li>
 </ul>
 <p>If the files which are configured in <code>config.ini</code> are not present or corrupt, the process is going to be interrupted (or at worst case a device crash occurs). Please check logs files to have an indicator for the root cause.</p>
 <p>This a logfile extract (DEBUB log level) where digit CNN model file is not present. The system is initializing the system and trying to load the model files:</p>
