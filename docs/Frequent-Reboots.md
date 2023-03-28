@@ -150,9 +150,9 @@ If a relevant folder or file is missing the following indications are available:
 
 ###### CNN model file not available / corrupt
 
-Additionally for operation CNN model files on SD card are mandatory. 
+Additionally for operation CNN model files on SD card are mandatory, one CNN model file for analog counter and for for digit numbers each.
 
-* `/config/XXXXX.tflite` (one CNN model file for analog counter and for for digit numbers each, where XXXXX is the file name, that is written in the `config.ini`)
+* `/config/XXXXX.tflite` (XXXXX is the file name, that is written in the `config.ini`)
 
 If the files which are configured in `config.ini` are not present or corrupt, the process is going to be interrupted (or at worst case a device crash occurs). Please check logs files to have an indicator for the root cause.
 
