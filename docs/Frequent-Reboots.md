@@ -21,9 +21,9 @@ ______
 ### Sporadic random reboots
 
 Sporadic random reboots could have the following reasons:
-- In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
+* In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
   --> Trying the figure out what's the root cause to fix the issue
-- Bad power supply
+* Bad power supply
   --> The power supply need to stable to ensure proper operation of the device. If it's not stable the device tents to sporadic reboots (brownout detection)
 
 In general: There are several mechanisms in the firmware (like saving previous values), to have a "smooth" reboot without too many notable disturbance.
@@ -88,16 +88,16 @@ The ESP32CAM is a little bit "picky" with the supported SD cards. Due to the lim
 
 If this SD card error is detected only the following indications are available. No web interface will be accessible.
 
-- Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
-- Error messages on serial log (UART interface)
+* Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
+* Error messages on serial log (UART interface)
 
 
 ###### SD card not detected / not supported
 
 If this SD card error is detected the following indication are available. No web interface will be accessible.
 
-- Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
-- Error messages on serial log (UART interface)
+* Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
+* Error messages on serial log (UART interface)
 
 
 ###### SD card detected but files are not readable / writeable
@@ -106,10 +106,10 @@ The SD card is detected, but the files cannot be read or written. A basic SD car
 
 If this SD card error is detected the following indications are available:
 
-- The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
-- Error messages in logfile
-- Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
-- Error messages on serial log (UART interface)
+* The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
+* Error messages in logfile
+* Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
+* Error messages on serial log (UART interface)
 
 
 
@@ -125,10 +125,10 @@ During the boot process the available RAM is going to be checked.
 
 If there is too less RAM (PSRAM or total HEAP < 4MB) detected, the follwoing indications are available:
 
-- The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
-- Error messages in logfile
-- Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
-- Error messages on serial log (UART interface)
+* The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
+* Error messages in logfile
+* Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
+* Error messages on serial log (UART interface)
 
 
 
@@ -141,10 +141,10 @@ Most of the relevant folders and files are checked during boot. The complete lis
 
 If a relevant folder or file is missing the following indications are available:
 
-- The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
-- Error messages in logfile
-- Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
-- Error messages on serial log (UART interface)
+* The reduced web interface will be loaded to have visual feedback of error situation. Regualar processing is disabled, though. Within this reduced web interface logs can be viewed to have further indication what's the root cause. Error code desciption can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
+* Error messages in logfile
+* Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
+* Error messages on serial log (UART interface)
 
 
 ###### CNN model file not available / corrupt
@@ -175,9 +175,10 @@ This a logfile extract (DEBUB log level) where digit CNN model file is not prese
 [0d00h05m12s] 2023-03-27T12:25:15 [PSRAM] Freeing memory in PSRAM used for 'TFLITE->tensor_arena'...
 ```
 
-- Bad config example:
+* Bad config example:
   - `[0d00h05m11s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard`
     --> model file missing: check configuration or file presence 
-- Good config example:
+
+* Good config example:
   - `[0d00h05m12s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard/config/ana-cont_1105_s2_q.tflite`
     --> model file found: config OK
