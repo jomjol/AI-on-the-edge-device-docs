@@ -1,14 +1,12 @@
-# Error Debugging
+# Often observed issues
 
-## Often observed problems
-
-### Hardware failure
+## Hardware failure
   * Camera not working --> check the interface, test another module
   * Low cost module with only 2MB of PSRAM instead of 4MB --> image taking will fail first. This will never work due to too low memory
 
 More information in terms of hardware, component and basic configuration issues can be found here: [Reboot reasons](https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/)
 
-### ROI misaligned
+## ROI misaligned
 
 <img src="https://user-images.githubusercontent.com/108122193/188264361-0f5038ce-d827-4096-93fb-5907d3b072b4.png" width=30% height=30%>
 
@@ -20,7 +18,7 @@ If after those adjustment you still have some issues, you can try to adjust your
 <img src="https://user-images.githubusercontent.com/108122193/188382213-68c4a015-6582-4911-81bc-cdce8ef60ed2.png" width=75% height=75%>
 
 
-### My Analog Meter are recognized as Digital Counter or vice versa 
+## My Analog Meter are recognized as Digital Counter or vice versa 
 
 <img src="https://user-images.githubusercontent.com/108122193/188265470-001a392f-d1f4-46a3-b1e8-f29ec41c8621.png" width=40% height=40%>
 
@@ -28,7 +26,7 @@ If after those adjustment you still have some issues, you can try to adjust your
 1. First, check that your ROI are correctly defined (yey!)
 2. Second, verify that the name of your ROI analog and digital ROIs are different 
 
-### Recognition is working well, but number aren't sorted correctly
+## Recognition is working well, but number aren't sorted correctly
 
 You have to sort your ROI correctly (Bigger to smaller). Select your ROI and click either "move next" or "move previous". Repeat until your ROI are correctly sorted
 
