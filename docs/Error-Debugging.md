@@ -33,3 +33,4 @@ If after those adjustment you still have some issues, you can try to adjust your
 You have to sort your ROI correctly (Bigger to smaller). Select your ROI and click either "move next" or "move previous". Repeat until your ROI are correctly sorted
 
 <img src="https://user-images.githubusercontent.com/108122193/188264916-03befff1-4e61-4370-bd5a-9168a88c57f2.png" width=50% height=50%>
+
