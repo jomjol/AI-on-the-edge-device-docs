@@ -37,7 +37,7 @@ The following checks are performed during boot sequence:
  * CRC verification
  * Delete the file
 
-Detailed error indication (write, rerad or delete error) can be derived from blinking code of red board status LED. Please have a look to !!!TODO!!!
+Detailed error indication (write, rerad or delete error) can be derived from blinking code of red board status LED. Please refer to [StatusLED-BlinkCodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
 
 Recommendation: Reformat SD card and check again or try another SD card
 
