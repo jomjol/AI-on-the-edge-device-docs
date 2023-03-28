@@ -40,12 +40,12 @@ nav:
     - New-Releases-Notification.md
 
   - Troubleshooting:
-    - Error-Codes.md
-    - StatusLED-BlinkCodes.md
-    - WLAN-disconnect-reason.md
-    - Error-Debugging.md
-    - Frequent-Reboots.md
-    - Demo-Mode.md
+    - Reduced webinterface (error codes): Error-Codes.md
+    - Board status LED (blink codes): StatusLED-BlinkCodes.md
+    - WLAN disconnect reasons: WLAN-disconnect-reason.md
+    - Often observed issues: Error-Debugging.md
+    - Basic hardware/config issues: Frequent-Reboots.md
+    - Demo mode: Demo-Mode.md
 
   - API's:
       - REST-API.md
