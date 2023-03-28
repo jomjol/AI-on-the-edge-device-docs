@@ -2,7 +2,9 @@
 
 ## Hardware failure
   * Camera not working --> check the interface, test another module
-  * Low cost module with only 2MB of PSRAM instead of 4MB --> image taking will fail first. This will never work due to too low memory
+  * Low cost module with no or only 2MB memory instead of 4MB --> test another module
+  * SD card issues --> test another SD card
+  * Wifi reception bad / unstable --> bad antenna, test another module or use external antenna
 
 More information in terms of hardware, component and basic configuration issues can be found here: [Reboot reasons](https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/)
 
