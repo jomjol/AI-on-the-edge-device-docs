@@ -113,16 +113,6 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Reduced webinterface (error codes)</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000002-heap-too-small">0x00000002 Heap too small</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
@@ -189,8 +179,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>This page lists the possible error codes, their meaning and possible solutions.</p>
-<p>The effective error codes can be found <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h">here</a>.</p>
+                <h1 id="reduced-webinterface-only-for-error-indication-and-tracing">Reduced webinterface (only for error indication and tracing)</h1>
+<p>Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.</p>
+<p>The error code(s) get printed with specific error codes. This page lists the possible error codes, their meaning and possible solutions.</p>
+<p>Note: Here the error codes are defined in source code: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h">error codes</a>.</p>
 <h1 id="critical-errors">Critical Errors</h1>
 <p>Those Errors make the normal operation of the device impossible.
 Most likely they are caused by a hardware issue!</p>
