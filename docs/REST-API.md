@@ -9,10 +9,22 @@ Note: For more detailed information to the REST handler, have a look to the code
 * ### flow_start
   Trigger a flow start (if not running)
   
-* ### Set Pre Value
-  Set the Previous Value
+ 
+* ### setPreValue
+  Set the last valid value (previous value) to given value or the actual RAW value.
   
-  `/setPreValue?value=1234&numbers=main` where `1234` is the new value and `main` the name of the number to be adjusted.
+    Payload:
+
+    1. Set to given value (value >= 0), e.g. `/setPreValue?numbers=main&value=1234.5678`
+    
+       1. `numbers=` Provide name of number sequence, e.g. main
+       2. `value=` provide the value to be set
+    
+    2. Set to actual RAW value (value < 0, a valid RAW value is mandatory), e.g. `/setPreValue?numbers=main&value=-1`
+
+       1. `numbers=` Provide name of number sequence, e.g. main
+       2. `value=` provide yna negative number
+
 
 * ### GPIO
   - Control a GPIO output
