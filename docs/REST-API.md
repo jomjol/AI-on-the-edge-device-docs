@@ -17,13 +17,15 @@ Note: For more detailed information to the REST handler, have a look to the code
 
     1. Set to given value (value >= 0), e.g. `/setPreValue?numbers=main&value=1234.5678`
     
-       1. `numbers=` Provide name of number sequence, e.g. main
-       2. `value=` provide the value to be set
+       -> `numbers=` Provide name of number sequence, e.g. main
+       
+       -> `value=` provide the value to be set
     
     2. Set to actual RAW value (value < 0, a valid RAW value is mandatory), e.g. `/setPreValue?numbers=main&value=-1`
 
-       1. `numbers=` Provide name of number sequence, e.g. main
-       2. `value=` provide yna negative number
+       -> `numbers=` Provide name of number sequence, e.g. main
+       
+       -> `value=` provide yna negative number
 
 
 * ### GPIO
@@ -120,7 +122,7 @@ Note: For more detailed information to the REST handler, have a look to the code
 * ### save
   Save a new image to SD card
   - The `save` entrypoint also support parameters:
-   - `http://<IP>/save?filename=test.jpg&delay=1`
+   - `http://<IP>/save?filename=test.jpg&delay=1000`
 
 ## Logs
 * ### log 
