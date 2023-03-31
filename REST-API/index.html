@@ -132,7 +132,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#set-pre-value">Set Pre Value</a>
+    <li class="toctree-l3"><a class="reference internal" href="#setprevalue">setPreValue</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
     </li>
@@ -266,12 +266,28 @@
 <p>Trigger a flow start (if not running)</p>
 </li>
 <li>
-<h3 id="set-pre-value">Set Pre Value</h3>
-<p>Set the Previous Value</p>
+<h3 id="setprevalue">setPreValue</h3>
+<p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
+<p>Payload:</p>
+<ol>
+<li>
+<p>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code></p>
 </li>
-</ul>
-<p><code>/setPreValue?value=1234&amp;numbers=main</code> where <code>1234</code> is the new value and <code>main</code> the name of the number to be adjusted.</p>
-<ul>
+<li>
+<p><code>numbers=</code> Provide name of number sequence, e.g. main</p>
+</li>
+<li>
+<p><code>value=</code> provide the value to be set</p>
+</li>
+<li>
+<p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></p>
+</li>
+<li>
+<p><code>numbers=</code> Provide name of number sequence, e.g. main</p>
+</li>
+<li><code>value=</code> provide yna negative number</li>
+</ol>
+</li>
 <li>
 <h3 id="gpio">GPIO</h3>
 </li>
