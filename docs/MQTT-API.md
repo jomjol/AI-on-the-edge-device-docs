@@ -80,21 +80,21 @@ The following parameters have to be defined:
 * #### ctrl/flow_start
   Trigger a flow start by publishing to this topic
   
-  + Payload:
-    - any character
-    - length > 0
+    + Payload:
+       - any character
+       - length > 0
 
 * #### ctrl/set_prevalue
   Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
 
-  + Payload:
-    - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
-       * "numbersname": Provide name of number sequence, e.g. `"main"`  
-       * "value": provide the value to be set
+    + Payload:
+       - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
+           * "numbersname": Provide name of number sequence, e.g. `"main"`  
+           * "value": provide the value to be set
      
-     - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
-       * "numbersname": Provide name of number sequence, e.g. `"main"`  
-       * "value": Provide any negative number
+        - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
+           * "numbersname": Provide name of number sequence, e.g. `"main"`  
+           * "value": Provide any negative number
 
 * #### GPIO/GPIO{PinNumber}
   Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
