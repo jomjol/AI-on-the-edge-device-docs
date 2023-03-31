@@ -263,22 +263,31 @@
 <ul>
 <li>
 <h3 id="flow_start">flow_start</h3>
-<p>Trigger a flow start (if not running)</p>
+  Trigger a flow start (if not running)<ul>
+<li>Payload:</li>
+<li>No payload needed</li>
+</ul>
 </li>
 <li>
 <h3 id="setprevalue">setPreValue</h3>
 <p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
+</li>
+<li>
 <p>Payload:</p>
-<ol>
-<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code></li>
-</ol>
-<p>-&gt; <code>numbers=</code> Provide name of number sequence, e.g. main</p>
-<p>-&gt; <code>value=</code> provide the value to be set</p>
-<ol>
-<li>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></li>
-</ol>
-<p>-&gt; <code>numbers=</code> Provide name of number sequence, e.g. main</p>
-<p>-&gt; <code>value=</code> provide yna negative number</p>
+<ul>
+<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code>  </li>
+<li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
+<li>
+<p><code>value=</code> provide the value to be set</p>
+</li>
+<li>
+<p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></p>
+<ul>
+<li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
+<li><code>value=</code> provide yna negative number</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <h3 id="gpio">GPIO</h3>
