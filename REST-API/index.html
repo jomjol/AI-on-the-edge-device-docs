@@ -270,23 +270,15 @@
 <p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
 <p>Payload:</p>
 <ol>
-<li>
-<p>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code></p>
-</li>
-<li>
-<p><code>numbers=</code> Provide name of number sequence, e.g. main</p>
-</li>
-<li>
-<p><code>value=</code> provide the value to be set</p>
-</li>
-<li>
-<p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></p>
-</li>
-<li>
-<p><code>numbers=</code> Provide name of number sequence, e.g. main</p>
-</li>
-<li><code>value=</code> provide yna negative number</li>
+<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code></li>
 </ol>
+<p>-&gt; <code>numbers=</code> Provide name of number sequence, e.g. main</p>
+<p>-&gt; <code>value=</code> provide the value to be set</p>
+<ol>
+<li>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></li>
+</ol>
+<p>-&gt; <code>numbers=</code> Provide name of number sequence, e.g. main</p>
+<p>-&gt; <code>value=</code> provide yna negative number</p>
 </li>
 <li>
 <h3 id="gpio">GPIO</h3>
@@ -428,7 +420,7 @@
 <p>Save a new image to SD card</p>
 </li>
 <li>The <code>save</code> entrypoint also support parameters:</li>
-<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1</code></li>
+<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1000</code></li>
 </ul>
 <h2 id="logs">Logs</h2>
 <ul>
