@@ -78,11 +78,9 @@ The following parameters have to be defined:
 ### Control
 
 * #### ctrl/flow_start
-  Trigger a flow start by publishing to this topic
-  
+  Trigger a flow start by publishing to this topic 
     + Payload:
-       - any character
-       - length > 0
+       - any character, length > 0
 
 * #### ctrl/set_prevalue
   Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
@@ -90,7 +88,7 @@ The following parameters have to be defined:
        - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
            * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
            * `"value":` provide the value to be set
-     
+            
        - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
            * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
            * `"value":` Provide any negative number
