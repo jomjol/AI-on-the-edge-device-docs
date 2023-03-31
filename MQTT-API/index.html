@@ -350,29 +350,38 @@
 <ul>
 <li>
 <h4 id="ctrlflow_start">ctrl/flow_start</h4>
-  Trigger a flow start by publishing to this topic</li>
-</ul>
-<p>Payload:
-    1. any character, length &gt; 0</p>
+<p>Trigger a flow start by publishing to this topic</p>
+</li>
+<li>
+<p>Payload:</p>
 <ul>
+<li>any character</li>
+<li>length &gt; 0</li>
+</ul>
+</li>
 <li>
 <h4 id="ctrlset_prevalue">ctrl/set_prevalue</h4>
-  Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.</li>
-</ul>
-<p>Payload:
-    1. Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code></p>
-<pre><code>   -&gt; "numbersname": Provide name of number sequence, e.g. `"main"`  
-   -&gt; "value": provide the value to be set
-
-2. Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
-
-   -&gt; "numbersname": Provide name of number sequence, e.g. `"main"`  
-   -&gt; "value": Provide any negative number
-</code></pre>
+<p>Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.</p>
+</li>
+<li>
+<p>Payload:</p>
 <ul>
+<li>Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code></li>
+<li>"numbersname": Provide name of number sequence, e.g. <code>"main"</code>  </li>
+<li>
+<p>"value": provide the value to be set</p>
+</li>
+<li>
+<p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory): <code>{"numbersname": "main", "value": -1}</code></p>
+</li>
+<li>"numbersname": Provide name of number sequence, e.g. <code>"main"</code>  </li>
+<li>"value": Provide any negative number</li>
+</ul>
+</li>
 <li>
 <h4 id="gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</h4>
-  Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</li>
+<p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</p>
+</li>
 </ul>
               
             </div>
