@@ -264,14 +264,16 @@
 <li>
 <h3 id="flow_start">flow_start</h3>
   Trigger a flow start (if not running)<ul>
-<li>Payload:</li>
+<li>Payload:<ul>
 <li>No payload needed</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <h3 id="setprevalue">setPreValue</h3>
 <p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
-</li>
+<ul>
 <li>
 <p>Payload:</p>
 <ul>
@@ -282,7 +284,7 @@
 </li>
 <li>
 <p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></p>
-<ul>
+</li>
 <li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
 <li><code>value=</code> provide yna negative number</li>
 </ul>
