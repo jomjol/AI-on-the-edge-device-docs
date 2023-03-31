@@ -21,3 +21,4 @@ markdown_extensions:
   - pymdownx.emoji: # Emoji support
       emoji_generator: !!python/name:pymdownx.emoji.to_alt
   - markdown.extensions.admonition
+  - def_list
