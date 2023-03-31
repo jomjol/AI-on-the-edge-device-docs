@@ -8,37 +8,33 @@ Note: For more detailed information to the REST handler, have a look to the code
 ## Control
 * ### flow_start
   Trigger a flow start (if not running)
+    + Payload:
+      - No payload needed
   
  
 * ### setPreValue
   Set the last valid value (previous value) to given value or the actual RAW value.
-  
-    Payload:
-
-    1. Set to given value (value >= 0), e.g. `/setPreValue?numbers=main&value=1234.5678`
+   + Payload:
+     - Set to given value (value >= 0), e.g. `/setPreValue?numbers=main&value=1234.5678`  
+       * `numbers=` Provide name of number sequence, e.g. main
+       * `value=` provide the value to be set
     
-       -> `numbers=` Provide name of number sequence, e.g. main
-       
-       -> `value=` provide the value to be set
-    
-    2. Set to actual RAW value (value < 0, a valid RAW value is mandatory), e.g. `/setPreValue?numbers=main&value=-1`
-
-       -> `numbers=` Provide name of number sequence, e.g. main
-       
-       -> `value=` provide yna negative number
+     - Set to actual RAW value (value < 0, a valid RAW value is mandatory), e.g. `/setPreValue?numbers=main&value=-1`
+        * `numbers=` Provide name of number sequence, e.g. main
+        * `value=` provide yna negative number
 
 
 * ### GPIO
-  - Control a GPIO output
-    - The `GPIO` entrypoint also support parameters:
-      - `/GPIO?GPIO={PinNumber}&Status=high`
-      - `/GPIO?GPIO={PinNumber}&Status=low`
-    - Example: `/GPIO?GPIO=12&Status=high`
+   - Control a GPIO output
+     - The `GPIO` entrypoint also support parameters:
+       - `/GPIO?GPIO={PinNumber}&Status=high`
+       - `/GPIO?GPIO={PinNumber}&Status=low`
+     - Example: `/GPIO?GPIO=12&Status=high`
 
-  - Read a GPIO input 
-    - The `GPIO` entrypoint also support parameters:
-      - `/GPIO?GPIO={PinNumber}`
-    - Example: `/GPIO?GPIO=12`
+   - Read a GPIO input 
+     - The `GPIO` entrypoint also support parameters:
+       - `/GPIO?GPIO={PinNumber}`
+     - Example: `/GPIO?GPIO=12`
 
 * ### ota
 
