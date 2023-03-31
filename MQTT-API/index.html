@@ -350,11 +350,8 @@
 <ul>
 <li>
 <h4 id="ctrlflow_start">ctrl/flow_start</h4>
-<p>Trigger a flow start by publishing to this topic</p>
-</li>
-<li>
-<p>Payload:</p>
-<ul>
+  Trigger a flow start by publishing to this topic<ul>
+<li>Payload:</li>
 <li>any character</li>
 <li>length &gt; 0</li>
 </ul>
@@ -362,11 +359,11 @@
 <li>
 <h4 id="ctrlset_prevalue">ctrl/set_prevalue</h4>
 <p>Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.</p>
-</li>
-<li>
-<p>Payload:</p>
 <ul>
-<li>Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code></li>
+<li>Payload:</li>
+<li>
+<p>Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code></p>
+<ul>
 <li>"numbersname": Provide name of number sequence, e.g. <code>"main"</code>  </li>
 <li>
 <p>"value": provide the value to be set</p>
@@ -376,6 +373,8 @@
 </li>
 <li>"numbersname": Provide name of number sequence, e.g. <code>"main"</code>  </li>
 <li>"value": Provide any negative number</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
