@@ -89,13 +89,13 @@ The following parameters have to be defined:
   Payload:
     1. Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
   
-       1. "numbersname": Provide name of number sequence, e.g. `"main"`  
-       2. "value": provide the value to be set
+       -> "numbersname": Provide name of number sequence, e.g. `"main"`  
+       -> "value": provide the value to be set
      
     2. Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
   
-       1. "numbersname": Provide name of number sequence, e.g. `"main"`  
-       2. "value": Provide any negative number
+       -> "numbersname": Provide name of number sequence, e.g. `"main"`  
+       -> "value": Provide any negative number
 
 * #### GPIO/GPIO{PinNumber}
   Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
