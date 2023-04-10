@@ -62,7 +62,7 @@ Here the maximum change from one to the next reading can be limited. If a false 
 1) **AbsolutChange**: Here the difference between the PreValue and the current reading is compared directly, independent how much time has passed since the last reading.
 2) **RelativeRate**:  in this case a change rate in the unit of change/minute is calculated, taking the time between the last and the current reading into account. Be careful, that with increasing time, the absolute allowed change increases.
    Example: relative rate of 0.05 m³/minute --> after 20 minutes a maximum change of 20 minutes * 0.05 m³/minute = 1 m³ is possible. That means that a false reading of 1 m³ cannot be detected false after about 20 minutes in this case
-   Assume, that there might me no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted. 
+   Assume, that there might be no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted. 
 
 ###### ``ExtendedResolution``
 
