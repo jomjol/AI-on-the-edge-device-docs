@@ -51,6 +51,7 @@ This Table is just a snapshot of chips which worked
 | AP MEMORY / **64**04L-3SQR / 11207 / 130024G|       | :x: PSRAM not accessible|
 | AP MEMORY / **64**04L-3SQR / 1120A / 130027G|       | :heavy_check_mark: 8MB              |
 | AP MEMORY / **64**04L-3SQR / 1120B / 130028G|       | :heavy_check_mark: 8MB              |
+| AP MEMORY / **64**04L-3SQR / 1120D / 130030G|       | :heavy_check_mark: 8MB              |
 | AP MEMORY / 1604M-3SQR / 0280A / 070036G|       | :x: 2MB only!  |
 | ESP PSRAM**64**H 462021 / 1B00286                |       | :heavy_check_mark:             |
 | ESP PSRAM**64**H 412021 / 1A0039G                |       | :heavy_check_mark: 8MB         |
