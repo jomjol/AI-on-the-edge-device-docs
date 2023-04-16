@@ -786,15 +786,15 @@ See <a href="../Choosing-the-Model">here</a> for details.</p>
 <p><a id=PostProcessing-NUMBER.MaxRateType></a></p>
 <h3 id="parameter-numbermaxratetype">Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
 <p>Default Value: <code>AbsoluteChange</code></p>
-<p>Defines if the <strong>Change Rate</strong> compared to the previous value is calculated as absolute change (<code>AbsoluteChange</code>) or
-as rate normalized to the interval (<code>RateChange</code> = change/minute).</p>
+<p>Defines if the <strong>Change Rate</strong> is calculated as the difference between the last two readings (<code>AbsoluteChange</code> = difference) or
+as the difference normalized to the interval (<code>RateChange</code> = difference per minute).</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-NUMBER.MaxRateValue></a></p>
 <h3 id="parameter-numbermaxratevalue">Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
-<p>Default Value: <code>0.05</code></p>
-<p>Maximum change of a reading.
-Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> it is either treated  as <code>absolute</code> or <code>relative</code>!</p>
+<p>Default Value: <code>0,05</code></p>
+<p>Maximum allowed change between two readings, if exceeded the last reading will be rejected. Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> the <code>MaxRateValue</code> is either treated as the difference between the two measurements (<code>AbsoluteChange</code> = difference) not taking the set time interval into account or as the difference normalized to the interval (<code>RateChange</code> = difference per minute).</p>
+<p>If negative rate is disallowed and no maximum rate value is set, one false high reading will lead to a period of missing measurements until the measurement reaches the previous false high reading. E.g. if the counter is at <code>600,00</code> and it's read incorrectly as<code>610,00</code>, all measurements will be skipped until the counter reaches <code>610,00</code>. Setting the MaxRateValue to <code>0,05</code> leads to a rejection of all readings with a difference <code>&gt; 0,05</code>, in this case <code>610,00</code>. The rejection also applies to correct readings with a difference <code>&gt; 0,05</code>!</p>
 <hr style="border:2px solid">
 
 <p><a id=PostProcessing-PreValueAgeStartup></a></p>
