@@ -1,5 +1,5 @@
 # Parameter `<NUMBER>.MaxRateType`
 Default Value: `AbsoluteChange`
 
-Defines if the **Change Rate** compared to the previous value is calculated as absolute change (`AbsoluteChange`) or
-as rate normalized to the interval (`RateChange` = change/minute).
+Defines if the **Change Rate** is calculated as the difference between the last two readings (`AbsoluteChange` = difference) or
+as the difference normalized to the interval (`RateChange` = difference per minute).
