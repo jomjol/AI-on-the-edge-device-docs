@@ -17,53 +17,37 @@ The following parameters have to be defined:
 ## Published topics
 
 ### Status
-`MainTopic`/{status topic}, e.g. `watermeter/status`
 
-* #### Connection
+The following overhead data are available under the main topic (i.e. `watermeter`):
 
-* #### Interval
-
-* #### MAC
-
-* #### IP
-
-* #### Hostname
-
-* #### Uptime
-
-* #### FreeMem
-
-* #### WifiRSSI
-
-* #### CPUTemp
-
-* #### Status
+Topic | Description
+-|-
+`watermeter/MAC` | The MAC address of the ESP module.
+`watermeter/IP` | The IP address of the ESP module.
+`watermeter/Hostname` | The network host name of the ESP module.
+`watermeter/Interval` | The round interval as configured during setup or in [Parameters -> Interval](https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#section-autotimer).
+`watermeter/Connection` | Network connection status.
+`watermeter/Uptime` | Seconds up since last boot.
+`watermeter/FreeMem` | Free memory in kB.
+`watermeter/wifiRSSI` | Quality of WiFi signal.
+`watermeter/CPUTemp` | Temperature of the ESP CPU in degrees celsius.
 
 ### Result
-`MainTopic`/{NumberName}/{result topic}, e.g. `watermeter/main/value`
 
-* #### Value
+The following calculation data are available under the sup-topic `main` (i.e. `watermeter/main`):
 
-* #### Raw
-
-* #### Error
-
-* #### JSON
-
-* #### Rate
-
-* #### Rate_per_time_unit
-  The time Unit gets set with the Home Assistant Discovery, e.g. `h` or `m` (minutes)
-
-* #### Rate_per_digitalization_round
-  The `interval` defines when the next round gets triggered
-
-* #### Changeabsolut
-
-* #### Timestamp
-
-* #### JSON
-  All relevant results in JSON syntax
+Topic | Description
+-|-
+`watermeter/main/error` | Informs about the flow status. On success, the value is `no error`.
+`watermeter/main/raw` | The value **before** performing [post processing](https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/section-postprocessing).
+`watermeter/main/value` | The value **after** performing [post processing](https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/section-postprocessing).
+`watermeter/main/rate` | How much flow was consumed in one minute.
+`watermeter/main/rate_per_time_unit` | How much flow was consumed in one minute. The time unit gets set with the Home Assistant Discovery, e.g. `h` (hours) or `m` (minutes).
+`watermeter/main/changeabsolut` | Difference between the previous and actual read value.
+`watermeter/main/rate_per_digitalization_round` | How much flow was consumed in one minute.
+`watermeter/main/timestamp` | Timestamp of the actual message.
+`watermeter/main/Status` | Informs about the last performed step of the watermeter (i.e. `Flow finished`).
+`watermeter/main/json` | This is a JSON formatted object containing the following values: `value`, `raw`, `pre`, `error`, `rate`, `timestamp`.
 
 ### GPIO
 `MainTopic`/{GPIO topic}, e.g. `watermeter/GPIO/GPIO12`
