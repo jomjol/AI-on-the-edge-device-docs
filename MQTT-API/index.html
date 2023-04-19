@@ -133,52 +133,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#published-topics">Published topics</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#connection">Connection</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#interval">Interval</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#mac">MAC</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#ip">IP</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#hostname">Hostname</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#uptime">Uptime</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#freemem">FreeMem</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#wifirssi">WifiRSSI</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#cputemp">CPUTemp</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#status_1">Status</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#result">Result</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#value">Value</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#raw">Raw</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#error">Error</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#json">JSON</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#rate">Rate</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#rate_per_time_unit">Rate_per_time_unit</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#rate_per_digitalization_round">Rate_per_digitalization_round</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#changeabsolut">Changeabsolut</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#timestamp">Timestamp</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#json_1">JSON</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
         <ul>
@@ -267,76 +223,105 @@
 * RetainFlag (optional)</p>
 <h2 id="published-topics">Published topics</h2>
 <h3 id="status">Status</h3>
-<p><code>MainTopic</code>/{status topic}, e.g. <code>watermeter/status</code></p>
-<ul>
-<li>
-<h4 id="connection">Connection</h4>
-</li>
-<li>
-<h4 id="interval">Interval</h4>
-</li>
-<li>
-<h4 id="mac">MAC</h4>
-</li>
-<li>
-<h4 id="ip">IP</h4>
-</li>
-<li>
-<h4 id="hostname">Hostname</h4>
-</li>
-<li>
-<h4 id="uptime">Uptime</h4>
-</li>
-<li>
-<h4 id="freemem">FreeMem</h4>
-</li>
-<li>
-<h4 id="wifirssi">WifiRSSI</h4>
-</li>
-<li>
-<h4 id="cputemp">CPUTemp</h4>
-</li>
-<li>
-<h4 id="status_1">Status</h4>
-</li>
-</ul>
+<p>The following overhead data are available under the main topic (i.e. <code>watermeter</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>watermeter/MAC</code></td>
+<td>The MAC address of the ESP module.</td>
+</tr>
+<tr>
+<td><code>watermeter/IP</code></td>
+<td>The IP address of the ESP module.</td>
+</tr>
+<tr>
+<td><code>watermeter/Hostname</code></td>
+<td>The network host name of the ESP module.</td>
+</tr>
+<tr>
+<td><code>watermeter/Interval</code></td>
+<td>The round interval as configured during setup or in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#section-autotimer">Parameters -&gt; Interval</a>.</td>
+</tr>
+<tr>
+<td><code>watermeter/Connection</code></td>
+<td>Network connection status.</td>
+</tr>
+<tr>
+<td><code>watermeter/Uptime</code></td>
+<td>Seconds up since last boot.</td>
+</tr>
+<tr>
+<td><code>watermeter/FreeMem</code></td>
+<td>Free memory in kB.</td>
+</tr>
+<tr>
+<td><code>watermeter/wifiRSSI</code></td>
+<td>Quality of WiFi signal.</td>
+</tr>
+<tr>
+<td><code>watermeter/CPUTemp</code></td>
+<td>Temperature of the ESP CPU in degrees celsius.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="result">Result</h3>
-<p><code>MainTopic</code>/{NumberName}/{result topic}, e.g. <code>watermeter/main/value</code></p>
-<ul>
-<li>
-<h4 id="value">Value</h4>
-</li>
-<li>
-<h4 id="raw">Raw</h4>
-</li>
-<li>
-<h4 id="error">Error</h4>
-</li>
-<li>
-<h4 id="json">JSON</h4>
-</li>
-<li>
-<h4 id="rate">Rate</h4>
-</li>
-<li>
-<h4 id="rate_per_time_unit">Rate_per_time_unit</h4>
-<p>The time Unit gets set with the Home Assistant Discovery, e.g. <code>h</code> or <code>m</code> (minutes)</p>
-</li>
-<li>
-<h4 id="rate_per_digitalization_round">Rate_per_digitalization_round</h4>
-<p>The <code>interval</code> defines when the next round gets triggered</p>
-</li>
-<li>
-<h4 id="changeabsolut">Changeabsolut</h4>
-</li>
-<li>
-<h4 id="timestamp">Timestamp</h4>
-</li>
-<li>
-<h4 id="json_1">JSON</h4>
-<p>All relevant results in JSON syntax</p>
-</li>
-</ul>
+<p>The following calculation data are available under the sup-topic <code>main</code> (i.e. <code>watermeter/main</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>watermeter/main/error</code></td>
+<td>Informs about the flow status. On success, the value is <code>no error</code>.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/raw</code></td>
+<td>The value <strong>before</strong> performing <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/section-postprocessing">post processing</a>.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/value</code></td>
+<td>The value <strong>after</strong> performing <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/section-postprocessing">post processing</a>.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/rate</code></td>
+<td>How much flow was consumed in one minute.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/rate_per_time_unit</code></td>
+<td>How much flow was consumed in one minute. The time unit gets set with the Home Assistant Discovery, e.g. <code>h</code> (hours) or <code>m</code> (minutes).</td>
+</tr>
+<tr>
+<td><code>watermeter/main/changeabsolut</code></td>
+<td>Difference between the previous and actual read value.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/rate_per_digitalization_round</code></td>
+<td>How much flow was consumed in one minute.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/timestamp</code></td>
+<td>Timestamp of the actual message.</td>
+</tr>
+<tr>
+<td><code>watermeter/main/Status</code></td>
+<td>Informs about the last performed step of the watermeter (i.e. <code>Flow finished</code>).</td>
+</tr>
+<tr>
+<td><code>watermeter/main/json</code></td>
+<td>This is a JSON formatted object containing the following values: <code>value</code>, <code>raw</code>, <code>pre</code>, <code>error</code>, <code>rate</code>, <code>timestamp</code>.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="gpio">GPIO</h3>
 <p><code>MainTopic</code>/{GPIO topic}, e.g. <code>watermeter/GPIO/GPIO12</code></p>
 <ul>
