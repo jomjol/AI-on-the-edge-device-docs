@@ -1,4 +1,4 @@
-# Parameter `<NUMBER>.fieldname`
+# Parameter `<NUMBER>.Field`
 Default Value: `undefined`
 
-Fieldname for InfluxDB v2 to use for saving.
+Field for InfluxDB v2 to use for saving.
