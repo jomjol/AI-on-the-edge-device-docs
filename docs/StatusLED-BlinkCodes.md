@@ -128,7 +128,7 @@ Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip
     
 A general camera initialization error occured. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
-Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.
+Recommendation: Check for proper electrical connection, whether camera model is supported and whether power supply is sufficient.
 
 ### `Camera framebuffer check failed`
 The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.
