@@ -1278,9 +1278,12 @@ It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at th
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>WIFI AP switching functionality:</p>
-<p>This parameter activates a client triggered AP switching functionality (simplified roaming).
-If (actual RSSI  + 5dBm) lower than RSSIThreshold, all WIFI channels will be scanned for configured SSID and then trying to connect to access point with better RSSI. The scan is only get initiated at the end of each round.</p>
+<p>This parameter activates a client triggered AP switching functionality (simplified roaming). 
+If actual RSSI value is lower (more negative) than <code>RSSIThreshold</code>, all WIFI channels will be scanned for configured access point SSID. If an access point is in range which has better RSSI value (less negative) than actual RSSI value + 5 dBm, the device is trying to connect to this access point with the better RSSI value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The RSSI check only gets initiated at the end of each round to avoid any disturbance of processing.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It gets automatically transferred to <code>/wlan.ini</code> on the SD-Card at next startup.</p>
