@@ -41,7 +41,7 @@ Make sure the ROIs are in the right order, matching the significance of a digit/
     The order of the ROIs defines how the individual digits are combined to the total number. The first ROI is the digit with the highest order (left side), then the second and so on. You can control the order in the selector tab and change it with the buttons `"move Next"` or `"move Previous"`.
 
 In most cases **digits** are ordered equidistantly (have the same distance between each other) and have the same size.
-Bcause of this the Web Interface keeps their sizes and distance the same.
+Because of this, the Web Interface keeps their sizes and distance the same.
 If you need individual sizes or distances, untick the settings `(4)`.
 
 In almost all cases the sizes and `y` values should be identical!
