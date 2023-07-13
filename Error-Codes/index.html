@@ -113,27 +113,15 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Reduced webinterface (error codes)</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#critical-errors">Critical Errors</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000001-psram-bad">0x00000001 PSRAM bad</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000002-heap-too-small">0x00000002 Heap too small</a>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000002-heap-too-small">0x00000002 Heap too small</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000004-cam-bad">0x00000004 Cam bad</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000008-sd-card-basic-check-failed">0x00000008 SD card basic check failed</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#non-critical-errors">Non-Critical Errors</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000100-cam-framebuffer-bad">0x00000100 Cam Framebuffer bad</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#0x00000200-ntp-failed">0x00000200 NTP failed</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#0x00000010-sd-folder-or-file-presence-check-failed">0x00000010 SD folder or file presence check failed</a>
     </li>
     </ul>
                   </li>
@@ -201,7 +189,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="reduced-webinterface-error-indication-and-tracing">Reduced webinterface (error indication and tracing)</h1>
+                <p># Reduced webinterface (error indication and tracing)</p>
 <p>Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.</p>
 <p>The error code(s) get printed with specific error codes. This page lists the possible error codes, their meaning and possible solutions.</p>
 <p>Note: Here the error codes are defined in source code: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/Helper.h">error codes</a>.</p>
@@ -263,7 +251,7 @@ To have early indication that SD card is potentially ready for operation, some f
 <p>The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.</p>
-<p>This might also be caused vy a corrupred SD-Card, see https://github.com/jomjol/AI-on-the-edge-device/discussions/2390#discussioncomment-6430819</p>
+<p>This might also be caused by a corrupred SD-Card, see <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/2390#discussioncomment-6430819">CAM is not working anymore" on init #2390</a></p>
 <h3 id="0x00000200-ntp-failed"><code>0x00000200</code> NTP failed</h3>
 <p>The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.</p>
               
