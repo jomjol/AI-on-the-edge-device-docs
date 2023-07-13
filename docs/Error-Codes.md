@@ -1,4 +1,4 @@
-# Reduced webinterface (error indication and tracing)
+ # Reduced webinterface (error indication and tracing)
 
 Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.
 
@@ -76,7 +76,7 @@ The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.
 
-This might also be caused vy a corrupred SD-Card, see https://github.com/jomjol/AI-on-the-edge-device/discussions/2390#discussioncomment-6430819
+This might also be caused by a corrupred SD-Card, see [CAM is not working anymore" on init #2390](https://github.com/jomjol/AI-on-the-edge-device/discussions/2390#discussioncomment-6430819)
 
 ### `0x00000200` NTP failed
 The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.
