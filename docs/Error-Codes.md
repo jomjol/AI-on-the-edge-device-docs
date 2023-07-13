@@ -76,5 +76,7 @@ The firmware was unable to initialize the Camera Framebuffer.
 The firmware will continue to work, but other consequential error might arise.
 A reboot of the device might help.
 
+This might also be caused vy a corrupred SD-Card, see https://github.com/jomjol/AI-on-the-edge-device/discussions/2390#discussioncomment-6430819
+
 ### `0x00000200` NTP failed
 The firmware failed to get the world time from an NTP server. The firmware will continue to work, but has a wrong time.
