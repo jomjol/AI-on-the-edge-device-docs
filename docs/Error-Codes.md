@@ -63,8 +63,9 @@ The following folders / files get checked during boot sequence:
  * /sdcard/html/ota_page.html
  * /sdcard/html/log.html
  * /sdcard/html/common.js
- * /sdcard/html/gethost.js
  * /sdcard/html/version.txt
+
+Note: This list might be outdated, see the source code for the latest implementation: [SDCardCheckRW()](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/sdcard_check.cpp#L14)
 
 Recommendation: Check logs and / or redo a Over-The-Air Update (OTA Update) to ensure proper SD card structure
 
