@@ -8,7 +8,7 @@
     <title>Installation - AI on the Edge Device</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,12 +17,11 @@
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Installation/";
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -211,7 +210,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Getting Started &raquo;</li>
-      <li>Installation</li>
+      <li class="breadcrumb-item active">Installation</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Installation.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -284,21 +283,21 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 <thead>
 <tr>
 <th>Filename</th>
-<th align="right">Offset</th>
+<th style="text-align: right;">Offset</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>bootloader.bin</td>
-<td align="right">0x1000</td>
+<td style="text-align: right;">0x1000</td>
 </tr>
 <tr>
 <td>partitions.bin</td>
-<td align="right">0x8000</td>
+<td style="text-align: right;">0x8000</td>
 </tr>
 <tr>
 <td>firmware.bin</td>
-<td align="right">0x10000</td>
+<td style="text-align: right;">0x10000</td>
 </tr>
 </tbody>
 </table>
@@ -430,14 +429,15 @@ After power on the connection status is indicated by 3x blinking of the red on b
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
