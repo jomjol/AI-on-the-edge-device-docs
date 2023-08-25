@@ -17,7 +17,7 @@ In order to incorporate new digits a training set of images is required. The tra
 
 ![](img/enable_log_image.jpg)
 
-Now be patient! You have to wait until it has collected an image of each digit of every type. They wil lbe placed on the SD card in the folder `/log/digit/` resp. `/log/analog/`.
+Now be patient! You have to wait until it has collected an image of each digit of every type. They will be placed on the SD card in the folder `/log/digit/` resp. `/log/analog/`.
 
 After some days, there will be a lot of images, many of them very similar. Because of this, it is important to select only a subset of them for the model training.
 
