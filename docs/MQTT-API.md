@@ -52,8 +52,8 @@ Topic | Description
 ### GPIO
 `MainTopic`/{GPIO topic}, e.g. `watermeter/GPIO/GPIO12`
 
-* #### GPIO/GPIO{PinNumber}
-  Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
+#### GPIO/GPIO{PinNumber}
+Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
 
 
 ## Subscribed topics
@@ -61,25 +61,25 @@ Topic | Description
 
 ### Control
 
-* #### ctrl/flow_start
-  Trigger a flow start by publishing to this topic 
-    + Payload:
-       - any character, length > 0
+#### ctrl/flow_start
+Trigger a flow start by publishing to this topic.
+  + Payload:
+   - any character, length > 0
 
-* #### ctrl/set_prevalue
-  
-  !!! Note
-      This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0)!
- 
-  Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
-    + Payload:
-       - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
-           * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
-           * `"value":` provide the value to be set
-            
-       - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
-           * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
-           * `"value":` Provide any negative number
+#### ctrl/set_prevalue
 
-* #### GPIO/GPIO{PinNumber}
-  Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
+!!! Note
+    This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0).
+
+Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
+  + Payload:
+      - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
+          * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
+          * `"value":` provide the value to be set
+          
+      - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
+          * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
+          * `"value":` Provide any negative number
+
+#### GPIO/GPIO{PinNumber}
+Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
