@@ -23,14 +23,13 @@ There are two **types of neural networks**:
 
 No setting of the type in the firmware is necessary. The type can detect by the output structure automatically.
 
-**:bangbang: Attention:**
-
-* It is very important to choose the right network type (digits or analog pointers). 
-  Technically a wrong network will work and create output, but that would be totally arbitrary
-*  Not all type of pointers are trained in all networks.
-  * For the 11 classes digits network there many different types of digits trained. The reason is, that you 1) only need 20-30 training images and 2) the data collection is ongoing much longer
-  * For the continuous and 100 classes network especially for the digits, there are only a few types of digits trained up to now
-* Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). 
+!!! Warning
+    * It is very important to choose the right network type (digits or analog pointers). 
+      Technically a wrong network will work and create output, but that would be totally arbitrary
+    *  Not all type of pointers are trained in all networks.
+      * For the 11 classes digits network there many different types of digits trained. The reason is, that you 1) only need 20-30 training images and 2) the data collection is ongoing much longer
+      * For the continuous and 100 classes network especially for the digits, there are only a few types of digits trained up to now
+    * Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). 
 
 
 ## Naming convention
@@ -109,8 +108,6 @@ The digit type is a classical classification network, with 11 classes representi
 | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
 | ![](img/dig-class11/examp-dig1.jpg) | ![](img/dig-class11/examp-dig2.jpg) | ![](img/dig-class11/examp-dig3.jpg) | ![](img/dig-class11/examp-dig4.jpg) | ![](img/dig-class11/examp-dig13.jpg) | ![](img/dig-class11/examp-dig12.jpg) | ![](img/dig-class11/examp-dig9.jpg) |
 | ![](img/dig-class11/examp-dig5.jpg) | ![](img/dig-class11/examp-dig6.jpg) | ![](img/dig-class11/examp-dig7.jpg) | ![](img/dig-class11/examp-dig8.jpg) | ![](img/dig-class11/examp-dig11.jpg) | ![](img/dig-class11/examp-dig10.jpg) |  |
-|                                        |                                        |                                        |  |  |  |  |
-
 
 #### Training data needs
 
@@ -142,8 +139,7 @@ This type of network tries to overcome the problem, that there are intermediate 
 
 |                                    |                                                              |                                                              |      |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [[img/dig-cont/dig-cont_1.jpg) | [[img/dig-cont/dig-cont_2a.jpg)  [[img/dig-cont/dig-cont_2b.jpg) | [[img/dig-cont/dig-cont_3a.jpg)  [[img/dig-cont/dig-cont_3b.jpg) [[img/dig-cont/dig-cont_3c.jpg) |      |
-|                                    |                                                              |                                                              |      |
+| ![](img/dig-cont/dig-cont_1.jpg) | ![](img/dig-cont/dig-cont_2a.jpg)  ![](img/dig-cont/dig-cont_2b.jpg) | ![](img/dig-cont/dig-cont_3a.jpg)  ![](img/dig-cont/dig-cont_3b.jpg) ![](img/dig-cont/dig-cont_3c.jpg) |      |
 
 
 

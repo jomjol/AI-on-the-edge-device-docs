@@ -23,7 +23,8 @@ For first time flashing the firmware a USB -> UART connector is needed. Later fi
 ### Power supply
 For power supply a 5V source is needed. Most easily this can be done via a USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large electrolytic capacitor like a 2200uF between ground and VCC.
 
-**:bangbang: Attention:** in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.
+!!! Warning
+    In several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.
 
 ### Housing
 A small 3D-printable example for a very small case can be found in Thingiverse here: [https://www.thingiverse.com/thing:4571627](https://www.thingiverse.com/thing:4571627)
@@ -31,7 +32,8 @@ A small 3D-printable example for a very small case can be found in Thingiverse h
 ![](img/main.jpg){: style="width:200px"}
 ![](img/size.png){: style="width:200px"}
 
-**:bangbang: Attention**: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
+!!! Warning
+    The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
 
 ![](img/focus_adjustment.jpg){: style="width:200px"}
 
@@ -75,7 +77,8 @@ Get the [Flash Download Tool](https://www.espressif.com/en/support/download/othe
 
 Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. 
 
-:bangbang: **Attention**: if you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.
+!!! Warning
+    If you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.
 
 But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:
 
@@ -133,7 +136,8 @@ This initial setup needs only to be done **once** as further updates (Firmware a
     - Set the corresponding SSID and password
     - The other parameters are optional
 
-  **Note:** The device provides a File Server which can be used to show, edit or delete the files on the SD card. For security reasons, the `wlan.ini` file is excluded from this and is hidden from external access to protect the password.
+  !!! Note
+      The device provides a File Server which can be used to show, edit or delete the files on the SD card. For security reasons, the `wlan.ini` file is excluded from this and is hidden from external access to protect the password.
 
 After this, you can insert the SD card into the ESP32 board and start it.
 
@@ -163,12 +167,12 @@ If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi A
 
     Enter your SSID and password.
 
-    **Note:** Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.
+    !!! Note
+        Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.
 
-    **:bangbang: Attention:**
-
-    - Carefully check your wifi settings. To change them later on, you need to take out the SD card and edit the `wlan.ini` manually (or delete it and start again).
-    - The information is transferred without encryption!
+    !!! Warning   
+        - Carefully check your wifi settings. To change them later on, you need to take out the SD card and edit the `wlan.ini` manually (or delete it and start again).
+        - The information is transferred without encryption!
 
     Finish the step by pushing `Write wlan.ini`
 
@@ -179,8 +183,8 @@ If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi A
     ![](img/setup-reboot.png)
 
 
-    **:bangbang: Warning:**
-    It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.
+    !!! Warning
+        It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.
 
 
 

@@ -8,9 +8,6 @@ There are 3 ways to get the data into your Home Assistant:
 The first one is the easier way if you already have MQTT in use.
 
 ## Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)
-
-:bangbang: This feature will be available with the next release!
-
 Starting with Version `>12.0.1`, AI-on-the-edge-devices support Home Assistant Discovery.
 
  1. Check [here](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) to learn more about it and how to enable it in Homeassistant.

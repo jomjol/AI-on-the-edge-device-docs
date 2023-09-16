@@ -63,7 +63,9 @@ Depending on device configuration (`Settings` --> `Configuration` --> section `G
 
 #### ctrl/flow_start
 Trigger a flow start by publishing to this topic.
-  + Payload:
+
+__Payload:__
+
    - any character, length > 0
 
 #### ctrl/set_prevalue
@@ -72,14 +74,16 @@ Trigger a flow start by publishing to this topic.
     This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0).
 
 Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
-  + Payload:
-      - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
-          * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
-          * `"value":` provide the value to be set
-          
-      - Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
-          * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
-          * `"value":` Provide any negative number
+
+__Payload:__
+
+- Set to given value (value >= 0): `{"numbersname": "<NUMBERSNAME>", "value": <VALUE>}`
+    * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
+    * `"value":` provide the value to be set, eg. `12345.67890`
+    
+- Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "<NUMBERSNAME>", "value": -1}`
+    * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
+    * `"value":` Provide any negative number
 
 #### GPIO/GPIO{PinNumber}
 Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)

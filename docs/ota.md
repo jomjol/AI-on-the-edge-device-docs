@@ -23,7 +23,8 @@ Go to the menu `System --> OTA Update` and follow the instructions there. After 
 ### Update from version older than `v12.0.0`
 If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the `config.ini`, that are taken care of in this version.
 
-:bangbang: **Make sure to read the instructions below carefully!**
+!!! Warning
+    Make sure to read the instructions below carefully!
 
 1.  Backup your configuration (use the `System -> Backup/Restore` page)!
 
@@ -41,7 +42,8 @@ If you update from an version older than 12.0.1, you should firstly update to ve
 
 7.  Make sure it starts to do the digitalization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.
 
-:bangbang: **If the system is working now without any issues, please open the configuration editor once and save the `config.ini`. This will update the file to the newest content**:bangbang:
+!!! note
+    If the system is working now without any issues, please open the configuration editor once and save the `config.ini`. This will update the file to the newest content.
 
 Now you can safely update to the newest version.
 
