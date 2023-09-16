@@ -235,12 +235,18 @@ How ever since the hardware is cheap and coming from China, you unluckily could 
 <p>For first time flashing the firmware a USB -&gt; UART connector is needed. Later firmware upgrades than can be flashed via OTA.</p>
 <h3 id="power-supply"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Power supply</h3>
 <p>For power supply a 5V source is needed. Most easily this can be done via a USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large electrolytic capacitor like a 2200uF between ground and VCC.</p>
-<p><strong>‼️ Attention:</strong> in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
+</div>
 <h3 id="housing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Housing</h3>
 <p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
 <p><img alt="" src="../img/main.jpg" style="width:200px">
 <img alt="" src="../img/size.png" style="width:200px"/></img></p>
-<p><strong>‼️ Attention</strong>: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
+</div>
 <p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px"/></p>
 <h3 id="wiring"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Wiring</h3>
 <p>Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.</p>
@@ -270,7 +276,10 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 <h4 id="flashing-using-the-flash-tool-from-espressif-gui"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2</span> Flashing using the Flash Tool from Espressif (GUI)</h4>
 <p>Get the <a href="https://www.espressif.com/en/support/download/other-tools">Flash Download Tool</a> from Espressif.</p>
 <p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
-<p>‼️ <strong>Attention</strong>: if you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
+</div>
 <p>But your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:</p>
 <table>
 <thead>
@@ -335,7 +344,8 @@ SD card most top directory should look like this:</p>
 </ul>
 </li>
 </ol>
-<p><strong>Note:</strong> The device provides a File Server which can be used to show, edit or delete the files on the SD card. For security reasons, the <code>wlan.ini</code> file is excluded from this and is hidden from external access to protect the password.</p>
+<p>!!! Note
+      The device provides a File Server which can be used to show, edit or delete the files on the SD card. For security reasons, the <code>wlan.ini</code> file is excluded from this and is hidden from external access to protect the password.</p>
 <p>After this, you can insert the SD card into the ESP32 board and start it.</p>
 <h3 id="remote-setup-using-the-built-in-access-point"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> Remote Setup using the built-in Access Point</h3>
 <p>On startup of the ESP32, it checks if the <code>wlan.ini</code> or the <code>config/config.ini</code> are available on the SD card.
@@ -358,20 +368,27 @@ A warning will show up if you have chosen a possible wrong file (without default
 <p>After the upload, a new page will be shown:</p>
 <p><img alt="" src="../img/setup-wlan.png"/></p>
 <p>Enter your SSID and password.</p>
-<p><strong>Note:</strong> Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.</p>
-<p><strong>‼️ Attention:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <ul>
 <li>Carefully check your wifi settings. To change them later on, you need to take out the SD card and edit the <code>wlan.ini</code> manually (or delete it and start again).</li>
 <li>The information is transferred without encryption!</li>
 </ul>
+</div>
 <p>Finish the step by pushing <code>Write wlan.ini</code></p>
 </li>
 <li>
 <p>Reboot</p>
 <p>The final step is the reboot:</p>
 <p><img alt="" src="../img/setup-reboot.png"/></p>
-<p><strong>‼️ Warning:</strong>
-It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.</p>
+</div>
 </li>
 </ol>
 <h2 id="4-initial-startup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> 4. Initial Startup</h2>
