@@ -323,42 +323,31 @@
 </table>
 <h3 id="gpio">GPIO</h3>
 <p><code>MainTopic</code>/{GPIO topic}, e.g. <code>watermeter/GPIO/GPIO12</code></p>
-<ul>
-<li>
 <h4 id="gpiogpiopinnumber">GPIO/GPIO{PinNumber}</h4>
-  Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</li>
-</ul>
+<p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</p>
 <h2 id="subscribed-topics">Subscribed topics</h2>
 <p><code>MainTopic</code>/{subscribed topic}, e.g. <code>watermeter/ctrl/flow_start</code></p>
 <h3 id="control">Control</h3>
-<ul>
-<li>
 <h4 id="ctrlflow_start">ctrl/flow_start</h4>
-  Trigger a flow start by publishing to this topic <ul>
-<li>Payload:</li>
-<li>any character, length &gt; 0</li>
-</ul>
-</li>
-<li>
+<p>Trigger a flow start by publishing to this topic.
+  + Payload:
+   - any character, length &gt; 0</p>
 <h4 id="ctrlset_prevalue">ctrl/set_prevalue</h4>
-</li>
-</ul>
-<p>!!! Note
-      This feature is available since version <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0">15.2.0</a>!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is available since version <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0">15.2.0</a>.</p>
+</div>
 <p>Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
-    + Payload:
-       - Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code>
-           * <code>"numbersname":</code>Provide name of number sequence, e.g. <code>"main"</code><br />
-           * <code>"value":</code> provide the value to be set</p>
-<pre><code>   - Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
-       * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
-       * `"value":` Provide any negative number
+  + Payload:
+      - Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code>
+          * <code>"numbersname":</code>Provide name of number sequence, e.g. <code>"main"</code><br />
+          * <code>"value":</code> provide the value to be set</p>
+<pre><code>  - Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
+      * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
+      * `"value":` Provide any negative number
 </code></pre>
-<ul>
-<li>
 <h4 id="gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</h4>
-  Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</li>
-</ul>
+<p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</p>
               
             </div>
           </div><footer>
