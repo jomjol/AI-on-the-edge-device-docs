@@ -15,15 +15,15 @@ All parameters are documented on the [Parameters](../Parameters) page and as too
 Some parameters are treated as **Expert Parameters** and are hidden by default.
 Tick the checkbox in the top left corner to enable them:
 
-![](../img/expert-parameters.png)  
+![](img/expert-parameters.png)  
 
 The **Expert Parameters** then will be shown with a red background:
-![](../img/expert-parameters2.png)  
+![](img/expert-parameters2.png)  
 
 ## Manual Editing of the Config File
 Even more configuration parameters can be edited manually in the `config.ini`:
 
-![](../img/manual-config-editing.png)  
+![](img/manual-config-editing.png)  
 
 To edit the `config.ini` file directly, click on the `Edit Config.ini directly` button.
 
