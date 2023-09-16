@@ -67,6 +67,7 @@ Topic | Description
        - any character, length > 0
 
 * #### ctrl/set_prevalue
+  
   !!! Note
       This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0)!
  
