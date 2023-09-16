@@ -15,7 +15,7 @@ Here this edge computing is brought into a practice-oriented example, where a AI
 - Web surface to administrate and control
 - OTA-Interface to update directly through the web interface
 - Full integration into Home Assistant
-- Support for Influx DB 1
+- Support for Influx DB 1 and 2
 - MQTT
 - REST API
 
