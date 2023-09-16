@@ -1,212 +1,205 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/MQTT-API/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>MQTT API - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/MQTT-API/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>MQTT API - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "MQTT API";
         var mkdocs_page_input_path = "MQTT-API.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/MQTT-API/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">MQTT API</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#published-topics">Published topics</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#result">Result</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber">GPIO/GPIO{PinNumber}</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#subscribed-topics">Subscribed topics</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#control">Control</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#ctrlflow_start">ctrl/flow_start</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#ctrlset_prevalue">ctrl/set_prevalue</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>API's &raquo;</li>
-      <li class="breadcrumb-item active">MQTT API</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/MQTT-API.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="mqtt-api">MQTT API</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">MQTT API</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#published-topics">Published topics</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#result">Result</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber">GPIO/GPIO{PinNumber}</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#subscribed-topics">Subscribed topics</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#control">Control</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#ctrlflow_start">ctrl/flow_start</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ctrlset_prevalue">ctrl/set_prevalue</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>API's »</li>
+<li class="breadcrumb-item active">MQTT API</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/MQTT-API.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="mqtt-api"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> MQTT API</h1>
 <p>The device is capable to register to a MQTT broker to publish data and subscribe to specific topics.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -220,8 +213,8 @@
 * User (optional)
 * Password (optional)
 * RetainFlag (optional)</p>
-<h2 id="published-topics">Published topics</h2>
-<h3 id="status">Status</h3>
+<h2 id="published-topics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Published topics</h2>
+<h3 id="status"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Status</h3>
 <p>The following overhead data are available under the main topic (i.e. <code>watermeter</code>):</p>
 <table>
 <thead>
@@ -269,7 +262,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="result">Result</h3>
+<h3 id="result"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Result</h3>
 <p>The following calculation data are available under the sup-topic <code>main</code> (i.e. <code>watermeter/main</code>):</p>
 <table>
 <thead>
@@ -321,18 +314,18 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gpio">GPIO</h3>
+<h3 id="gpio"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> GPIO</h3>
 <p><code>MainTopic</code>/{GPIO topic}, e.g. <code>watermeter/GPIO/GPIO12</code></p>
-<h4 id="gpiogpiopinnumber">GPIO/GPIO{PinNumber}</h4>
+<h4 id="gpiogpiopinnumber"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3.1</span> GPIO/GPIO{PinNumber}</h4>
 <p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</p>
-<h2 id="subscribed-topics">Subscribed topics</h2>
+<h2 id="subscribed-topics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Subscribed topics</h2>
 <p><code>MainTopic</code>/{subscribed topic}, e.g. <code>watermeter/ctrl/flow_start</code></p>
-<h3 id="control">Control</h3>
-<h4 id="ctrlflow_start">ctrl/flow_start</h4>
+<h3 id="control"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Control</h3>
+<h4 id="ctrlflow_start"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1.1</span> ctrl/flow_start</h4>
 <p>Trigger a flow start by publishing to this topic.
   + Payload:
    - any character, length &gt; 0</p>
-<h4 id="ctrlset_prevalue">ctrl/set_prevalue</h4>
+<h4 id="ctrlset_prevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1.2</span> ctrl/set_prevalue</h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This feature is available since version <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0">15.2.0</a>.</p>
@@ -340,63 +333,49 @@
 <p>Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
   + Payload:
       - Set to given value (value &gt;= 0): <code>{"numbersname": "main", "value": 12345.67890}</code>
-          * <code>"numbersname":</code>Provide name of number sequence, e.g. <code>"main"</code><br />
+          * <code>"numbersname":</code>Provide name of number sequence, e.g. <code>"main"</code><br/>
           * <code>"value":</code> provide the value to be set</p>
 <pre><code>  - Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory): `{"numbersname": "main", "value": -1}`
       * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
       * `"value":` Provide any negative number
 </code></pre>
-<h4 id="gpiogpiopinnumber_1">GPIO/GPIO{PinNumber}</h4>
+<h4 id="gpiogpiopinnumber_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1.3</span> GPIO/GPIO{PinNumber}</h4>
 <p>Depending on device configuration (<code>Settings</code> --&gt; <code>Configuration</code> --&gt; section <code>GPIO</code>)</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../REST-API/" class="btn btn-neutral float-left" title="REST API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Influx-DB/" class="btn btn-neutral float-right" title="Influx DB">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../REST-API/" title="REST API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Influx-DB/" title="Influx DB">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../REST-API/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Influx-DB/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../REST-API/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../Influx-DB/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

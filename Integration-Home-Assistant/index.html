@@ -1,202 +1,195 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Integration-Home-Assistant/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Integration into Home Assistant - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Integration-Home-Assistant/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Integration into Home Assistant - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Integration into Home Assistant";
         var mkdocs_page_input_path = "Integration-Home-Assistant.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Integration-Home-Assistant/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Integration into Home Assistant</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#using-mqtt-manually-setup-entities">Using MQTT (Manually Setup Entities)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#statistics-graph">Statistics Graph</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#influxdb-graphs">InfluxDb Graphs</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-rest">Using REST</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#photo">Photo</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Advanced &raquo;</li>
-      <li class="breadcrumb-item active">Integration into Home Assistant</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Integration-Home-Assistant.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="integration-into-home-assistant">Integration into Home Assistant</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Integration into Home Assistant</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-mqtt-manually-setup-entities">Using MQTT (Manually Setup Entities)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#statistics-graph">Statistics Graph</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#influxdb-graphs">InfluxDb Graphs</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-rest">Using REST</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#photo">Photo</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Advanced »</li>
+<li class="breadcrumb-item active">Integration into Home Assistant</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Integration-Home-Assistant.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="integration-into-home-assistant"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Integration into Home Assistant</h1>
 <p>There are 3 ways to get the data into your Home Assistant:</p>
 <ol>
 <li>Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</li>
@@ -204,28 +197,28 @@
 <li>Using REST calls</li>
 </ol>
 <p>The first one is the easier way if you already have MQTT in use.</p>
-<h2 id="using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery">Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</h2>
+<h2 id="using-mqtt-automatically-setup-entities-using-home-assistant-mqtt-discovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)</h2>
 <p>‼️ This feature will be available with the next release!</p>
 <p>Starting with Version <code>&gt;12.0.1</code>, AI-on-the-edge-devices support Home Assistant Discovery.</p>
 <ol>
 <li>Check <a href="https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery">here</a> to learn more about it and how to enable it in Homeassistant.</li>
 <li>
 <p>You also have to enable it in the MQTT settings of your device:</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199350781-e2a59eeb-b5bb-407b-9c0d-2aafab50daab.png" /></p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199350781-e2a59eeb-b5bb-407b-9c0d-2aafab50daab.png"/></p>
 <p>Make sure to select the right Meter Type to get the right units!</p>
 </li>
 </ol>
 <p>On the next start of the device, it will send discovery topics and Home Assistant should pick them up and show them under <code>Settings &gt; Integrations &gt; MQTT</code>:</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352538-ddcc3484-39ef-44f4-a853-53286807d30b.png" /> 
-<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352565-9b0ade28-cb43-47b4-821f-7909cad41a73.png" />
-<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352619-217df627-4b87-4fa0-86a2-f5347c452fdb.png" /></p>
-<h3 id="using-mqtt-manually-setup-entities">Using MQTT (Manually Setup Entities)</h3>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352538-ddcc3484-39ef-44f4-a853-53286807d30b.png"/>
+<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352565-9b0ade28-cb43-47b4-821f-7909cad41a73.png"/>
+<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352619-217df627-4b87-4fa0-86a2-f5347c452fdb.png"/></p>
+<h3 id="using-mqtt-manually-setup-entities"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Using MQTT (Manually Setup Entities)</h3>
 <p>First make sure with an MQTT client (for example <a href="http://mqtt-explorer.com/">MQTT Explorer</a>) that MQTT works as expected and to get a list of the available topics!</p>
 <p>Then add a sensor for each property:</p>
 <pre><code class="language-yaml">mqtt:
   sensor:
-    - state_topic: &quot;wasserzaehler/main/value&quot;
-      name: &quot;Watermeter Value&quot;
+    - state_topic: "wasserzaehler/main/value"
+      name: "Watermeter Value"
       unique_id: watermeter_value
       unit_of_measurement: 'm³'
       state_class: total_increasing
@@ -235,8 +228,8 @@
       payload_available: connected
       payload_not_available: connection lost
 
-    - state_topic: &quot;wasserzaehler/main/rate&quot;
-      name: &quot;Watermeter Rate&quot;
+    - state_topic: "wasserzaehler/main/rate"
+      name: "Watermeter Rate"
       unique_id: watermeter_rate
       unit_of_measurement: 'm³/min'
       state_class: measurement
@@ -246,22 +239,22 @@
       payload_available: connected
       payload_not_available: connection lost
 
-    - state_topic: &quot;wasserzaehler/main/error&quot;
-      name: &quot;Watermeter Error&quot;
+    - state_topic: "wasserzaehler/main/error"
+      name: "Watermeter Error"
       unique_id: watermeter_error
-      icon: &quot;mdi:water-alert&quot;
+      icon: "mdi:water-alert"
       availability_topic: wasserzaehler/connection
       payload_available: connected
       payload_not_available: connection lost    
 
-    - state_topic: &quot;wasserzaehler/uptime&quot;
-      name: &quot;Watermeter Uptime&quot;
+    - state_topic: "wasserzaehler/uptime"
+      name: "Watermeter Uptime"
       unique_id: watermeter_uptime
       unit_of_measurement: 's'
       state_class: measurement
       device_class: duration
       entity_category: diagnostic
-      icon: &quot;mdi:timer-outline&quot;
+      icon: "mdi:timer-outline"
       availability_topic: wasserzaehler/connection
       payload_available: connected
       payload_not_available: connection lost
@@ -283,12 +276,12 @@
 <p>If you want to convert the <code>m³</code> to <code>l</code>, use a template sensor:</p>
 <pre><code class="language-yaml">template:
   - sensor:
-    - name: &quot;Watermeter in l&quot;
+    - name: "Watermeter in l"
       unique_id: watermeter_in_l
-      icon: &quot;mdi:gauge&quot;
-      state: &quot;{{ states('sensor.watermeter_value')|float(default=0) * 1000 }}&quot; # Convert 1 m3 =&gt; 1000 l
+      icon: "mdi:gauge"
+      state: "{{ states('sensor.watermeter_value')|float(default=0) * 1000 }}" # Convert 1 m3 =&gt; 1000 l
       unit_of_measurement: l
-      availability: &quot;{{ states('sensor.watermeter_value') not in ['unknown', 'unavailable', 'none'] }}&quot;
+      availability: "{{ states('sensor.watermeter_value') not in ['unknown', 'unavailable', 'none'] }}"
 </code></pre>
 <p>If you you want to have the consumption per day, you can use an <a href="https://www.home-assistant.io/integrations/utility_meter/">Utility Meter</a>.
 it is a helper and can be used to reset the total increasing values once a day</p>
@@ -302,39 +295,39 @@ it is a helper and can be used to reset the total increasing values once a day</
     cycle: daily
 </code></pre>
 <p>Note that you also can add it using the UI.</p>
-<h3 id="examples">Examples</h3>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472069-4135736e-e63a-4afb-8009-5b97aa5c9ac5.png" /></p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472091-1484aac4-ddc2-48ba-896c-28370963fc2d.png" /></p>
-<h3 id="statistics-graph">Statistics Graph</h3>
+<h3 id="examples"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Examples</h3>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472069-4135736e-e63a-4afb-8009-5b97aa5c9ac5.png"/></p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472091-1484aac4-ddc2-48ba-896c-28370963fc2d.png"/></p>
+<h3 id="statistics-graph"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Statistics Graph</h3>
 <p>Creating Statistics Graphs (e.g. usage per day) is easy using the <a href="https://www.home-assistant.io/home-energy-management/">Energy Dashboard</a>:
-<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png" /></p>
+<img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png"/></p>
 <p>Note that there seems to be a bug in the graph, see <a href="https://github.com/home-assistant/frontend/issues/13995">https://github.com/home-assistant/frontend/issues/13995</a>!</p>
-<h3 id="influxdb-graphs">InfluxDb Graphs</h3>
+<h3 id="influxdb-graphs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> InfluxDb Graphs</h3>
 <p>See also <a href="../Influx-DB">Influx-DB</a>.</p>
 <p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:</p>
-<pre><code>from(bucket: &quot;HomeAssistant&quot;)
+<pre><code>from(bucket: "HomeAssistant")
 |&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
-  |&gt; filter(fn: (r) =&gt; r[&quot;entity_id&quot;] == &quot;wasserverbrauch_tag&quot;)
-  |&gt; filter(fn: (r) =&gt; r[&quot;_field&quot;] == &quot;value&quot;)
+  |&gt; filter(fn: (r) =&gt; r["entity_id"] == "wasserverbrauch_tag")
+  |&gt; filter(fn: (r) =&gt; r["_field"] == "value")
   |&gt; timeShift(duration: -1d)
   |&gt; aggregateWindow(every: 1d, fn: max, createEmpty: false)
-  |&gt; yield(name: &quot;mean&quot;)
+  |&gt; yield(name: "mean")
 </code></pre>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193473347-c81fc301-c52f-4af0-9fcb-56fab12cacac.png" /></p>
-<h2 id="using-rest">Using REST</h2>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193473347-c81fc301-c52f-4af0-9fcb-56fab12cacac.png"/></p>
+<h2 id="using-rest"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Using REST</h2>
 <p>When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.</p>
 <p>See <a href="../REST-API">REST API</a> for a list of available URLs.</p>
 <p>The most practical one is the <code>json</code> entrypoint which provides the most relevant data JSON formatted:
 <code>http://&lt;IP&gt;/json</code>
 This would return:</p>
 <pre><code class="language-JSON">{
-&quot;main&quot;:
+"main":
   {
-    &quot;value&quot;: &quot;512.3020&quot;,
-    &quot;raw&quot;: &quot;0512.3020&quot;,
-    &quot;error&quot;: &quot;no error&quot;,
-    &quot;rate&quot;: 0.000000,
-    &quot;timestamp&quot;: &quot;2022-10-02T20:32:06&quot;
+    "value": "512.3020",
+    "raw": "0512.3020",
+    "error": "no error",
+    "rate": 0.000000,
+    "timestamp": "2022-10-02T20:32:06"
    [..]
   }
 }
@@ -343,7 +336,7 @@ This would return:</p>
 <pre><code class="language-yaml">sensor:
 
 - platform: rest
-  name: &quot;Gasmeter JSON&quot; 
+  name: "Gasmeter JSON" 
   resource: http://&lt;IP&gt;/json
   json_attributes:
     - main
@@ -354,12 +347,12 @@ This would return:</p>
 
 template:
   sensor:
-  - name: &quot;Gasmeter Value from JSON&quot;
+  - name: "Gasmeter Value from JSON"
     unique_id: gas_meter_value_from_json
-    state: &quot;{{ state_attr('sensor.gasmeter_json','main')['value'] }}&quot;
+    state: "{{ state_attr('sensor.gasmeter_json','main')['value'] }}"
     unit_of_measurement: 'm³'
 
-  - name: &quot;Watermeter Value from JSON&quot;
+  - name: "Watermeter Value from JSON"
     unique_id: water_meter_value_from_json
      state: &gt;-
             {{ state_attr('sensor.watermeter_json','main')['value'] | float }}
@@ -381,59 +374,45 @@ template:
   icon: mdi:gauge
   scan_interval : 120</code></p>
 <p>See also https://community.home-assistant.io/t/rest-sensor-nested-json/243420/9</p>
-<h4 id="photo">Photo</h4>
+<h4 id="photo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.0.1</span> Photo</h4>
 <p>REST can also be used to show the photo of the last round:</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193546075-b247942f-9106-47a4-a64b-42ff96dd9078.png" /></p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193546075-b247942f-9106-47a4-a64b-42ff96dd9078.png"/></p>
 <p>To access it, use <code>http://&lt;IP&gt;/img_tmp/alg_roi.jpg</code> resp <code>http://&lt;IP&gt;/img_tmp/raw.jpg</code>.</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Parameters/" class="btn btn-neutral float-left" title="Parameters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../External-LED/" class="btn btn-neutral float-right" title="External LED">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Parameters/" title="Parameters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../External-LED/" title="External LED">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Parameters/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../External-LED/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Parameters/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../External-LED/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

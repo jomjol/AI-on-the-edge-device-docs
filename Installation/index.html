@@ -1,226 +1,219 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installation - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Installation - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Installation";
         var mkdocs_page_input_path = "Installation.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Installation/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-hardware">1. Hardware</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#esp32-cam">ESP32-CAM</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usb-uart-interface">USB-&gt;UART interface</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#power-supply">Power supply</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#housing">Housing</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#wiring">Wiring</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-firmware">2. Firmware</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#web-installer">Web Installer</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#manual-flashing">Manual Flashing</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#files">Files</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-flash-tool-from-espressif-gui">Flashing using the Flash Tool from Espressif (GUI)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-python-based-esptool-console">Flashing using the Python based esptool (Console)</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-sd-card">3. SD Card</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#manual-setup-with-an-sd-card-reader-on-a-pc">Manual Setup with an SD Card Reader on a PC</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remote-setup-using-the-built-in-access-point">Remote Setup using the built-in Access Point</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-initial-startup">4. Initial Startup</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Getting Started &raquo;</li>
-      <li class="breadcrumb-item active">Installation</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Installation.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="installation">Installation</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#1-hardware">1. Hardware</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#esp32-cam">ESP32-CAM</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#usb-uart-interface">USB-&gt;UART interface</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#power-supply">Power supply</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#housing">Housing</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wiring">Wiring</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#2-firmware">2. Firmware</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#web-installer">Web Installer</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-flashing">Manual Flashing</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#files">Files</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-flash-tool-from-espressif-gui">Flashing using the Flash Tool from Espressif (GUI)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#flashing-using-the-python-based-esptool-console">Flashing using the Python based esptool (Console)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#3-sd-card">3. SD Card</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-setup-with-an-sd-card-reader-on-a-pc">Manual Setup with an SD Card Reader on a PC</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-setup-using-the-built-in-access-point">Remote Setup using the built-in Access Point</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#4-initial-startup">4. Initial Startup</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Getting Started »</li>
+<li class="breadcrumb-item active">Installation</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Installation.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Installation</h1>
 <p>The installation requires multiple steps:</p>
 <ol>
 <li>Get the right hardware and wire it up</li>
@@ -229,8 +222,8 @@
 <li>Start it</li>
 </ol>
 <p>For point 2 and 3 we provide multiple ways to do it. Pick the one that looks the easiest for you!</p>
-<h2 id="1-hardware">1. Hardware</h2>
-<h3 id="esp32-cam">ESP32-CAM</h3>
+<h2 id="1-hardware"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> 1. Hardware</h2>
+<h3 id="esp32-cam"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> ESP32-CAM</h3>
 <ul>
 <li>OV2640 camera module</li>
 <li>Micro SD card slot </li>
@@ -238,31 +231,31 @@
 </ul>
 <p>It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
 How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunctioning device. See <a href="../Hardware-Compatibility">Hardware Compatibility</a> for further advice! </p>
-<h3 id="usb-uart-interface">USB-&gt;UART interface</h3>
+<h3 id="usb-uart-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> USB-&gt;UART interface</h3>
 <p>For first time flashing the firmware a USB -&gt; UART connector is needed. Later firmware upgrades than can be flashed via OTA.</p>
-<h3 id="power-supply">Power supply</h3>
+<h3 id="power-supply"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Power supply</h3>
 <p>For power supply a 5V source is needed. Most easily this can be done via a USB power supply. The power supply should support minimum 500mA. For buffering current peaks some users reported to use a large electrolytic capacitor like a 2200uF between ground and VCC.</p>
 <p><strong>‼️ Attention:</strong> in several internet forums there are problems reported, in case the ESP32-CAM is only supplied with 3.3V.</p>
-<h3 id="housing">Housing</h3>
+<h3 id="housing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Housing</h3>
 <p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
-<p><img alt="" src="../img/main.jpg" style="width:200px" />
-<img alt="" src="../img/size.png" style="width:200px" /></p>
+<p><img alt="" src="../img/main.jpg" style="width:200px">
+<img alt="" src="../img/size.png" style="width:200px"/></img></p>
 <p><strong>‼️ Attention</strong>: the focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
-<p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px" /></p>
-<h3 id="wiring">Wiring</h3>
+<p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px"/></p>
+<h3 id="wiring"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Wiring</h3>
 <p>Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.</p>
 <p>A example for wiring can be found here:</p>
-<p><img alt="" src="../img/wiring.png" /></p>
-<p><img alt="" src="../img/progammer_manual.jpg" /></p>
+<p><img alt="" src="../img/wiring.png"/></p>
+<p><img alt="" src="../img/progammer_manual.jpg"/></p>
 <p>It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described <a href="../External-LED">here</a></p>
-<h2 id="2-firmware">2. Firmware</h2>
-<h3 id="web-installer">Web Installer</h3>
+<h2 id="2-firmware"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> 2. Firmware</h2>
+<h3 id="web-installer"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Web Installer</h3>
 <p>There is a Web Installer available which will work right out of the web browser Edge and Chrome.
 You can access it with the following link: <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a></p>
 <p><strong>This is the preferred way for beginners</strong> as it also allows access to the USB Log:</p>
-<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png" /></a></p>
-<h3 id="manual-flashing">Manual Flashing</h3>
-<h4 id="files">Files</h4>
+<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png"/></a></p>
+<h3 id="manual-flashing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Manual Flashing</h3>
+<h4 id="files"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.1</span> Files</h4>
 <p>Grab the firmware from the</p>
 <ul>
 <li><a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases page</a> (Stable, tested versions), or the</li>
@@ -274,7 +267,7 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 <li>bootloader.bin</li>
 <li>firmware.bin</li>
 </ul>
-<h4 id="flashing-using-the-flash-tool-from-espressif-gui">Flashing using the Flash Tool from Espressif (GUI)</h4>
+<h4 id="flashing-using-the-flash-tool-from-espressif-gui"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2</span> Flashing using the Flash Tool from Espressif (GUI)</h4>
 <p>Get the <a href="https://www.espressif.com/en/support/download/other-tools">Flash Download Tool</a> from Espressif.</p>
 <p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
 <p>‼️ <strong>Attention</strong>: if you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
@@ -301,8 +294,8 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 </tr>
 </tbody>
 </table>
-<p><img alt="" src="../img/Flash_Settings.png" /></p>
-<h4 id="flashing-using-the-python-based-esptool-console">Flashing using the Python based esptool (Console)</h4>
+<p><img alt="" src="../img/Flash_Settings.png"/></p>
+<h4 id="flashing-using-the-python-based-esptool-console"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.3</span> Flashing using the Python based esptool (Console)</h4>
 <p>For this you need a python environment (e.g. Anaconda in Win10). 
 Here you need to install the esptool:</p>
 <pre><code>pip install esptool
@@ -317,12 +310,12 @@ esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmwa
 </ul>
 <p>With some Python installations this may not work and you’ll receive an error, try <code>python -m pip install esptool</code> or <code>pip3 install esptool</code>.</p>
 <p>Further recommendations can be found on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html">espressif webpage</a>.</p>
-<h2 id="3-sd-card">3. SD Card</h2>
+<h2 id="3-sd-card"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> 3. SD Card</h2>
 <p>The software expects an SD card prepared with certain directory and file structure in order to work properly.
 SD card most top directory should look like this:</p>
-<p><img alt="" src="../sd-card-content.png" />  </p>
+<p><img alt="" src="../sd-card-content.png"/> </p>
 <p>This initial setup needs only to be done <strong>once</strong> as further updates (Firmware as well as SD card content) are possible with the <a href="../ota/">Over-The-Air Update</a> mechanism.</p>
-<h4 id="notes">Notes</h4>
+<h4 id="notes"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.0.1</span> Notes</h4>
 <ul>
 <li>Due to the limited availability of GPIOs (OV2640, Flash-Light, PSRAM &amp; SD card) the communication mode to the SD card is limited to 1-line SD-Mode. It showed up, that this results in problems with very large SD-Cards (64GB, sometimes 32 GB) and some no name low cost SD-cards.</li>
 <li>There must be no partition table on the SD-card (no GPT, but only MBR for the single partition)</li>
@@ -331,7 +324,7 @@ SD card most top directory should look like this:</p>
 </ul>
 <p><strong>The ESP32 indicates problems with the SD card during startup with a fast, endless blinking.</strong>
 <strong>In this case, please try another SD card.</strong> </p>
-<h3 id="manual-setup-with-an-sd-card-reader-on-a-pc">Manual Setup with an SD Card Reader on a PC</h3>
+<h3 id="manual-setup-with-an-sd-card-reader-on-a-pc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> Manual Setup with an SD Card Reader on a PC</h3>
 <ol>
 <li>Take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
 <li>Open it and extract the <code>sd-card.zip</code>.</li>
@@ -344,26 +337,26 @@ SD card most top directory should look like this:</p>
 </ol>
 <p><strong>Note:</strong> The device provides a File Server which can be used to show, edit or delete the files on the SD card. For security reasons, the <code>wlan.ini</code> file is excluded from this and is hidden from external access to protect the password.</p>
 <p>After this, you can insert the SD card into the ESP32 board and start it.</p>
-<h3 id="remote-setup-using-the-built-in-access-point">Remote Setup using the built-in Access Point</h3>
+<h3 id="remote-setup-using-the-built-in-access-point"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> Remote Setup using the built-in Access Point</h3>
 <p>On startup of the ESP32, it checks if the <code>wlan.ini</code> or the <code>config/config.ini</code> are available on the SD card.
 If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi Access Point which can be used to add the missing <code>wlan.ini</code> or the <code>config/config.ini</code> file.</p>
 <ol>
 <li>Take the <code>AI-on-the-edge-device__remote-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
 <li>
 <p>Connect to Access Point of the device. The SSID is "AI-on-the-Edge" and you can access it without any password:</p>
-<p><img alt="" src="../img/access-point.png" /></p>
+<p><img alt="" src="../img/access-point.png"/></p>
 <p>The device has the following fixed IP: <a href="http://192.168.4.1">http://192.168.4.1</a>.</p>
 </li>
 <li>
 <p>Upload initial configuration to SD card</p>
-<p><img alt="" src="../img/setup-config.png" /></p>
+<p><img alt="" src="../img/setup-config.png"/></p>
 <p>Use the <code>select file</code> and <code>upload</code> button to start the upload.
 A warning will show up if you have chosen a possible wrong file (without default configuration).</p>
 </li>
 <li>
 <p>Store WLAN access information.</p>
 <p>After the upload, a new page will be shown:</p>
-<p><img alt="" src="../img/setup-wlan.png" /></p>
+<p><img alt="" src="../img/setup-wlan.png"/></p>
 <p>Enter your SSID and password.</p>
 <p><strong>Note:</strong> Only basic settings are supported. If you need advanced configuration (fixed ip, ...), you need to use the manual setup as documented above.</p>
 <p><strong>‼️ Attention:</strong></p>
@@ -376,12 +369,12 @@ A warning will show up if you have chosen a possible wrong file (without default
 <li>
 <p>Reboot</p>
 <p>The final step is the reboot:</p>
-<p><img alt="" src="../img/setup-reboot.png" /></p>
+<p><img alt="" src="../img/setup-reboot.png"/></p>
 <p><strong>‼️ Warning:</strong>
 It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.</p>
 </li>
 </ol>
-<h2 id="4-initial-startup">4. Initial Startup</h2>
+<h2 id="4-initial-startup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> 4. Initial Startup</h2>
 <p>After the firmware is flashed and the SD card is setup properly, you can start it.
 After power on the connection status is indicated by 3x blinking of the red on board LED.</p>
 <p>WLAN-Status indication:</p>
@@ -390,55 +383,41 @@ After power on the connection status is indicated by 3x blinking of the red on b
 <li><strong>3 x</strong> slow blinking (1 second on/off): WLAN connection established</li>
 </ul>
 <p><strong>Note:</strong> It is normal that at first one or two times a pending connection is indicated.</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../initial-setup/" class="btn btn-neutral float-right" title="Initial Setup">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href=".." title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../initial-setup/" title="Initial Setup">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../initial-setup/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href=".." style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../initial-setup/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

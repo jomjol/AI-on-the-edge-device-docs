@@ -1,187 +1,180 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Hardware Compatibility - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Hardware Compatibility - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Hardware Compatibility";
         var mkdocs_page_input_path = "Hardware-Compatibility.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Hardware-Compatibility/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware Compatibility</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general-remark">General Remark</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Getting Started &raquo;</li>
-      <li class="breadcrumb-item active">Hardware Compatibility</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Hardware-Compatibility.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="hardware-compatibility">Hardware Compatibility</h1>
-<h3 id="general-remark">General Remark</h3>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Hardware Compatibility</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#general-remark">General Remark</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Getting Started »</li>
+<li class="breadcrumb-item active">Hardware Compatibility</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Hardware-Compatibility.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="hardware-compatibility"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Hardware Compatibility</h1>
+<h3 id="general-remark"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1</span> General Remark</h3>
 <p>Although a board looks similar, it can have major differences, e.g.:</p>
 <ul>
 <li>Processor</li>
@@ -198,7 +191,7 @@
 <p>This can cause different Power Consumption, Power Requirements, compatibility issues, etc.</p>
 <p>Most manufacturers and sellers buy what's cheap today on the Asian markets. In the end, it looks like it is sometimes a trial and error approach which ESP32-CAM Module works reliably.</p>
 <p>Below you find some remarks and experiences from the community:</p>
-<h1 id="esp32-core-itself">ESP32 core itself</h1>
+<h1 id="esp32-core-itself"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> ESP32 core itself</h1>
 <table>
 <thead>
 <tr>
@@ -215,7 +208,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="psram">PSRAM</h1>
+<h1 id="psram"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> PSRAM</h1>
 <p>There seems to be a lot of "fake" chips, or maybe wrongly configured ESP32 Boards.</p>
 <p>For AP MEMORY, all "real" APS<strong>64</strong>04*3SQR chips should work.</p>
 <p>For ESP PSRAM, all "real" PSRAM<strong>64</strong>* should work.</p>
@@ -317,7 +310,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="ov2640-camera">OV2640 - Camera</h1>
+<h1 id="ov2640-camera"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> OV2640 - Camera</h1>
 <p>The experience with the camera only is based on single modules. It is well possible, that this module had a damage overall and other modules of the same type will work. Give it a try and report to me!</p>
 <table>
 <thead>
@@ -341,11 +334,11 @@
 <tr>
 <td>DC-26 / 40-V3</td>
 <td></td>
-<td>✔️ 3x<br> ❌ 1x</td>
+<td>✔️ 3x<br/> ❌ 1x</td>
 </tr>
 </tbody>
 </table>
-<h1 id="esp32-modules">ESP32 Modules</h1>
+<h1 id="esp32-modules"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> ESP32 Modules</h1>
 <table>
 <thead>
 <tr>
@@ -356,22 +349,22 @@
 </thead>
 <tbody>
 <tr>
-<td>ESP32CAM / Different versions on the market!<br>Especially the PSRAM is sometimes labeled wrong<br>(Label: 4MB, Real: only 2 MB --&gt; will not work!)</td>
+<td>ESP32CAM / Different versions on the market!<br/>Especially the PSRAM is sometimes labeled wrong<br/>(Label: 4MB, Real: only 2 MB --&gt; will not work!)</td>
 <td></td>
-<td>✔️<br />with &gt;=4 MB PSRAM!</td>
+<td>✔️<br>with &gt;=4 MB PSRAM!</br></td>
 </tr>
 <tr>
-<td>ESP32-S3-EYE<br />No Flash LED, pins different used (e.g. LCD display)</td>
+<td>ESP32-S3-EYE<br>No Flash LED, pins different used (e.g. LCD display)</br></td>
 <td></td>
 <td><strong>NOT OKAY</strong></td>
 </tr>
 </tbody>
 </table>
-<h1 id="sd-cards">SD Cards</h1>
+<h1 id="sd-cards"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> SD Cards</h1>
 <p>Due to the limited free available GPIOs (due to all the extensions needed like: camera, SD card, LED-flash, ...) the SD card is connected in 1-wire mode. There are some cards, that are compatible with the esp32cam module for unknown reasons.
 It is observed, that smaller cards (up to 4 GB) tend to be more stable and larger cards have more problems. But quite some exceptions in the forums (4 GB cards not working, 16 GB cards working like a charm).</p>
-<h1 id="devices-known-to-work">Devices known to work</h1>
-<h3 id="modules-old-list-not-up-to-date-anymore">Modules (Old list, not up-to-date anymore):</h3>
+<h1 id="devices-known-to-work"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.</span> Devices known to work</h1>
+<h3 id="modules-old-list-not-up-to-date-anymore"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.0.1</span> Modules (Old list, not up-to-date anymore):</h3>
 <p>See <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/1732">https://github.com/jomjol/AI-on-the-edge-device/discussions/1732</a> for a more recent list.</p>
 <ul>
 <li>
@@ -384,63 +377,49 @@ It is observed, that smaller cards (up to 4 GB) tend to be more stable and large
 <p><a href="https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE">https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&amp;gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE</a> (27.12.2022)</p>
 </li>
 </ul>
-<h3 id="sd-card">SD Card</h3>
+<h3 id="sd-card"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.0.2</span> SD Card</h3>
 <ul>
 <li>Sandisk 2GB Micro SD Class 2 <a href="https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">Sandisk 2GB</a>
 AITRIP ESP32 and CAM <a href="https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&amp;psc=1">ESP-32/CAM</a></li>
 <li><a href="https://www.amazon.com/gp/product/B0948ZFTQZ">Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode</a> with <a href="https://www.amazon.com/gp/product/B07QYTP4VN">Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6</a></li>
 </ul>
-<h1 id="weak-wifi">Weak Wifi</h1>
+<h1 id="weak-wifi"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.</span> Weak Wifi</h1>
 <p>The ESP32-CAM supports an external antenna. It requires some soldering skills but can improve the connection quality. See <a href="https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/">https://randomnerdtutorials.com/esp32-cam-connect-external-antenna/</a></p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../initial-setup/" class="btn btn-neutral float-left" title="Initial Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Best-Practice/" class="btn btn-neutral float-right" title="Best Practice">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../initial-setup/" title="Initial Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Best-Practice/" title="Best Practice">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../initial-setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Best-Practice/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../initial-setup/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../Best-Practice/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

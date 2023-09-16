@@ -1,220 +1,213 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Choosing-the-Model/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Model Selection - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Choosing-the-Model/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Model Selection - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Model Selection";
         var mkdocs_page_input_path = "Choosing-the-Model.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Choosing-the-Model/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Model Selection</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#digit-models">Digit Models</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#dig-class11">dig-class11</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#main-features">Main features</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#dig-class100-dig-cont">dig-class100 / dig-cont</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#main-features_1">Main features</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#dig-class100-vs-dig-cont">dig-class100 vs. dig-cont</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#analog-pointer-models">Analog pointer models</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ana-class100-ana-cont">ana-class100 / ana-cont</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#main-features_2">Main features</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#ana-class100-vs-ana-cont">ana-class100 vs. ana-cont</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Configuration &raquo;</li>
-      <li class="breadcrumb-item active">Model Selection</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Choosing-the-Model.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="model-selection">Model Selection</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Model Selection</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#digit-models">Digit Models</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#dig-class11">dig-class11</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-features">Main features</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dig-class100-dig-cont">dig-class100 / dig-cont</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-features_1">Main features</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#dig-class100-vs-dig-cont">dig-class100 vs. dig-cont</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analog-pointer-models">Analog pointer models</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#ana-class100-ana-cont">ana-class100 / ana-cont</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-features_2">Main features</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#ana-class100-vs-ana-cont">ana-class100 vs. ana-cont</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Configuration »</li>
+<li class="breadcrumb-item active">Model Selection</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Choosing-the-Model.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="model-selection"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Model Selection</h1>
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
 <p>See <a href="../Neural-Network-Types">Neural Network Types</a> for additional details.</p>
@@ -222,49 +215,49 @@
 <p>In the <a href="../Graphical-configuration">Graphical Configuration Page</a>, you can choose different models depending on your needs.</p>
 <p>This page tries to help you on which model to select.
 For more technical/deeper explanations have a look on <a href="../Neural-Network-Types">Neural-Network-Types</a>.</p>
-<h2 id="digit-models">Digit Models</h2>
+<h2 id="digit-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Digit Models</h2>
 <p>For digits on water meters, gas-meters or power meters you can select between two main types of models.</p>
-<h3 id="dig-class11">dig-class11</h3>
+<h3 id="dig-class11"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> dig-class11</h3>
 <p>This model can recognize full digits. It was the first model version. All intermediate states shown a "N" for not a number. But in post process it uses older values to fill up the "N" values if possible.</p>
-<p><img alt="" src="../img/dig-class11.png" style="width:300px" /></p>
+<p><img alt="" src="../img/dig-class11.png" style="width:300px"/></p>
 <p>It's possibly a good fallback, if <code>dig-cont/dig-class100</code> results are not good.</p>
-<h4 id="main-features">Main features</h4>
+<h4 id="main-features"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1.1</span> Main features</h4>
 <ul>
 <li>well suited for LCD digits</li>
 <li>the ExtendedResolution option is not supported. (Only in conjunction with ana-class100 / ana-cont)</li>
 </ul>
-<h3 id="dig-class100-dig-cont">dig-class100 / dig-cont</h3>
+<h3 id="dig-class100-dig-cont"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> dig-class100 / dig-cont</h3>
 <p>These models are used to get a continuous reading with intermediate states. To see what the models are doing, you can go to the Recognition page.</p>
-<p><img alt="" src="../img/dig-class100.png" style="width:300px" /></p>
-<h4 id="main-features_1">Main features</h4>
+<p><img alt="" src="../img/dig-class100.png" style="width:300px"/></p>
+<h4 id="main-features_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.1</span> Main features</h4>
 <ul>
 <li>suitable for all digit displays.</li>
 <li>Advantage over dig-class11 that results continue to be calculated in the transition between digits.</li>
 <li>With the ExtendedResolution option, higher accuracy is possible by adding another digit.</li>
 </ul>
 <p>Look <a href="https://jomjol.github.io/neural-network-digital-counter-readout">here</a> for a list of digit images used for the training.</p>
-<h4 id="dig-class100-vs-dig-cont">dig-class100 vs. dig-cont</h4>
+<h4 id="dig-class100-vs-dig-cont"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2.2</span> dig-class100 vs. dig-cont</h4>
 <p>The difference is in the internal processing. </p>
 <p>The dig-class100 is a standard classification model. Each tenth step is an output. </p>
 <p>dig-cont uses two outputs and arctangent to get the result. You see very complicated. </p>
 <p>Try both models on your device and take the one that gives you the best results.</p>
-<h2 id="analog-pointer-models">Analog pointer models</h2>
-<h3 id="ana-class100-ana-cont">ana-class100 / ana-cont</h3>
+<h2 id="analog-pointer-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Analog pointer models</h2>
+<h3 id="ana-class100-ana-cont"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> ana-class100 / ana-cont</h3>
 <p>For pointers on water meters use the analog models. You can only choose between ana-class100 and ana-cont. Both do mainly the same.</p>
-<p><img alt="" src="../img/ana-class100.png" style="width:250px" /></p>
-<h4 id="main-features_2">Main features</h4>
+<p><img alt="" src="../img/ana-class100.png" style="width:250px"/></p>
+<h4 id="main-features_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1.1</span> Main features</h4>
 <ul>
 <li>for all analogue pointers, especially for water meters.</li>
 <li>With the ExtendedResolution option, higher accuracy is possible by adding another digit.</li>
 </ul>
 <p>Look <a href="https://jomjol.github.io/neural-network-analog-needle-readout/">here</a> for a list of pointer images used for the training</p>
-<h4 id="ana-class100-vs-ana-cont">ana-class100 vs. ana-cont</h4>
+<h4 id="ana-class100-vs-ana-cont"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1.2</span> ana-class100 vs. ana-cont</h4>
 <p>The difference is in the internal processing.</p>
 <p>Take the one that gives you the best results. Both models learn from the same data.</p>
-<h2 id="different-types-of-models-normal-vs-quantized">Different types of models (normal vs. quantized)</h2>
+<h2 id="different-types-of-models-normal-vs-quantized"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Different types of models (normal vs. quantized)</h2>
 <p>The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller and runs faster on the edgeAI-device.
 Usually the models are distrusted therefore in both versions. They can be distinguished by a "-q" at the end of the logfile.</p>
-<h4 id="example">Example:</h4>
+<h4 id="example"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.0.1</span> Example:</h4>
 <table>
 <thead>
 <tr>
@@ -283,55 +276,41 @@ Usually the models are distrusted therefore in both versions. They can be distin
 </tr>
 </tbody>
 </table>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Configuration/" class="btn btn-neutral float-left" title="Graphical Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../ota/" class="btn btn-neutral float-right" title="Over-The-Air (OTA) Update">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Configuration/" title="Graphical Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../ota/" title="Over-The-Air (OTA) Update">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../ota/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Configuration/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../ota/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

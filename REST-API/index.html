@@ -1,267 +1,260 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>REST API - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>REST API - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "REST API";
         var mkdocs_page_input_path = "REST-API.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/REST-API/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">REST API</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#control">Control</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#setprevalue">setPreValue</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ota_pagehtml">ota_page.html</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#reboot">reboot</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#results">Results</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#json">json</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#value">value</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmprawjpg">img_tmp/raw.jpg</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmpalgjpg">img_tmp/alg.jpg</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#img_tmpalg_roijpg">img_tmp/alg_roi.jpg</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#status">Status</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#statusflow">statusflow</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rssi">rssi</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#cpu_temperature">cpu_temperature</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sysinfo">sysinfo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#starttime">starttime</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#uptime">uptime</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#lighton">lighton</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#lightoff">lightoff</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#capture">capture</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#capture_with_flashlight">capture_with_flashlight</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#save">save</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#logs">Logs</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#log">log</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#logfileact">logfileact</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#loghtml">log.html</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#heap">heap</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>API's &raquo;</li>
-      <li class="breadcrumb-item active">REST API</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/REST-API.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="rest-api">REST API</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="./">REST API</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#control">Control</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setprevalue">setPreValue</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ota_pagehtml">ota_page.html</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reboot">reboot</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#results">Results</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#json">json</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#value">value</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#img_tmprawjpg">img_tmp/raw.jpg</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#img_tmpalgjpg">img_tmp/alg.jpg</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#img_tmpalg_roijpg">img_tmp/alg_roi.jpg</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#status">Status</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#statusflow">statusflow</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rssi">rssi</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cpu_temperature">cpu_temperature</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sysinfo">sysinfo</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#starttime">starttime</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#uptime">uptime</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#lighton">lighton</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lightoff">lightoff</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#capture">capture</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#capture_with_flashlight">capture_with_flashlight</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#save">save</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#logs">Logs</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#log">log</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logfileact">logfileact</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#loghtml">log.html</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#heap">heap</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>API's »</li>
+<li class="breadcrumb-item active">REST API</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/REST-API.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="rest-api"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> REST API</h1>
 <p>Various information is directly accessible over specific REST calls.</p>
 <p>To use it, just append them to the IP, separated with a <code>/</code>, e.g. <code>http://192.168.1.1/json</code></p>
 <p>Note: For more detailed information to the REST handler, have a look to the code in the repository: <a href="https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri">registered handlers</a></p>
-<h2 id="control">Control</h2>
+<h2 id="control"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Control</h2>
 <ul>
 <li>
-<h3 id="flow_start">flow_start</h3>
+<h3 id="flow_start"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> flow_start</h3>
   Trigger a flow start (if not running)<ul>
 <li>Payload:<ul>
 <li>No payload needed</li>
@@ -270,13 +263,13 @@
 </ul>
 </li>
 <li>
-<h3 id="setprevalue">setPreValue</h3>
+<h3 id="setprevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> setPreValue</h3>
 <p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
 <ul>
 <li>
 <p>Payload:</p>
 <ul>
-<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code>  </li>
+<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code> </li>
 <li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
 <li>
 <p><code>value=</code> provide the value to be set</p>
@@ -291,7 +284,7 @@
 </ul>
 </li>
 <li>
-<h3 id="gpio">GPIO</h3>
+<h3 id="gpio"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> GPIO</h3>
 </li>
 <li>
 <p>Control a GPIO output</p>
@@ -311,21 +304,21 @@
 </ul>
 </li>
 <li>
-<h3 id="ota">ota</h3>
+<h3 id="ota"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> ota</h3>
 </li>
 <li>
-<h3 id="ota_pagehtml">ota_page.html</h3>
+<h3 id="ota_pagehtml"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> ota_page.html</h3>
 <p>Opens the Over-The-Air update html page</p>
 </li>
 <li>
-<h3 id="reboot">reboot</h3>
+<h3 id="reboot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> reboot</h3>
 <p>Trigger a reboot of the device</p>
 </li>
 </ul>
-<h2 id="results">Results</h2>
+<h2 id="results"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Results</h2>
 <ul>
 <li>
-<h3 id="json">json</h3>
+<h3 id="json"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> json</h3>
   Show result in JSON syntax</li>
 <li>
 <p>Example: 
@@ -342,7 +335,7 @@
   }</code></p>
 </li>
 <li>
-<h3 id="value">value</h3>
+<h3 id="value"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> value</h3>
 <p>Show single result values</p>
 </li>
 <li>The <code>value</code> entrypoint also support parameters:</li>
@@ -353,156 +346,142 @@
 <p><code>http://&lt;IP&gt;/value?all=true&amp;type=prevalue</code></p>
 </li>
 <li>
-<h3 id="img_tmprawjpg">img_tmp/raw.jpg</h3>
+<h3 id="img_tmprawjpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> img_tmp/raw.jpg</h3>
 <p>Capture and show a new raw image</p>
 </li>
 <li>
-<h3 id="img_tmpalgjpg">img_tmp/alg.jpg</h3>
+<h3 id="img_tmpalgjpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.4</span> img_tmp/alg.jpg</h3>
 <p>Show last aligned image</p>
 </li>
 <li>
-<h3 id="img_tmpalg_roijpg">img_tmp/alg_roi.jpg</h3>
+<h3 id="img_tmpalg_roijpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.5</span> img_tmp/alg_roi.jpg</h3>
 <p>Show last aligned image including ROI overlay</p>
 </li>
 </ul>
-<h2 id="status">Status</h2>
+<h2 id="status"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Status</h2>
 <ul>
 <li>
-<h3 id="statusflow">statusflow</h3>
+<h3 id="statusflow"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> statusflow</h3>
   Show the actual step of the flow incl. timestamp</li>
 <li>
 <p>Example: <code>Take Image (15:56:34)</code></p>
 </li>
 <li>
-<h3 id="rssi">rssi</h3>
+<h3 id="rssi"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> rssi</h3>
 <p>Show the WIFI signal strength (Unit: dBm)</p>
 </li>
 <li>
 <p>Example: <code>-51</code></p>
 </li>
 <li>
-<h3 id="cpu_temperature">cpu_temperature</h3>
+<h3 id="cpu_temperature"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> cpu_temperature</h3>
 <p>Show the CPU temperature (Unit: °C)</p>
 </li>
 <li>
 <p>Example: <code>38</code></p>
 </li>
 <li>
-<h3 id="sysinfo">sysinfo</h3>
+<h3 id="sysinfo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.4</span> sysinfo</h3>
 <p>Show system infos in JSON syntax</p>
 </li>
 <li>
 <p>Example: <code>[{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]</code></p>
 </li>
 <li>
-<h3 id="starttime">starttime</h3>
+<h3 id="starttime"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.5</span> starttime</h3>
 <p>Show starttime</p>
 </li>
 <li>
 <p>Example: <code>20230113-154634</code></p>
 </li>
 <li>
-<h3 id="uptime">uptime</h3>
+<h3 id="uptime"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.6</span> uptime</h3>
 <p>Show uptime</p>
 </li>
 <li>Example: <code>0d 00h 15m 50s</code></li>
 </ul>
-<h2 id="camera">Camera</h2>
+<h2 id="camera"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Camera</h2>
 <ul>
 <li>
-<h3 id="lighton">lighton</h3>
+<h3 id="lighton"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.1</span> lighton</h3>
 <p>Switch the camera flashlight on </p>
 </li>
 <li>
-<h3 id="lightoff">lightoff</h3>
+<h3 id="lightoff"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.2</span> lightoff</h3>
 <p>Switch the camera flashlight off</p>
 </li>
 <li>
-<h3 id="capture">capture</h3>
+<h3 id="capture"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.3</span> capture</h3>
 <p>Capture a new image (without flashlight)</p>
 </li>
 <li>
-<h3 id="capture_with_flashlight">capture_with_flashlight</h3>
+<h3 id="capture_with_flashlight"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.4</span> capture_with_flashlight</h3>
 <p>Capture a new image with flashlight</p>
 </li>
 <li>
-<h3 id="save">save</h3>
+<h3 id="save"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.5</span> save</h3>
 <p>Save a new image to SD card</p>
 </li>
 <li>The <code>save</code> entrypoint also support parameters:</li>
 <li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1000</code></li>
 </ul>
-<h2 id="logs">Logs</h2>
+<h2 id="logs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Logs</h2>
 <ul>
 <li>
-<h3 id="log">log</h3>
+<h3 id="log"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.1</span> log</h3>
 <p>Last part of todays log (last 80 kBytes))</p>
 </li>
 <li>
-<h3 id="logfileact">logfileact</h3>
+<h3 id="logfileact"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.2</span> logfileact</h3>
 <p>Full log of today</p>
 </li>
 <li>
-<h3 id="loghtml">log.html</h3>
+<h3 id="loghtml"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.3</span> log.html</h3>
 <p>Opens the log html page</p>
 </li>
 </ul>
-<h2 id="diagnostics">Diagnostics</h2>
+<h2 id="diagnostics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Diagnostics</h2>
 <ul>
 <li>
-<h3 id="heap">heap</h3>
+<h3 id="heap"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> heap</h3>
   print relevant memory (heap) information</li>
 <li>Example: <code>Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427</code></li>
 </ul>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Demo-Mode/" class="btn btn-neutral float-left" title="Demo mode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../MQTT-API/" class="btn btn-neutral float-right" title="MQTT API">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Demo-Mode/" title="Demo mode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../MQTT-API/" title="MQTT API">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Demo-Mode/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../MQTT-API/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Demo-Mode/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../MQTT-API/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

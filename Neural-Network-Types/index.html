@@ -1,228 +1,221 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Neural-Network-Types/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Neural Network Types - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Neural-Network-Types/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Neural Network Types - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Neural Network Types";
         var mkdocs_page_input_path = "Neural-Network-Types.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Neural-Network-Types/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Neural Network Types</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview-neural-network-type">Overview neural network type</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#naming-convention">Naming convention</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#overview-of-trained-types-and-details">Overview of trained types and details</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained">Types of counters trained:</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs">Training data needs</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details">CNN Technical details:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#digits-with-11-classes-dig-class11_xxxtflite">Digits with 11 classes ("dig-class11_XXX.tflite")</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_1">Types of counters trained:</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs_1">Training data needs</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_1">CNN Technical details:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_2">Types of counters trained:</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#training-data-needs_2">Training data needs</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_2">CNN Technical details:</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Advanced &raquo;</li>
-      <li class="breadcrumb-item active">Neural Network Types</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Neural-Network-Types.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="neural-network-types">Neural Network Types</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Neural Network Types</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#overview-neural-network-type">Overview neural network type</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#naming-convention">Naming convention</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-trained-types-and-details">Overview of trained types and details</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained">Types of counters trained:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#training-data-needs">Training data needs</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details">CNN Technical details:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#digits-with-11-classes-dig-class11_xxxtflite">Digits with 11 classes ("dig-class11_XXX.tflite")</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_1">Types of counters trained:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#training-data-needs_1">Training data needs</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_1">CNN Technical details:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#types-of-counters-trained_2">Types of counters trained:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#training-data-needs_2">Training data needs</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cnn-technical-details_2">CNN Technical details:</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Advanced »</li>
+<li class="breadcrumb-item active">Neural Network Types</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Neural-Network-Types.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="neural-network-types"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Neural Network Types</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For an overview, see <a href="../Choosing-the-Model">Choosing the Model</a>.</p>
 </div>
 <p>This section is describing the different types of neural networks, that are used with the AI-on-the-edge approach and gives an introduction on how and where to use them. </p>
-<h2 id="overview-neural-network-type">Overview neural network type</h2>
+<h2 id="overview-neural-network-type"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Overview neural network type</h2>
 <p>There are two <strong>types of input</strong>:</p>
 <ul>
 <li>
@@ -249,25 +242,25 @@
 <li>For the continuous and 100 classes network especially for the digits, there are only a few types of digits trained up to now</li>
 <li>Therefore sometimes for the digits it is more effective to choose the simpler 11 classes network type (= default). </li>
 </ul>
-<h2 id="naming-convention">Naming convention</h2>
+<h2 id="naming-convention"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Naming convention</h2>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Classification<br />11 classes<br />0, 1, ... 9 + "N"</th>
-<th>Classification<br />100 classes<br />0.0, 0.1, ... 9.9</th>
-<th>Continuous<br />Interval<br />[0, 10[</th>
+<th>Classification<br/>11 classes<br/>0, 1, ... 9 + "N"</th>
+<th>Classification<br/>100 classes<br/>0.0, 0.1, ... 9.9</th>
+<th>Continuous<br/>Interval<br/>[0, 10[</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Digits</strong> <br /><img alt="" src="../img/0_arbitrary.jpg" /></td>
+<td><strong>Digits</strong> <br/><img alt="" src="../img/0_arbitrary.jpg"/></td>
 <td><strong>dig-class11</strong>_XXX.tflite</td>
 <td><strong>dig-class100</strong>_XXX.tflite</td>
 <td><strong>dig-cont</strong>_XXX.tflite</td>
 </tr>
 <tr>
-<td><strong>Analog Pointers</strong>  <br /><img alt="" src="../img/ana-examp.jpg" /></td>
+<td><strong>Analog Pointers</strong> <br/><img alt="" src="../img/ana-examp.jpg"/></td>
 <td></td>
 <td><strong>ana-class100</strong>_XXX.tflite</td>
 <td><strong>ana-cont</strong>_XXX.tflite</td>
@@ -292,11 +285,11 @@
 <li>s2 = Size 2 (Medium)</li>
 <li>q = Quantized Version</li>
 </ul>
-<h2 id="overview-of-trained-types-and-details">Overview of trained types and details</h2>
-<h3 id="analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite">Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</h3>
+<h2 id="overview-of-trained-types-and-details"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Overview of trained types and details</h2>
+<h3 id="analog-pointer-ana-cont_xxxtflite-ana-class100_xxxtflite"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> Analog Pointer ("ana-cont_XXX.tflite" &amp; "ana-class100_XXX.tflite")</h3>
 <p>This is to transfer the direction of a pointer into a continuous number between 0 and 1, whereas 0 (=1) is the upwards position (12 o'clock), 0.25 corresponds to the 3 o'clock positions and so on. This network is a envelop for all different types of pointers. Currently there are no dedicated network trainings for specific types of pointers.</p>
 <p>There are two types of network structure, currently both are supported. The "class100" is a pure classification network, that might need a bit more accuracy in the labeling. "cont" is a no classic approach with a continuous output off only 2 neurons (details see below).</p>
-<h4 id="types-of-counters-trained">Types of counters trained:</h4>
+<h4 id="types-of-counters-trained"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1.1</span> Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -308,31 +301,31 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../img/ana-cont/examp-ana1.jpg" /></td>
-<td><img alt="" src="../img/ana-cont/examp-ana2.jpg" /></td>
-<td><img alt="" src="../img/ana-cont/examp-ana3.jpg" /></td>
-<td><img alt="" src="../img/ana-cont/examp-ana4.jpg" /></td>
+<td><img alt="" src="../img/ana-cont/examp-ana1.jpg"/></td>
+<td><img alt="" src="../img/ana-cont/examp-ana2.jpg"/></td>
+<td><img alt="" src="../img/ana-cont/examp-ana3.jpg"/></td>
+<td><img alt="" src="../img/ana-cont/examp-ana4.jpg"/></td>
 </tr>
 <tr>
-<td><img alt="" src="../img/ana-cont/examp-ana5.jpg" /></td>
-<td><img alt="" src="../img/ana-cont/examp-ana6.jpg" /></td>
-<td><img alt="" src="../img/ana-cont/examp-ana7.jpg" /></td>
+<td><img alt="" src="../img/ana-cont/examp-ana5.jpg"/></td>
+<td><img alt="" src="../img/ana-cont/examp-ana6.jpg"/></td>
+<td><img alt="" src="../img/ana-cont/examp-ana7.jpg"/></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="training-data-needs">Training data needs</h4>
+<h4 id="training-data-needs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1.2</span> Training data needs</h4>
 <ul>
 <li>Quadratic images, minimum size: 32x32 pixel</li>
 <li>Typically 100 - 200 images with a resolution of 1/100 of the full rotation (every 0.1 value or 3.6°)</li>
 <li>Naming: x.y_ARBITRARY.jpg, where x.y = value 0.0 ... 9.9</li>
 </ul>
-<h4 id="cnn-technical-details">CNN Technical details:</h4>
-<h5 id="input">Input</h5>
+<h4 id="cnn-technical-details"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1.3</span> CNN Technical details:</h4>
+<h5 id="input"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1.3.1</span> Input</h5>
 <ul>
 <li>32 x 32 RGB images</li>
 </ul>
-<h5 id="output">Output</h5>
+<h5 id="output"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1.3.2</span> Output</h5>
 <ul>
 <li><strong>ana-cont</strong>_XXX.tflite:</li>
 <li>2 neurons with output in range [-1, 1] - representing a sinus / cosine encoding of the angle</li>
@@ -344,9 +337,9 @@
 </li>
 <li>100 neurons representing the classes from 0.0, 0.1, ... 9.8, 9.9</li>
 </ul>
-<h3 id="digits-with-11-classes-dig-class11_xxxtflite">Digits with 11 classes ("dig-class11_XXX.tflite")</h3>
+<h3 id="digits-with-11-classes-dig-class11_xxxtflite"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> Digits with 11 classes ("dig-class11_XXX.tflite")</h3>
 <p>The digit type is a classical classification network, with 11 classes representing the numbers 0, 1, ... 9 and the special class "N". It is trained for the rolling ring of gas and electric meters. As there is sometime a status between two images, the special class "N" is representing Not-A-Number for the case, that the image cannot be unique classified to one number e.g. because it is between two digits. For this type the lowest amount of training data per type is needed, resulting in a large variety of type being already part of the training set.</p>
-<h4 id="types-of-counters-trained_1">Types of counters trained:</h4>
+<h4 id="types-of-counters-trained_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2.1</span> Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -361,21 +354,21 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../img/dig-class11/examp-dig1.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig2.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig3.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig4.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig13.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig12.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig9.jpg" /></td>
+<td><img alt="" src="../img/dig-class11/examp-dig1.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig2.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig3.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig4.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig13.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig12.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig9.jpg"/></td>
 </tr>
 <tr>
-<td><img alt="" src="../img/dig-class11/examp-dig5.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig6.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig7.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig8.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig11.jpg" /></td>
-<td><img alt="" src="../img/dig-class11/examp-dig10.jpg" /></td>
+<td><img alt="" src="../img/dig-class11/examp-dig5.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig6.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig7.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig8.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig11.jpg"/></td>
+<td><img alt="" src="../img/dig-class11/examp-dig10.jpg"/></td>
 <td></td>
 </tr>
 <tr>
@@ -389,7 +382,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="training-data-needs_1">Training data needs</h4>
+<h4 id="training-data-needs_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2.2</span> Training data needs</h4>
 <ul>
 <li>RGB images, with minimum size: 20x32 pixel</li>
 <li>
@@ -399,20 +392,20 @@
 <p>Naming: x_ARBITRARY.jpg, where x = value 0 ... 9 + N</p>
 </li>
 </ul>
-<h4 id="cnn-technical-details_1">CNN Technical details:</h4>
-<h5 id="input_1">Input</h5>
+<h4 id="cnn-technical-details_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2.3</span> CNN Technical details:</h4>
+<h5 id="input_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2.3.1</span> Input</h5>
 <ul>
 <li>20 x 32 RGB images</li>
 </ul>
-<h5 id="output_1">Output</h5>
+<h5 id="output_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2.3.2</span> Output</h5>
 <ul>
 <li>11 neurons for image classification (last layer normalized to 1)</li>
 <li>Neuron 0 to 9 represent the corresponding numbers "0" to "9"</li>
 <li>Neuron 10 represents the "Not-A-Number" class, telling, that the image is not uniquely classified</li>
 </ul>
-<h3 id="digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite">Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</h3>
+<h3 id="digits-with-rolling-results-dig-class100_xxxtflite-dig-cont_xxxtflite"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> Digits with rolling results ("dig-class100_XXX.tflite" &amp; "dig-cont_XXX.tflite")</h3>
 <p>This type of network tries to overcome the problem, that there are intermediate values, when a rolling digit is between two numbers. Previous this was the "N" class. In this network type, there are also sub-digit values trained, so that the intermediate state can be used as additional information for the algorithms. </p>
-<h4 id="types-of-counters-trained_2">Types of counters trained:</h4>
+<h4 id="types-of-counters-trained_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3.1</span> Types of counters trained:</h4>
 <table>
 <thead>
 <tr>
@@ -437,7 +430,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="training-data-needs_2">Training data needs</h4>
+<h4 id="training-data-needs_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3.2</span> Training data needs</h4>
 <ul>
 <li>RGB images, with minimum size: 20x32 pixel</li>
 <li>
@@ -447,12 +440,12 @@
 <p>Naming: x.y_ARBITRARY.jpg, where x.y = 0.0, 0.1, ... 9.9 representing the intermediate state</p>
 </li>
 </ul>
-<h4 id="cnn-technical-details_2">CNN Technical details:</h4>
-<h5 id="input_2">Input</h5>
+<h4 id="cnn-technical-details_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3.3</span> CNN Technical details:</h4>
+<h5 id="input_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3.3.1</span> Input</h5>
 <ul>
 <li>20 x 32 RGB images</li>
 </ul>
-<h5 id="output_2">Output</h5>
+<h5 id="output_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3.3.2</span> Output</h5>
 <ul>
 <li><strong>dig-cont</strong>_XXX.tflite:</li>
 <li>10 neurons representing the digits 0, 1, ... 9. The intermediate values are represented by weighted normalized values of two neighboring output neurons</li>
@@ -464,55 +457,41 @@
 </li>
 <li>100 neurons representing the classes from 0.0, 0.1, ... 9.8, 9.9</li>
 </ul>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Correction%20Algorithm/" class="btn btn-neutral float-left" title="Correction Algorithm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Additional-Information/" class="btn btn-neutral float-right" title="Additional Information">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Correction%20Algorithm/" title="Correction Algorithm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Additional-Information/" title="Additional Information">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Correction%20Algorithm/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Additional-Information/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Correction%20Algorithm/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../Additional-Information/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

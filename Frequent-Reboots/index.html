@@ -1,224 +1,217 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Basic hardware/config issues - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Frequent-Reboots/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Basic hardware/config issues - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "Basic hardware/config issues";
         var mkdocs_page_input_path = "Frequent-Reboots.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/Frequent-Reboots/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basic hardware/config issues</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#sporadic-random-reboots">Sporadic random reboots</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#system-instabilities">System instabilities</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#overload-during-html-access">Overload during HTML access</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#bad-or-insufficient-power-supply">Bad or insufficient power supply</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#repeating-boot-loops">Repeating boot loops</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#sd-card-related-issues">SD card related issues</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#sd-card-wrong-filesystem-only-fat32-is-supported">SD card: Wrong filesystem (only FAT32 is supported)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sd-card-not-detected-not-supported">SD card not detected / not supported</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#sd-card-detected-but-files-are-not-readable-writeable">SD card detected but files are not readable / writeable</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ram-related-issues">RAM related issues</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#too-less-external-ram-psram">Too less external RAM (PSRAM)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#configuration-related-issues">Configuration related issues</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#folders-and-files-missing">Folders and files missing</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Troubleshooting &raquo;</li>
-      <li class="breadcrumb-item active">Basic hardware/config issues</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Frequent-Reboots.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="basic-hardware-configuration-issues">Basic hardware / configuration issues</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Basic hardware/config issues</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#sporadic-random-reboots">Sporadic random reboots</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-instabilities">System instabilities</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#overload-during-html-access">Overload during HTML access</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#bad-or-insufficient-power-supply">Bad or insufficient power supply</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#repeating-boot-loops">Repeating boot loops</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#sd-card-related-issues">SD card related issues</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#sd-card-wrong-filesystem-only-fat32-is-supported">SD card: Wrong filesystem (only FAT32 is supported)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sd-card-not-detected-not-supported">SD card not detected / not supported</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sd-card-detected-but-files-are-not-readable-writeable">SD card detected but files are not readable / writeable</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ram-related-issues">RAM related issues</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#too-less-external-ram-psram">Too less external RAM (PSRAM)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-related-issues">Configuration related issues</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#folders-and-files-missing">Folders and files missing</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Troubleshooting »</li>
+<li class="breadcrumb-item active">Basic hardware/config issues</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/Frequent-Reboots.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="basic-hardware-configuration-issues"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Basic hardware / configuration issues</h1>
 <p>If the device is behaving eratically or not running as expected you can use the following tools trying to identify the root cause:</p>
 <ol>
 <li>Internal logging (<code>config.ini</code>)
@@ -232,8 +225,8 @@
 <li>Sporadic random reboots (always different timing and situation)</li>
 <li>Repeating boot loops (reoccuring, always stop working after same precondition)</li>
 </ol>
-<hr />
-<h3 id="sporadic-random-reboots">Sporadic random reboots</h3>
+<hr/>
+<h3 id="sporadic-random-reboots"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1</span> Sporadic random reboots</h3>
 <p>Sporadic random reboots could have the following reasons:</p>
 <ul>
 <li>In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
@@ -242,7 +235,7 @@
   --&gt; The power supply need to stable to ensure proper operation of the device. If it's not stable the device tents to sporadic reboots (brownout detection)</li>
 </ul>
 <p>In general: There are several mechanisms in the firmware (like saving previous values), to have a "smooth" reboot without too many notable disturbance.</p>
-<h5 id="system-instabilities">System instabilities</h5>
+<h5 id="system-instabilities"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.1</span> System instabilities</h5>
 <p>If your system is sometimes running smoothly over several runs and sometimes reboots obviously randomly, you have an partially unstable device. </p>
 <p>You can check this in the standard log file on the SD card:</p>
 <pre><code>2021-12-26T06:34:09: task_autodoFlow - round done
@@ -251,7 +244,7 @@
 </code></pre>
 <p>Here you see, that the round #23 is starting, so obviously there were no reboots in the last 22 rounds. There is hardware (ESP32CAM), where only 2-3 stable rounds are possible and others, where way more than 100 rounds without any reboots is possible.
 There is noting you can do about it, beside testing different hardware.</p>
-<h4 id="overload-during-html-access">Overload during HTML access</h4>
+<h4 id="overload-during-html-access"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.1</span> Overload during HTML access</h4>
 <p>If you frequently access the web server over HTML requests, the firmware tends to reboot. This especially happens during the first run and when the ESP32 is busy with the digitization flow. </p>
 <p>The reason for this are running out of memory during a flow, minor memory leakage in combination with missing error handling.</p>
 <p>There is noting you can do about this kind of reboot, beside two thing:</p>
@@ -259,10 +252,10 @@ There is noting you can do about it, beside testing different hardware.</p>
 <li>Support the firmware development with improved and tested part of code</li>
 <li>Be patient :-)</li>
 </ol>
-<h5 id="bad-or-insufficient-power-supply">Bad or insufficient power supply</h5>
+<h5 id="bad-or-insufficient-power-supply"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.1.1</span> Bad or insufficient power supply</h5>
 <p>A good and stabilized power supply is essential to have error free operation. The device is quite picky in terms of proper power supply. Especially the wifi module have some load spikes which the power supply needs to cover. If the power is not stable enough, the brwonout mechanism is protecting against strange behaviour and force a reboot whenever the voltage drops below a specific level. You can see this in random reboots which indication is logfile: --&gt; Reset reason: Brownout</p>
-<hr />
-<h3 id="repeating-boot-loops">Repeating boot loops</h3>
+<hr/>
+<h3 id="repeating-boot-loops"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2</span> Repeating boot loops</h3>
 <p>Repeating boot loops at the same situation during the flow has a systematic problem either in the hardware or the configuration. It usually happens during initialization state or processing the first round as there all needed parts of the firmware have been loaded for the first time.</p>
 <p>To identify the root cause the logfiles, the reduced web interface, the red board LED or the serial log of the UART interface (no remote access, USB access needed) is helpful. </p>
 <p>Possible issues:</p>
@@ -271,21 +264,21 @@ There is noting you can do about it, beside testing different hardware.</p>
 <li>RAM related issues</li>
 <li>Configuration related issues</li>
 </ul>
-<h5 id="sd-card-related-issues">SD card related issues</h5>
+<h5 id="sd-card-related-issues"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.1</span> SD card related issues</h5>
 <p>The ESP32CAM is a little bit "picky" with the supported SD cards. Due to the limited availability of GPIOs the SD card can only be accessed via 1-wire mode. Therefore not all SD cards are supported. The following error cases can occur:</p>
-<h6 id="sd-card-wrong-filesystem-only-fat32-is-supported">SD card: Wrong filesystem (only FAT32 is supported)</h6>
+<h6 id="sd-card-wrong-filesystem-only-fat32-is-supported"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.1.1</span> SD card: Wrong filesystem (only FAT32 is supported)</h6>
 <p>If this SD card error is detected only the following indications are available. No web interface will be accessible.</p>
 <ul>
 <li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
 <li>Error messages on serial log (UART interface)</li>
 </ul>
-<h6 id="sd-card-not-detected-not-supported">SD card not detected / not supported</h6>
+<h6 id="sd-card-not-detected-not-supported"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.1.2</span> SD card not detected / not supported</h6>
 <p>If this SD card error is detected the following indication are available. No web interface will be accessible.</p>
 <ul>
 <li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
 <li>Error messages on serial log (UART interface)</li>
 </ul>
-<h6 id="sd-card-detected-but-files-are-not-readable-writeable">SD card detected but files are not readable / writeable</h6>
+<h6 id="sd-card-detected-but-files-are-not-readable-writeable"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.1.3</span> SD card detected but files are not readable / writeable</h6>
 <p>The SD card is detected, but the files cannot be read or written. A basic SD card check for SD reading / writing is performed on every boot. This not 100% guarantee that SD card is working but it's at least a indication.</p>
 <p>If this SD card error is detected the following indications are available:</p>
 <ul>
@@ -294,10 +287,10 @@ There is noting you can do about it, beside testing different hardware.</p>
 <li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
 <li>Error messages on serial log (UART interface)</li>
 </ul>
-<h5 id="ram-related-issues">RAM related issues</h5>
+<h5 id="ram-related-issues"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.2</span> RAM related issues</h5>
 <p>In order to run the firmware, 4 MB of external RAM (PSRAM) are mandatory. Usually, the ESP32CAM is equipped with 8MB (64Mbit) PSRAM chip, whereof only 4MB can be used effectively (direct addressable).
 Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is present - <strong>even if you have bought a device where a 8MB PSRAM was promoted</strong>. These modules are not suiable for this firmware because the external RAM is needed to handle the CNN files and camera images. There is nothing to do, than to buy a new ESP32CAM with <strong>really</strong> 64MBit of PSRAM. </p>
-<h6 id="too-less-external-ram-psram">Too less external RAM (PSRAM)</h6>
+<h6 id="too-less-external-ram-psram"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.2.1</span> Too less external RAM (PSRAM)</h6>
 <p>During the boot process the available RAM is going to be checked.</p>
 <p>If there is too less RAM (PSRAM or total HEAP &lt; 4MB) detected, the follwoing indications are available:</p>
 <ul>
@@ -306,8 +299,8 @@ Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is 
 <li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
 <li>Error messages on serial log (UART interface)</li>
 </ul>
-<h5 id="configuration-related-issues">Configuration related issues</h5>
-<h6 id="folders-and-files-missing">Folders and files missing</h6>
+<h5 id="configuration-related-issues"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.3</span> Configuration related issues</h5>
+<h6 id="folders-and-files-missing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.3.1</span> Folders and files missing</h6>
 <p>Most of the relevant folders and files are checked during boot. The complete list can be found here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/">Error codes on reduced webinterface</a></p>
 <p>If a relevant folder or file is missing the following indications are available:</p>
 <ul>
@@ -316,7 +309,7 @@ Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is 
 <li>Red board LED is blinking. The blinking codes are described here: <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/">Status LED Blinkcodes</a></li>
 <li>Error messages on serial log (UART interface)</li>
 </ul>
-<h6 id="cnn-model-file-not-available-corrupt">CNN model file not available / corrupt</h6>
+<h6 id="cnn-model-file-not-available-corrupt"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2.0.3.2</span> CNN model file not available / corrupt</h6>
 <p>Additionally for operation CNN model files on SD card are mandatory, one CNN model file for analog counter and for for digit numbers each.</p>
 <ul>
 <li><code>/config/XXXXX.tflite</code> (XXXXX is the file name, that is written in the <code>config.ini</code>)</li>
@@ -352,55 +345,41 @@ Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is 
 <li><code>[0d00h05m12s] 2023-03-27T12:25:14 [TFLITE] CTfLiteClass::ReadFileToModel: /sdcard/config/ana-cont_1105_s2_q.tflite</code>
     --&gt; model file found: config OK</li>
 </ul>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Error-Debugging/" class="btn btn-neutral float-left" title="Often observed issues"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Demo-Mode/" class="btn btn-neutral float-right" title="Demo mode">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Error-Debugging/" title="Often observed issues"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Demo-Mode/" title="Demo mode">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Error-Debugging/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Demo-Mode/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Error-Debugging/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../Demo-Mode/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>

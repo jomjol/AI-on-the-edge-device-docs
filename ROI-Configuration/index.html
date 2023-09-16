@@ -1,202 +1,195 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>ROIs (Regions of Interest) - AI on the Edge Device</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/ROI-Configuration/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>ROIs (Regions of Interest) - AI on the Edge Device</title>
+<link href="../css/theme.css" rel="stylesheet"/>
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<script>
         // Current page data
         var mkdocs_page_name = "ROIs (Regions of Interest)";
         var mkdocs_page_input_path = "ROI-Configuration.md";
         var mkdocs_page_url = "/AI-on-the-edge-device-docs/ROI-Configuration/";
       </script>
-    
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </head>
-
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-<img src=https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png>
-    <a href=".." class="icon icon-home"> AI on the Edge Device
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
+<a class="icon icon-home" href=".."> AI on the Edge Device
 </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">External Links</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Configuration</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">ROIs (Regions of Interest)</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#precondition">Precondition</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#define-the-rois">Define the ROIs</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#analog-counters">Analog Counters</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#digits">Digits</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#correct-size-for-roi">Correct Size for ROI</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#how-to-setup-the-digit-rois-perfectly">How to setup the digit ROIs perfectly</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#saving">Saving</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Advanced</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">API's</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Assorted Pages</span></p>
-              <ul>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">AI on the Edge Device</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Configuration &raquo;</li>
-      <li class="breadcrumb-item active">ROIs (Regions of Interest)</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/ROI-Configuration.md" class="icon icon-github"> Edit on GitHub</a>
-    </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="rois-regions-of-interest">ROIs (Regions of Interest)</h1>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
+</li>
+<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">ROIs (Regions of Interest)</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#precondition">Precondition</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#define-the-rois">Define the ROIs</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#analog-counters">Analog Counters</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#digits">Digits</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#correct-size-for-roi">Correct Size for ROI</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-setup-the-digit-rois-perfectly">How to setup the digit ROIs perfectly</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#saving">Saving</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API's</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../REST-API/">REST API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Assorted Pages</span></p>
+<ul>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">AI on the Edge Device</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
+<li>Configuration »</li>
+<li class="breadcrumb-item active">ROIs (Regions of Interest)</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/ROI-Configuration.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="rois-regions-of-interest"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> ROIs (Regions of Interest)</h1>
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
 <p>You are using a neural network approach which is trained to fit as many different type of meters as possible.
@@ -214,17 +207,17 @@ There are several precautions to detect this. For details see the section <code>
 <p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
 </li>
 </ol>
-<h2 id="precondition">Precondition</h2>
+<h2 id="precondition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Precondition</h2>
 <p>Please make sure to have:</p>
 <ol>
 <li>Setup your camera properly and taken a good <a href="../Reference-Image">Reference Image</a>.</li>
 <li>Selected good <a href="../Alignment">Alignment References</a>.</li>
 </ol>
-<h2 id="define-the-rois">Define the ROIs</h2>
+<h2 id="define-the-rois"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Define the ROIs</h2>
 <p>For each digit or analog pointer, a ROI must be defined.</p>
 <p>You can even have multiple independent <strong>Numbers</strong> (eg. electerical meters mostly have 2 numbers for the high and low tariff). </p>
 <p>Depending if you have only one of those types, you can enable/disable <code>(1)</code> it on the top left corner: </p>
-<p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px" /></p>
+<p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px"/></p>
 <p>You can switch between the individual ROIs with the Drop down box <code>(2)</code>.
 If you need additional ROIs or delete them you can do this with the control at <code>(3)</code>.
 Like for the <a href="../Alignment">Alignment References</a>, you can change the position, size and name of a ROI in the text fields or define them via drag and drop through the mouse button. 
@@ -243,14 +236,14 @@ The ratio between <code>x</code> and <code>y</code> might need adjustment. But m
 <p class="admonition-title">Note</p>
 <p>Don't forget to save the settings with "Save" and do not reboot at this stage.</p>
 </div>
-<h3 id="analog-counters">Analog Counters</h3>
+<h3 id="analog-counters"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Analog Counters</h3>
 <p>For analog counters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center.
 The circle should exactly fit to the outer size of the meter and the cross should be in the middle of the pointer.</p>
 <p>Here is an example with the details for the ROI <code>ana1</code>: </p>
-<p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px" /></p>
-<h3 id="digits">Digits</h3>
+<p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px"/></p>
+<h3 id="digits"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Digits</h3>
 <p>For the Digital Meters it is a little bit more complicated, as there are different options of digital models which can be choosen.</p>
-<h4 id="correct-size-for-roi">Correct Size for ROI</h4>
+<h4 id="correct-size-for-roi"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.1</span> Correct Size for ROI</h4>
 <p>First of all, choose the right size of the ROI.
 The configuration of ROIs differs a bit on the selected model (see below). </p>
 <p>If you are in the initial setup, the model will be selectable in the next step. By default it is a <code>dig-cont</code> resp. <code>ana-cont</code> model.</p>
@@ -270,7 +263,7 @@ The configuration of ROIs differs a bit on the selected model (see below). </p>
 <p><strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data.</p>
 </li>
 </ol>
-<h4 id="how-to-setup-the-digit-rois-perfectly">How to setup the digit ROIs perfectly</h4>
+<h4 id="how-to-setup-the-digit-rois-perfectly"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2</span> How to setup the digit ROIs perfectly</h4>
 <p>Details and the corresponding "perfect" setting is explained below.
 For a first run you can choose the following general settings: </p>
 <ul>
@@ -288,25 +281,25 @@ For a first run you can choose the following general settings: </p>
 <tbody>
 <tr>
 <td>✔️ <strong>Okay</strong></td>
-<td><img alt="" src="../img/cont_img_ok.png" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_okay.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/cont_img_ok.png" style="width:80px"/></td>
+<td><img alt="" src="../img/wb_okay.jpg" style="width:80px"/></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_small.jpg" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_not_okay_small.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/bw_not_okay_small.jpg" style="width:80px"/></td>
+<td><img alt="" src="../img/wb_not_okay_small.jpg" style="width:80px"/></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_big.jpg" style="width:80px" /></td>
-<td><img alt="" src="../img/wb_not_okay_big.jpg" style="width:80px" /></td>
+<td><img alt="" src="../img/bw_not_okay_big.jpg" style="width:80px"/></td>
+<td><img alt="" src="../img/wb_not_okay_big.jpg" style="width:80px"/></td>
 </tr>
 </tbody>
 </table>
-<h5 id="setup-using-dig-class11-models">Setup using <code>dig-class11</code> models</h5>
+<h5 id="setup-using-dig-class11-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2.1</span> Setup using <code>dig-class11</code> models</h5>
 <p><code>dig-class11</code> - Models recognize the <strong>complete digit only</strong>. Here it is not relevant if the ROI fits the Border of the digit window.</p>
 <p>For this model, there should be a border of <code>20%</code> of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: </p>
-<p><img width="300px" src=../img/ROI_drawing.jpg></p>
+<p><img src="../img/ROI_drawing.jpg" width="300px"/></p>
 <table>
 <thead>
 <tr>
@@ -318,29 +311,29 @@ For a first run you can choose the following general settings: </p>
 <tbody>
 <tr>
 <td>✔️ <strong>Okay</strong></td>
-<td><img alt="" src="../img/bw_okay.jpg" /></td>
-<td><img alt="" src="../img/wb_okay.jpg" /></td>
+<td><img alt="" src="../img/bw_okay.jpg"/></td>
+<td><img alt="" src="../img/wb_okay.jpg"/></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_small.jpg" /></td>
-<td><img alt="" src="../img/wb_not_okay_small.jpg" /></td>
+<td><img alt="" src="../img/bw_not_okay_small.jpg"/></td>
+<td><img alt="" src="../img/wb_not_okay_small.jpg"/></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img alt="" src="../img/bw_not_okay_big.jpg" /></td>
-<td><img alt="" src="../img/wb_not_okay_big.jpg" /></td>
+<td><img alt="" src="../img/bw_not_okay_big.jpg"/></td>
+<td><img alt="" src="../img/wb_not_okay_big.jpg"/></td>
 </tr>
 </tbody>
 </table>
 <p>If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
-<h5 id="setup-using-dig-class100-or-dig-cont-models">Setup using <code>dig-class100</code> or <code>dig-cont</code> Models</h5>
+<h5 id="setup-using-dig-class100-or-dig-cont-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2.2</span> Setup using <code>dig-class100</code> or <code>dig-cont</code> Models</h5>
 <p>These models recognize the <strong>tenths</strong> (fractions) between the numbers.
 Those models require a different ROI setup; <strong>the height must be set differently and more accurately</strong>.</p>
 <p>First, the width can be set like for a <code>dig-class11</code> model, i.e. <code>20%</code> margin left and right.</p>
-<p><img width="455" alt="ROI-setup" src="https://user-images.githubusercontent.com/412645/199028748-c48ef5bb-a8d4-4c77-9faf-763e6cf77351.png"></p>
+<p><img alt="ROI-setup" src="https://user-images.githubusercontent.com/412645/199028748-c48ef5bb-a8d4-4c77-9faf-763e6cf77351.png" width="455"/></p>
 <p>The height of the outer rectangle should be set to the upper and lower edge of the number window. To achieve this, you might need to unlock the aspect ratio:</p>
-<p><img width="168" alt="unlockAspectRatio" src="https://user-images.githubusercontent.com/412645/199028590-21708ff3-15a3-4415-89b1-c2affcfce003.png"></p>
+<p><img alt="unlockAspectRatio" src="https://user-images.githubusercontent.com/412645/199028590-21708ff3-15a3-4415-89b1-c2affcfce003.png" width="168"/></p>
 <p>Here an example:</p>
 <table>
 <thead>
@@ -352,66 +345,52 @@ Those models require a different ROI setup; <strong>the height must be set diffe
 <tbody>
 <tr>
 <td>✔️ <strong>Okay</strong></td>
-<td><img width="125" alt="dig-class100_OK" src="https://user-images.githubusercontent.com/412645/199028380-7623776e-59b9-4356-ab55-3852253609df.png"></td>
+<td><img alt="dig-class100_OK" src="https://user-images.githubusercontent.com/412645/199028380-7623776e-59b9-4356-ab55-3852253609df.png" width="125"/></td>
 </tr>
 <tr>
 <td>❌ <strong>Not</strong> Okay</td>
-<td><img width="125" alt="dig-class100_NOK" src="https://user-images.githubusercontent.com/412645/199028469-3a69ed31-e5c9-4038-a8dc-6d44a42437ed.png"></td>
+<td><img alt="dig-class100_NOK" src="https://user-images.githubusercontent.com/412645/199028469-3a69ed31-e5c9-4038-a8dc-6d44a42437ed.png" width="125"/></td>
 </tr>
 </tbody>
 </table>
-<h3 id="saving">Saving</h3>
+<h3 id="saving"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> Saving</h3>
 <p>Once you are done,  push <code>Save</code> to persist your setup.</p>
 <p>A reboot is required to apply the changed configuration!</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Alignment/" class="btn btn-neutral float-left" title="Alignment References"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Configuration/" class="btn btn-neutral float-right" title="Graphical Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../Alignment/" title="Alignment References"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Configuration/" title="Graphical Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/jomjol/AI-on-the-edge-device-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../Alignment/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../Alignment/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../Configuration/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "..";</script>
+<script src="../js/theme_extra.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../search/main.js"></script>
+<script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-
 </body>
 </html>
