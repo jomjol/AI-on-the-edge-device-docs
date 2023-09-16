@@ -67,7 +67,8 @@ Topic | Description
        - any character, length > 0
 
 * #### ctrl/set_prevalue
-  This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0)!
+  !!! Note
+      This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0)!
  
   Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
     + Payload:
