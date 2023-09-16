@@ -61,32 +61,27 @@ You can change the following settings to reduce incorrect readings (but potentia
 
 ## Pre-Value
 
-PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
+PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
 
 If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. 
 
-If the device runs in errors, the pre-value will not be updated, as long as the ``preValueAgeStartup`` time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.
+If the device runs in errors, the pre-value will not be updated, as long as the `preValueAgeStartup` time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.
 
 ## "Rate too high - Read: ..."
 
-In configuration you can set the ``MaxRateValue`` and ``MaxRateType``. The settings suppress improbably high values that can come from false readings. To do this, the value must be set correctly depending on your meter.
+In configuration you can set the `MaxRateValue` and `MaxRateType`. The settings suppress improbably high values that can come from false readings. To do this, the value must be set correctly depending on your meter.
 
 Before doing this, you should be clear about the type of rating you want to use.
 
-"Absolute change" is the interval between two readings - no matter how often the readings happen. 
-
-"RateCange" is the change per minute. This is calculated from the time difference between the last and the current reading. 
+- `Absolute change` is the interval between two readings - no matter how often the readings happen. 
+- `RateCange` is the change per minute. This is calculated from the time difference between the last and the current reading. 
 
 If there is an interval of 5 minutes between readings and a MaxRateValue of 1, an error "Rate too high - Read: ..." if 
 
-Absolute change: the difference is > 1
-
-RateChange: the difference is > 1 / 5
+- Absolute change: the difference is `> 1`
+- RateChange: the difference is `> 1 / 5`
 
 # Train on my own images
 
 Look at [Learn models with your own images](https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/)
-
-and
-
-[Cookbook running the jupyter notebook with my own data](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/wiki/Cookbook-running-the-jupyter-notebook-with-my-own-data).
+and [Cookbook running the jupyter notebook with my own data](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/wiki/Cookbook-running-the-jupyter-notebook-with-my-own-data).
