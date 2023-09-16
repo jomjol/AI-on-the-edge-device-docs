@@ -66,7 +66,9 @@ Topic | Description
     + Payload:
        - any character, length > 0
 
-* #### ctrl/set_prevalue (Be aware: This feature is NOT available for versions 15.1.1 and older)
+* #### ctrl/set_prevalue
+  This feature is available since version [15.2.0](https://github.com/jomjol/AI-on-the-edge-device/releases/tag/v15.2.0)!
+ 
   Set the last valid value (previous value) to given value or the actual RAW value. Payload needs to be provided in JSON notation.
     + Payload:
        - Set to given value (value >= 0): `{"numbersname": "main", "value": 12345.67890}`
