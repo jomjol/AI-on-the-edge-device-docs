@@ -1,291 +1,976 @@
+
 <!DOCTYPE html>
 
-<html class="writer-html5" lang="en">
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/" rel="canonical"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://jomjol.github.io/AI-on-the-edge-device-docs/REST-API/" rel="canonical"/>
+<link href="../Demo-Mode/" rel="prev"/>
+<link href="../MQTT-API/" rel="next"/>
+<link href="../img/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.5.2, mkdocs-material-9.3.1" name="generator"/>
 <title>REST API - AI on the Edge Device</title>
-<link href="../css/theme.css" rel="stylesheet"/>
-<link href="../css/theme_extra.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
-<script>
-        // Current page data
-        var mkdocs_page_name = "REST API";
-        var mkdocs_page_input_path = "REST-API.md";
-        var mkdocs_page_url = "/AI-on-the-edge-device-docs/REST-API/";
-      </script>
-<!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link href="../assets/stylesheets/main.046329b4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.85d0ee34.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body class="wy-body-for-nav" role="document">
-<div class="wy-grid-for-nav">
-<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
-<div class="wy-side-scroll">
-<div class="wy-side-nav-search">
-<img src="https://jomjol.github.io/AI-on-the-edge-device-docs//img/logo.png"/>
-<a class="icon icon-home" href=".."> AI on the Edge Device
-</a><div role="search">
-<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
-<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#rest-api">1. 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="AI on the Edge Device" class="md-header__button md-logo" data-md-component="logo" href=".." title="AI on the Edge Device">
+<img alt="logo" src="../img/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            AI on the Edge Device
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              REST API
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
 </form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
-<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
-<p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Installation/">Installation</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../initial-setup/">Initial Setup</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Hardware-Compatibility/">Hardware Compatibility</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Best-Practice/">Best Practice</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQs/">Frequently Asked Questions</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">External Links</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/releases">Releases</a>
-</li>
-<li class="toctree-l1"><a class="" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">Web Installer/Console</a>
-</li>
-<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/issues">Create an Issue</a>
-</li>
-<li class="toctree-l1"><a class="" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">Join a Discussion</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Configuration</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Reference-Image/">Reference Image</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Alignment/">Alignment References</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ROI-Configuration/">ROIs (Regions of Interest)</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Configuration/">Graphical Configuration</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Choosing-the-Model/">Model Selection</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ota/">Over-The-Air (OTA) Update</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Advanced</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Parameters/">Parameters</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Integration-Home-Assistant/">Integration into Home Assistant</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../External-LED/">External LED</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../data-logging/">Data Logging</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../rolling-installation/">Living on the Edge</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Watermeter-specific-analog---digital-transition/">Analog/Digital Transition on Water Meters</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../collect-new-images/">Collect images to improve the models</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Learn-models-with-your-own-images/">Learn a model with your own images</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Correction%20Algorithm/">Correction Algorithm</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Neural-Network-Types/">Neural Network Types</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Additional-Information/">Additional Information</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../New-Releases-Notification/">Notification about new Releases</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Troubleshooting</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Error-Codes/">Reduced webinterface (error codes)</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../StatusLED-BlinkCodes/">Board status LED (blink codes)</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../WLAN-disconnect-reason/">WLAN disconnect reasons</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Error-Debugging/">Often observed issues</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Frequent-Reboots/">Basic hardware/config issues</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Demo-Mode/">Demo mode</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">API's</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal current" href="./">REST API</a>
-<ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#control">Control</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#flow_start">flow_start</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#setprevalue">setPreValue</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#gpio">GPIO</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#ota">ota</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#ota_pagehtml">ota_page.html</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#reboot">reboot</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#results">Results</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#json">json</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#value">value</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#img_tmprawjpg">img_tmp/raw.jpg</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#img_tmpalgjpg">img_tmp/alg.jpg</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#img_tmpalg_roijpg">img_tmp/alg_roi.jpg</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#status">Status</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#statusflow">statusflow</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#rssi">rssi</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cpu_temperature">cpu_temperature</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sysinfo">sysinfo</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#starttime">starttime</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#uptime">uptime</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#camera">Camera</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#lighton">lighton</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#lightoff">lightoff</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#capture">capture</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#capture_with_flashlight">capture_with_flashlight</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#save">save</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#logs">Logs</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#log">log</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#logfileact">logfileact</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#loghtml">log.html</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#diagnostics">Diagnostics</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#heap">heap</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../MQTT-API/">MQTT API</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Influx-DB/">Influx DB</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Development</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Build-Instructions/">Build the Project</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Upload-files-by-script/">Scripted File Upload</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Testing/">Testing Option for VSCode</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Release-creation/">Preparing for Release</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Old Pages (no longer maintained)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../outdated--Integrated-Functions/">Integrated Functions</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Assorted Pages</span></p>
-<ul>
-</ul>
 </div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/jomjol/AI-on-the-edge-device-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
 </div>
 </nav>
-<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
-<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
-<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
-<a href="..">AI on the Edge Device</a>
-</nav>
-<div class="wy-nav-content">
-<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
-<ul class="wy-breadcrumbs">
-<li><a aria-label="Docs" class="icon icon-home" href=".."></a> »</li>
-<li>API's »</li>
-<li class="breadcrumb-item active">REST API</li>
-<li class="wy-breadcrumbs-aside">
-<a class="icon icon-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs/edit/main/docs/REST-API.md"> Edit on GitHub</a>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="AI on the Edge Device" class="md-nav__button md-logo" data-md-component="logo" href=".." title="AI on the Edge Device">
+<img alt="logo" src="../img/logo.svg"/>
+</a>
+    AI on the Edge Device
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/jomjol/AI-on-the-edge-device-docs" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Welcome
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../initial-setup/">
+<span class="md-ellipsis">
+    Initial Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Hardware-Compatibility/">
+<span class="md-ellipsis">
+    Hardware Compatibility
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Best-Practice/">
+<span class="md-ellipsis">
+    Best Practice
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FAQs/">
+<span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+</a>
 </li>
 </ul>
-<hr/>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    External Links
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            External Links
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/jomjol/AI-on-the-edge-device/releases">
+<span class="md-ellipsis">
+    Releases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://jomjol.github.io/AI-on-the-edge-device/index.html">
+<span class="md-ellipsis">
+    Web Installer/Console
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/jomjol/AI-on-the-edge-device/issues">
+<span class="md-ellipsis">
+    Create an Issue
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/jomjol/AI-on-the-edge-device/discussions">
+<span class="md-ellipsis">
+    Join a Discussion
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Reference-Image/">
+<span class="md-ellipsis">
+    Reference Image
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Alignment/">
+<span class="md-ellipsis">
+    Alignment References
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ROI-Configuration/">
+<span class="md-ellipsis">
+    ROIs (Regions of Interest)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Configuration/">
+<span class="md-ellipsis">
+    Graphical Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Choosing-the-Model/">
+<span class="md-ellipsis">
+    Model Selection
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ota/">
+<span class="md-ellipsis">
+    Over-The-Air (OTA) Update
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Advanced
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Parameters/">
+<span class="md-ellipsis">
+    Parameters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Integration-Home-Assistant/">
+<span class="md-ellipsis">
+    Integration into Home Assistant
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../External-LED/">
+<span class="md-ellipsis">
+    External LED
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-logging/">
+<span class="md-ellipsis">
+    Data Logging
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rolling-installation/">
+<span class="md-ellipsis">
+    Living on the Edge
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Watermeter-specific-analog---digital-transition/">
+<span class="md-ellipsis">
+    Analog/Digital Transition on Water Meters
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../collect-new-images/">
+<span class="md-ellipsis">
+    Collect images to improve the models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Learn-models-with-your-own-images/">
+<span class="md-ellipsis">
+    Learn a model with your own images
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Correction%20Algorithm/">
+<span class="md-ellipsis">
+    Correction Algorithm
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Neural-Network-Types/">
+<span class="md-ellipsis">
+    Neural Network Types
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Additional-Information/">
+<span class="md-ellipsis">
+    Additional Information
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../New-Releases-Notification/">
+<span class="md-ellipsis">
+    Notification about new Releases
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Troubleshooting
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Error-Codes/">
+<span class="md-ellipsis">
+    Reduced webinterface (error codes)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../StatusLED-BlinkCodes/">
+<span class="md-ellipsis">
+    Board status LED (blink codes)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../WLAN-disconnect-reason/">
+<span class="md-ellipsis">
+    WLAN disconnect reasons
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Error-Debugging/">
+<span class="md-ellipsis">
+    Often observed issues
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Frequent-Reboots/">
+<span class="md-ellipsis">
+    Basic hardware/config issues
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Demo-Mode/">
+<span class="md-ellipsis">
+    Demo mode
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    API's
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            API's
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    REST API
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    REST API
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control">1.1 
+    Control
+  </a>
+<nav aria-label="Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flow_start">1.1.1 
+    flow_start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setprevalue">1.1.2 
+    setPreValue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">1.1.3 
+    GPIO
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ota_pagehtml">1.1.4 
+    ota_page.html
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reboot">1.1.5 
+    reboot
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results">1.2 
+    Results
+  </a>
+<nav aria-label="Results" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">1.2.1 
+    json
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#value">1.2.2 
+    value
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmprawjpg">1.2.3 
+    img_tmp/raw.jpg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmpalgjpg">1.2.4 
+    img_tmp/alg.jpg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmpalg_roijpg">1.2.5 
+    img_tmp/alg_roi.jpg
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status">1.3 
+    Status
+  </a>
+<nav aria-label="Status" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statusflow">1.3.1 
+    statusflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rssi">1.3.2 
+    rssi
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu_temperature">1.3.3 
+    cpu_temperature
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sysinfo">1.3.4 
+    sysinfo
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starttime">1.3.5 
+    starttime
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uptime">1.3.6 
+    uptime
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#camera">1.4 
+    Camera
+  </a>
+<nav aria-label="Camera" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lighton">1.4.1 
+    lighton
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lightoff">1.4.2 
+    lightoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capture">1.4.3 
+    capture
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capture_with_flashlight">1.4.4 
+    capture_with_flashlight
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save">1.4.5 
+    save
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logs">1.5 
+    Logs
+  </a>
+<nav aria-label="Logs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log">1.5.1 
+    log
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logfileact">1.5.2 
+    logfileact
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loghtml">1.5.3 
+    log.html
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagnostics">1.6 
+    Diagnostics
+  </a>
+<nav aria-label="Diagnostics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heap">1.6.1 
+    heap
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MQTT-API/">
+<span class="md-ellipsis">
+    MQTT API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Influx-DB/">
+<span class="md-ellipsis">
+    Influx DB
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Build-Instructions/">
+<span class="md-ellipsis">
+    Build the Project
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Upload-files-by-script/">
+<span class="md-ellipsis">
+    Scripted File Upload
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Testing/">
+<span class="md-ellipsis">
+    Testing Option for VSCode
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Release-creation/">
+<span class="md-ellipsis">
+    Preparing for Release
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Old Pages (no longer maintained)
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Old Pages (no longer maintained)
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../outdated--Integrated-Functions/">
+<span class="md-ellipsis">
+    Integrated Functions
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Assorted Pages
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </div>
-<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-<div class="section" itemprop="articleBody">
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control">1.1 
+    Control
+  </a>
+<nav aria-label="Control" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flow_start">1.1.1 
+    flow_start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setprevalue">1.1.2 
+    setPreValue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpio">1.1.3 
+    GPIO
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ota_pagehtml">1.1.4 
+    ota_page.html
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reboot">1.1.5 
+    reboot
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results">1.2 
+    Results
+  </a>
+<nav aria-label="Results" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">1.2.1 
+    json
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#value">1.2.2 
+    value
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmprawjpg">1.2.3 
+    img_tmp/raw.jpg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmpalgjpg">1.2.4 
+    img_tmp/alg.jpg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#img_tmpalg_roijpg">1.2.5 
+    img_tmp/alg_roi.jpg
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status">1.3 
+    Status
+  </a>
+<nav aria-label="Status" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statusflow">1.3.1 
+    statusflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rssi">1.3.2 
+    rssi
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu_temperature">1.3.3 
+    cpu_temperature
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sysinfo">1.3.4 
+    sysinfo
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starttime">1.3.5 
+    starttime
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uptime">1.3.6 
+    uptime
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#camera">1.4 
+    Camera
+  </a>
+<nav aria-label="Camera" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lighton">1.4.1 
+    lighton
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lightoff">1.4.2 
+    lightoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capture">1.4.3 
+    capture
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capture_with_flashlight">1.4.4 
+    capture_with_flashlight
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save">1.4.5 
+    save
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logs">1.5 
+    Logs
+  </a>
+<nav aria-label="Logs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log">1.5.1 
+    log
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logfileact">1.5.2 
+    logfileact
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loghtml">1.5.3 
+    log.html
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagnostics">1.6 
+    Diagnostics
+  </a>
+<nav aria-label="Diagnostics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heap">1.6.1 
+    heap
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="rest-api"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> REST API</h1>
 <p>Various information is directly accessible over specific REST calls.</p>
 <p>To use it, just append them to the IP, separated with a <code>/</code>, e.g. <code>http://192.168.1.1/json</code></p>
 <p>Note: For more detailed information to the REST handler, have a look to the code in the repository: <a href="https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri">registered handlers</a></p>
 <h2 id="control"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Control</h2>
-<ul>
-<li>
 <h3 id="flow_start"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> flow_start</h3>
-  Trigger a flow start (if not running)<ul>
-<li>Payload:<ul>
-<li>No payload needed</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
+<p>Trigger a flow start (if not running)
+     + Payload:
+        - No payload needed</p>
 <h3 id="setprevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> setPreValue</h3>
-<p>Set the last valid value (previous value) to given value or the actual RAW value.</p>
-<ul>
-<li>
-<p>Payload:</p>
-<ul>
-<li>Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code> </li>
-<li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
-<li>
-<p><code>value=</code> provide the value to be set</p>
-</li>
-<li>
-<p>Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. <code>/setPreValue?numbers=main&amp;value=-1</code></p>
-</li>
-<li><code>numbers=</code> Provide name of number sequence, e.g. main</li>
-<li><code>value=</code> provide yna negative number</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
+<p>Set the last valid value (previous value) to given value or the actual RAW value.
+     + Payload:
+        - Set to given value (value &gt;= 0), e.g. <code>/setPreValue?numbers=main&amp;value=1234.5678</code><br/>
+           * <code>numbers=</code> Provide name of number sequence, e.g. main
+           * <code>value=</code> provide the value to be set</p>
+<pre><code>    - Set to actual RAW value (value &lt; 0, a valid RAW value is mandatory), e.g. `/setPreValue?numbers=main&amp;value=-1`
+       * `numbers=` Provide name of number sequence, e.g. main
+       * `value=` provide yna negative number
+</code></pre>
 <h3 id="gpio"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> GPIO</h3>
-</li>
+<ul>
 <li>
 <p>Control a GPIO output</p>
 <ul>
@@ -303,25 +988,15 @@
 <li>Example: <code>/GPIO?GPIO=12</code></li>
 </ul>
 </li>
-<li>
-<h3 id="ota"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> ota</h3>
-</li>
-<li>
-<h3 id="ota_pagehtml"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> ota_page.html</h3>
-<p>Opens the Over-The-Air update html page</p>
-</li>
-<li>
-<h3 id="reboot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> reboot</h3>
-<p>Trigger a reboot of the device</p>
-</li>
 </ul>
+<h3 id="ota_pagehtml"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> ota_page.html</h3>
+<p>Opens the Over-The-Air update html page</p>
+<h3 id="reboot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> reboot</h3>
+<p>Trigger a reboot of the device</p>
 <h2 id="results"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Results</h2>
-<ul>
-<li>
 <h3 id="json"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> json</h3>
-  Show result in JSON syntax</li>
-<li>
-<p>Example: 
+<p>Show result in JSON syntax
+  - Example: 
   <code>{
   "main":
     {
@@ -333,155 +1008,85 @@
       "timestamp": "2023-01-13T16:00:42+0100"
     }
   }</code></p>
-</li>
-<li>
 <h3 id="value"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> value</h3>
-<p>Show single result values</p>
-</li>
-<li>The <code>value</code> entrypoint also support parameters:</li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=value</code></li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=raw</code></li>
-<li><code>http://&lt;IP&gt;/value?all=true&amp;type=error</code></li>
-<li>
-<p><code>http://&lt;IP&gt;/value?all=true&amp;type=prevalue</code></p>
-</li>
-<li>
+<p>Show single result values
+  - The <code>value</code> entrypoint also support parameters:
+   - <code>http://&lt;IP&gt;/value?all=true&amp;type=value</code>
+   - <code>http://&lt;IP&gt;/value?all=true&amp;type=raw</code>
+   - <code>http://&lt;IP&gt;/value?all=true&amp;type=error</code>
+   - <code>http://&lt;IP&gt;/value?all=true&amp;type=prevalue</code></p>
 <h3 id="img_tmprawjpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> img_tmp/raw.jpg</h3>
 <p>Capture and show a new raw image</p>
-</li>
-<li>
 <h3 id="img_tmpalgjpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.4</span> img_tmp/alg.jpg</h3>
 <p>Show last aligned image</p>
-</li>
-<li>
 <h3 id="img_tmpalg_roijpg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.5</span> img_tmp/alg_roi.jpg</h3>
 <p>Show last aligned image including ROI overlay</p>
-</li>
-</ul>
 <h2 id="status"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Status</h2>
-<ul>
-<li>
 <h3 id="statusflow"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> statusflow</h3>
-  Show the actual step of the flow incl. timestamp</li>
-<li>
-<p>Example: <code>Take Image (15:56:34)</code></p>
-</li>
-<li>
+<p>Show the actual step of the flow incl. timestamp
+  - Example: <code>Take Image (15:56:34)</code></p>
 <h3 id="rssi"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> rssi</h3>
-<p>Show the WIFI signal strength (Unit: dBm)</p>
-</li>
-<li>
-<p>Example: <code>-51</code></p>
-</li>
-<li>
+<p>Show the WIFI signal strength (Unit: dBm)
+  - Example: <code>-51</code></p>
 <h3 id="cpu_temperature"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> cpu_temperature</h3>
-<p>Show the CPU temperature (Unit: °C)</p>
-</li>
-<li>
-<p>Example: <code>38</code></p>
-</li>
-<li>
+<p>Show the CPU temperature (Unit: °C)
+  - Example: <code>38</code></p>
 <h3 id="sysinfo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.4</span> sysinfo</h3>
-<p>Show system infos in JSON syntax</p>
-</li>
-<li>
-<p>Example: <code>[{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]</code></p>
-</li>
-<li>
+<p>Show system infos in JSON syntax
+  - Example: <code>[{"firmware": "","buildtime": "2023-01-25 12:41","gitbranch": "HEAD","gittag": "","gitrevision": "af13c68+","html": "Development-Branch: HEAD (Commit: af13c68+)","cputemp": "64","hostname": "WaterMeterTest","IPv4": "192.168.xxx.xxx","freeHeapMem": "2818330"}]</code></p>
 <h3 id="starttime"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.5</span> starttime</h3>
-<p>Show starttime</p>
-</li>
-<li>
-<p>Example: <code>20230113-154634</code></p>
-</li>
-<li>
+<p>Show starttime
+  - Example: <code>20230113-154634</code></p>
 <h3 id="uptime"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.6</span> uptime</h3>
-<p>Show uptime</p>
-</li>
-<li>Example: <code>0d 00h 15m 50s</code></li>
-</ul>
+<p>Show uptime
+  - Example: <code>0d 00h 15m 50s</code></p>
 <h2 id="camera"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Camera</h2>
-<ul>
-<li>
 <h3 id="lighton"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.1</span> lighton</h3>
 <p>Switch the camera flashlight on </p>
-</li>
-<li>
 <h3 id="lightoff"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.2</span> lightoff</h3>
 <p>Switch the camera flashlight off</p>
-</li>
-<li>
 <h3 id="capture"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.3</span> capture</h3>
 <p>Capture a new image (without flashlight)</p>
-</li>
-<li>
 <h3 id="capture_with_flashlight"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.4</span> capture_with_flashlight</h3>
 <p>Capture a new image with flashlight</p>
-</li>
-<li>
 <h3 id="save"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.5</span> save</h3>
-<p>Save a new image to SD card</p>
-</li>
-<li>The <code>save</code> entrypoint also support parameters:</li>
-<li><code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1000</code></li>
-</ul>
+<p>Save a new image to SD card
+  - The <code>save</code> entrypoint also support parameters:
+   - <code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1000</code></p>
 <h2 id="logs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Logs</h2>
-<ul>
-<li>
 <h3 id="log"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.1</span> log</h3>
 <p>Last part of todays log (last 80 kBytes))</p>
-</li>
-<li>
 <h3 id="logfileact"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.2</span> logfileact</h3>
 <p>Full log of today</p>
-</li>
-<li>
 <h3 id="loghtml"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.3</span> log.html</h3>
 <p>Opens the log html page</p>
-</li>
-</ul>
 <h2 id="diagnostics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Diagnostics</h2>
-<ul>
-<li>
 <h3 id="heap"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> heap</h3>
-  print relevant memory (heap) information</li>
-<li>Example: <code>Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427</code></li>
-</ul>
+<p>print relevant memory (heap) information
+  - Example: <code>Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427</code></p>
+</article>
 </div>
-</div><footer>
-<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../Demo-Mode/" title="Demo mode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../MQTT-API/" title="MQTT API">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
-<hr/>
-<div role="contentinfo">
-<!-- Copyright etc -->
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
 </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</div>
+</div>
 </footer>
 </div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
 </div>
-</section>
-</div>
-<div aria-label="Versions" class="rst-versions" role="note">
-<span class="rst-current-version" data-toggle="rst-current-version">
-<span>
-<a class="fa fa-github" href="https://github.com/jomjol/AI-on-the-edge-device-docs" style="color: #fcfcfc"> GitHub</a>
-</span>
-<span><a href="../Demo-Mode/" style="color: #fcfcfc">« Previous</a></span>
-<span><a href="../MQTT-API/" style="color: #fcfcfc">Next »</a></span>
-</span>
-</div>
-<script src="../js/jquery-3.6.0.min.js"></script>
-<script>var base_url = "..";</script>
-<script src="../js/theme_extra.js"></script>
-<script src="../js/theme.js"></script>
-<script src="../search/main.js"></script>
-<script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
 </body>
 </html>
