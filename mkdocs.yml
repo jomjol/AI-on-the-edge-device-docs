@@ -10,9 +10,11 @@ theme:
 
 
 plugins:
-    - search
-    - awesome-pages:
-        filename: nav.yml
+  - search
+  - awesome-pages:
+      filename: nav.yml
+  - enumerate-headings:
+      increment_across_pages: false
 
 # The navigation is configured in the docs/nav.yml file!
 

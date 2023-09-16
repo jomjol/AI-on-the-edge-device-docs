@@ -1,4 +1,4 @@
- # Reduced webinterface (error indication and tracing)
+# Reduced webinterface (error indication and tracing)
 
 Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.
 

@@ -1,4 +1,4 @@
-## Testing Option for VSCode
+# Testing Option for VSCode
 
 You can test your functions directly on the device. 
 
