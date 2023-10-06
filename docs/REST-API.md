@@ -35,12 +35,13 @@ Note: For more detailed information to the REST handler, have a look to the code
        - `/GPIO?GPIO={PinNumber}`
      - Example: `/GPIO?GPIO=12`
 
-### ota_page.html
-  Opens the Over-The-Air update html page
-
 ### reboot
   Trigger a reboot of the device
 
+### mqtt_publish_discovery
+  Trigger re-sending of the Home Assistant discovery topics.
+  The topics will get send at the end of the next round.
+  
 ## Results
 ### json
   Show result in JSON syntax
