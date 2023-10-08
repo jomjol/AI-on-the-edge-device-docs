@@ -192,12 +192,12 @@ template:
 
   - name: "Watermeter Value from JSON"
     unique_id: water_meter_value_from_json
-     state: >-
+    state: >-
             {{ state_attr('sensor.watermeter_json','main')['value'] | float }}
-     unit_of_measurement: 'm³'
-     device_class: water
-     state_class: total_increasing
-     icon: mdi:gauge
+    unit_of_measurement: 'm³'
+    device_class: water
+    state_class: total_increasing
+    icon: mdi:gauge
 
 ```
 
