@@ -56,10 +56,10 @@ This project is an evolution of the [water-meter-system-complete](https://github
 A lot of people created useful Youtube videos which might help you getting started.
 Here a small selection:
 
-- https://www.youtube.com/watch?v=HKBofb1cnNc
-- https://www.youtube.com/watch?v=yyf0ORNLCk4
-- https://www.youtube.com/watch?v=XxmTubGek6M
-- https://www.youtube.com/watch?v=mDIJEyElkAU
-- https://www.youtube.com/watch?v=SssiPkyKVVs
-- https://www.youtube.com/watch?v=MAHE_QyHZFQ
-- https://www.youtube.com/watch?v=Uap_6bwtILQ
+- [youtube.com/watch?v=HKBofb1cnNc](https://www.youtube.com/watch?v=HKBofb1cnNc)
+- [youtube.com/watch?v=yyf0ORNLCk4](https://www.youtube.com/watch?v=yyf0ORNLCk4)
+- [youtube.com/watch?v=XxmTubGek6M](https://www.youtube.com/watch?v=XxmTubGek6M)
+- [youtube.com/watch?v=mDIJEyElkAU](https://www.youtube.com/watch?v=mDIJEyElkAU)
+- [youtube.com/watch?v=SssiPkyKVVs](https://www.youtube.com/watch?v=SssiPkyKVVs)
+- [youtube.com/watch?v=MAHE_QyHZFQ](https://www.youtube.com/watch?v=MAHE_QyHZFQ)
+- [youtube.com/watch?v=Uap_6bwtILQ](https://www.youtube.com/watch?v=Uap_6bwtILQ)
