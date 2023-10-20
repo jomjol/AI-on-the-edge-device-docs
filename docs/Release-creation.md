@@ -21,4 +21,4 @@
     * the artifacts are downloadable from release 
     * The documented changes were applied to the release
 6. Merge master back in `rolling`
-7. Check that the [Web Installer]() shows the right version
+7. Check that the [Web Installer](https://jomjol.github.io/AI-on-the-edge-device) shows the right version. If needed, run he action manually: https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml
