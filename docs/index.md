@@ -52,7 +52,7 @@ There are two types of CNN implemented, a classification network for reading the
 
 This project is an evolution of the [water-meter-system-complete](https://github.com/jomjol/water-meter-system-complete), which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural network's backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD card as data storage.
 
-# 3th Party Tutorials
+# Additional Tutorials
 A lot of people created useful Youtube videos which might help you getting started.
 Here a small selection:
 
