@@ -41,10 +41,11 @@ nav:
     - Basic hardware/config issues: Frequent-Reboots.md
     - Demo mode: Demo-Mode.md
 
-  - Releases: https://github.com/jomjol/AI-on-the-edge-device/releases
-  - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
-  - Create an Issue: https://github.com/jomjol/AI-on-the-edge-device/issues
-  - Join a Discussion: https://github.com/jomjol/AI-on-the-edge-device/discussions
+  - Quick Links:
+    - Releases: https://github.com/jomjol/AI-on-the-edge-device/releases
+    - Web Installer/Console: https://jomjol.github.io/AI-on-the-edge-device/index.html
+    - Create an Issue: https://github.com/jomjol/AI-on-the-edge-device/issues
+    - Join a Discussion: https://github.com/jomjol/AI-on-the-edge-device/discussions
   
   - API's:
       - REST-API.md
