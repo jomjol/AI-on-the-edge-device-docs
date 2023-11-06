@@ -8,7 +8,7 @@ For training the model you will need a python and Jupyter installation.
 All current labeled images you can find under [ziffer_sortiert_raw](https://github.com/jomjol/neural-network-digital-counter-readout/tree/master/ziffer_sortiert_raw)
 
 ### dig-class11 models (digits)
-Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout) .
+Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout).
 
 Install all requirements for running the notebooks.
 
@@ -24,7 +24,7 @@ Put your labeled images into `/ziffer_sortiert_raw` folder and run
 It creates a dig-class11_xxxx_s2.tflite model, you can upload to the `config` folder on your device and test it. 
 
 ### dig-class100 / dig-cont models (digits)
-Fork and checkout [neural-network-analog-needle-readout](https://github.com/jomjol/neural-network-analog-needle-readout).
+Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout).
 
 All labeled images you can find under [Images](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/tree/master/images)
 
