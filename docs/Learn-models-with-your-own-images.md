@@ -8,7 +8,7 @@ For training the model you will need a python and Jupyter installation.
 All current labeled images you can find under [ziffer_sortiert_raw](https://github.com/jomjol/neural-network-digital-counter-readout/tree/master/ziffer_sortiert_raw)
 
 ### dig-class11 models (digits)
-Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout).
+Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout) .
 
 Install all requirements for running the notebooks.
 
