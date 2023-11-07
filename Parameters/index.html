@@ -9,9 +9,9 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.4.6" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.8" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
-<link href="../assets/stylesheets/main.35e1ed30.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.4b4a2bd9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -512,42 +512,57 @@
 <nav aria-label="Section MQTT" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-clientid">1.6.1 
+<a class="md-nav__link" href="#parameter-cacert">1.6.1 
+    Parameter CACert
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-clientcert">1.6.2 
+    Parameter ClientCert
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-clientid">1.6.3 
     Parameter ClientID
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.2 
+<a class="md-nav__link" href="#parameter-clientkey">1.6.4 
+    Parameter ClientKey
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
     Parameter HomeassistantDiscovery
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maintopic">1.6.3 
+<a class="md-nav__link" href="#parameter-maintopic">1.6.6 
     Parameter MainTopic
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-metertype">1.6.4 
+<a class="md-nav__link" href="#parameter-metertype">1.6.7 
     Parameter MeterType
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-retainmessages">1.6.5 
+<a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
     Parameter RetainMessages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri">1.6.6 
+<a class="md-nav__link" href="#parameter-uri">1.6.9 
     Parameter Uri
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.7 
+<a class="md-nav__link" href="#parameter-password">1.6.10 
     Parameter password
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.8 
+<a class="md-nav__link" href="#parameter-user">1.6.11 
     Parameter user
   </a>
 </li>
@@ -1359,42 +1374,57 @@
 <nav aria-label="Section MQTT" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-clientid">1.6.1 
+<a class="md-nav__link" href="#parameter-cacert">1.6.1 
+    Parameter CACert
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-clientcert">1.6.2 
+    Parameter ClientCert
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-clientid">1.6.3 
     Parameter ClientID
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.2 
+<a class="md-nav__link" href="#parameter-clientkey">1.6.4 
+    Parameter ClientKey
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
     Parameter HomeassistantDiscovery
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maintopic">1.6.3 
+<a class="md-nav__link" href="#parameter-maintopic">1.6.6 
     Parameter MainTopic
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-metertype">1.6.4 
+<a class="md-nav__link" href="#parameter-metertype">1.6.7 
     Parameter MeterType
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-retainmessages">1.6.5 
+<a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
     Parameter RetainMessages
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri">1.6.6 
+<a class="md-nav__link" href="#parameter-uri">1.6.9 
     Parameter Uri
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.7 
+<a class="md-nav__link" href="#parameter-password">1.6.10 
     Parameter password
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.8 
+<a class="md-nav__link" href="#parameter-user">1.6.11 
     Parameter user
   </a>
 </li>
@@ -2042,20 +2072,47 @@ as the difference normalized to the interval (<code>RateChange</code> = differen
 This also works through a reboot of the device!</p>
 <hr style="border:2px solid"/>
 <h2 id="section-mqtt"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Section <code>MQTT</code></h2>
+<p><a id="MQTT-CACert"></a></p>
+<h3 id="parameter-cacert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Parameter <code>CACert</code></h3>
+<p>Default Value: ``</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Path to the CA certificate file.</p>
+<hr style="border:2px solid"/>
+<p><a id="MQTT-ClientCert"></a></p>
+<h3 id="parameter-clientcert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Parameter <code>ClientCert</code></h3>
+<p>Default Value: ``</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Path to the Client Certificate file.</p>
+<hr style="border:2px solid"/>
 <p><a id="MQTT-ClientID"></a></p>
-<h3 id="parameter-clientid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Parameter <code>ClientID</code></h3>
+<h3 id="parameter-clientid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.3</span> Parameter <code>ClientID</code></h3>
 <p>Default Value: <code>watermeter</code></p>
 <p>Client ID used to connect to the MQTT broker.
 If disabled, the <code>hostname</code> will be used.</p>
 <hr style="border:2px solid"/>
+<p><a id="MQTT-ClientKey"></a></p>
+<h3 id="parameter-clientkey"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.4</span> Parameter <code>ClientKey</code></h3>
+<p>Default Value: ``</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Path to the Client Key file.</p>
+<hr style="border:2px solid"/>
 <p><a id="MQTT-HomeassistantDiscovery"></a></p>
-<h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Parameter <code>HomeassistantDiscovery</code></h3>
+<h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>HomeassistantDiscovery</code></h3>
 <p>Default Value: <code>true</code></p>
 <p>Enable or disable the Homeassistant Discovery.
 See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-MainTopic"></a></p>
-<h3 id="parameter-maintopic"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.3</span> Parameter <code>MainTopic</code></h3>
+<h3 id="parameter-maintopic"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.6</span> Parameter <code>MainTopic</code></h3>
 <p>Default Value: <code>watermeter</code></p>
 <p>MQTT main topic, under which the counters are published.</p>
 <p>The single value will be published with the following key: <code>MAINTOPIC/NUMBER/RESULT_TOPIC</code></p>
@@ -2073,7 +2130,7 @@ See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topic
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-MeterType"></a></p>
-<h3 id="parameter-metertype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.4</span> Parameter <code>MeterType</code></h3>
+<h3 id="parameter-metertype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.7</span> Parameter <code>MeterType</code></h3>
 <p>Default Value: <code>other</code></p>
 <p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
 <div class="admonition note">
@@ -2085,22 +2142,22 @@ Eg. if your meter provides <code>mÂ³</code>, you need to also set it to <code>mÂ
 Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</code> so the value is converted to <code>liters</code>!</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-RetainMessages"></a></p>
-<h3 id="parameter-retainmessages"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>RetainMessages</code></h3>
+<h3 id="parameter-retainmessages"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.8</span> Parameter <code>RetainMessages</code></h3>
 <p>Default Value: <code>true</code></p>
 <p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-Uri"></a></p>
-<h3 id="parameter-uri"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.6</span> Parameter <code>Uri</code></h3>
+<h3 id="parameter-uri"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.9</span> Parameter <code>Uri</code></h3>
 <p>Default Value: <code>mqtt://IP-ADRESS:1883</code></p>
 <p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-password"></a></p>
-<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.7</span> Parameter <code>password</code></h3>
+<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.10</span> Parameter <code>password</code></h3>
 <p>Default Value: <code>PASSWORD</code></p>
 <p>Password for MQTT authentication.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-user"></a></p>
-<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.8</span> Parameter <code>user</code></h3>
+<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.11</span> Parameter <code>user</code></h3>
 <p>Default Value: <code>USERNAME</code></p>
 <p>Username for MQTT authentication.</p>
 <hr style="border:2px solid"/>
@@ -2523,6 +2580,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+<script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
 </body>
 </html>
