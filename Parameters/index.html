@@ -2074,21 +2074,29 @@ This also works through a reboot of the device!</p>
 <h2 id="section-mqtt"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Section <code>MQTT</code></h2>
 <p><a id="MQTT-CACert"></a></p>
 <h3 id="parameter-cacert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Parameter <code>CACert</code></h3>
-<p>Default Value: ``</p>
+<p>Default Value: <code>""</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the CA certificate file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://IP-ADRESS:8883</code>!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientCert"></a></p>
 <h3 id="parameter-clientcert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Parameter <code>ClientCert</code></h3>
-<p>Default Value: ``</p>
+<p>Default Value: <code>""</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Certificate file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://IP-ADRESS:8883</code>!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientID"></a></p>
 <h3 id="parameter-clientid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.3</span> Parameter <code>ClientID</code></h3>
@@ -2098,12 +2106,16 @@ If disabled, the <code>hostname</code> will be used.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientKey"></a></p>
 <h3 id="parameter-clientkey"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.4</span> Parameter <code>ClientKey</code></h3>
-<p>Default Value: ``</p>
+<p>Default Value: <code>""</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Key file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://IP-ADRESS:8883</code>!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-HomeassistantDiscovery"></a></p>
 <h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>HomeassistantDiscovery</code></h3>
