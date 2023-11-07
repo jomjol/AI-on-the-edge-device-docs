@@ -1,6 +1,8 @@
 # Parameter `ClientKey`
 Default Value: `""`
 
+Example: `/config/certs/client.pem.key`.
+
 !!! Warning
     This is an **Expert Parameter**! Only change it if you understand what it does!
 
