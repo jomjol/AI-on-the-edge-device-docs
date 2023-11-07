@@ -26,3 +26,6 @@ AutoStart
 Hostname
 RSSIThreshold
 TimeServer
+CACert
+ClientCert
+ClientKey
