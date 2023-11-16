@@ -1,4 +1,5 @@
 # Parameter `Database`
-Default Value: `''`
 
-Name of the InfluxDB v2 Database into which to publish the values.
+!!! Warning
+    This parameter is unused!
+    Use [`Basket`](../Parameters/#InfluxDBv2-Basket) instead!
