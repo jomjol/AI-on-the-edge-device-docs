@@ -620,42 +620,47 @@
 <nav aria-label="Section InfluxDBv2" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-database_1">1.8.1 
+<a class="md-nav__link" href="#parameter-basket">1.8.1 
+    Parameter Basket
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-database_1">1.8.2 
     Parameter Database
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-measurement_2">1.8.2 
+<a class="md-nav__link" href="#parameter-measurement_2">1.8.3 
     Parameter Measurement
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberfield_1">1.8.3 
+<a class="md-nav__link" href="#parameter-numberfield_1">1.8.4 
     Parameter &lt;NUMBER&gt;.Field
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberfieldname">1.8.4 
+<a class="md-nav__link" href="#parameter-numberfieldname">1.8.5 
     Parameter NUMBER.Fieldname
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-measurement_3">1.8.5 
+<a class="md-nav__link" href="#parameter-measurement_3">1.8.6 
     Parameter Measurement
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-org">1.8.6 
+<a class="md-nav__link" href="#parameter-org">1.8.7 
     Parameter Org
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-token">1.8.7 
+<a class="md-nav__link" href="#parameter-token">1.8.8 
     Parameter Token
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri_2">1.8.8 
+<a class="md-nav__link" href="#parameter-uri_2">1.8.9 
     Parameter Uri
   </a>
 </li>
@@ -1482,42 +1487,47 @@
 <nav aria-label="Section InfluxDBv2" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-database_1">1.8.1 
+<a class="md-nav__link" href="#parameter-basket">1.8.1 
+    Parameter Basket
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-database_1">1.8.2 
     Parameter Database
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-measurement_2">1.8.2 
+<a class="md-nav__link" href="#parameter-measurement_2">1.8.3 
     Parameter Measurement
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberfield_1">1.8.3 
+<a class="md-nav__link" href="#parameter-numberfield_1">1.8.4 
     Parameter &lt;NUMBER&gt;.Field
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberfieldname">1.8.4 
+<a class="md-nav__link" href="#parameter-numberfieldname">1.8.5 
     Parameter NUMBER.Fieldname
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-measurement_3">1.8.5 
+<a class="md-nav__link" href="#parameter-measurement_3">1.8.6 
     Parameter Measurement
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-org">1.8.6 
+<a class="md-nav__link" href="#parameter-org">1.8.7 
     Parameter Org
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-token">1.8.7 
+<a class="md-nav__link" href="#parameter-token">1.8.8 
     Parameter Token
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri_2">1.8.8 
+<a class="md-nav__link" href="#parameter-uri_2">1.8.9 
     Parameter Uri
   </a>
 </li>
@@ -2233,43 +2243,51 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 </div>
 <hr style="border:2px solid"/>
 <h2 id="section-influxdbv2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> Section <code>InfluxDBv2</code></h2>
-<p><a id="InfluxDBv2-Database"></a></p>
-<h3 id="parameter-database_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Parameter <code>Database</code></h3>
+<p><a id="InfluxDBv2-Basket"></a></p>
+<h3 id="parameter-basket"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Parameter <code>Basket</code></h3>
 <p>Default Value: <code>''</code></p>
-<p>Name of the InfluxDB v2 Database into which to publish the values.</p>
+<p>Name of the InfluxDB v2 Basket into which to publish the values.</p>
+<hr style="border:2px solid"/>
+<p><a id="InfluxDBv2-Database"></a></p>
+<h3 id="parameter-database_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> Parameter <code>Database</code></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This parameter is unused!
+Use <a href="../Parameters/#InfluxDBv2-Basket"><code>Basket</code></a> instead!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-Measurement"></a></p>
-<h3 id="parameter-measurement_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> Parameter <code>Measurement</code></h3>
+<h3 id="parameter-measurement_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.3</span> Parameter <code>Measurement</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Please fill me with an explanation and useful links.</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-NUMBER.Field"></a></p>
-<h3 id="parameter-numberfield_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.3</span> Parameter <code>&lt;NUMBER&gt;.Field</code></h3>
+<h3 id="parameter-numberfield_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.4</span> Parameter <code>&lt;NUMBER&gt;.Field</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Field for InfluxDB v2 to use for saving.</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-NUMBER.Fieldname"></a></p>
-<h3 id="parameter-numberfieldname"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.4</span> Parameter <code>NUMBER.Fieldname</code></h3>
+<h3 id="parameter-numberfieldname"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.5</span> Parameter <code>NUMBER.Fieldname</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Please fill me with an explanation and useful links.</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-NUMBER.Measurement"></a></p>
-<h3 id="parameter-measurement_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.5</span> Parameter <code>Measurement</code></h3>
+<h3 id="parameter-measurement_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.6</span> Parameter <code>Measurement</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Name of the InfluxDB v2 Measurement to use to publish the value.</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-Org"></a></p>
-<h3 id="parameter-org"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.6</span> Parameter <code>Org</code></h3>
+<h3 id="parameter-org"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.7</span> Parameter <code>Org</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Organisation (Org) for InfluxDB v2 authentication</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-Token"></a></p>
-<h3 id="parameter-token"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.7</span> Parameter <code>Token</code></h3>
+<h3 id="parameter-token"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.8</span> Parameter <code>Token</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>Token for InfluxDB v2 authentication</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-Uri"></a></p>
-<h3 id="parameter-uri_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.8</span> Parameter <code>Uri</code></h3>
+<h3 id="parameter-uri_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.9</span> Parameter <code>Uri</code></h3>
 <p>Default Value: <code>undefined</code></p>
 <p>URI of the HTTP interface to InfluxDB v2, without trailing slash, e.g. <code>http://192.168.1.1:8086</code>.</p>
 <hr style="border:2px solid"/>
