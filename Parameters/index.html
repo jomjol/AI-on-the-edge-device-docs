@@ -9,9 +9,9 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.4.8" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.10" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
-<link href="../assets/stylesheets/main.4b4a2bd9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -272,552 +272,752 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-takeimage">1.1 
-    Section TakeImage
-  </a>
+<span class="md-ellipsis">
+      Section TakeImage
+    </span>
+</a>
 <nav aria-label="Section TakeImage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-brightness">1.1.1 
-    Parameter Brightness
-  </a>
+<span class="md-ellipsis">
+      Parameter Brightness
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-contrast">1.1.2 
-    Parameter Contrast
-  </a>
+<span class="md-ellipsis">
+      Parameter Contrast
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-demo">1.1.3 
-    Parameter Demo
-  </a>
+<span class="md-ellipsis">
+      Parameter Demo
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-fixedexposure">1.1.4 
-    Parameter FixedExposure
-  </a>
+<span class="md-ellipsis">
+      Parameter FixedExposure
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-imagequality">1.1.5 
-    Parameter ImageQuality
-  </a>
+<span class="md-ellipsis">
+      Parameter ImageQuality
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-imagesize">1.1.6 
-    Parameter ImageSize
-  </a>
+<span class="md-ellipsis">
+      Parameter ImageSize
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledintensity">1.1.7 
-    Parameter LEDIntensity
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDIntensity
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rawimageslocation">1.1.8 
-    Parameter RawImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter RawImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rawimagesretention">1.1.9 
-    Parameter RawImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter RawImagesRetention
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-saturation">1.1.10 
-    Parameter Saturation
-  </a>
+<span class="md-ellipsis">
+      Parameter Saturation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.11 
-    Parameter WaitBeforeTakingPicture
-  </a>
+<span class="md-ellipsis">
+      Parameter WaitBeforeTakingPicture
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-alignment">1.2 
-    Section Alignment
-  </a>
+<span class="md-ellipsis">
+      Section Alignment
+    </span>
+</a>
 <nav aria-label="Section Alignment" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-alignmentalgo">1.2.1 
-    Parameter AlignmentAlgo
-  </a>
+<span class="md-ellipsis">
+      Parameter AlignmentAlgo
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-flipimagesize">1.2.2 
-    Parameter FlipImageSize
-  </a>
+<span class="md-ellipsis">
+      Parameter FlipImageSize
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-initialmirror">1.2.3 
-    Parameter InitialMirror
-  </a>
+<span class="md-ellipsis">
+      Parameter InitialMirror
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-initialrotate">1.2.4 
-    Parameter InitialRotate
-  </a>
+<span class="md-ellipsis">
+      Parameter InitialRotate
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-searchfieldx">1.2.5 
-    Parameter SearchFieldX
-  </a>
+<span class="md-ellipsis">
+      Parameter SearchFieldX
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-searchfieldy">1.2.6 
-    Parameter SearchFieldY
-  </a>
+<span class="md-ellipsis">
+      Parameter SearchFieldY
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-digits">1.3 
-    Section Digits
-  </a>
+<span class="md-ellipsis">
+      Section Digits
+    </span>
+</a>
 <nav aria-label="Section Digits" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cnngoodthreshold">1.3.1 
-    Parameter CNNGoodThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter CNNGoodThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-model">1.3.2 
-    Parameter Model
-  </a>
+<span class="md-ellipsis">
+      Parameter Model
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimageslocation">1.3.3 
-    Parameter ROIImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimagesretention">1.3.4 
-    Parameter ROIImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-analog">1.4 
-    Section Analog
-  </a>
+<span class="md-ellipsis">
+      Section Analog
+    </span>
+</a>
 <nav aria-label="Section Analog" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cnngoodthreshold_1">1.4.1 
-    Parameter CNNGoodThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter CNNGoodThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-extendedresolution">1.4.2 
-    Parameter ExtendedResolution
-  </a>
+<span class="md-ellipsis">
+      Parameter ExtendedResolution
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-model_1">1.4.3 
-    Parameter Model
-  </a>
+<span class="md-ellipsis">
+      Parameter Model
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimageslocation_1">1.4.4 
-    Parameter ROIImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimagesretention_1">1.4.5 
-    Parameter ROIImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-postprocessing">1.5 
-    Section PostProcessing
-  </a>
+<span class="md-ellipsis">
+      Section PostProcessing
+    </span>
+</a>
 <nav aria-label="Section PostProcessing" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-allownegativerates">1.5.1 
-    Parameter AllowNegativeRates
-  </a>
+<span class="md-ellipsis">
+      Parameter AllowNegativeRates
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-checkdigitincreaseconsistency">1.5.2 
-    Parameter CheckDigitIncreaseConsistency
-  </a>
+<span class="md-ellipsis">
+      Parameter CheckDigitIncreaseConsistency
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-errormessage">1.5.3 
-    Parameter ErrorMessage
-  </a>
+<span class="md-ellipsis">
+      Parameter ErrorMessage
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbersallownegativerates">1.5.4 
-    Parameter &lt;NUMBERS&gt;.AllowNegativeRates
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBERS&gt;.AllowNegativeRates
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberanalogdigitaltransitionstart">1.5.5 
-    Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.6 
-    Parameter &lt;NUMBER&gt;.DecimalShift
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.DecimalShift
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.7 
-    Parameter &lt;NUMBER&gt;.ExtendedResolution
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.ExtendedResolution
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.8 
-    Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.9 
-    Parameter &lt;NUMBER&gt;.MaxRateType
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.MaxRateType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.10 
-    Parameter &lt;NUMBER&gt;.MaxRateValue
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.MaxRateValue
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.11 
-    Parameter PreValueAgeStartup
-  </a>
+<span class="md-ellipsis">
+      Parameter PreValueAgeStartup
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-prevalueuse">1.5.12 
-    Parameter PreValueUse
-  </a>
+<span class="md-ellipsis">
+      Parameter PreValueUse
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-mqtt">1.6 
-    Section MQTT
-  </a>
+<span class="md-ellipsis">
+      Section MQTT
+    </span>
+</a>
 <nav aria-label="Section MQTT" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cacert">1.6.1 
-    Parameter CACert
-  </a>
+<span class="md-ellipsis">
+      Parameter CACert
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientcert">1.6.2 
-    Parameter ClientCert
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientCert
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientid">1.6.3 
-    Parameter ClientID
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientID
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientkey">1.6.4 
-    Parameter ClientKey
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientKey
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
-    Parameter HomeassistantDiscovery
-  </a>
+<span class="md-ellipsis">
+      Parameter HomeassistantDiscovery
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-maintopic">1.6.6 
-    Parameter MainTopic
-  </a>
+<span class="md-ellipsis">
+      Parameter MainTopic
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-metertype">1.6.7 
-    Parameter MeterType
-  </a>
+<span class="md-ellipsis">
+      Parameter MeterType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
-    Parameter RetainMessages
-  </a>
+<span class="md-ellipsis">
+      Parameter RetainMessages
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri">1.6.9 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-password">1.6.10 
-    Parameter password
-  </a>
+<span class="md-ellipsis">
+      Parameter password
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-user">1.6.11 
-    Parameter user
-  </a>
+<span class="md-ellipsis">
+      Parameter user
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-influxdb">1.7 
-    Section InfluxDB
-  </a>
+<span class="md-ellipsis">
+      Section InfluxDB
+    </span>
+</a>
 <nav aria-label="Section InfluxDB" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-database">1.7.1 
-    Parameter Database
-  </a>
+<span class="md-ellipsis">
+      Parameter Database
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement">1.7.2 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfield">1.7.3 
-    Parameter &lt;NUMBER&gt;.Field
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.Field
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_1">1.7.4 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri_1">1.7.5 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-password_1">1.7.6 
-    Parameter password
-  </a>
+<span class="md-ellipsis">
+      Parameter password
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-user_1">1.7.7 
-    Parameter user
-  </a>
+<span class="md-ellipsis">
+      Parameter user
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-influxdbv2">1.8 
-    Section InfluxDBv2
-  </a>
+<span class="md-ellipsis">
+      Section InfluxDBv2
+    </span>
+</a>
 <nav aria-label="Section InfluxDBv2" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-basket">1.8.1 
-    Parameter Basket
-  </a>
+<a class="md-nav__link" href="#parameter-bucket">1.8.1 
+<span class="md-ellipsis">
+      Parameter Bucket
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-database_1">1.8.2 
-    Parameter Database
-  </a>
+<span class="md-ellipsis">
+      Parameter Database
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_2">1.8.3 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfield_1">1.8.4 
-    Parameter &lt;NUMBER&gt;.Field
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.Field
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfieldname">1.8.5 
-    Parameter NUMBER.Fieldname
-  </a>
+<span class="md-ellipsis">
+      Parameter NUMBER.Fieldname
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_3">1.8.6 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-org">1.8.7 
-    Parameter Org
-  </a>
+<span class="md-ellipsis">
+      Parameter Org
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-token">1.8.8 
-    Parameter Token
-  </a>
+<span class="md-ellipsis">
+      Parameter Token
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri_2">1.8.9 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-gpio">1.9 
-    Section GPIO
-  </a>
+<span class="md-ellipsis">
+      Section GPIO
+    </span>
+</a>
 <nav aria-label="Section GPIO" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io0">1.9.1 
-    Parameter IO0
-  </a>
+<span class="md-ellipsis">
+      Parameter IO0
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io1">1.9.2 
-    Parameter IO1
-  </a>
+<span class="md-ellipsis">
+      Parameter IO1
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io12">1.9.3 
-    Parameter IO12
-  </a>
+<span class="md-ellipsis">
+      Parameter IO12
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io13">1.9.4 
-    Parameter IO13
-  </a>
+<span class="md-ellipsis">
+      Parameter IO13
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io3">1.9.5 
-    Parameter IO3
-  </a>
+<span class="md-ellipsis">
+      Parameter IO3
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io4">1.9.6 
-    Parameter IO4
-  </a>
+<span class="md-ellipsis">
+      Parameter IO4
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledcolor">1.9.7 
-    Parameter LEDColor
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDColor
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-lednumbers">1.9.8 
-    Parameter LEDNumbers
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDNumbers
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledtype">1.9.9 
-    Parameter LEDType
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-maintopicmqtt">1.9.10 
-    Parameter MainTopicMQTT
-  </a>
+<span class="md-ellipsis">
+      Parameter MainTopicMQTT
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-autotimer">1.10 
-    Section AutoTimer
-  </a>
+<span class="md-ellipsis">
+      Section AutoTimer
+    </span>
+</a>
 <nav aria-label="Section AutoTimer" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-autostart">1.10.1 
-    Parameter AutoStart
-  </a>
+<span class="md-ellipsis">
+      Parameter AutoStart
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-interval">1.10.2 
-    Parameter Interval
-  </a>
+<span class="md-ellipsis">
+      Parameter Interval
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-datalogging">1.11 
-    Section DataLogging
-  </a>
+<span class="md-ellipsis">
+      Section DataLogging
+    </span>
+</a>
 <nav aria-label="Section DataLogging" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-datafilesretention">1.11.1 
-    Parameter DataFilesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter DataFilesRetention
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-datalogactive">1.11.2 
-    Parameter DataLogActive
-  </a>
+<span class="md-ellipsis">
+      Parameter DataLogActive
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-debug">1.12 
-    Section Debug
-  </a>
+<span class="md-ellipsis">
+      Section Debug
+    </span>
+</a>
 <nav aria-label="Section Debug" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-loglevel">1.12.1 
-    Parameter LogLevel
-  </a>
+<span class="md-ellipsis">
+      Parameter LogLevel
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-logfilesretention">1.12.2 
-    Parameter LogfilesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter LogfilesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-system">1.13 
-    Section System
-  </a>
+<span class="md-ellipsis">
+      Section System
+    </span>
+</a>
 <nav aria-label="Section System" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cpufrequency">1.13.1 
-    Parameter CPUFrequency
-  </a>
+<span class="md-ellipsis">
+      Parameter CPUFrequency
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-hostname">1.13.2 
-    Parameter Hostname
-  </a>
+<span class="md-ellipsis">
+      Parameter Hostname
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rssithreshold">1.13.3 
-    Parameter RSSIThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter RSSIThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-setupmode">1.13.4 
-    Parameter SetupMode
-  </a>
+<span class="md-ellipsis">
+      Parameter SetupMode
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-timeserver">1.13.5 
-    Parameter TimeServer
-  </a>
+<span class="md-ellipsis">
+      Parameter TimeServer
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-timezone">1.13.6 
-    Parameter TimeZone
-  </a>
+<span class="md-ellipsis">
+      Parameter TimeZone
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -1139,552 +1339,752 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-takeimage">1.1 
-    Section TakeImage
-  </a>
+<span class="md-ellipsis">
+      Section TakeImage
+    </span>
+</a>
 <nav aria-label="Section TakeImage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-brightness">1.1.1 
-    Parameter Brightness
-  </a>
+<span class="md-ellipsis">
+      Parameter Brightness
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-contrast">1.1.2 
-    Parameter Contrast
-  </a>
+<span class="md-ellipsis">
+      Parameter Contrast
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-demo">1.1.3 
-    Parameter Demo
-  </a>
+<span class="md-ellipsis">
+      Parameter Demo
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-fixedexposure">1.1.4 
-    Parameter FixedExposure
-  </a>
+<span class="md-ellipsis">
+      Parameter FixedExposure
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-imagequality">1.1.5 
-    Parameter ImageQuality
-  </a>
+<span class="md-ellipsis">
+      Parameter ImageQuality
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-imagesize">1.1.6 
-    Parameter ImageSize
-  </a>
+<span class="md-ellipsis">
+      Parameter ImageSize
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledintensity">1.1.7 
-    Parameter LEDIntensity
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDIntensity
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rawimageslocation">1.1.8 
-    Parameter RawImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter RawImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rawimagesretention">1.1.9 
-    Parameter RawImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter RawImagesRetention
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-saturation">1.1.10 
-    Parameter Saturation
-  </a>
+<span class="md-ellipsis">
+      Parameter Saturation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.11 
-    Parameter WaitBeforeTakingPicture
-  </a>
+<span class="md-ellipsis">
+      Parameter WaitBeforeTakingPicture
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-alignment">1.2 
-    Section Alignment
-  </a>
+<span class="md-ellipsis">
+      Section Alignment
+    </span>
+</a>
 <nav aria-label="Section Alignment" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-alignmentalgo">1.2.1 
-    Parameter AlignmentAlgo
-  </a>
+<span class="md-ellipsis">
+      Parameter AlignmentAlgo
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-flipimagesize">1.2.2 
-    Parameter FlipImageSize
-  </a>
+<span class="md-ellipsis">
+      Parameter FlipImageSize
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-initialmirror">1.2.3 
-    Parameter InitialMirror
-  </a>
+<span class="md-ellipsis">
+      Parameter InitialMirror
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-initialrotate">1.2.4 
-    Parameter InitialRotate
-  </a>
+<span class="md-ellipsis">
+      Parameter InitialRotate
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-searchfieldx">1.2.5 
-    Parameter SearchFieldX
-  </a>
+<span class="md-ellipsis">
+      Parameter SearchFieldX
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-searchfieldy">1.2.6 
-    Parameter SearchFieldY
-  </a>
+<span class="md-ellipsis">
+      Parameter SearchFieldY
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-digits">1.3 
-    Section Digits
-  </a>
+<span class="md-ellipsis">
+      Section Digits
+    </span>
+</a>
 <nav aria-label="Section Digits" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cnngoodthreshold">1.3.1 
-    Parameter CNNGoodThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter CNNGoodThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-model">1.3.2 
-    Parameter Model
-  </a>
+<span class="md-ellipsis">
+      Parameter Model
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimageslocation">1.3.3 
-    Parameter ROIImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimagesretention">1.3.4 
-    Parameter ROIImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-analog">1.4 
-    Section Analog
-  </a>
+<span class="md-ellipsis">
+      Section Analog
+    </span>
+</a>
 <nav aria-label="Section Analog" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cnngoodthreshold_1">1.4.1 
-    Parameter CNNGoodThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter CNNGoodThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-extendedresolution">1.4.2 
-    Parameter ExtendedResolution
-  </a>
+<span class="md-ellipsis">
+      Parameter ExtendedResolution
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-model_1">1.4.3 
-    Parameter Model
-  </a>
+<span class="md-ellipsis">
+      Parameter Model
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimageslocation_1">1.4.4 
-    Parameter ROIImagesLocation
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesLocation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-roiimagesretention_1">1.4.5 
-    Parameter ROIImagesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter ROIImagesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-postprocessing">1.5 
-    Section PostProcessing
-  </a>
+<span class="md-ellipsis">
+      Section PostProcessing
+    </span>
+</a>
 <nav aria-label="Section PostProcessing" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-allownegativerates">1.5.1 
-    Parameter AllowNegativeRates
-  </a>
+<span class="md-ellipsis">
+      Parameter AllowNegativeRates
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-checkdigitincreaseconsistency">1.5.2 
-    Parameter CheckDigitIncreaseConsistency
-  </a>
+<span class="md-ellipsis">
+      Parameter CheckDigitIncreaseConsistency
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-errormessage">1.5.3 
-    Parameter ErrorMessage
-  </a>
+<span class="md-ellipsis">
+      Parameter ErrorMessage
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbersallownegativerates">1.5.4 
-    Parameter &lt;NUMBERS&gt;.AllowNegativeRates
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBERS&gt;.AllowNegativeRates
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberanalogdigitaltransitionstart">1.5.5 
-    Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.6 
-    Parameter &lt;NUMBER&gt;.DecimalShift
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.DecimalShift
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.7 
-    Parameter &lt;NUMBER&gt;.ExtendedResolution
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.ExtendedResolution
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.8 
-    Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.9 
-    Parameter &lt;NUMBER&gt;.MaxRateType
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.MaxRateType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.10 
-    Parameter &lt;NUMBER&gt;.MaxRateValue
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.MaxRateValue
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.11 
-    Parameter PreValueAgeStartup
-  </a>
+<span class="md-ellipsis">
+      Parameter PreValueAgeStartup
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-prevalueuse">1.5.12 
-    Parameter PreValueUse
-  </a>
+<span class="md-ellipsis">
+      Parameter PreValueUse
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-mqtt">1.6 
-    Section MQTT
-  </a>
+<span class="md-ellipsis">
+      Section MQTT
+    </span>
+</a>
 <nav aria-label="Section MQTT" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cacert">1.6.1 
-    Parameter CACert
-  </a>
+<span class="md-ellipsis">
+      Parameter CACert
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientcert">1.6.2 
-    Parameter ClientCert
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientCert
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientid">1.6.3 
-    Parameter ClientID
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientID
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-clientkey">1.6.4 
-    Parameter ClientKey
-  </a>
+<span class="md-ellipsis">
+      Parameter ClientKey
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
-    Parameter HomeassistantDiscovery
-  </a>
+<span class="md-ellipsis">
+      Parameter HomeassistantDiscovery
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-maintopic">1.6.6 
-    Parameter MainTopic
-  </a>
+<span class="md-ellipsis">
+      Parameter MainTopic
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-metertype">1.6.7 
-    Parameter MeterType
-  </a>
+<span class="md-ellipsis">
+      Parameter MeterType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
-    Parameter RetainMessages
-  </a>
+<span class="md-ellipsis">
+      Parameter RetainMessages
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri">1.6.9 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-password">1.6.10 
-    Parameter password
-  </a>
+<span class="md-ellipsis">
+      Parameter password
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-user">1.6.11 
-    Parameter user
-  </a>
+<span class="md-ellipsis">
+      Parameter user
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-influxdb">1.7 
-    Section InfluxDB
-  </a>
+<span class="md-ellipsis">
+      Section InfluxDB
+    </span>
+</a>
 <nav aria-label="Section InfluxDB" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-database">1.7.1 
-    Parameter Database
-  </a>
+<span class="md-ellipsis">
+      Parameter Database
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement">1.7.2 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfield">1.7.3 
-    Parameter &lt;NUMBER&gt;.Field
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.Field
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_1">1.7.4 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri_1">1.7.5 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-password_1">1.7.6 
-    Parameter password
-  </a>
+<span class="md-ellipsis">
+      Parameter password
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-user_1">1.7.7 
-    Parameter user
-  </a>
+<span class="md-ellipsis">
+      Parameter user
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-influxdbv2">1.8 
-    Section InfluxDBv2
-  </a>
+<span class="md-ellipsis">
+      Section InfluxDBv2
+    </span>
+</a>
 <nav aria-label="Section InfluxDBv2" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-basket">1.8.1 
-    Parameter Basket
-  </a>
+<a class="md-nav__link" href="#parameter-bucket">1.8.1 
+<span class="md-ellipsis">
+      Parameter Bucket
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-database_1">1.8.2 
-    Parameter Database
-  </a>
+<span class="md-ellipsis">
+      Parameter Database
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_2">1.8.3 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfield_1">1.8.4 
-    Parameter &lt;NUMBER&gt;.Field
-  </a>
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.Field
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-numberfieldname">1.8.5 
-    Parameter NUMBER.Fieldname
-  </a>
+<span class="md-ellipsis">
+      Parameter NUMBER.Fieldname
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-measurement_3">1.8.6 
-    Parameter Measurement
-  </a>
+<span class="md-ellipsis">
+      Parameter Measurement
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-org">1.8.7 
-    Parameter Org
-  </a>
+<span class="md-ellipsis">
+      Parameter Org
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-token">1.8.8 
-    Parameter Token
-  </a>
+<span class="md-ellipsis">
+      Parameter Token
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-uri_2">1.8.9 
-    Parameter Uri
-  </a>
+<span class="md-ellipsis">
+      Parameter Uri
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-gpio">1.9 
-    Section GPIO
-  </a>
+<span class="md-ellipsis">
+      Section GPIO
+    </span>
+</a>
 <nav aria-label="Section GPIO" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io0">1.9.1 
-    Parameter IO0
-  </a>
+<span class="md-ellipsis">
+      Parameter IO0
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io1">1.9.2 
-    Parameter IO1
-  </a>
+<span class="md-ellipsis">
+      Parameter IO1
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io12">1.9.3 
-    Parameter IO12
-  </a>
+<span class="md-ellipsis">
+      Parameter IO12
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io13">1.9.4 
-    Parameter IO13
-  </a>
+<span class="md-ellipsis">
+      Parameter IO13
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io3">1.9.5 
-    Parameter IO3
-  </a>
+<span class="md-ellipsis">
+      Parameter IO3
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-io4">1.9.6 
-    Parameter IO4
-  </a>
+<span class="md-ellipsis">
+      Parameter IO4
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledcolor">1.9.7 
-    Parameter LEDColor
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDColor
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-lednumbers">1.9.8 
-    Parameter LEDNumbers
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDNumbers
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-ledtype">1.9.9 
-    Parameter LEDType
-  </a>
+<span class="md-ellipsis">
+      Parameter LEDType
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-maintopicmqtt">1.9.10 
-    Parameter MainTopicMQTT
-  </a>
+<span class="md-ellipsis">
+      Parameter MainTopicMQTT
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-autotimer">1.10 
-    Section AutoTimer
-  </a>
+<span class="md-ellipsis">
+      Section AutoTimer
+    </span>
+</a>
 <nav aria-label="Section AutoTimer" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-autostart">1.10.1 
-    Parameter AutoStart
-  </a>
+<span class="md-ellipsis">
+      Parameter AutoStart
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-interval">1.10.2 
-    Parameter Interval
-  </a>
+<span class="md-ellipsis">
+      Parameter Interval
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-datalogging">1.11 
-    Section DataLogging
-  </a>
+<span class="md-ellipsis">
+      Section DataLogging
+    </span>
+</a>
 <nav aria-label="Section DataLogging" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-datafilesretention">1.11.1 
-    Parameter DataFilesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter DataFilesRetention
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-datalogactive">1.11.2 
-    Parameter DataLogActive
-  </a>
+<span class="md-ellipsis">
+      Parameter DataLogActive
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-debug">1.12 
-    Section Debug
-  </a>
+<span class="md-ellipsis">
+      Section Debug
+    </span>
+</a>
 <nav aria-label="Section Debug" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-loglevel">1.12.1 
-    Parameter LogLevel
-  </a>
+<span class="md-ellipsis">
+      Parameter LogLevel
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-logfilesretention">1.12.2 
-    Parameter LogfilesRetention
-  </a>
+<span class="md-ellipsis">
+      Parameter LogfilesRetention
+    </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#section-system">1.13 
-    Section System
-  </a>
+<span class="md-ellipsis">
+      Section System
+    </span>
+</a>
 <nav aria-label="Section System" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-cpufrequency">1.13.1 
-    Parameter CPUFrequency
-  </a>
+<span class="md-ellipsis">
+      Parameter CPUFrequency
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-hostname">1.13.2 
-    Parameter Hostname
-  </a>
+<span class="md-ellipsis">
+      Parameter Hostname
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-rssithreshold">1.13.3 
-    Parameter RSSIThreshold
-  </a>
+<span class="md-ellipsis">
+      Parameter RSSIThreshold
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-setupmode">1.13.4 
-    Parameter SetupMode
-  </a>
+<span class="md-ellipsis">
+      Parameter SetupMode
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-timeserver">1.13.5 
-    Parameter TimeServer
-  </a>
+<span class="md-ellipsis">
+      Parameter TimeServer
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#parameter-timezone">1.13.6 
-    Parameter TimeZone
-  </a>
+<span class="md-ellipsis">
+      Parameter TimeZone
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -2243,10 +2643,10 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 </div>
 <hr style="border:2px solid"/>
 <h2 id="section-influxdbv2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> Section <code>InfluxDBv2</code></h2>
-<p><a id="InfluxDBv2-Basket"></a></p>
-<h3 id="parameter-basket"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Parameter <code>Basket</code></h3>
+<p><a id="InfluxDBv2-Bucket"></a></p>
+<h3 id="parameter-bucket"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Parameter <code>Bucket</code></h3>
 <p>Default Value: <code>''</code></p>
-<p>Name of the InfluxDB v2 Basket into which to publish the values.</p>
+<p>Name of the InfluxDB v2 Bucket into which to publish the values.</p>
 <hr style="border:2px solid"/>
 <p><a id="InfluxDBv2-Database"></a></p>
 <h3 id="parameter-database_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> Parameter <code>Database</code></h3>
@@ -2613,6 +3013,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+<script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
 </body>
 </html>
