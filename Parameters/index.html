@@ -9,7 +9,7 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.4.11" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
@@ -2491,6 +2491,10 @@ This also works through a reboot of the device!</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the CA certificate file.</p>
+<p>This is part of the configuration to enable TLS for MQTT.
+The CA Certificate is used by the client to validate the broker is who it claims to be.
+It allows the client to authenticate the server, which is the first part of the MTLS handshake.</p>
+<p>Usually there is a common RootCA certificate for the MQTT broker</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
@@ -2505,9 +2509,14 @@ This also works through a reboot of the device!</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Certificate file.</p>
+<p>This is part of the configuration to enable TLS for MQTT.
+The Client Certificate is used by the client to prove its identity to the server, in conjunction with the Client Key. 
+It is the second part of the MTLS handshake.</p>
+<p>Usually there is a one pair of Client Certificate/Key for each client that connects to the MQTT broker</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
+<p>If set, <code>ClientKey</code> must be set too
+This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientID"></a></p>
@@ -2525,9 +2534,14 @@ If disabled, the <code>hostname</code> will be used.</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Key file.</p>
+<p>This is part of the configuration to enable TLS for MQTT.
+The Client Key is used by the client to prove its identity to the server, in conjunction with the Client Certificate.
+It is the second part of the MTLS handshake.</p>
+<p>Usually there is a one pair of Client Certificate/Key for each client that connects to the MQTT broker</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
+<p>If set, <code>ClientCert</code> must be set too
+This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-HomeassistantDiscovery"></a></p>
@@ -3013,6 +3027,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+<script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
 </body>
 </html>
