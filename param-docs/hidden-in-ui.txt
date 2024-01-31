@@ -1,4 +1,0 @@
-InitialRotate
-MainTopicMQTT
-AutoAdjustSummertime
-SetupMode

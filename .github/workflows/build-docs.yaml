@@ -19,7 +19,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Cache PIP
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -27,10 +27,10 @@ jobs:
             ${{ runner.os }}-pip-
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
       - run: |
           pip install --upgrade pip && pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material mkdocs-enumerate-headings-plugin
           git config user.name 'github-actions[bot]'
@@ -39,8 +39,8 @@ jobs:
       - name: Generate Parameter Page
         run: |
           cd param-docs
-          python generate-template-param-doc-pages.py # Creates a templated page for each parameter which does not yet have a page
-          tree parameter-pages
+          # Fetch the parameter pages from the main repo
+          git clone https://github.com/jomjol/AI-on-the-edge-device.git
           python concat-parameter-pages.py
         
       - name: Store Documentation in the gh-pages branch so it gets pushed to the website
