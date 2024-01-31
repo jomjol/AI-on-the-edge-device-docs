@@ -10,7 +10,7 @@ import glob
 sectionsLogicallyOrdered = ["TakeImage", "Alignment", "Digits", "Analog", "PostProcessing",
                            "MQTT", "InfluxDB", "InfluxDBv2", "GPIO", "AutoTimer", "DataLogging", "Debug", "System"]
 
-parameterDocsFolder = "parameter-pages"
+parameterDocsFolder = "AI-on-the-edge-device/param-docs/parameter-pages/"
 docsMainFolder = "../docs"
 parameterOverviewFile = "Parameters.md"
 parameterOverviewTemplateFile = "./templates/overview.md"
