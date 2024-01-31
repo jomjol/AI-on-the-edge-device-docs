@@ -22,6 +22,7 @@ has its own description page in the folder `param-docs/parameter-pages` (grouped
 Those pages can be edited as needed.
 
 The script `concat-parameter-pages.py` in `param-docs` should be run whenever one of the pages changed.
+This happens automatically in the Github action.
 It then concatenates all pages into the single `../docs/Parameters.md` which gets be added to the `mkdocs` documentation.
 
 ### Template Generator
