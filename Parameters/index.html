@@ -9,9 +9,9 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.6" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
-<link href="../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -279,79 +279,142 @@
 <nav aria-label="Section TakeImage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-brightness">1.1.1 
+<a class="md-nav__link" href="#parameter-aec2">1.1.1 
+<span class="md-ellipsis">
+      Parameter Aec2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-autoexposurelevel">1.1.2 
+<span class="md-ellipsis">
+      Parameter AutoExposureLevel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-brightness">1.1.3 
 <span class="md-ellipsis">
       Parameter Brightness
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-contrast">1.1.2 
+<a class="md-nav__link" href="#parameter-contrast">1.1.4 
 <span class="md-ellipsis">
       Parameter Contrast
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-demo">1.1.3 
+<a class="md-nav__link" href="#parameter-demo">1.1.5 
 <span class="md-ellipsis">
       Parameter Demo
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-fixedexposure">1.1.4 
+<a class="md-nav__link" href="#parameter-fixedexposure">1.1.6 
 <span class="md-ellipsis">
       Parameter FixedExposure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-imagequality">1.1.5 
+<a class="md-nav__link" href="#parameter-grayscale">1.1.7 
+<span class="md-ellipsis">
+      Parameter Grayscale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-imagequality">1.1.8 
 <span class="md-ellipsis">
       Parameter ImageQuality
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-imagesize">1.1.6 
+<a class="md-nav__link" href="#parameter-imagesize">1.1.9 
 <span class="md-ellipsis">
       Parameter ImageSize
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-ledintensity">1.1.7 
+<a class="md-nav__link" href="#parameter-ledintensity">1.1.10 
 <span class="md-ellipsis">
       Parameter LEDIntensity
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-rawimageslocation">1.1.8 
+<a class="md-nav__link" href="#parameter-negative">1.1.11 
+<span class="md-ellipsis">
+      Parameter Negative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-rawimageslocation">1.1.12 
 <span class="md-ellipsis">
       Parameter RawImagesLocation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-rawimagesretention">1.1.9 
+<a class="md-nav__link" href="#parameter-rawimagesretention">1.1.13 
 <span class="md-ellipsis">
       Parameter RawImagesRetention
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-saturation">1.1.10 
+<a class="md-nav__link" href="#parameter-saturation">1.1.14 
 <span class="md-ellipsis">
       Parameter Saturation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.11 
+<a class="md-nav__link" href="#parameter-sharpness">1.1.15 
+<span class="md-ellipsis">
+      Parameter Sharpness
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.16 
 <span class="md-ellipsis">
       Parameter WaitBeforeTakingPicture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoom">1.1.17 
+<span class="md-ellipsis">
+      Parameter Zoom
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoommode">1.1.18 
+<span class="md-ellipsis">
+      Parameter ZoomMode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoomoffsetx">1.1.19 
+<span class="md-ellipsis">
+      Parameter ZoomOffsetX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoomoffsety">1.1.20 
+<span class="md-ellipsis">
+      Parameter ZoomOffsetY
     </span>
 </a>
 </li>
@@ -1325,79 +1388,142 @@
 <nav aria-label="Section TakeImage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-brightness">1.1.1 
+<a class="md-nav__link" href="#parameter-aec2">1.1.1 
+<span class="md-ellipsis">
+      Parameter Aec2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-autoexposurelevel">1.1.2 
+<span class="md-ellipsis">
+      Parameter AutoExposureLevel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-brightness">1.1.3 
 <span class="md-ellipsis">
       Parameter Brightness
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-contrast">1.1.2 
+<a class="md-nav__link" href="#parameter-contrast">1.1.4 
 <span class="md-ellipsis">
       Parameter Contrast
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-demo">1.1.3 
+<a class="md-nav__link" href="#parameter-demo">1.1.5 
 <span class="md-ellipsis">
       Parameter Demo
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-fixedexposure">1.1.4 
+<a class="md-nav__link" href="#parameter-fixedexposure">1.1.6 
 <span class="md-ellipsis">
       Parameter FixedExposure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-imagequality">1.1.5 
+<a class="md-nav__link" href="#parameter-grayscale">1.1.7 
+<span class="md-ellipsis">
+      Parameter Grayscale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-imagequality">1.1.8 
 <span class="md-ellipsis">
       Parameter ImageQuality
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-imagesize">1.1.6 
+<a class="md-nav__link" href="#parameter-imagesize">1.1.9 
 <span class="md-ellipsis">
       Parameter ImageSize
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-ledintensity">1.1.7 
+<a class="md-nav__link" href="#parameter-ledintensity">1.1.10 
 <span class="md-ellipsis">
       Parameter LEDIntensity
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-rawimageslocation">1.1.8 
+<a class="md-nav__link" href="#parameter-negative">1.1.11 
+<span class="md-ellipsis">
+      Parameter Negative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-rawimageslocation">1.1.12 
 <span class="md-ellipsis">
       Parameter RawImagesLocation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-rawimagesretention">1.1.9 
+<a class="md-nav__link" href="#parameter-rawimagesretention">1.1.13 
 <span class="md-ellipsis">
       Parameter RawImagesRetention
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-saturation">1.1.10 
+<a class="md-nav__link" href="#parameter-saturation">1.1.14 
 <span class="md-ellipsis">
       Parameter Saturation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.11 
+<a class="md-nav__link" href="#parameter-sharpness">1.1.15 
+<span class="md-ellipsis">
+      Parameter Sharpness
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-waitbeforetakingpicture">1.1.16 
 <span class="md-ellipsis">
       Parameter WaitBeforeTakingPicture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoom">1.1.17 
+<span class="md-ellipsis">
+      Parameter Zoom
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoommode">1.1.18 
+<span class="md-ellipsis">
+      Parameter ZoomMode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoomoffsetx">1.1.19 
+<span class="md-ellipsis">
+      Parameter ZoomOffsetX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-zoomoffsety">1.1.20 
+<span class="md-ellipsis">
+      Parameter ZoomOffsetY
     </span>
 </a>
 </li>
@@ -2064,13 +2190,36 @@ In such case the functionality gets disabled respectively the default values wil
 </div>
 <hr style="border:2px solid"/>
 <h2 id="section-takeimage"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Section <code>TakeImage</code></h2>
-<p><a id="TakeImage-Brightness"></a></p>
-<h3 id="parameter-brightness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Parameter <code>Brightness</code></h3>
+<p><a id="TakeImage-Aec2"></a></p>
+<h3 id="parameter-aec2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Parameter <code>Aec2</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Switch to "Auto-exposure Control 2" algorithm. This may resolve some over-exposure and under-exposure issues.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-AutoExposureLevel"></a></p>
+<h3 id="parameter-autoexposurelevel"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Parameter <code>AutoExposureLevel</code></h3>
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Exposure compensation. Lower values produce darker image.</p>
+<p>Range (<code>-2</code> .. <code>2</code>)</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-Brightness"></a></p>
+<h3 id="parameter-brightness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Parameter <code>Brightness</code></h3>
+<p>Default Value: <code>0</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration.</p>
@@ -2078,8 +2227,37 @@ In such case the functionality gets disabled respectively the default values wil
 <p>Image Brightness (<code>-2</code> .. <code>2</code>) </p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-Contrast"></a></p>
-<h3 id="parameter-contrast"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Parameter <code>Contrast</code></h3>
+<h3 id="parameter-contrast"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Parameter <code>Contrast</code></h3>
 <p>Default Value: <code>0</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Image Contrast (<code>-2</code> .. <code>2</code>)</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-Demo"></a></p>
+<h3 id="parameter-demo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Parameter <code>Demo</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Enable to use demo images instead of the real camera images.
+Make sure to have a <code>/demo</code> folder on your SD-Card and make sure it contains the expected files!
+Check <a href="../Demo-Mode">here</a> for details. </p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-FixedExposure"></a></p>
+<h3 id="parameter-fixedexposure"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> Parameter <code>FixedExposure</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Fixes the illumination setting of camera at the startup and uses this later -&gt; Individual round is faster.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-Grayscale"></a></p>
+<h3 id="parameter-grayscale"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.7</span> Parameter <code>Grayscale</code></h3>
+<p>Default Value: <code>false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2088,26 +2266,10 @@ In such case the functionality gets disabled respectively the default values wil
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration.</p>
 </div>
-<p>Image Contrast (<code>-2</code> .. <code>2</code>)</p>
-<hr style="border:2px solid"/>
-<p><a id="TakeImage-Demo"></a></p>
-<h3 id="parameter-demo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Parameter <code>Demo</code></h3>
-<p>Default Value: <code>false</code></p>
-<p>Enable to use demo images instead of the real camera images.
-Make sure to have a <code>/demo</code> folder on your SD-Card and make sure it contains the expected files!
-Check <a href="../Demo-Mode">here</a> for details. </p>
-<hr style="border:2px solid"/>
-<p><a id="TakeImage-FixedExposure"></a></p>
-<h3 id="parameter-fixedexposure"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Parameter <code>FixedExposure</code></h3>
-<p>Default Value: <code>false</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
-<p>Fixes the illumination setting of camera at the startup and uses this later -&gt; Individual round is faster.</p>
+<p>Produces black and white image.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-ImageQuality"></a></p>
-<h3 id="parameter-imagequality"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Parameter <code>ImageQuality</code></h3>
+<h3 id="parameter-imagequality"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.8</span> Parameter <code>ImageQuality</code></h3>
 <p>Default Value: <code>12</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2120,7 +2282,7 @@ Check <a href="../Demo-Mode">here</a> for details. </p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-ImageSize"></a></p>
-<h3 id="parameter-imagesize"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> Parameter <code>ImageSize</code></h3>
+<h3 id="parameter-imagesize"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.9</span> Parameter <code>ImageSize</code></h3>
 <p>Default Value: <code>VGA</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2134,17 +2296,29 @@ Check <a href="../Demo-Mode">here</a> for details. </p>
 </ul>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-LEDIntensity"></a></p>
-<h3 id="parameter-ledintensity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.7</span> Parameter <code>LEDIntensity</code></h3>
+<h3 id="parameter-ledintensity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.10</span> Parameter <code>LEDIntensity</code></h3>
 <p>Default Value: <code>50</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!
-This parameter can also be set on the Reference Image configuration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
 </div>
 <p>Set the Flash LED Intensity: (<code>0</code> .. <code>100</code>)</p>
 <hr style="border:2px solid"/>
+<p><a id="TakeImage-Negative"></a></p>
+<h3 id="parameter-negative"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.11</span> Parameter <code>Negative</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Inverts the colors.</p>
+<hr style="border:2px solid"/>
 <p><a id="TakeImage-RawImagesLocation"></a></p>
-<h3 id="parameter-rawimageslocation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.8</span> Parameter <code>RawImagesLocation</code></h3>
+<h3 id="parameter-rawimageslocation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.12</span> Parameter <code>RawImagesLocation</code></h3>
 <p>Default Value: <code>/log/source</code></p>
 <p>Location on the SD-Card to store the raw images.</p>
 <div class="admonition warning">
@@ -2153,13 +2327,22 @@ This parameter can also be set on the Reference Image configuration.</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-RawImagesRetention"></a></p>
-<h3 id="parameter-rawimagesretention"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.9</span> Parameter <code>RawImagesRetention</code></h3>
+<h3 id="parameter-rawimagesretention"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.13</span> Parameter <code>RawImagesRetention</code></h3>
 <p>Default Value: <code>15</code></p>
 <p>Unit: Days</p>
 <p>Number of days to keep the raw images (<code>0</code> = forever)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-Saturation"></a></p>
-<h3 id="parameter-saturation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.10</span> Parameter <code>Saturation</code></h3>
+<h3 id="parameter-saturation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.14</span> Parameter <code>Saturation</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Image Saturation (<code>-2</code> .. <code>2</code>)</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-Sharpness"></a></p>
+<h3 id="parameter-sharpness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.15</span> Parameter <code>Sharpness</code></h3>
 <p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2169,10 +2352,11 @@ This parameter can also be set on the Reference Image configuration.</p>
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration.</p>
 </div>
-<p>Image Saturation (<code>-2</code> .. <code>2</code>)</p>
+<p>Changes the sharpness of the image. Set to <code>-4</code> for auto-sharpness. </p>
+<p>Range (<code>-4</code> .. <code>3</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-WaitBeforeTakingPicture"></a></p>
-<h3 id="parameter-waitbeforetakingpicture"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.11</span> Parameter <code>WaitBeforeTakingPicture</code></h3>
+<h3 id="parameter-waitbeforetakingpicture"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.16</span> Parameter <code>WaitBeforeTakingPicture</code></h3>
 <p>Default Value: <code>5</code></p>
 <p>Unit: seconds</p>
 <div class="admonition warning">
@@ -2180,6 +2364,62 @@ This parameter can also be set on the Reference Image configuration.</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Waiting time between switching the flash light (onboard LED) on and taking the picture.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-Zoom"></a></p>
+<h3 id="parameter-zoom"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.17</span> Parameter <code>Zoom</code></h3>
+<p>Default Value: <code>false</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p>Crop the camera sensor frame to <code>ImageSize</code> resolution instead of scaling it down.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-ZoomMode"></a></p>
+<h3 id="parameter-zoommode"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.18</span> Parameter <code>ZoomMode</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p><code>ZoomMode</code> only applies when <code>Zoom</code> is enabled.
+Value 0: Crop the camera sensor frame to <code>ImageSize</code> resolution.
+Value 1: Scale the camera sensor frame to 800 x 600 pixels then crop it to <code>ImageSize</code> resolution.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-ZoomOffsetX"></a></p>
+<h3 id="parameter-zoomoffsetx"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.19</span> Parameter <code>ZoomOffsetX</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p><code>ZoomOffsetX</code> only applies when <code>Zoom</code> is enabled.
+X coordinate of the crop location within the camera sensor frame.</p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-ZoomOffsetY"></a></p>
+<h3 id="parameter-zoomoffsety"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.20</span> Parameter <code>ZoomOffsetY</code></h3>
+<p>Default Value: <code>0</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration.</p>
+</div>
+<p><code>ZoomOffsetY</code> only applies when <code>Zoom</code> is enabled.
+Y coordinate of the crop location within the camera sensor frame.</p>
 <hr style="border:2px solid"/>
 <h2 id="section-alignment"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Section <code>Alignment</code></h2>
 <p><a id="Alignment-AlignmentAlgo"></a></p>
@@ -2201,10 +2441,6 @@ This parameter can also be set on the Reference Image configuration.</p>
 <p><a id="Alignment-FlipImageSize"></a></p>
 <h3 id="parameter-flipimagesize"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Parameter <code>FlipImageSize</code></h3>
 <p>Default Value: <code>false</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration.</p>
@@ -2215,10 +2451,6 @@ This parameter can also be set on the Reference Image configuration.</p>
 <p><a id="Alignment-InitialMirror"></a></p>
 <h3 id="parameter-initialmirror"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> Parameter <code>InitialMirror</code></h3>
 <p>Default Value: <code>false</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration.</p>
@@ -2227,13 +2459,9 @@ This parameter can also be set on the Reference Image configuration.</p>
 <hr style="border:2px solid"/>
 <p><a id="Alignment-InitialRotate"></a></p>
 <h3 id="parameter-initialrotate"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.4</span> Parameter <code>InitialRotate</code></h3>
-<p>Default Value: <code>179</code></p>
+<p>Default Value: <code>0</code></p>
 <p>Unit: Degrees</p>
-<p>Initial rotation of image before alignment in degree (0 .. 359)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter is accessible on the Reference Image Page but not on the Config page!</p>
-</div>
+<p>Initial rotation of image before alignment in degree (<code>-360</code> .. <code>+360</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="Alignment-SearchFieldX"></a></p>
 <h3 id="parameter-searchfieldx"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.5</span> Parameter <code>SearchFieldX</code></h3>
@@ -2971,6 +3199,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+<script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
 </body>
 </html>
