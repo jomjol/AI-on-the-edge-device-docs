@@ -1,6 +1,6 @@
 # Hardware Compatibility
 
-### General Remark
+## General Remark
 Although a board looks similar, it can have major differences, e.g.:
 
 - Processor
@@ -89,7 +89,7 @@ It is observed, that smaller cards (up to 4 GB) tend to be more stable and large
 # Devices known to work
 
 
-### Modules (Old list, not up-to-date anymore):
+## Modules (Old list, not up-to-date anymore):
 
 See [https://github.com/jomjol/AI-on-the-edge-device/discussions/1732](https://github.com/jomjol/AI-on-the-edge-device/discussions/1732) for a more recent list.
 
@@ -99,7 +99,7 @@ See [https://github.com/jomjol/AI-on-the-edge-device/discussions/1732](https://g
 
 - [https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE](https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE) (27.12.2022)
 
-### SD Card
+## SD Card
  
 - Sandisk 2GB Micro SD Class 2 [Sandisk 2GB](https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 AITRIP ESP32 and CAM [ESP-32/CAM](https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
