@@ -1,7 +1,8 @@
 # Preparing for Release
 
 1. [Changelog](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md) is merged back from `master` branch to `rolling` branch (should be the last step of the previous release creation)
-1. All changes are documented in the [Changelog](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md) in `rolling` branch
+1. All changes are documented in the [Changelog](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md) in `rolling` branch.
+   To get a list of commits, call `git log --oneline`. Summarize the relevant chnages since the last release.
 
 
 ## Release creation steps
