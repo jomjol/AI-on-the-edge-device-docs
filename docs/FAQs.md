@@ -11,17 +11,17 @@ There are several reasons for frequent reboots:
 There is a dedicated page about this: [Frequent Reboots](../Frequent-Reboots/).
 
 
-## Bad WebUI Responsiveness. What can I do?
+## Bad WebUI responsiveness. What can I do?
 
 This is usually due to hardware or WLAN issues. There are already many entries in discussion section, some of which have good tipps.
 
 Possible checks / ideas:
 
 * ESP32CAM hardware antenna design is very poor in connection with camera frequency.
--> Simple test: When the device is in operation, putting your thumb on the camera connector and the directly adjacent components should make the device respond more quickly.
--> Possible optimization: Here, an attempt was made to dampen the frequency influences somewhat by shielding. 
+  * Simple test: When the device is in operation, putting your thumb on the camera connector and the directly adjacent components should make the device respond more quickly.
+  * Possible optimization: Here, an attempt was made to dampen the frequency influences somewhat by shielding. 
 [Shielding Example](https://www.reddit.com/r/esp32/comments/r9g5jc/fixing_ymmv_the_poor_frame_rate_on_the_esp32cam/)
-* WLAN channel: Preferably use 1, 6 or 11
+* WLAN channel: Preferably use channel 1, 6 or 11
 * Performance can vary depending on the AP manufacturer. If necessary, check with a mobile hotspot or other device to exclude AP influence
 * Try with an external antenna
 * Avoid VLAN, currently not fully supported
