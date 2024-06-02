@@ -628,9 +628,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="prometheusopenmetrics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Prometheus/OpenMetrics</h1>
-<p>A set of metrics is exported via the <code>/metrics</code> path on the device. Besides the current value, a set of device properties are exported. Multiple sequences (aka <em>numbers</em>) are supported via a label. The metrics are provided in text wire format.</p>
+<p>A set of metrics is exported via the <code>/metrics</code> REST API path on the device. Besides the current value, a set of device properties are exported. Multiple sequences (aka <em>numbers</em>) are supported via a label. The metrics are provided in text wire format.</p>
 <p>Example:</p>
-<pre><code class="language-bash">$ curl http://192.168.178.23/metrics
+<pre><code class="language-bash">$ curl http://&lt;IP&gt;/metrics
 # HELP ai_on_the_edge_device_flow_value current value of meter readout
 # TYPE ai_on_the_edge_device_flow_value gauge
 ai_on_the_edge_device_flow_value{sequence="main"} 240.7064
@@ -657,7 +657,7 @@ ai_on_the_edge_device_rounds_total 239
     scrape_interval: 300s
     metrics_path: /metrics
     static_configs:
-      - targets: ['192.168.178.23']
+      - targets: ['&lt;IP&gt;']
 </code></pre>
 <h2 id="references"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> References</h2>
 <ul>
