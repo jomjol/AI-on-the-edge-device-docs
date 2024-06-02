@@ -132,3 +132,7 @@ Note: For more detailed information to the REST handler, have a look to the code
 ### heap
   print relevant memory (heap) information
   - Example: `Heap info: Heap Total: 1888926 | SPI Free: 1827431 | SPI Larg Block: 1802240 | SPI Min Free: 758155 | Int Free: 61495 | Int Larg Block: 55296 | Int Min Free: 36427`
+
+## Prometheus/OpenMetrics
+### metrics
+  Provides a set of metrics that can be scraped by prometheus. See [Prometheus/OpenMetrics](../prometheus-openmetrics) for details.
