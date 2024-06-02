@@ -1,11 +1,11 @@
 # Prometheus/OpenMetrics
 
-A set of metrics is exported via the `/metrics` path on the device. Besides the current value, a set of device properties are exported. Multiple sequences (aka *numbers*) are supported via a label. The metrics are provided in text wire format.
+A set of metrics is exported via the `/metrics` REST API path on the device. Besides the current value, a set of device properties are exported. Multiple sequences (aka *numbers*) are supported via a label. The metrics are provided in text wire format.
 
 Example:
 
 ```bash
-$ curl http://192.168.178.23/metrics
+$ curl http://<IP>/metrics
 # HELP ai_on_the_edge_device_flow_value current value of meter readout
 # TYPE ai_on_the_edge_device_flow_value gauge
 ai_on_the_edge_device_flow_value{sequence="main"} 240.7064
@@ -36,7 +36,7 @@ scrape_configs:
     scrape_interval: 300s
     metrics_path: /metrics
     static_configs:
-      - targets: ['192.168.178.23']
+      - targets: ['<IP>']
 ```
 
 ## References
