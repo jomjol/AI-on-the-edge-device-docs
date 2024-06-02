@@ -32,6 +32,7 @@ nav:
     - Neural-Network-Types.md
     - Additional-Information.md
     - New-Releases-Notification.md
+    - prometheus-openmetrics.md
 
   - Troubleshooting:
     - Reduced webinterface (error codes): Error-Codes.md
