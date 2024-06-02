@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://jomjol.github.io/AI-on-the-edge-device-docs/FAQs/" rel="canonical"/>
-<link href="../Best-Practice/" rel="prev"/>
-<link href="../Reference-Image/" rel="next"/>
+<link href="https://jomjol.github.io/AI-on-the-edge-device-docs/prometheus-openmetrics/" rel="canonical"/>
+<link href="../New-Releases-Notification/" rel="prev"/>
+<link href="../Error-Codes/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.25" name="generator"/>
-<title>Frequently Asked Questions - AI on the Edge Device</title>
+<title>Prometheus/OpenMetrics - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#frequently-asked-questions">1. 
+<a class="md-skip" href="#prometheusopenmetrics">1. 
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Frequently Asked Questions
+              Prometheus/OpenMetrics
             
           </span>
 </div>
@@ -119,15 +119,15 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
 <span class="md-ellipsis">
     Getting Started
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -168,83 +168,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Frequently Asked Questions
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FAQs/">
 <span class="md-ellipsis">
     Frequently Asked Questions
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#my-device-reboots-frequently-what-can-i-do">1.1 
-<span class="md-ellipsis">
-      My device reboots frequently. What can I do?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bad-webui-responsiveness-what-can-i-do">1.2 
-<span class="md-ellipsis">
-      Bad WebUI responsiveness. What can I do?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-accurate-are-the-detections">1.3 
-<span class="md-ellipsis">
-      How accurate are the detections?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#my-numbers-are-not-correctly-detected-what-can-i-do">1.4 
-<span class="md-ellipsis">
-      My numbers are not correctly detected. What can I do?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-can-i-ensure-invalid-numbers-are-never-reported">1.5 
-<span class="md-ellipsis">
-      How can I ensure invalid numbers are never reported?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#even-after-i-have-setup-everything-perfect-there-is-a-false-reading-especially-around-the-zero-crossing-roll-over-to-next-number">1.6 
-<span class="md-ellipsis">
-      Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pre-value">1.7 
-<span class="md-ellipsis">
-      Pre-Value
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rate-too-high-read">1.8 
-<span class="md-ellipsis">
-      "Rate too high - Read: ..."
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -308,15 +237,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     Advanced
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Advanced
@@ -406,12 +335,41 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../prometheus-openmetrics/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Prometheus/OpenMetrics
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Prometheus/OpenMetrics
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prometheus-scrape-config">1.1 
+<span class="md-ellipsis">
+      Prometheus Scrape Config
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">1.2 
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -649,58 +607,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#my-device-reboots-frequently-what-can-i-do">1.1 
+<a class="md-nav__link" href="#prometheus-scrape-config">1.1 
 <span class="md-ellipsis">
-      My device reboots frequently. What can I do?
+      Prometheus Scrape Config
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#bad-webui-responsiveness-what-can-i-do">1.2 
+<a class="md-nav__link" href="#references">1.2 
 <span class="md-ellipsis">
-      Bad WebUI responsiveness. What can I do?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-accurate-are-the-detections">1.3 
-<span class="md-ellipsis">
-      How accurate are the detections?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#my-numbers-are-not-correctly-detected-what-can-i-do">1.4 
-<span class="md-ellipsis">
-      My numbers are not correctly detected. What can I do?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-can-i-ensure-invalid-numbers-are-never-reported">1.5 
-<span class="md-ellipsis">
-      How can I ensure invalid numbers are never reported?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#even-after-i-have-setup-everything-perfect-there-is-a-false-reading-especially-around-the-zero-crossing-roll-over-to-next-number">1.6 
-<span class="md-ellipsis">
-      Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pre-value">1.7 
-<span class="md-ellipsis">
-      Pre-Value
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rate-too-high-read">1.8 
-<span class="md-ellipsis">
-      "Rate too high - Read: ..."
+      References
     </span>
 </a>
 </li>
@@ -711,98 +627,42 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="frequently-asked-questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Frequently Asked Questions</h1>
-<h2 id="my-device-reboots-frequently-what-can-i-do"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> My device reboots frequently. What can I do?</h2>
-<p>There are several reasons for frequent reboots:</p>
+<h1 id="prometheusopenmetrics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Prometheus/OpenMetrics</h1>
+<p>A set of metrics is exported via the <code>/metrics</code> path on the device. Besides the current value, a set of device properties are exported. Multiple sequences (aka <em>numbers</em>) are supported via a label. The metrics are provided in text wire format.</p>
+<p>Example:</p>
+<pre><code class="language-bash">$ curl http://192.168.178.23/metrics
+# HELP ai_on_the_edge_device_flow_value current value of meter readout
+# TYPE ai_on_the_edge_device_flow_value gauge
+ai_on_the_edge_device_flow_value{sequence="main"} 240.7064
+# HELP ai_on_the_edge_device_cpu_temperature_celsius current cpu temperature in celsius
+# TYPE ai_on_the_edge_device_cpu_temperature_celsius gauge
+ai_on_the_edge_device_cpu_temperature_celsius 41
+# HELP ai_on_the_edge_device_rssi_dbm current WiFi signal strength in dBm
+# TYPE ai_on_the_edge_device_rssi_dbm gauge
+ai_on_the_edge_device_rssi_dbm -67
+# HELP ai_on_the_edge_device_memory_heap_free_bytes available heap memory
+# TYPE ai_on_the_edge_device_memory_heap_free_bytes gauge
+ai_on_the_edge_device_memory_heap_free_bytes 716303
+# HELP ai_on_the_edge_device_uptime_seconds device uptime in seconds
+# TYPE ai_on_the_edge_device_uptime_seconds gauge
+ai_on_the_edge_device_uptime_seconds 214267
+# HELP ai_on_the_edge_device_rounds_total data aquisition rounds since device startup
+# TYPE ai_on_the_edge_device_rounds_total counter
+ai_on_the_edge_device_rounds_total 239
+</code></pre>
+<h2 id="prometheus-scrape-config"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Prometheus Scrape Config</h2>
+<p>The following scrape config (add to <code>prometheus.yml</code>) can be used as an example to ingest available metrics with prometheus:</p>
+<pre><code>scrape_configs:
+  - job_name: watermeter
+    scrape_interval: 300s
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['192.168.178.23']
+</code></pre>
+<h2 id="references"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> References</h2>
 <ul>
-<li>Frequent HTML requests</li>
-<li>Wrong configuration, missing configuration files</li>
-<li>Unstable hardware - see <a href="../Hardware-Compatibility">Hardware Compatibility</a>.</li>
+<li><a href="https://github.com/OpenObservability/OpenMetrics/blob/main/specification/OpenMetrics.md">OpenMetrics</a></li>
 </ul>
-<p>There is a dedicated page about this: <a href="../Frequent-Reboots/">Frequent Reboots</a>.</p>
-<h2 id="bad-webui-responsiveness-what-can-i-do"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Bad WebUI responsiveness. What can I do?</h2>
-<p>This is usually due to hardware or WLAN issues. There are already many entries in discussion section, some of which have good tipps.</p>
-<p>Possible checks / ideas:</p>
-<ul>
-<li>ESP32CAM hardware antenna design is very poor in connection with camera frequency.</li>
-<li>Simple test: When the device is in operation, putting your thumb on the camera connector and the directly adjacent components should make the device respond more quickly.</li>
-<li>Possible optimization: Here, an attempt was made to dampen the frequency influences somewhat by shielding. 
-<a href="https://www.reddit.com/r/esp32/comments/r9g5jc/fixing_ymmv_the_poor_frame_rate_on_the_esp32cam/">Shielding Example</a></li>
-<li>WLAN channel: Preferably use channel 1, 6 or 11</li>
-<li>Performance can vary depending on the AP manufacturer. If necessary, check with a mobile hotspot or other device to exclude AP influence</li>
-<li>Try with an external antenna</li>
-<li>Avoid VLAN, currently not fully supported</li>
-<li>Temporarily deactivate virus scanner / firewall on the end device for testing purpose</li>
-<li>Use sufficiently dimensioned power supply</li>
-<li>Use a branded SD card (formatted with Windows, MAC often causes problems)</li>
-</ul>
-<p>Check <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions">discussion section</a> for possible further tipps.</p>
-<h2 id="how-accurate-are-the-detections"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> How accurate are the detections?</h2>
-<p>It is hard to give a specific accuracy number. It depends on many factors, e.g.</p>
-<ul>
-<li>How in-focus is your camera?</li>
-<li>How sturdy is the camera mount? Does it slightly move over extended periods of time?</li>
-<li>What type of meter are you reading? Is the meter already in the training data set?</li>
-<li>Are you trying to read digits, an analog dial, or both?</li>
-<li>etc.</li>
-</ul>
-<p>Anecdotally, the authors of this page have great success with the meter. While the AI algorithm itself is not perfect and sometimes returns <code>NaN</code> or incorrect values, other post-processing / prevalue / sanity checks help ensure such invalid values are filtered out. With the correct settings, one author has been running this device for 1 month without any incorrect values reported. </p>
-<p>See the FAQs below for more details and configuration hints.</p>
-<h2 id="my-numbers-are-not-correctly-detected-what-can-i-do"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> My numbers are not correctly detected. What can I do?</h2>
-<ul>
-<li>There is a dedicated page about the correct setting <a href="../ROI-Configuration/">ROI Configuration</a>.</li>
-<li>This page also includes the instructions for gathering new images for the training.</li>
-</ul>
-<h2 id="how-can-i-ensure-invalid-numbers-are-never-reported"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> How can I ensure invalid numbers are never reported?</h2>
-<p>As mentioned above, the AI algorithm is not perfect. Sometimes it may read an incorrect value.</p>
-<p>We can tune the software to <em>almost</em> never report an incorrect value. There is a tradeoff though: the software may report <em>stale</em> values - i.e. it will drop incorrect values for a potentially long period of time, resulting in the meter reading being outdated by hours. If never receiving an incorrect value is important to you, consider tolerating this tradeoff.</p>
-<p>You can change the following settings to reduce incorrect readings (but potentially increase staleness of data):</p>
-<ul>
-<li>Set a prevalue via the UI, then change <code>PostProcessing</code> configuration option <code>PreValueAgeStartup</code> to a much larger number (e.g. <code>43200</code> = 30 days).</li>
-<li>Change <code>PostProcessing</code> configuration option <code>MaxRateType</code> to be time based instead of absolute. Set <code>MaxRateValue</code> to something realistic (e.g. <code>5</code> gal/min). You can often find the max flow rate your meter supports directly on the cover.</li>
-<li>Reduce <code>AutoTimer</code> configuration option <code>Interval</code> to the lowest it can be (e.g. <code>3</code> min). The more often you take readings, the less likely for data staleness to occur.</li>
-</ul>
-<h2 id="even-after-i-have-setup-everything-perfect-there-is-a-false-reading-especially-around-the-zero-crossing-roll-over-to-next-number"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Even after I have setup everything perfect there is a false reading - especially around the zero crossing (roll over to next number)</h2>
-<ul>
-<li>The roll over behavior is different for the different meters. E.g.:</li>
-<li>Rolling over start with different previous position (e.g. at 7, 8 or 9)</li>
-<li>
-<p>The neutral position (no rolling) is not perfectly at zero, but rather at something like 7.9 or 8.1, even if it should be exactly 8</p>
-</li>
-<li>
-<p>The "PostProcessingAlgo" is trying to judge out of the individual readings, what number it should be. </p>
-</li>
-<li>
-<p>For example if the previous number is a "1", but the next number seems to be a "8.9", most probably there was a "zero crossing" and the number is a "9" and not still an "8"</p>
-</li>
-<li>
-<p>Currently the setting of the algorithm is set to fit most of the meters and cases. But the parameters do not fit perfectly for all situations. Therefore there might be intermediate states, where the reading is false. 
-  This is especially the case, at the positions, where the roll over (zero crossing) is just starting.</p>
-</li>
-<li>To prevent a sending of false parameters, there is the possibility to limit the maximum allowed change (MaxRateChange).
-  Usually after some time and movement of the counters a bit further, the reading is getting back to a stable reading.</li>
-<li>To handle this, a parametrized setting would be needed. This is rather complicated to implement as subtle changes make a relevant difference. Currently this is not implemented. 
-  So please be a bit patient with your meter :-)</li>
-</ul>
-<h2 id="pre-value"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Pre-Value</h2>
-<p>PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
-<p>If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. </p>
-<p>If the device runs in errors, the pre-value will not be updated, as long as the <code>preValueAgeStartup</code> time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.</p>
-<h2 id="rate-too-high-read"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> "Rate too high - Read: ..."</h2>
-<p>In configuration you can set the <code>MaxRateValue</code> and <code>MaxRateType</code>. The settings suppress improbably high values that can come from false readings. To do this, the value must be set correctly depending on your meter.</p>
-<p>Before doing this, you should be clear about the type of rating you want to use.</p>
-<ul>
-<li><code>Absolute change</code> is the interval between two readings - no matter how often the readings happen. </li>
-<li><code>RateCange</code> is the change per minute. This is calculated from the time difference between the last and the current reading. </li>
-</ul>
-<p>If there is an interval of 5 minutes between readings and a MaxRateValue of 1, an error "Rate too high - Read: ..." if </p>
-<ul>
-<li>Absolute change: the difference is <code>&gt; 1</code></li>
-<li>RateChange: the difference is <code>&gt; 1 / 5</code></li>
-</ul>
-<h1 id="train-on-my-own-images"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Train on my own images</h1>
-<p>Look at <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/">Learn models with your own images</a>
-and <a href="https://github.com/haverland/Tenth-of-step-of-a-meter-digit/wiki/Cookbook-running-the-jupyter-notebook-with-my-own-data">Cookbook running the jupyter notebook with my own data</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
