@@ -113,6 +113,16 @@ Note: For more detailed information to the REST handler, have a look to the code
 ### capture_with_flashlight
   Capture a new image with flashlight
 
+### stream
+  Stream a live video of the camera.
+  
+  It has a slow refresh rate of only 2 FPS to avoid stressing the system. Flow processing continues to work in the background, albeit possibly a bit slower.
+
+  When the `flashlight` parameter is set, it turns on the flaslight. Both `http://<IP>/stream?flashlight=true` and `http://<IP>/stream?flashlight` turn on the flashlight.
+  
+  **LIMITATION:** To avoid using extra memory, no additional dedicated stream webserver is implemented for this feature (instead, the web interface server is reused in a kind of "blocking way"). This means that either the web interface is fully functional or the stream is active, but not both at the same time. However, this is sufficient for the intended use case.
+
+
 ### save
   Save a new image to SD card
   - The `save` entrypoint also support parameters:
