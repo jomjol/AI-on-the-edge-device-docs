@@ -9,7 +9,7 @@
 <link href="../Demo-Mode/" rel="prev"/>
 <link href="../MQTT-API/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.0, mkdocs-material-9.5.25" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.28" name="generator"/>
 <title>REST API - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -72,7 +72,7 @@
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -664,7 +664,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#save">1.4.5 
+<a class="md-nav__link" href="#stream">1.4.5 
+<span class="md-ellipsis">
+      stream
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save">1.4.6 
 <span class="md-ellipsis">
       save
     </span>
@@ -1033,7 +1040,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#save">1.4.5 
+<a class="md-nav__link" href="#stream">1.4.5 
+<span class="md-ellipsis">
+      stream
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save">1.4.6 
 <span class="md-ellipsis">
       save
     </span>
@@ -1217,7 +1231,12 @@
 <p>Capture a new image (without flashlight)</p>
 <h3 id="capture_with_flashlight"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.4</span> capture_with_flashlight</h3>
 <p>Capture a new image with flashlight</p>
-<h3 id="save"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.5</span> save</h3>
+<h3 id="stream"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.5</span> stream</h3>
+<p>Stream a live video of the camera.</p>
+<p>It has a slow refresh rate of only 2 FPS to avoid stressing the system. Flow processing continues to work in the background, albeit possibly a bit slower.</p>
+<p>When the <code>flashlight</code> parameter is set, it turns on the flaslight. Both <code>http://&lt;IP&gt;/stream?flashlight=true</code> and <code>http://&lt;IP&gt;/stream?flashlight</code> turn on the flashlight.</p>
+<p><strong>LIMITATION:</strong> To avoid using extra memory, no additional dedicated stream webserver is implemented for this feature (instead, the web interface server is reused in a kind of "blocking way"). This means that either the web interface is fully functional or the stream is active, but not both at the same time. However, this is sufficient for the intended use case.</p>
+<h3 id="save"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.6</span> save</h3>
 <p>Save a new image to SD card
   - The <code>save</code> entrypoint also support parameters:
    - <code>http://&lt;IP&gt;/save?filename=test.jpg&amp;delay=1000</code></p>
@@ -1259,6 +1278,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+<script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.0, mkdocs-material-9.5.25" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.28" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -72,7 +72,7 @@
 </nav>
 </form>
 <div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
 <div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Initializing search
@@ -3728,6 +3728,7 @@ See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topic
 <p class="admonition-title">Note</p>
 <p>The main topic is allowed to contain <code>/</code> which can be used to split it into multiple levels, eg. <code>/basement/meters/watermeter/1/</code> if you have multiple water meters in your basement.</p>
 </div>
+<p>The nodeId for the Home Assistant MQTT Service Discovery must follow the schema <code>&lt;discovery_prefix&gt;/&lt;component&gt;/[&lt;node_id&gt;/]&lt;object_id&gt;/config</code>. The node_id is not configurable but derived from the <code>MainTopic</code> by stripping any but the last topic level. A <code>MainTopic</code> with the value <code>home/basement/watermeter</code> is transformed into the node_id <code>watermeter</code>, resulting in the discovery topic <code>homeassistant/sensor/watermeter/value/config</code> for the current value.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-MeterType"></a></p>
 <h3 id="parameter-metertype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.7</span> Parameter <code>MeterType</code></h3>
@@ -4174,6 +4175,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+<script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
 </body>
 </html>
