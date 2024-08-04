@@ -80,7 +80,7 @@ Download and extract the Flash tool, after starting choose "Developer Mode", the
 !!! Warning
     If you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.
 
-Boot your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:
+Put your ESP32 in bootloader mode and push start, then it will identify the board and you can configure the bin-configuration according to the following table:
 
 | Filename       | Offset  |
 |----------------|--------:|
