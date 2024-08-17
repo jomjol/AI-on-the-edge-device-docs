@@ -17,13 +17,15 @@ Each page has a link on its top-right corner `Edit on GitHub` which brings you d
 1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
 ## Parameter Documentation
-Each parameter which is listed in the [configfile](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/sd-card/config/config.ini) in the main project repo 
-has its own description page in the folder `param-docs/parameter-pages` (grouped by the config sections).
-Those pages can be edited as needed.
-
-The script `concat-parameter-pages.py` in `param-docs` should be run whenever one of the pages changed.
-This happens automatically in the Github action.
-It then concatenates all pages into the single `../docs/Parameters.md` which gets be added to the `mkdocs` documentation.
+Each parameter in the [main project repo](https://github.com/jomjol/AI-on-the-edge-device) is documented in a separate file, see https://github.com/jomjol/AI-on-the-edge-device/tree/rolling/param-docs. The script in `param-docs/concat-parameter-pages.py` collects them and compiles it into the documentation as provided in https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters.
+The script should be run whenever one of the pages changed.
+This happens automatically daily in the Github action.
+if you run it manually, make sure to clone the main repo first, eg. using:
+```bash
+cd param-docs
+git clone https://github.com/jomjol/AI-on-the-edge-device.git
+python concat-parameter-pages.py
+```
 
 ### Template Generator
 The script `generate-template-param-doc-pages.py` should be run whenever a new parameter gets added to the config file.
