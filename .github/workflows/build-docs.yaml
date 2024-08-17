@@ -11,6 +11,8 @@ on:
   push:
     branches:
     - main
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   build-documentation:
