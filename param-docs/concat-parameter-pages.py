@@ -20,6 +20,9 @@ def appendParameterFile(section, file, parameterName):
         parameterDoc = parameterFileHandle.read()
         parameterDoc = parameterDoc.replace("# ", "### ") # Move all headings 2 level down
 
+        sectionText = "Section: " + "[" + section + "](#section-" + section.lower() +")"
+        parameterDoc = parameterDoc.replace("Default Value:", sectionText + "\n\n" + "Default Value:") # Add section to each parameter
+
     # Add parameter doc to overview page
     with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
         overviewFileHandle.write("<a id=%s-%s></a>\n" % (section, parameterName)) # Create a html anchor so we can link to it with "section-parameter"
