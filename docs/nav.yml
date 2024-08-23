@@ -52,6 +52,7 @@ nav:
       - REST-API.md
       - MQTT-API.md
       - Influx-DB.md
+      - Webhook.md
       # - ...
 
   - Development:
