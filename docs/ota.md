@@ -3,7 +3,7 @@ You can do an OTA (over-the-air) update via the Web Interface.
 Grab the firmware from the
 
  *  [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
- *  [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please inform yourself on [Living on the Edge](../rolling-installation) first!
+ *  [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please inform yourself on [Living on the Edge](rolling-installation.md) first!
 
 ## Update Procedure
 1. Create a backup of your configuration. Either use the Backup/Restore function of your device for this (menu `System > Backup/Restore`) or back the files manually up using the File Server (menu `File Server`, folder `config`). It is recommended to at least save the config file `config.ini`!

@@ -11,7 +11,7 @@ with the target to be in exactly the same position as the reference image.
 
 
 ## Precondition
-Please make sure to have setup your camera properly and taken a good [Reference Image](../Reference-Image).
+Please make sure to have setup your camera properly and taken a good [Reference Image](Reference-Image.md).
 
 ## Define two Reference Images
 

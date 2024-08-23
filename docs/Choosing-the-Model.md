@@ -1,12 +1,12 @@
 # Model Selection
 
 !!! Notes
-    See [Neural Network Types](../Neural-Network-Types) for additional details.
+    See [Neural Network Types](Neural-Network-Types.md) for additional details.
 
-In the [Graphical Configuration Page](../Graphical-configuration), you can choose different models depending on your needs.
+In the [Graphical Configuration Page](Configuration.md), you can choose different models depending on your needs.
 
 This page tries to help you on which model to select.
-For more technical/deeper explanations have a look on [Neural-Network-Types](../Neural-Network-Types).
+For more technical/deeper explanations have a look on [Neural-Network-Types](Neural-Network-Types.md).
 
 ## Digit Models
 

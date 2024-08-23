@@ -13,14 +13,14 @@ The most critical components for an accurate detection are:
 
 2. Using a well trained Model.
    
-    Have a look on the [Digital Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See [Collect images to improve the models](../Learn-models-with-your-own-images) on how to collect new training data.
+    Have a look on the [Digital Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
 
 
 ## Precondition
 Please make sure to have:
 
-1. Setup your camera properly and taken a good [Reference Image](../Reference-Image).
-1. Selected good [Alignment References](../Alignment).
+1. Setup your camera properly and taken a good [Reference Image](Reference-Image.md).
+1. Selected good [Alignment References](Alignment.md).
 
 
 ## Define the ROIs
@@ -34,7 +34,7 @@ Depending if you have only one of those types, you can enable/disable `(1)` it o
 
 You can switch between the individual ROIs with the Drop down box `(2)`.
 If you need additional ROIs or delete them you can do this with the control at `(3)`.
-Like for the [Alignment References](../Alignment), you can change the position, size and name of a ROI in the text fields or define them via drag and drop through the mouse button. 
+Like for the [Alignment References](Alignment.md), you can change the position, size and name of a ROI in the text fields or define them via drag and drop through the mouse button. 
 Make sure the ROIs are in the right order, matching the significance of a digit/analog counter!
 
 !!! Warning
@@ -71,7 +71,7 @@ The configuration of ROIs differs a bit on the selected model (see below).
 
 If you are in the initial setup, the model will be selectable in the next step. By default it is a `dig-cont` resp. `ana-cont` model.
 
-In [Model Selection](../Choosing-the-Model) you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.
+In [Model Selection](Choosing-the-Model.md) you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.
 
 Here we only show the different configuration of the ROIs.
 
@@ -123,7 +123,7 @@ For this model, there should be a border of `20%` of the image size around the n
 | :x: **Not** Okay | ![](img/bw_not_okay_big.jpg)   | ![](img/wb_not_okay_big.jpg)   |
 
 
-If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See [Collect images to improve the models](../Learn-models-with-your-own-images) on how to collect new training data.
+If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
 
 
 ##### Setup using `dig-class100` or `dig-cont` Models

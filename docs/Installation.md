@@ -15,7 +15,7 @@ For point 2 and 3 we provide multiple ways to do it. Pick the one that looks the
 * 4 or 8 MB PSRAM. 
 
 It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
-How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunctioning device. See [Hardware Compatibility](../Hardware-Compatibility) for further advice! 
+How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunctioning device. See [Hardware Compatibility](Hardware-Compatibility.md) for further advice! 
 
 ### USB->UART interface
 For first time flashing the firmware a USB -> UART connector is needed. Later firmware upgrades than can be flashed via OTA.
@@ -46,7 +46,7 @@ A example for wiring can be found here:
 
 ![](img/progammer_manual.jpg)
 
-It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described [here](../External-LED)
+It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described [here](External-LED.md)
 
 ## 2. Firmware
 ### Web Installer
@@ -63,7 +63,7 @@ You can access it with the following link: [Web Installer](https://jomjol.github
 Grab the firmware from the
 
  - [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
- - [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please have a look on [Living on the Edge](../rolling-installation) first!
+ - [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please have a look on [Living on the Edge](rolling-installation.md) first!
 
 You need:
 

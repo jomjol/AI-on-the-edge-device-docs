@@ -1,5 +1,5 @@
 # Parameters
-This page lists all available [Configuration](../Configuration) Parameters.
+This page lists all available [Configuration](Configuration.md) Parameters.
 If a **parameter** or **section** has a tick box on its left side, you can disable it.
 In such case the functionality gets disabled respectively the default values will be used.
 

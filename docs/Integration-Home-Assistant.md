@@ -131,7 +131,7 @@ Note that there seems to be a bug in the graph, see [https://github.com/home-ass
 
 ### InfluxDb Graphs
 
-See also [Influx-DB](../Influx-DB).
+See also [Influx-DB](Influx-DB.md).
 
 If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:
 ```
@@ -150,7 +150,7 @@ from(bucket: "HomeAssistant")
 ## Using REST
 When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.
 
-See [REST API](../REST-API) for a list of available URLs.
+See [REST API](REST-API.md) for a list of available URLs.
 
 The most practical one is the `json` entrypoint which provides the most relevant data JSON formatted:
 `http://<IP>/json`

@@ -6,9 +6,9 @@ There are several reasons for frequent reboots:
 
 * Frequent HTML requests
 * Wrong configuration, missing configuration files
-* Unstable hardware - see [Hardware Compatibility](../Hardware-Compatibility).
+* Unstable hardware - see [Hardware Compatibility](Hardware-Compatibility.md).
 
-There is a dedicated page about this: [Frequent Reboots](../Frequent-Reboots/).
+There is a dedicated page about this: [Frequent Reboots](Frequent-Reboots.md).
 
 
 ## Bad WebUI responsiveness. What can I do?
@@ -49,7 +49,7 @@ See the FAQs below for more details and configuration hints.
 
 ## My numbers are not correctly detected. What can I do?
 
-* There is a dedicated page about the correct setting [ROI Configuration](../ROI-Configuration/).
+* There is a dedicated page about the correct setting [ROI Configuration](ROI-Configuration.md).
 * This page also includes the instructions for gathering new images for the training.
 
 ## How can I ensure invalid numbers are never reported?

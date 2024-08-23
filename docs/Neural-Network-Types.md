@@ -1,7 +1,7 @@
 # Neural Network Types
 
 !!! Note
-    For an overview, see [Choosing the Model](../Choosing-the-Model).
+    For an overview, see [Choosing the Model](Choosing-the-Model.md).
 
 This section is describing the different types of neural networks, that are used with the AI-on-the-edge approach and gives an introduction on how and where to use them. 
 

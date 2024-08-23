@@ -145,4 +145,4 @@ Note: For more detailed information to the REST handler, have a look to the code
 
 ## Prometheus/OpenMetrics
 ### metrics
-  Provides a set of metrics that can be scraped by prometheus. See [Prometheus/OpenMetrics](../prometheus-openmetrics) for details.
+  Provides a set of metrics that can be scraped by prometheus. See [Prometheus/OpenMetrics](prometheus-openmetrics.md) for details.

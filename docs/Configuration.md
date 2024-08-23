@@ -9,7 +9,7 @@ It can be reached via the menu `Settings > Configuration`.
     - To activate the changes, the device needs to be restarted after saving the changes.
     - Most of the commands need processing on the ESP32 device. This is not very fast - so please be patient.
 
-All parameters are documented on the [Parameters](../Parameters) page and as tooltips on the config page.
+All parameters are documented on the [Parameters](Parameters.md) page and as tooltips on the config page.
 
 ## Expert Parameters
 Some parameters are treated as **Expert Parameters** and are hidden by default.

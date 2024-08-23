@@ -1,6 +1,6 @@
 # Data Logging
 
-When Data Logging is enabled (See parameter [`DataLogActive`](../Parameters/#parameter-datalogactive)),
+When Data Logging is enabled (See parameter [`DataLogActive`](Parameters.md/#parameter-datalogactive)),
 the results of every round gets written to the SD-Card.
 
 The data files are stored in `/log/data` on the SD-Card.
