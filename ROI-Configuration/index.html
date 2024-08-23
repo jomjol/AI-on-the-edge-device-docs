@@ -771,14 +771,14 @@ There are several precautions to detect this. For details see the section <code>
 </li>
 <li>
 <p>Using a well trained Model.</p>
-<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
+<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images/">Collect images to improve the models</a> on how to collect new training data.</p>
 </li>
 </ol>
 <h2 id="precondition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Precondition</h2>
 <p>Please make sure to have:</p>
 <ol>
-<li>Setup your camera properly and taken a good <a href="../Reference-Image">Reference Image</a>.</li>
-<li>Selected good <a href="../Alignment">Alignment References</a>.</li>
+<li>Setup your camera properly and taken a good <a href="../Reference-Image/">Reference Image</a>.</li>
+<li>Selected good <a href="../Alignment/">Alignment References</a>.</li>
 </ol>
 <h2 id="define-the-rois"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Define the ROIs</h2>
 <p>For each digit or analog pointer, a ROI must be defined.</p>
@@ -787,7 +787,7 @@ There are several precautions to detect this. For details see the section <code>
 <p><img alt="" src="../img/initial_setup_3_rois.jpg" style="width:500px"/></p>
 <p>You can switch between the individual ROIs with the Drop down box <code>(2)</code>.
 If you need additional ROIs or delete them you can do this with the control at <code>(3)</code>.
-Like for the <a href="../Alignment">Alignment References</a>, you can change the position, size and name of a ROI in the text fields or define them via drag and drop through the mouse button. 
+Like for the <a href="../Alignment/">Alignment References</a>, you can change the position, size and name of a ROI in the text fields or define them via drag and drop through the mouse button. 
 Make sure the ROIs are in the right order, matching the significance of a digit/analog counter!</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -814,7 +814,7 @@ The circle should exactly fit to the outer size of the meter and the cross shoul
 <p>First of all, choose the right size of the ROI.
 The configuration of ROIs differs a bit on the selected model (see below). </p>
 <p>If you are in the initial setup, the model will be selectable in the next step. By default it is a <code>dig-cont</code> resp. <code>ana-cont</code> model.</p>
-<p>In <a href="../Choosing-the-Model">Model Selection</a> you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.</p>
+<p>In <a href="../Choosing-the-Model/">Model Selection</a> you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.</p>
 <p>Here we only show the different configuration of the ROIs.</p>
 <ol>
 <li>
@@ -893,7 +893,7 @@ For a first run you can choose the following general settings: </p>
 </tr>
 </tbody>
 </table>
-<p>If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See <a href="../Learn-models-with-your-own-images">Collect images to improve the models</a> on how to collect new training data.</p>
+<p>If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See <a href="../Learn-models-with-your-own-images/">Collect images to improve the models</a> on how to collect new training data.</p>
 <h5 id="setup-using-dig-class100-or-dig-cont-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2.2</span> Setup using <code>dig-class100</code> or <code>dig-cont</code> Models</h5>
 <p>These models recognize the <strong>tenths</strong> (fractions) between the numbers.
 Those models require a different ROI setup; <strong>the height must be set differently and more accurately</strong>.</p>

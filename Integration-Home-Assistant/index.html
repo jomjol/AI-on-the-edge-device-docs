@@ -833,7 +833,7 @@ it is a helper and can be used to reset the total increasing values once a day</
 <img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png"/></p>
 <p>Note that there seems to be a bug in the graph, see <a href="https://github.com/home-assistant/frontend/issues/13995">https://github.com/home-assistant/frontend/issues/13995</a>!</p>
 <h3 id="influxdb-graphs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> InfluxDb Graphs</h3>
-<p>See also <a href="../Influx-DB">Influx-DB</a>.</p>
+<p>See also <a href="../Influx-DB/">Influx-DB</a>.</p>
 <p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>from(bucket: "HomeAssistant")
 </span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>|&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
@@ -846,7 +846,7 @@ it is a helper and can be used to reset the total increasing values once a day</
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193473347-c81fc301-c52f-4af0-9fcb-56fab12cacac.png"/></p>
 <h2 id="using-rest"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Using REST</h2>
 <p>When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.</p>
-<p>See <a href="../REST-API">REST API</a> for a list of available URLs.</p>
+<p>See <a href="../REST-API/">REST API</a> for a list of available URLs.</p>
 <p>The most practical one is the <code>json</code> entrypoint which provides the most relevant data JSON formatted:
 <code>http://&lt;IP&gt;/json</code>
 This would return:
