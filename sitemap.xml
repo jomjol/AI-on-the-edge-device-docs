@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/Webhook/</loc>
+         <lastmod>2024-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jomjol.github.io/AI-on-the-edge-device-docs/collect-new-images/</loc>
          <lastmod>2024-08-23</lastmod>
          <changefreq>daily</changefreq>

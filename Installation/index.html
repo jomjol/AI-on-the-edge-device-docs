@@ -9,7 +9,7 @@
 <link href=".." rel="prev"/>
 <link href="../initial-setup/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.0, mkdocs-material-9.5.32" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.33" name="generator"/>
 <title>Installation - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -634,6 +634,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Webhook/">
+<span class="md-ellipsis">
+    Webhook
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -963,16 +970,14 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 <h4 id="flashing-using-the-python-based-esptool-console"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.3</span> Flashing using the Python based esptool (Console)</h4>
 <p>For this you need a python environment (e.g. Anaconda in Win10). 
 Here you need to install the esptool:</p>
-<pre><code>pip install esptool
-</code></pre>
-<p>Then connect the ESP32 with the USB-UART connector to the system, put it in boot mode and with the following command you can erase the flash and flash bootloader, partitions and firmware in two steps:</p>
-<pre><code>esptool erase_flash
-esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmware.bin
-</code></pre>
-<ul>
-<li>Maybe you need to specify the COM-port if it is not detected by default.</li>
-<li>If the erase command throws the error <code>A fatal error occurred: ESP32 ROM does not support function erase_flash.</code>, your <code>esptool</code> might be too old, see <a href="https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/">https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/</a></li>
-</ul>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip install esptool
+</span></code></pre></div>
+Then connect the ESP32 with the USB-UART connector to the system, put it in boot mode and with the following command you can erase the flash and flash bootloader, partitions and firmware in two steps:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>esptool erase_flash
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmware.bin
+</span></code></pre></div>
+- Maybe you need to specify the COM-port if it is not detected by default.
+- If the erase command throws the error <code>A fatal error occurred: ESP32 ROM does not support function erase_flash.</code>, your <code>esptool</code> might be too old, see <a href="https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/">https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/</a></p>
 <p>With some Python installations this may not work and you’ll receive an error, try <code>python -m pip install esptool</code> or <code>pip3 install esptool</code>.</p>
 <p>Further recommendations can be found on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html">espressif webpage</a>.</p>
 <h2 id="3-sd-card"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> 3. SD Card</h2>
@@ -1080,6 +1085,6 @@ After power on the connection status is indicated by 3x blinking of the red on b
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.471ce7a9.min.js"></script>
+<script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
 </body>
 </html>

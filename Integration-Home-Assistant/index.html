@@ -9,7 +9,7 @@
 <link href="../Parameters/" rel="prev"/>
 <link href="../External-LED/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.0, mkdocs-material-9.5.32" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.33" name="generator"/>
 <title>Integration into Home Assistant - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -556,6 +556,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Webhook/">
+<span class="md-ellipsis">
+    Webhook
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -737,86 +744,86 @@
 <img alt="grafik" src="https://user-images.githubusercontent.com/1783586/199352619-217df627-4b87-4fa0-86a2-f5347c452fdb.png"/></img></p>
 <h3 id="using-mqtt-manually-setup-entities"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Using MQTT (Manually Setup Entities)</h3>
 <p>First make sure with an MQTT client (for example <a href="http://mqtt-explorer.com/">MQTT Explorer</a>) that MQTT works as expected and to get a list of the available topics!</p>
-<p>Then add a sensor for each property:</p>
-<pre><code class="language-yaml">mqtt:
-  sensor:
-    - state_topic: "wasserzaehler/main/value"
-      name: "Watermeter Value"
-      unique_id: watermeter_value
-      unit_of_measurement: 'm³'
-      state_class: total_increasing
-      device_class: water # Needs Home Assistant 2022.11!
-      icon: 'mdi:water-pump'
-      availability_topic: wasserzaehler/connection
-      payload_available: connected
-      payload_not_available: connection lost
-
-    - state_topic: "wasserzaehler/main/rate"
-      name: "Watermeter Rate"
-      unique_id: watermeter_rate
-      unit_of_measurement: 'm³/min'
-      state_class: measurement
-      device_class: water # Needs Home Assistant 2022.11!
-      icon: 'mdi:water-pump'
-      availability_topic: wasserzaehler/connection
-      payload_available: connected
-      payload_not_available: connection lost
-
-    - state_topic: "wasserzaehler/main/error"
-      name: "Watermeter Error"
-      unique_id: watermeter_error
-      icon: "mdi:water-alert"
-      availability_topic: wasserzaehler/connection
-      payload_available: connected
-      payload_not_available: connection lost    
-
-    - state_topic: "wasserzaehler/uptime"
-      name: "Watermeter Uptime"
-      unique_id: watermeter_uptime
-      unit_of_measurement: 's'
-      state_class: measurement
-      device_class: duration
-      entity_category: diagnostic
-      icon: "mdi:timer-outline"
-      availability_topic: wasserzaehler/connection
-      payload_available: connected
-      payload_not_available: connection lost
-</code></pre>
-<p>If you run the discovery once, you can also extract the information from there (MQTT Info, untested):</p>
-<pre><code class="language-yaml">mqtt: # Extracted form the Discovery but untested!
-  sensor:
-      - name: Value
-        unique_id: wasserzaehler-main_value
-        icon: mdi:gauge
-        state_topic: wasserzaehler/main/value
-        unit_of_measurement: m³
-        device_class: water
-        state_class: total_increasing
-        availability_topic: wasserzaehler/connection
-        payload_available: connected
-        payload_not_available: connection lost
-</code></pre>
-<p>If you want to convert the <code>m³</code> to <code>l</code>, use a template sensor:</p>
-<pre><code class="language-yaml">template:
-  - sensor:
-    - name: "Watermeter in l"
-      unique_id: watermeter_in_l
-      icon: "mdi:gauge"
-      state: "{{ states('sensor.watermeter_value')|float(default=0) * 1000 }}" # Convert 1 m3 =&gt; 1000 l
-      unit_of_measurement: l
-      availability: "{{ states('sensor.watermeter_value') not in ['unknown', 'unavailable', 'none'] }}"
-</code></pre>
+<p>Then add a sensor for each property:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">mqtt</span><span class="p">:</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">sensor</span><span class="p">:</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state_topic</span><span class="p">:</span><span class="w"> </span><span class="s">"wasserzaehler/main/value"</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">Value"</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">      </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watermeter_value</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="s">'m³'</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="nt">state_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_increasing</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water</span><span class="w"> </span><span class="c1"># Needs Home Assistant 2022.11!</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">'mdi:water-pump'</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">      </span><span class="nt">availability_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/connection</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="nt">payload_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connected</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="nt">payload_not_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection lost</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state_topic</span><span class="p">:</span><span class="w"> </span><span class="s">"wasserzaehler/main/rate"</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">Rate"</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watermeter_rate</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">      </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="s">'m³/min'</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">      </span><span class="nt">state_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">measurement</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">      </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water</span><span class="w"> </span><span class="c1"># Needs Home Assistant 2022.11!</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">'mdi:water-pump'</span>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">      </span><span class="nt">availability_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/connection</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">      </span><span class="nt">payload_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connected</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">      </span><span class="nt">payload_not_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection lost</span>
+</span><span id="__span-0-24"><a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state_topic</span><span class="p">:</span><span class="w"> </span><span class="s">"wasserzaehler/main/error"</span>
+</span><span id="__span-0-26"><a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">Error"</span>
+</span><span id="__span-0-27"><a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">      </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watermeter_error</span>
+</span><span id="__span-0-28"><a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">"mdi:water-alert"</span>
+</span><span id="__span-0-29"><a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span><span class="nt">availability_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/connection</span>
+</span><span id="__span-0-30"><a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span><span class="nt">payload_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connected</span>
+</span><span id="__span-0-31"><a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">      </span><span class="nt">payload_not_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection lost</span><span class="w">    </span>
+</span><span id="__span-0-32"><a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">state_topic</span><span class="p">:</span><span class="w"> </span><span class="s">"wasserzaehler/uptime"</span>
+</span><span id="__span-0-34"><a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">Uptime"</span>
+</span><span id="__span-0-35"><a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">      </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watermeter_uptime</span>
+</span><span id="__span-0-36"><a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">      </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="s">'s'</span>
+</span><span id="__span-0-37"><a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">      </span><span class="nt">state_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">measurement</span>
+</span><span id="__span-0-38"><a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">      </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration</span>
+</span><span id="__span-0-39"><a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">      </span><span class="nt">entity_category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagnostic</span>
+</span><span id="__span-0-40"><a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">"mdi:timer-outline"</span>
+</span><span id="__span-0-41"><a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">      </span><span class="nt">availability_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/connection</span>
+</span><span id="__span-0-42"><a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">      </span><span class="nt">payload_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connected</span>
+</span><span id="__span-0-43"><a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">      </span><span class="nt">payload_not_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection lost</span>
+</span></code></pre></div>
+If you run the discovery once, you can also extract the information from there (MQTT Info, untested):
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">mqtt</span><span class="p">:</span><span class="w"> </span><span class="c1"># Extracted form the Discovery but untested!</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">sensor</span><span class="p">:</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler-main_value</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mdi:gauge</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nt">state_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/main/value</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m³</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="nt">state_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_increasing</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="nt">availability_topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wasserzaehler/connection</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="nt">payload_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connected</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="nt">payload_not_available</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection lost</span>
+</span></code></pre></div></p>
+<p>If you want to convert the <code>m³</code> to <code>l</code>, use a template sensor:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">template</span><span class="p">:</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sensor</span><span class="p">:</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">l"</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">      </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watermeter_in_l</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">"mdi:gauge"</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">states('sensor.watermeter_value')|float(default=0)</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">1000</span><span class="nv"> </span><span class="s">}}"</span><span class="w"> </span><span class="c1"># Convert 1 m3 =&gt; 1000 l</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">l</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">      </span><span class="nt">availability</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">states('sensor.watermeter_value')</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">['unknown',</span><span class="nv"> </span><span class="s">'unavailable',</span><span class="nv"> </span><span class="s">'none']</span><span class="nv"> </span><span class="s">}}"</span>
+</span></code></pre></div></p>
 <p>If you you want to have the consumption per day, you can use an <a href="https://www.home-assistant.io/integrations/utility_meter/">Utility Meter</a>.
 it is a helper and can be used to reset the total increasing values once a day</p>
-<pre><code class="language-yaml">utility_meter:
-  utility_meter_gas_per_day:
-    source: sensor.gasmeter_value
-    cycle: daily
-
-  utility_meter_water_per_day:
-    source: sensor.watermeter_value
-    cycle: daily
-</code></pre>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">utility_meter</span><span class="p">:</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">utility_meter_gas_per_day</span><span class="p">:</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensor.gasmeter_value</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nt">cycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daily</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="nt">utility_meter_water_per_day</span><span class="p">:</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensor.watermeter_value</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nt">cycle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daily</span>
+</span></code></pre></div>
 <p>Note that you also can add it using the UI.</p>
 <h3 id="examples"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Examples</h3>
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193472069-4135736e-e63a-4afb-8009-5b97aa5c9ac5.png"/></p>
@@ -827,64 +834,63 @@ it is a helper and can be used to reset the total increasing values once a day</
 <p>Note that there seems to be a bug in the graph, see <a href="https://github.com/home-assistant/frontend/issues/13995">https://github.com/home-assistant/frontend/issues/13995</a>!</p>
 <h3 id="influxdb-graphs"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> InfluxDb Graphs</h3>
 <p>See also <a href="../Influx-DB">Influx-DB</a>.</p>
-<p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:</p>
-<pre><code>from(bucket: "HomeAssistant")
-|&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
-  |&gt; filter(fn: (r) =&gt; r["entity_id"] == "wasserverbrauch_tag")
-  |&gt; filter(fn: (r) =&gt; r["_field"] == "value")
-  |&gt; timeShift(duration: -1d)
-  |&gt; aggregateWindow(every: 1d, fn: max, createEmpty: false)
-  |&gt; yield(name: "mean")
-</code></pre>
+<p>If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>from(bucket: "HomeAssistant")
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>|&gt; range(start: v.timeRangeStart, stop: v.timeRangeStop)
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>  |&gt; filter(fn: (r) =&gt; r["entity_id"] == "wasserverbrauch_tag")
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>  |&gt; filter(fn: (r) =&gt; r["_field"] == "value")
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>  |&gt; timeShift(duration: -1d)
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>  |&gt; aggregateWindow(every: 1d, fn: max, createEmpty: false)
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>  |&gt; yield(name: "mean")
+</span></code></pre></div></p>
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/1783586/193473347-c81fc301-c52f-4af0-9fcb-56fab12cacac.png"/></p>
 <h2 id="using-rest"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Using REST</h2>
 <p>When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.</p>
 <p>See <a href="../REST-API">REST API</a> for a list of available URLs.</p>
 <p>The most practical one is the <code>json</code> entrypoint which provides the most relevant data JSON formatted:
 <code>http://&lt;IP&gt;/json</code>
-This would return:</p>
-<pre><code class="language-JSON">{
-"main":
-  {
-    "value": "512.3020",
-    "raw": "0512.3020",
-    "error": "no error",
-    "rate": 0.000000,
-    "timestamp": "2022-10-02T20:32:06"
-   [..]
-  }
-}
-</code></pre>
-<p>To do such a REST call, you need to create a REST sensor:</p>
-<pre><code class="language-yaml">sensor:
-
-- platform: rest
-  name: "Gasmeter JSON" 
-  resource: http://&lt;IP&gt;/json
-  json_attributes:
-    - main
-  value_template: '{{ value_json.value }}'
-  headers:
-    Content-Type: application/json
-  scan_interval: 60
-
-template:
-  sensor:
-  - name: "Gasmeter Value from JSON"
-    unique_id: gas_meter_value_from_json
-    state: "{{ state_attr('sensor.gasmeter_json','main')['value'] }}"
-    unit_of_measurement: 'm³'
-
-  - name: "Watermeter Value from JSON"
-    unique_id: water_meter_value_from_json
-    state: &gt;-
-            {{ state_attr('sensor.watermeter_json','main')['value'] | float }}
-    unit_of_measurement: 'm³'
-    device_class: water
-    state_class: total_increasing
-    icon: mdi:gauge
-
-</code></pre>
+This would return:
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nt">"main"</span><span class="p">:</span>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512.3020"</span><span class="p">,</span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nt">"raw"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0512.3020"</span><span class="p">,</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no error"</span><span class="p">,</span>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nt">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000000</span><span class="p">,</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-02T20:32:06"</span>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">   </span><span class="p">[</span><span class="err">..</span><span class="p">]</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>To do such a REST call, you need to create a REST sensor:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">sensor</span><span class="p">:</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rest</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Gasmeter</span><span class="nv"> </span><span class="s">JSON"</span><span class="w"> </span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://&lt;IP&gt;/json</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">  </span><span class="nt">json_attributes</span><span class="p">:</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="nt">value_template</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">value_json.value</span><span class="nv"> </span><span class="s">}}'</span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">  </span><span class="nt">headers</span><span class="p">:</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nt">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application/json</span>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">  </span><span class="nt">scan_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="nt">template</span><span class="p">:</span>
+</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">  </span><span class="nt">sensor</span><span class="p">:</span>
+</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Gasmeter</span><span class="nv"> </span><span class="s">Value</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">JSON"</span>
+</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gas_meter_value_from_json</span>
+</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">state_attr('sensor.gasmeter_json','main')['value']</span><span class="nv"> </span><span class="s">}}"</span>
+</span><span id="__span-6-18"><a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="s">'m³'</span>
+</span><span id="__span-6-19"><a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a href="#__codelineno-6-20" id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Watermeter</span><span class="nv"> </span><span class="s">Value</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">JSON"</span>
+</span><span id="__span-6-21"><a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">    </span><span class="nt">unique_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water_meter_value_from_json</span>
+</span><span id="__span-6-22"><a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+</span><span id="__span-6-23"><a href="#__codelineno-6-23" id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">            </span><span class="no">{{ state_attr('sensor.watermeter_json','main')['value'] | float }}</span>
+</span><span id="__span-6-24"><a href="#__codelineno-6-24" id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">    </span><span class="nt">unit_of_measurement</span><span class="p">:</span><span class="w"> </span><span class="s">'m³'</span>
+</span><span id="__span-6-25"><a href="#__codelineno-6-25" id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">water</span>
+</span><span id="__span-6-26"><a href="#__codelineno-6-26" id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">    </span><span class="nt">state_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_increasing</span>
+</span><span id="__span-6-27"><a href="#__codelineno-6-27" id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mdi:gauge</span>
+</span></code></pre></div></p>
 <p>The 2nd way is to use the html api call from value.html : </p>
 <p><code>sensor:
 - platform: rest
@@ -925,6 +931,6 @@ template:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.471ce7a9.min.js"></script>
+<script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
 </body>
 </html>
