@@ -1,10 +1,57 @@
 # Webhook
 
 Comming soon.
-See [https://github.com/jomjol/AI-on-the-edge-device/pull/3163](https://github.com/jomjol/AI-on-the-edge-device/pull/3163) and [https://github.com/jomjol/AI-on-the-edge-device/pull/3174](https://github.com/jomjol/AI-on-the-edge-device/pull/3174)
 
-@RaHehl Please add some explanations.
-Also I think it would be great to add the PHP examples:
+## Purpose
+
+The idea behind this webhook feature is to provide an alternative to MQTT and InfluxDB for transmitting data, such as water meter readings from a vacation home, to a standard PHP MySQL webspace.
+
+## Configuration
+
+To configure the webhook feature, you only need to define a URI and an API key. The URI is where the webhook will send the data, and the API key is used to authenticate the requests, ensuring that only authorized devices can send data to your server.
+
+## Example of a POST Request
+
+Below is an example of the JSON payload that might be sent in a POST request to the webhook:
+
+### Request Headers
+
+```http
+APIKEY: your-api-key-here
+```
+
+### JSON Payload
+
+```json
+[
+  {
+    "timeUTC": 1723196684,
+    "timestamp": "2024-08-09T11:44:44+0200",
+    "name": "main",
+    "rawValue": "0345.42647",
+    "value": "345.42648",
+    "preValue": "345.42648",
+    "rate": "0.000000",
+    "changeAbsolute": "0.00000",
+    "error": "no error"
+  },
+  {
+    "timeUTC": 1723196684,
+    "timestamp": "2024-08-09T11:44:44+0200",
+    "name": "test",
+    "rawValue": "34",
+    "value": "34",
+    "preValue": "34",
+    "rate": "0.000000",
+    "changeAbsolute": "0",
+    "error": "no error"
+  }
+]
+```
+
+## Basic PHP Example
+
+
 ```PHP
 <?php
 $expectedApiKey = 'testtest2';
