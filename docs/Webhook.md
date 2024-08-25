@@ -54,7 +54,7 @@ APIKEY: your-api-key-here
 
 ```PHP
 <?php
-$expectedApiKey = 'testtest2';
+$expectedApiKey = 'your-api-key-here';
 
 $receivedApiKey = isset($_SERVER['HTTP_APIKEY']) ? $_SERVER['HTTP_APIKEY'] : '';
 
