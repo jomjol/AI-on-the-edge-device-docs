@@ -9,7 +9,7 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.0, mkdocs-material-9.5.33" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.33" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -694,49 +694,56 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.6 
+<a class="md-nav__link" href="#parameter-numberchangeratethreshold">1.5.6 
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.ChangeRateThreshold
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.7 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.DecimalShift
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.7 
+<a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.8 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.ExtendedResolution
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.8 
+<a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.9 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.9 
+<a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.10 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.MaxRateType
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.10 
+<a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.11 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.MaxRateValue
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.11 
+<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.12 
 <span class="md-ellipsis">
       Parameter PreValueAgeStartup
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueuse">1.5.12 
+<a class="md-nav__link" href="#parameter-prevalueuse">1.5.13 
 <span class="md-ellipsis">
       Parameter PreValueUse
     </span>
@@ -1933,49 +1940,56 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.6 
+<a class="md-nav__link" href="#parameter-numberchangeratethreshold">1.5.6 
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.ChangeRateThreshold
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-numberdecimalshift">1.5.7 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.DecimalShift
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.7 
+<a class="md-nav__link" href="#parameter-numberextendedresolution">1.5.8 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.ExtendedResolution
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.8 
+<a class="md-nav__link" href="#parameter-numberignoreleadingnan">1.5.9 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.IgnoreLeadingNaN
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.9 
+<a class="md-nav__link" href="#parameter-numbermaxratetype">1.5.10 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.MaxRateType
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.10 
+<a class="md-nav__link" href="#parameter-numbermaxratevalue">1.5.11 
 <span class="md-ellipsis">
       Parameter &lt;NUMBER&gt;.MaxRateValue
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.11 
+<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.12 
 <span class="md-ellipsis">
       Parameter PreValueAgeStartup
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueuse">1.5.12 
+<a class="md-nav__link" href="#parameter-prevalueuse">1.5.13 
 <span class="md-ellipsis">
       Parameter PreValueUse
     </span>
@@ -3213,15 +3227,38 @@ Set it here. Only used on combination of digits and analog pointers.
 See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
 <p>Range: <code>6.0</code> .. <code>9.9</code>.</p>
 <hr style="border:2px solid"/>
+<p><a id="PostProcessing-NUMBER.ChangeRateThreshold"></a></p>
+<h3 id="parameter-numberchangeratethreshold"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.6</span> Parameter <code>&lt;NUMBER&gt;.ChangeRateThreshold</code></h3>
+<p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
+<p>Default Value: <code>2</code></p>
+<p>Range: <code>1</code> .. <code>9</code>.</p>
+<p>Threshold parameter for change rate detection.<br/>
+This parameter is intended to compensate for small reading fluctuations that occur when the meter does not change its value for a long time (e.g. at night) or slightly turns backwards. This can eg. happen on watermeters.</p>
+<p>It is only applied to the last digit of the read value (See example below).
+If the read value is within PreValue +/- Threshold, no further calculation is carried out and the Value/Prevalue remains at the old value.</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>Smallest ROI provides value for 0.000x
+ChangeRateThreshold = 2
+
+Extended Resolution disabled:
+PreValue: 123.456'7 &gt;&gt;&gt; Threshold = +/- 0.000'2
+Comparative value &gt;&gt;&gt; max = 123.456'9 and min = 123.456'5
+
+Extended Resolution enabled:
+PreValue: 123.456'78 &gt;&gt;&gt; Threshold = +/- 0.000'02
+Comparative value &gt;&gt;&gt; max = 123.456'80 and min = 123.456'76
+</code></pre></div>
+<p><img alt="" src="../img/ChangeRateThreshold.png"/></p>
+<hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.DecimalShift"></a></p>
-<h3 id="parameter-numberdecimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.6</span> Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
+<h3 id="parameter-numberdecimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.7</span> Parameter <code>&lt;NUMBER&gt;.DecimalShift</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>0</code></p>
 <p>Shift the decimal separator (positiv or negativ).
 Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equals <code>1000 liters</code>), you need to set it to <code>+3</code>.</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.ExtendedResolution"></a></p>
-<h3 id="parameter-numberextendedresolution"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.7</span> Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
+<h3 id="parameter-numberextendedresolution"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.8</span> Parameter <code>&lt;NUMBER&gt;.ExtendedResolution</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>false</code></p>
 <p>Use the decimal place of the last analog counter for increased accuracy.</p>
@@ -3231,7 +3268,7 @@ Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equa
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.IgnoreLeadingNaN"></a></p>
-<h3 id="parameter-numberignoreleadingnan"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.8</span> Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
+<h3 id="parameter-numberignoreleadingnan"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.9</span> Parameter <code>&lt;NUMBER&gt;.IgnoreLeadingNaN</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Leading <code>N</code>'s will be deleted before further processing.
@@ -3239,21 +3276,21 @@ This is only relevant for models which use <code>N</code>!
 See <a href="../Choosing-the-Model">here</a> for details.</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.MaxRateType"></a></p>
-<h3 id="parameter-numbermaxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.9</span> Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
+<h3 id="parameter-numbermaxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.10</span> Parameter <code>&lt;NUMBER&gt;.MaxRateType</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>AbsoluteChange</code></p>
 <p>Defines if the <strong>Change Rate</strong> is calculated as the difference between the last two readings (<code>AbsoluteChange</code> = difference) or
 as the difference normalized to the interval (<code>RateChange</code> = difference per minute).</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.MaxRateValue"></a></p>
-<h3 id="parameter-numbermaxratevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.10</span> Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
+<h3 id="parameter-numbermaxratevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.11</span> Parameter <code>&lt;NUMBER&gt;.MaxRateValue</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>0,05</code></p>
 <p>Maximum allowed change between two readings, if exceeded the last reading will be rejected. Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> the <code>MaxRateValue</code> is either treated as the difference between the two measurements (<code>AbsoluteChange</code> = difference) not taking the set time interval into account or as the difference normalized to the interval (<code>RateChange</code> = difference per minute).</p>
 <p>If negative rate is disallowed and no maximum rate value is set, one false high reading will lead to a period of missing measurements until the measurement reaches the previous false high reading. E.g. if the counter is at <code>600,00</code> and it's read incorrectly as<code>610,00</code>, all measurements will be skipped until the counter reaches <code>610,00</code>. Setting the MaxRateValue to <code>0,05</code> leads to a rejection of all readings with a difference <code>&gt; 0,05</code>, in this case <code>610,00</code>. The rejection also applies to correct readings with a difference <code>&gt; 0,05</code>!</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-PreValueAgeStartup"></a></p>
-<h3 id="parameter-prevalueagestartup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.11</span> Parameter <code>PreValueAgeStartup</code></h3>
+<h3 id="parameter-prevalueagestartup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.12</span> Parameter <code>PreValueAgeStartup</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>720</code></p>
 <div class="admonition warning">
@@ -3263,7 +3300,7 @@ as the difference normalized to the interval (<code>RateChange</code> = differen
 <p>Time in minutes, how long a previous read value is valid after reboot.</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-PreValueUse"></a></p>
-<h3 id="parameter-prevalueuse"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.12</span> Parameter <code>PreValueUse</code></h3>
+<h3 id="parameter-prevalueuse"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.13</span> Parameter <code>PreValueUse</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Use the previous value (value from previous round) for consistency checks.
