@@ -2451,7 +2451,8 @@ In such case the functionality gets disabled respectively the default values wil
 </div>
 <p><strong>Auto Exposure Level</strong></p>
 <p>The exposure offset for automatic exposure, lower values produce darker image.</p>
-<p>Range (<code>-2</code> .. <code>2</code>)</p>
+<p>available range on OV2640 (<code>-2</code> .. <code>2</code>)
+available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAec"></a></p>
 <h3 id="parameter-camaec"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Parameter <code>CamAec</code></h3>
@@ -2656,13 +2657,14 @@ Note that if <strong>CamDcw</strong> is off, and you pick a different image size
 <p><a id="TakeImage-CamDenoise"></a></p>
 <h3 id="parameter-camdenoise"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.15</span> Parameter <code>CamDenoise</code></h3>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>true</code></p>
+<p>Default Value: <code>0</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p><strong>Denoise</strong></p>
-<p>Denoise Image (not supported and not implemented).</p>
+<p>Denoise Image, is only supported by OV3660 and OV5640</p>
+<p>Range (<code>0</code> .. <code>8</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamGainceiling"></a></p>
 <h3 id="parameter-camgainceiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.16</span> Parameter <code>CamGainceiling</code></h3>
@@ -2837,6 +2839,10 @@ image in the RAW domain.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On some OV5640 Cameras, the image becomes reddish when Vflip is used in conjunction with the zoom function!</p>
 </div>
 <p><strong>Flip Image</strong></p>
 <p>When <strong>true</strong>, the camera image is flipped top-to-bottom.</p>
