@@ -9,7 +9,7 @@ The idea behind this webhook feature is to provide an alternative to MQTT and In
 ## Configuration
 
 To configure the webhook feature, you only need to define a URI and an API key. The URI is where the webhook will send the data, and the API key is used to authenticate the requests, ensuring that only authorized devices can send data to your server.
-Optionally, “Upload Image” can be used to configure whether an additional put request should be sent with the current image.
+Optionally, "Upload Image" can be used to configure whether an additional PUT request should be sent to the same URI with the current image.
 A parameter timestamp is appended to establish a correlation.
 
 ## Example of a POST Request
