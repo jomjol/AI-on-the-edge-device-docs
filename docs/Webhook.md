@@ -9,6 +9,8 @@ The idea behind this webhook feature is to provide an alternative to MQTT and In
 ## Configuration
 
 To configure the webhook feature, you only need to define a URI and an API key. The URI is where the webhook will send the data, and the API key is used to authenticate the requests, ensuring that only authorized devices can send data to your server.
+Optionally, "Upload Image" can be used to configure whether an additional PUT request should be sent to the same URI with the current image.
+A parameter timestamp is appended to establish a correlation.
 
 ## Example of a POST Request
 
@@ -25,8 +27,8 @@ APIKEY: your-api-key-here
 ```json
 [
   {
-    "timeUTC": 1723196684,
     "timestamp": "2024-08-09T11:44:44+0200",
+    "timestampLong": 1723196684,
     "name": "main",
     "rawValue": "0345.42647",
     "value": "345.42648",
@@ -36,8 +38,8 @@ APIKEY: your-api-key-here
     "error": "no error"
   },
   {
-    "timeUTC": 1723196684,
     "timestamp": "2024-08-09T11:44:44+0200",
+    "timestampLong": 1723196684,
     "name": "test",
     "rawValue": "34",
     "value": "34",
@@ -88,7 +90,7 @@ if ($method === 'POST') {
 
     foreach ($dataArray as $data) {
         $csvRow = [
-            $data['timestamp'], 
+            $data['timestampLong'], 
             $data['name'], 
             $data['rawValue'], 
             $data['value'], 
@@ -105,8 +107,16 @@ if ($method === 'POST') {
     http_response_code(200); // 200 OK
     echo json_encode(['status' => 'success', 'message' => 'Data written to CSV file']);
 } elseif ($method === 'PUT') {
-    // Handle PUT request: Save image
-    $imageFilePath = 'uploaded_image.jpg';
+	// Handle PUT request: Save image
+	$timestamp = $_GET['timestamp'];
+
+    if (!ctype_digit($timestamp) || $timestamp < 0 || $timestamp > PHP_INT_MAX) {
+        http_response_code(400); // 400 Bad Request
+        echo json_encode(['status' => 'error', 'message' => 'Invalid timestamp']);
+        exit;
+    }
+	
+    $imageFilePath = 'uploaded_image_' . $timestamp . '.jpg';
 
     $imageData = file_get_contents('php://input');
 
