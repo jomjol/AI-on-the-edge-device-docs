@@ -1178,7 +1178,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri_3">1.14.2 
+<a class="md-nav__link" href="#parameter-uploadimg">1.14.2 
+<span class="md-ellipsis">
+      Parameter UploadImg
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-uri_3">1.14.3 
 <span class="md-ellipsis">
       Parameter Uri
     </span>
@@ -2424,7 +2431,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri_3">1.14.2 
+<a class="md-nav__link" href="#parameter-uploadimg">1.14.2 
+<span class="md-ellipsis">
+      Parameter UploadImg
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-uri_3">1.14.3 
 <span class="md-ellipsis">
       Parameter Uri
     </span>
@@ -2452,8 +2466,13 @@ In such case the functionality gets disabled respectively the default values wil
 <h2 id="section-takeimage"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Section <code>TakeImage</code></h2>
 <p><a id="TakeImage-CamAeLevel"></a></p>
 <h3 id="parameter-camaelevel"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Parameter <code>CamAeLevel</code></h3>
+<p><strong>Auto-Exposure-Level</strong></p>
+<p>range on OV2640 (<code>-2</code> .. <code>2</code>)<br/>
+range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2461,17 +2480,24 @@ In such case the functionality gets disabled respectively the default values wil
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>The exposure offset for automatic exposure, lower values produce darker image.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Auto Exposure Level</strong></p>
-<p>The exposure offset for automatic exposure, lower values produce darker image.</p>
-<p>available range on OV2640 (<code>-2</code> .. <code>2</code>)
-available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAec"></a></p>
 <h3 id="parameter-camaec"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> Parameter <code>CamAec</code></h3>
+<p><strong>Auto-Exposure-Control</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera attempts to automatically control the exposure.</li>
+<li>When <strong>false</strong>, the <strong>CamAecValue</strong> setting is used instead.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2481,14 +2507,18 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Auto-Exposure Control</strong></p>
-<p>When <strong>true</strong>, the camera attempts to automatically control the exposure.</p>
-<p>When <strong>false</strong>, the <strong>CamAecValue</strong> setting is used instead.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAec2"></a></p>
 <h3 id="parameter-camaec2"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Parameter <code>CamAec2</code></h3>
+<p><strong>Auto-Exposure-Control2</strong></p>
+<ul>
+<li>When <strong>true</strong>, the sensor’s "night mode" is enabled, extending the range of automatic gain control.</li>
+<li>When <strong>false</strong>, the sensor’s "night mode" is disabled.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2496,16 +2526,21 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>This may resolve some over-exposure and under-exposure issues.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Auto-Exposure Control 2</strong></p>
-<p>When <strong>true</strong>, the sensor’s "night mode" is enabled, extending the range of automatic gain control.</p>
-<p>This may resolve some over-exposure and under-exposure issues.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAecValue"></a></p>
 <h3 id="parameter-camaecvalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Parameter <code>CamAecValue</code></h3>
+<p><strong>Auto-Exposure-Value</strong></p>
+<p>Range (<code>0</code> .. <code>1200</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>160</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2513,29 +2548,38 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Access the exposure value of the camera, higher values produce brighter images.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Auto Exposure Value</strong></p>
-<p>Access the exposure value of the camera, higher values produce brighter images.</p>
-<p>Range (<code>0</code> .. <code>1200</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAgc"></a></p>
 <h3 id="parameter-camagc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Parameter <code>CamAgc</code></h3>
+<p><strong>Auto-Gain-Control</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera attempts to automatically control the sensor gain, up to the value in the <strong>CamGainceiling</strong> property.</li>
+<li>When <strong>false</strong>, the <strong>CamAgcGain</strong> setting is used instead.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
-<p><strong>Auto Gain</strong></p>
-<p>When <strong>true</strong>, the camera attempts to automatically control the sensor gain, up to the value in the <strong>CamGainceiling</strong> property.</p>
-<p>When <strong>false</strong>, the <strong>CamAgcGain</strong> setting is used instead.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAgcGain"></a></p>
 <h3 id="parameter-camagcgain"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> Parameter <code>CamAgcGain</code></h3>
+<p><strong>Auto-Gain-Control-Value</strong></p>
+<p>Range (<code>0</code> .. <code>30</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>15</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2545,71 +2589,93 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <p class="admonition-title">Note</p>
 <p>This is used when <strong>CamAgc</strong> is off.</p>
 </div>
-<p><strong>Gain Manual Value</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Access the gain level of the sensor, higher values produce brighter images.</p>
-<p>Range (<code>0</code> .. <code>30</code>)</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAutoSharpness"></a></p>
 <h3 id="parameter-camautosharpness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.7</span> Parameter <code>CamAutoSharpness</code></h3>
+<p><strong>Auto-Sharpness</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera attempts to automatically adjusts the sharpness.</li>
+<li>When <strong>false</strong>, the <strong>CamSharpness</strong> setting is used instead.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>false</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The OV2640 does not officially support auto sharpness, this is an experimental parameter!</p>
 </div>
-<p><strong>AutoSharpness</strong></p>
-<p>When <strong>true</strong>, the camera attempts to automatically adjusts the sharpness.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration page!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAwb"></a></p>
 <h3 id="parameter-camawb"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.8</span> Parameter <code>CamAwb</code></h3>
+<p><strong>Auto-White-Balance</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera attempts to automatically control white balance.</li>
+<li>When <strong>false</strong>, the <strong>CamWbMode</strong> setting is used instead.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
-<p><strong>Auto White Balance</strong></p>
-<p>When <strong>true</strong>, the camera attempts to automatically control white balance.</p>
-<p>When <strong>false</strong>, the <strong>CamWbMode</strong> setting is used instead.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamAwbGain"></a></p>
 <h3 id="parameter-camawbgain"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.9</span> Parameter <code>CamAwbGain</code></h3>
+<p><strong>Auto-White-Balance-Gain</strong></p>
+<ul>
+<li>Enable/Disable <strong>CamAwbGain</strong> control.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code></code></p>
+<p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
-<p><strong>Auto White Balance Gain</strong></p>
-<p>Access the <strong>CamAwbGain</strong> property of the camera sensor.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamBpc"></a></p>
 <h3 id="parameter-cambpc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.10</span> Parameter <code>CamBpc</code></h3>
+<p><strong>Black-Pixel-Correction</strong></p>
+<ul>
+<li>Enable/Disable <strong>black point compensation</strong>, this can make black parts of the image darker.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
-<p><strong>Black Pixel Correction</strong></p>
-<p>Enable/Disable <strong>black point compensation</strong>, this can make black parts of the image darker.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamBrightness"></a></p>
 <h3 id="parameter-cambrightness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.11</span> Parameter <code>CamBrightness</code></h3>
+<p><strong>Image-Brightness</strong></p>
+<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
@@ -2618,25 +2684,28 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Brightness</strong></p>
-<p>Positive values increase brightness, negative values lower it.</p>
-<p>Range (<code>-2</code> .. <code>2</code>) </p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamColorbar"></a></p>
 <h3 id="parameter-camcolorbar"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.12</span> Parameter <code>CamColorbar</code></h3>
+<p><strong>Colorbar</strong></p>
+<p>currently not implemented.</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>false</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p><strong>Colorbar</strong></p>
-<p>currently not implemented.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamContrast"></a></p>
 <h3 id="parameter-camcontrast"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.13</span> Parameter <code>CamContrast</code></h3>
+<p><strong>Image-Contrast</strong></p>
+<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
@@ -2645,14 +2714,18 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Contrast</strong></p>
-<p>Positive values increase contrast, negative values lower it.</p>
-<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamDcw"></a></p>
 <h3 id="parameter-camdcw"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.14</span> Parameter <code>CamDcw</code></h3>
+<p><strong>Image-Downsize</strong></p>
+<ul>
+<li>When <strong>CamDcw</strong> is on, the image that you receive will be the size that you requested (VGA, QQVGA, etc).</li>
+<li>When <strong>CamDcw</strong> is off, the image that you receive will be one of UXGA, SVGA, or CIF.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2661,42 +2734,28 @@ available range on OV3660 and OV5640 (<code>-5</code> .. <code>5</code>)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When <strong>CamDcw</strong> is on, the image that you receive will be the size that you requested (VGA, QQVGA, etc).
-When <strong>CamDcw</strong> is off, the image that you receive will be one of UXGA, SVGA, or CIF. In other words, literally the actual image size as read from the sensor without any scaling.
-Note that if <strong>CamDcw</strong> is off, and you pick a different image size, this implicitly turns <strong>CamDcw</strong> back on again (although this isn't reflected in the options). </p>
+<p>If <strong>CamDcw</strong> is off, and you pick a different image size, this implicitly turns <strong>CamDcw</strong> back on again. </p>
 </div>
-<p><strong>Downsize</strong></p>
-<p>Enable/Disable camera image scaling.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamDenoise"></a></p>
 <h3 id="parameter-camdenoise"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.15</span> Parameter <code>CamDenoise</code></h3>
+<p><strong>Image-Denoise</strong></p>
+<ul>
+<li>Denoise Image, is only supported by OV3660 and OV5640</li>
+</ul>
+<p>range on OV3660 and OV5640 (0 .. 8)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>0</code></p>
+<p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p><strong>Denoise</strong></p>
-<p>Denoise Image, is only supported by OV3660 and OV5640</p>
-<p>Range (<code>0</code> .. <code>8</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamGainceiling"></a></p>
 <h3 id="parameter-camgainceiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.16</span> Parameter <code>CamGainceiling</code></h3>
-<p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>x4</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-<p>After changing this parameter you need to update your reference image and alignment markers!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is used when <strong>CamAgc</strong> is on.</p>
-</div>
-<p><strong>CamGainceiling</strong></p>
-<p>The <strong>Gain</strong> is an analog multiplier applied to the raw sensor data.</p>
-<p>The <strong>Ceiling</strong> is the maximum gain value that the sensor will use.</p>
-<p>A higher gain means that the sensor has a greater response to light, but also makes sensor noise more visible.</p>
+<p><strong>Gain-Ceiling</strong></p>
 <p>Available options:</p>
 <ul>
 <li><code>x2</code></li>
@@ -2707,11 +2766,36 @@ Note that if <strong>CamDcw</strong> is off, and you pick a different image size
 <li><code>x64</code></li>
 <li><code>x128</code></li>
 </ul>
+<p>Default Value for ov2640: <code>x4</code><br/>
+Default Value for ov5640: <code>x8</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+<p>After changing this parameter you need to update your reference image and alignment markers!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A higher gain means that the sensor has a greater response to light, but also makes sensor noise more visible.</p>
+<p>This is used when <strong>CamAgc</strong> is on.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Gain</strong> is an analog multiplier applied to the raw sensor data.<br/>
+The <strong>Ceiling</strong> is the maximum gain value that the sensor will use.</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamHmirror"></a></p>
 <h3 id="parameter-camhmirror"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.17</span> Parameter <code>CamHmirror</code></h3>
+<p><strong>Mirror-Image</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera image is mirrored left-to-right.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>false</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
@@ -2720,47 +2804,57 @@ Note that if <strong>CamDcw</strong> is off, and you pick a different image size
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Mirror Image</strong></p>
-<p>When <strong>true</strong>, the camera image is mirrored left-to-right.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamLenc"></a></p>
 <h3 id="parameter-camlenc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.18</span> Parameter <code>CamLenc</code></h3>
+<p><strong>Lens-Correction</strong></p>
+<ul>
+<li>Enable/Disable lens correction.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
-<p><strong>Lens Correction</strong></p>
-<p>Enable/Disable lens correction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This can help compensate for light fall-off at the edge of the sensor area.</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamQuality"></a></p>
 <h3 id="parameter-camquality"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.19</span> Parameter <code>CamQuality</code></h3>
+<p><strong>Image-Quality</strong></p>
+<p>Range (<code>8</code> .. <code>63</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>10</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
 <p>Value below 10 could result in system instabilities!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Quality index for pictures: <code>8</code> (highest quality) ... <code>63</code> (lowest quality)</p>
-</div>
-<p><strong>Image Quality</strong></p>
-<p>The <strong>CamQuality</strong> setting when capturing JPEG images.</p>
 <p>This is similar to the quality setting when exporting a jpeg image from photo editing software.</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamRawGma"></a></p>
 <h3 id="parameter-camrawgma"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.20</span> Parameter <code>CamRawGma</code></h3>
+<p><strong>Raw-Gamma</strong></p>
+<ul>
+<li>Enable/Disable raw gamma mode.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code></code></p>
+<p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2768,42 +2862,45 @@ Note that if <strong>CamDcw</strong> is off, and you pick a different image size
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The main purpose of the Gamma (GMA) function is to compensate for the non-linear characteristics of the sensor. GMA
-converts the pixel values according to the Gamma curve to compensate the sensor output under different light strengths.
+<p>The main purpose of the Gamma (GMA) function is to compensate for the non-linear characteristics of the sensor. 
+GMA converts the pixel values according to the Gamma curve to compensate the sensor output under different light strengths.
 The non-linear gamma curve is approximately constructed with different linear functions. Raw gamma compensates the
 image in the RAW domain.</p>
 </div>
-<p><strong>Raw Gamma</strong></p>
-<p>Enable/Disable raw gamma mode.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamSaturation"></a></p>
 <h3 id="parameter-camsaturation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.21</span> Parameter <code>CamSaturation</code></h3>
+<p><strong>Image-Saturation</strong></p>
+<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Positive values increase saturation (more vibrant colors), negative values lower it (more muted colors).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Saturation</strong></p>
-<p>Positive values increase saturation (more vibrant colors), negative values lower it (more muted colors). </p>
-<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamSharpness"></a></p>
 <h3 id="parameter-camsharpness"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.22</span> Parameter <code>CamSharpness</code></h3>
+<p><strong>Image-Sharpness</strong></p>
+<p>Range (<code>-2</code> .. <code>2</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2811,26 +2908,17 @@ image in the RAW domain.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Positive values increase sharpness (more defined edges), negative values lower it (softer edges).</p>
 <p>This is used when <strong>CamAutoSharpness</strong> is off.</p>
-</div>
-<p><strong>Sharpness</strong></p>
-<p>Positive values increase sharpness (more defined edges), negative values lower it (softer edges). </p>
-<p>Range (<code>-2</code> .. <code>2</code>)</p>
-<hr style="border:2px solid"/>
-<p><a id="TakeImage-CamSpecialEffect"></a></p>
-<h3 id="parameter-camspecialeffect"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.23</span> Parameter <code>CamSpecialEffect</code></h3>
-<p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>no_effect</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
-<p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>SpecialEffect</strong></p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-CamSpecialEffect"></a></p>
+<h3 id="parameter-camspecialeffect"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.23</span> Parameter <code>CamSpecialEffect</code></h3>
+<p><strong>Image-Special-Effect</strong></p>
 <p>Available options:</p>
 <ul>
 <li><code>no_effect</code></li>
@@ -2841,43 +2929,46 @@ image in the RAW domain.</p>
 <li><code>blue</code></li>
 <li><code>retro</code></li>
 </ul>
-<hr style="border:2px solid"/>
-<p><a id="TakeImage-CamVflip"></a></p>
-<h3 id="parameter-camvflip"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.24</span> Parameter <code>CamVflip</code></h3>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>false</code></p>
+<p>Default Value: <code>no_effect</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
+</div>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-CamVflip"></a></p>
+<h3 id="parameter-camvflip"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.24</span> Parameter <code>CamVflip</code></h3>
+<p><strong>Flip-Image</strong></p>
+<ul>
+<li>When <strong>true</strong>, the camera image is flipped top-to-bottom.</li>
+</ul>
+<p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
+<p>Default Value: <code>false</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On some OV5640 Cameras, the image becomes reddish when Vflip is used in conjunction with the zoom function!</p>
 </div>
-<p><strong>Flip Image</strong></p>
-<p>When <strong>true</strong>, the camera image is flipped top-to-bottom.</p>
-<hr style="border:2px solid"/>
-<p><a id="TakeImage-CamWbMode"></a></p>
-<h3 id="parameter-camwbmode"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.25</span> Parameter <code>CamWbMode</code></h3>
-<p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
-<p>Default Value: <code>auto</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>After changing this parameter you need to update your reference image and alignment markers!</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is used when <strong>CamAwb</strong> is off.</p>
-</div>
-<p><strong>White Balance Mode</strong></p>
+<hr style="border:2px solid"/>
+<p><a id="TakeImage-CamWbMode"></a></p>
+<h3 id="parameter-camwbmode"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.25</span> Parameter <code>CamWbMode</code></h3>
+<p><strong>White-Balance-Mode</strong></p>
 <p>Available options:</p>
 <ul>
 <li><code>auto</code></li>
@@ -2886,11 +2977,33 @@ image in the RAW domain.</p>
 <li><code>office</code></li>
 <li><code>home</code></li>
 </ul>
+<p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
+<p>Default Value: <code>auto</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After changing this parameter you need to update your reference image and alignment markers!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is used when <strong>CamAwb</strong> is off.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can also be set on the Reference Image configuration page!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamWpc"></a></p>
 <h3 id="parameter-camwpc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.26</span> Parameter <code>CamWpc</code></h3>
+<p><strong>White-Pixel-Correction</strong></p>
+<ul>
+<li>Enable/Disable <strong>white point compensation</strong>, his can make white parts of the image whiter.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>true</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>After changing this parameter you need to update your reference image and alignment markers!</p>
@@ -2899,13 +3012,17 @@ image in the RAW domain.</p>
 <p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>White Pixel Correction</strong></p>
-<p>Enable/Disable <strong>white point compensation</strong>, his can make white parts of the image whiter.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamZoom"></a></p>
 <h3 id="parameter-camzoom"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.27</span> Parameter <code>CamZoom</code></h3>
+<p><strong>Digital-Zoom</strong></p>
+<ul>
+<li>Enable/Disable digital zoom.</li>
+</ul>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>false</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2913,16 +3030,23 @@ image in the RAW domain.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>It is always zoomed into the center of the image, if <strong>CamZoomOffsetX</strong> and <strong>CamZoomOffsetY</strong> are zero.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Zoom</strong></p>
-<p>Enable/Disable digital zoom.</p>
-<p>It is always zoomed into the center of the image, if <strong>CamZoomOffsetX</strong> and <strong>CamZoomOffsetY</strong> are zero.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamZoomOffsetX"></a></p>
 <h3 id="parameter-camzoomoffsetx"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.28</span> Parameter <code>CamZoomOffsetX</code></h3>
+<p><strong>Digital-Zoom-OffsetX</strong></p>
+<p>range on OV2640 (<code>-480</code> .. <code>480</code>)<br/>
+range on OV3660 (<code>-704</code> .. <code>704</code>)<br/>
+range on OV5640 (<code>-960</code> .. <code>960</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2930,17 +3054,25 @@ image in the RAW domain.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>X displacement of the image from the center.<br/>
+Positive values ​​shift the image to the right, negative values ​​to the left.<br/>
+The maximum possible offset depends on the value of the <strong>CamZoomSize</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Zoom Offset X</strong></p>
-<p>X displacement of the image from the center.</p>
-<p>Positive values ​​shift the image to the right, negative values ​​to the left.</p>
-<p>The maximum possible offset depends on the value of the <strong>CamZoomSize</strong>.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamZoomOffsetY"></a></p>
 <h3 id="parameter-camzoomoffsety"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.29</span> Parameter <code>CamZoomOffsetY</code></h3>
+<p><strong>Digital-Zoom-OffsetY</strong></p>
+<p>range on OV2640 (<code>-360</code> .. <code>360</code>)<br/>
+range on OV3660 (<code>-528</code> .. <code>528</code>)<br/>
+range on OV5640 (<code>-720</code> .. <code>720</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2948,17 +3080,25 @@ image in the RAW domain.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Y displacement of the image from the center.<br/>
+Positive values ​​move the image up, negative values ​​move the image down.<br/>
+The maximum possible offset depends on the value of the <strong>CamZoomSize</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Zoom Offset Y</strong></p>
-<p>Y displacement of the image from the center.</p>
-<p>Positive values ​​move the image up, negative values ​​move the image down.</p>
-<p>The maximum possible offset depends on the value of the <strong>CamZoomSize</strong>.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-CamZoomSize"></a></p>
 <h3 id="parameter-camzoomsize"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.30</span> Parameter <code>CamZoomSize</code></h3>
+<p><strong>Digital-Zoom-Size</strong></p>
+<p>range on OV2640 (<code>0</code> .. <code>29</code>)<br/>
+range on OV3660 (<code>0</code> .. <code>43</code>)<br/>
+range on OV5640 (<code>0</code> .. <code>59</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>0</code></p>
+<p>See <a href="../datasheets/Camera.ov2640_ds_1.8_.pdf">here</a> for the ov2640 camera datasheet.<br/>
+See <a href="../datasheets/OV5640_datasheet.pdf">here</a> for the ov5640 camera datasheet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
@@ -2966,42 +3106,44 @@ image in the RAW domain.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Zoom factor/level of the digital zoom, the larger the value, the more it zooms in.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p><strong>Zoom Size</strong></p>
-<p>Zoom factor/level of the digital zoom, the larger the value, the more it zooms in.</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-Demo"></a></p>
 <h3 id="parameter-demo"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.31</span> Parameter <code>Demo</code></h3>
+<p>Enable to use demo images instead of the real camera images.
+Make sure to have a <code>/demo</code> folder on your SD-Card and make sure it contains the expected files!
+Check <a href="../Demo-Mode">here</a> for details.</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>false</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does! </p>
 </div>
-<p>Enable to use demo images instead of the real camera images.
-Make sure to have a <code>/demo</code> folder on your SD-Card and make sure it contains the expected files!
-Check <a href="../Demo-Mode">here</a> for details. </p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-LEDIntensity"></a></p>
 <h3 id="parameter-ledintensity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.32</span> Parameter <code>LEDIntensity</code></h3>
+<p>Set the Flash LED Intensity: (<code>0</code> .. <code>100</code>)</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>50</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This parameter can also be set on the Reference Image configuration page!</p>
+<p>After changing this parameter you need to update your reference image and alignment markers!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>After changing this parameter you need to update your reference image and alignment markers!</p>
+<p>This parameter can also be set on the Reference Image configuration page!</p>
 </div>
-<p>Set the Flash LED Intensity: (<code>0</code> .. <code>100</code>)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-RawImagesLocation"></a></p>
 <h3 id="parameter-rawimageslocation"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.33</span> Parameter <code>RawImagesLocation</code></h3>
+<p>Location on the SD-Card to store the raw images.</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>/log/source</code></p>
-<p>Location on the SD-Card to store the raw images.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A SD-Card has limited write cycles. Since the device does not do <a href="https://en.wikipedia.org/wiki/Wear_leveling">Wear Leveling</a>, this can wear out your SD-Card!</p>
@@ -3009,21 +3151,21 @@ Check <a href="../Demo-Mode">here</a> for details. </p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-RawImagesRetention"></a></p>
 <h3 id="parameter-rawimagesretention"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.34</span> Parameter <code>RawImagesRetention</code></h3>
+<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
+<p>Unit: Days</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>15</code></p>
-<p>Unit: Days</p>
-<p>Number of days to keep the raw images (<code>0</code> = forever)</p>
 <hr style="border:2px solid"/>
 <p><a id="TakeImage-WaitBeforeTakingPicture"></a></p>
 <h3 id="parameter-waitbeforetakingpicture"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.35</span> Parameter <code>WaitBeforeTakingPicture</code></h3>
+<p>Waiting time between switching the flash light (onboard LED) on and taking the picture.</p>
+<p>Unit: seconds</p>
 <p>Section: <a href="#section-takeimage">1.1 TakeImage</a></p>
 <p>Default Value: <code>5</code></p>
-<p>Unit: seconds</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
-<p>Waiting time between switching the flash light (onboard LED) on and taking the picture.</p>
 <hr style="border:2px solid"/>
 <h2 id="section-alignment"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Section <code>Alignment</code></h2>
 <p><a id="Alignment-AlignmentAlgo"></a></p>
@@ -3867,8 +4009,19 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <p>Default Value: <code>undefined</code></p>
 <p>ApiKey sent as Header</p>
 <hr style="border:2px solid"/>
+<p><a id="Webhook-UploadImg"></a></p>
+<h3 id="parameter-uploadimg"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.14.2</span> Parameter <code>UploadImg</code></h3>
+<p>Section: <a href="#section-webhook">1.14 Webhook</a></p>
+<p>Default Value: <code>0</code> (<code>NEVER</code>)</p>
+<p>Available options:</p>
+<ul>
+<li><code>0</code>: <code>NEVER</code></li>
+<li><code>1</code>: <code>ALWAYS</code></li>
+<li><code>2</code>: <code>ON_ERROR</code></li>
+</ul>
+<hr style="border:2px solid"/>
 <p><a id="Webhook-Uri"></a></p>
-<h3 id="parameter-uri_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.14.2</span> Parameter <code>Uri</code></h3>
+<h3 id="parameter-uri_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.14.3</span> Parameter <code>Uri</code></h3>
 <p>Section: <a href="#section-webhook">1.14 Webhook</a></p>
 <p>Default Value: <code>undefined</code></p>
 <p>URI of the HTTP Endpoint receiving requests, e.g. <code>http://192.168.1.1/watermeter/webhook</code>.</p>
