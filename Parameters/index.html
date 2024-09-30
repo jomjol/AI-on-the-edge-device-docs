@@ -9,7 +9,7 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.38" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.39" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.8c3ca2c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -687,9 +687,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberanalogdigitaltransitionstart">1.5.5 
+<a class="md-nav__link" href="#parameter-numberanalogdigittransitionstart">1.5.5 
 <span class="md-ellipsis">
-      Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
+      Parameter &lt;NUMBER&gt;.AnalogDigitTransitionStart
     </span>
 </a>
 </li>
@@ -1940,9 +1940,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-numberanalogdigitaltransitionstart">1.5.5 
+<a class="md-nav__link" href="#parameter-numberanalogdigittransitionstart">1.5.5 
 <span class="md-ellipsis">
-      Parameter &lt;NUMBER&gt;.AnalogDigitalTransitionStart
+      Parameter &lt;NUMBER&gt;.AnalogDigitTransitionStart
     </span>
 </a>
 </li>
@@ -3359,14 +3359,14 @@ In an error case, the last valid number will be used for the various transmissio
 <p>This is unusual (it means there is a negative rate) and not wanted in most cases!</p>
 </div>
 <hr style="border:2px solid"/>
-<p><a id="PostProcessing-NUMBER.AnalogDigitalTransitionStart"></a></p>
-<h3 id="parameter-numberanalogdigitaltransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.5</span> Parameter <code>&lt;NUMBER&gt;.AnalogDigitalTransitionStart</code></h3>
+<p><a id="PostProcessing-NUMBER.AnalogDigitTransitionStart"></a></p>
+<h3 id="parameter-numberanalogdigittransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.5</span> Parameter <code>&lt;NUMBER&gt;.AnalogDigitTransitionStart</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>9.2</code></p>
 <p>This can be used if you have wrong values, but the recognition of the individual ROIs are correct.
 Look for the start of changing of the first digit and note the analog pointer value behind.
 Set it here. Only used on combination of digits and analog pointers.
-See <a href="../Watermeter-specific-analog---digital-transition">here</a> for details.</p>
+See <a href="../Watermeter-specific-analog---digit-transition">here</a> for details.</p>
 <p>Range: <code>6.0</code> .. <code>9.9</code>.</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.ChangeRateThreshold"></a></p>
@@ -3467,6 +3467,10 @@ It allows the client to authenticate the server, which is the first part of the 
 <p class="admonition-title">Note</p>
 <p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only TLS 1.2 is supported!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientCert"></a></p>
 <h3 id="parameter-clientcert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Parameter <code>ClientCert</code></h3>
@@ -3486,6 +3490,10 @@ It is the second part of the MTLS handshake.</p>
 <p class="admonition-title">Note</p>
 <p>If set, <code>ClientKey</code> must be set too
 This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only TLS 1.2 is supported!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientID"></a></p>
@@ -3514,6 +3522,10 @@ It is the second part of the MTLS handshake.</p>
 <p>If set, <code>ClientCert</code> must be set too
 This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only TLS 1.2 is supported!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-HomeassistantDiscovery"></a></p>
 <h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>HomeassistantDiscovery</code></h3>
@@ -3531,7 +3543,7 @@ See <a href="../Integration-Home-Assistant">here</a> for details about the disco
 <p>With:</p>
 <ul>
 <li><code>NUMBER</code>: The name of the value (a meter might have more than one value). 
-  The names get defined in the analog and digital ROI configuration (defaults to <code>main</code>).</li>
+  The names get defined in the analog and digit ROI configuration (defaults to <code>main</code>).</li>
 <li><code>RESULT_TOPIC</code>: Automatically filled with the right name, eg. <code>value</code>, <code>rate</code>, <code>timestamp</code>, <code>error</code>, ....</li>
 </ul>
 <p>The general connection status can be found in <code>MAINTOPIC/CONNECTION</code>. 
@@ -4050,6 +4062,6 @@ Check the table on <code>http://&lt;DEVICE IP&gt;/timezones.html</code> to find 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+<script src="../assets/javascripts/bundle.525ec568.min.js"></script>
 </body>
 </html>
