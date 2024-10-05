@@ -42,7 +42,7 @@ Here this edge computing is brought into a practice-oriented example, where a AI
 
 **Have fun in studying the new possibilities and ideas**
 
-This is about image recognition and digitalization, done totally on a cheap ESP32 board using artificial intelligence in form of convolutional neural networks (CNN). Everything, from image capture (OV2640), image preprocessing (auto alignment, ROI identification) all the way down to the image recognition (CNN structure) and result plausibility is done on a cheap 10 EUR device.
+This is about image recognition and digitization, done totally on a cheap ESP32 board using artificial intelligence in form of convolutional neural networks (CNN). Everything, from image capture (OV2640), image preprocessing (auto alignment, ROI identification) all the way down to the image recognition (CNN structure) and result plausibility is done on a cheap 10 EUR device.
 
 This all is integrated in an easy to do setup and use environment, taking care for all the background processing and handling, including regular job scheduler. The user interface is an integrated web server, that can be easily adjusted and offers the data as an API in different options.
 
