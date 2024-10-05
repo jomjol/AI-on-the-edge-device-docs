@@ -40,7 +40,7 @@ If you update from an version older than 12.0.1, you should firstly update to ve
     -   DataLogging (storing the values for data graph)
     -   Debug (extended by different debug reporting levels)
 
-7.  Make sure it starts to do the digitalization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.
+7.  Make sure it starts to do the digitization (check the Error field on the overview page). If it does not start a round within a minute, restart the device.
 
 !!! note
     If the system is working now without any issues, please open the configuration editor once and save the `config.ini`. This will update the file to the newest content.
