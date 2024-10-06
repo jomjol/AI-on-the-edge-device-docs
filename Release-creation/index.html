@@ -10,7 +10,7 @@
 <link href="../outdated--Integrated-Functions/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.39" name="generator"/>
-<title>Preparing for Release - AI on the Edge Device</title>
+<title>Release Procedure - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.8c3ca2c6.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#preparing-for-release">1. 
+<a class="md-skip" href="#release-procedure">1. 
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Preparing for Release
+              Release Procedure
             
           </span>
 </div>
@@ -531,32 +531,11 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Preparing for Release
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Preparing for Release
+    Release Procedure
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#release-creation-steps">1.1 
-<span class="md-ellipsis">
-      Release creation steps
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -601,54 +580,27 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#release-creation-steps">1.1 
-<span class="md-ellipsis">
-      Release creation steps
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="preparing-for-release"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Preparing for Release</h1>
-<ol>
-<li><a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md">Changelog</a> is merged back from <code>master</code> branch to <code>rolling</code> branch (should be the last step of the previous release creation)</li>
-<li>All changes are documented in the <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md">Changelog</a> in <code>rolling</code> branch.
-   To get a list of commits, call <code>git log --oneline</code>. Summarize the relevant changes since the last release.</li>
-</ol>
-<h2 id="release-creation-steps"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Release creation steps</h2>
-<ol>
-<li>Merge<code>rolling</code> into <code>master</code> branch</li>
-<li>Best to wait for the GitHub action to run successfully </li>
-<li>
-<p>On <code>master</code> branch tag the version like <code>v11.3.1</code> and don't forget to push it:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git checkout master
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>git pull
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>git tag v14.0.0
-</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>git push --tags
-</span></code></pre></div>
-</li>
-<li>
-<p>Wait for the GitHub-Action of release creation. After all is done:</p>
-<ul>
-<li>the release should be created</li>
-<li>the artifacts are downloadable from release </li>
-<li>The documented changes were applied to the release</li>
-</ul>
-</li>
-<li>Merge master back in <code>rolling</code></li>
-<li>Check that the <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a> shows the right version. If needed, run he action manually: <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml">github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml</a>.</li>
-</ol>
+<h1 id="release-procedure"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Release Procedure</h1>
+<p>Follow these steps to create a release:
+1. Document all relevant changes in the <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md">Changelog</a> in the <code>main</code> branch.
+   To get a list of commits, you can call <code>git log --oneline</code> or check <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/commits/main/">commits/main/</a>. Summarize the relevant changes since the last release.
+1. Wait for the GitHub action to run successfully.
+1. Test it to see if everything worsk as expected.
+1. Go to <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/new">releases/new</a> to create a new release.
+   Fill in a new tag and select "Create new tag: xxx on publish".</p>
+<p>A tag should have the format x.y.z.</p>
+<p>It is suggested to first select "Set as a pre-release" at the bottom. <br/>
+1. Wait for the GitHub-Action of release creation. After all is done:
+    * the release should be created
+    * the artifacts are downloadable from release 
+    * The documented changes were applied to the release
+7. In case of a full release (not a pre-release), check that the <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a> shows the right version. If needed, run he action manually: <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml">github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
