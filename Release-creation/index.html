@@ -598,12 +598,16 @@
    Fill in a new tag and select "Create new tag: xxx on publish".</li>
 </ol>
 <p>A tag should have the format x.y.z.</p>
-<p>It is suggested to first select "Set as a pre-release" at the bottom. <br/>
-1. Wait for the GitHub-Action of release creation. After all is done:
-    * the release should be created
-    * the artifacts are downloadable from release 
-    * The documented changes were applied to the release
-1. In case of a full release (not a pre-release), check that the <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a> shows the right version. If needed, run he action manually: <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml">github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml</a>.</p>
+<p>It is suggested to first select "Set as a pre-release" at the bottom.</p>
+<ol>
+<li>Wait for the GitHub-Action of release creation. After all is done:<ul>
+<li>the release should be created</li>
+<li>the artifacts are downloadable from release </li>
+<li>The documented changes were applied to the release</li>
+</ul>
+</li>
+<li>In case of a full release (not a pre-release), check that the <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a> shows the right version. If needed, run he action manually: <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml">github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml</a>.</li>
+</ol>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
