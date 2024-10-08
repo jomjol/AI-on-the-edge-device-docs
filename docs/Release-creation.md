@@ -4,6 +4,7 @@ Follow these steps to create a release:
    To get a list of commits, you can call `git log --oneline` or check [commits/main/](https://github.com/jomjol/AI-on-the-edge-device-docs/commits/main/). Summarize the relevant changes since the last release.
 1. Wait for the GitHub action to run successfully.
 1. Test it to see if everything worsk as expected.
+1. Update the contributors list in the [README.md](https://github.com/jomjol/AI-on-the-edge-device7README.md) by triggering the [Manually update contributors list](https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-contributors-list.yaml) action.
 1. Go to [releases/new](https://github.com/jomjol/AI-on-the-edge-device/releases/new) to create a new release.
    Fill in a new tag and select "Create new tag: xxx on publish".
    
