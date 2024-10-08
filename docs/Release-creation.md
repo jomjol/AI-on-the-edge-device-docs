@@ -7,10 +7,8 @@ Follow these steps to create a release:
 1. Test it to see if everything worsk as expected.
 1. Update the contributors list in the [README.md](https://github.com/jomjol/AI-on-the-edge-device7README.md) by triggering the [Manually update contributors list](https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-contributors-list.yaml) action.
 1. Go to [releases/new](https://github.com/jomjol/AI-on-the-edge-device/releases/new) to create a new release.
-   Fill in a new tag and select "Create new tag: xxx on publish".
-   
-   A tag should have the format x.y.z.
-   
+   Fill in a new tag and select "Create new tag: xxx on publish".   
+   A tag should have the format x.y.z.   
    It is suggested to first select "Set as a pre-release" at the bottom.
  
 1. Wait for the GitHub-Action of release creation. After all is done:
