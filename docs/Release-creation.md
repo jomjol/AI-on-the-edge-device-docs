@@ -16,4 +16,4 @@ Follow these steps to create a release:
     * the release should be created
     * the artifacts are downloadable from release 
     * The documented changes were applied to the release
-7. In case of a full release (not a pre-release), check that the [Web Installer](https://jomjol.github.io/AI-on-the-edge-device) shows the right version. If needed, run he action manually: [github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml](https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml).
+1. In case of a full release (not a pre-release), check that the [Web Installer](https://jomjol.github.io/AI-on-the-edge-device) shows the right version. If needed, run he action manually: [github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml](https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-webinstaller.yml).
