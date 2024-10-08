@@ -1,5 +1,6 @@
 # Release Procedure
 Follow these steps to create a release:
+
 1. Document all relevant changes in the [Changelog](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md) in the `main` branch.
    To get a list of commits, you can call `git log --oneline` or check [commits/main/](https://github.com/jomjol/AI-on-the-edge-device-docs/commits/main/). Summarize the relevant changes since the last release.
 1. Wait for the GitHub action to run successfully.
