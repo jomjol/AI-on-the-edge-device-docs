@@ -587,14 +587,16 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="release-procedure"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Release Procedure</h1>
-<p>Follow these steps to create a release:
-1. Document all relevant changes in the <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md">Changelog</a> in the <code>main</code> branch.
-   To get a list of commits, you can call <code>git log --oneline</code> or check <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/commits/main/">commits/main/</a>. Summarize the relevant changes since the last release.
-1. Wait for the GitHub action to run successfully.
-1. Test it to see if everything worsk as expected.
-1. Update the contributors list in the <a href="https://github.com/jomjol/AI-on-the-edge-device7README.md">README.md</a> by triggering the <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-contributors-list.yaml">Manually update contributors list</a> action.
-1. Go to <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/new">releases/new</a> to create a new release.
-   Fill in a new tag and select "Create new tag: xxx on publish".</p>
+<p>Follow these steps to create a release:</p>
+<ol>
+<li>Document all relevant changes in the <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/Changelog.md">Changelog</a> in the <code>main</code> branch.
+   To get a list of commits, you can call <code>git log --oneline</code> or check <a href="https://github.com/jomjol/AI-on-the-edge-device-docs/commits/main/">commits/main/</a>. Summarize the relevant changes since the last release.</li>
+<li>Wait for the GitHub action to run successfully.</li>
+<li>Test it to see if everything worsk as expected.</li>
+<li>Update the contributors list in the <a href="https://github.com/jomjol/AI-on-the-edge-device7README.md">README.md</a> by triggering the <a href="https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/manual-update-contributors-list.yaml">Manually update contributors list</a> action.</li>
+<li>Go to <a href="https://github.com/jomjol/AI-on-the-edge-device/releases/new">releases/new</a> to create a new release.
+   Fill in a new tag and select "Create new tag: xxx on publish".</li>
+</ol>
 <p>A tag should have the format x.y.z.</p>
 <p>It is suggested to first select "Set as a pre-release" at the bottom. <br/>
 1. Wait for the GitHub-Action of release creation. After all is done:
