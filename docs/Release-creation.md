@@ -11,7 +11,8 @@ Follow these steps to create a release:
    
    A tag should have the format x.y.z.
    
-   It is suggested to first select "Set as a pre-release" at the bottom.   
+   It is suggested to first select "Set as a pre-release" at the bottom.
+ 
 1. Wait for the GitHub-Action of release creation. After all is done:
     * the release should be created
     * the artifacts are downloadable from release 
