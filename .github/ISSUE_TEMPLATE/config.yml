@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions regarding the Project
-    about: Report questions regarding the firmware here. Melde Fragen mit der Firmware hier.
+    about: Report questions about the project here. Melde Fragen zum Projekt hier.
     url: https://github.com/jomjol/AI-on-the-edge-device/discussions
   - name: Firmware Issues
     about: Report bugs regarding the firmware here. Melde Fehler mit der Firmware hier.
