@@ -1,0 +1,22 @@
+name: 📚 Documenation
+description: Use this form if you found an issue or have a suggestion regarding the **documentation** for the [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device) project / 
+             Verwende dieses Formular, wenn Du eine Unklarheit oder Verbesserung in der **Dokumentation** des [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device) Projekts gefunden hast. /
+             /
+             If you instead want to report something for the [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device) project itself, please do so at [AI on the edge device Issues](https://github.com/jomjol/AI-on-the-edge-device/issues/new/choose). /
+             Falls Du ein Problem zum [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device) Projekt hast, melde das bitte direkt durch ein [AI on the edge device Issues](https://github.com/jomjol/AI-on-the-edge-device/issues/new/choose).
+labels: doc
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking your time to improve the documentation for the [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device) project.
+
+        Du darfst gerne auch in Deutsch schreiben!
+
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: The Problem/Improvement
+      description: A clear and concise description of what the issue is.
