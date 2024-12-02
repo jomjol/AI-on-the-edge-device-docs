@@ -64,10 +64,6 @@ Depending on device configuration (`Settings` --> `Configuration` --> section `G
 #### ctrl/flow_start
 Trigger a flow start by publishing to this topic.
 
-__Payload:__
-
-   - any character, length > 0
-
 #### ctrl/set_prevalue
 
 !!! Note
