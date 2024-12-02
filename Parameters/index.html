@@ -9,7 +9,7 @@
 <link href="../ota/" rel="prev"/>
 <link href="../Integration-Home-Assistant/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.5.46" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.47" name="generator"/>
 <title>Parameters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.6f8fc17f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -789,49 +789,63 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
+<a class="md-nav__link" href="#parameter-domoticztopicin">1.6.5 
+<span class="md-ellipsis">
+      Parameter DomoticzTopicIn
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.6 
 <span class="md-ellipsis">
       Parameter HomeassistantDiscovery
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maintopic">1.6.6 
+<a class="md-nav__link" href="#parameter-maintopic">1.6.7 
 <span class="md-ellipsis">
       Parameter MainTopic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-metertype">1.6.7 
+<a class="md-nav__link" href="#parameter-metertype">1.6.8 
 <span class="md-ellipsis">
       Parameter MeterType
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
+<a class="md-nav__link" href="#parameter-numberdomoticzidx">1.6.9 
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.DomoticzIDX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-retainmessages">1.6.10 
 <span class="md-ellipsis">
       Parameter RetainMessages
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri">1.6.9 
+<a class="md-nav__link" href="#parameter-uri">1.6.11 
 <span class="md-ellipsis">
       Parameter Uri
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.10 
+<a class="md-nav__link" href="#parameter-password">1.6.12 
 <span class="md-ellipsis">
       Parameter password
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.11 
+<a class="md-nav__link" href="#parameter-user">1.6.13 
 <span class="md-ellipsis">
       Parameter user
     </span>
@@ -2042,49 +2056,63 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.5 
+<a class="md-nav__link" href="#parameter-domoticztopicin">1.6.5 
+<span class="md-ellipsis">
+      Parameter DomoticzTopicIn
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-homeassistantdiscovery">1.6.6 
 <span class="md-ellipsis">
       Parameter HomeassistantDiscovery
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maintopic">1.6.6 
+<a class="md-nav__link" href="#parameter-maintopic">1.6.7 
 <span class="md-ellipsis">
       Parameter MainTopic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-metertype">1.6.7 
+<a class="md-nav__link" href="#parameter-metertype">1.6.8 
 <span class="md-ellipsis">
       Parameter MeterType
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-retainmessages">1.6.8 
+<a class="md-nav__link" href="#parameter-numberdomoticzidx">1.6.9 
+<span class="md-ellipsis">
+      Parameter &lt;NUMBER&gt;.DomoticzIDX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-retainmessages">1.6.10 
 <span class="md-ellipsis">
       Parameter RetainMessages
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-uri">1.6.9 
+<a class="md-nav__link" href="#parameter-uri">1.6.11 
 <span class="md-ellipsis">
       Parameter Uri
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.10 
+<a class="md-nav__link" href="#parameter-password">1.6.12 
 <span class="md-ellipsis">
       Parameter password
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.11 
+<a class="md-nav__link" href="#parameter-user">1.6.13 
 <span class="md-ellipsis">
       Parameter user
     </span>
@@ -3527,15 +3555,22 @@ This also means that you might have to change the protocol and port in <a href="
 <p>Only TLS 1.2 is supported!</p>
 </div>
 <hr style="border:2px solid"/>
+<p><a id="MQTT-DomoticzTopicIn"></a></p>
+<h3 id="parameter-domoticztopicin"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>DomoticzTopicIn</code></h3>
+<p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
+<p>Default Value: <code>domoticz/in</code></p>
+<p>Domoticz "in" topic as configured on the "MQTT Client Gateway" setup page on the Domoticz system. Used to publish counter/s value/s.</p>
+<p>Parameter &lt;NUMBER&gt;.DomoticzIDX is required (see below).</p>
+<hr style="border:2px solid"/>
 <p><a id="MQTT-HomeassistantDiscovery"></a></p>
-<h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.5</span> Parameter <code>HomeassistantDiscovery</code></h3>
+<h3 id="parameter-homeassistantdiscovery"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.6</span> Parameter <code>HomeassistantDiscovery</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Enable or disable the Homeassistant Discovery.
 See <a href="../Integration-Home-Assistant">here</a> for details about the discovery.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-MainTopic"></a></p>
-<h3 id="parameter-maintopic"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.6</span> Parameter <code>MainTopic</code></h3>
+<h3 id="parameter-maintopic"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.7</span> Parameter <code>MainTopic</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>watermeter</code></p>
 <p>MQTT main topic, under which the counters are published.</p>
@@ -3555,7 +3590,7 @@ See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topic
 <p>The nodeId for the Home Assistant MQTT Service Discovery must follow the schema <code>&lt;discovery_prefix&gt;/&lt;component&gt;/[&lt;node_id&gt;/]&lt;object_id&gt;/config</code>. The node_id is not configurable but derived from the <code>MainTopic</code> by stripping any but the last topic level. A <code>MainTopic</code> with the value <code>home/basement/watermeter</code> is transformed into the node_id <code>watermeter</code>, resulting in the discovery topic <code>homeassistant/sensor/watermeter/value/config</code> for the current value.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-MeterType"></a></p>
-<h3 id="parameter-metertype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.7</span> Parameter <code>MeterType</code></h3>
+<h3 id="parameter-metertype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.8</span> Parameter <code>MeterType</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>other</code></p>
 <p>Select the Meter Type so the sensors have the right units in Homeassistant.</p>
@@ -3567,26 +3602,32 @@ See <a href="../MQTT-API#result">MQTT Result Topics</a> for a full list of topic
 Eg. if your meter provides <code>m³</code>, you need to also set it to <code>m³</code>.
 Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</code> so the value is converted to <code>liters</code>!</p>
 <hr style="border:2px solid"/>
+<p><a id="MQTT-NUMBER.DomoticzIDX"></a></p>
+<h3 id="parameter-numberdomoticzidx"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.9</span> Parameter <code>&lt;NUMBER&gt;.DomoticzIDX</code></h3>
+<p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
+<p>Default Value: <code>0</code></p>
+<p>The Idx number for the counter device. Can be obtained from the devices setup page on the Domoticz system.</p>
+<hr style="border:2px solid"/>
 <p><a id="MQTT-RetainMessages"></a></p>
-<h3 id="parameter-retainmessages"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.8</span> Parameter <code>RetainMessages</code></h3>
+<h3 id="parameter-retainmessages"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.10</span> Parameter <code>RetainMessages</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-Uri"></a></p>
-<h3 id="parameter-uri"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.9</span> Parameter <code>Uri</code></h3>
+<h3 id="parameter-uri"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.11</span> Parameter <code>Uri</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>mqtt://example.com:1883</code></p>
 <p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-password"></a></p>
-<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.10</span> Parameter <code>password</code></h3>
+<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.12</span> Parameter <code>password</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>PASSWORD</code></p>
 <p>Password for MQTT authentication.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-user"></a></p>
-<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.11</span> Parameter <code>user</code></h3>
+<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.13</span> Parameter <code>user</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>USERNAME</code></p>
 <p>Username for MQTT authentication.</p>
