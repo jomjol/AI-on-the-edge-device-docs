@@ -7,10 +7,11 @@ Note: For more detailed information to the REST handler, have a look to the code
 
 ## Control
 ### flow_start
-  Trigger a flow start (if not running)
+  Trigger the next flow
      + Payload:
         - No payload needed
   
+This will automatically reset the flow interval.
  
 ### setPreValue
   Set the last valid value (previous value) to given value or the actual RAW value.
