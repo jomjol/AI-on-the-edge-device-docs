@@ -3913,8 +3913,8 @@ As this parameter is still experimental it can only be set manually in the <code
 <p>Default Value: <code>true</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>This parameter is no longer available. The flow is now always enabled. If you want it to be disabled, set an interval which is high enough (eg. 1440 = 24h).</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="AutoTimer-Interval"></a></p>
 <h3 id="parameter-interval"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.10.2</span> Parameter <code>Interval</code></h3>
@@ -3924,10 +3924,11 @@ As this parameter is still experimental it can only be set manually in the <code
 <p>Interval in which the Flow (Digitization Round) is run.
 It will run immediately on startup and then the next time after the given interval.
 If a round takes longer than this interval, the next round gets postponed until the current round completes.</p>
+<p>If the flow gets started by a MQTT message or the REST API call, the interval automatically gets reset.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>If you want the flow to be disabled, set an interval which is high enough (eg. 1440 = 24h).</p>
+</div>
 <hr style="border:2px solid"/>
 <h2 id="section-datalogging"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.11</span> Section <code>DataLogging</code></h2>
 <p><a id="DataLogging-DataFilesRetention"></a></p>
