@@ -64,6 +64,8 @@ Depending on device configuration (`Settings` --> `Configuration` --> section `G
 #### ctrl/flow_start
 Trigger a flow start by publishing to this topic.
 
+This will automatically reset the flow interval.
+
 #### ctrl/set_prevalue
 
 !!! Note
