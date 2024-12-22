@@ -95,7 +95,7 @@ In configuration you can set the `MaxRateValue` and `MaxRateType`. The settings 
 Before doing this, you should be clear about the type of rating you want to use.
 
 - `Absolute change` is the interval between two readings - no matter how often the readings happen. 
-- `RateCange` is the change per minute. This is calculated from the time difference between the last and the current reading. 
+- `RateChange` is the change per minute. This is calculated from the time difference between the last and the current reading. 
 
 If there is an interval of 5 minutes between readings and a MaxRateValue of 1, an error "Rate too high - Read: ..." if 
 
