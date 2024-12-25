@@ -197,4 +197,5 @@ WLAN-Status indication:
 * **5 x** fast blinking (< 1 second): connection still pending
 * **3 x** slow blinking (1 second on/off): WLAN connection established
 
-**Note:** It is normal that at first one or two times a pending connection is indicated.
+!!! Notes
+    It is normal that at first one or two times a pending connection is indicated.
