@@ -1,6 +1,6 @@
 This page lists possible blink codes of the red LED located on the ESP32-CAM board, their meaning and possible solutions.
 
-The error code source definition can be found [here](https://github.com/jomjol/AI-on-the-edge-device/blob/rolling/code/components/jomjol_helper/statusled.h).
+The error code source definition can be found [here](https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/statusled.h).
 
 # General design approach:
 
