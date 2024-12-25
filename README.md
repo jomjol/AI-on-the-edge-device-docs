@@ -17,7 +17,7 @@ Each page has a link on its top-right corner `Edit on GitHub` which brings you d
 1. Add the **filename** to the [docs/nav.yml](docs/nav.yml) at the wished position in the **Links** section.
 
 ## Parameter Documentation
-Each parameter in the [main project repo](https://github.com/jomjol/AI-on-the-edge-device) is documented in a separate file, see https://github.com/jomjol/AI-on-the-edge-device/tree/rolling/param-docs. The script in `param-docs/concat-parameter-pages.py` collects them and compiles it into the documentation as provided in https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters.
+Each parameter in the [main project repo](https://github.com/jomjol/AI-on-the-edge-device) is documented in a separate file, see https://github.com/jomjol/AI-on-the-edge-device/tree/main/param-docs. The script in `param-docs/concat-parameter-pages.py` collects them and compiles it into the documentation as provided in https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters.
 The script should be run whenever one of the pages changed.
 This happens automatically daily in the Github action.
 if you run it manually, make sure to clone the main repo first, eg. using:
