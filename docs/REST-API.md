@@ -148,3 +148,6 @@ This will automatically reset the flow interval.
 ## Prometheus/OpenMetrics
 ### metrics
   Provides a set of metrics that can be scraped by prometheus. See [Prometheus/OpenMetrics](prometheus-openmetrics.md) for details.
+
+## Password Protection
+The Web Interface and the REST API can be protected by a password, see [Password-Protection](https://jomjol.github.io/AI-on-the-edge-device-docs/Password-Protection/).
