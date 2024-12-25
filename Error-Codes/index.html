@@ -758,7 +758,10 @@
 <h1 id="reduced-webinterface-error-indication-and-tracing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Reduced webinterface (error indication and tracing)</h1>
 <p>Whenever an error occurs during boot process which avoids loading of regular processing and regular webinterface, a reduced webinterface gets loaded to have at least some visual feedback and the possibilitiy to figure out the root cause by browsing the logfiles or trigger another OTA update.</p>
 <p>The error code(s) get printed with specific error codes. This page lists the possible error codes, their meaning and possible solutions.</p>
-<p>Note: Here the error codes are defined in source code: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/Helper.h">error codes</a>.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>Here the error codes are defined in source code: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/Helper.h">error codes</a>.</p>
+</div>
 <h2 id="critical-errors"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Critical Errors</h2>
 <p>Those Errors make the normal operation of the device impossible.
 Most likely they are caused by a hardware issue!</p>
@@ -809,7 +812,10 @@ To have early indication that SD card is potentially ready for operation, some f
 <li>/sdcard/html/common.js</li>
 <li>/sdcard/html/version.txt</li>
 </ul>
-<p>Note: This list might be outdated, see the source code for the latest implementation: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/sdcard_check.cpp#L14">SDCardCheckRW()</a></p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>This list might be outdated, see the source code for the latest implementation: <a href="https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/sdcard_check.cpp#L14">SDCardCheckRW()</a></p>
+</div>
 <p>Recommendation: Check logs and / or redo a Over-The-Air Update (OTA Update) to ensure proper SD card structure</p>
 <h2 id="non-critical-errors"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Non-Critical Errors</h2>
 <p>Those Errors can be caused by an error during initialization. It is possible that the error has no impact at all or that a reboot solves it.</p>
