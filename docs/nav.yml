@@ -25,7 +25,7 @@ nav:
     - External-LED.md
     - data-logging.md
     - Password-Protection.md
-    - rolling-installation.md
+    - unstable-installation.md
     - Watermeter-specific-analog---digital-transition.md
     - collect-new-images.md
     - Learn-models-with-your-own-images.md
