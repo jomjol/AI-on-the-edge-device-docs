@@ -3,7 +3,8 @@ Various information is directly accessible over specific REST calls.
 
 To use it, just append them to the IP, separated with a `/`, e.g. `http://192.168.1.1/json`
 
-Note: For more detailed information to the REST handler, have a look to the code in the repository: [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
+!!! Note
+    For more detailed information to the REST handler, have a look to the code in the repository: [registered handlers](https://github.com/jomjol/AI-on-the-edge-device/search?q=camuri.uri)
 
 ## Control
 ### flow_start
