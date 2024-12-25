@@ -17,7 +17,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 | WLAN_CONN     | 1                 | Disconnected (Authentication failure) | 2                |
 | WLAN_CONN     | 1                 | Disconnected (Timeout)                | 3                |
 | WLAN_CONN     | 1                 | Disconnected (further reasons)        | 4                |  
-| WLAN_INIT     | 2                 | WLAN.ini empty or not readable        | 1                | X
+| WLAN_INIT     | 2                 | `wlan.ini` empty or not readable        | 1                | X
 | WLAN_INIT     | 2                 | SSID or password empty                | 2                | X
 | WLAN_INIT     | 2                 | WIFI init error (details console)     | 3                | X
 | SDCARD_INIT   | 3                 | SD card filesystem mount failed       | 1                | X
@@ -51,7 +51,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 WLAN connection is interrupted due to no access point in range.
 
 ### `WLAN Disconnected (Authentication failure)`
-WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config in WLAN.INI (username, password)
+WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config in `wlan.ini` (username, password)
 
 ### `WLAN Disconnected (Timeout)`
 WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.
@@ -66,11 +66,11 @@ WLAN connection is interrupted due to further reasons. Disconnect reason is prin
 !!! NOTE 
     All critical errors, regular boot not possible
 
-### `WLAN.ini empty or not readable`
-The WLAN.INI file is present but content is either not readable or no content present. Please check for further errors in terms of SD card readability or content of WLAN.INI which is located in /sdcard (most top folder od SD card) 
+### `wlan.ini empty or not readable`
+The `wlan.ini` file is present but content is either not readable or no content present. Please check for further errors in terms of SD card readability or content of `wlan.ini` which is located in /sdcard (most top folder od SD card) 
 
 ### `SSID or password empty`
-The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters in WLAN.INI and try again.
+The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters in `wlan.ini` and try again.
 
 ### `WIFI init error (details console)`
 A general WIFI initialization error occured. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) 
