@@ -15,3 +15,7 @@ http_password = "mypassword"
     for somebody who has access to your WIFI!
     
     USE AT YOUR OWN RISK!
+
+!!! Notes
+    The file `wlan.ini` file on the SD-Card can not be accessed through the Web interface.
+    
