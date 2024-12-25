@@ -63,7 +63,7 @@ You can access it with the following link: [Web Installer](https://jomjol.github
 Grab the firmware from the
 
  - [Releases page](https://github.com/jomjol/AI-on-the-edge-device/releases) (Stable, tested versions), or the
- - [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Arolling) (experimental, untested versions). Please have a look on [Living on the Edge](rolling-installation.md) first!
+ - [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Amain) (experimental, untested versions). Please have a look on [Living on the Edge](unstable-installation.md) first!
 
 You need:
 
