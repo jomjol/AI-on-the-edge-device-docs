@@ -102,10 +102,10 @@ If there is an interval of 5 minutes between readings and a MaxRateValue of 1, a
 - Absolute change: the difference is `> 1`
 - RateChange: the difference is `> 1 / 5`
 
-# Train on my own images
+## Train on my own images
 
 Look at [Learn models with your own images](https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/)
 and [Cookbook running the jupyter notebook with my own data](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/wiki/Cookbook-running-the-jupyter-notebook-with-my-own-data).
 
-# What means AIOTED?
+## What means AIOTED?
 This is just the abbreviation of __AI-on-the-edge-device__.
