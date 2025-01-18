@@ -107,5 +107,5 @@ If there is an interval of 5 minutes between readings and a MaxRateValue of 1, a
 Look at [Learn models with your own images](https://jomjol.github.io/AI-on-the-edge-device-docs/Learn-models-with-your-own-images/)
 and [Cookbook running the jupyter notebook with my own data](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/wiki/Cookbook-running-the-jupyter-notebook-with-my-own-data).
 
-## What means AIOTED?
+## What does AIOTED mean?
 This is just the abbreviation of __AI-on-the-edge-device__.
