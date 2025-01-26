@@ -20,13 +20,13 @@ If after those adjustment you still have some issues, you can try to adjust your
 <img src="https://user-images.githubusercontent.com/108122193/188382213-68c4a015-6582-4911-81bc-cdce8ef60ed2.png" width=75% height=75%>
 
 
-## My Analog Meter are recognized as Digital Counter or vice versa 
+## My Analog Meter are recognized as Digit Counter or vice versa 
 
 <img src="https://user-images.githubusercontent.com/108122193/188265470-001a392f-d1f4-46a3-b1e8-f29ec41c8621.png" width=40% height=40%>
 
 
 1. First, check that your ROI are correctly defined (yey!)
-2. Second, verify that the name of your ROI analog and digital ROIs are different 
+2. Second, verify that the name of your ROI analog and digit ROIs are different 
 
 ## Recognition is working well, but number aren't sorted correctly
 

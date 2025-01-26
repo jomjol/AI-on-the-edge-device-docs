@@ -13,7 +13,7 @@ The most critical components for an accurate detection are:
 
 2. Using a well trained Model.
    
-    Have a look on the [Digital Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
+    Have a look on the [Digit Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
 
 
 ## Precondition
@@ -63,7 +63,7 @@ Here is an example with the details for the ROI `ana1`:
 
 
 ### Digits
-For the Digital Meters it is a little bit more complicated, as there are different options of digital models which can be choosen.
+For the Digit Meters it is a little bit more complicated, as there are different options of digit models which can be choosen.
 
 #### Correct Size for ROI
 First of all, choose the right size of the ROI.
@@ -79,7 +79,7 @@ Here we only show the different configuration of the ROIs.
 
 
 
-1. Digital Meters with only recognized full digits (`0, 1, 2, 3, ... 9`)
+1. Digit Meters with only recognized full digits (`0, 1, 2, 3, ... 9`)
 
     Suggested Model: `dig-class11-*.tfl`
 
@@ -87,7 +87,7 @@ Here we only show the different configuration of the ROIs.
 
     **Disadvantage:** partially rotated numbers cannot be detected.
 
-2. Digital Meters with sub-digit resolution (`0.0, 0.1, 0.2, .... 9.8, 9.9`)
+2. Digit Meters with sub-digit resolution (`0.0, 0.1, 0.2, .... 9.8, 9.9`)
 
     Suggested Model: `dig-cont-*.tfl` or `dig-class100-*.tfl`
 

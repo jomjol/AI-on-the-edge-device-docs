@@ -18,7 +18,7 @@ The last correct read value. PreValue is here a bit missleading, because normall
 
 ##### Digits
 
-Value that are digitized from a digital number. There are 11 allowed values for this: 
+Value that are digitized from a digit number. There are 11 allowed values for this: 
 
 1. Digits: 0, 1, 2, ... 9
 2. N = Not-a-Number - representing a not unique state between two numbers
@@ -51,9 +51,9 @@ If the ``ExtendedResolution`` setting is true, there is an exception where the v
 
 The ``DecimalShift`` setting puts the decimal point in the right place. It acts like a shift. Negative values shift the decimal point to the left. Positive values move the decimal point to the right, filling with zero.
 
-###### ``AnalogDigitalTransitionStart``
+###### ``AnalogDigitTransitionStart``
 
-For detailed description see [Analog-digital-transition](Watermeter-specific-analog---digital-transition.md).
+For detailed description see [Analog-digit-transition](Watermeter-specific-analog---digit-transition.md).
 
 ###### ``MaxRateValue`` and ``MaxRateType``
 

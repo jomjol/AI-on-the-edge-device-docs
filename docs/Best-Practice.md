@@ -6,7 +6,7 @@ This page shows some best practices:
 * Move the Camera as close as possible (~4cm), this will help get rid of reflections.
   -> focus can be adjusted by turning the outer black ring of the camera.
 * If the LED reflections are too strong, put tape over the LED to diffuse the light
-* Change the ImageSize to QVGA under "Expert mode" configuration when close enough, this will be faster and is often good enough for digital recognition.
+* Change the ImageSize to QVGA under "Expert mode" configuration when close enough, this will be faster and is often good enough for digit recognition.
 
 ## Reflections 
 
@@ -18,4 +18,4 @@ This page shows some best practices:
 * Filter out the Number "9", as "3" will often be misread for a "9" and void every number between 3 and 9 due to it being negative flow.
 * Split the readings into two, while the decimal numbers might move to fast to be recognized, at least the slower moving part will produce a correct reading.
 -> keep in mind that the offset needs to be adjusted, a.e if you have a comma reading of "3", it needs to become "0.3". This can be done wherever the data ends up being sent, like home assistant using sensor templates.
-* If you are using a low resolution and only digital mode, processing can often be done in <1 minute. Check the logs to confirm how fast it is and then set the interval accordingly under "Expert mode" in configuration, as the normal mode will lock you to 3+ minutes.
+* If you are using a low resolution and only digit mode, processing can often be done in <1 minute. Check the logs to confirm how fast it is and then set the interval accordingly under "Expert mode" in configuration, as the normal mode will lock you to 3+ minutes.

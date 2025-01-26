@@ -48,7 +48,7 @@ This all is integrated in an easy to do setup and use environment, taking care f
 
 The task to be demonstrated here is an automated readout of an analog water meter. The water consumption is to be recorded within a house automatization and the water meter is totally analog without any electronic interface. Therefore, the task is solved by regularly taking an image of the water meter and digitizing the reading.
 
-There are two types of CNN implemented, a classification network for reading the digital numbers and a single output network for digitalize the analog pointers for the sub digit readings.
+There are two types of CNN implemented, a classification network for reading the digit numbers and a single output network for digitize the analog pointers for the sub digit readings.
 
 This project is an evolution of the [water-meter-system-complete](https://github.com/jomjol/water-meter-system-complete), which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural network's backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD card as data storage.
 
