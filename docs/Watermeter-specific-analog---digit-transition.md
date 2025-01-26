@@ -1,4 +1,4 @@
-# Analog/Digital Transition on Water Meters
+# Analog/Digit Transition on Water Meters
 
 At first, for the most water meters the default configuration should be work. But the digit, especially the last digit differs in some devices.
 
@@ -28,4 +28,4 @@ The models for image recognition are good, but have inaccuracies in the range +/
 
 ## How to configure for my meter type
 
-If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option `AnalogDigitalTransitionStart` to a value between 6 and 8.
+If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option `AnalogDigitTransitionStart` to a value between 6 and 8.
