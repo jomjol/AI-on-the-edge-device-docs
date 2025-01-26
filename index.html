@@ -347,9 +347,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Watermeter-specific-analog---digital-transition/">
+<a class="md-nav__link" href="Watermeter-specific-analog---digit-transition/">
 <span class="md-ellipsis">
-    Analog/Digital Transition on Water Meters
+    Analog/Digit Transition on Water Meters
   </span>
 </a>
 </li>
@@ -722,7 +722,7 @@ Here this edge computing is brought into a practice-oriented example, where a AI
 <p>This is about image recognition and digitization, done totally on a cheap ESP32 board using artificial intelligence in form of convolutional neural networks (CNN). Everything, from image capture (OV2640), image preprocessing (auto alignment, ROI identification) all the way down to the image recognition (CNN structure) and result plausibility is done on a cheap 10 EUR device.</p>
 <p>This all is integrated in an easy to do setup and use environment, taking care for all the background processing and handling, including regular job scheduler. The user interface is an integrated web server, that can be easily adjusted and offers the data as an API in different options.</p>
 <p>The task to be demonstrated here is an automated readout of an analog water meter. The water consumption is to be recorded within a house automatization and the water meter is totally analog without any electronic interface. Therefore, the task is solved by regularly taking an image of the water meter and digitizing the reading.</p>
-<p>There are two types of CNN implemented, a classification network for reading the digital numbers and a single output network for digitalize the analog pointers for the sub digit readings.</p>
+<p>There are two types of CNN implemented, a classification network for reading the digit numbers and a single output network for digitize the analog pointers for the sub digit readings.</p>
 <p>This project is an evolution of the <a href="https://github.com/jomjol/water-meter-system-complete">water-meter-system-complete</a>, which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural network's backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD card as data storage.</p>
 <h1 id="additional-tutorials"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Additional Tutorials</h1>
 <p>A lot of people created useful Youtube videos which might help you getting started.

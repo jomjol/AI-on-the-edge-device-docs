@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Watermeter-specific-analog---digital-transition/" rel="canonical"/>
+<link href="https://jomjol.github.io/AI-on-the-edge-device-docs/Watermeter-specific-analog---digit-transition/" rel="canonical"/>
 <link href="../unstable-installation/" rel="prev"/>
 <link href="../collect-new-images/" rel="next"/>
 <link href="../img/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.50" name="generator"/>
-<title>Analog/Digital Transition on Water Meters - AI on the Edge Device</title>
+<title>Analog/Digit Transition on Water Meters - AI on the Edge Device</title>
 <link href="../assets/stylesheets/main.a40c8224.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#analogdigital-transition-on-water-meters">1. 
+<a class="md-skip" href="#analogdigit-transition-on-water-meters">1. 
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Analog/Digital Transition on Water Meters
+              Analog/Digit Transition on Water Meters
             
           </span>
 </div>
@@ -297,13 +297,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Analog/Digital Transition on Water Meters
+    Analog/Digit Transition on Water Meters
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Analog/Digital Transition on Water Meters
+    Analog/Digit Transition on Water Meters
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -669,7 +669,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="analogdigital-transition-on-water-meters"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Analog/Digital Transition on Water Meters</h1>
+<h1 id="analogdigit-transition-on-water-meters"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Analog/Digit Transition on Water Meters</h1>
 <p>At first, for the most water meters the default configuration should be work. But the digit, especially the last digit differs in some devices.</p>
 <h2 id="normal-transition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> "Normal" transition</h2>
 <p>In most cases, the transition of the last digit starts when the analogue pointer is &gt; 9. </p>
@@ -684,7 +684,7 @@
 <h2 id="inaccuracies-in-image-recognition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Inaccuracies in image recognition</h2>
 <p>The models for image recognition are good, but have inaccuracies in the range +/- 0.2. In order to obtain as many correct results as possible, a treatment is carried out in the post process in the range of 9.8-0.2 for the analogue pointer, which must start differently depending on the type of counter.</p>
 <h2 id="how-to-configure-for-my-meter-type"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> How to configure for my meter type</h2>
-<p>If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option <code>AnalogDigitalTransitionStart</code> to a value between 6 and 8.</p>
+<p>If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option <code>AnalogDigitTransitionStart</code> to a value between 6 and 8.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

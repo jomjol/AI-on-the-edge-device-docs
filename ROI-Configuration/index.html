@@ -384,9 +384,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Watermeter-specific-analog---digital-transition/">
+<a class="md-nav__link" href="../Watermeter-specific-analog---digit-transition/">
 <span class="md-ellipsis">
-    Analog/Digital Transition on Water Meters
+    Analog/Digit Transition on Water Meters
   </span>
 </a>
 </li>
@@ -778,7 +778,7 @@ There are several precautions to detect this. For details see the section <code>
 </li>
 <li>
 <p>Using a well trained Model.</p>
-<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digital Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images/">Collect images to improve the models</a> on how to collect new training data.</p>
+<p>Have a look on the <a href="https://jomjol.github.io/neural-network-digital-counter-readout/">Digit Counters</a> resp. <a href="https://jomjol.github.io/neural-network-analog-needle-readout">Analog Needles</a> to check if your types are contained. If your number types are <strong>not</strong> contained, you should take the effort to record them so we can add them to the training data. See <a href="../Learn-models-with-your-own-images/">Collect images to improve the models</a> on how to collect new training data.</p>
 </li>
 </ol>
 <h2 id="precondition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Precondition</h2>
@@ -816,7 +816,7 @@ The circle should exactly fit to the outer size of the meter and the cross shoul
 <p>Here is an example with the details for the ROI <code>ana1</code>: </p>
 <p><img alt="" src="../img/initial_setup_3_analog_example.jpg" style="width:500px"/></p>
 <h3 id="digits"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Digits</h3>
-<p>For the Digital Meters it is a little bit more complicated, as there are different options of digital models which can be choosen.</p>
+<p>For the Digit Meters it is a little bit more complicated, as there are different options of digit models which can be choosen.</p>
 <h4 id="correct-size-for-roi"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.1</span> Correct Size for ROI</h4>
 <p>First of all, choose the right size of the ROI.
 The configuration of ROIs differs a bit on the selected model (see below). </p>
@@ -825,13 +825,13 @@ The configuration of ROIs differs a bit on the selected model (see below). </p>
 <p>Here we only show the different configuration of the ROIs.</p>
 <ol>
 <li>
-<p>Digital Meters with only recognized full digits (<code>0, 1, 2, 3, ... 9</code>)</p>
+<p>Digit Meters with only recognized full digits (<code>0, 1, 2, 3, ... 9</code>)</p>
 <p>Suggested Model: <code>dig-class11-*.tfl</code></p>
 <p><strong>Advantage:</strong> broad variety of types included in the training.</p>
 <p><strong>Disadvantage:</strong> partially rotated numbers cannot be detected.</p>
 </li>
 <li>
-<p>Digital Meters with sub-digit resolution (<code>0.0, 0.1, 0.2, .... 9.8, 9.9</code>)</p>
+<p>Digit Meters with sub-digit resolution (<code>0.0, 0.1, 0.2, .... 9.8, 9.9</code>)</p>
 <p>Suggested Model: <code>dig-cont-*.tfl</code> or <code>dig-class100-*.tfl</code></p>
 <p><strong>Advantage:</strong> partial numbers can be detected and a better post processing is possible.</p>
 <p><strong>Disadvantage:</strong> only limited types of meter types are trained due to the high effort for the training data.</p>

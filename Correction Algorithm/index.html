@@ -294,9 +294,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Watermeter-specific-analog---digital-transition/">
+<a class="md-nav__link" href="../Watermeter-specific-analog---digit-transition/">
 <span class="md-ellipsis">
-    Analog/Digital Transition on Water Meters
+    Analog/Digit Transition on Water Meters
   </span>
 </a>
 </li>
@@ -385,9 +385,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#analogdigitaltransitionstart">1.0.1.0.5.2 
+<a class="md-nav__link" href="#analogdigittransitionstart">1.0.1.0.5.2 
 <span class="md-ellipsis">
-      AnalogDigitalTransitionStart
+      AnalogDigitTransitionStart
     </span>
 </a>
 </li>
@@ -757,9 +757,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#analogdigitaltransitionstart">1.0.1.0.5.2 
+<a class="md-nav__link" href="#analogdigittransitionstart">1.0.1.0.5.2 
 <span class="md-ellipsis">
-      AnalogDigitalTransitionStart
+      AnalogDigitTransitionStart
     </span>
 </a>
 </li>
@@ -823,7 +823,7 @@
 <h5 id="prevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.1</span> PreValue</h5>
 <p>The last correct read value. PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
 <h5 id="digits"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.2</span> Digits</h5>
-<p>Value that are digitized from a digital number. There are 11 allowed values for this: </p>
+<p>Value that are digitized from a digit number. There are 11 allowed values for this: </p>
 <ol>
 <li>Digits: 0, 1, 2, ... 9</li>
 <li>N = Not-a-Number - representing a not unique state between two numbers</li>
@@ -842,8 +842,8 @@
 <p>If the <code>ExtendedResolution</code> setting is true, there is an exception where the value does not become smaller, but no error is output. This only applies if the value +/- 0.2 of the last digit is inaccurate.</p>
 <h6 id="decimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.1</span> <code>DecimalShift</code></h6>
 <p>The <code>DecimalShift</code> setting puts the decimal point in the right place. It acts like a shift. Negative values shift the decimal point to the left. Positive values move the decimal point to the right, filling with zero.</p>
-<h6 id="analogdigitaltransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.2</span> <code>AnalogDigitalTransitionStart</code></h6>
-<p>For detailed description see <a href="../Watermeter-specific-analog---digital-transition/">Analog-digital-transition</a>.</p>
+<h6 id="analogdigittransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.2</span> <code>AnalogDigitTransitionStart</code></h6>
+<p>For detailed description see <a href="../Watermeter-specific-analog---digit-transition/">Analog-digit-transition</a>.</p>
 <h6 id="maxratevalue-and-maxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.3</span> <code>MaxRateValue</code> and <code>MaxRateType</code></h6>
 <p>Here the maximum change from one to the next reading can be limited. If a false reading of the neural network results in a change larger than this, the reading is flagged as false. There a two types of comparisons possible</p>
 <p>1) <strong>AbsolutChange</strong>: Here the difference between the PreValue and the current reading is compared directly, independent how much time has passed since the last reading.
