@@ -884,14 +884,21 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.12 
+<a class="md-nav__link" href="#parameter-validateservercert">1.6.12 
+<span class="md-ellipsis">
+      Parameter ValidateServerCert
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-password">1.6.13 
 <span class="md-ellipsis">
       Parameter password
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.13 
+<a class="md-nav__link" href="#parameter-user">1.6.14 
 <span class="md-ellipsis">
       Parameter user
     </span>
@@ -2225,14 +2232,21 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-password">1.6.12 
+<a class="md-nav__link" href="#parameter-validateservercert">1.6.12 
+<span class="md-ellipsis">
+      Parameter ValidateServerCert
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-password">1.6.13 
 <span class="md-ellipsis">
       Parameter password
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-user">1.6.13 
+<a class="md-nav__link" href="#parameter-user">1.6.14 
 <span class="md-ellipsis">
       Parameter user
     </span>
@@ -3600,47 +3614,44 @@ This also works through a reboot of the device!</p>
 <h3 id="parameter-cacert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Parameter <code>CACert</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>""</code></p>
-<p>Example: <code>/config/certs/RootCA.pem</code>.</p>
+<p>Example: <code>/config/certs/RootCA.crt</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the CA certificate file.</p>
-<p>This is part of the configuration to enable TLS for MQTT.
-The CA Certificate is used by the client to validate the broker is who it claims to be.
+<p>This is part of the configuration to enable TLS 1.2 for MQTT.<br/></p>
+<p>The CA Certificate is used by the client to validate the broker is who it claims to be.
 It allows the client to authenticate the server, which is the first part of the MTLS handshake.</p>
-<p>Usually there is a common RootCA certificate for the MQTT broker</p>
+<p>Usually there is a common RootCA certificate for the MQTT broker.
+More information is available <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/MQTT-API/#mqtt-tls">here</a>.</p>
+<p>For more information on how to create your own certificate, see: <a href="https://mosquitto.org/man/mosquitto-tls-7.html">mosquitto.org</a> or <a href="https://www.emqx.com/en/blog/emqx-server-ssl-tls-secure-connection-configuration-guide">emqx.com</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only TLS 1.2 is supported!</p>
+<p>Only Certificates up to 4096 Bit are supported!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientCert"></a></p>
 <h3 id="parameter-clientcert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Parameter <code>ClientCert</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>""</code></p>
-<p>Example: <code>/config/certs/client.pem.crt</code>.</p>
+<p>Example: <code>/config/certs/client.crt</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Certificate file.</p>
-<p>This is part of the configuration to enable TLS for MQTT.
-The Client Certificate is used by the client to prove its identity to the server, in conjunction with the Client Key. 
+<p>This is part of the configuration to enable TLS 1.2 for MQTT.<br/></p>
+<p>The Client Certificate is used by the client to prove its identity to the server, in conjunction with the Client Key. 
 It is the second part of the MTLS handshake.</p>
-<p>Usually there is a one pair of Client Certificate/Key for each client that connects to the MQTT broker</p>
+<p>Usually there is a one pair of Client Certificate/Key for each client that connects to the MQTT broker.
+More information is available <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/MQTT-API/#mqtt-tls">here</a>.</p>
+<p>For more information on how to create your own certificate, see: <a href="https://mosquitto.org/man/mosquitto-tls-7.html">mosquitto.org</a> or <a href="https://www.emqx.com/en/blog/emqx-server-ssl-tls-secure-connection-configuration-guide">emqx.com</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If set, <code>ClientKey</code> must be set too
+<p>If set, <code>ClientKey</code> must be set too.
 This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only TLS 1.2 is supported!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-ClientID"></a></p>
@@ -3654,24 +3665,21 @@ If disabled, the <code>hostname</code> will be used.</p>
 <h3 id="parameter-clientkey"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.4</span> Parameter <code>ClientKey</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>""</code></p>
-<p>Example: <code>/config/certs/client.pem.key</code>.</p>
+<p>Example: <code>/config/certs/client.key</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
 </div>
 <p>Path to the Client Key file.</p>
-<p>This is part of the configuration to enable TLS for MQTT.
-The Client Key is used by the client to prove its identity to the server, in conjunction with the Client Certificate.
+<p>This is part of the configuration to enable TLS 1.2 for MQTT.<br/></p>
+<p>The Client Key is used by the client to prove its identity to the server, in conjunction with the Client Certificate.
 It is the second part of the MTLS handshake.</p>
 <p>Usually there is a one pair of Client Certificate/Key for each client that connects to the MQTT broker</p>
+<p>For more information on how to create your own certificate, see: <a href="https://mosquitto.org/man/mosquitto-tls-7.html">mosquitto.org</a> or <a href="https://www.emqx.com/en/blog/emqx-server-ssl-tls-secure-connection-configuration-guide">emqx.com</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If set, <code>ClientCert</code> must be set too
+<p>If set, <code>ClientCert</code> must be set too.
 This also means that you might have to change the protocol and port in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> to <code>mqtts://example.com:8883</code>!</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Only TLS 1.2 is supported!</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-DomoticzTopicIn"></a></p>
@@ -3739,14 +3747,34 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 <p>Default Value: <code>mqtt://example.com:1883</code></p>
 <p>URI to the MQTT broker including the port. E.g. <code>mqtt://192.168.1.1:1883</code>.</p>
 <hr style="border:2px solid"/>
+<p><a id="MQTT-ValidateServerCert"></a></p>
+<h3 id="parameter-validateservercert"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.12</span> Parameter <code>ValidateServerCert</code></h3>
+<p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
+<p>Default Value: <code>true</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an <strong>Expert Parameter</strong>! Only change it if you understand what it does!</p>
+</div>
+<p>Enable or disable the validation of the server certificate CN field.<br/></p>
+<p>If <code>enabled (true)</code>, the certificate sent by the server is validated using the configured <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-cacert">Root CA Certificate file</a>.<br/>
+The server name in <a href="https://jomjol.github.io/AI-on-the-edge-device-docs/Parameters/#parameter-uri">uri</a> is compared with the CN field of the server certificate.<br/>
+A connection is only established if they agree. It ensures the origin of the server.</p>
+<p>If <code>disabled (false)</code>, the ESP32 skipped any validation of server certificate CN field.<br/>
+This reduces the security of TLS and makes the <em>MQTT</em> client susceptible to MITM attacks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also means that you might have to change the protocol and port in  to <code>mqtts://example.com:8883</code>!</p>
+<p>If you use public brokers, is recommended to set this parameter to "enabled (true)".</p>
+</div>
+<hr style="border:2px solid"/>
 <p><a id="MQTT-password"></a></p>
-<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.12</span> Parameter <code>password</code></h3>
+<h3 id="parameter-password"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.13</span> Parameter <code>password</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>PASSWORD</code></p>
 <p>Password for MQTT authentication.</p>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-user"></a></p>
-<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.13</span> Parameter <code>user</code></h3>
+<h3 id="parameter-user"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.14</span> Parameter <code>user</code></h3>
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>USERNAME</code></p>
 <p>Username for MQTT authentication.</p>
