@@ -22,6 +22,9 @@ plugins:
   - enumerate-headings:
       increment_across_pages: false
       toc_depth: 6
+  - redirects:
+      redirect_maps:
+        'Parameters/#parameter-numberanalogtodigittransitionstart': 'Parameters/#parameter-analogtodigittransitionstart'
 
 # The navigation is configured in the docs/nav.yml file!
 
