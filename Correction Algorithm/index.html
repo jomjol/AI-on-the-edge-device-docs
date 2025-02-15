@@ -411,9 +411,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#analogdigittransitionstart">1.0.1.0.5.2 
+<a class="md-nav__link" href="#analogtodigittransitionstart">1.0.1.0.5.2 
 <span class="md-ellipsis">
-      AnalogDigitTransitionStart
+      AnalogToDigitTransitionStart
     </span>
 </a>
 </li>
@@ -812,9 +812,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#analogdigittransitionstart">1.0.1.0.5.2 
+<a class="md-nav__link" href="#analogtodigittransitionstart">1.0.1.0.5.2 
 <span class="md-ellipsis">
-      AnalogDigitTransitionStart
+      AnalogToDigitTransitionStart
     </span>
 </a>
 </li>
@@ -897,7 +897,7 @@
 <p>If the <code>ExtendedResolution</code> setting is true, there is an exception where the value does not become smaller, but no error is output. This only applies if the value +/- 0.2 of the last digit is inaccurate.</p>
 <h6 id="decimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.1</span> <code>DecimalShift</code></h6>
 <p>The <code>DecimalShift</code> setting puts the decimal point in the right place. It acts like a shift. Negative values shift the decimal point to the left. Positive values move the decimal point to the right, filling with zero.</p>
-<h6 id="analogdigittransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.2</span> <code>AnalogDigitTransitionStart</code></h6>
+<h6 id="analogtodigittransitionstart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.2</span> <code>AnalogToDigitTransitionStart</code></h6>
 <p>For detailed description see <a href="../Watermeter-specific-analog---digit-transition/">Analog-digit-transition</a>.</p>
 <h6 id="maxratevalue-and-maxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.3</span> <code>MaxRateValue</code> and <code>MaxRateType</code></h6>
 <p>Here the maximum change from one to the next reading can be limited. If a false reading of the neural network results in a change larger than this, the reading is flagged as false. There a two types of comparisons possible</p>
@@ -909,7 +909,7 @@
 <p>Newer models such as dig-cont and dig-class100 have a high resolution of the values and can thus represent another digit by using the value of the last digit or pointer (ex. 7.8 in the last digit). </p>
 <p>If the value is set to true, the result of the last digit is used completely. </p>
 <p>When using dig-class11 models, the setting is ignored.</p>
-<p>Due to inaccuracies of the neural networks, it sometimes happens that the results jump back and forth between two decimal places. Therefore, when using `ÀllowNegatives``= false, no error is output if the value is only off by 0.2. Nevertheless, the value then remains at the higher determined value.</p>
+<p>Due to inaccuracies of the neural networks, it sometimes happens that the results jump back and forth between two decimal places. Therefore, when using <code>ÀllowNegatives</code>= false, no error is output if the value is only off by 0.2. Nevertheless, the value then remains at the higher determined value.</p>
 <h6 id="ignoreleadingnan"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.0.5.5</span> <code>IgnoreLeadingNaN</code></h6>
 <p>The parameter is only be used, if a dig-class11 model is selected. <code>ÌgnoreLeadingNaN</code> removes in the CheckDigitIncreaseConsistency process the leading <code>N</code> values.</p>
 <h4 id="flow-chart"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.1</span> Flow Chart</h4>
