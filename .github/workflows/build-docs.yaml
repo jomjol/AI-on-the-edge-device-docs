@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v5
       - run: |
-          pip install --upgrade pip && pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material mkdocs-enumerate-headings-plugin mkdocs-redirects
+          pip install --upgrade pip && pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material mkdocs-enumerate-headings-plugin
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           
