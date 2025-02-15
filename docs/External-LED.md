@@ -30,7 +30,7 @@ For power supply stabilization a capacitor between 5V and ground is recommended.
 
 ## 2. Software configuration
 
-The handling of the WS2812 LED controller needs some other libraries, therefore it is controlled within a dedicated section called ``GPIO Settings``. The external LED stripe is connected to GPIO12. After activating the "GPIO Settings" section, the internal flash is per default disabled. In order to activate the external LED, you need to activate ``GPIO 12 state`` and select ``"extern flash light ws281x ..."``. 
+The handling of the WS2812 LED controller needs some other libraries, therefore it is controlled within a dedicated section called `GPIO Settings`. The external LED stripe is connected to GPIO12. After activating the "GPIO Settings" section, the internal flash is per default disabled. In order to activate the external LED, you need to activate `GPIO 12 state` and select `"extern flash light ws281x ..."`. 
 
 
 
@@ -47,4 +47,4 @@ The handling of the WS2812 LED controller needs some other libraries, therefore 
 
 
 
-Enabling the GPIO settings automatically disables the flash LED. Therefore you can enable it here manually by checking GPIO4 and choose ``"build-in led flash light"``. It is not recommended to use both illumination parallel. 
+Enabling the GPIO settings automatically disables the flash LED. Therefore you can enable it here manually by checking GPIO4 and choose `"build-in led flash light"`. It is not recommended to use both illumination parallel. 

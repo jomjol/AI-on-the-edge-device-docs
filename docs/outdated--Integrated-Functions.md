@@ -21,7 +21,7 @@ Details can be found here:  tbd
 
 This is a implementation of the camera interface of https://github.com/jomjol/water-meter-picture-provider
 
-It is fully compatible including the parameters (```quality```=..., ``size=...`` ) . This allows to use this ESP32 system in parallel to the corresponding docker system: https://github.com/jomjol/water-meter-system-complete, from which this project is basically the successor.
+It is fully compatible including the parameters (```quality```=..., `size=...` ) . This allows to use this ESP32 system in parallel to the corresponding docker system: https://github.com/jomjol/water-meter-system-complete, from which this project is basically the successor.
 
 
 
