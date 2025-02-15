@@ -28,4 +28,5 @@ The models for image recognition are good, but have inaccuracies in the range +/
 
 ## How to configure for my meter type
 
-If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option `AnalogDigitTransitionStart` to a value between 6 and 8.
+If you have a devices with "normal" transition you should not have any issues. On devices with "early" transition, you can set the option `AnalogToDigitTransitionStart` to a value between 6 and 8.
+See the [parameter documentation](/Parameters/#parameter-numberanalogtodigittransitionstart) for details.
