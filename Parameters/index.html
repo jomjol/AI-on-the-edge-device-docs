@@ -3776,6 +3776,10 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 <p>Section: <a href="#section-mqtt">1.6 MQTT</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Enable or disable the <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/">Retain Flag</a> for all MQTT entries.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Disabling (set to <code>false</code>) this does not clear the last retained value on the MQTT broker! This must be done manually, see <a href="https://www.hivemq.com/blog/mqtt-essentials-part-8-retained-messages/#heading-how-to-delete-retained-messages-in-mqtt">How to Delete Retained Messages in MQTT?</a> and this <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/3534#discussioncomment-12199543">discussion</a>!</p>
+</div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-Uri"></a></p>
 <h3 id="parameter-uri"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.11</span> Parameter <code>Uri</code></h3>
