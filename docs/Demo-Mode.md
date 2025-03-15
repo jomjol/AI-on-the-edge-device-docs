@@ -29,6 +29,7 @@ demo/
 
 ## Collecting images of your device
 There are several ways to collect images from your device:
+
 1. Use the `RawImagesLocation` parameter to store them directly onto your SD card, see [Parameter `RawImagesLocation`](../Parameters/#parameter-rawimageslocation)
 1. Use the Webhook to send the raw image on each round to a dedicated server, see [Webhook](../Webhook) resp. [../Parameter `UploadImg`](Parameters/#parameter-uploadimg).
 1. Another option is to pull the images periodically from `http://<IP>/img_tmp/raw.jpg`. Eg. with an external service. Below is a (Linux)-Bash script to do it:
