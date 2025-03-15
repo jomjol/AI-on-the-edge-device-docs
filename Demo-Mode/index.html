@@ -826,40 +826,42 @@
 </li>
 </ul>
 <h2 id="collecting-images-of-your-device"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Collecting images of your device</h2>
-<p>There are several ways to collect images from your device:
-1. Use the <code>RawImagesLocation</code> parameter to store them directly onto your SD card, see <a href="../Parameters/#parameter-rawimageslocation">Parameter <code>RawImagesLocation</code></a>
-1. Use the Webhook to send the raw image on each round to a dedicated server, see <a href="../Webhook">Webhook</a> resp. <a href="Parameters/#parameter-uploadimg">../Parameter <code>UploadImg</code></a>.
-1. Another option is to pull the images periodically from <code>http://&lt;IP&gt;/img_tmp/raw.jpg</code>. Eg. with an external service. Below is a (Linux)-Bash script to do it:
+<p>There are several ways to collect images from your device:</p>
+<ol>
+<li>Use the <a href="../Parameters/#parameter-rawimageslocation">Parameter <code>RawImagesLocation</code></a> to store them directly onto your SD card.</li>
+<li>Use the Webhook to send the raw image on each round to a dedicated server, see <a href="../Webhook">Webhook</a> resp. <a href="Parameters/#parameter-uploadimg">../Parameter <code>UploadImg</code></a>.</li>
+<li>Another option is to pull the images periodically from <code>http://&lt;IP&gt;/img_tmp/raw.jpg</code>. Eg. with an external service. Below is a (Linux)-Bash script to do it:
     ```bash
     #!/bin/bash
     while [[ true ]]; do
         echo "fetching value..."
-        wget -q http://192.168.1.151/value -O value.txt</p>
-<div class="language-text highlight"><pre><span></span><code>    value=`cat value.txt`
-    echo "Value: $value"
+        wget -q http://192.168.1.151/value -O value.txt<div class="language-text highlight"><pre><span></span><code>value=`cat value.txt`
+echo "Value: $value"
 
-    diff=`diff value.txt value_previous.txt`
-    changed=$?
-    #echo "Diff: $diff"
+diff=`diff value.txt value_previous.txt`
+changed=$?
+#echo "Diff: $diff"
 
-     if [[ $changed -ne 0 ]]; then
-         echo "Value changed:"
-         echo $diff
-         echo "fetching image..."
-         wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
-     else
-         echo "Value did not change, skipping image fetching!"
-     fi
+ if [[ $changed -ne 0 ]]; then
+     echo "Value changed:"
+     echo $diff
+     echo "fetching image..."
+     wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
+ else
+     echo "Value did not change, skipping image fetching!"
+ fi
 
-     cp value.txt value_previous.txt
+ cp value.txt value_previous.txt
 
-     echo "waiting 60s..."
-     sleep 60
- done
- ```
+ echo "waiting 60s..."
+ sleep 60
 </code></pre></div>
+<p>done
+ ```</p>
 <h2 id="use-prepared-images"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Use prepared images</h2>
 <p>See the selection below with prepared images.</p>
+</li>
+</ol>
 <h2 id="how-does-it-work"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> How does it work</h2>
 <p>The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam framebuffer gets taken (<code>esp_camera_fb_get()</code>), it replaces the framebuffer with the image from the SD card.</p>
 <h2 id="example-data-of-a-water-meter"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Example Data of a Water Meter</h2>
