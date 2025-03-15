@@ -1,5 +1,5 @@
 # Demo Mode
-For Demo and Testing Purpose, the device can use pre-recorded images.
+For Demo and Testing Purpose, the device can use pre-recorded raw images.
 
 You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD card.
 
@@ -27,46 +27,46 @@ demo/
         520.9086.jpg
         520.9351.jpg
 
-## Recording
-To record real images of a meter, you have to periodically fetch `http://<IP>/img_tmp/raw.jpg`.
+## Collecting images of your device
+There are several ways to collect images from your device:
+1. Use the `RawImagesLocation` parameter to store them directly onto your SD card, see [Parameter `RawImagesLocation`](Parameters/#parameter-rawimageslocation)
+1. Use the Webhook to send the raw image on each round to a dedicated server, see [Webhook](Webhook) resp. [Parameter `UploadImg`](Parameters/#parameter-uploadimg).
+1. Another option is to pull the images periodically from `http://<IP>/img_tmp/raw.jpg`. Eg. with an external service. Below is a (Linux)-Bash script to do it:
 
-To automate this, you can use the following shell script (Linux only):
-```bash
-#!/bin/bash
-
-while [[ true ]]; do
-    echo "fetching value..."
-    wget -q http://192.168.1.151/value -O value.txt
-
-    value=`cat value.txt`
-    echo "Value: $value"
-    
-    diff=`diff value.txt value_previous.txt`
-    changed=$?
-    #echo "Diff: $diff"
-    
-    if [[ $changed -ne 0 ]]; then
-        echo "Value changed:"
-        echo $diff
-        echo "fetching image..."
-        wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
-    else
-        echo "Value did not change, skipping image fetching!"
-    fi
-    
-    cp value.txt value_previous.txt
-    
-    echo "waiting 60s..."
-    sleep 60
-done
-```
-
-## Installation
-Just install the zip file using the OTA Update functionality.
+        ```bash
+        #!/bin/bash
+        
+        while [[ true ]]; do
+            echo "fetching value..."
+            wget -q http://192.168.1.151/value -O value.txt
+        
+            value=`cat value.txt`
+            echo "Value: $value"
+            
+            diff=`diff value.txt value_previous.txt`
+            changed=$?
+            #echo "Diff: $diff"
+            
+            if [[ $changed -ne 0 ]]; then
+                echo "Value changed:"
+                echo $diff
+                echo "fetching image..."
+                wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
+            else
+                echo "Value did not change, skipping image fetching!"
+            fi
+            
+            cp value.txt value_previous.txt
+            
+            echo "waiting 60s..."
+            sleep 60
+        done
+        ```
+## Use prepared images
+See the selection below with prepared images.
 
 ## How does it work
 The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam framebuffer gets taken (`esp_camera_fb_get()`), it replaces the framebuffer with the image from the SD card.
-
 
 ## Example Data of a Water Meter
 You can use the following demo images if you want:
