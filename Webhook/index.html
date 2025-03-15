@@ -597,9 +597,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#basic-php-example">1.4 
+<a class="md-nav__link" href="#basic-example-of-a-server-using-php">1.4 
 <span class="md-ellipsis">
-      Basic PHP Example
+      Basic Example of a server using PHP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-example-of-a-server-using-python">1.5 
+<span class="md-ellipsis">
+      Basic Example of a server using Python
     </span>
 </a>
 </li>
@@ -747,9 +754,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#basic-php-example">1.4 
+<a class="md-nav__link" href="#basic-example-of-a-server-using-php">1.4 
 <span class="md-ellipsis">
-      Basic PHP Example
+      Basic Example of a server using PHP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-example-of-a-server-using-python">1.5 
+<span class="md-ellipsis">
+      Basic Example of a server using Python
     </span>
 </a>
 </li>
@@ -763,6 +777,7 @@
 <h1 id="webhook"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Webhook</h1>
 <h2 id="purpose"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Purpose</h2>
 <p>The idea behind this webhook feature is to provide an alternative to MQTT and InfluxDB for transmitting data, such as water meter readings from a vacation home, to a standard PHP webspace.</p>
+<p>You can call the webhook to upload the data or the raw image of a round to a server.</p>
 <h2 id="configuration"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Configuration</h2>
 <p>To configure the webhook feature, you only need to define a URI and an API key. The URI is where the webhook will send the data, and the API key is used to authenticate the requests, ensuring that only authorized devices can send data to your server.
 Optionally, "Upload Image" can be used to configure whether an additional PUT request should be sent to the same URI with the current image.
@@ -798,7 +813,7 @@ A parameter timestamp is appended to establish a correlation.</p>
 </span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">]</span>
 </span></code></pre></div>
-<h2 id="basic-php-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Basic PHP Example</h2>
+<h2 id="basic-example-of-a-server-using-php"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Basic Example of a server using PHP</h2>
 <div class="language-PHP highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">&lt;?php</span>
 </span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">$expectedApiKey</span> <span class="o">=</span> <span class="s1">'your-api-key-here'</span><span class="p">;</span>
 </span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
@@ -884,6 +899,88 @@ A parameter timestamp is appended to establish a correlation.</p>
 </span><span id="__span-2-83"><a href="#__codelineno-2-83" id="__codelineno-2-83" name="__codelineno-2-83"></a>    <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">([</span><span class="s1">'status'</span> <span class="o">=&gt;</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="s1">'Method not allowed'</span><span class="p">]);</span>
 </span><span id="__span-2-84"><a href="#__codelineno-2-84" id="__codelineno-2-84" name="__codelineno-2-84"></a><span class="p">}</span>
 </span><span id="__span-2-85"><a href="#__codelineno-2-85" id="__codelineno-2-85" name="__codelineno-2-85"></a><span class="cp">?&gt;</span>
+</span></code></pre></div>
+<h2 id="basic-example-of-a-server-using-python"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Basic Example of a server using Python</h2>
+<div class="language-Python highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">csv</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># List of allowed API keys</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">ALLOWED_API_KEYS</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="s1">'123'</span><span class="p">,</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="s1">'456'</span><span class="p">,</span>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="s1">'789'</span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="nd">@app</span><span class="o">.</span><span class="n">before_request</span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="k">def</span> <span class="nf">check_api_key</span><span class="p">():</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="c1"># Get the API key from the request headers</span>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>    <span class="n">received_api_key</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'APIKEY'</span><span class="p">)</span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="c1"># Check if the received API key is in the allowed list</span>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>    <span class="k">if</span> <span class="n">received_api_key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOWED_API_KEYS</span><span class="p">:</span>
+</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Invalid API key'</span><span class="p">}),</span> <span class="mi">403</span>
+</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a>    <span class="c1"># Attach the API key to the request object for later use</span>
+</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a>    <span class="n">request</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">received_api_key</span>
+</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a>
+</span><span id="__span-3-26"><a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/webhook'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'POST'</span><span class="p">,</span> <span class="s1">'PUT'</span><span class="p">])</span>
+</span><span id="__span-3-27"><a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="k">def</span> <span class="nf">webhook</span><span class="p">():</span>
+</span><span id="__span-3-28"><a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a>    <span class="c1"># Create a directory for the API key if it doesn't exist</span>
+</span><span id="__span-3-29"><a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a>    <span class="n">api_key_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">api_key</span><span class="p">)</span>
+</span><span id="__span-3-30"><a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">api_key_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-3-31"><a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">'POST'</span><span class="p">:</span>
+</span><span id="__span-3-33"><a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a>        <span class="c1"># Handle POST request: Write data to CSV</span>
+</span><span id="__span-3-34"><a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+</span><span id="__span-3-35"><a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+</span><span id="__span-3-36"><a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Invalid JSON data'</span><span class="p">}),</span> <span class="mi">400</span>
+</span><span id="__span-3-37"><a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a>        <span class="n">csv_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">api_key_dir</span><span class="p">,</span> <span class="s1">'webhook_log.csv'</span><span class="p">)</span>
+</span><span id="__span-3-39"><a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a>        <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-3-40"><a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a>            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+</span><span id="__span-3-41"><a href="#__codelineno-3-41" id="__codelineno-3-41" name="__codelineno-3-41"></a>                <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+</span><span id="__span-3-42"><a href="#__codelineno-3-42" id="__codelineno-3-42" name="__codelineno-3-42"></a>                <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span><span id="__span-3-43"><a href="#__codelineno-3-43" id="__codelineno-3-43" name="__codelineno-3-43"></a>                    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span>
+</span><span id="__span-3-44"><a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'timestampLong'</span><span class="p">),</span>
+</span><span id="__span-3-45"><a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'name'</span><span class="p">),</span>
+</span><span id="__span-3-46"><a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'rawValue'</span><span class="p">),</span>
+</span><span id="__span-3-47"><a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'value'</span><span class="p">),</span>
+</span><span id="__span-3-48"><a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'preValue'</span><span class="p">),</span>
+</span><span id="__span-3-49"><a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'rate'</span><span class="p">),</span>
+</span><span id="__span-3-50"><a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'changeAbsolute'</span><span class="p">),</span>
+</span><span id="__span-3-51"><a href="#__codelineno-3-51" id="__codelineno-3-51" name="__codelineno-3-51"></a>                        <span class="n">item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'error'</span><span class="p">)</span>
+</span><span id="__span-3-52"><a href="#__codelineno-3-52" id="__codelineno-3-52" name="__codelineno-3-52"></a>                    <span class="p">])</span>
+</span><span id="__span-3-53"><a href="#__codelineno-3-53" id="__codelineno-3-53" name="__codelineno-3-53"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'success'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Data written to CSV file'</span><span class="p">}),</span> <span class="mi">200</span>
+</span><span id="__span-3-54"><a href="#__codelineno-3-54" id="__codelineno-3-54" name="__codelineno-3-54"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span id="__span-3-55"><a href="#__codelineno-3-55" id="__codelineno-3-55" name="__codelineno-3-55"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Unable to open CSV file'</span><span class="p">}),</span> <span class="mi">500</span>
+</span><span id="__span-3-56"><a href="#__codelineno-3-56" id="__codelineno-3-56" name="__codelineno-3-56"></a>
+</span><span id="__span-3-57"><a href="#__codelineno-3-57" id="__codelineno-3-57" name="__codelineno-3-57"></a>    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">'PUT'</span><span class="p">:</span>
+</span><span id="__span-3-58"><a href="#__codelineno-3-58" id="__codelineno-3-58" name="__codelineno-3-58"></a>        <span class="c1"># Handle PUT request: Save image</span>
+</span><span id="__span-3-59"><a href="#__codelineno-3-59" id="__codelineno-3-59" name="__codelineno-3-59"></a>        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'timestamp'</span><span class="p">)</span>
+</span><span id="__span-3-60"><a href="#__codelineno-3-60" id="__codelineno-3-60" name="__codelineno-3-60"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">timestamp</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">timestamp</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-3-61"><a href="#__codelineno-3-61" id="__codelineno-3-61" name="__codelineno-3-61"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Invalid timestamp'</span><span class="p">}),</span> <span class="mi">400</span>
+</span><span id="__span-3-62"><a href="#__codelineno-3-62" id="__codelineno-3-62" name="__codelineno-3-62"></a>
+</span><span id="__span-3-63"><a href="#__codelineno-3-63" id="__codelineno-3-63" name="__codelineno-3-63"></a>        <span class="n">image_data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span>
+</span><span id="__span-3-64"><a href="#__codelineno-3-64" id="__codelineno-3-64" name="__codelineno-3-64"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">image_data</span><span class="p">:</span>
+</span><span id="__span-3-65"><a href="#__codelineno-3-65" id="__codelineno-3-65" name="__codelineno-3-65"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'No image data received'</span><span class="p">}),</span> <span class="mi">400</span>
+</span><span id="__span-3-66"><a href="#__codelineno-3-66" id="__codelineno-3-66" name="__codelineno-3-66"></a>
+</span><span id="__span-3-67"><a href="#__codelineno-3-67" id="__codelineno-3-67" name="__codelineno-3-67"></a>        <span class="n">image_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">api_key_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">.jpg'</span><span class="p">)</span>
+</span><span id="__span-3-68"><a href="#__codelineno-3-68" id="__codelineno-3-68" name="__codelineno-3-68"></a>        <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-3-69"><a href="#__codelineno-3-69" id="__codelineno-3-69" name="__codelineno-3-69"></a>            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">image_file_path</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">image_file</span><span class="p">:</span>
+</span><span id="__span-3-70"><a href="#__codelineno-3-70" id="__codelineno-3-70" name="__codelineno-3-70"></a>                <span class="n">image_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
+</span><span id="__span-3-71"><a href="#__codelineno-3-71" id="__codelineno-3-71" name="__codelineno-3-71"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'success'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Image uploaded successfully'</span><span class="p">}),</span> <span class="mi">200</span>
+</span><span id="__span-3-72"><a href="#__codelineno-3-72" id="__codelineno-3-72" name="__codelineno-3-72"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span><span id="__span-3-73"><a href="#__codelineno-3-73" id="__codelineno-3-73" name="__codelineno-3-73"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Unable to save the image'</span><span class="p">}),</span> <span class="mi">500</span>
+</span><span id="__span-3-74"><a href="#__codelineno-3-74" id="__codelineno-3-74" name="__codelineno-3-74"></a>
+</span><span id="__span-3-75"><a href="#__codelineno-3-75" id="__codelineno-3-75" name="__codelineno-3-75"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-76"><a href="#__codelineno-3-76" id="__codelineno-3-76" name="__codelineno-3-76"></a>        <span class="c1"># Handle unsupported HTTP methods</span>
+</span><span id="__span-3-77"><a href="#__codelineno-3-77" id="__codelineno-3-77" name="__codelineno-3-77"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'status'</span><span class="p">:</span> <span class="s1">'error'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">:</span> <span class="s1">'Method not allowed'</span><span class="p">}),</span> <span class="mi">405</span>
+</span><span id="__span-3-78"><a href="#__codelineno-3-78" id="__codelineno-3-78" name="__codelineno-3-78"></a>
+</span><span id="__span-3-79"><a href="#__codelineno-3-79" id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+</span><span id="__span-3-80"><a href="#__codelineno-3-80" id="__codelineno-3-80" name="__codelineno-3-80"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">'0.0.0.0'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">)</span>
 </span></code></pre></div>
 </article>
 </div>
