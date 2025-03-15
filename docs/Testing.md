@@ -8,7 +8,7 @@ All tests are under directory "test" in the project and not compiled with defaul
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/412645/209811778-7efe3b83-8954-4d3b-afa3-d3718fcd9058.png">
 
-## Include my my own test
+## Include my own test
 
 In method `app_main()` of `test_suite_controlflow.cpp` you can add your own tests. Include your test-file in the top like
 
