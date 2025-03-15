@@ -29,39 +29,37 @@ demo/
 
 ## Collecting images of your device
 There are several ways to collect images from your device:
-1. Use the `RawImagesLocation` parameter to store them directly onto your SD card, see [Parameter `RawImagesLocation`](Parameters/#parameter-rawimageslocation)
-1. Use the Webhook to send the raw image on each round to a dedicated server, see [Webhook](Webhook) resp. [Parameter `UploadImg`](Parameters/#parameter-uploadimg).
+1. Use the `RawImagesLocation` parameter to store them directly onto your SD card, see [Parameter `RawImagesLocation`](../Parameters/#parameter-rawimageslocation)
+1. Use the Webhook to send the raw image on each round to a dedicated server, see [Webhook](../Webhook) resp. [../Parameter `UploadImg`](Parameters/#parameter-uploadimg).
 1. Another option is to pull the images periodically from `http://<IP>/img_tmp/raw.jpg`. Eg. with an external service. Below is a (Linux)-Bash script to do it:
-
-        ```bash
-        #!/bin/bash
+    ```bash
+    #!/bin/bash
+    while [[ true ]]; do
+        echo "fetching value..."
+        wget -q http://192.168.1.151/value -O value.txt
+       
+        value=`cat value.txt`
+        echo "Value: $value"
         
-        while [[ true ]]; do
-            echo "fetching value..."
-            wget -q http://192.168.1.151/value -O value.txt
-        
-            value=`cat value.txt`
-            echo "Value: $value"
+        diff=`diff value.txt value_previous.txt`
+        changed=$?
+        #echo "Diff: $diff"
             
-            diff=`diff value.txt value_previous.txt`
-            changed=$?
-            #echo "Diff: $diff"
+         if [[ $changed -ne 0 ]]; then
+             echo "Value changed:"
+             echo $diff
+             echo "fetching image..."
+             wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
+         else
+             echo "Value did not change, skipping image fetching!"
+         fi
             
-            if [[ $changed -ne 0 ]]; then
-                echo "Value changed:"
-                echo $diff
-                echo "fetching image..."
-                wget -q http://192.168.1.151/img_tmp/raw.jpg -O $value.jpg
-            else
-                echo "Value did not change, skipping image fetching!"
-            fi
+         cp value.txt value_previous.txt
             
-            cp value.txt value_previous.txt
-            
-            echo "waiting 60s..."
-            sleep 60
-        done
-        ```
+         echo "waiting 60s..."
+         sleep 60
+     done
+     ```
 ## Use prepared images
 See the selection below with prepared images.
 
