@@ -782,8 +782,9 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 <li><code>dig-class11</code></li>
 <li><code>dig-class100</code> and <code>dig-cont</code></li>
 </ul>
+<p><code>class</code> stands for <strong>classification</strong> and <code>cont</code> stands for <strong>continuous</strong>. The <code>11</code> means that there are 11 states (<code>0..9</code> and <code>N</code>). The <code>100</code> indicates that the model resolves into <code>x.1</code> steps.</p>
 <h3 id="dig-class11"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> <code>dig-class11</code></h3>
-<p>This model can recognize <strong>full digits</strong>. It was the first model version. All intermediate states shown a <code>N</code> for not a number. But in post process it uses older values to fill up the <code>N</code> values if possible.</p>
+<p>This model can recognize <strong>full digits</strong>. It was the first model version. All intermediate states shown a <code>N</code> for not-a-number (aka. <code>NaN</code>). But in post process it uses older values to fill up the <code>N</code> values if possible.</p>
 <p><img alt="" src="../img/dig-class11.png" style="width:300px"/></p>
 <p>It's possibly a good fallback, if <code>dig-cont</code> or <code>dig-class100</code> results are not good.</p>
 <p>Main features:</p>
@@ -802,7 +803,7 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 </ul>
 <p>The difference between <code>dig-class100</code> and <code>dig-cont</code> is in the internal processing.
 The <code>dig-class100</code> is a standard classification model. Each tenth step is an output.
-<code>dig-cont</code> uses two outputs and arctangent to get the result. You see very complicated. </p>
+<code>dig-cont</code> uses two outputs and arctangent to get the result.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Try both models on your device and take the one that gives you the best results.</p>
@@ -817,7 +818,8 @@ The <code>dig-class100</code> is a standard classification model. Each tenth ste
 <li><code>ana-class100</code> </li>
 <li><code>ana-cont</code></li>
 </ul>
-<p>Both do mainly the same.</p>
+<p>Both do mainly the same.
+<code>class</code> stands for <strong>classification</strong> and <code>cont</code> stands for <strong>continuous</strong>.</p>
 <p>Main features:</p>
 <ul>
 <li>for all analogue pointers, especially for water meters.</li>
