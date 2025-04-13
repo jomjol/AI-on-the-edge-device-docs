@@ -15,9 +15,11 @@ For digits on water meters, gas-meters or power meters you can select between tw
 - `dig-class11`
 - `dig-class100` and `dig-cont`
 
+`class` stands for **classification** and `cont` stands for **continuous**. The `11` means that there are 11 states (`0..9` and `N`). The `100` indicates that the model resolves into `x.1` steps.
+
 ### `dig-class11`
 
-This model can recognize **full digits**. It was the first model version. All intermediate states shown a `N` for not a number. But in post process it uses older values to fill up the `N` values if possible.
+This model can recognize **full digits**. It was the first model version. All intermediate states shown a `N` for not-a-number (aka. `NaN`). But in post process it uses older values to fill up the `N` values if possible.
 
 ![](img/dig-class11.png){: style="width:300px"}
 
@@ -42,7 +44,7 @@ Main features:
 
 The difference between `dig-class100` and `dig-cont` is in the internal processing.
 The `dig-class100` is a standard classification model. Each tenth step is an output.
-`dig-cont` uses two outputs and arctangent to get the result. You see very complicated. 
+`dig-cont` uses two outputs and arctangent to get the result.
 
 !!! Note
     Try both models on your device and take the one that gives you the best results.
@@ -63,6 +65,7 @@ For pointers on water meters use the analog models:
 - `ana-cont`
 
 Both do mainly the same.
+`class` stands for **classification** and `cont` stands for **continuous**.
 
 Main features:
 
