@@ -15,7 +15,9 @@ For digits on water meters, gas-meters or power meters you can select between tw
 - `dig-class11`
 - `dig-class100` and `dig-cont`
 
-`class` stands for **classification** and `cont` stands for **continuous**. The `11` means that there are 11 states (`0..9` and `N`). The `100` indicates that the model resolves into `x.1` steps.
+`class` stands for **classification** and `cont` stands for **continuous**. The `11` means that there are 11 states (`0..9` and `N`). The `100` indicates that the model resolves into `x.1` steps by having 100 states (0.0, 0.1, 0.2, ... 9.7, 9.8, 9.9).
+
+**continuous** means, that there is no discrete model, that has discreate states, but there is a different mechanism, that provides a not discrete value in the interval between [0, 1[.
 
 ### `dig-class11`
 
@@ -90,3 +92,37 @@ Example:
 | :-------- | --------------------------- |
 | Normal    | `dig-cont_0610_s3.tflite`   |
 | Quantized | `dig-cont_0610_s3-q.tflite` |
+
+## Model Naming Convention
+
+Model filenames follow a specific structure composed of several parts:
+
+1. **Model Type**: Indicates the kind of model, such as `ana/dig`, `cont`, `class11`, or `class100`.
+2. **Version Number**: Denotes the version of the model.
+3. **Size Indicator**: Represents the size or complexity of the model.
+4. **Quantization Indicator** (optional): Specifies whether the model was quantized after training.
+5. **File Type**: Always `.tflite`.
+
+### Version Number
+
+The version number consists of four digits:
+
+- The **first two digits** represent the *main version*.
+- The **last two digits** represent the *sub-version*.
+
+Example:
+ `0610` → Main version: `06`, Sub-version: `10`
+ In general, higher numbers correspond to newer models.
+
+### Size Indicator
+
+- The size indicator typically starts with `s` followed by a number, e.g., `s3`.
+- This naming is not strictly standardized yet.
+- Training usually begins with a larger model (`s0`), and successive versions (`s1`, `s2`, ...) reduce the number of parameters to create smaller, faster networks.
+- Reducing model size can improve efficiency, but may eventually lead to a drop in recognition accuracy.
+- In newer model generations, only the best-performing sizes are retained and further trained.
+
+### Quantization Indicator
+
+- If the model name ends with `-q`, it indicates that **quantization** was applied after training.
+- Quantization significantly reduces the model size, typically without a noticeable impact on recognition performance.
