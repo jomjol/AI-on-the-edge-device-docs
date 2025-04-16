@@ -882,7 +882,7 @@
   So please be a bit patient with your meter :-)</li>
 </ul>
 <h2 id="pre-value"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Pre-Value</h2>
-<p>PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
+<p>PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check negative rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.</p>
 <p>If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. </p>
 <p>If the device runs in errors, the pre-value will not be updated, as long as the <code>preValueAgeStartup</code> time between the last valid value (or startup time) and current time is not exceeded. After it the preValue will be set again, if no other error occured. So the device can not run in an endless error, like high rate.</p>
 <h2 id="rate-too-high-read"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> "Rate too high - Read: ..."</h2>
