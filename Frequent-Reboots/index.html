@@ -955,7 +955,6 @@ There is noting you can do about it, beside testing different hardware.</p>
 </ol>
 <h5 id="bad-or-insufficient-power-supply"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.1.1.1</span> Bad or insufficient power supply</h5>
 <p>A good and stabilized power supply is essential to have error free operation. The device is quite picky in terms of proper power supply. Especially the wifi module have some load spikes which the power supply needs to cover. If the power is not stable enough, the brwonout mechanism is protecting against strange behaviour and force a reboot whenever the voltage drops below a specific level. You can see this in random reboots which indication is logfile: --&gt; Reset reason: Brownout</p>
-<hr/>
 <h3 id="repeating-boot-loops"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.0.2</span> Repeating boot loops</h3>
 <p>Repeating boot loops at the same situation during the flow has a systematic problem either in the hardware or the configuration. It usually happens during initialization state or processing the first round as there all needed parts of the firmware have been loaded for the first time.</p>
 <p>To identify the root cause the logfiles, the reduced web interface, the red board LED or the serial log of the UART interface (no remote access, USB access needed) is helpful. </p>
