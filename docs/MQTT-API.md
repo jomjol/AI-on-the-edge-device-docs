@@ -7,6 +7,7 @@ The device is capable to register to a MQTT broker to publish data and subscribe
 The MQTT service has to be enabled and configured properly in the device configuration via web interface (`Settings` -> `Configuration` -> section `MQTT`)
 
 The following parameters have to be defined:
+
 * URI
 * MainTopic (optional, if not set, the hostname is used)
 * ClientID (optional, if not set, `AIOTED-` + the MAC address gets used to make sure the ID is unique)
