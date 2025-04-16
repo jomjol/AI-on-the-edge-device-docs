@@ -847,13 +847,15 @@
 <p>Only MQTT v3.1.1 is supported.</p>
 </div>
 <p>The MQTT service has to be enabled and configured properly in the device configuration via web interface (<code>Settings</code> -&gt; <code>Configuration</code> -&gt; section <code>MQTT</code>)</p>
-<p>The following parameters have to be defined:
-* URI
-* MainTopic (optional, if not set, the hostname is used)
-* ClientID (optional, if not set, <code>AIOTED-</code> + the MAC address gets used to make sure the ID is unique)
-* User (optional)
-* Password (optional)
-* RetainFlag (optional)</p>
+<p>The following parameters have to be defined:</p>
+<ul>
+<li>URI</li>
+<li>MainTopic (optional, if not set, the hostname is used)</li>
+<li>ClientID (optional, if not set, <code>AIOTED-</code> + the MAC address gets used to make sure the ID is unique)</li>
+<li>User (optional)</li>
+<li>Password (optional)</li>
+<li>RetainFlag (optional)</li>
+</ul>
 <h2 id="published-topics"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Published topics</h2>
 <h3 id="status"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> Status</h3>
 <p>The following overhead data are available under the main topic (i.e. <code>watermeter</code>):</p>
