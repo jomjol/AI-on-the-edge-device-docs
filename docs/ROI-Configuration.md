@@ -1,5 +1,4 @@
 # ROIs (Regions of Interest)
-
 !!! Notes
     You are using a neural network approach which is trained to fit as many different type of meters as possible.
     The accuracy will never be 100%. It is normal to see a missing reading once in a while. 
@@ -74,9 +73,6 @@ If you are in the initial setup, the model will be selectable in the next step. 
 In [Model Selection](Choosing-the-Model.md) you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.
 
 Here we only show the different configuration of the ROIs.
-
-
-
 
 
 1. Digit Meters with only recognized full digits (`0, 1, 2, 3, ... 9`)

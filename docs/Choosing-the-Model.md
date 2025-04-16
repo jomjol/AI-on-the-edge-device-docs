@@ -9,7 +9,6 @@ This page tries to help you on which model to select.
 For more technical/deeper explanations have a look on [Neural-Network-Types](Neural-Network-Types.md).
 
 ## Digit Models
-
 For digits on water meters, gas-meters or power meters you can select between two main types of models:
 
 - `dig-class11`
@@ -20,7 +19,6 @@ For digits on water meters, gas-meters or power meters you can select between tw
 **continuous** means, that there is no discrete model, that has discreate states, but there is a different mechanism, that provides a not discrete value in the interval between [0, 1[.
 
 ### `dig-class11`
-
 This model can recognize **full digits**. It was the first model version. All intermediate states shown a `N` for not-a-number (aka. `NaN`). But in post process it uses older values to fill up the `N` values if possible.
 
 ![](img/dig-class11.png){: style="width:300px"}
@@ -33,7 +31,6 @@ Main features:
 * the ExtendedResolution option is not supported. (Only in conjunction with `ana-class100` or `ana-cont`)
 
 ### `dig-class100` and `dig-cont`
-
 These models are used to get a **continuous reading** with intermediate states. To see what the models are doing, you can go to the Recognition page of your device.
 
 ![](img/dig-class100.png){: style="width:300px"}
@@ -54,9 +51,6 @@ The `dig-class100` is a standard classification model. Each tenth step is an out
 Look [here](https://jomjol.github.io/neural-network-digital-counter-readout) for a list of digit images used for the training.
 
 ## Analog pointer models
-
-### `ana-class100` and `ana-cont`
-
 For pointers on water meters use the analog models:
 
 ![](img/ana-class100.png){: style="width:250px"}
@@ -82,7 +76,6 @@ Again, the difference between `ana-class100` and `ana-cont` is in the internal p
 Look [here](https://jomjol.github.io/neural-network-analog-needle-readout/) for a list of pointer images used for the training
 
 ## Different types of models (normal vs. quantized)
-
 The normally trained network is calculating with internal floating point numbers. The saving of floating point numbers naturally takes more space than an integer type. Often the increased accuracy is not needed. Therefore there is the option, to "quantize" a neural network. In this case the internal values are rescaled to integer values, which is called "quantization". The stored tflite files are usually much smaller and runs faster on the edgeAI-device.
 Usually the models are distrusted therefore in both versions. They can be distinguished by a `q` at the end of the logfile.
 
@@ -94,7 +87,6 @@ Example:
 | Quantized | `dig-cont_0610_s3-q.tflite` |
 
 ## Model Naming Convention
-
 Model filenames follow a specific structure composed of several parts:
 
 1. **Model Type**: Indicates the kind of model, such as `ana/dig`, `cont`, `class11`, or `class100`.
@@ -104,7 +96,6 @@ Model filenames follow a specific structure composed of several parts:
 5. **File Type**: Always `.tflite`.
 
 ### Version Number
-
 The version number consists of four digits:
 
 - The **first two digits** represent the *main version*.
@@ -115,7 +106,6 @@ Example:
  In general, higher numbers correspond to newer models.
 
 ### Size Indicator
-
 - The size indicator typically starts with `s` followed by a number, e.g., `s3`.
 - This naming is not strictly standardized yet.
 - Training usually begins with a larger model (`s0`), and successive versions (`s1`, `s2`, ...) reduce the number of parameters to create smaller, faster networks.
@@ -123,6 +113,5 @@ Example:
 - In newer model generations, only the best-performing sizes are retained and further trained.
 
 ### Quantization Indicator
-
 - If the model name ends with `-q`, it indicates that **quantization** was applied after training.
 - Quantization significantly reduces the model size, typically without a noticeable impact on recognition performance.

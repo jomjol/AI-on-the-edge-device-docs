@@ -1,6 +1,4 @@
 # Basic hardware / configuration issues
-
-
 If the device is behaving eratically or not running as expected you can use the following tools trying to identify the root cause:
 
 1. Internal logging (`config.ini`)
@@ -19,7 +17,6 @@ There are in principle two reboots types:
 ______
 
 ### Sporadic random reboots
-
 Sporadic random reboots could have the following reasons:
 
 * In general: Unstable system due to software issues (e.g. overload during HTML access, ...)
@@ -30,7 +27,6 @@ Sporadic random reboots could have the following reasons:
 In general: There are several mechanisms in the firmware (like saving previous values), to have a "smooth" reboot without too many notable disturbance.
 
 ##### System instabilities
-
 If your system is sometimes running smoothly over several runs and sometimes reboots obviously randomly, you have an partially unstable device. 
 
 You can check this in the standard log file on the SD card:
@@ -47,7 +43,6 @@ There is noting you can do about it, beside testing different hardware.
 
 
 #### Overload during HTML access
-
 If you frequently access the web server over HTML requests, the firmware tends to reboot. This especially happens during the first run and when the ESP32 is busy with the digitization flow. 
 
 The reason for this are running out of memory during a flow, minor memory leakage in combination with missing error handling.
@@ -59,15 +54,10 @@ There is noting you can do about this kind of reboot, beside two thing:
 
 
 ##### Bad or insufficient power supply
-
 A good and stabilized power supply is essential to have error free operation. The device is quite picky in terms of proper power supply. Especially the wifi module have some load spikes which the power supply needs to cover. If the power is not stable enough, the brwonout mechanism is protecting against strange behaviour and force a reboot whenever the voltage drops below a specific level. You can see this in random reboots which indication is logfile: --> Reset reason: Brownout
 
 
-
-______
-
 ### Repeating boot loops
-
 Repeating boot loops at the same situation during the flow has a systematic problem either in the hardware or the configuration. It usually happens during initialization state or processing the first round as there all needed parts of the firmware have been loaded for the first time.
 
 To identify the root cause the logfiles, the reduced web interface, the red board LED or the serial log of the UART interface (no remote access, USB access needed) is helpful. 
@@ -78,15 +68,11 @@ Possible issues:
 * RAM related issues
 * Configuration related issues
 
-
-
 ##### SD card related issues
-
 The ESP32CAM is a little bit "picky" with the supported SD cards. Due to the limited availability of GPIOs the SD card can only be accessed via 1-wire mode. Therefore not all SD cards are supported. The following error cases can occur:
 
 
 ###### SD card: Wrong filesystem (only FAT32 is supported)
-
 If this SD card error is detected only the following indications are available. No web interface will be accessible.
 
 * Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
@@ -94,7 +80,6 @@ If this SD card error is detected only the following indications are available. 
 
 
 ###### SD card not detected / not supported
-
 If this SD card error is detected the following indication are available. No web interface will be accessible.
 
 * Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
@@ -102,7 +87,6 @@ If this SD card error is detected the following indication are available. No web
 
 
 ###### SD card detected but files are not readable / writeable
-
 The SD card is detected, but the files cannot be read or written. A basic SD card check for SD reading / writing is performed on every boot. This not 100% guarantee that SD card is working but it's at least a indication.
 
 If this SD card error is detected the following indications are available:
@@ -112,16 +96,12 @@ If this SD card error is detected the following indications are available:
 * Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
 * Error messages on serial log (UART interface)
 
-
-
 ##### RAM related issues
-
 In order to run the firmware, 4 MB of external RAM (PSRAM) are mandatory. Usually, the ESP32CAM is equipped with 8MB (64Mbit) PSRAM chip, whereof only 4MB can be used effectively (direct addressable).
 Unfortunately, there is hardware around, where no PSRAM or only 2MB of PSRAM is present - **even if you have bought a device where a 8MB PSRAM was promoted**. These modules are not suiable for this firmware because the external RAM is needed to handle the CNN files and camera images. There is nothing to do, than to buy a new ESP32CAM with **really** 64MBit of PSRAM. 
 
 
 ###### Too less external RAM (PSRAM)
-
 During the boot process the available RAM is going to be checked.
 
 If there is too less RAM (PSRAM or total HEAP < 4MB) detected, the follwoing indications are available:
@@ -131,13 +111,8 @@ If there is too less RAM (PSRAM or total HEAP < 4MB) detected, the follwoing ind
 * Red board LED is blinking. The blinking codes are described here: [Status LED Blinkcodes](https://jomjol.github.io/AI-on-the-edge-device-docs/StatusLED-BlinkCodes/)
 * Error messages on serial log (UART interface)
 
-
-
 ##### Configuration related issues
-
-
 ###### Folders and files missing
-
 Most of the relevant folders and files are checked during boot. The complete list can be found here: [Error codes on reduced webinterface](https://jomjol.github.io/AI-on-the-edge-device-docs/Error-Codes/)
 
 If a relevant folder or file is missing the following indications are available:
@@ -149,7 +124,6 @@ If a relevant folder or file is missing the following indications are available:
 
 
 ###### CNN model file not available / corrupt
-
 Additionally for operation CNN model files on SD card are mandatory, one CNN model file for analog counter and for for digit numbers each.
 
 * `/config/XXXXX.tflite` (XXXXX is the file name, that is written in the `config.ini`)
