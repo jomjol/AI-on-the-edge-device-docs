@@ -46,7 +46,7 @@ Topic | Description
 `watermeter/main/changeabsolut` | Difference between the previous and actual read value.
 `watermeter/main/rate_per_digitization_round` | How much flow was consumed in one minute.
 `watermeter/main/timestamp` | Timestamp of the last valid reading (equal to timestamp of previous value)
-`watermeter/main/Status` | Informs about the last performed step of the watermeter (i.e. `Flow finished`).
+`watermeter/main/status` | Informs about the last performed step of the watermeter (i.e. `Flow finished`).
 `watermeter/main/json` | This is a JSON formatted object containing the following values: `value`, `raw`, `pre`, `error`, `rate`, `timestamp`.
 
 ### GPIO
