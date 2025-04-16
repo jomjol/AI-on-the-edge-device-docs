@@ -14,7 +14,7 @@ There are several reasons, that a check might be necessary:
 
 ##### PreValue
 
-The last correct read value. PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
+The last correct read value. PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check negative rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
 
 ##### Digits
 

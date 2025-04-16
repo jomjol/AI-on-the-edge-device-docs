@@ -76,7 +76,7 @@ You can change the following settings to reduce incorrect readings (but potentia
   So please be a bit patient with your meter :-)
 
 ## Pre-Value
-PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check nagtive rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
+PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check negative rates, high rates (MaxRateValue / MaxRateType) and CheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
 
 If you use post processes, enable the pre-value. The pre-value must be set at first time. Set it to the current raw value. 
 
