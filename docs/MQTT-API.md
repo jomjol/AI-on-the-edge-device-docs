@@ -76,11 +76,11 @@ Set the last valid value (previous value) to given value or the actual RAW value
 
 __Payload:__
 
-- Set to given value (value >= 0): `{"numbersname": "<NUMBERSNAME>", "value": <VALUE>}`
+- Set to given value (value >= 0): `{"numbersname": "<NUMBER>", "value": <VALUE>}`
     * `"numbersname":`Provide name of number sequence, e.g. `"main"`  
     * `"value":` provide the value to be set, eg. `12345.67890`
     
-- Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "<NUMBERSNAME>", "value": -1}`
+- Set to actual RAW value (value < 0, a valid RAW value is mandatory): `{"numbersname": "<NUMBER>", "value": -1}`
     * `"numbersname":` Provide name of number sequence, e.g. `"main"`  
     * `"value":` Provide any negative number
 
