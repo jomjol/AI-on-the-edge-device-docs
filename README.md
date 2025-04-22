@@ -23,8 +23,10 @@ This happens automatically daily in the Github action.
 if you run it manually, make sure to clone the main repo first, eg. using:
 ```bash
 cd param-docs
+rm -rf AI-on-the-edge-device
 git clone https://github.com/jomjol/AI-on-the-edge-device.git
 python concat-parameter-pages.py
+cd ..
 ```
 
 ### Template Generator

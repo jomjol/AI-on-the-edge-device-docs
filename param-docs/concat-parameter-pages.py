@@ -8,7 +8,7 @@ import shutil
 import glob
 
 sectionsLogicallyOrdered = ["TakeImage", "Alignment", "Digits", "Analog", "PostProcessing",
-                           "MQTT", "InfluxDB", "InfluxDBv2", "GPIO", "AutoTimer", "DataLogging", "Debug", "System"]
+                           "MQTT", "InfluxDB", "InfluxDBv2", "Webhook", "GPIO", "AutoTimer", "DataLogging", "Debug", "System"]
 
 parameterDocsFolder = "AI-on-the-edge-device/param-docs/parameter-pages/"
 docsMainFolder = "../docs"
@@ -47,8 +47,8 @@ for folder in foldersRaw:
         continue
 
     if not folder in sectionsLogicallyOrdered:
-        print("Warning: The section %r seems to be new, appending it to the end of the logically ordered folder list!" % folder)
-        print("         Please update `sectionsLogicallyOrdered`!")
+        print("Warning: The section %r seems to be new, appending it to the end of the logically ordered parameter sections list!" % folder)
+        print("         Please update `sectionsLogicallyOrdered` in 'concat-parameter-pages.py'!")
         sectionsLogicallyOrdered.append(folder)
 
 
