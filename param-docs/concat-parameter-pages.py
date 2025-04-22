@@ -22,6 +22,7 @@ def appendParameterFile(section, file, parameterName):
 
         sectionText = "Section: " + "[" + section + "](#section-" + section.lower() +")"
         parameterDoc = parameterDoc.replace("Default Value:", sectionText + "\n\n" + "Default Value:") # Add section to each parameter
+        parameterDoc = parameterDoc.replace("[here](../datasheets", "[here](datasheets")  # move all datasheet links a level higher
 
     # Add parameter doc to overview page
     with open(docsMainFolder + "/" + parameterOverviewFile, 'a') as overviewFileHandle:
@@ -86,14 +87,15 @@ for section in sectionsLogicallyOrdered:
         overviewFileHandle.write("\n## Section `%s`\n\n" % section)
 
     files = sorted(filter(os.path.isfile, glob.glob(parameterDocsFolder + "/" + section + '/*')))
-    for file in files:
-        if not ".md" in file: # Skip non-markdown files
+    for filename in files:
+        if not ".md" in filename: # Skip non-markdown files
             continue
 
+        # Remove "<NUMBER>" from filename 
         # print("  %s" % file)
-        parameter = file.split("/")[-1].replace(".md", "")
+        parameter = filename.split("/")[-1].replace(".md", "")
         parameter = parameter.replace("<", "").replace(">", "")
-        appendParameterFile(section, file, parameter)
+        appendParameterFile(section, filename, parameter)
 
 
 """
