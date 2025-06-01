@@ -200,7 +200,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wiring">1.1.5 
+<a class="md-nav__link" href="#focusing-the-lense">1.1.5 
+<span class="md-ellipsis">
+      Focusing the lense
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wiring">1.1.6 
 <span class="md-ellipsis">
       Wiring
     </span>
@@ -833,7 +840,14 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#wiring">1.1.5 
+<a class="md-nav__link" href="#focusing-the-lense">1.1.5 
+<span class="md-ellipsis">
+      Focusing the lense
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wiring">1.1.6 
 <span class="md-ellipsis">
       Wiring
     </span>
@@ -968,12 +982,17 @@ How ever since the hardware is cheap and coming from China, you unluckily could 
 <p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
 <p><img alt="" src="../img/main.jpg" style="width:200px">
 <img alt="" src="../img/size.png" style="width:200px"/></img></p>
+<h3 id="focusing-the-lense"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Focusing the lense</h3>
+<p>The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm.
+Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
+<p>the objective is very fragile. Be carefully as the lense can quickly break off. Make sure not to put too much force onto the flex cable!</p>
 </div>
+<p>There are some useful 3D-printable tools available, see https://www.printables.com/model/877739-esp32-cam-ov2640-focus-adjustment-wrench/comments or https://www.etsy.com/ch/listing/4313477325/esp32-cam-ov2640-fokus-einstellring?ref=shop_home_active_1&amp;sts=1&amp;logging_key=e7cf73461a7a51ee0f847ee08de2cfb730dce93e%3A4313477325 if you don't have a 3D printer.
+Also check the discussions for some hints, eg. https://github.com/jomjol/AI-on-the-edge-device/discussions/3777</p>
 <p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px"/></p>
-<h3 id="wiring"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Wiring</h3>
+<h3 id="wiring"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> Wiring</h3>
 <p>Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.</p>
 <p>A example for wiring can be found here:</p>
 <p><img alt="" src="../img/wiring.png"/></p>
