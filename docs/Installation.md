@@ -39,7 +39,7 @@ Therefore the sealing glue on the objective ring needs to be removed with a scal
 !!! Warning
     the objective is very fragile. Be carefully as the lense can quickly break off. Make sure not to put too much force onto the flex cable!
 
-There are some useful 3D-printable tools available, see https://www.printables.com/model/877739-esp32-cam-ov2640-focus-adjustment-wrench/comments or https://www.etsy.com/ch/listing/4313477325/esp32-cam-ov2640-fokus-einstellring?ref=shop_home_active_1&sts=1&logging_key=e7cf73461a7a51ee0f847ee08de2cfb730dce93e%3A4313477325 if you don't have a 3D printer.
+There are some useful 3D-printable tools available, see [esp32-cam OV2640 focus adjustment wrench](https://www.printables.com/model/877739-esp32-cam-ov2640-focus-adjustment-wrench/comments) or [ETSY shop](https://www.etsy.com/ch/listing/4313477325/esp32-cam-ov2640-fokus-einstellring) if you don't have a 3D printer.
 Also check the discussions for some hints, eg. https://github.com/jomjol/AI-on-the-edge-device/discussions/3777
 
 ![](img/focus_adjustment.jpg){: style="width:200px"}
