@@ -32,8 +32,15 @@ A small 3D-printable example for a very small case can be found in Thingiverse h
 ![](img/main.jpg){: style="width:200px"}
 ![](img/size.png){: style="width:200px"}
 
+### Focusing the lense
+The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm.
+Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
+
 !!! Warning
-    The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm. Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.
+    the objective is very fragile. Be carefully as the lense can quickly break off. Make sure not to put too much force onto the flex cable!
+
+There are some useful 3D-printable tools available, see https://www.printables.com/model/877739-esp32-cam-ov2640-focus-adjustment-wrench/comments or https://www.etsy.com/ch/listing/4313477325/esp32-cam-ov2640-fokus-einstellring?ref=shop_home_active_1&sts=1&logging_key=e7cf73461a7a51ee0f847ee08de2cfb730dce93e%3A4313477325 if you don't have a 3D printer.
+Also check the discussions for some hints, eg. https://github.com/jomjol/AI-on-the-edge-device/discussions/3777
 
 ![](img/focus_adjustment.jpg){: style="width:200px"}
 
