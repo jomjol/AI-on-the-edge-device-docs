@@ -3764,15 +3764,16 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 <ul>
 <li><code>other</code></li>
 <li><code>water_m3</code> (uses <code>m^3/h</code> as rate)</li>
-<li><code>water_l</code>  (uses <code>l/h</code> as rate, not officially supported by Homeassistant!)</li>
-<li><code>water_gal</code>  (uses <code>gal/h</code> as rate, not officially supported by Homeassistant!)</li>
+<li><code>water_l</code>  (uses <code>l/h</code> as rate) <strong>⚠️ Not supported by Homeassistant 2025.7 and later! ⚠️</strong></li>
+<li><code>water_gal</code>  (uses <code>gal/h</code> as rate) <strong>⚠️ Not supported by Homeassistant 2025.7 and later! ⚠️</strong></li>
+<li><code>water_gal_min</code>  (uses <code>gal/min</code> as rate)</li>
 <li><code>water_ft3</code> (uses <code>ft^3/min</code> as rate)</li>
 <li><code>gas_m3</code> (uses <code>m^3/h</code> as rate)</li>
 <li><code>gas_ft3</code> (uses <code>ft^3/min</code> as rate)</li>
 <li><code>energy_wh</code> (uses <code>W</code> as rate)</li>
 <li><code>energy_kwh</code> (uses <code>KW</code> as rate)</li>
 <li><code>energy_mwh</code> (uses <code>MW</code> as rate)</li>
-<li><code>energy_gj</code>  (uses <code>GJ/h</code> as rate, not officially supported by Homeassistant!)</li>
+<li><code>energy_gj</code>  (uses <code>GJ/h</code> as rate) <strong>⚠️ Not supported by Homeassistant 2025.7 and later! ⚠️</strong></li>
 <li><code>temperature_c</code> (uses <code>+C/min</code> as rate)</li>
 <li><code>temperature_f</code> (uses <code>°F/min</code> as rate)</li>
 <li><code>temperature_k</code> (uses <code>K/min</code> as rate)</li>
@@ -3780,6 +3781,10 @@ Alternatively you can set the parameter <code>DecimalShift</code> to <code>3</co
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Not all options are supported by Homeassistant, see <code>SensorDeviceClass.VOLUME_FLOW_RATE</code> in <a href="https://developers.home-assistant.io/docs/core/entity/sensor/#available-device-classes">https://developers.home-assistant.io/docs/core/entity/sensor/#available-device-classes</a>!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since Homeassistant 2025.7, the unsupported options will no longer work, see change in Homeassistant: <a href="https://github.com/home-assistant/core/pull/146722">Ensure MQTT sensor has a valid native unit of measurement</a>.</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="MQTT-NUMBER.DomoticzIDX"></a></p>
