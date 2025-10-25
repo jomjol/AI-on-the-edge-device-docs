@@ -1,4 +1,5 @@
 # ROIs (Regions of Interest)
+
 !!! Notes
     You are using a neural network approach which is trained to fit as many different type of meters as possible.
     The accuracy will never be 100%. It is normal to see a missing reading once in a while. 
@@ -14,22 +15,22 @@ The most critical components for an accurate detection are:
    
     Have a look on the [Digit Counters](https://jomjol.github.io/neural-network-digital-counter-readout/) resp. [Analog Needles](https://jomjol.github.io/neural-network-analog-needle-readout) to check if your types are contained. If your number types are **not** contained, you should take the effort to record them so we can add them to the training data. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
 
-
 ## Precondition
+
 Please make sure to have:
 
 1. Setup your camera properly and taken a good [Reference Image](Reference-Image.md).
 1. Selected good [Alignment References](Alignment.md).
 
-
 ## Define the ROIs
+
 For each digit or analog pointer, a ROI must be defined.
 
 You can even have multiple independent **Numbers** (eg. electerical meters mostly have 2 numbers for the high and low tariff). 
 
 Depending if you have only one of those types, you can enable/disable `(1)` it on the top left corner: 
 
-![](img/initial_setup_3_rois.jpg){: style="width:500px"}
+![Initial Setup ROI](img/initial_setup_3_rois.jpg){: style="width:500px"}
 
 You can switch between the individual ROIs with the Drop down box `(2)`.
 If you need additional ROIs or delete them you can do this with the control at `(3)`.
@@ -51,20 +52,21 @@ Same for the **analog counters**, the sizes should be identical and the `x` and 
 !!! Note
     Don't forget to save the settings with "Save" and do not reboot at this stage.
 
-
 ### Analog Counters
+
 For analog counters the ROI setting is rather straight forward as the meter is usually quadratic with a clear center.
 The circle should exactly fit to the outer size of the meter and the cross should be in the middle of the pointer.
 
 Here is an example with the details for the ROI `ana1`: 
 
-![](img/initial_setup_3_analog_example.jpg){: style="width:500px"}
-
+![Initial Setup Analog Example](img/initial_setup_3_analog_example.jpg){: style="width:500px"}
 
 ### Digits
+
 For the Digit Meters it is a little bit more complicated, as there are different options of digit models which can be choosen.
 
 #### Correct Size for ROI
+
 First of all, choose the right size of the ROI.
 The configuration of ROIs differs a bit on the selected model (see below). 
 
@@ -73,7 +75,6 @@ If you are in the initial setup, the model will be selectable in the next step. 
 In [Model Selection](Choosing-the-Model.md) you find the differences between the different available models. Pick the one you think fits best your purpose. If you don't get to good result, try another model.
 
 Here we only show the different configuration of the ROIs.
-
 
 1. Digit Meters with only recognized full digits (`0, 1, 2, 3, ... 9`)
 
@@ -92,6 +93,7 @@ Here we only show the different configuration of the ROIs.
     **Disadvantage:** only limited types of meter types are trained due to the high effort for the training data.
 
 #### How to setup the digit ROIs perfectly
+
 Details and the corresponding "perfect" setting is explained below.
 For a first run you can choose the following general settings: 
 
@@ -100,12 +102,12 @@ For a first run you can choose the following general settings:
 
 | |Example 1|Example 2|
 |---|---|---|
-| :heavy_check_mark: **Okay** |   ![](img/cont_img_ok.png){: style="width:80px"}  |   ![](img/wb_okay.jpg){: style="width:80px"}     |
-| :x: **Not** Okay            | ![](img/bw_not_okay_small.jpg){: style="width:80px"} |  ![](img/wb_not_okay_small.jpg){: style="width:80px"} |
-| :x: **Not** Okay            | ![](img/bw_not_okay_big.jpg){: style="width:80px"}|  ![](img/wb_not_okay_big.jpg){: style="width:80px"}|
-
+| :heavy_check_mark: **Okay** |   ![Image Okay](img/cont_img_ok.png){: style="width:80px"}  |   ![WB Okay](img/wb_okay.jpg){: style="width:80px"}     |
+| :x: **Not** Okay            | ![BW Not Okay Small](img/bw_not_okay_small.jpg){: style="width:80px"} |  ![WB Not Okay Small](img/wb_not_okay_small.jpg){: style="width:80px"} |
+| :x: **Not** Okay            | ![BW Not Okay Big](img/bw_not_okay_big.jpg){: style="width:80px"}|  ![WB Not Okay Big](img/wb_not_okay_big.jpg){: style="width:80px"}|
 
 ##### Setup using `dig-class11` models
+
 `dig-class11` - Models recognize the **complete digit only**. Here it is not relevant if the ROI fits the Border of the digit window.
 
 For this model, there should be a border of `20%` of the image size around the number itself. This border is shown in the ROI setup image by the inner thinner rectangle. This rectangle should fit perfectly around the number when the number has not started to rotate to the next position: 
@@ -114,13 +116,12 @@ For this model, there should be a border of `20%` of the image size around the n
 
 |              | Example 1                         | Example 2                         |
 | ------------ | --------------------------------- | --------------------------------- |
-| :heavy_check_mark: **Okay**     | ![](img/bw_okay.jpg)           | ![](img/wb_okay.jpg)           |
-| :x: **Not** Okay | ![](img/bw_not_okay_small.jpg) | ![](img/wb_not_okay_small.jpg) |
-| :x: **Not** Okay | ![](img/bw_not_okay_big.jpg)   | ![](img/wb_not_okay_big.jpg)   |
+| :heavy_check_mark: **Okay**     | ![BW Okay](img/bw_okay.jpg)           | ![WB Okay](img/wb_okay.jpg)           |
+| :x: **Not** Okay | ![BW Not Okay Small](img/bw_not_okay_small.jpg) | ![WB Not Okay Small](img/wb_not_okay_small.jpg) |
+| :x: **Not** Okay | ![BW Not Okay Big](img/bw_not_okay_big.jpg)   | ![WB Not Okay Big](img/wb_not_okay_big.jpg)   |
 
 
 If you have perfect alignment and still are not getting satisfying results, most probably your numbers are not part of the training data yet. See [Collect images to improve the models](Learn-models-with-your-own-images.md) on how to collect new training data.
-
 
 ##### Setup using `dig-class100` or `dig-cont` Models
 
@@ -144,6 +145,7 @@ Here an example:
 | :x: **Not** Okay | <img width="125" alt="dig-class100_NOK" src="https://user-images.githubusercontent.com/412645/199028469-3a69ed31-e5c9-4038-a8dc-6d44a42437ed.png"> | 
 
 ### Saving
+
 Once you are done,  push `Save` to persist your setup.
 
 A reboot is required to apply the changed configuration!
