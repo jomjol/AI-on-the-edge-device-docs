@@ -53,8 +53,13 @@ See https://python-markdown.github.io/extensions/admonition/
 ## Local Test
 To test it locally:
 1. Clone this repo
-2. Run `make install` that creates a virtual environment and installs all the dependencies
-3. Run `make serve`. This will locally generate the documentation.  You can access it under http://127.0.0.1:8000/AI-on-the-edge-device-docs/  
-Any change to the files will automatically be applied.
-4. Add your edits.
-5. Run `make lint-md` and correct any issues before opening a PR.
+1. Install the required tools (See also [.github/workflows/build-docs.yaml](.github/workflows/build-docs.yaml)):
+    ```
+    pip install --upgrade pip
+    pip install mkdocs mkdocs-gen-files mkdocs-awesome-pages-plugin mkdocs-material pymdown-extensions mkdocs-enumerate-headings-plugin
+    ```
+1. In the main folder of the repo, call `mkdocs serve` (and keep it running).
+  This will locally generate the documentation.
+  You can access it under http://127.0.0.1:8000/AI-on-the-edge-device-docs/
+
+    Any change to the files will automatically be applied.

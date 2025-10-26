@@ -2,7 +2,7 @@
 
 After setting up the device (firmware, SD card, WLAN) the device will connect to the wifi access point and start in an initial setup configuration:
 
-![Setup Initial Welcome](img/setup_initial_welcome.png){: style="width:500px"}
+![](img/setup_initial_welcome.png){: style="width:500px"}
 
 With the buttons on the top you can navigate through 5 steps which guide you through the necessary setup:
 
@@ -18,16 +18,15 @@ All settings can be accessed later in the normal operation mode.
     Don't forget to save each step with "Save", and do not reboot at this stage.
 
 ## Finish the Setup and change to the Normal Operation mode
-
 With the last step `(1)` you leave the **Setup Mode** and reboot to the **Normal Operation mode**.
 
-![Initial Setup Finish Boot](img/initial_setup_6_finish_reboot.jpg){: style="width:500px"}
+![](img/initial_setup_6_finish_reboot.jpg){: style="width:500px"}
+
 
 ## Access to the Setup Pages in the Normal Operation mode
-
 You always can access all the settings during the normal operation mode via the `Settings` menu:
 
-![Initial Setup Normal Mode](img/initial_setup_7_access_normal_mode.jpg){: style="width:500px"}
+![](img/initial_setup_7_access_normal_mode.jpg){: style="width:500px"}
 
 - `(1)` Access to the [General Settings](Configuration.md).
 - `(2)` Update of the [Reference Image](Reference-Image.md).

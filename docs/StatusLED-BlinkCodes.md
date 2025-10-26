@@ -37,6 +37,8 @@ The error code source definition can be found in the [LED status documentation](
 | OTA_OR_AP     | 8                 | Soft AP started (for remote config)   | 2                | X
 | FLASHLIGHT    | N/A               | LED on when flashlight is on          | solid, <br> no blink
 
+
+
 # Error / Warning
 
 ## Source WLAN_CONN: WLAN disconnected
@@ -46,11 +48,9 @@ The error code source definition can be found in the [LED status documentation](
     --> General info: [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 ### `WLAN disconnected (No Access Point)`
-
 WLAN connection is interrupted due to no access point in range.
 
 ### `WLAN Disconnected (Authentication failure)`
-
 WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config in `wlan.ini` (username, password)
 
 ### `WLAN Disconnected (Timeout)`
@@ -68,11 +68,9 @@ WLAN connection is interrupted due to further reasons. Disconnect reason is prin
     All critical errors, regular boot not possible
 
 ### `wlan.ini empty or not readable`
-
 The `wlan.ini` file is present but content is either not readable or no content present. Please check for further errors in terms of SD card readability or content of `wlan.ini` which is located in /sdcard (most top folder od SD card) 
 
 ### `SSID or password empty`
-
 The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters in `wlan.ini` and try again.
 
 ### `WIFI init error (details console)`
@@ -102,13 +100,11 @@ A general SD card initialization error occurred. Check the serial console output
    All critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
 
 ### `File creation / write error`    
-
 A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check logs with log viewer in reduced web interface, serial console output or try another card.
 
 Recommendation: Format or try another card
 
 ### `File read / CRC verfication error`
-
 A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
 Recommendation: Format or try another card
@@ -126,6 +122,8 @@ One or more mandatory folder / file are not found on SD card.
 Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
 Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip
+
+
 
 ## Source `CAM_INIT`: Camera initialization
 
@@ -156,12 +154,12 @@ Most likely external RAM not accessible or defective.
 Normal operation is not possible without having external RAM.
 
 ### `External SPI RAM < 4MB`
-
 External RAM (SPI RAM) initialization successful, but external RAM size is too small. A size of >= 4MB is necessary to run this firmware. 
 
 ### `Total heap < 4MB`
-
 Total available system memory (heap) is too small. A size of >= 4MB is necessary to run this firmware. 
+
+
 
 ## Source `TIME_CHECK`: External RAM (SPI RAM) initialization
 
