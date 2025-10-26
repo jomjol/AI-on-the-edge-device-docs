@@ -1,6 +1,6 @@
 This page lists possible blink codes of the red LED located on the ESP32-CAM board, their meaning and possible solutions.
 
-The error code source definition can be found [here](https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/statusled.h).
+The error code source definition can be found in the [LED status documentation](https://github.com/jomjol/AI-on-the-edge-device/blob/main/code/components/jomjol_helper/statusled.h).
 
 # General design approach:
 
@@ -9,7 +9,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
   * 250ms blink code to identify error / status code
   * 1,5s defined LED off to signal repetition
   * Repetition blink code: infinite for critical errors and status indication or 2x for warning indication
-  * e.g. 3x blinks | 500ms LED off | 2x blinks --> error: SD card not found
+  * For example 3x blinks | 500ms LED off | 2x blinks --> error: SD card not found
 
 | **source**    | source <br> blink count| error / warning / status         | status <br> blink count| repeat <br> infinite |
 | ------------- | ----------------- |---------------------------------------| ---------------- | -----------------|
@@ -20,7 +20,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 | WLAN_INIT     | 2                 | `wlan.ini` empty or not readable        | 1                | X
 | WLAN_INIT     | 2                 | SSID or password empty                | 2                | X
 | WLAN_INIT     | 2                 | WIFI init error (details console)     | 3                | X
-| SDCARD_INIT   | 3                 | SD card filesystem mount failed       | 1                | X
+| SDCARD_INIT   | 3                 | SD card file system mount failed       | 1                | X
 | SDCARD_INIT   | 3                 | SD card not found (0x107)             | 2                | X
 | SDCARD_INIT   | 3                 | SD card init failed (details console) | 3                | X
 | SDCARD_CHECK  | 4                 | Basic check: file creation/write error| 1                | X
@@ -37,7 +37,7 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 | OTA_OR_AP     | 8                 | Soft AP started (for remote config)   | 2                | X
 | FLASHLIGHT    | N/A               | LED on when flashlight is on          | solid, <br> no blink
 
-# ERROR / WARNING
+# Error / Warning
 
 ## Source WLAN_CONN: WLAN disconnected
 
@@ -55,13 +55,14 @@ WLAN connection is interrupted due to an authentication failure. If error repeat
 
 ### `WLAN Disconnected (Timeout)`
 
-WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.
+WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. 
+Most probably access point is not available anymore or connection is not reliable.
 
 ### `WLAN Disconnected (Further reasons)`
 
-WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
+WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warning message. Check the serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). See this page to have additional info in terms of WLAN disconnect reasons --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
-## Source WLAN_INIT: WLAN initialization
+## Source `WLAN_INIT`: WLAN initialization
 
 !!! NOTE 
     All critical errors, regular boot not possible
@@ -76,26 +77,26 @@ The mandatory parameters SSID (name of WIFI network) and / or password is empty.
 
 ### `WIFI init error (details console)`
 
-A general WIFI initialization error occured. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) 
+A general WIFI initialization error occurred. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) 
 
-## Source SDCARD_INIT: SD card initialization
+## Source `SDCARD_INIT`: SD card initialization
 
 !!! NOTE
     All critical errors, regular boot not possible
 
-### `SD card filesystem mount failed`
+### `SD card file system mount failed`
 
-Failed to mount FAT filesystem on SD card. Check SD card filesystem (only FAT supported) or try another card. Possible further infos: Please check serial console output.
+Failed to mount FAT file system on SD card. Check SD card file system (only FAT supported) or try another card. Possible further info: Please check serial console output.
 
 ### `SD card not found (Error code 0x107)`
 
-SD card init failed. Check if SD card is properly inserted into SD card slot or try another card. Possible further infos: Please check serial console output.
+SD card init failed. Check if SD card is properly inserted into SD card slot or try another card. Possible further info: Please check serial console output.
 
 ### `SD card init failed (details console)`
 
-A general SD card initialization error occured. Please check serial console output.
+A general SD card initialization error occurred. Check the serial console output.
 
-## Source SDCARD_CHECK: SD card basic check
+## Source `SDCARD_CHECK`: SD card basic check
 
 !!! NOTE
    All critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
@@ -114,32 +115,34 @@ Recommendation: Format or try another card
 
 ### `File delete error`
 
-A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
+A basic check of SD card is performed at boot. Failed to delete the test file. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
 Recommendation: Format or try another card
 
 ### `Folder / File presence failed`
 
-A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
+A basic check of SD card is performed at boot. 
+One or more mandatory folder / file are not found on SD card. 
+Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
 Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip
 
-## Source CAM_INIT: Camera initialization
+## Source `CAM_INIT`: Camera initialization
 
 ### `Camera init failed (details console)`
 
 !!! NOTE
     Critical error, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
     
-A general camera initialization error occured. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
+A general camera initialization error occurred. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
 Recommendation: Check for proper electrical connection, whether camera model is supported and whether power supply is sufficient.
 
 ### `Camera framebuffer check failed`
 
-The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.
+The framebuffer of the camera was not readable. The firmware tries to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.
 
-Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.
+Recommendation: Check for proper electrical connection, whether camera model is supported and whether power supply is sufficient.
 
 ## Source PSRAM_INIT: External RAM (SPI RAM) initialization
 
@@ -148,7 +151,9 @@ Recommendation: Check for proper electrical commenection, wether camera model is
     
 ### `SPI RAM init failed: Not found/defective` 
 
-External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.
+External RAM (SPI RAM) initialization failed. 
+Most likely external RAM not accessible or defective. 
+Normal operation is not possible without having external RAM.
 
 ### `External SPI RAM < 4MB`
 
@@ -158,32 +163,38 @@ External RAM (SPI RAM) initialization successful, but external RAM size is too s
 
 Total available system memory (heap) is too small. A size of >= 4MB is necessary to run this firmware. 
 
-## Source TIME_CHECK: External RAM (SPI RAM) initialization
+## Source `TIME_CHECK`: External RAM (SPI RAM) initialization
 
 ### `Missing time sync (check every round)`
 
 !!! NOTE
     Only warning indication, blink code repetition: 2x
 
-If system is configured to be synced with a NTP server the sync status is checked after every round (in state: "Flow finished". An warming message is also printed to log). If the time is not synced after serveral rounds, please check for proper configuration.
+If the system is configured to be synced with a NTP server, the sync status is checked after every round (in state: "Flow finished" a warning message is also printed to log). 
+If the time is not synced after several rounds, check for proper configuration.
 
-# STATUS
+# `STATUS`
 
 !!! NOTE
     All only status indication
 
-## Source OTA_OR_AP: OTA Update / Access point mode
+## Source `OTA_OR_AP`: OTA Update / Access point mode
 
 ### `OTA process ongoing`
 
-An OTA is performed right now. Please wait until OTA is completed. System is rebooting automatically. If system is not coming up, please check serial console output.
+An OTA is performed. 
+Wait until the OTA is completed. 
+The system is rebooted automatically. 
+If the system is not coming up, check the serial console output.
 
 ### `Soft AP started (for remote config)`
 
-The built-in access point functionality is started to perform initial remote remote setup. Further description: [Installtion --> `Section Remote Setup using the built-in Access Point`](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/)
+The built-in access point functionality is started to perform initial remote remote setup. Further description: [Installation --> `Section Remote Setup using the built-in Access Point`](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/)
 
-## Source FLASHLIGHT: Flashlight
+## Source `FLASHLIGHT`: Flashlight
 
 ### `LED on when flashlight is on`
 
-The LED is solid on as long the flashlight is on. This feature has lower priority than the other LED codes. Whenever another code occurs this feature will be overrided.
+The LED remains lit as long as the flashlight is on. 
+This feature has lower priority than the other LED codes. 
+Whenever another code occurs this feature is overridden.
