@@ -1,0 +1,402 @@
+# This file is used to lint headings that do not capitalize product and feature names correctly.
+extends: capitalization
+message: "'%s' should use sentence-style capitalization."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#headers"
+level: warning
+scope: heading
+match: $sentence
+exceptions:
+  - Access Control
+  - Access Insights
+  - Action Interface
+  - Action Catalog
+  - Active Metrics
+  - ACLs
+  - ActiveMQ XML Integration
+  - Agent
+  - Agentless
+  - Agents
+  - AI-Generated Synthetics
+  - Airflow
+  - Amazon
+  - Amazon Web Services
+  - APCu
+  - APIs
+  - APM
+  - APM Investigator
+  - Application Performance Monitoring
+  - APM & Continuous Profiler
+  - App Analytics
+  - App and API Protection
+  - App Builder
+  - App Service
+  - AppVeyor
+  - Application Security Management
+  - Application Vulnerability Management
+  - Archive Search
+  - Audit Trail
+  - AuthN
+  - Auto Test Retries
+  - Autodiscovery
+  - AWS Step Functions
+  - AWS Systems Manager
+  - Azure
+  - Azure App Service
+  - Azure App Service Plan
+  - Azure Blob Storage
+  - Azure Event Hub
+  - Backend Error Tracking
+  - Bits AI
+  - Bits AI Data Analyst
+  - Bits AI Dev Agent
+  - Bits AI Security Analyst
+  - Bits AI SRE
+  - Bits AI Voice Interface
+  - Bitbucket
+  - Bring Your Own Query
+  - BuildKite
+  - Browser Monitoring
+  - CakePHP
+  - Case Management
+  - Case Automation Rules
+  - Cassandra Nodetool
+  - Cassandra Nodetool Integration
+  - CD Visibility
+  - CentOS
+  - Change Explorer
+  - Change Tracking
+  - Chef
+  - CI Health
+  - CI Visibility
+  - CI/CD
+  - CircleCI
+  - Clipboard
+  - Cloud & API Outage Detection
+  - Cloud Cost Explorer
+  - Cloud Cost Management
+  - Cloud Cost Recommendations
+  - Cloud Network Monitoring
+  - Cloud Pub Sub
+  - Cloud Security
+  - Cloud Security Identity Risks
+  - Cloud Security Misconfigurations
+  - Cloud Security Posture Management
+  - Cloud Security Vulnerabilities
+  - Cloud SIEM
+  - Cloud SIEM Investigator
+  - Cloud Workload Security
+  - Cloudcraft
+  - CloudFormation
+  - CloudPrem
+  - CloudSQL
+  - CloudTrail
+  - CloudWatch
+  - Cluster Agent
+  - Code Coverage
+  - Computational Networks
+  - Container Image Trends
+  - Content Anomaly Detection
+  - Content Packs
+  - Continuous Profiler
+  - Continuous Testing
+  - Conversational Notebooks
+  - CoScreen
+  - Cost Monitors
+  - Custom Allocation Rules
+  - Custom Processor
+  - DaemonSet
+  - Data Access Control
+  - Data Collected
+  - Data Jobs Monitoring
+  - Data Observability
+  - Database Monitoring
+  - Data Streams Monitoring
+  - Datadog
+  - DatadogMetric
+  - Datadog Agent Manager
+  - Datadog Distribution of OpenTelemetry Collector
+  - DDOT Collector
+  - Datadog Distribution of OTel Collector
+  - Datadog for Government
+  - Datadog Forwarder
+  - Datadog Mobile App
+  - Datadog Operator
+  - Datadog Plugin
+  - Datadog Security
+  - Datadog Watchdog
+  - DatadogHook
+  - Datastore
+  - DDSQL Editor
+  - Debian
+  - Deployment Gates
+  - Detection Rules
+  - DNS Monitoring
+  - Docker
+  - Docker Compose
+  - Docker Swarm
+  - Dockerfile
+  - DogStatsD
+  - Domain Allowlist
+  - DORA Metrics
+  - Dynamic Instrumentation
+  - ECS Explorer
+  - Element Inspector
+  - Entity Model
+  - Envoy
+  - Fargate
+  - FastCGI
+  - FIPS Agent
+  - Firehose Nozzle
+  - FireLens
+  - Fleet Automation
+  - Flex Frozen
+  - Flex Logs
+  - Fluent Bit
+  - Fluentd
+  - FreeBSD
+  - FreeSWITCH
+  - Further Reading
+  - Further reading
+  - GeoIP
+  - Git
+  - GitHub
+  - GitHub Actions
+  - GitLab
+  - GitLab Runner Integration
+  - Google
+  - Google Analytics
+  - Google Cloud
+  - Google Cloud Functions
+  - GPU Monitoring
+  - GraphQL
+  - Gunicorn
+  - HAProxy
+  - HBase RegionServer Integration
+  - HDFS DataNode Integration
+  - HDFS NameNode Integration
+  - Helm
+  - Heroku
+  - HipChat
+  - Historical Jobs
+  - HostPort
+  - I
+  - IdP
+  - IDs
+  - iLert
+  - In-App WAF
+  - Incident Management
+  - Infrastructure as Code Security
+  - Infrastructure Monitoring
+  - Infrastructure Package Catalog
+  - Ingress Controller
+  - Internal Developer Portal
+  - Internet Information Services
+  - IoT
+  - IPs
+  - Java
+  - JavaScript
+  - JBoss
+  - Jenkins
+  - JFrog
+  - JFrog Artifactory
+  - Jira
+  - JMXFetch
+  - Journald
+  - Kafka
+  - Kafka Consumer Integration
+  - Kubernetes
+  - Kubernetes Autoscaling
+  - Kubernetes Engine
+  - Kubernetes Pod
+  - Kubernetes Service
+  - Lambda
+  - Lambda Layer
+  - Lambda@Edge
+  - LaunchDarkly
+  - Linux
+  - Live Analytics
+  - Live Debugger
+  - Live Messages
+  - Live Processes
+  - Live Search
+  - Live Tail
+  - LLM Experiments
+  - LLM Observability
+  - Log Explorer
+  - Log Management
+  - Log Pipeline Scanner
+  - Log Rehydration
+  - Log Workspaces
+  - Logging without Limits
+  - Logback
+  - macOS
+  - Marketplace
+  - MarkLogic
+  - MCP Server
+  - Meraki
+  - Mesos Slave Integration
+  - Metrics Explorer
+  - Metrics without Limits
+  - Mobile App Testing
+  - Mobile Real User Monitoring
+  - Mobile Session Replay
+  - MongoDB
+  - MsTest
+  - MITRE ATT&CK® Map
+  - MySQL
+  - Native Actions
+  - Natural Language Queries
+  - Network Address Translation
+  - Network Device Monitoring
+  - Network Path
+  - New Relic
+  - NGINX Plus
+  - NixOS
+  - Node
+  - Notebook
+  - Notebook List
+  - npm
+  - NXLog
+  - Observability Pipelines
+  - OkHttp
+  - On-Call
+  - OneLogin
+  - OPcache
+  - OpenLDAP
+  - OpenMetrics
+  - OpenShift
+  - OpenStack
+  - openSUSE
+  - OpenTelemetry
+  - OpenTracing
+  - OpenVPN
+  - OpsGenie
+  - OpsWorks
+  - Oracle Instant Client
+  - Orchestrion
+  - Pattern Inspector
+  - Phusion Passenger
+  - Pipeline Visibility
+  - Pivotal Platform
+  - Postgres
+  - PostgreSQL
+  - PowerDNS
+  - PR Gates
+  - Proactive App Recommendations
+  - Product Analytics
+  - Prometheus
+  - Prometheus Alertmanager
+  - Puppet
+  - Python
+  - Quality Gates
+  - RabbitMQ
+  - Rails
+  - Rancher
+  - RBAC
+  - Real User Monitoring
+  - Red Hat
+  - Redis
+  - Reference Tables
+  - ReplicaSet
+  - Resource Catalog
+  - Resource Changes
+  - Resource Policies
+  - Retention Analysis
+  - Risk Analysis
+  - RocketPants
+  - Roku Monitoring
+  - Root Cause Analysis
+  - Route53
+  - RSpec
+  - Ruby
+  - RUM
+  - RUM without Limits
+  - Runtime Code Analysis
+  - RumMonitor
+  - SafeNet
+  - SaltStack
+  - Scorecards
+  - Secret Scanning
+  - Security Graph
+  - Security Inbox
+  - Security Monitoring
+  - Security Signal
+  - Security Signals
+  - SELinux
+  - Self-Service Actions
+  - Sensitive Data Scanner
+  - Serverless APM
+  - Serverless Framework
+  - Serverless Monitoring
+  - Serverless Workload Monitoring
+  - Service Checks
+  - Service Discovery
+  - Service Management
+  - Session Replay
+  - Sheets
+  - Single Step Instrumentation
+  - Siri
+  - Slack
+  - SLIs
+  - SLOs
+  - socat
+  - Social Security
+  - Software Catalog
+  - Software Composition Analysis
+  - Software Delivery
+  - SQL Server
+  - SQLDelight
+  - SQLite
+  - Stackdriver
+  - StackPulse
+  - StackStorm
+  - Static Code Analysis
+  - StatsD
+  - Status Pages
+  - Storage Monitoring
+  - Sumo Logic
+  - Swift
+  - Synthetic Monitoring
+  - Syslog
+  - sysOID
+  - System Core
+  - System Swap
+  - Tag Analysis
+  - Tag Pipelines
+  - TeamCity
+  - Teams
+  - Terraform
+  - Test Impact Analysis
+  - Test Optimization
+  - Testing Visibility
+  - TokuMX
+  - Trace Explorer
+  - Trace Queries
+  - Tracing Without Limits
+  - Trello
+  - Twilio
+  - TypeScript
+  - Ubuntu
+  - Unified Service Tagging
+  - Unix
+  - Unix Domain Socket
+  - URLs
+  - User Datagram Protocol
+  - USM
+  - Universal Service Monitoring
+  - Varnish
+  - Vector
+  - Vertica
+  - VMware
+  - vSphere
+  - Watchdog
+  - Watchdog Explains
+  - Watchdog Insights
+  - Webhook
+  - Wildcard Widget
+  - WildFly
+  - Windows
+  - Workflow Automation
+  - Workload Protection
+  - Xray
+  - ZooKeeper

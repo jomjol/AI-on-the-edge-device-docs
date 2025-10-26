@@ -1,0 +1,12 @@
+# This file is used to lint autodiscovery instead of automatic discovery.
+extends: substitution
+message: "Use %s (the former, to refer to Datadog's mechanism for applying integration configurations to containers; the latter, to refer to automatic discovery IN GENERAL) instead of '%s'."
+link: 'https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#words-and-phrases'
+ignorecase: false
+level: warning
+action:
+  name: replace
+swap:
+  - (?:autodiscovery|auto-discovery|Auto-discovery): Autodiscovery|automatic detection
+  - (?:autodiscover|auto-discover|Auto-discover): Autodiscover|automatically detect
+  - (?:autodiscovered|auto-discovered|Auto-discovered): Autodiscovered|automatically detected

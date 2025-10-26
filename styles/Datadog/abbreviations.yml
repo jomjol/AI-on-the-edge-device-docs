@@ -1,0 +1,43 @@
+# This file is used to lint abbreviations that are common across all languages.
+extends: substitution
+message: "Use abbreviations for common industry terms: '%s' instead of '%s'."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#abbreviations"
+ignorecase: true
+level: warning
+nonword: true
+action:
+  name: replace
+swap:
+  # full term: abbreviation
+  '\bArtificial Intelligence\b': AI
+  '\bApplication Programming Interface\b': API
+  '\b(?:Continuous Integration\s*/\s*Continuous Delivery|Continuous Integration\s*/\s*Continuous Deployment|Continuous Integration\s+and\s+Continuous\s+Delivery/Deployment)\b': CI/CD
+  '\bCentral Processing Unit\b': CPU
+  '\bDistributed Denial of Service\b': DDoS
+  '\bDevelopment Operations\b': DevOps
+  '\bDomain Name System\b': DNS
+  '\bFile Transfer Protocol\b': FTP
+  '\bGraphics Processing Unit\b': GPU
+  '\bHypertext Transfer Protocol\b': HTTP
+  '\bHypertext Transfer Protocol Secure\b': HTTPS
+  '\bInput/Output\b': I/O
+  '\bInput/Output Operations Per Second\b': IOPS
+  '\bInternet of Things\b': IoT
+  '\bInternet Protocol\b': IP
+  '\bJavaScript Object Notation\b': JSON
+  '\bMachine Learning\b': ML
+  '\bPortable Document Format\b': PDF
+  '\bRandom Access Memory\b': RAM
+  '\bSecurity Assertion Markup Language\b': SAML
+  '\bSoftware Development Kit\b': SDK
+  '\bSecurity Information and Event Management\b': SIEM
+  '\bStructured Query Language\b': SQL
+  '\bSecure Shell\b': SSH
+  '\bSecure Sockets Layer\b': SSL
+  '\bTransport Layer Security\b': TLS
+  '\bUser Interface\b': UI
+  '\bUniform Resource Locator\b': URL
+  '\bVirtual Machine\b': VM
+  '\bVirtual Private Network\b': VPN
+  '\bExtensible Markup Language\b': XML
+

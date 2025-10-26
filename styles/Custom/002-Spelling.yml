@@ -1,0 +1,8 @@
+extends: spelling
+message: "Did you really mean '%s'?"
+dictionaries:
+  - en_US
+level: error
+ignore:
+  # Located at StylesPath/ignore.txt
+  - ignore.txt

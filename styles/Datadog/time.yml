@@ -1,0 +1,10 @@
+# This file is used to lint time formatting.
+extends: existence
+message: "Format times as 'HOUR:MINUTE a.m.' or HOUR:MINUTE p.m.' instead of '%s'."
+link: "https://datadoghq.atlassian.net/wiki/spaces/WRIT/pages/2732523547/Style+guide#%s"
+level: warning
+nonword: true
+tokens:
+  - (1[012]|[1-9]):[0-5][0-9] (A\.M\.|P\.M\.)
+  - (1[012]|[1-9]):[0-5][0-9] (?i)(a\.m[^\.]|p\.m[^\.])
+  - (1[012]|[1-9]):[0-5][0-9][ ]?(?i)(am|pm)
