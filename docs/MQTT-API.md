@@ -1,5 +1,4 @@
 # MQTT API
-
 The device is capable to register to a MQTT broker to publish data and subscribe to specific topics.
 
 !!! Note
@@ -52,21 +51,18 @@ Topic | Description
 `watermeter/main/json` | This is a JSON formatted object containing the following values: `value`, `raw`, `pre`, `error`, `rate`, `timestamp`.
 
 ### GPIO
-
 `MainTopic`/{GPIO topic}, e.g. `watermeter/GPIO/GPIO12`
 
 #### GPIO/GPIO{PinNumber}
-
 Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)
 
-## Subscribed topics
 
+## Subscribed topics
 `MainTopic`/{subscribed topic}, e.g. `watermeter/ctrl/flow_start`
 
 ### Control
 
 #### ctrl/flow_start
-
 Trigger a flow start by publishing to this topic.
 
 This will automatically reset the flow interval.
@@ -89,5 +85,4 @@ __Payload:__
     * `"value":` Provide any negative number
 
 #### GPIO/GPIO{PinNumber}
-
 Depending on device configuration (`Settings` --> `Configuration` --> section `GPIO`)

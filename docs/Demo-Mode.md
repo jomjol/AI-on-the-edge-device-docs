@@ -1,5 +1,4 @@
 # Demo Mode
-
 For Demo and Testing Purpose, the device can use pre-recorded raw images.
 
 You need to enable it in the configuration (`TakeImage > Demo`) and also provide the needed files on the SD card.
@@ -11,7 +10,6 @@ For the reference image and the alignment also the first image gets used.
 Once the last image got reached, it starts again with the first one.
 
 ## SD Card Structure
-
 ```
 demo/
 ├── 520.8983.jpg
@@ -25,14 +23,11 @@ demo/
 - The jpg files must be smaller than 30'000 bytes
 - The `files.txt` must contains a list of those files, eg:
 
-```
-  520.8983.jpg
-  520.9086.jpg
-  520.9351.jpg
-```
+        520.8983.jpg
+        520.9086.jpg
+        520.9351.jpg
 
 ## Collecting images of your device
-
 There are several ways to collect images from your device:
 
 1. Use the [Parameter `RawImagesLocation`](../Parameters/#parameter-rawimageslocation) to store them directly onto your SD card.
@@ -69,15 +64,12 @@ There are several ways to collect images from your device:
     ```
 
 ## Use prepared images
-
 Instead of recoding your own images, you can use one of the selections of prepared images below.
 
 ## How does it work
-
 The Demo Mode tries to interfere as less as possible with the normal behavior. Whenever a Cam framebuffer gets taken (`esp_camera_fb_get()`), it replaces the framebuffer with the image from the SD card.
 
 ## Example Data of a Water Meter
-
 You can use the following demo images if you want:
 
 ![530 00688](https://user-images.githubusercontent.com/1783586/211902363-1b8e4115-5f08-4e25-ace6-bb52e43b3741.jpg){:style="width:400px"}
@@ -85,23 +77,22 @@ You can use the following demo images if you want:
 It covers a meter range from `530.00688` to `531.85882`.
 
 ### Animation
-
 [Animation of the watermeter (77 MB!)](img/demo-watermeter-animated.png)
 
-### Selection of 84 images
 
+### Selection of 84 images
 [![grafik](https://user-images.githubusercontent.com/1783586/211915870-aa5c1342-c61c-4e1f-afe0-10e222f1499d.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915870-aa5c1342-c61c-4e1f-afe0-10e222f1499d.png)
 
 [Demo_Images_Watermeter_530.00688-532.08243_84_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395892/Demo_Images_Watermeter_530.00688-532.08243_84_images.zip)
 
-### Selection of 42 images
 
+### Selection of 42 images
 [![grafik](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915898-b499e109-7b63-4e21-ba5b-c0a370022f7a.png)
 
 [Demo_Images_Watermeter_530.00688-532.08243_42_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395893/Demo_Images_Watermeter_530.00688-532.08243_42_images.zip)
 
-### All images (843 images)
 
+### All images (843 images)
 [![grafik](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png){:style="width:400px"}](https://user-images.githubusercontent.com/1783586/211915731-9a2a3cd3-390b-4b1f-a064-5e7e443ab113.png)
 
 [Demo_Images_Watermeter_530.00688-532.08243_843_images.zip](https://github.com/jomjol/AI-on-the-edge-device-docs/files/10395941/Demo_Images_Watermeter_530.00688-532.08243_843_images.zip)

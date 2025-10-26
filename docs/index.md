@@ -8,7 +8,6 @@ Artificial intelligence based systems have been established in our everyday live
 Here this edge computing is brought into a practice-oriented example, where a AI network is implemented on a ESP32 device so: **AI on the edge**.
 
 ## Key features
-
 - Tensorflow Lite (TFlite) integration - including easy to use wrapper
 - Inline image processing (feature detection, alignment, ROI extraction)
 - **Small** and **cheap** device (3x4.5x2 cm³, < 10 EUR)
@@ -24,19 +23,22 @@ Here this edge computing is brought into a practice-oriented example, where a AI
 
 ![Idea](img/idea.jpg){: style="width:600px"}
 
+
 ### Hardware
 
-![Watermeter All](img/watermeter_all.jpg){: style="width:200px"}
-![Main](img/main.jpg){: style="width:200px"}
-![Size](img/size.png){: style="width:200px"}
+![](img/watermeter_all.jpg){: style="width:200px"}
+![](img/main.jpg){: style="width:200px"}
+![](img/size.png){: style="width:200px"}
+
 
 ### Web interface
 
-![Watermeter](img/watermeter.jpg){: style="width:600px"}
+![](img/watermeter.jpg){: style="width:600px"}
 
 ### Configuration Interface
 
-![Edit Reference](img/edit_reference.jpg){: style="width:600px"}
+![](img/edit_reference.jpg){: style="width:600px"}
+
 
 **Have fun in studying the new possibilities and ideas**
 
@@ -51,7 +53,6 @@ There are two types of CNN implemented, a classification network for reading the
 This project is an evolution of the [water-meter-system-complete](https://github.com/jomjol/water-meter-system-complete), which uses ESP32-CAM just for taking the image and a 1GB-Docker image to run the neural network's backbone. Here everything is integrated in an ESP32-CAM module with 8MB of RAM and a SD card as data storage.
 
 # Additional Tutorials
-
 A lot of people created useful Youtube videos which might help you getting started.
 Here a small selection:
 

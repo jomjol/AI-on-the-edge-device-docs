@@ -1,5 +1,4 @@
 # Release Procedure
-
 Follow these steps to create a release:
 
 1. Document all relevant changes in the [Changelog](https://github.com/jomjol/AI-on-the-edge-device/blob/main/Changelog.md) in the `main` branch.

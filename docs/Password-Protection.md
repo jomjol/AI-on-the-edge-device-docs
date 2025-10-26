@@ -1,10 +1,8 @@
 # Password Protection
-
 The Web Interface and the REST API can be protected by a password.
 
 To do so, you have to set the username and password in the `wlan.ini` file on the SD-Card.
 Uncomment (remove the leading `;`) and update the two lines with `http_username` and `http_password`:
-
 ```
 http_username = "myusername"
 http_password = "mypassword"

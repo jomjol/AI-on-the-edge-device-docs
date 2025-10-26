@@ -8,7 +8,7 @@
 Ok, then grab the latest `main` build from [Github Actions](https://github.com/jomjol/AI-on-the-edge-device/actions/workflows/build.yaml?query=branch%3Amain) Page and proceed as following:
 
 1. Pick the most top successful (green) build:
-  ![Actions](actions.png)  
+  ![](actions.png)  
 2. Scroll down and download the `AI-on-the-edge-device__update__*.zip`:
-  ![Update Artifact](update-artifact.png)  
+  ![](update-artifact.png)  
 5. Flash the zip file using the [OTA Update](ota.md) page of your device.

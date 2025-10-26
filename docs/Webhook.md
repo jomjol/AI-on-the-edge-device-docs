@@ -1,5 +1,4 @@
 # Webhook
-
 ## Purpose
 
 The idea behind this webhook feature is to provide an alternative to MQTT and InfluxDB for transmitting data, such as water meter readings from a vacation home, to a standard PHP webspace.
@@ -142,7 +141,6 @@ if ($method === 'POST') {
 ```
 
 ## Basic Example of a server using Python
-
 ```Python
 from flask import Flask, request, jsonify
 import csv

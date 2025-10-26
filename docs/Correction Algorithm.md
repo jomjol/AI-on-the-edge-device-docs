@@ -8,15 +8,17 @@ There are several reasons, that a check might be necessary:
 2. The replacement of the "N" with a previous value could be not sufficient, due to the fact, that it might have changed.
 3. There is a misreading of one one of the numbers. This can always happen in case of neural network processing.
 
-## Terms and definitions
 
-### PreValue
+
+### Terms and definitions
+
+##### PreValue
 
 The last correct read value. PreValue is here a bit missleading, because normally it is the same as the last value. In the next round of reading it will be used to check negative rates, high rates (MaxRateValue / MaxRateType) and CCheckDigitIncreaseConsistency (dig-class11 only). Either from a previous correctly identified value or manual setting by the user.
 
-#### Digits
+##### Digits
 
-Value that are digitized from a digit number. There are 11 allowed values for this:
+Value that are digitized from a digit number. There are 11 allowed values for this: 
 
 1. Digits: 0, 1, 2, ... 9
 2. N = Not-a-Number - representing a not unique state between two numbers
@@ -29,7 +31,7 @@ This are value derived from a pointer like meter. This never has the state "N".
 
 If this is enabled an "intelligent" algorithm is used to derive from zero-crossing of discrete digit positions, if the number should have been increased. This is relevant because in some of the digit meters, the increase of a digit to the next number can be seen, before the sub-digit has gone through zero.
 
-For example: 16.6 --> 16.7 --> 1N.8 --> **17.9** corrected to 16.9 --> 17.0 --> 17.1
+For example: 16.6 --> 16.7 --> 1N.8 --> **17.9** corrected to 16.9 --> 17.0 --> 17.1 
 
 As you can see, the 17.9 is a false reading as the 7 is assumed to be already readable, although the sub-digit has not crossed the zero. In this case the CheckDigitIncreaseConsistency algorithm will correct this to 16.9
 
@@ -60,32 +62,37 @@ Here the maximum change from one to the next reading can be limited. If a false 
 1) **AbsolutChange**: Here the difference between the PreValue and the current reading is compared directly, independent how much time has passed since the last reading.
 2) **RelativeRate**:  in this case a change rate in the unit of change/minute is calculated, taking the time between the last and the current reading into account. Be careful, that with increasing time, the absolute allowed change increases.
    Example: relative rate of 0.05 m³/minute --> after 20 minutes a maximum change of 20 minutes * 0.05 m³/minute = 1 m³ is possible. That means that a false reading of 1 m³ cannot be detected false after about 20 minutes in this case
-   Assume, that there might be no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted.
+   Assume, that there might be no change in the meter for hours (e.g. during the night) a much bigger change could also be accepted. 
 
 ###### `ExtendedResolution`
 
-Newer models such as dig-cont and dig-class100 have a high resolution of the values and can thus represent another digit by using the value of the last digit or pointer (ex. 7.8 in the last digit).
+Newer models such as dig-cont and dig-class100 have a high resolution of the values and can thus represent another digit by using the value of the last digit or pointer (ex. 7.8 in the last digit). 
 
-If the value is set to true, the result of the last digit is used completely.
+If the value is set to true, the result of the last digit is used completely. 
 
 When using dig-class11 models, the setting is ignored.
 
 Due to inaccuracies of the neural networks, it sometimes happens that the results jump back and forth between two decimal places. Therefore, when using `ÀllowNegatives`= false, no error is output if the value is only off by 0.2. Nevertheless, the value then remains at the higher determined value.
-
+ 
+ 
 ###### `IgnoreLeadingNaN`
 
 The parameter is only be used, if a dig-class11 model is selected. `ÌgnoreLeadingNaN` removes in the CheckDigitIncreaseConsistency process the leading `N` values.
 
 #### Flow Chart
 
-![Correction Algorithm 1](img/correct_algo_1.jpg)
+![](img/correct_algo_1.jpg)
 
-![Correction Algorithm 2](img/correct_algo_2.jpg)
+![](img/correct_algo_2.jpg)
 
-![Correction Algorithm 3](img/correct_algo_3.jpg)
+![](img/correct_algo_3.jpg)
+
+
+
+
 
 ## CheckDigitIncreaseConsistency Algorithm
 
 The check digit increase consistency algorithm is functional for the digits only. Due to the fact, that the rotation might be a little bit earlier or later compared to the zero crossing of the digit before, errors during the reading before and after a zero crossing can be wrong. Therefore a simple algorithm can be applied, checking the consistency of zero crossing and changes in the following digit. This is applied to one after the other digit, starting with the lowest priority digits.
 
-![Correction Algorithm Zero Crossing](img/correct_algo_zero_crossing.jpg)
+![](img/correct_algo_zero_crossing.jpg)

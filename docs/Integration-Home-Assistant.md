@@ -1,5 +1,4 @@
 # Integration into Home Assistant
-
 There are 3 ways to get the data into your Home Assistant:
 
 1. Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)
@@ -9,7 +8,6 @@ There are 3 ways to get the data into your Home Assistant:
 The first one is the easier way if you already have MQTT in use.
 
 ## Using MQTT (Automatically Setup Entities using Home Assistant MQTT Discovery)
-
 Starting with Version `>12.0.1`, AI-on-the-edge-devices support Home Assistant Discovery.
 
  1. Check [here](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) to learn more about it and how to enable it in Homeassistant.
@@ -25,12 +23,11 @@ On the next start of the device, it will send discovery topics and Home Assistan
 ![grafik](https://user-images.githubusercontent.com/1783586/199352565-9b0ade28-cb43-47b4-821f-7909cad41a73.png)
 ![grafik](https://user-images.githubusercontent.com/1783586/199352619-217df627-4b87-4fa0-86a2-f5347c452fdb.png)
 
-### Using MQTT (Manually Setup Entities)
 
+### Using MQTT (Manually Setup Entities)
 First make sure with an MQTT client (for example [MQTT Explorer](http://mqtt-explorer.com/)) that MQTT works as expected and to get a list of the available topics!
 
 Then add a sensor for each property:
-
 ```yaml
 mqtt:
   sensor:
@@ -76,9 +73,7 @@ mqtt:
       payload_available: connected
       payload_not_available: connection lost
 ```
-
 If you run the discovery once, you can also extract the information from there (MQTT Info, untested):
-
 ```yaml
 mqtt: # Extracted form the Discovery but untested!
   sensor:
@@ -95,7 +90,6 @@ mqtt: # Extracted form the Discovery but untested!
 ```
 
 If you want to convert the `m³` to `l`, use a template sensor:
-
 ```yaml
 template:
   - sensor:
@@ -124,24 +118,22 @@ utility_meter:
 Note that you also can add it using the UI.
 
 ### Examples
-
 ![grafik](https://user-images.githubusercontent.com/1783586/193472069-4135736e-e63a-4afb-8009-5b97aa5c9ac5.png)
 
 ![grafik](https://user-images.githubusercontent.com/1783586/193472091-1484aac4-ddc2-48ba-896c-28370963fc2d.png)
 
 ### Statistics Graph
-
 Creating Statistics Graphs (e.g. usage per day) is easy using the [Energy Dashboard](https://www.home-assistant.io/home-energy-management/):
 ![grafik](https://user-images.githubusercontent.com/1783586/193471893-d8ab8f5f-0906-4076-8926-8b5a69a24bce.png)
 
 Note that there seems to be a bug in the graph, see [https://github.com/home-assistant/frontend/issues/13995](https://github.com/home-assistant/frontend/issues/13995)!
+
 
 ### InfluxDb Graphs
 
 See also [Influx-DB](Influx-DB.md).
 
 If you have setup InfluxDB already, it is also possible to fetch statistics from there, e.g. daily usage:
-
 ```
 from(bucket: "HomeAssistant")
 |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
@@ -154,8 +146,8 @@ from(bucket: "HomeAssistant")
 
 ![grafik](https://user-images.githubusercontent.com/1783586/193473347-c81fc301-c52f-4af0-9fcb-56fab12cacac.png)
 
-## Using REST
 
+## Using REST
 When using REST, Home Assistant has to periodically call an URL on the ESP32 which in return provides the requested data.
 
 See [REST API](REST-API.md) for a list of available URLs.
@@ -163,7 +155,6 @@ See [REST API](REST-API.md) for a list of available URLs.
 The most practical one is the `json` entrypoint which provides the most relevant data JSON formatted:
 `http://<IP>/json`
 This would return:
-
 ```JSON
 {
 "main":
@@ -179,7 +170,6 @@ This would return:
 ```
 
 To do such a REST call, you need to create a REST sensor:
-
 ```yaml
 sensor:
 
@@ -228,8 +218,8 @@ sensor:
  
 See also https://community.home-assistant.io/t/rest-sensor-nested-json/243420/9
 
-#### Photo
 
+#### Photo
 REST can also be used to show the photo of the last round:
 
 ![grafik](https://user-images.githubusercontent.com/1783586/193546075-b247942f-9106-47a4-a64b-42ff96dd9078.png)
