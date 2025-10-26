@@ -1,0 +1,119 @@
+# This file is used to lint AWS services.
+extends: substitution
+message: "Use the proper trademark '%s' instead of '%s'."
+link: 'https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md'
+ignorecase: true
+level: warning
+action:
+  name: replace
+swap:
+  # bad: good
+  AWS API Gateway: Amazon API Gateway
+  Amazon App Mesh: AWS App Mesh
+  Amazon App Runner: AWS App Runner
+  AWS AppStream: Amazon AppStream
+  Amazon AppSync: AWS AppSync
+  AWS Athena: Amazon Athena
+  Amazon Auto Scaling: AWS Auto Scaling
+  Amazon Backup: AWS Backup
+  AWS Bedrock: Amazon Bedrock
+  Amazon Certificate Manager: AWS Certificate Manager
+  AWS CloudFront: Amazon CloudFront
+  Amazon CloudHSM: AWS CloudHSM
+  AWS CloudSearch: Amazon CloudSearch
+  Amazon CloudTrail: AWS CloudTrail
+  Amazon CodeBuild: AWS CodeBuild
+  Amazon CodeDeploy: AWS CodeDeploy
+  AWS CodeWhisperer: Amazon CodeWhisperer
+  AWS Cognito: Amazon Cognito
+  Amazon Compute Optimizer: AWS Compute Optimizer
+  Amazon Config: AWS Config
+  AWS Connect: Amazon Connect
+  (?:Amazon|AWS) Kinesis Data Firehose: Amazon Data Firehose
+  Amazon Database Migration Service: AWS Database Migration Service
+  Amazon DMS: AWS DMS
+  Amazon Direct Connect: AWS Direct Connect
+  AWS DocumentDB: Amazon DocumentDB
+  AWS DynamoDB: Amazon DynamoDB
+  AWS DynamoDB Accelerator: Amazon DynamoDB Accelerator
+  AWS Elastic Block Store: Amazon Elastic Block Store
+  AWS EBS: Amazon EBS
+  AWS EC2: Amazon EC2
+  AWS EC2 Spot: Amazon EC2 Spot
+  AWS EC2 Auto Scaling: Amazon EC2 Auto Scaling
+  AWS Elastic Container Service: Amazon Elastic Container Service
+  AWS ECS: Amazon ECS
+  AWS ElastiCache: Amazon ElastiCache
+  Amazon Elastic Beanstalk: AWS Elastic Beanstalk
+  AWS Elastic Container Registry: Amazon Elastic Container Registry
+  AWS ECR: Amazon ECR
+  AWS Elastic File System: Amazon Elastic File System
+  AWS EFS: Amazon EFS
+  AWS Elastic Kubernetes Service: Amazon Elastic Kubernetes Service
+  AWS EKS: Amazon EKS
+  AWS EKS Anywhere: Amazon EKS Anywhere
+  AWS Elastic Transcoder: Amazon Elastic Transcoder
+  "Amazon Elemental Media(?: ?[Cc]onnect)": AWS Elemental MediaConnect
+  "Amazon Elemental Media(?: ?[Cc]onvert)": AWS Elemental MediaConvert
+  "Amazon Elemental Media(?: ?[Ll]ive)": AWS Elemental MediaLive
+  "Amazon Elemental Media(?: ?[Pp]ackage)": AWS Elemental MediaPackage
+  "Amazon Elemental Media(?: ?[Ss]tore)": AWS Elemental MediaStore
+  "Amazon Elemental Media(?: ?[Tt]ailor)": AWS Elemental MediaTailor
+  AWS EMR: Amazon EMR
+  AWS EventBridge: Amazon EventBridge
+  Amazon Fargate: AWS Fargate
+  AWS FSx: Amazon FSx
+  AWS GameLift: Amazon GameLift
+  Amazon Global Accelerator: AWS Global Accelerator
+  Amazon Glue: AWS Glue
+  AWS Inspector: Amazon Inspector
+  Amazon IoT: AWS IoT
+  AWS Keyspaces: Amazon Keyspaces
+  Amazon Key Management Service: AWS Key Management Service
+  Amazon KMS: AWS KMS
+  AWS Kinesis: Amazon Kinesis
+  Amazon Lambda: AWS Lambda
+  AWS Lex: Amazon Lex
+  AWS Managed Streaming for Apache Kafka: Amazon Managed Streaming for Apache Kafka
+  AWS MSK: Amazon MSK
+  AWS Managed Workflows for Apache Airflow: Amazon Managed Workflows for Apache Airflow
+  AWS MWAA: Amazon MWAA
+  AWS MQ: Amazon MQ
+  AWS MemoryDB: Amazon MemoryDB
+  AWS Neptune: Amazon Neptune
+  Amazon Network Firewall: AWS Network Firewall
+  AWS CloudWatch Network Monitor: Amazon CloudWatch Network Monitor
+  AWS OpenSearch Serverless: Amazon OpenSearch Serverless
+  Amazon OpsWorks: AWS OpsWorks
+  AWS Polly: Amazon Polly
+  Amazon PrivateLink: AWS PrivateLink
+  AWS RDS: Amazon RDS
+  AWS Redshift: Amazon Redshift
+  AWS Rekognition: Amazon Rekognition
+  AWS Route 53: Amazon Route 53
+  AWS SageMaker: Amazon SageMaker
+  AWS Simple Email Service: Amazon Simple Email Service
+  AWS SES: Amazon SES
+  AWS Simple Storage Service: Amazon Simple Storage Service
+  AWS S3: Amazon S3
+  Amazon Security Hub: AWS Security Hub
+  AWS Security Lake: Amazon Security Lake
+  AWS Simple Notification Service: Amazon Simple Notification Service
+  AWS SNS: Amazon SNS
+  AWS Simple Queue Service: Amazon Simple Queue Service
+  AWS SQS: Amazon SQS
+  AWS Simple Workflow Service: Amazon Simple Workflow Service
+  AWS SWF: Amazon SWF
+  Amazon Shield: AWS Shield
+  Amazon Step Functions: AWS Step Functions
+  Amazon Storage Gateway: AWS Storage Gateway
+  AWS Textract: Amazon Textract
+  Amazon Transit Gateway: AWS Transit Gateway
+  AWS Translate: Amazon Translate
+  Amazon Trusted Advisor: AWS Trusted Advisor
+  Amazon Verified Access: AWS Verified Access
+  AWS VPC: Amazon VPC
+  Amazon VPN: AWS VPN
+  Amazon WAF: AWS WAF
+  AWS WorkSpaces: Amazon WorkSpaces
+  Amazon X-Ray: AWS X-Ray

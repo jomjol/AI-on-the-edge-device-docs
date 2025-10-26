@@ -1,0 +1,18 @@
+# This file is used to lint first-person pronouns.
+extends: existence
+message: "Avoid first-person pronouns such as '%s'."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#pronouns"
+level: warning
+nonword: true
+tokens:
+  - (?<=^|\s)I(?=\s)
+  - (?<=^|\s)I,(?=\s)
+  - \bI'm\b
+  - (?<=\s)[Mm]e\b
+  - (?<=\s)[Mm]y\b
+  - (?<=\s)[Mm]ine\b
+  - (?<=\s)[Ww]e\b
+  - we'(?:ve|re)
+  - (?<=\s)[Uu]s\b
+  - (?<=\s)[Oo]ur\b
+  - \blet's\b

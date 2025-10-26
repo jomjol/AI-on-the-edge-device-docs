@@ -1,0 +1,65 @@
+# This file is used to lint American spelling instead of British spelling.
+extends: existence
+message: "In general, use American spelling instead of '%s'."
+link: 'https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md'
+ignorecase: true
+level: warning
+tokens:
+  - '(?:\w+)nised'
+  - '(?:\w+)ise'
+  - '(?:\w+)logue'
+  - '(?:\w+)lour'
+  - '(?:\w+)lyse'
+  - '[a-zA-Z]{2,}our(?:\b|s|ed|ing)'
+exceptions:
+# *ise endings
+  - (?:A|a)dvertise
+  - (?:A|a)dvise
+  - (?:A|a)ppraise
+  - (?:A|a)pprise
+  - (?:A|a)rise
+  - (?:C|c)hastise
+  - (?:C|c)ircumcise
+  - (?:C|c)lockwise
+  - (?:C|c)omprise
+  - (?:C|c)ompromise
+  - (?:C|c)oncise
+  - (?:C|c)ounterclockwise
+  - (?:D|d)emise
+  - (?:D|d)espise
+  - (?:D|d)evise
+  - (?:D|d)isguise
+  - (?:E|e)nterprise
+  - (?:E|e)xcise
+  - (?:E|e)xercise
+  - (?:E|e)xpertise
+  - (?:F|f)ranchise
+  - (?:I|i)mprecise
+  - (?:I|i)mprovise
+  - (?:I|i)ncise
+  - (?:L|l)ikewise
+  - (?:M|m)erchandise
+  - (?:N|n)oise
+  - (?:O|o)therwise
+  - (?:P|p)aradise
+  - (?:P|p)oise
+  - (?:P|p)raise
+  - (?:P|p)recise
+  - (?:P|p)remise
+  - (?:P|p)romise
+  - (?:R|r)evise
+  - (?:R|r)ise
+  - (?:S|s)upervise
+  - (?:S|s)urmise
+  - (?:S|s)urprise
+  - (?:T|t)elevise
+  - (?:W|w)ise
+
+# *our* words
+  - (?:d|D)etours?
+  - (?:c|C)ontours?
+  - (?:g|G)lamour
+  - (?:o|O)utpour
+  - (?:s|S)cours?
+  - (?:t|T)roubadours?
+  - (?:p|P)ompadour

@@ -1,0 +1,8 @@
+# This file is used to lint merge conflicts.
+extends: existence
+message: "It looks like you have a merge conflict! Fix the conflict and try again."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#dashes"
+nonword: true
+level: error
+tokens:
+  - '^[<|=|>]{7}( .+)?$'

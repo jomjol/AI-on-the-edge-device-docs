@@ -1,0 +1,12 @@
+# This file is used to lint abbreviations that are specific to Latin languages.
+extends: substitution
+message: "Use '%s' instead of abbreviations like '%s'."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#abbreviations"
+ignorecase: true
+level: warning
+nonword: true
+action:
+  name: replace
+swap:
+  '\b(?:eg|e\.g\.|eg\.)[\s,]': for example
+  '\b(?:ie|i\.e\.|ie\.)[\s,]': that is

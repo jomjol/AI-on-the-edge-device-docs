@@ -1,0 +1,156 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: "https://github.com/DataDog/documentation/blob/master/CONTRIBUTING.md#words-and-phrases"
+ignorecase: false
+level: warning
+action:
+  name: replace
+swap:
+  # bad: good
+  a number of: few|several|many
+  acknowledgement: acknowledgment
+  App Analytics: Tracing without Limits™
+  'auto(?:\s|-)complete': autocomplete
+  'auto(?:\s|-)completion': autocompletion
+  Availability Zone: availability zone
+  Availability Zones: availability zones
+  'back(?:\s|-)end': backend
+  'back(?:\s|-)ends': backends
+  bear in mind: keep in mind
+  'best(?:\s|-)in(?:\s|-)class': leading|top|excellent
+  boolean: Boolean
+  booleans: Booleans
+  cheat sheet: cheatsheet
+  command line interface: command-line interface
+  Create a new: Create a|Create an
+  culprit: cause
+  data are: data is
+  'data(?:\s|-)point': datapoint
+  'data(?:\s|-)points': datapoints
+  'data(?:\s|-)set': dataset
+  'data(?:\s|-)sets': datasets
+  data-?center: data center
+  data-?centers: data centers
+  'Datadog (?:app|application)': Datadog|Datadog site
+  Datadog product: Datadog|Datadog service
+  data-?source: data source
+  data-?sources: data sources
+  default (?:dash|screen)board: out-of-the-box dashboard
+  default (?:dash|screen)boards: out-of-the-box dashboards
+  (?:Dev/?ops|dev/?ops|Dev/Ops): DevOps|DevSecOps
+  'drill (?:down|into)': examine|investigate|analyze
+  'drilling (?:down|into)': examining|investigating|analyzing
+  Distributed Tracing: distributed tracing
+  (?:easy|easily): ''
+  e-?book: eBook
+  e-?books: eBooks
+  e-mail: email
+  e-mailing: emailing
+  e-mails: emails
+  'end(?:\s|-)point': endpoint
+  'end(?:\s|-)points': endpoints
+  event (?:stream|streem): Event Stream
+  flame-?graph: flame graph
+  flame-?graphs: flame graphs
+  figure out: determine
+  figuring out: determining
+  'file(?:\s|-)name': filename
+  'file(?:\s|-)names': filenames
+  filesystem: file system
+  filesystems: file systems
+  'fine\s?-?tune': customize|optimize|refine
+  for the most part: generally|usually
+  'front(?:\s|-)end': frontend
+  health-?check: heath check
+  health-?checks: heath checks
+  (?:heat-?map|Heat Map): heat map
+  (?:heat-?maps|Heat Maps): heat maps
+  (?:host-?map|Host Map): host map
+  (?:host-?maps|Host Maps): host maps
+  holistic: complete|comprehensive|integrated
+  hone in: home in
+  hones in: homes in
+  honing in: homing in
+  highly: ''
+  hit: click|select
+  in order to: to
+  in sync: in-sync
+  In sync: In-sync
+  indices: indexes
+  indexation: indexing
+  infrastructures: infrastructure
+  install command: installation command
+  Internet: internet
+  (?:i/?-?o|I-?O): I/O
+  (?:i/?ops|I/OPS): IOPS
+  just: ''
+  keep in mind: consider
+  left up to: determined by
+  let's assume: assuming|for example, if
+  leverage: use|apply|take advantage of
+  load-?balancing: load balancing
+  machine-?learning: machine learning
+  'micro(?:\s|-)service': microservice
+  'micro(?:\s|-)services': microservices
+  multi-?alert: multi alert
+  multicloud: multi-cloud
+  multiline: multi-line
+  Note that: "**Note**:"
+  (?:obvious|obviously|Obviously): ''
+  off-line: offline
+  on the fly: real-time|in real time
+  Once: After
+  open-?source: open source
+  page view: pageview
+  page views: pageviews
+  play a hand: influence
+  please: ''
+  pre-connect: preconnect
+  quick|quickly: ''
+  'screen(?:\s|-)board': screenboard
+  simple|simply: ''
+  single pane of glass: single view|single place|single page
+  slice and dice: filter and group
+  stand for: represent|mean
+  'state(?:\s|-)of(?:\s|-)the(?:\s|-)art': modern|current|advanced
+  streamline: simplify|improve|optimize
+  Synthetics: Synthetic Monitoring
+  reenable: re-enable
+  'run(?:\s|-)time': runtime
+  refer to|visit: see|read|follow
+  time board: timeboard
+  'time(?:\s|-)series': timeseries
+  time-?frame: time frame
+  time-?frames: time frames
+  top-?list: top list
+  'trade(?:\s|-)off': trade-off
+  Trace Search and Analytics: Tracing without Limits™
+  turnkey: ready to use
+  under the hood: ''
+  unlock: enable|provide|give access to
+  utilize: use
+  very: ''
+  via: with|through
+  visit: see|read
+  webserver: web server
+  web site: website
+  'X-axis': x-axis
+  'Y-axis': y-axis
+  'NPM': CNM
+  'Network Performance Monitoring': Cloud Network Monitoring
+  
+
+  # proper nouns
+  (?:github|Github): GitHub
+  (?:kubernetes|k8s|K8s|K8S): Kubernetes
+  (?:Mapreduce|mapreduce|Map reduce|Map Reduce): MapReduce
+  memcached: Memcached
+  (?:netflow|Netflow): NetFlow
+  (?:nginx|Nginx): NGINX
+  (?:node.js|nodeJS|NodeJS|node.JS|Node.JS): Node.js
+  (?:pagerduty|pager duty|Pagerduty|Pager duty): PagerDuty
+  prometheus: Prometheus
+  (?:sql|Sql): SQL
+  (?:statsd|statsD|Statsd): StatsD
+  (?:unix|Unix): UNIX
+
