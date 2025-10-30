@@ -28,16 +28,13 @@ You will need a testing device. best with usb adapter. Before you upload your te
 
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/412645/209813215-e0ea7405-6ff4-48d0-8dab-97bfab6962af.png">
 
-
 Now you can use Visual Studio Code or a standard console to upload the test code. In VS Code (tab platformio) open _Advanced_ and select _Test_.
 
 <img width="467" alt="image" src="https://user-images.githubusercontent.com/412645/209813917-ea7fca50-2553-4acf-a8af-ecdac84a01ea.png">
 
-
 Alternatively you can run it in console/terminal with `platformio test --environment esp32cam`.
 
 In my environment the serial terminal not opens. I have to do it for myself. You will see much logging. If any test fails it logs it out. Else it logs all test passed in the end.
-
 
 ## Troubleshooting
 

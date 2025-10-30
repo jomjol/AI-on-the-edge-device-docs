@@ -37,8 +37,6 @@ The error code source definition can be found [here](https://github.com/jomjol/A
 | OTA_OR_AP     | 8                 | Soft AP started (for remote config)   | 2                | X
 | FLASHLIGHT    | N/A               | LED on when flashlight is on          | solid, <br> no blink
 
-
-
 # ERROR / WARNING
 
 ## Source WLAN_CONN: WLAN disconnected
@@ -48,18 +46,20 @@ The error code source definition can be found [here](https://github.com/jomjol/A
     --> General info: [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
 
 ### `WLAN disconnected (No Access Point)`
+
 WLAN connection is interrupted due to no access point in range.
 
 ### `WLAN Disconnected (Authentication failure)`
+
 WLAN connection is interrupted due to an authentication failure. If error repeats check WLAN config in `wlan.ini` (username, password)
 
 ### `WLAN Disconnected (Timeout)`
+
 WLAN connection is interrupted due to an timeout because no beacon from AP is received in a timely manner. Most probably access point  is not available anymore or connection is not reliable.
 
 ### `WLAN Disconnected (Further reasons)`
+
 WLAN connection is interrupted due to further reasons. Disconnect reason is printed in warining message. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/). Please refer to this page to have additional infos in terms of WLAN disconnect reasons --> [WLAN disconnect reason code description](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/wifi.html#wi-fi-reason-code)
-
-
 
 ## Source WLAN_INIT: WLAN initialization
 
@@ -67,15 +67,16 @@ WLAN connection is interrupted due to further reasons. Disconnect reason is prin
     All critical errors, regular boot not possible
 
 ### `wlan.ini empty or not readable`
+
 The `wlan.ini` file is present but content is either not readable or no content present. Please check for further errors in terms of SD card readability or content of `wlan.ini` which is located in /sdcard (most top folder od SD card) 
 
 ### `SSID or password empty`
+
 The mandatory parameters SSID (name of WIFI network) and / or password is empty. Please configure those parameters in `wlan.ini` and try again.
 
 ### `WIFI init error (details console)`
+
 A general WIFI initialization error occured. Please check serial console output or logfile from sd card (using another device to retrieve logfile /sdcard/log/message/) 
-
-
 
 ## Source SDCARD_INIT: SD card initialization
 
@@ -83,15 +84,16 @@ A general WIFI initialization error occured. Please check serial console output 
     All critical errors, regular boot not possible
 
 ### `SD card filesystem mount failed`
+
 Failed to mount FAT filesystem on SD card. Check SD card filesystem (only FAT supported) or try another card. Possible further infos: Please check serial console output.
 
 ### `SD card not found (Error code 0x107)`
+
 SD card init failed. Check if SD card is properly inserted into SD card slot or try another card. Possible further infos: Please check serial console output.
 
 ### `SD card init failed (details console)`
+
 A general SD card initialization error occured. Please check serial console output.
-
-
 
 ## Source SDCARD_CHECK: SD card basic check
 
@@ -99,28 +101,31 @@ A general SD card initialization error occured. Please check serial console outp
    All critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
 
 ### `File creation / write error`    
+
 A basic check of SD card is performed at boot. Failed to create the test file or writing content to the file failed. Most likely SD card is defective or not supported. Please check logs with log viewer in reduced web interface, serial console output or try another card.
 
 Recommendation: Format or try another card
 
 ### `File read / CRC verfication error`
+
 A basic check of SD card is performed at boot. Failed to read the test file or CRC of read back content failed. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
 Recommendation: Format or try another card
 
 ### `File delete error`
+
 A basic check of SD card is performed at boot. Failed to delelte the test file. Most likely SD card is defective. Please check logs with log viewer in reduced web interface or serial console output for further error indication or try another card.
 
 Recommendation: Format or try another card
 
 ### `Folder / File presence failed`
+
 A basic check of SD card is performed at boot. One or more menadatory folder / file are not found on SD card. Please check logs with log viewer in reduced web interface or serial console output for further error indication.
 
 Recommendation: Repeat installation using AI-on-the-edge-device__update__*.zip
 
-
-
 ## Source CAM_INIT: Camera initialization
+
 ### `Camera init failed (details console)`
 
 !!! NOTE
@@ -131,37 +136,36 @@ A general camera initialization error occured. Please check logs with log viewer
 Recommendation: Check for proper electrical connection, whether camera model is supported and whether power supply is sufficient.
 
 ### `Camera framebuffer check failed`
+
 The framebuffer of the camera was not readable. The firmware will trying to continue regular boot, but further errors can occur which block regular processing. Please check logs with logfile viewer if processing is behaving irregular.
 
 Recommendation: Check for proper electrical commenection, wether camera model is supported and wether power supply is suffcient.
-
-
 
 ## Source PSRAM_INIT: External RAM (SPI RAM) initialization
 
 !!! NOTE
     A critical errors, normal boot not possible. Reduced WebUI is going to be loaded for further diagnostic possibilities or redo firmware update.
     
-### `SPI RAM init failed: Not found/defective`   
+### `SPI RAM init failed: Not found/defective` 
+
 External RAM (SPI RAM) initialization failed. Most likely external RAM not accessable or defective. Normal operation is not possible without having external RAM.
 
 ### `External SPI RAM < 4MB`
+
 External RAM (SPI RAM) initialization successful, but external RAM size is too small. A size of >= 4MB is necessary to run this firmware. 
 
 ### `Total heap < 4MB`
+
 Total available system memory (heap) is too small. A size of >= 4MB is necessary to run this firmware. 
 
-
-
 ## Source TIME_CHECK: External RAM (SPI RAM) initialization
+
 ### `Missing time sync (check every round)`
 
 !!! NOTE
     Only warning indication, blink code repetition: 2x
 
 If system is configured to be synced with a NTP server the sync status is checked after every round (in state: "Flow finished". An warming message is also printed to log). If the time is not synced after serveral rounds, please check for proper configuration.
-
-
 
 # STATUS
 
@@ -171,14 +175,15 @@ If system is configured to be synced with a NTP server the sync status is checke
 ## Source OTA_OR_AP: OTA Update / Access point mode
 
 ### `OTA process ongoing`
+
 An OTA is performed right now. Please wait until OTA is completed. System is rebooting automatically. If system is not coming up, please check serial console output.
 
 ### `Soft AP started (for remote config)`
+
 The built-in access point functionality is started to perform initial remote remote setup. Further description: [Installtion --> `Section Remote Setup using the built-in Access Point`](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/)
-
-
 
 ## Source FLASHLIGHT: Flashlight
 
 ### `LED on when flashlight is on`
+
 The LED is solid on as long the flashlight is on. This feature has lower priority than the other LED codes. Whenever another code occurs this feature will be overrided.

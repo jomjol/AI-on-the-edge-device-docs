@@ -1,4 +1,5 @@
 # Over-The-Air (OTA) Update
+
 You can do an OTA (over-the-air) update via the Web Interface.
 Grab the firmware from the
 
@@ -6,14 +7,15 @@ Grab the firmware from the
  *  [Automatically build development branch](https://github.com/jomjol/AI-on-the-edge-device/actions?query=branch%3Amain) (experimental, untested versions). Please inform yourself on [Living on the Edge](unstable-installation.md) first!
 
 ## Update Procedure
+
 1. Create a backup of your configuration. Either use the Backup/Restore function of your device for this (menu `System > Backup/Restore`) or back the files manually up using the File Server (menu `File Server`, folder `config`). It is recommended to at least save the config file `config.ini`!
 1. Head to the menu `System > OTA Update` and follow the instructions there.
 
 If you do an update between major versions, it might be needed to modify the config file `config.ini` as it's syntax or context has changed.
 To do so, go to the menu `Settings > Configuration` (after the update completed and the device restarted) and check if it warns you about an unset parameter.
 
-
 ### Update from version `v12.0.0` or newer
+
 You can use the over the air update mechanism, which uploads the update via a ZIP files.
 
 The update file is located on the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). Please choose the zip file with the following naming: `AI-on-the-edge-device__update__*.zip`
@@ -21,6 +23,7 @@ The update file is located on the [release page](https://github.com/jomjol/AI-on
 Go to the menu `System --> OTA Update` and follow the instructions there. After a final automatic reboot you should have the new version running.
 
 ### Update from version older than `v12.0.0`
+
 If you update from an version older than 12.0.1, you should firstly update to version 12.0.1. Background are not fully backward compatible changes in the `config.ini`, that are taken care of in this version.
 
 !!! Warning

@@ -1,0 +1,13 @@
+mkdocs 
+mkdocs-gen-files 
+mkdocs-awesome-pages-plugin 
+mkdocs-material 
+pymdown-extensions 
+mkdocs-enumerate-headings-plugin
+
+# Linting
+pymarkdownlnt
+
+# Vale dependencies
+rst2html
+vale

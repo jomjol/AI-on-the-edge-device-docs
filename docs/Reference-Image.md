@@ -7,15 +7,15 @@ At first an example image is shown.
 To define a new reference image push the button `"Create new Reference" (2)` and afterwards `"Take Image" (2)`. It might take some seconds for processing, then your actual camera image should be shown.
 Then play with the provided parameters to get a good result.
 
-![](img/initial_setup_1_reference_image.jpg){: style="width:500px"}
+![Initial Setup Reference Image](img/initial_setup_1_reference_image.jpg){: style="width:500px"}
 
 ## Focus
+
 This is the first time, where you have access to the camera image. It most likely is out of focus and not sharp!
 Ensure a sharp image of the camera by adjusting the focal length of the ESP OV2640 camera.
 
 !!! Note
     Try to adjust the focus for the clearest possible image!
-
 
 In order to use it for reading a meter, the focal-length  of the OV2640 camera has to be manipulated.
 By default it only results in sharp image for distance bigger than around `~40cm` which is not ideal for our purpose.
@@ -32,9 +32,7 @@ Therefore you need to remove the fixing glue of the OV2640 lens with a sharp kni
 !!! Warning
     This modification will render the camera unsuitable for general, web-cam type applications unless the focal length is changed back to the original setting.
 
-![](img/focus_adjustment.jpg)
-
-
+![Focus Adjustment](img/focus_adjustment.jpg)
 
 ## Correct Horizontal Alignment
 
@@ -42,7 +40,7 @@ Ensure an **exact horizontal alignment** of the number:
 
 | :heavy_check_mark: Okay     | :x: Not Okay                    |
 | --------------------------- | ------------------------------- |
-| ![](img/alignment_okay.jpg) | ![](img/alignment_not_okay.jpg) |
+| ![Alignment Okay](img/alignment_okay.jpg) | ![Alignment Not Okay](img/alignment_not_okay.jpg) |
 
 !!! Warning
     Updating the reference image also means that all alignment images and ROIs needs to be configured again.
@@ -56,6 +54,7 @@ If everything is done, you can save the result with `"Update Reference Image" (4
 As next you should update the [Alignment References](Alignment.md).
 
 ## Dealing with Reflections
+
 Reflections can be caused by the flash LED and make it hard to provide a reliable detection.
 There are various ways to deal with them:
 
