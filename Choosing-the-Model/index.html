@@ -828,7 +828,7 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 <p><strong>continuous</strong> means, that there is no discrete model, that has discreate states, but there is a different mechanism, that provides a not discrete value in the interval between [0, 1[.</p>
 <h3 id="dig-class11"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> <code>dig-class11</code></h3>
 <p>This model can recognize <strong>full digits</strong>. It was the first model version. All intermediate states shown a <code>N</code> for not-a-number (aka. <code>NaN</code>). But in post process it uses older values to fill up the <code>N</code> values if possible.</p>
-<p><img alt="" src="../img/dig-class11.png" style="width:300px"/></p>
+<p><img alt="Dig Class11" src="../img/dig-class11.png" style="width:300px"/></p>
 <p>It's possibly a good fallback, if <code>dig-cont</code> or <code>dig-class100</code> results are not good.</p>
 <p>Main features:</p>
 <ul>
@@ -837,7 +837,7 @@ For more technical/deeper explanations have a look on <a href="../Neural-Network
 </ul>
 <h3 id="dig-class100-and-dig-cont"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> <code>dig-class100</code> and <code>dig-cont</code></h3>
 <p>These models are used to get a <strong>continuous reading</strong> with intermediate states. To see what the models are doing, you can go to the Recognition page of your device.</p>
-<p><img alt="" src="../img/dig-class100.png" style="width:300px"/></p>
+<p><img alt="Did Class100" src="../img/dig-class100.png" style="width:300px"/></p>
 <p>Main features:</p>
 <ul>
 <li>suitable for all digit displays.</li>
@@ -854,10 +854,10 @@ The <code>dig-class100</code> is a standard classification model. Each tenth ste
 <p>Look <a href="https://jomjol.github.io/neural-network-digital-counter-readout">here</a> for a list of digit images used for the training.</p>
 <h2 id="analog-pointer-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Analog pointer models</h2>
 <p>For pointers on water meters use the analog models:</p>
-<p><img alt="" src="../img/ana-class100.png" style="width:250px"/></p>
+<p><img alt="ANA Class100" src="../img/ana-class100.png" style="width:250px"/></p>
 <p>You can choose between two models:</p>
 <ul>
-<li><code>ana-class100</code> </li>
+<li><code>ana-class100</code></li>
 <li><code>ana-cont</code></li>
 </ul>
 <p>Both do mainly the same.

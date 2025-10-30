@@ -819,12 +819,12 @@
 <ul>
 <li>The jpg files can have any name</li>
 <li>The jpg files must be smaller than 30'000 bytes</li>
-<li>The <code>files.txt</code> must contains a list of those files, eg:<div class="language-text highlight"><pre><span></span><code>520.8983.jpg
-520.9086.jpg
-520.9351.jpg
-</code></pre></div>
-</li>
+<li>The <code>files.txt</code> must contains a list of those files, eg:</li>
 </ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>  520.8983.jpg
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>  520.9086.jpg
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>  520.9351.jpg
+</span></code></pre></div>
 <h2 id="collecting-images-of-your-device"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Collecting images of your device</h2>
 <p>There are several ways to collect images from your device:</p>
 <ol>
@@ -832,32 +832,32 @@
 <li>Use the Webhook to send the raw image on each round to a dedicated server, see <a href="../Webhook">Webhook</a> resp. <a href="Parameters/#parameter-uploadimg">../Parameter <code>UploadImg</code></a>.</li>
 <li>
 <p>Another option is to pull the images periodically from <code>http://&lt;IP&gt;/img_tmp/raw.jpg</code>. Eg. with an external service. Below is a (Linux)-Bash script to do it:</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"fetching value..."</span>
-</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>http://192.168.1.151/value<span class="w"> </span>-O<span class="w"> </span>value.txt
-</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nv">value</span><span class="o">=</span><span class="sb">`</span>cat<span class="w"> </span>value.txt<span class="sb">`</span>
-</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value: </span><span class="nv">$value</span><span class="s2">"</span>
-</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="nv">diff</span><span class="o">=</span><span class="sb">`</span>diff<span class="w"> </span>value.txt<span class="w"> </span>value_previous.txt<span class="sb">`</span>
-</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nv">changed</span><span class="o">=</span><span class="nv">$?</span>
-</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="c1">#echo "Diff: $diff"</span>
-</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>
-</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$changed</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value changed:"</span>
-</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$diff</span>
-</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"fetching image..."</span>
-</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">            </span>wget<span class="w"> </span>-q<span class="w"> </span>http://192.168.1.151/img_tmp/raw.jpg<span class="w"> </span>-O<span class="w"> </span><span class="nv">$value</span>.jpg
-</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">else</span>
-</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value did not change, skipping image fetching!"</span>
-</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="k">fi</span>
-</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>
-</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span>cp<span class="w"> </span>value.txt<span class="w"> </span>value_previous.txt
-</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>
-</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"waiting 60s..."</span>
-</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span>sleep<span class="w"> </span><span class="m">60</span>
-</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="k">done</span>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"fetching value..."</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span>wget<span class="w"> </span>-q<span class="w"> </span>http://192.168.1.151/value<span class="w"> </span>-O<span class="w"> </span>value.txt
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nv">value</span><span class="o">=</span><span class="sb">`</span>cat<span class="w"> </span>value.txt<span class="sb">`</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value: </span><span class="nv">$value</span><span class="s2">"</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nv">diff</span><span class="o">=</span><span class="sb">`</span>diff<span class="w"> </span>value.txt<span class="w"> </span>value_previous.txt<span class="sb">`</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nv">changed</span><span class="o">=</span><span class="nv">$?</span>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="c1">#echo "Diff: $diff"</span>
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$changed</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value changed:"</span>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$diff</span>
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"fetching image..."</span>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span>wget<span class="w"> </span>-q<span class="w"> </span>http://192.168.1.151/img_tmp/raw.jpg<span class="w"> </span>-O<span class="w"> </span><span class="nv">$value</span>.jpg
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="k">else</span>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Value did not change, skipping image fetching!"</span>
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="k">fi</span>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span>cp<span class="w"> </span>value.txt<span class="w"> </span>value_previous.txt
+</span><span id="__span-2-23"><a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"waiting 60s..."</span>
+</span><span id="__span-2-25"><a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span>sleep<span class="w"> </span><span class="m">60</span>
+</span><span id="__span-2-26"><a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="k">done</span>
 </span></code></pre></div>
 </li>
 </ol>

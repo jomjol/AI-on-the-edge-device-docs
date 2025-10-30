@@ -703,12 +703,12 @@ To circumvent this problem, it is now possible to control external LEDs, which t
 <p>There is also a new <a href="https://www.thingiverse.com/thing:5028229">meter adapter</a> available. This has two features: designed for <strong>small clearings</strong> in front of the meter and prepared for <strong>WS2812 LEDs</strong>.</p>
 <p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/Power_Meter_Mounted.jpg" width="500"/></p>
 <h2 id="1-hardware-installation-of-the-led-stripe"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> 1. Hardware installation of the LED stripe</h2>
-<p>The control line of the LED stripe is connected with a 470 Ohm resistor to the GPIO12. 
+<p>The control line of the LED stripe is connected with a 470 Ohm resistor to the GPIO12.
 For power supply stabilization a capacitor between 5V and ground is recommended. Here a 470µF polymer capacitor is used. As a power supply a 5V from the ESP32 is used like in the following wiring.</p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/install_external_led.jpg" width="500"/> </p>
+<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/install_external_led.jpg" width="500"/></p>
 <h2 id="2-software-configuration"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> 2. Software configuration</h2>
-<p>The handling of the WS2812 LED controller needs some other libraries, therefore it is controlled within a dedicated section called <code>GPIO Settings</code>. The external LED stripe is connected to GPIO12. After activating the "GPIO Settings" section, the internal flash is per default disabled. In order to activate the external LED, you need to activate <code>GPIO 12 state</code> and select <code>"extern flash light ws281x ..."</code>. </p>
-<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/external_GPIO_settings.jpg" width="700"/> </p>
+<p>The handling of the WS2812 LED controller needs some other libraries, therefore it is controlled within a dedicated section called <code>GPIO Settings</code>. The external LED stripe is connected to GPIO12. After activating the "GPIO Settings" section, the internal flash is per default disabled. In order to activate the external LED, you need to activate <code>GPIO 12 state</code> and select <code>"extern flash light ws281x ..."</code>.</p>
+<p><img src="https://raw.githubusercontent.com/jomjol/ai-on-the-edge-device/master/images/external_GPIO_settings.jpg" width="700"/></p>
 <table>
 <thead>
 <tr>
@@ -731,7 +731,7 @@ For power supply stabilization a capacitor between 5V and ground is recommended.
 </tr>
 </tbody>
 </table>
-<p>Enabling the GPIO settings automatically disables the flash LED. Therefore you can enable it here manually by checking GPIO4 and choose <code>"build-in led flash light"</code>. It is not recommended to use both illumination parallel. </p>
+<p>Enabling the GPIO settings automatically disables the flash LED. Therefore you can enable it here manually by checking GPIO4 and choose <code>"build-in led flash light"</code>. It is not recommended to use both illumination parallel.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

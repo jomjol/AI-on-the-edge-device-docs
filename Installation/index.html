@@ -965,11 +965,11 @@
 <h3 id="esp32-cam"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.1</span> ESP32-CAM</h3>
 <ul>
 <li>OV2640 camera module</li>
-<li>Micro SD card slot </li>
-<li>4 or 8 MB PSRAM. </li>
+<li>Micro SD card slot</li>
+<li>4 or 8 MB PSRAM.</li>
 </ul>
 <p>It can be easily found on the typical internet stores, searching for ESP32-CAM for less than 10 EUR.
-How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunctioning device. See <a href="../Hardware-Compatibility/">Hardware Compatibility</a> for further advice! </p>
+How ever since the hardware is cheap and coming from China, you unluckily could pick a malfunctioning device. See <a href="../Hardware-Compatibility/">Hardware Compatibility</a> for further advice!</p>
 <h3 id="usb-uart-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.2</span> USB-&gt;UART interface</h3>
 <p>For first time flashing the firmware a USB -&gt; UART connector is needed. Later firmware upgrades than can be flashed via OTA.</p>
 <h3 id="power-supply"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.3</span> Power supply</h3>
@@ -980,8 +980,8 @@ How ever since the hardware is cheap and coming from China, you unluckily could 
 </div>
 <h3 id="housing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.4</span> Housing</h3>
 <p>A small 3D-printable example for a very small case can be found in Thingiverse here: <a href="https://www.thingiverse.com/thing:4571627">https://www.thingiverse.com/thing:4571627</a></p>
-<p><img alt="" src="../img/main.jpg" style="width:200px">
-<img alt="" src="../img/size.png" style="width:200px"/></img></p>
+<p><img alt="Main" src="../img/main.jpg" style="width:200px">
+<img alt="Size" src="../img/size.png" style="width:200px"/></img></p>
 <h3 id="focusing-the-lense"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.5</span> Focusing the lense</h3>
 <p>The focus of the OV2640 needs to be adjusted, as it is normally set from ~40cm to infinity. In order to get an image that is big enough, it needs to be changed to about 10cm.
 Therefore the sealing glue on the objective ring needs to be removed with a scalpel or sharp knife. Afterwards the objective can be rotated clockwise until the image is sharp again.</p>
@@ -991,19 +991,19 @@ Therefore the sealing glue on the objective ring needs to be removed with a scal
 </div>
 <p>There are some useful 3D-printable tools available, see <a href="https://www.printables.com/model/877739-esp32-cam-ov2640-focus-adjustment-wrench/comments">esp32-cam OV2640 focus adjustment wrench</a> or <a href="https://www.etsy.com/ch/listing/4313477325/esp32-cam-ov2640-fokus-einstellring">ETSY shop</a> if you don't have a 3D printer.
 Also check the discussions for some hints, eg. <a href="https://github.com/jomjol/AI-on-the-edge-device/discussions/3777">discussion 3777</a>.</p>
-<p><img alt="" src="../img/focus_adjustment.jpg" style="width:200px"/></p>
+<p><img alt="Focus Adjustment" src="../img/focus_adjustment.jpg" style="width:200px"/></p>
 <h3 id="wiring"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1.6</span> Wiring</h3>
 <p>Beside the 5V power supply, only for the first flashing a connection to the USB-UART connector, including a short cut of GPIO0 to GND for bootloader start.</p>
 <p>A example for wiring can be found here:</p>
-<p><img alt="" src="../img/wiring.png"/></p>
-<p><img alt="" src="../img/progammer_manual.jpg"/></p>
+<p><img alt="Wiring" src="../img/wiring.png"/></p>
+<p><img alt="Programmer Manual" src="../img/progammer_manual.jpg"/></p>
 <p>It is also possible to use external LEDs for the illumination instead of the internal flash LED. This is described <a href="../External-LED/">here</a></p>
 <h2 id="2-firmware"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> 2. Firmware</h2>
 <h3 id="web-installer"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Web Installer</h3>
 <p>There is a Web Installer available which will work right out of the web browser Edge and Chrome.
 You can access it with the following link: <a href="https://jomjol.github.io/AI-on-the-edge-device">Web Installer</a></p>
 <p><strong>This is the preferred way for beginners</strong> as it also allows access to the USB Log:</p>
-<p><a href="../img/web-console.png"><img alt="" src="../img/web-console.png"/></a></p>
+<p><a href="../img/web-console.png"><img alt="Web Console" src="../img/web-console.png"/></a></p>
 <h3 id="manual-flashing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Manual Flashing</h3>
 <h4 id="files"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.1</span> Files</h4>
 <p>Grab the firmware from the</p>
@@ -1019,7 +1019,7 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 </ul>
 <h4 id="flashing-using-the-flash-tool-from-espressif-gui"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.2</span> Flashing using the Flash Tool from Espressif (GUI)</h4>
 <p>Get the <a href="https://www.espressif.com/en/support/download/other-tools">Flash Download Tool</a> from Espressif.</p>
-<p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port. </p>
+<p>Download and extract the Flash tool, after starting choose "Developer Mode", then "ESP32-DownloadTool" and you are in the setup of the flashing tool. Connect the ESP32-CAM with the USB-UART connection and identify the COM-Port.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you are re-flashing the code again, it is strongly recommended to erase the flash memory before flashing the firmware. Especially if you used OTA in between, which might cause remaining information on the flash, to still boot from an old image in the OTA-area, which is not erased by a normal flash.</p>
@@ -1047,24 +1047,26 @@ You can access it with the following link: <a href="https://jomjol.github.io/AI-
 </tr>
 </tbody>
 </table>
-<p><img alt="" src="../img/Flash_Settings.png"/></p>
+<p><img alt="Flash Settings" src="../img/Flash_Settings.png"/></p>
 <h4 id="flashing-using-the-python-based-esptool-console"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2.3</span> Flashing using the Python based esptool (Console)</h4>
-<p>For this you need a python environment (e.g. Anaconda in Win10). 
+<p>For this you need a python environment (e.g. Anaconda in Win10).
 Here you need to install the esptool:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip install esptool
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip install esptool
 </span></code></pre></div>
-Then connect the ESP32 with the USB-UART connector to the system, put it in boot mode and with the following command you can erase the flash and flash bootloader, partitions and firmware in two steps:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>esptool erase_flash
+<p>Then connect the ESP32 with the USB-UART connector to the system, put it in boot mode and with the following command you can erase the flash and flash bootloader, partitions and firmware in two steps:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>esptool erase_flash
 </span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>esptool write_flash 0x01000 bootloader.bin 0x08000 partitions.bin 0x10000 firmware.bin
 </span></code></pre></div>
-- Maybe you need to specify the COM-port if it is not detected by default.
-- If the erase command throws the error <code>A fatal error occurred: ESP32 ROM does not support function erase_flash.</code>, your <code>esptool</code> might be too old, see <a href="https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/">https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/</a></p>
+<ul>
+<li>Maybe you need to specify the COM-port if it is not detected by default.</li>
+<li>If the erase command throws the error <code>A fatal error occurred: ESP32 ROM does not support function erase_flash.</code>, your <code>esptool</code> might be too old, see <a href="https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/">https://techoverflow.net/2022/02/08/how-to-fix-esp32-a-fatal-error-occurred-esp32-rom-does-not-support-function-erase_flash/</a></li>
+</ul>
 <p>With some Python installations this may not work and you’ll receive an error, try <code>python -m pip install esptool</code> or <code>pip3 install esptool</code>.</p>
 <p>Further recommendations can be found on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html">espressif webpage</a>.</p>
 <h2 id="3-sd-card"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> 3. SD Card</h2>
 <p>The software expects an SD card prepared with certain directory and file structure in order to work properly.
 SD card most top directory should look like this:</p>
-<p><img alt="" src="../sd-card-content.png"/> </p>
+<p><img alt="SD Card Content" src="../sd-card-content.png"/> </p>
 <p>This initial setup needs only to be done <strong>once</strong> as further updates (Firmware as well as SD card content) are possible with the <a href="../ota/">Over-The-Air Update</a> mechanism.</p>
 <h4 id="notes"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.0.1</span> Notes</h4>
 <ul>
@@ -1074,7 +1076,7 @@ SD card most top directory should look like this:</p>
 <li>Some ESP32 devices share their SD-card and/or camera GPIOs with the pins for TX and RX. If you see errors like “Failed to connect” then your chip is probably not entering the bootloader properly. Remove the respective modules temporarily to free the GPIOs for flashing. You may find more information about troubleshooting on the <a href="https://docs.espressif.com/projects/esptool/en/latest/esp8266/troubleshooting.html">homepage of Espressif</a>.</li>
 </ul>
 <p><strong>The ESP32 indicates problems with the SD card during startup with a fast, endless blinking.</strong>
-<strong>In this case, please try another SD card.</strong> </p>
+<strong>In this case, please try another SD card.</strong></p>
 <h3 id="manual-setup-with-an-sd-card-reader-on-a-pc"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> Manual Setup with an SD Card Reader on a PC</h3>
 <ol>
 <li>Take the <code>AI-on-the-edge-device__manual-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
@@ -1096,19 +1098,19 @@ If not, the ESP32 switches to a special mode. In this mode, it provides a Wifi A
 <li>Take the <code>AI-on-the-edge-device__remote-setup__*.zip</code> from the <a href="https://github.com/jomjol/AI-on-the-edge-device/releases">Release</a> page.</li>
 <li>
 <p>Connect to Access Point of the device. The SSID is "AI-on-the-Edge" and you can access it without any password:</p>
-<p><img alt="" src="../img/access-point.png"/></p>
+<p><img alt="Access Point" src="../img/access-point.png"/></p>
 <p>The device has the following fixed IP: <a href="http://192.168.4.1">http://192.168.4.1</a>.</p>
 </li>
 <li>
 <p>Upload initial configuration to SD card</p>
-<p><img alt="" src="../img/setup-config.png"/></p>
+<p><img alt="Setup Config" src="../img/setup-config.png"/></p>
 <p>Use the <code>select file</code> and <code>upload</code> button to start the upload.
 A warning will show up if you have chosen a possible wrong file (without default configuration).</p>
 </li>
 <li>
 <p>Store WLAN access information.</p>
 <p>After the upload, a new page will be shown:</p>
-<p><img alt="" src="../img/setup-wlan.png"/></p>
+<p><img alt="Setup WLAN" src="../img/setup-wlan.png"/></p>
 <p>Enter your SSID and password.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1126,7 +1128,7 @@ A warning will show up if you have chosen a possible wrong file (without default
 <li>
 <p>Reboot</p>
 <p>The final step is the reboot:</p>
-<p><img alt="" src="../img/setup-reboot.png"/></p>
+<p><img alt="Setup Reboot" src="../img/setup-reboot.png"/></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It will take up to 3 minutes. Afterwards you can find your device in the local network. Check your router for the IP. You can find it also in the USB Console output.</p>

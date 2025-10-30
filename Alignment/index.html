@@ -697,21 +697,21 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="alignment-references"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Alignment References</h1>
-<p>The alignment references are used in every round to re-align the taken image to the reference coordinates. 
+<p>The alignment references are used in every round to re-align the taken image to the reference coordinates.
 Two alignment structures must be defined and the taken image then in each round is shifted and rotated according to their position
 with the target to be in exactly the same position as the reference image.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The alignment structures needs to be unique and have a good contrast. 
+<p>The alignment structures needs to be unique and have a good contrast.
 It is advised to have them as far apart as possible.</p>
 </div>
 <h2 id="precondition"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Precondition</h2>
 <p>Please make sure to have setup your camera properly and taken a good <a href="../Reference-Image/">Reference Image</a>.</p>
 <h2 id="define-two-reference-images"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Define two Reference Images</h2>
-<p><img alt="" src="../img/initial_setup_2_alignment_marks.jpg" style="width:500px"/></p>
+<p><img alt="Initial Setup Alignment Marks" src="../img/initial_setup_2_alignment_marks.jpg" style="width:500px"/></p>
 <p>You can switch between this two marks with <code>(1)</code>.</p>
 <p>Then define the reference area in the image by either directly drag and drop with the mouse or use the input boxes below.
-To apply the currently marked image part you need to push <code>"Update Reference" (2)</code>. </p>
+To apply the currently marked image part you need to push <code>"Update Reference" (2)</code>.</p>
 <p>In some cases it might be useful to use a reference with a higher contrast. This can be achieved by pushing <code>Enhance Contrast" (3)</code>.
 The result will be calculated on the ESP32 - so be a bit patient, before you see it active.</p>
 <p>To save push <code>"Save to config.ini" (4)</code>.</p>
