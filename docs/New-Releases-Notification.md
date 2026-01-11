@@ -1,7 +1,7 @@
 # Notification about new Releases
 
 Do you want to get notified about a new release?
-There are several ways for it:
+Use the aproach documented below.
 
 ## Github Notifications
 
@@ -16,9 +16,3 @@ You will need a Github Account for this!
 You will get an email when a new release gets created.
 
 See also [Github Documentation](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions).
-
-## CodeRelease.io
-
-Alternatively or if you do not want to create a Github account, [CodeRelease.io](https://coderelease.io) can be an alternative.
-
-You also have to subscribe with an email address but no account is required.
