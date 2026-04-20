@@ -29,7 +29,7 @@ It creates a dig-class11_xxxx_s2.tflite model, you can upload to the `config` fo
 
 Fork and checkout [neural-network-digital-counter-readout](https://github.com/jomjol/neural-network-digital-counter-readout).
 
-All labeled images you can find under [Images](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/tree/master/images)
+All labeled images you can find under [Images](https://github.com/fspapaping/Tenth-of-step-of-a-meter-digit/tree/master/images)
 
 Install all requirements for running the notebooks.
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 Put your labeled images into `images/collected/<typeofdevice>/<your_short>/`
 
-Run [dig-class100-s2.ipynb](https://github.com/haverland/Tenth-of-step-of-a-meter-digit/blob/master/dig-class100-s2.ipynb). The model to upload to your device you can find under '/output'.
+Run [dig-class100-s2.ipynb](https://github.com/fspapaping/Tenth-of-step-of-a-meter-digit/blob/master/dig-class100-s2.ipynb). The model to upload to your device you can find under '/output'.
 
 ### ana-class100/ana-cont models (analog pointers)
 
