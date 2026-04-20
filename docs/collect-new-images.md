@@ -28,7 +28,7 @@ The tools shown below can help you with that.
 
 ## Collecting images for dig-class100/dig-cont/ana-class100
 
-For digits use [Collectmeterdigits](https://github.com/haverland/collectmeterdigits) resp. for pointers use [collectmeteranalog](https://github.com/haverland/collectmeteranalog) to fetch the images from the device and select a subset of them. Please read the detailed instructions on the mentioned links for details!
+For digits use [Collectmeterdigits](https://github.com/fspapaping/collectmeterdigits) resp. for pointers use [collectmeteranalog](https://github.com/fspapaping/collectmeteranalog) to fetch the images from the device and select a subset of them. Please read the detailed instructions on the mentioned links for details!
 
 If the fetching of the images is too slow for you, a faster way to get the images to your PC is to remove the SD-card from the ESP32 module and insert it into the card reader of yur PC.
 Then search for two..three images of each digit (**not more! :-)**). You will have to make sure to label the images yourself matching the effective value they are supposed to show. 
