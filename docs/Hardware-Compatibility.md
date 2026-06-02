@@ -56,7 +56,7 @@ This Table is just a snapshot of chips which worked
 | AP MEMORY / 1604M-3SQR / 0280A / 070036G|       | :x: 2MB only!  |
 | ESP PSRAM**64**H 462021 / 1B00286                |       | :heavy_check_mark:             |
 | ESP PSRAM**64**H 412021 / 1A0039G                |       | :heavy_check_mark: 8MB         |
-| ESP PSRAM**64** 512018 / IR288G |                |       | :heavy_check_mark: 8MB         |
+| ESP PSRAM**64** 512018 / IR288G                  |       | :heavy_check_mark: 8MB         |
 | ESP PSRAM**64**H 402021 / 1A0017N                |       | :x: PSRAM not accessible       |
 | ESP PSRAM16M 302020                        |       | :x: 2MB only! |
 | ESP PSRAM16H 202020 / 050022G                |       | :x: 2MB only! |
