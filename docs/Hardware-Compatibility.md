@@ -26,6 +26,7 @@ Below you find some remarks and experiences from the community:
 | Chip Version              | Image | Status   |
 | ------------------------- | ----- | -------- |
 | ESP32-D0WDQ6 (revision 1) |       | :heavy_check_mark: |
+| ESP32-D0WD-V3 (revision 3.1) |    | :heavy_check_mark: |
 
 # PSRAM
 
@@ -55,6 +56,7 @@ This Table is just a snapshot of chips which worked
 | AP MEMORY / 1604M-3SQR / 0280A / 070036G|       | :x: 2MB only!  |
 | ESP PSRAM**64**H 462021 / 1B00286                |       | :heavy_check_mark:             |
 | ESP PSRAM**64**H 412021 / 1A0039G                |       | :heavy_check_mark: 8MB         |
+| ESP PSRAM**64** 512018 / IR288G                  |       | :heavy_check_mark: 8MB         |
 | ESP PSRAM**64**H 402021 / 1A0017N                |       | :x: PSRAM not accessible       |
 | ESP PSRAM16M 302020                        |       | :x: 2MB only! |
 | ESP PSRAM16H 202020 / 050022G                |       | :x: 2MB only! |
@@ -67,6 +69,7 @@ The experience with the camera only is based on single modules. It is well possi
 | -------------------------- | ----- | --------------------------------- |
 | TY-OV2 / 640-V2.0        |       | :heavy_check_mark:                          |
 | DCX-OV2 / 640-V2         |       | :heavy_check_mark:                          |
+| ODS-OV26 / 40V25         |       | :heavy_check_mark:                  |
 | DC-26 / 40-V3            |       | :heavy_check_mark: 3x<br> :x: 1x |
 
 # ESP32 Modules
@@ -91,10 +94,11 @@ See [https://github.com/jomjol/AI-on-the-edge-device/discussions/1732](https://g
 
 - [https://www.amazon.de/-/en/gp/product/B0B51CQ13R](https://www.amazon.de/-/en/gp/product/B0B51CQ13R)
 
-- [https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE](https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE) (27.12.2022)
+- [https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE](https://www.reichelt.de/entwicklerboards-esp32-kamera-2mp-25--debo-cam-esp32-p266036.html?PROVID=2788&gclid=CjwKCAiAqaWdBhAvEiwAGAQlttJnV4azXWDYeaFUuNioMICh-jvxKp6Cifmcep9vvtoT2JRCDqBczRoC7Q0QAvD_BwE) (03.06.2026)
 
 ## SD Card
 
+- Cloudisk 4GB Micro SD Class 6 [Amazon DE (5-pack)](https://amzn.eu/d/09iVJACw)
 - Sandisk 2GB Micro SD Class 2 [Sandisk 2GB](https://www.amazon.co.uk/gp/product/B000N3LL02/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 AITRIP ESP32 and CAM [ESP-32/CAM](https://www.amazon.co.uk/gp/product/B08X49P8P3/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 - [Amazon US - Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode](https://www.amazon.com/gp/product/B0948ZFTQZ) with [Amazon US - Cloudisk 5Pack 4GB Micro SD Card 4 GB MicroSD Memory Card Class6](https://www.amazon.com/gp/product/B07QYTP4VN)
