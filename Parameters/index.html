@@ -951,7 +951,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-decimalshift">1.5.7 
+<a class="md-nav__link" href="#parameter-continuouslastdigit">1.5.7 
+<span class="md-ellipsis">
+      
+        Parameter ContinuousLastDigit
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-decimalshift">1.5.8 
 <span class="md-ellipsis">
       
         Parameter DecimalShift
@@ -960,7 +969,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-extendedresolution_1">1.5.8 
+<a class="md-nav__link" href="#parameter-extendedresolution_1">1.5.9 
 <span class="md-ellipsis">
       
         Parameter ExtendedResolution
@@ -969,7 +978,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-ignoreleadingnan">1.5.9 
+<a class="md-nav__link" href="#parameter-ignoreleadingnan">1.5.10 
 <span class="md-ellipsis">
       
         Parameter IgnoreLeadingNaN
@@ -978,7 +987,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maxratetype">1.5.10 
+<a class="md-nav__link" href="#parameter-maxratetype">1.5.11 
 <span class="md-ellipsis">
       
         Parameter MaxRateType
@@ -987,7 +996,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maxratevalue">1.5.11 
+<a class="md-nav__link" href="#parameter-maxratevalue">1.5.12 
 <span class="md-ellipsis">
       
         Parameter MaxRateValue
@@ -996,7 +1005,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.12 
+<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.13 
 <span class="md-ellipsis">
       
         Parameter PreValueAgeStartup
@@ -1005,7 +1014,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueuse">1.5.13 
+<a class="md-nav__link" href="#parameter-prevalueuse">1.5.14 
 <span class="md-ellipsis">
       
         Parameter PreValueUse
@@ -2731,7 +2740,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-decimalshift">1.5.7 
+<a class="md-nav__link" href="#parameter-continuouslastdigit">1.5.7 
+<span class="md-ellipsis">
+      
+        Parameter ContinuousLastDigit
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameter-decimalshift">1.5.8 
 <span class="md-ellipsis">
       
         Parameter DecimalShift
@@ -2740,7 +2758,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-extendedresolution_1">1.5.8 
+<a class="md-nav__link" href="#parameter-extendedresolution_1">1.5.9 
 <span class="md-ellipsis">
       
         Parameter ExtendedResolution
@@ -2749,7 +2767,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-ignoreleadingnan">1.5.9 
+<a class="md-nav__link" href="#parameter-ignoreleadingnan">1.5.10 
 <span class="md-ellipsis">
       
         Parameter IgnoreLeadingNaN
@@ -2758,7 +2776,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maxratetype">1.5.10 
+<a class="md-nav__link" href="#parameter-maxratetype">1.5.11 
 <span class="md-ellipsis">
       
         Parameter MaxRateType
@@ -2767,7 +2785,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-maxratevalue">1.5.11 
+<a class="md-nav__link" href="#parameter-maxratevalue">1.5.12 
 <span class="md-ellipsis">
       
         Parameter MaxRateValue
@@ -2776,7 +2794,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.12 
+<a class="md-nav__link" href="#parameter-prevalueagestartup">1.5.13 
 <span class="md-ellipsis">
       
         Parameter PreValueAgeStartup
@@ -2785,7 +2803,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#parameter-prevalueuse">1.5.13 
+<a class="md-nav__link" href="#parameter-prevalueuse">1.5.14 
 <span class="md-ellipsis">
       
         Parameter PreValueUse
@@ -4341,8 +4359,31 @@ It especially improves the zero crossing check between digits.</p>
 <p>If you edit the config file manually, you must prefix this parameter with <code>&lt;NUMBER&gt;</code> followed by a dot (eg. <code>main.CheckDigitIncreaseConsistency</code>). The reason is that this parameter is specific for each <code>&lt;NUMBER&gt;</code> (<code>&lt;NUMBER&gt;</code> is the name of the number sequence defined in the ROI's).</p>
 </div>
 <hr style="border:2px solid"/>
+<p><a id="PostProcessing-NUMBER.ContinuousLastDigit"></a></p>
+<h3 id="parameter-continuouslastdigit"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.7</span> Parameter <code>ContinuousLastDigit</code></h3>
+<p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
+<p>Default Value: <code>false</code></p>
+<p>Enable this if the last digit (the one directly before the analog pointers) does not jump, but turns
+continuously together with the first analog pointer: the digit is about halfway to the next number
+when the pointer is at 5, and already shows the next number shortly before the pointer reaches 0.</p>
+<p>With such a digit the normal transition logic gives a value that is one unit too high while the
+pointer is between about 9.5 and 0 (usually rejected as <code>Rate too high</code>). With this option the digit
+is calculated as <code>digit - pointer / 10</code>, rounded, which needs no tuning.
+<a href="NUMBER.AnalogToDigitTransitionStart"><code>AnalogToDigitTransitionStart</code></a> is not used when it is enabled.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only enable it for digits that really turn continuously. For a digit that jumps to the next
+number (even an early or late one) it gives wrong results.</p>
+</div>
+<p>Only used on combination of digits and analog pointers, and needs a digit model with decimal output
+(e.g. <code>dig-cont</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you edit the config file manually, you must prefix this parameter with <code>&lt;NUMBER&gt;</code> followed by a dot (eg. <code>main.ContinuousLastDigit</code>). The reason is that this parameter is specific for each <code>&lt;NUMBER&gt;</code> (<code>&lt;NUMBER&gt;</code> is the name of the number sequence defined in the ROI's).</p>
+</div>
+<hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.DecimalShift"></a></p>
-<h3 id="parameter-decimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.7</span> Parameter <code>DecimalShift</code></h3>
+<h3 id="parameter-decimalshift"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.8</span> Parameter <code>DecimalShift</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>0</code></p>
 <p>Shift the decimal separator (positiv or negativ).
@@ -4353,7 +4394,7 @@ Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equa
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.ExtendedResolution"></a></p>
-<h3 id="parameter-extendedresolution_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.8</span> Parameter <code>ExtendedResolution</code></h3>
+<h3 id="parameter-extendedresolution_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.9</span> Parameter <code>ExtendedResolution</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>false</code></p>
 <p>Use the decimal place of the last analog counter for increased accuracy.</p>
@@ -4367,7 +4408,7 @@ Eg. to move from <code>m³</code> to <code>liter</code> (<code>1 m³</code> equa
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.IgnoreLeadingNaN"></a></p>
-<h3 id="parameter-ignoreleadingnan"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.9</span> Parameter <code>IgnoreLeadingNaN</code></h3>
+<h3 id="parameter-ignoreleadingnan"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.10</span> Parameter <code>IgnoreLeadingNaN</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Leading <code>N</code>'s will be deleted before further processing.
@@ -4379,7 +4420,7 @@ See <a href="../Choosing-the-Model">here</a> for details.</p>
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.MaxRateType"></a></p>
-<h3 id="parameter-maxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.10</span> Parameter <code>MaxRateType</code></h3>
+<h3 id="parameter-maxratetype"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.11</span> Parameter <code>MaxRateType</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>AbsoluteChange</code></p>
 <p>Defines if the <strong>Change Rate</strong> is calculated as the difference between the last two readings (<code>AbsoluteChange</code> = difference) or
@@ -4390,7 +4431,7 @@ as the difference normalized to the interval (<code>RateChange</code> = differen
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-NUMBER.MaxRateValue"></a></p>
-<h3 id="parameter-maxratevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.11</span> Parameter <code>MaxRateValue</code></h3>
+<h3 id="parameter-maxratevalue"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.12</span> Parameter <code>MaxRateValue</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>0,05</code></p>
 <p>Maximum allowed change between two readings, if exceeded the last reading will be rejected. Depending on the settings of <code>&lt;NUMBER&gt;.MaxRateType</code> the <code>MaxRateValue</code> is either treated as the difference between the two measurements (<code>AbsoluteChange</code> = difference) not taking the set time interval into account or as the difference normalized to the interval (<code>RateChange</code> = difference per minute).</p>
@@ -4401,7 +4442,7 @@ as the difference normalized to the interval (<code>RateChange</code> = differen
 </div>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-PreValueAgeStartup"></a></p>
-<h3 id="parameter-prevalueagestartup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.12</span> Parameter <code>PreValueAgeStartup</code></h3>
+<h3 id="parameter-prevalueagestartup"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.13</span> Parameter <code>PreValueAgeStartup</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>720</code></p>
 <div class="admonition warning">
@@ -4411,7 +4452,7 @@ as the difference normalized to the interval (<code>RateChange</code> = differen
 <p>Time in minutes, how long a previous read value is valid after reboot.</p>
 <hr style="border:2px solid"/>
 <p><a id="PostProcessing-PreValueUse"></a></p>
-<h3 id="parameter-prevalueuse"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.13</span> Parameter <code>PreValueUse</code></h3>
+<h3 id="parameter-prevalueuse"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.14</span> Parameter <code>PreValueUse</code></h3>
 <p>Section: <a href="#section-postprocessing">1.5 PostProcessing</a></p>
 <p>Default Value: <code>true</code></p>
 <p>Use the previous value (value from previous round) for consistency checks.
